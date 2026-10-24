@@ -74,6 +74,57 @@ function listDrills() {
   return out.sort((a, b) => (b.created || '').localeCompare(a.created || ''));
 }
 
+// ---- writing-flow analysis from the keystroke log ----
+// Replays [ms, pos, deleted, inserted] entries so every character in the final text knows when it was typed,
+// the gap before it, and how many backspaces happened right after it.
+const PAUSE = 5000;
+function writingFlow(log) {
+  const chars = [];
+  let prev = null, dels = 0;
+  for (const [t, pos, d, ins] of log) {
+    const gap = prev == null ? 0 : Math.max(0, t - prev);
+    prev = t;
+    if (d) { const gone = chars.splice(pos, d); dels += d; const c = chars[pos - 1] || chars[pos]; if (c) c.del += d + gone.reduce((n, g) => n + g.del, 0); }
+    if (ins) chars.splice(pos, 0, ...[...ins].map((ch, k) => ({ ch, gap: k ? 0 : gap, del: 0, pasted: ins.length > 3 })));
+  }
+  const words = [], sentences = [];
+  let w = null, sen = { text: '', ms: 0, del: 0, pauses: 0, words: 0 };
+  const endSentence = () => { if (sen.text.trim()) sentences.push(sen); sen = { text: '', ms: 0, del: 0, pauses: 0, words: 0 }; };
+  chars.forEach((c, i) => {
+    sen.text += c.ch; sen.ms += c.gap; sen.del += c.del; if (c.gap >= PAUSE) sen.pauses++;
+    if (/\s/.test(c.ch)) { if (w) { words.push(w); sen.words++; w = null; } }
+    else {
+      if (!w) w = { text: '', typeMs: 0, pauseBefore: c.gap >= PAUSE ? c.gap : 0, del: 0 };
+      w.text += c.ch; w.del += c.del; if (c.gap < PAUSE && !c.pasted) w.typeMs += c.gap;
+    }
+    if (/[.!?]/.test(c.ch) && /\s|$/.test(chars[i + 1]?.ch ?? '') || c.ch === '\n') { if (w) { words.push(w); sen.words++; w = null; } endSentence(); }
+  });
+  if (w) { words.push(w); sen.words++; }
+  endSentence();
+  const totalMs = log.length ? log[log.length - 1][0] - log[0][0] : 0;
+  const pauseMs = chars.reduce((n, c) => n + (c.gap >= PAUSE ? c.gap : 0), 0);
+  return { words, sentences, dels, totalMs, pauseMs, events: log.length };
+}
+function flowMd(log, label) {
+  const f = writingFlow(log);
+  if (f.events < 10) return [];
+  const m = ms => `${Math.floor(ms / 60000)}:${String(Math.round(ms / 1000) % 60).padStart(2, '0')}`;
+  const sec = ms => `${(ms / 1000).toFixed(ms < 10000 ? 1 : 0)} s`;
+  const clean = t => t.replace(/[^\w'’-]/g, '');
+  const L = ['', `### Writing flow: ${label}`, '',
+    `Typing ${m(f.totalMs)} from first to last keystroke · ${m(f.pauseMs)} of that in pauses of 5 s or more · ${f.dels} characters deleted.`, '',
+    '| # | Sentence (start) | Time | Words | Words/min | Pauses ≥5 s | Backspaces |', '|---|---|---|---|---|---|---|'];
+  f.sentences.forEach((x, i) => L.push(`| ${i + 1} | ${x.text.trim().slice(0, 45).replace(/\|/g, '/')}… | ${m(x.ms)} | ${x.words} | ${x.ms ? Math.round(x.words / (x.ms / 60000)) : '–'} | ${x.pauses} | ${x.del} |`));
+  const pauses = f.words.filter(w => w.pauseBefore).sort((a, b) => b.pauseBefore - a.pauseBefore).slice(0, 6);
+  if (pauses.length) L.push('', '**Longest pauses** (then typed): ' + pauses.map(w => `${sec(w.pauseBefore)} → “${clean(w.text)}”`).join(' · '));
+  const fixes = f.words.filter(w => w.del >= 2).sort((a, b) => b.del - a.del).slice(0, 8);
+  if (fixes.length) L.push('', '**Most-corrected words** (backspaces): ' + fixes.map(w => `“${clean(w.text)}” ${w.del}`).join(' · '));
+  const slow = f.words.filter(w => clean(w.text).length >= 4 && w.typeMs).map(w => ({ ...w, per: w.typeMs / clean(w.text).length }))
+    .sort((a, b) => b.per - a.per).slice(0, 8);
+  if (slow.length) L.push('', '**Slowest words per letter**: ' + slow.map(w => `“${clean(w.text)}” ${(w.per / 1000).toFixed(1)} s/letter`).join(' · '));
+  return L;
+}
+
 // ---- marking pack written on submit ----
 const fence = s => '```\n' + (s || '').replace(/\n+$/, '') + '\n```';
 function attemptMd(a) {
@@ -133,6 +184,14 @@ function attemptMd(a) {
       L.push(`| ${q.number} | ${marks} | ${m(t.ms)}${flag} | ${m(marks * 120000)} | ${t.visits ?? 0} | ${m(start)} | ${words || '–'} | ${words && t.ms ? (words / (t.ms / 60000)).toFixed(0) : '–'} |`);
     }
     if (T.awayMs > 5000) L.push('', `Time with the exam window in the background: ${m(T.awayMs)}.`);
+  }
+  if (a.keylog) {
+    const flows = [];
+    for (const q of e.questions) for (const p of q.parts) {
+      const log = a.keylog[p.part_id];
+      if (log?.length) flows.push(...flowMd(log, `Q${q.number}${q.parts.length > 1 ? ' ' + (p.part || '') : ''}`));
+    }
+    if (flows.length) L.push('', '---', '', '## Writing flow (from keystrokes)', ...flows);
   }
   return L.join('\n') + '\n';
 }

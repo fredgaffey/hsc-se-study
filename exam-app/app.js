@@ -98,6 +98,17 @@ function trackTime() {
   if (now - (ui.lastTimingSave || 0) > 15000) { ui.lastTimingSave = now; save(); }
 }
 const workMs = () => Math.max(0, usedMs() - (attempt.readingMs || 0));
+// Keystroke log: one entry per change, [working ms, position, chars deleted, text inserted].
+// Worked out by diffing old and new text, so paste/autocorrect/undo are captured too.
+function logKeys(partId, before, after) {
+  if (before === after) return;
+  let i = 0;
+  while (i < before.length && i < after.length && before[i] === after[i]) i++;
+  let j = 0;
+  while (j < before.length - i && j < after.length - i && before[before.length - 1 - j] === after[after.length - 1 - j]) j++;
+  const log = (attempt.keylog ||= {})[partId] ||= [];
+  log.push([workMs(), i, before.length - i - j, after.slice(i, after.length - j)]);
+}
 function noteTyping(partId) {
   const T = attempt.timing ||= { q: {}, p: {}, awayMs: 0 };
   const p = T.p[partId] ||= { firstMs: workMs(), edits: 0 };
@@ -677,7 +688,10 @@ function renderQuestion() {
 function bindItem(p, i, el, reading) {
   const s = p.question;
   const a = attempt.answers[p.part_id] || {};
-  const set = v => { attempt.answers[p.part_id] = { ...(attempt.answers[p.part_id] || {}), ...v, overtime: !!attempt.timeUpAt || undefined }; noteTyping(p.part_id); save(); renderNav(); };
+  const set = v => {
+    if ('text' in v) logKeys(p.part_id, attempt.answers[p.part_id]?.text ?? (s.starter_code || s.starter_query || ''), v.text ?? '');
+    attempt.answers[p.part_id] = { ...(attempt.answers[p.part_id] || {}), ...v, overtime: !!attempt.timeUpAt || undefined }; noteTyping(p.part_id); save(); renderNav();
+  };
 
   $$('[data-act]', el).forEach(b => b.onclick = () => itemAction(b.dataset.act, p, i, el));
   $$('[data-opt]', el).forEach(inp => inp.onchange = () => {

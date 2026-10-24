@@ -45,7 +45,10 @@ async function doSave() {
   if (saving) return save();
   saving = true;
   try {
-    const body = { ...attempt, _drawingPngs: pendingPngs };
+    // only send drawings that belong to this paper (an earlier drill's PNG could still be pending)
+    const own = new Set(groups.flatMap(g => g.q.parts.map(p => p.part_id)));
+    const pngs = Object.fromEntries(Object.entries(pendingPngs).filter(([k]) => own.has(k)));
+    const body = { ...attempt, _drawingPngs: pngs };
     pendingPngs = {};
     await api(`/api/attempt/${attempt.id}`, body);
     try { localStorage.setItem('attempt:' + attempt.id, JSON.stringify(attempt)); } catch {}

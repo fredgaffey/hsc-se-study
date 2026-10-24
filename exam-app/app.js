@@ -416,7 +416,7 @@ async function home() {
         ${unsub.length ? `<h2>Resume</h2>${unsub.map(a => `<div class="exam-row"><button class="nsw-button nsw-button--dark" data-resume="${esc(a.id)}">${esc(a.title)}</button><span class="meta">started ${new Date(a.startedAt).toLocaleString()}</span></div>`).join('')}` : ''}
         ${drills.filter(d => !d.done).length ? `<h2${unsub.length ? ' class="small"' : ''}>From Claude</h2>${drills.filter(d => !d.done).map(examRow).join('')}` : ''}
         ${drills.some(d => d.done) ? `<details><summary>Finished questions from Claude (${drills.filter(d => d.done).length})</summary>${drills.filter(d => d.done).map(examRow).join('')}</details>` : ''}
-        ${priv.length ? `<h2 class="small">Trial papers (private)</h2>${priv.map(examRow).join('')}` : ''}
+        ${priv.length ? `<h2 class="small">Trial papers</h2>${priv.map(examRow).join('')}` : ''}
         <h2${unsub.length || drills.length || priv.length ? ' class="small"' : ''}>Exported Gradeo papers – not sat yet</h2>
         ${fresh.map(examRow).join('') || '<p>None</p>'}
         <details><summary>Papers you've sat before (${sat.length})</summary>${sat.map(examRow).join('')}</details>

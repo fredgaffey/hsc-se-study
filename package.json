@@ -5,7 +5,8 @@
   "scripts": {
     "exam": "node exam-app/server.mjs",
     "fetch": "node fetch.mjs",
-    "build": "node build.mjs"
+    "build": "node build.mjs",
+    "start": "node start.mjs"
   },
   "keywords": [],
   "author": "",

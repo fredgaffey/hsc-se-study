@@ -22,8 +22,27 @@ let tick = null;
 const ui = { highlighter: null, hl: {}, hidden: {}, navRange: null, wasReading: false };
 
 // ---------- markdown ----------
+// Pseudocode pasted as plain lines (BEGIN … END) collapses into one paragraph in markdown; fence it.
+function fencePseudo(text) {
+  const lines = text.split('\n'), out = [];
+  let fenced = false;
+  for (let i = 0; i < lines.length; i++) {
+    const l = lines[i];
+    if (/^\s*```/.test(l)) fenced = !fenced;
+    const indent = l.search(/\S/);
+    if (fenced || !/^\s*BEGIN\b/.test(l)) { out.push(l); continue; }
+    let j = i + 1;
+    while (j < lines.length && !(/^\s*END(\s|$)/.test(lines[j]) && lines[j].search(/\S/) <= indent)) j++;
+    if (j >= lines.length) { out.push(l); continue; }
+    out.push('```text', ...lines.slice(i, j + 1), '```');
+    i = j;
+  }
+  return out.join('\n');
+}
+
 function mdHtml(text, inline = false) {
   if (!text) return '';
+  if (/\n/.test(text)) text = fencePseudo(text);
   const base = exam ? `/exams/${encodeURIComponent(exam.folder)}/` : '';
   let html = inline && !/\n/.test(text) ? marked.parseInline(text) : marked.parse(text);
   html = html.replace(/(src|href)="(assets\/[^"]+)"/g, (_, a, p) => `${a}="${base}${p}"`);

@@ -36,7 +36,7 @@ folder and run `npm install` then `npm start`.
 
 ### Exam app: sit papers like the real online HSC
 
-EXAM_APP_SCREENSHOTS
+*Being finished — will be added here shortly. Until then `npm start` runs the other two apps.*
 
 ### SQL trainer: 13 tasks on the course specification's database
 

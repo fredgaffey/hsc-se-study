@@ -33,7 +33,9 @@ if (!fs.existsSync(path.join(ROOT, 'node_modules', 'marked'))) {
 }
 
 // 2. Exam app
-run('exam', process.execPath, ['exam-app/server.mjs'], { env: { ...process.env, PORT: String(EXAM_PORT) } });
+const hasExam = fs.existsSync(path.join(ROOT, 'exam-app', 'server.mjs'));
+if (hasExam) run('exam', process.execPath, ['exam-app/server.mjs'], { env: { ...process.env, PORT: String(EXAM_PORT) } });
+else console.log('[exam] exam app not included yet, skipping (git pull later to get it)');
 
 // 3. SQL trainer (Python + Flask in its own virtual environment)
 const sqlDir = path.join(ROOT, 'sql-app');
@@ -66,7 +68,7 @@ http.createServer((req, res) => {
 
 setTimeout(() => console.log(`
   ┌─────────────────────────────────────────────────────────┐
-  │  Exam app     http://localhost:${EXAM_PORT}                     │
+  │  Exam app     ${hasExam ? `http://localhost:${EXAM_PORT}        ` : '(not included yet)           '}             │
   │  SQL trainer  http://localhost:${SQL_PORT}${sysPy ? '                     ' : ' (needs Python)      '}│
   │  Course site  http://localhost:${SITE_PORT}                     │
   │                                                         │

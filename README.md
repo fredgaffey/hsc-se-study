@@ -9,14 +9,50 @@ This will come down after the HSC.
 
 ## Quick start
 
-Needs Node 20+ and Python 3.
+You need **Node.js** (nodejs.org, the LTS version) and **Python 3** (python.org, only for the SQL trainer).
+Then copy and paste:
 
 ```sh
+git clone https://github.com/fredgaffey/hsc-se-study.git
+cd hsc-se-study
 npm install
-node exam-app/server.mjs          # exam app      → http://localhost:7788
-cd sql-app && ./start.sh          # SQL trainer   → http://127.0.0.1:5050
-cd canvas && python3 -m http.server 8765   # course site + quiz generator → http://localhost:8765
+npm start
 ```
+
+That starts all three apps (the first run also sets up the SQL trainer, about a minute). Open:
+
+| App | Link |
+|---|---|
+| Exam app | http://localhost:7788 |
+| SQL trainer | http://localhost:5050 |
+| Course site + quiz generator | http://localhost:8765 |
+
+Press **Ctrl-C** in the terminal to stop them. Next time just `cd hsc-se-study` and `npm start`.
+
+No git? Click the green **Code** button on GitHub → **Download ZIP**, unzip it, open a terminal in the
+folder and run `npm install` then `npm start`.
+
+## The apps
+
+### Exam app: sit papers like the real online HSC
+
+EXAM_APP_SCREENSHOTS
+
+### SQL trainer: 13 tasks on the course specification's database
+
+Write a query, press Run, and it checks your result against the answer. NESA's word operators
+(`GREATER THAN`, `CONTAINS`…) work as well as symbols.
+
+![SQL trainer](docs/screenshots/sql-trainer.png)
+
+### Course site: every Canvas lesson, plus a quiz generator
+
+195 lessons from the Year 11 and HSC courses, search across everything, and a quiz generator over 680
+questions (pick modules, number of questions and question types; it marks itself).
+
+![Course site](docs/screenshots/course-site.png)
+
+![Quiz generator](docs/screenshots/quiz-generator.png)
 
 ## What's where
 

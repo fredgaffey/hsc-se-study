@@ -1,0 +1,331 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.8 Web Browsers — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 8 (Term 1: Weeks 7-8) Programming for the Web</div>
+<h1 style="margin-top:.2rem">2.8 Web Browsers</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-8-web-browsers" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Explore and explain the influence of a web browser on web development, including the use of developer (dev) tools</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explore and explain how web browsers impact web development, including the use of developer tools for debugging, testing, and optimising web applications.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Describe the role of different web browsers (e.g., Chrome, Firefox, Safari) in rendering web content and their influence on the development process.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Use browser developer tools to inspect HTML and CSS, debug JavaScript, and monitor network activity.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Explain how browser-specific features and inconsistencies can affect the appearance and functionality of web applications.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Utilise developer tools to identify and resolve performance issues, accessibility concerns, and cross-browser compatibility problems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>A web browser is a software application that retrieves, presents, and navigates web pages. Browsers like Chrome, Firefox, Safari, and Edge each have unique features and engines that influence how web content is rendered. Understanding these differences is essential for developing and maintaining cross-browser compatible websites.</p>
+<p>&nbsp;</p>
+<h4>Browser Rendering Engines</h4>
+<p>Each browser has a unique rendering engine responsible for interpreting HTML, CSS, and JavaScript code and displaying it as a web page:</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Google Chrome: Uses the Blink engine.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Mozilla Firefox: Uses the Gecko engine.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Safari: Uses the WebKit engine.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Microsoft Edge: Uses the Blink engine (previously used EdgeHTML).</p>
+<p>These engines may interpret the same code slightly differently, which can lead to inconsistencies in how web pages appear and function across different browsers.</p>
+<p>&nbsp;</p>
+<h4>Developer Tools</h4>
+<p>&nbsp;Developer tools are built-in browser tools that help developers test, debug, and optimise their code directly within the browser. Key features include:</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Elements Panel</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Displays the DOM structure of the current webpage.</li>
+<li>Allows developers to inspect and modify HTML and CSS in real-time.</li>
+<li>Useful for identifying and fixing layout and styling issues, testing different CSS properties, and editing content on-the-fly.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/9f74e269346e16ee.png" alt="image.png" width="614" height="357" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527346" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Console Panel</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>An interactive shell to run JavaScript code directly within the browser.</li>
+<li>Useful for debugging JavaScript errors, executing scripts for testing purposes, and logging outputs.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/7839895646444919.png" alt="image.png" width="616" height="357" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527347" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Network Panel</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Tracks all network requests made by the browser.</li>
+<li>Useful for monitoring performance and size of assets, identifying slow or failed requests, and debugging AJAX requests.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/1c0b89575fc9e785.png" alt="image.png" width="592" height="343" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527456" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Performance Panel</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Provides insights into the runtime performance of a website.</li>
+<li>Useful for profiling execution time of JavaScript code, analysing render and layout events, and capturing screenshots for performance issues.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/b4b31f5e0d4b5835.png" alt="image.png" width="596" height="345" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527348" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Application Panel</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Tools to inspect and manage resources such as local storage, cookies, and service workers.</li>
+<li>Useful for managing client-side data, testing Progressive Web Apps (PWAs), and inspecting cache storage.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/7df53acc7ddc6fca.png" alt="image.png" width="587" height="340" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527349" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Cross-Browser Compatibility</h4>
+<p>Ensuring that a website works consistently across all major browsers is a critical aspect of web development. Browser compatibility issues arise when web standards are interpreted differently by each browser’s rendering engine.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">CSS Layout Differences</h3>
+<div class="dp-panel-content ">
+<p>1. Flexbox and Grid Layouts:</p>
+<ul>
+<li>Flexbox: While most modern browsers support Flexbox, there are differences in how they handle certain properties. For example:
+<ul>
+<li><code>flex-basis</code> and <code>min-width</code>: In some browsers, <code>flex-basis</code> behaves differently depending on the presence of <code>min-width</code> or <code>max-width</code> properties.</li>
+<li>Alignment Issues: The alignment properties (<code>align-items</code>, <code>justify-content</code>, etc.) may produce slightly different visual results across browsers, especially when combined with nested flex containers.</li>
+</ul>
+</li>
+<li>Grid Layout: Similar to Flexbox, Grid is widely supported, but certain features like <code>subgrid</code> (supported in Firefox but not Chrome or Safari) or automatic minimum sizing for grid items can behave inconsistently.
+<ul>
+<li>Implicit Grid Tracks: Browsers can differ in how they handle the creation of implicit grid tracks, especially when using auto-placement properties.</li>
+<li>Gap Property: Earlier versions of Edge do not support the gap property for Flexbox (only for Grid), causing spacing inconsistencies.</li>
+</ul>
+</li>
+</ul>
+<p>2. Vendor Prefixes and Legacy Support:</p>
+<ul>
+<li>Older browsers may require vendor prefixes like <code>-webkit-</code>, <code>-moz-</code>, and <code>-ms-</code> to support certain CSS properties. This can lead to unexpected layouts if these prefixes are not included.</li>
+<li>For example, properties like transform, animation, and grid may require vendor prefixes in older versions of Safari, Firefox, and Internet Explorer.</li>
+</ul>
+<p>3. Media Queries:</p>
+<ul>
+<li>Some browsers have different interpretations of media queries, especially for high-resolution displays or certain breakpoints. This can cause unexpected layout changes on different devices.</li>
+</ul>
+<p>4. Browser-Specific Bugs:</p>
+<ul>
+<li>Browsers may have specific bugs or quirks that affect layout rendering. For example:</li>
+<li>Safari: Known for issues with flexbox where child elements may overflow their container, or negative margins cause unexpected behaviour.</li>
+<li>Chrome: Issues with stacking contexts and z-index when combined with flex or grid containers.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">JavaScript API Support</h3>
+<div class="dp-panel-content ">
+<p>1. ES6+ (ECMAScript 2015 and Beyond):</p>
+<ul>
+<li>Not all browsers support newer JavaScript features such as async/await, let and const declarations, or arrow functions. For example:
+<ul>
+<li>Internet Explorer 11: Does not support ES6 features like Promise, Map, Set, or arrow functions.</li>
+<li>Polyfills: Libraries like Babel and core-js can be used to add support for these features in older browsers.</li>
+</ul>
+</li>
+</ul>
+<p>2. Web APIs:</p>
+<ul>
+<li>Newer APIs such as the Fetch API, Service Workers, and Intersection Observer are not universally supported across all browsers.
+<ul>
+<li>Fetch API: Replaces XMLHttpRequest for network requests but is not supported in Internet Explorer.</li>
+<li>Service Workers: Provides the backbone for Progressive Web Apps (PWAs) by allowing offline caching and background sync. Not supported in all versions of Safari.</li>
+<li>Intersection Observer: Used for lazy-loading images and infinite scroll implementations. Limited support in older versions of Safari and Internet Explorer.</li>
+</ul>
+</li>
+</ul>
+<p>3. Polyfills and Shims:</p>
+<ul>
+<li>Polyfills are scripts that add support for features that are not natively available in certain browsers. They allow developers to use modern JavaScript features while maintaining compatibility with older browsers.
+<ul>
+<li>Example: The core-js library provides polyfills for many ES6+ features.</li>
+<li>Shims modify or extend native methods to provide a consistent API. They are used when a browser partially supports a feature but implements it differently.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">HTML Element Rendering</h3>
+<div class="dp-panel-content">
+<p>1. Default Styles and Behaviors:</p>
+<ul>
+<li>Different browsers apply default styles to HTML elements using their built-in user agent stylesheets. This can result in inconsistencies in how elements like <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, and <code>&lt;select&gt;</code> are rendered.
+<ul>
+<li>Form Elements: Browsers often have different default styles for form controls. For example, the appearance of checkboxes, radio buttons, and file inputs can vary significantly between Chrome, Firefox, Safari, and Edge.</li>
+<li>Buttons: The default padding, border-radius, and font styles for <code>&lt;button&gt;</code> elements can differ across browsers, leading to inconsistencies in appearance.</li>
+</ul>
+</li>
+</ul>
+<p>2. CSS Resets and Normalisation:</p>
+<ul>
+<li>To address these inconsistencies, developers use CSS resets (like Eric Meyer’s Reset) or normalisation libraries (like Normalize.css) that standardise default styles across all browsers.</li>
+<li>CSS Reset: Removes all default styles applied by browsers.</li>
+<li>Normalize.css: Preserves useful defaults while correcting browser-specific quirks.</li>
+</ul>
+<p>3. Pseudo-Elements and Pseudo-Classes:</p>
+<ul>
+<li>Browsers may render pseudo-elements (<code>::before</code>, <code>::after</code>) and pseudo-classes (<code>:hover</code>, <code>:focus</code>) differently. For example:
+<ul>
+<li>The visual behaviour of <code>:focus</code> may differ across browsers, particularly with elements like links and form controls.</li>
+<li>The positioning and content of <code>::before</code> and <code>::after</code> pseudo-elements can sometimes render inconsistently when combined with complex layout models.</li>
+</ul>
+</li>
+</ul>
+<p>4. Accessibility and ARIA:</p>
+<ul>
+<li>Differences in how browsers interpret ARIA (Accessible Rich Internet Applications) attributes can affect the accessibility of custom components. For example:
+<ul>
+<li>Custom-styled elements like sliders or accordions may have inconsistent keyboard navigation and screen reader support across browsers.</li>
+</ul>
+</li>
+</ul>
+<p>5. Rendering Performance:</p>
+<ul>
+<li>Different browsers may have varying performance characteristics when rendering complex elements or animations. For example:
+<ul>
+<li>Hardware Acceleration: Browsers like Chrome and Firefox may use GPU acceleration for rendering, while others may not, affecting the performance of animations and transitions.</li>
+<li>Repaints and Reflows: The way browsers handle repaints and reflows (layout changes) can impact rendering performance, especially for complex or interactive UIs.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Performance Optimisation</h4>
+<p>Performance optimisation focuses on improving the speed, responsiveness, and overall user experience of a website. By minimising load times, reducing the size of resources, and ensuring efficient rendering of web pages, developers can enhance site performance and user satisfaction.&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<p>Tools like Google Lighthouse provide in-depth performance audits that help measure critical metrics such as page load time, Largest Contentful Paint (LCP), and Time to First Byte (TTFB). These metrics give developers insights into various aspects of website performance:</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Page Load Time measures the overall time it takes for a web page to be fully loaded and rendered, impacting user experience and search engine rankings.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Largest Contentful Paint (LCP) indicates the time it takes for the largest visible content element (like an image or text block) to appear on the screen. This metric is crucial for assessing perceived loading speed, as it reflects how quickly users can see and interact with the main content.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Time to First Byte (TTFB) measures the time between a user’s request for a resource and when the first byte is received by their browser. It is an indicator of server responsiveness and can be influenced by factors like server configuration, database queries, and content delivery networks (CDNs).</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p style="text-align: center;"><em><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/83d7f401c60dbf97.png" alt="image.png" width="611" height="352" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527350" data-api-returntype="File" loading="lazy">Google Lighthouse Report for King's Website</em></p>
+<p style="text-align: left;">&nbsp;</p>
+<h4>Security Features in Modern Browsers</h4>
+<p>Modern browsers include several security features designed to protect users and data:</p>
+<ul>
+<li>Same-Origin Policy: Restricts how scripts on different pages interact, preventing malicious websites from accessing sensitive data on other sites.</li>
+<li>Content Security Policy (CSP): Allows developers to define policies that restrict where content can be loaded from, mitigating risks like Cross-Site Scripting (XSS).</li>
+<li>HTTPS: Browsers enforce secure connections for websites, displaying warnings for non-secure HTTP pages.</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://developer.chrome.com/docs/lighthouse/overview" target="_blank">Google Lighthouse</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.8 Web Browsers" href="https://canvas.kings.edu.au/courses/12951/assignments/204835" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204835" data-api-returntype="Assignment">2.8 Web Browsers</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.8%20Web%20Browsers.pptx?d=wcc17dd5837ba4edc8b1755c34651cd74&amp;csf=1&amp;web=1&amp;e=LSSSNr">2.8 Web Browsers.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-8-web-browsers" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={cc17dd58-37ba-4edc-8b17-55c34651cd74}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-048.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-050.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

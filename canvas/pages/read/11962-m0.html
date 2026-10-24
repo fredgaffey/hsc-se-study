@@ -1,0 +1,631 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Course Information — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">11SENX Software Engineering 2025 · module 1 of 17</p>
+<h1>Course Information</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="11962-all.html">Whole course</a><span class="cur">By module</span><a href="../course-11962.html">By lesson</a></div>
+<h3 class="readles">Course overview</h3>
+<div id="kl_wrapper_3" class="kl_bookmark variation_2 kl_wrapper">
+<div id="kl_banner">
+
+</div>
+<div id="kl_banner_image"><img class="kl_image_full_width" style="width: 100%; height: auto; max-width: 100%;" role="presentation" src="https://kingsnet.kings.edu.au/images/UserUploadedImages/1754/banner2.jpg" alt=" [online-only image]" loading="lazy"></div>
+<div id="kl_custom_block_1" class="">
+<h3>Course overview</h3>
+<p>This course has been structured for online and blended learning. Synchronous and asynchronous work has been developed, including discussions, activities and reflections. In person sessions will also be organised throughout the year to compliment the online course.</p>
+<p>The Canvas course will also incorporate other interactive features such as quizzes, multimedia and recordings from a range of staff and experts in the relevant fields.&nbsp;</p>
+<p>Formative feedback will be embedded throughout the course to accompany the mandated summative assessment tasks that students will complete.</p>
+<p>Please post and reply to the questions of others throughout the year.&nbsp;</p>
+</div>
+<div id="kl_custom_block_0" class="">
+<h3>Expectations</h3>
+<p>The Year 11 course requires <strong><span style="color: #e03e2d;">120 indicative hours</span></strong> including both synchronous and asynchronous learning and working towards the completion of each assessment task.</p>
+<p>The course modules have been 'chunked' into 2 week cycles. A cycle represents a typical school fortnight of 8 hours of class time for a subject. Each cycle therefore represents the amount of work you would be expected to complete during the 8 hours of class you would have sat face to face.</p>
+<table style="border-collapse: collapse; margin-left: auto; margin-right: auto;" border="1">
+<tbody>
+<tr>
+<td style="text-align: center; background-color: #95a5a6;"><strong>Year 11</strong></td>
+<td style="background-color: #95a5a6;"><strong>Indicative Hours</strong></td>
+</tr>
+<tr>
+<td>Programming fundamentals</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr>
+<td>The object-oriented paradigm</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr>
+<td>Proramming mechatronics</td>
+<td style="text-align: center;">40</td>
+</tr>
+</tbody>
+</table>
+<p>You are expected to behave respectfully while online and face to face. You can email the course coordinator,<span>&nbsp;</span><a href="mailto:keith.heggart@uts.edu.au">mienna@kings.edu.au</a><span>&nbsp;</span><a href="mailto:Mary.Coupland@uts.edu.au"></a>if you have any concerns throughout the year.</p>
+</div>
+<div id="kl_custom_block_2" class="">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>SE-11-01 <span>describes methods used to plan, develop and engineer software solutions</span></li>
+<li>SE-11-02 explains how structural elements are used to develop programming code</li>
+<li>SE-11-03 <span>describes how current hardware, software and emerging technologies influence the development of software engineering solutions</span></li>
+<li>SE-11-04 <span>applies safe and secure practices to collect, use and store data</span></li>
+<li>SE-11-05 <span>describes the social, ethical and legal implications of software engineering on the individual, society and the environment</span></li>
+<li>SE-11-06 <span>applies tools and resources to design, develop, manage and evaluate software</span></li>
+<li>SE-11-07 implements safe and secure programming solutions</li>
+<li>SE-11-08 applies language structures to refine code</li>
+<li>SE-11-09 manages and documents the development of a software project</li>
+</ul>
+</div>
+<div id="kl_custom_block_3" class="">
+<h3>Copyright</h3>
+<p class="p1">The materials produced and found in this online course haven been prepared by The King's School and are protected by copyright. The Canvas course will be maintained throughout the year and contain the latest version of the resources. <span>Please note that any of these resources found elsewhere on the internet may not be current and are not authorised. It is not recommended to rely on copies from any other source.</span></p>
+<p class="p1"><span>Usage agreement:</span></p>
+<ul>
+<li class="p1"><span>The resources must not be reproduced in any material form, whether electronic or otherwise, in Australia or any other country</span></li>
+<li class="p1"><span>You are not allowed to share the material with anyone or store it electronically in any way without written permission from The King's School</span></li>
+<li class="p1"><span>You will use the material solely for the purpose of obtaining information</span></li>
+<li class="p1"><span>The material or any part of it will not be modified without obtaining written permission from The King's School</span></li>
+<li class="p1"><span>To use Canvas and Microsoft 365 to access all resources for the course</span></li>
+</ul>
+<p class="p1"><i></i>The course may contain copyrighted material from third-party sources, including photos, diagrams, quotations, cartoons, and artworks. This material is protected by Australian and international copyright laws and cannot be reproduced or transmitted without the permission of the copyright owner. Any unauthorised reproduction, transmission, or commercial use of this material may lead to legal action.</p>
+<p class="p1"><i> </i></p>
+<p class="p1">&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">Assessment overview</h3>
+<div id="kl_wrapper_3" class="kl_bookmark variation_2 kl_wrapper">
+<div id="kl_banner">
+
+</div>
+<div id="kl_banner_image"><img class="kl_image_full_width" style="width: 100%; height: auto; max-width: 100%;" role="presentation" src="https://kingsnet.kings.edu.au/images/UserUploadedImages/1754/banner7.jpg" alt=" [online-only image]" loading="lazy"></div>
+<div id="kl_custom_block_0" class="">
+<h3>Assessment Schedule</h3>
+<p>To access comprehensive information about assessment tasks and their respective evaluation standards, please navigate to the Assignments tab located on the left-hand side of the screen.</p>
+<div class="kl_panels_wrapper kl_panels_tabs">
+<h3 id="kl_panel_0" class="kl_panel_heading kl_panel_0">Assessment Task 1</h3>
+<div id="kl_panel_0_content" class="kl_panel_content kl_panel_0">
+<h4>Programming fundamentals (30%)</h4>
+<p>Students will <span>apply skills in computational thinking and programming to complete a number of programming challenges.</span></p>
+<p>Due: Week 9 Term 1</p>
+</div>
+<h3 id="kl_panel_1" class="kl_panel_heading kl_panel_1">Assessment Task 2</h3>
+<div id="kl_panel_1_content" class="kl_panel_content kl_panel_1">
+<h4>OOP (30%)</h4>
+<p>Students will <span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">design and implement computer programs involving branching, iteration and functions in an OOP language for an identified need or opportunity</span>.</p>
+<p>Due: Week 9 Term 2</p>
+</div>
+<h3 id="kl_panel_2" class="kl_panel_heading kl_panel_2">Assessment Task 3</h3>
+<div id="kl_panel_2_content" class="kl_panel_content kl_panel_2">
+<h4>End of Year Exam (40%)</h4>
+<p>Students will undertake an online examination covering all content covered in the Year 11 Enterprise Computing Course.</p>
+<p>Due: Term 3 assessment block</p>
+</div>
+</div>
+</div>
+<div id="kl_custom_block_1" class="">
+<h3>Submission</h3>
+<p>Ensure that your work is accurately cited and uploaded using the "Assignments" tab located on the left-hand side. It is solely your responsibility to guarantee that all sections are uploaded prior to the deadline, unless an extension has been granted. Failure to submit work on time will result in a deduction of marks as per the Schools assessment policy.</p>
+<p>Assessment work will have clear submission instructions on the task notification.</p>
+<p>In some cases, written assignments submitted through Canvas may be subject to scrutiny by Turnitin. This software cross-references your written work with previously submitted assignments, library databases, publications, AI language models and web pages. Please reference accordingly when using any other items to aid your work.</p>
+<p>If you have any questions or reservations, do not hesitate to reach out to your instructor.</p>
+</div>
+<div id="kl_custom_block_2" class="">
+<h3>Marking</h3>
+<p>Students will be provided with a marking rubric for their assessment tasks throughout the year and marked as per the common grade scale for preliminary courses as designed by <a class="inline_disabled" href="https://www.educationstandards.nsw.edu.au/wps/portal/nesa/11-12/Understanding-the-curriculum/awarding-grades/monitoring-grades/common-grade-scale/!ut/p/z1/xVPLcoIwFP0WFywzuQkIuMQ-pD6qbaVKNk6MQbESEIK2_fqibWe6Udpx0ezu85yTnGCGp5gpvouXXMep4psqDpk9s-58ABNovzP2bfDaDx2_6wM1LRtPjg3UIzbxLdIbdlwC3nhIbNp16DBoYnaYJ7RDiEsH4FAHvMfR1ejav6XQb37Nw4njwe_mzzSw8_yfMcNMKJ3pFQ6z_UykSkulDcjydC2FRns5N0DJghtACCLUgFItZF5orhaxWiK9kkiUeR6LclMmBvA9z4-FZc4XsjAgSVWs0_xnSqRJlf0MUSH4Rh5YZCJe4JDTCFpgz5HbciSyWlETtWyToqhpujIiwrVd-a36tCx2_lInB7yad6vbEVYcnJMcehae7GK5x4FK86Ry0tMfJfq1CORChJr1zoXru3XWq_5WvN5umVcZ8OC6V42n_-jALAmCIHHNN_QSDW5MK-zu3tv3iIVeo_EBWSUHjA!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/?urile=wcm%3Apath%3A%2Fpw_content%2Fproject-web%2Fnesa%2F11-12%2FUnderstanding-the-curriculum%2Fawarding-grades%2Fmonitoring-grades%2Fcommon-grade-scale" target="_blank">NESA</a>.</p>
+</div>
+<div id="kl_custom_block_3" class="">
+<h3>NESA</h3>
+<h4>Components and weightings for Year 11:</h4>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/5266a0fcb47754d7.png" alt="Screenshot 2023-02-20 142748.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197093" data-api-returntype="File" loading="lazy"></p>
+<h4>Performance band descriptors for Software Engineering</h4>
+<p><span>HSC performance band descriptions summarise the knowledge, understanding and skills typically demonstrated by students at each band level in a particular course. NESA uses these holistic descriptions to report a student's overall level of achievement in an HSC course.</span></p>
+<div class="kl_panels_wrapper kl_panels_accordion">
+<h3 id="kl_panel_3" class="kl_panel_heading kl_panel_3">Band 6</h3>
+<div id="kl_panel_3_content" class="kl_panel_content kl_panel_3">
+<div class="richtext">
+<div class="richtext">
+<div class="richtext">
+<div class="richtext">
+<p>A student who typically performs at this level:</p>
+</div>
+</div>
+<div class="richtext">
+<ul>
+<li>
+<div class="richtext">
+<p>demonstrates comprehensive understanding of the influence of technologies on the development of software engineering solutions</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>demonstrates extensive knowledge and understanding of the social, ethical and legal implications of the application of software engineering solutions on the individual, society and the environment</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>applies sophisticated technical skills in the design and implementation of programming solutions</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>collects, uses, manages and stores complex data effectively, safely and securely</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>applies comprehensive skills in developing, managing and documenting software engineering projects</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>communicates logically and effectively using a range of terms, conventions and methods</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 id="kl_panel_4" class="kl_panel_heading kl_panel_4">Band 5</h3>
+<div id="kl_panel_4_content" class="kl_panel_content kl_panel_4">
+<div class="richtext">
+<div class="richtext">
+<div class="richtext">
+<div class="richtext">
+<p>A student who typically performs at this level:</p>
+</div>
+</div>
+<div class="richtext">
+<ul>
+<li>
+<div class="richtext">
+<p>demonstrates broad understanding of the influence of technologies on the development of software engineering solutions</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>demonstrates thorough knowledge and understanding of the social, ethical and legal implications of the application of software engineering solutions on the individual, society and the environment</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>applies high-level technical skills in the design and implementation of programming solutions</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>collects, uses, manages and stores data effectively, safely and securely</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>demonstrates high-level skills in developing, managing and documenting software engineering projects</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>communicates logically, using appropriate terms, conventions and methods</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 id="kl_panel_5" class="kl_panel_heading kl_panel_5">Band 4</h3>
+<div id="kl_panel_5_content" class="kl_panel_content kl_panel_5">
+<div class="richtext">
+<div class="richtext">
+<div class="richtext">
+<div class="richtext">
+<p>A student who typically performs at this level:</p>
+</div>
+</div>
+<div class="richtext">
+<ul>
+<li>
+<div class="richtext">
+<p>demonstrates sound understanding of the influence of technologies on the development of software engineering solutions</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>demonstrates sound knowledge and understanding of the social, ethical and legal implications of the application of software engineering solutions</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>applies sound technical skills in the design and implementation of programming solutions</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>collects, uses, manages and stores data safely and securely</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>demonstrates sound skills in developing, managing and documenting software engineering projects</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>communicates using relevant terms, conventions and methods</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 id="kl_panel_6" class="kl_panel_heading kl_panel_6">Band 3</h3>
+<div id="kl_panel_6_content" class="kl_panel_content kl_panel_6">
+<div class="richtext">
+<div class="richtext">
+<div class="richtext">
+<div class="richtext">
+<p>A student who typically performs at this level:</p>
+</div>
+</div>
+<div class="richtext">
+<ul>
+<li>
+<div class="richtext">
+<p>demonstrates basic understanding of the influence of technologies on the development of software engineering solutions</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>demonstrates basic knowledge and understanding of the social and/or ethical and/or legal implications of the application of software engineering solutions</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>displays basic skills in programming</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>uses data safely and securely</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>displays basic skills in developing software engineering projects</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>communicates using basic terms and conventions and/or methods</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 id="kl_panel_7" class="kl_panel_heading kl_panel_7">Band 2</h3>
+<div id="kl_panel_7_content" class="kl_panel_content kl_panel_7">
+<div class="richtext">
+<div class="richtext">
+<div class="richtext">
+<div class="richtext">
+<p>A student who typically performs at this level:</p>
+</div>
+</div>
+<div class="richtext">
+<ul>
+<li>
+<div class="richtext">
+<p>demonstrates limited understanding of the use of technologies</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>displays limited skills in programming</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>displays limited skills in developing software engineering projects</p>
+</div>
+</li>
+<li>
+<div class="richtext">
+<p>communicates with limited use of terms</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 id="kl_panel_8" class="kl_panel_heading kl_panel_8">Band 1</h3>
+<div id="kl_panel_8_content" class="kl_panel_content kl_panel_8">
+<div class="w-full">
+<div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-expanded MuiAccordion-gutters nesa-accordion mui-style-1ep8a4v">
+<div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered mui-style-c4sutr">
+<div class="MuiCollapse-wrapper MuiCollapse-vertical mui-style-hboir5">
+<div class="MuiCollapse-wrapperInner MuiCollapse-vertical mui-style-8atqhb">
+<div class="MuiAccordion-region" role="region">
+<div class="MuiAccordionDetails-root nesa-accordion__content mui-style-87vy3r">
+<div class="NonFullWidthWrapper">
+<div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-spacing-md-8 mui-style-ugc28f">
+<div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-8 mui-style-1pyoyk7">
+<div class="space-y-8 lg:space-y-12">
+<div class="divide-y space-y-8 lg:space-y-12">
+<div class="pt-8 lg:pt-12 first:pt-0 space-y-5" data-kontent-item-id="c96ee377-7ad7-4277-b504-af436929ea7f" data-kontent-element-codename="assesment">
+<div class="space-y-5">
+<div class="space-y-2">
+<div class="richtext">
+<p>Performance at a lower level than Band 2 is reported as Band 1.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h3 class="readles">Staff</h3>
+<div id="kl_wrapper_3" class="kl_bookmark variation_2 kl_wrapper">
+<div id="kl_banner">
+
+</div>
+<div id="kl_banner_image"><img class="kl_image_full_width" style="width: 100%; height: auto; max-width: 100%;" role="presentation" src="https://kingsnet.kings.edu.au/images/UserUploadedImages/1754/banner_tks.jpg" alt=" [online-only image]" loading="lazy"></div>
+<div id="kl_custom_block_0" class="">
+<div id="kl_custom_block_0" class="">
+<div class="content-box">
+<div class="grid-row">
+<div class="col-xs-12 col-md-3">
+<div class="styleguide-section__grid-demo-element"><img src="../../assets/a33f84ed8d78fb3b.jpg" alt="Michael Ienna" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197103" data-api-returntype="File" loading="lazy"></div>
+</div>
+<div class="col-xs-12 col-md-9">
+<div class="styleguide-section__grid-demo-element">
+<h2>Mr Michael Ienna</h2>
+<div class="sidebar__info">
+<p><strong>Head of Department: Computing; STEAM Co-Ordinator; Master in Charge: Programming Club, Robotics Club, Media Club</strong></p>
+</div>
+<p><span>Michael Ienna is a teacher with over 15 years experience in curriculum development, technology, pedagogy, digital media production and teacher professional development. Michael has worked across various school sectors in both co-educational and single sex schools. He is currently working towards increasing the footprint of computing subjects in the state for both students and future teachers. He is a HSC senior marker and CSSA exam convener.</span></p>
+<p><strong>Email:</strong><span>&nbsp;<a class="inline_disabled" href="mailto:mienna@kings.edu.au" target="_blank">mienna@kings.edu.au</a></span><br><a class="external" href="https://twitter.com/keithheggart?lang=en" target="_blank"></a></p>
+<p><strong>Twitter:<span>&nbsp;</span></strong><a class="external" href="https://twitter.com/keithheggart?lang=en" target="_blank"><span>@eduienna</span></a></p>
+<p><strong>LinkedIn: <a class="inline_disabled" href="https://www.linkedin.com/in/michael-ienna-714642166/" target="_blank">Michael Ienna</a></strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="kl_custom_block_5" class="">
+<div id="kl_custom_block_1" class="">
+<div class="content-box">
+<div class="grid-row">
+<div class="col-xs-12 col-sm-12 col-lg-3">
+<div class="styleguide-section__grid-demo-element"><img src="../../assets/b959eb48e1418524.jpg" alt="BLum.jpeg" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197096" data-api-returntype="File" loading="lazy"></div>
+</div>
+<div class="col-xs-12 col-sm-12 col-lg-9">
+<div class="styleguide-section__grid-demo-element">
+<h2>Mr Benjamin Lum</h2>
+<div class="sidebar__info">
+<p><strong>Head of Online Learning; Computing Studies Teacher</strong></p>
+</div>
+<p><span>Benjamin Lum is an experienced Computing Studies teacher who has a love of innovation and tinkering. He is an experienced IPT and SDD teacher and has run online courses across different schooling sectors. He currently coaches the King's Schools VEX Robotics teams. He is a CSSA exam convener.&nbsp;</span></p>
+<p><strong>Email:</strong>&nbsp;<a class="inline_disabled" href="mailto:blum@kings.edu.au" target="_blank">blum@kings.edu.au</a></p>
+<p><strong>LinkedIn:<span>&nbsp;</span><span>&nbsp;</span><a class="inline_disabled" href="https://www.linkedin.com/in/benjamin-lum-66011a1a4/" target="_blank">Benjamin Lum</a></strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="kl_custom_block_6" class="">
+<div id="kl_custom_block_2" class="">
+<div class="content-box">
+<div class="grid-row">
+<div class="col-xs-12 col-sm-12 col-lg-3">
+<div class="styleguide-section__grid-demo-element"><img src="../../assets/353b5154925a9c03.jpg" alt="HFoxwell.jpeg" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197099" data-api-returntype="File" loading="lazy"></div>
+</div>
+<div class="col-xs-12 col-sm-12 col-lg-9">
+<div class="styleguide-section__grid-demo-element">
+<h2>Mr Hayden Foxwell</h2>
+<div class="sidebar__info">
+<p><strong>Computing Studies Teacher; Data Analyst</strong></p>
+</div>
+<p>Mr Foxwell is an avid programmer and tinkerer. He enjoys building autonomous systems and playing with code. Mr Foxwell has submitted projects to GitHub and has recently worked on Python and Java systems to help automate teaching paperwork. He has had tremendous success with our Software Design and Development students, with a number of state rankings over the past years.</p>
+<p><strong>Email:</strong>&nbsp;<a href="mailto:hfoxwell@kings.edu.au" target="_blank">hfoxwell@kings.edu.au</a></p>
+<p><strong>LinkedIn:<span>&nbsp;</span><span>&nbsp;</span><a class="pv-contact-info__contact-link link-without-visited-state t-14 external" href="https://www.linkedin.com/in/hayden-foxwell-9383ab176/" target="_blank">Hayden Foxwell</a></strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="kl_custom_block_3" class="">
+<div id="kl_custom_block_2" class="">
+<div class="content-box">
+<div class="grid-row">
+<div class="col-xs-12 col-sm-12 col-lg-3">
+<div class="styleguide-section__grid-demo-element"><img src="../../assets/b83a210ee38589a9.jpg" alt="1052002_27298.jpg" loading="lazy" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197081" data-api-returntype="File"></div>
+</div>
+<div class="col-xs-12 col-sm-12 col-lg-9">
+<div class="styleguide-section__grid-demo-element">
+<h2>Mr Rocco Ianni</h2>
+<div class="sidebar__info">
+<p><strong>Computing Studies Teacher</strong></p>
+</div>
+<p>Mr Ianni is a new addition to the King's School, joining us in 2024. He has a history of working in industry as a software developer before moving into teaching. Mr Ianni is an experienced programmer who has a keen interest in artificial intelligence and its potential uses in school settings.</p>
+<p><strong>Email:</strong> <a href="mailto:rianni@kings.edu.au" target="_blank">rianni@kings.edu.au</a></p>
+<p><strong>LinkedIn:<span>&nbsp;</span><span>&nbsp;</span><a class="pv-contact-info__contact-link link-without-visited-state t-14 external" href="https://www.linkedin.com/in/rocco-ianni-8778089a?originalSubdomain=au" target="_blank">Rocco Ianni</a></strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h3 class="readles">Equipment</h3>
+<div id="kl_wrapper_3" class="kl_bookmark variation_2 kl_wrapper">
+<div id="kl_banner">
+
+</div>
+<div id="kl_banner_image"><img class="kl_image_full_width" style="width: 100%; height: auto; max-width: 100%;" role="presentation" src="https://kingsnet.kings.edu.au/images/UserUploadedImages/1754/banner13.jpg" alt=" [online-only image]" loading="lazy"></div>
+<div id="kl_custom_block_0" class="">
+<h3>Resources</h3>
+<p>With the TKS OneDrive, you can keep your work private or make it public and share the link, and also export your work as a zip file at any time. If you use TKS OneDrive, we will never make your information public. Your learning is private and will stay that way unless you choose otherwise.</p>
+<p>You will also have access to software programs via your King's school email address. This includes:</p>
+<ul>
+<li>Adobe Suite</li>
+<li>Office 365</li>
+<li>EdStem</li>
+<li>Visual Code</li>
+<li><a class="inline_disabled" href="https://seededu.github.io/stage6_se/syllabus/index.html" target="_blank">Free Textbook</a></li>
+</ul>
+<p>We recommend that you use Chrome as your browser for completing this course. You can also download the Canvas Student App to your phone or tablet.</p>
+<h4>Ongoing</h4>
+<p>Throughout the course, a number of different activities and platforms will be used. This will include:</p>
+<ul>
+<li>Reflection</li>
+<li>Discussions</li>
+<li>Journals</li>
+<li>Polling</li>
+<li>Other assorted activities</li>
+</ul>
+<p>This course will provide you with the opportunity to engage in learning patterns that have been shown to be effective through scientific research. The two main approaches that this course will offer are Cornell Notes and utilising <a class="inline_disabled" href="https://www.lifehack.org/851026/spaced-repetition" target="_blank">spaced repetition</a> through quizzes and flashcards.</p>
+<p style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/equipment" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/Kl0RM_9cVzE</span></div></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h3 class="readles">Discussion — Student Introductions</h3>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/c854ae3ad5c92d8c.jpg" alt="business-call-handsome-young-arab-man-talking-on-2022-01-19-00-11-53-utc.jpg" width="80%" height="80%" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197120" data-api-returntype="File" loading="lazy"></p><p>Whilst this is a predominately online course with participants from schools all across the state. It is important to develop a healthy relationship as a cohort learning together. Here is a chance to introduce yourself and get to know your teachers and fellow students.</p><p><strong>In your post:</strong></p><ul><li>Tell us about yourself and why you are studying this subject</li></ul><p>Click on the 'Write a reply' button below to post.</p><p>&nbsp;</p>
+<h3 class="readles">Induction Program (Term 4)</h3>
+<div id="kl_wrapper_3" class="kl_bookmark variation_2 kl_wrapper">
+<div id="kl_banner">
+<h2><span id="kl_banner_left"><span class="kl_mod_text">Intro</span><span class="kl_mod_num">I </span> </span> <span id="kl_banner_right">Induction Program</span></h2>
+</div>
+<div id="kl_banner_image"><img class="kl_image_full_width" style="width: 100%; height: auto; max-width: 100%;" role="presentation" src="https://kingsnet.kings.edu.au/images/UserUploadedImages/1754/banner_classes.jpg" alt=" [online-only image]" loading="lazy"></div>
+<div id="kl_custom_block_0" class="">
+<h3>Meet and greet</h3>
+<p><span>This course utilises a hybrid learning approach that blends synchronous and asynchronous learning methods. Participants will have access to both pre-recorded and live sessions, along with supplementary materials and tasks to complete in between these sessions.</span></p>
+<p><span>To ensure the best possible start in 2024, we would like to have an induction 'meet and greet' in Term 4 2023 to prepare students for what is ahead in 2024.</span></p>
+<h4>Session details</h4>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="text-align: center;">
+<td style="width: 33.2986%; background-color: #000000; text-align: center;"><strong><span style="color: #ecf0f1;">Date/Time</span></strong></td>
+<td style="width: 33.2986%; background-color: #000000; text-align: center;"><strong><span style="color: #ffffff;">Link</span></strong></td>
+<td style="width: 33.3019%; background-color: #000000; text-align: center;"><strong><span style="color: #ffffff;">Recording</span></strong></td>
+</tr>
+<tr>
+<td style="width: 33.2986%;">
+<p style="text-align: center;">Monday December 7</p>
+<p style="text-align: center;">5pm - 6pm</p>
+</td>
+<td style="width: 33.2986%; text-align: center;"><a class="inline_disabled" href="http://www.puthere.com/" target="_blank">Teams</a></td>
+<td style="width: 33.3019%;">
+<p>Link</p>
+<p>Password:</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Discussion points:</p>
+<ul>
+<li>Introductions</li>
+<li>Course structure</li>
+<li>Tips for success in a blended environment</li>
+<li>Assessments</li>
+<li>Help channels</li>
+<li>Academic integrity</li>
+<li>Questions</li>
+</ul>
+<p><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/induction-program-term-4" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fdiscussions.atomicjoltappsau.com%2Flti_launches%2FqTUmcShojtU8UUp9Sk3KJwdz</span></div></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="readnav"><a href="../course-11962.html">all modules</a><a href="11962-m1.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

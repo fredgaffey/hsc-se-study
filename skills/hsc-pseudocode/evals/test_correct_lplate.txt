@@ -1,0 +1,44 @@
+# Main program to track L-plate driving hours
+BEGIN TrackDrivingHours
+    # Load existing trip log from storage
+    load_trip_log(trip_log)
+
+    # Record a new trip
+    record_trip(trip_log)
+
+    # Calculate and display progress toward 120-hour requirement
+    SET total_hours = calculate_total_hours(trip_log)
+    DISPLAY "Total hours logged: " + total_hours
+
+    IF total_hours >= 120 THEN
+        DISPLAY "Congratulations! You have completed the required hours."
+    ELSE
+        SET remaining = 120 - total_hours
+        DISPLAY "You need " + remaining + " more hours."
+    ENDIF
+
+    # Save updated log
+    save_trip_log(trip_log)
+END TrackDrivingHours
+
+# Record a single driving trip with start and end times
+BEGIN record_trip (trip_log)
+    GET start_time
+    GET end_time
+    GET is_night_trip
+    SET duration = end_time - start_time
+    SET trip_count = trip_count + 1
+    SET trip_log[trip_count] = duration
+    IF is_night_trip = True THEN
+        SET night_hours = night_hours + duration
+    ENDIF
+END record_trip (trip_log)
+
+# Calculate total hours from all recorded trips
+BEGIN calculate_total_hours (trip_log)
+    SET total = 0
+    FOR i = 1 TO trip_count
+        SET total = total + trip_log[i]
+    NEXT i
+    RETURN total
+END calculate_total_hours (trip_log)

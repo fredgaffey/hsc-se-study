@@ -1,0 +1,176 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.5 Structured algorithms — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 1 (Term 1: Weeks 1-2) Programming Fundamentals</div>
+<h1 style="margin-top:.2rem">1.5 Structured algorithms</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Develop structured algorithms using pseudocode and flowcharts, including the use of subprograms</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">be able to develop structured algorithms using pseudocode and flowcharts, including the use of subprograms, to solve complex computational problems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">explain the importance of developing structured algorithms using pseudocode and flowcharts to solve complex computational problems.</span></li>
+<li><span style="font-size: 10pt;">develop algorithms using pseudocode and flowcharts, including the use of subprograms, to solve different computational problems and apply key programming constructs such as sequence, selection, and iteration.</span></li>
+<li><span style="font-size: 10pt;">test and debug algorithms to ensure they correctly solve the computational problem and can handle different input values and boundary cases.</span></li>
+<li><span style="font-size: 10pt;">evaluate the effectiveness of different algorithmic designs, including their efficiency, scalability, and readability, and propose improvements or optimisations to enhance their performance.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<div class="dp-panels-wrapper dp-tabs dp-panel-active-color-dp-white">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Pseudocode Intro</h3>
+<div class="dp-panel-content">
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3Df2d280b5-dfde-4367-9cb6-33a0facc7a3b-3039%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+<p style="text-align: center;">&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3De336209d-867f-458d-8d9d-7f9f5d1c6601-3041%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Flowchart Intro</h3>
+<div class="dp-panel-content">
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D22ed0336-b998-4247-b510-34cea17f70a1-3050%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+<p style="text-align: center;">&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D8aa2aeaa-7c05-4425-8cbe-5b7aedeb45d3-3049%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Sequence and Selection (Pseudocode and Flowchart)</h3>
+<div class="dp-panel-content">
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D73ad71dc-82bf-42bf-81b2-c24d0a2f43a1-3045%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Repetition&nbsp;(Pseudocode and Flowchart)</h3>
+<div class="dp-panel-content">
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D59fd841b-cdd0-477a-99f5-55b50c24e226-3044%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Subprograms</strong></h4>
+<p>Subprograms, also known as functions or procedures, are <strong>reusable chunks of code</strong> that perform <strong>a specific task</strong> within a program. They help in breaking down complex problems into smaller, more manageable tasks, improve code readability, and promote modularity. Using subprograms makes it easier to maintain, debug, and update the code.</p>
+<p>In Python, subprograms are created using the <code>def</code> keyword, followed by the <strong>function name</strong>, a pair of parentheses containing any <strong>input parameters</strong>, and a colon. The code block inside the function is indented. Functions can return the value of <strong>one</strong> variable using the <code>return</code> statement.</p>
+<p>Functions are defined at the <strong>top of the Python script</strong>, with the mainline in which they are called at the bottom.</p>
+<p>Here's an example in Python that demonstrates the use of subprograms.</p>
+<p><strong>Code:</strong></p>
+<p><img src="../../assets/2d58f91fb392eb42.png" alt="Screen Shot 2024-01-29 at 11.42.53 am.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197972" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Output:</strong></p>
+<pre class="line-numbers"><code class="language-python">12 + 6 = 18<br>12 - 6 = 6<br>12 * 6 = 72<br>12 / 6 = 2.0</code></pre>
+<p><span>In this example, we've created four subprograms (</span><code>add_numbers</code><span>, </span><code>subtract_numbers</code><span>, </span><code>multiply_numbers</code><span>, and </span><code>divide_numbers</code><span>) to perform basic arithmetic operations. These subprograms are then called in the main program underneath all of the function definitions,&nbsp;with the given input parameters (num_1 and num_2). The results are then printed to the console.</span></p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">More Videos</h3>
+<div class="dp-panel-content ">
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/v0-Fm0_OO2g?si=j7lKlyP-X7ELZ5iD</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/Yw2Rxa6gfVg?si=bB7ygJTHNbT281W_</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/PbhfRF68GI4?si=3DLcYpFi6w20x1u2</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/PbhfRF68GI4?si=3uqA7HOtYY32Hs_h</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/Clm4qow0xZo?si=ge1IUUI7LrRvj1n2</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/jf2P5aF6PxI?si=o51YNdjUwLPwtr_I</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/gVtntHa80rU?si=rGDlgwrwrgmvMu1O</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/AgxHcDRDvCs?si=RRYETCWr_INc-yQQ</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/jMG9jNulmbw?si=00lFVazmenWuQHHW</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/HCNRAlEsJEA?si=L1gTAZNyxcrG-O6N</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/7PX63Y0g4Y0?si=Owq7579mc5ZjJXDs</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/oW9Bb1MmvYw?si=cbPNOdTQVyMoCe7k</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/MiEBzNQy9Qc?si=rOWyg485K-DEpJab</span></div><br><br></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.5 Structured algorithms " href="https://canvas.kings.edu.au/courses/11962/assignments/179162" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179162" data-api-returntype="Assignment">1.5 Structured algorithms</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">After</h3></main>
+<div class="pnrow"><a class="pn" href="11962-010.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-012.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

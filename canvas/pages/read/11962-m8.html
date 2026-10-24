@@ -1,0 +1,700 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 8 (Term 2: Weeks 5-6) OOP — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">11SENX Software Engineering 2025 · module 9 of 17</p>
+<h1>Cycle 8 (Term 2: Weeks 5-6) OOP</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="11962-all.html">Whole course</a><span class="cur">By module</span><a href="../course-11962.html">By lesson</a></div>
+<h3 class="readles">2.4 Collaborative Code Development</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Outline the features of OOP that support collaborative code development including:<br class="card-text">- consistency<br class="card-text">- code commenting<br class="card-text">- version control<br class="card-text">- feedback</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Understand and explain how Object-Oriented Programming (OOP) features support collaborative code development, focusing on consistency, code commenting, version control, and feedback mechanisms.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Explain how OOP features like modularity, naming conventions, design patterns, and comments contribute to consistency and readability in collaborative development.</span></li>
+<li><span style="font-size: 13.3333px;">Describe the role of version control systems in managing code changes and the importance of code reviews, automated testing, and CI/CD pipelines in maintaining high code quality.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Collaborative code development is a practice where multiple developers work together on a shared codebase to build, maintain, and enhance software projects.&nbsp;</p>
+<p>&nbsp;</p>
+<h4><strong>Consistency</strong></h4>
+<ol>
+<li>
+<p><strong>Modularity and Encapsulation</strong>: <span>OOP encourages the use of classes and objects to represent real-world entities, promoting a consistent and organised structure within the codebase. By defining clear interfaces and encapsulating data and behaviour within classes, developers can maintain a standardised approach across different modules and components of the software. Review this content here: <a title="2.2.1 OOP Features: Objects, Classes &amp; Encapsulation" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-2-1-oop-features-objects-classes-and-encapsulation" class="ext" target="_blank" rel="noopener" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/2-dot-2-1-oop-features-objects-classes-and-encapsulation" data-api-returntype="Page">2.2.1 OOP Features: Objects, Classes &amp; Encapsulation</a><br></span></p>
+</li>
+<li>
+<p><strong>Standard Naming Conventions</strong>: OOP encourages the use of consistent naming conventions for classes, methods, and variables. This practice ensures that the code is readable and understandable by all team members, reducing confusion and enhancing collaboration.</p>
+</li>
+<li>
+<p><strong>Design Patterns</strong>: Using established design patterns (e.g., Facade) ensures a uniform approach to solving common problems, making the codebase predictable and easier to understand and maintain. Review the content for the Facade pattern here: <a title="2.4 Code Design" href="../lessons/11962-048.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/2-dot-5-code-design" data-api-returntype="Page">2.5 Code Design</a></p>
+</li>
+<li>
+<p><strong>Reusable Components</strong>: Classes and objects can be reused across different parts of the codebase. This reuse promotes consistency in code behaviour and reduces duplication of code.</p>
+</li>
+</ol>
+<p>&nbsp;</p>
+<h4><strong>Code Commenting</strong><strong></strong></h4>
+<ol>
+<li>
+<p><strong>Documentation Comments</strong>: Comments written within the code itself allows developers to document the overall purpose, functionality, and usage of classes and their methods. Properly commented code enhances readability and understanding, facilitating collaboration among team members who may be working on different parts of the project.<br><img src="../../assets/d5ede77c675c5b04.png" alt="image.png" width="650" height="625" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197865" data-api-returntype="File" loading="lazy"></p>
+</li>
+<li>
+<p><strong>Inline Comments</strong>: These comments are placed within the code to explain complex logic, decisions, or unusual implementations. They help other developers understand the rationale behind specific code sections, facilitating easier maintenance and updates.<br><img src="../../assets/cc93550818ab521c.png" alt="image.png" width="750" height="304" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197862" data-api-returntype="File" loading="lazy"></p>
+</li>
+<li><strong>TODO Comments</strong>: These comments highlight areas of the code that need further development, testing, or refactoring. They help keep track of pending tasks and ensure that important updates are not overlooked.<br><img src="../../assets/c3cf2f5b0519e006.png" alt="image.png" width="600" height="194" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197863" data-api-returntype="File" loading="lazy"></li>
+<li>
+<p><strong>Consistent Commenting Style</strong>: Adopting a consistent commenting style across the project ensures that all team members can easily read and interpret comments, enhancing overall code comprehension and reducing miscommunication.</p>
+</li>
+</ol>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Code Commenting Example</h3>
+<div class="dp-panel-content">
+<p>The example below demonstrates a Library system which uses different types of comments (documentation, inline, consistent, todo) throughout the code to improve readability.</p>
+<p><img src="../../assets/837768602d1dfdaa.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197864" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Version Control</strong></h4>
+<ol>
+<li>
+<p><strong>Branching and Merging</strong>: Version Control Systems (VCS) allows developers to work on separate branches for different features or bug fixes. This isolation ensures that changes do not interfere with the main codebase until they are ready to be safely integrated. Merging branches enables the combination of these changes into the main codebase, facilitating collaborative development. Branches with modified code need to be tested for errors first before being merged into the main codebase. This is so that the main codebase always remains as stable as possible.</p>
+</li>
+<li>
+<p><strong>Commit History</strong>: Every change made to the code is recorded with a commit, which includes a message describing the change. The commit messages form a history that provides a detailed record of what was changed, who made the change, and why it was made, making it easier to track progress and understand the evolution of the codebase.</p>
+</li>
+<li>
+<p><strong>Conflict Resolution</strong>: When multiple developers work on the same code, conflicts can arise. VCS tools provide mechanisms to detect, highlight, and resolve these conflicts, ensuring that the final code is coherent and integrates contributions from all team members.</p>
+</li>
+<li>
+<p><strong>Collaboration Platforms</strong>: Platforms like GitHub, GitLab, and Bitbucket offer additional collaborative features such as pull requests, code reviews, and issue tracking, which streamline the development process and enhance team coordination.</p>
+</li>
+</ol>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Version Control with Git</h3>
+<div class="dp-panel-content">
+<p><strong>Git</strong> is a version control system (VCS), it allows us to track project changes and work together on a codebase in a team. Take a look at the video to learn how to use Git and how we can use GitHub to manage a repository.</p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-4-collaborative-code-development" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/6KoBsJfYBPM?si=tQDWYihoyYz1bQa6</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>For more information on these different collaboration platforms take a look back at: <a title="1.2 Online collaboration tools" href="../lessons/11962-008.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/1-dot-2-online-collaboration-tools" data-api-returntype="Page">1.2 Online collaboration tools</a>.</p>
+<p>&nbsp;</p>
+<h4><strong>Feedback</strong></h4>
+<ol>
+<li>
+<p><strong>Code Reviews</strong>: Programmers are generally biased towards their own code, thinking that they are correct despite being potentially flawed. A code review handles this bias by having someone other than the original programmer check the correctness the code. Peer reviews of code changes help identify potential issues, enforce coding standards, and share knowledge among team members. This collaborative practice improves code quality and fosters a culture of continuous improvement.</p>
+</li>
+<li>
+<p><strong>Automated Testing</strong>: Unit tests, integration tests, and automated testing frameworks ensure that code changes do not introduce new bugs or regressions. Automated test results provide immediate feedback on the impact of changes, enabling developers to address issues promptly. Review this content here: <a title="1.18 Test and evaluate" href="../lessons/11962-030.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/1-dot-18-test-and-evaluate" data-api-returntype="Page">1.18 Test and evaluate</a>.</p>
+</li>
+<li>
+<p><strong>Continuous Integration/Continuous Deployment (CI/CD)</strong>: CI/CD pipelines automate the process of building, testing, and deploying code. They provide immediate feedback on the status of the codebase, ensuring that it remains in a deployable state and that issues are caught early in the development cycle.</p>
+</li>
+</ol>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://videotutorials.notion.site/Introduction-to-Git-ac396a0697704709a12b6a0e545db049" target="_blank">Introduction to Git</a></li>
+<li><a class="inline_disabled" title="Link" href="https://videotutorials.notion.site/Introduction-to-GitHub-202af6f64bbd4299b15f238dcd09d2a7" target="_blank">Introduction to Github</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%202.%20The%20Object-Oriented%20Paradigm/PPs/2.4%20Collaborative%20Code%20Development.pptx?d=w89fe823f099845d5a49c14a9156b8219&amp;csf=1&amp;web=1&amp;e=9aHIHR">2.4 Collaborative Code Development.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-4-collaborative-code-development" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={89fe823f-0998-45d5-a49c-14a9156b8219}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">2.4.1 Git Practices</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Outline the features of OOP that support collaborative code development including:<br class="card-text">- consistency<br class="card-text">- code commenting<br class="card-text">- version control<br class="card-text">- feedback</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Understand and explain how Object-Oriented Programming (OOP) features support collaborative code development, focusing on consistency, code commenting, version control, and feedback mechanisms.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Explain how OOP features like modularity, naming conventions, design patterns, and comments contribute to consistency and readability in collaborative development.</span></li>
+<li><span style="font-size: 13.3333px;">Describe the role of version control systems in managing code changes and the importance of code reviews, automated testing, and CI/CD pipelines in maintaining high code quality.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4><strong>Video Tutorials</strong></h4>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Git Basics</h3>
+<div class="dp-panel-content ">
+<p><br><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-4-dot-1-git-practices" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D4238dc1b-7998-4f39-bc66-1a7050cc3242-2768%26custom_arc_start_at%3D0</span></div></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Cloning and Repo Initialisation</h3>
+<div class="dp-panel-content ">
+<p><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-4-dot-1-git-practices" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D9521e049-e570-40f7-ae5d-3b2d11e1fee1-2766%26custom_arc_start_at%3D0</span></div></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Branches and Merge Conflicts</h3>
+<div class="dp-panel-content">
+<p><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-4-dot-1-git-practices" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3De0b4a4a8-4a76-4a8d-9bf7-edd68171dccd-2767%26custom_arc_start_at%3D0</span></div></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Initial Clone of a Repository</strong></h4>
+<ol style="list-style-type: decimal;">
+<li>Use <code>git clone &lt;url&gt;</code> to clone the repository. Remember to replace the <code>&lt;url&gt;</code> with the link that is found under: <em>Code (green button) &gt; HTTPS</em> (see screenshot below)<em>.<br><br>Reason: We must be editing our code locally on Visual Studio Code, not using the online editor on GitHub.</em><em><br><br><img src="../../assets/059963299a95970d.png" alt="image.png" width="700" height="465" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197840" data-api-returntype="File" loading="lazy"><br><br><img src="../../assets/ced904d35f12c280.png" alt="1.png" width="1000" height="626" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197876" data-api-returntype="File" loading="lazy"><br></em></li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4>&nbsp;<strong>Using a Branch to Add Features<br></strong></h4>
+<ol style="list-style-type: decimal;">
+<li>Change the Visual Studio Code workspace to the folder that was created from cloning the repository. Use the command <code>git pull origin main</code> to update the local repository with any changes that may be on the GitHub repository.<br><br><em>Reason: Ensures your local repository is synchronized with the remote repository to avoid conflicts.<br><br><img src="../../assets/8a6c5e74027fcbe3.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197842" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Then, create a new branch for your feature using this command <code>git checkout -b &lt;new-feature-branch&gt;</code>. Remember to replace <code>&lt;new-feature-branch&gt;</code> with the name of the feature that you are implementing (you come up with this name).<br><br><em>Reason: Creating a new branch allows you to work on the new feature without affecting the main branch.&nbsp;<br><br><img src="../../assets/11463d59718c0e63.png" alt="Screenshot 2024-05-26 at 8.01.41 PM.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197843" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Now, implement the code for your new feature in your local environment, i.e., Visual Studio Code.<br><br><img src="../../assets/394225c658e0dc5a.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197844" data-api-returntype="File" loading="lazy"><br><br></li>
+<li>After this, you may stage all the changes you've made to the code by running the command <code>git add .</code><br><br><em>Reason: Staging the changes prepares them to be committed. You can also add specific files instead of all changes.<br><br><img src="../../assets/de98a3da4b239b77.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197845" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Commit the changes with a message through the command, <code>git commit -m "Add feature X"</code>. Make sure you include an appropriate message with your commit that details the changes you made. <br><br><em>Reason: Commit messages should be descriptive to provide context about the changes.<br><br><img src="../../assets/209b3db9f333f3b4.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197846" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Push the changes to the remote repository by using <code>git push</code>.<br><br>At this stage you will likely be asked to login to GitHub if you have not already. For the first push we do to a new branch, there is be no corresponding branch on the GitHub repository so the push command will fail (see screenshot). So, just copy the command in the error, <code>git push --set-upstream origin &lt;branch-name&gt;</code>,&nbsp; to push it for the first time, you only need to run this command once for a new branch.<br><br><em>Reason: Pushing the changes uploads your branch to the remote repository, making it available for review and merging.<br><br><img src="../../assets/e570d494e6376024.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197847" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Create a Pull Request and Merge on GitHub<br>&nbsp; &nbsp; •&nbsp; &nbsp; Copy the link that you received when running the <code>git push</code> command from the previous step. Paste it into your browser; it should be in the form <code>https://github.com/&lt;username&gt;/&lt;repository&gt;/pull/new/&lt;branch&gt;</code><br>&nbsp; &nbsp; • &nbsp;&nbsp; Fill in a meaningful title and description for your pull request, then press the "Create pull request" button<br>&nbsp; &nbsp; • &nbsp; &nbsp;Review the changes, address any comments or feedback.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Once approved, merge the pull request into the main branch.<br><br><em>Reason: Merging via a pull request allows for code review and ensures that the main branch is always stable.</em><em><br><br><img src="../../assets/6922886f2cb6128e.png" alt="image-d25d76ca-214a-4495-85e0-4604f11d3439.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197853" data-api-returntype="File" loading="lazy"><br></em><img src="../../assets/1910e088607c60f7.png" alt="Screenshot 2024-05-26 at 8.28.03 PM.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197850" data-api-returntype="File" loading="lazy"><br><br></li>
+<li>Return to Visual Studio Code and checkout the main branch which you have just merged your changes to by using <code>git checkout main</code><br><br><em>Reason: Switches your working directory back to the main branch to incorporate the latest changes.<br><br><img src="../../assets/5948a222b2455f37.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197851" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Pull the latest changes from the main branch with the command <code>git pull origin main</code><br><br><em>Reason: Ensures your local main branch is up to date with the remote main branch, including the new feature you just merged.<br><br><img src="../../assets/1b2fd465f237d889.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197852" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Repeat from Step 1 whenever you want to add a new feature into your program.<br><br><em>Reason: To add a new feature into the codebase.</em><br><br></li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">2.5 Code Design</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Describe the process of design used to develop code in an OOP language including:<br class="card-text">- task definition<br class="card-text">- top-down and bottom-up<br class="card-text">- facade pattern<br class="card-text">- agility</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Students will understand the process of designing code in an OOP language, including task definition, top-down and bottom-up approaches, the facade pattern, and agility in development.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Students can define coding tasks, apply design approaches, implement the facade pattern, and adapt their code to changing requirements efficiently.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>The process of designing software in an object-oriented programming (OOP) language is essential for creating systems that are clear, scalable, and easy to maintain. Effective design ensures that code meets user requirements while adhering to best practices. This process involves defining tasks, choosing appropriate design approaches such as top-down or bottom-up, implementing design patterns like the facade pattern, and adopting agile principles to accommodate change.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Code Design</h3>
+<div class="dp-panel-content ">
+<p><span>The main advantage of object-oriented programming over imperative programming is its unique ability to create <strong>elegant</strong> and <strong>beautiful</strong> software through a design that is centred around the use of objects; rather than functions used in procedural programming.</span></p>
+<p><span>Throughout the remainder of this unit, the aim is to emphasise good <strong>design</strong> practices of object-oriented code as we apply the principles you have learned to effectively create <strong>modular</strong> systems that are&nbsp;<strong>flexible</strong>, <strong>maintainable</strong> and <strong>reusable</strong>.</span></p>
+<p>When it comes to code design, there is no clear right or wrong answer. There are many shades of grey, where design decisions aren't clear cut. Good programming skill doesn't matter if you don't have good design. <strong>Designing elegant OOP software is an art.</strong></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Task Definition</h3>
+<div class="dp-panel-content ">
+<p>A <strong>task definition</strong> (or problem statement) is a concise and clear description of a specific issue or challenge. It acts as a foundational element in the problem-solving process by clearly articulating what needs to be addressed. A well-crafted task definition should be focused, precise, and actionable, enabling individuals or teams to remain aligned on the objective and work collaboratively toward a solution.</p>
+<p><strong>Key Characteristics of a Good Task Definition</strong></p>
+<ol>
+<li><strong>Clarity:</strong> The problem should be easy to understand and free from jargon.</li>
+<li><strong>Focus:</strong> It should highlight the core issue without unnecessary details.</li>
+<li><strong>Importance:</strong> The statement should explain why solving the problem matters, emphasizing its significance.</li>
+<li><strong>Impact:</strong> Identifies who or what is affected by the issue.</li>
+<li><strong>Stimulates Creativity:</strong> Inspires innovative and critical thinking to develop effective solutions.</li>
+</ol>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Top-Down and Bottom-Up</h3>
+<div class="dp-panel-content">
+<p><span>The Top-Down and Bottom-Up design methodologies represent two different approaches to system development.</span></p>
+<ul>
+<li><span><strong>Top-Down</strong> <strong>D</strong><strong>esign</strong> is an approach where the system is broken down into smaller components starting from the highest level.</span>
+<ul>
+<li><span>In OOP, we would start by creating high-level generalised classes before creating lower-level child classes that have more specific responsibilities.</span></li>
+<li><span>e.g. In a game, we may start by creating a generalised Character class before creating more specific child classes such as Knight and Witch.</span></li>
+</ul>
+</li>
+<li><span><strong>Bottom-Up Design</strong> is an approach where the system is built starting from the lowest level components.</span>
+<ul>
+<li><span>In OOP, we would start by creating low-level classes with specific responsibilities before generalising into higher-level parent classes.</span></li>
+<li><span>e.g. In a game, we may start by creating the Knight and Witch classes before creating more a generalised Character class.</span></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Façade Pattern</h3>
+<div class="dp-panel-content">
+<p><span>In software design, there are many established design approaches that are used as a template for handling common design problems. One such problem is having to deal with complexity of our object-oriented code. The solution is to create a simplified interface (facade) to hide the complexity of underlying classes in a way that allows people who are unfamiliar with the code (e.g. the client) to use the software.</span></p>
+<p>The <strong>Facade Pattern</strong> is a design approach that provides a <strong>simplified interface to a complex subsystem</strong>. It is particularly useful when you have a program with multiple interdependent classes, and you want to make it easier to use by providing a single interface to interact with that system.</p>
+<p><span>Imagine your computer as one of these complex systems. The facade in this scenario is your keyboard, mouse and screen which offer you a method to control and use your computer whilst hiding the complexity and millions of operations going on behind the screen to provide you with a user friendly method to interact with the systems.</span></p>
+<p><strong>Example:</strong></p>
+<p>Consider a home entertainment system with:</p>
+<ul>
+<li>A DVD Player</li>
+<li>A Projector</li>
+<li>Lights</li>
+<li>A Sound System</li>
+</ul>
+<table style="border-collapse: collapse; width: 100%; border-style: hidden; height: 610px;" border="1">
+<tbody>
+<tr style="height: 329px;">
+<td style="width: 49.9338%; height: 329px; vertical-align: top;"><img src="../../assets/af8596b880611205.png" alt="image.png" width="500" height="338" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197792" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 49.9338%; height: 329px; border-style: hidden; vertical-align: top;"><img src="../../assets/55892283d433f034.png" alt="image.png" width="500" height="301" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197793" data-api-returntype="File" loading="lazy"></td>
+</tr>
+<tr style="height: 281px;">
+<td style="width: 49.9338%; height: 281px; border-style: hidden; vertical-align: top;"><img src="../../assets/60a8a40684556b61.png" alt="image.png" width="500" height="212" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197794" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 49.9338%; height: 281px; vertical-align: top;"><img src="../../assets/f63ee9d7f1224305.png" alt="image.png" width="500" height="288" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197795" data-api-returntype="File" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p>To use the Facade Pattern in the design of this system, we can provide a simple interface class called <code>RemoteControlFacade</code> to interact with the components of the home theatre without knowing how to use each of those individual components.</p>
+<p>The attributes of the <code>RemoteControlFacade</code> class contains the objects that make up the home theatre.</p>
+<p>The methods of the <code>RemoteControlFacade</code> class then call the methods of those objects (<code>dim()</code>, <code>on()</code>, <code>set_input()</code>, <code>set_volume()</code>, etc).</p>
+<p><img src="../../assets/db21db3800d7a63e.png" alt="image.png" width="600" height="617" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197796" data-api-returntype="File" loading="lazy"></p>
+<p>We can then use the interface methods in the <code>RemoteControlFacade</code> to start and end a movie without needing to know how to use the <code>DVDPlayer</code>, <code>Projector</code>, <code>Lights</code> or <code>SoundSystem</code> classes. <strong>The client only needs to know how to use the facade interface.</strong></p>
+<p><img src="../../assets/073adf589caf839a.png" alt="image.png" width="700" height="381" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197797" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>Get ready to watch a movie...<br>Lights dimmed to 10%.<br>Projector is on.<br>Projector input set to DVD.<br>Sound system is on.<br>Sound system volume set to 5.<br>DVD Player is on.<br>Playing movie 'Imitation Game'.<br>Shutting movie theater down...<br>DVD Player is off.<br>Sound system is off.<br>Projector is off.<br>Lights dimmed to 100%.</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Agility</h3>
+<div class="dp-panel-content">
+<p>When designing object-oriented code, it is important to <strong>structure classes in a way that allows for easy and efficient modification. <br></strong></p>
+<p>The agility of a program is described as its ability to adapt to unspecified or changing needs of the client.</p>
+<p>This adaptability is crucial in modern software development, where requirements can evolve rapidly.</p>
+<p>If adding a feature <span style="text-decoration: underline;">requires a large number of classes to be modified</span>, then:</p>
+<ul>
+<li>the update will take a long amount of time</li>
+<li>the large number of modifications will likely cause existing features to fail</li>
+</ul>
+<p>This is a sign of <strong>poorly designed</strong> OOP code.</p>
+<p>However, if the same feature can be added by <span style="text-decoration: underline;">modifying a small number of classes</span>, then:</p>
+<ul>
+<li>the update will take a short amount of time</li>
+<li>the small number of modifications will not largely affect existing features</li>
+</ul>
+<p>This is a sign of <strong>effectively designed</strong> OOP code.</p>
+<p>Ideally, when we need to add new features into our object-oriented code, these <strong>changes should only be made in as few places as possible.</strong> If you need to make changes in many other places too, then program development will become much more complicated and expensive as a result because of poor agile design.</p>
+<p><strong>Example:</strong></p>
+<p>Consider a video game that has to be frequently updated to receive new characters. If we have a generalised character class that contains the common attributes and behaviours across all characters in the game (e.g. moving, attacking, defending), then any modifications that add any new characters into the game will mainly require the addition of a single new child class and its specialised behaviours. <strong>The more changes that are required outside of the new child class, the less agile the object-oriented code becomes.</strong></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%202.%20The%20Object-Oriented%20Paradigm/PPs/2.5%20Code%20Design.pptx?d=w30257978c757469f82cf7592900f869f&amp;csf=1&amp;web=1&amp;e=4R9lJx">2.5 Code Design.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-5-code-design" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={30257978-c757-469f-82cf-7592900f869f}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">2.6 Message passing</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Investigate how OOP languages handle message-passing between objects</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Understand how object-oriented programming (OOP) languages handle message passing between objects to facilitate communication and interaction in software systems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Explain the concept of message passing in OOP and its role in enabling object interactions within software systems.</span></li>
+<li><span style="font-size: 13.3333px;">Demonstrate how to implement message passing between objects in an OOP language, using methods and parameters to simulate real-world interactions.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>In Object-Oriented Programming (OOP), objects are the fundamental building blocks of a program. These objects communicate with each other to perform tasks, much like how individuals exchange information in real-life interactions. This communication is achieved through <strong>message-passing</strong>, where one object sends a request to another, prompting it to perform an action or share information.</p>
+<p>Message-passing is more than just a way for objects to interact—it underpins core OOP principles like <strong>encapsulation</strong>, <strong>polymorphism</strong>, and <strong>abstraction</strong>, enabling flexible and modular software design. In this lesson, we will explore how different programming languages handle message-passing, the mechanics behind it, and its importance in creating scalable and maintainable systems.</p>
+<p>&nbsp;</p>
+<h4><strong>Message Passing</strong></h4>
+<p>Message passing in object-oriented programming (OOP) refers to the process by which <strong>objects can interact with each other.</strong> Objects interact with each other by sending a message that requests to run a method from a different object.</p>
+<p>In other words, <strong>objects interact with each other by calling the methods of another object. </strong>For example, when Object A runs a method in Object B, then Object A is sending a message to Object B.</p>
+<p>The process of message passing between objects works as follows:</p>
+<ol style="list-style-type: decimal;">
+<li>The sender object constructs a message that specifies: the name of the method and the required parameters to use that method.</li>
+<li>The message is sent to the receiving object to be processed.</li>
+<li>The receiving object then interprets the message. If the specified method exists and the message contains the all of the required parameters, then that method is run using those parameters.</li>
+<li>If the method returns a value, then it is sent back to the sender object.</li>
+</ol>
+<p><span>Message passing allows different objects (the components of a program) to <strong>talk to each other without needing to know all the details about how the other works.</strong> This makes it easier for them to work together and simplifies the overall design. </span>This approach promotes abstraction and encapsulation, where objects interact only through the well-defined interfaces of their methods, ensuring modularity and flexibility in software design.</p>
+<p>&nbsp;</p>
+<p><strong>Example of Message Passing</strong></p>
+<p>In Python, the concept of message passing involves <strong>any method that calls a method from another object.</strong></p>
+<p>Consider the <code>Car</code> class below which has a simple behavioural method called <code>start()</code> that starts the car's engine (represented using a <code>print()</code> statement for simplicity).</p>
+<p><img src="../../assets/24beef8974cd585c.png" alt="image.png" width="600" height="292" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197854" data-api-returntype="File" loading="lazy"></p>
+<p>Now consider the <code>Driver</code> class. It has a behavioural method called <code>drive(car)</code> that takes in a car object as a parameter and runs that car object's <code>start()</code> method.</p>
+<p>It is important to note that <strong>the&nbsp;<code>drive(car)</code> method does not need to know exactly how a car starts</strong> (i.e. putting the fuel in the engine, igniting the fuel, etc). The inner workings of the car are only being handled in the <code>Car</code> class itself, hidden away by its method interface. All the <code>drive(car)</code> method needs to know is that we can start a car object just by using its <code>start()</code> method.</p>
+<p><img src="../../assets/8af34ca81b0bdd6f.png" alt="image.png" width="700" height="289" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197855" data-api-returntype="File" loading="lazy"></p>
+<p>The use of the <code>drive(car)</code> method through message passing is demonstrated in the mainline below. The car and driver objects are created before interacting with each other when the <code>drive(car)</code> method is called.</p>
+<p><em><img src="../../assets/bf4a9dceb3c336df.png" alt="image.png" width="450" height="356" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197856" data-api-returntype="File" loading="lazy"></em></p>
+<p><em>Output:</em></p>
+<pre>Kevin is sending a message to start the car.<br>BMW car is starting...</pre>
+<p>&nbsp;</p>
+<p>From the output, we can see that by calling the <code>drive(car)</code> method in the driver object, we also call the <code>start()</code> method in the given car object.</p>
+<p>&nbsp;</p>
+<p><strong>Note on Code Design</strong></p>
+<p>By using message passing, the <code>drive(car)</code> method is inherently designed to always require a car object (which makes sense because a driver needs a car in order to drive). If a driver is not given a car, then they cannot drive.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a href="https://www.enjoyalgorithms.com/blog/message-passing-oops" target="_blank">https://www.enjoyalgorithms.com/blog/message-passing-oops</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%202.%20The%20Object-Oriented%20Paradigm/PPs/2.6%20Message%20Pairing.pptx?d=w624de7afebd241f792456659038f6873&amp;csf=1&amp;web=1&amp;e=wkSy4f">2.6 Message Passing.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-6-message-passing" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={624de7af-ebd2-41f7-9245-6659038f6873}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">2.7 Code Effectiveness &amp; Optimisation</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Assess the effectiveness of programming code developed to implement an algorithm<br class="card-text"><span class="card-text">Explain code optimisation in software engineering</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Students will be able to evaluate the effectiveness of programming code that implements a given algorithm, focusing on aspects such as correctness, efficiency, and readability</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Describe what the algorithm is designed to achieve and outline the key functions of the code</span></li>
+<li><span style="font-size: 13.3333px;">Verify that the code correctly implements the algorithm by checking if it produces expected outputs for a variety of test inputs</span></li>
+<li><span style="font-size: 13.3333px;">Assess the efficiency of the code by examining time complexity and space complexity.</span></li>
+<li><span style="font-size: 13.3333px;">Suggest specific changes or optimizations that could enhance the code’s effectiveness, citing reasons for each recommendation.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content<br><strong></strong><strong></strong></h3>
+<p>In software development, the implementation of an algorithm through programming code is not just about ensuring it works correctly but also about how effectively it performs under various conditions. An effective implementation balances correctness, efficiency, and maintainability while meeting the requirements of the task.</p>
+<p>Equally important in this process is <strong>code optimisation</strong>, which enhances the performance of the program by refining its structure and execution. Through thoughtful optimisation, developers can create software that is faster, more resource-efficient, and scalable, all while maintaining clarity and reliability.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Code Effectiveness</h3>
+<div class="dp-panel-content ">
+<p><span>When assessing the effective of programming code developed to implement an algorithm there are a few key points to keep in mind:</span></p>
+<ol>
+<li aria-level="1"><strong>Correctness</strong><span>: Ensure the code produces the correct output for all possible inputs. Test it with various input values, including edge cases and boundary conditions.</span></li>
+<li aria-level="1"><strong>Efficiency</strong><span>: Make sure the code takes the shortest possible route to solve the solution whilst not wasting resources on unnecessary or unneeded objects such as empty variables or repeated sections of code.&nbsp;</span></li>
+<li aria-level="1"><strong>Readability</strong><span>: Assess how easily the code can be understood by other developers. Clear, well-organised code with meaningful variable names, comments, and logical structure is crucial for maintainability and collaboration.</span></li>
+<li aria-level="1"><strong>Modularity</strong><span>: Check if the code is broken down into modular components, each responsible for a specific task. Modular code is easier to understand, debug, and maintain.</span></li>
+<li aria-level="1"><strong>Error Handling</strong><span>: Evaluate how the code handles unexpected situations, such as invalid input or runtime errors. Robust error handling can prevent unexpected crashes and improve the reliability of the code.</span></li>
+</ol>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Optimisation</h3>
+<div class="dp-panel-content ">
+<p><span>Code optimisation in software engineering is the process of refining code to make it <strong>run faster</strong>,<strong> use fewer resources</strong>,<strong> </strong>and be<strong> easier to understand and maintain</strong>. </span><span>This can involve things such as choosing more efficient algorithms, avoiding unnecessary calculations and organising code in a clear and logical way. </span></p>
+<p><strong>General methods of optimising code:</strong></p>
+<ul>
+<li><strong>Reducing the amount of loops used within an algorithm</strong>
+<ul>
+<li><span>Loops are often necessary but can be costly in terms of performance, especially when they are nested or repeated unnecessarily. </span></li>
+<li><span>If multiple loops iterate over the same data set, combine them into a single loop to reduce overhead.<br></span></li>
+</ul>
+</li>
+<li><strong>Avoid unnecessary calculations</strong>
+<ul>
+<li>Perform calculations only when necessary to save processing time.</li>
+<li>Calculations that do not depend on the loop index should be moved outside the loop.</li>
+<li>Store results of expensive operations if they need to be used multiple times.</li>
+</ul>
+</li>
+<li><strong>Use efficient data structures</strong>
+<ul>
+<li>Selecting the right data structure can significantly affect the performance of your code.&nbsp;</li>
+<li>Use sets instead of lists for checking if an item exists in a collection of items.</li>
+<li>Use dictionaries for key-value pairs and fast lookups.</li>
+</ul>
+</li>
+<li><span><strong>Break early from loops</strong><br></span>
+<ul>
+<li><span>Exiting a loop as soon as possible can save significant processing time.</span></li>
+<li><span>Use conditions to break out of loops early.</span></li>
+</ul>
+</li>
+<li><strong>Utilise built-in functions</strong>
+<ul>
+<li><span>Built-in functions are often optimised and written in lower-level languages, making them faster.</span></li>
+<li><span>String Concatenation: Use <code>''.join()</code> instead of + in loops.</span></li>
+<li><span>Use map and filter for applying functions to collections of items.</span></li>
+</ul>
+</li>
+<li><strong>Avoid deep nesting of code</strong>
+<ul>
+<li><span>Deeply nested code can be difficult to read, maintain, and optimise.</span></li>
+<li><span>Use early returns to reduce the depth of nesting.</span></li>
+<li><span>Break down deeply nested logic into separate functions.</span></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<p><span>&nbsp;</span></p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%202.%20The%20Object-Oriented%20Paradigm/PPs/2.7%20Code%20Effectiveness%20%26%20Optimisation.pptx?d=we9c15b1a98a744f980f5c3bbc384427e&amp;csf=1&amp;web=1&amp;e=uzRubl">2.7 Code Effectiveness &amp; Optimisation.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-7-code-effectiveness-and-optimisation" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={e9c15b1a-98a7-44f9-80f5-c3bbc384427e}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">After</h3>
+<h3 class="readles">Assignment — Cycle 8 space repetition</h3>
+<p><em>[no description]</em></p><p><strong>Points:</strong> 27</p>
+<div class="readnav"><a href="11962-m7.html">← previous module</a><a href="../course-11962.html">all modules</a><a href="11962-m9.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

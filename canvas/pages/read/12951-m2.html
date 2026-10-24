@@ -1,0 +1,1037 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 2 (Term 4: Weeks 3-4) Secure Software Architecture — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">12SENX2 Software Engineering 2026 · module 3 of 15</p>
+<h1>Cycle 2 (Term 4: Weeks 3-4) Secure Software Architecture</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="12951-all.html">Whole course</a><span class="cur">By module</span><a href="../course-12951.html">By lesson</a></div>
+<h3 class="readles">Introduction to Cycle 2</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div id="" class="dp-banner-image"><img class="dp-full-width" style="width: 100%; height: auto; max-width: 100%;" role="presentation" src="https://kingsnet.kings.edu.au/images/UserUploadedImages/1754/banner2.jpg" alt=" [online-only image]" loading="lazy"></div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-read-time-wrapper"><i class="fas fa-clock cp-txt-dp-primary" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> 2 min read&nbsp; |&nbsp; no activities&nbsp; |&nbsp;&nbsp;<i class="dp-icon fas fa-brain cp-txt-primary" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp; (easy)&nbsp;&nbsp;</div>
+<h4>Timing</h4>
+<p>Weeks 3 and 4</p>
+<p>&nbsp;</p>
+<h4>Content</h4>
+<p><strong>Secure Software Architecture</strong></p>
+<p>This cycle delves deeper into the technical implementation of secure software systems. Moving beyond the foundational concepts, we explore how to proactively build security and privacy directly into software architecture from the ground up.</p>
+<p>Throughout this cycle, we will cover the following key areas:</p>
+<ul>
+<li>The 'Security by Design' approach, focusing on the technical pillars of cryptography and sandboxing.</li>
+<li>Implementing the 'Privacy by Design' framework to ensure user data is proactively protected and respected.</li>
+<li>Testing software resilience, determining vulnerabilities, handling breaches, and planning for business continuity and disaster recovery.</li>
+<li>Utilising vital developer strategies and tools, including SAST, DAST, code reviews, and penetration testing.</li>
+<li>Designing defensive code with robust data input handling, validation, and sanitisation to prevent malicious exploits like SQL injection.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Deliverables</h4>
+<p>By the end of this cycle, you need to complete:</p>
+<ul>
+<li>Quiz — 1.6 Security by Design</li>
+<li>Activity — Solve the Cryptograms</li>
+<li>Activity — Make your own Cryptograms</li>
+<li>Quiz — 1.7 Privacy by Design</li>
+<li>Quiz — 1.8 Test Security &amp; Resilience</li>
+<li>Quiz — 1.9 Security Strategies &amp; Tools</li>
+<li>EdStem — SAST</li>
+<li>EdStem — DAST</li>
+<li>Quiz — 1.10 Defensive Data</li>
+<li>Practical — SQL Injection</li>
+<li>Gradeo — Cycle 2</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Lessons</h4>
+<table style="border-collapse: collapse; width: 100%;" border="1" data-active-table="true">
+<tbody>
+<tr>
+<td style="width: 26.8426%;"><strong>Title</strong></td>
+<td style="width: 34.4899%;"><strong>Syllabus</strong></td>
+<td style="width: 38.6675%;"><strong>Page Focus</strong></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.6 Security by Design" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.6 Security by Design</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p>Use and explain the contribution of cryptography and sandboxing to the 'security by design' approach in the development of software solutions.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Building security into software from the ground up is more effective than adding it later. This page explores two key technical pillars of 'Security by Design': Cryptography for data protection and Sandboxing for safe execution.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.7 Privacy by Design" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.7 Privacy by Design</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Use and explain the 'privacy by design' approach in the development of software solutions, including:</p>
+<ul>
+<li>proactive not reactive approach</li>
+<li>embed privacy into design</li>
+<li>respect for user privacy</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Privacy isn't an afterthought; it's a core component of modern software architecture. This page explores the 'Privacy by Design' framework, ensuring user data is protected proactively, embedded deeply, and respected throughout the software lifecycle.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.8 Test Security &amp; Resilience" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.8 Test Security &amp; Resilience</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Test and evaluate the security and resilience of software by determining vulnerabilities, hardening systems, handling breaches, maintaining business continuity and conducting disaster recovery.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Building software is only half the battle; keeping it safe is the other. This page explores how we test software for vulnerabilities, harden it against attacks, handle breaches when they happen, and ensure the business keeps running even when disaster strikes.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.9 Security Strategies &amp; Tools" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.9 Security Strategies &amp; Tools</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Apply and evaluate strategies used by software developers to manage the security of programming code:</p>
+<ul>
+<li>code review</li>
+<li>static application security testing (SAST)</li>
+<li>dynamic application security testing (DAST)</li>
+<li>vulnerability assessment</li>
+<li>penetration testing</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Writing code is only half the battle; ensuring it is secure is equally important. This page explores the tools and strategies developers use to find and fix vulnerabilities, including code reviews, automated testing (SAST/DAST), and penetration testing.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.10 Defensive Data" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.10 Defensive Data</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Design, develop and implement code using defensive data input handling practices, including input validation, sanitisation and error handling.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Input based vulnerabilities are a major security risk for software. This page covers how to design and implement defensive data handling, including validation, sanitisation, and error handling, to protect systems from malicious attacks like SQL injection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">During </h3><h3 class="sub">Developing Secure Code</h3>
+<h3 class="readles">1.6 Security by Design</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Use and explain the contribution of cryptography and sandboxing to the 'security by design' approach in the development of software solutions.</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand the roles of cryptography and sandboxing in enhancing software security.</li>
+<li>Learn how these techniques contribute to software development's' security by design' approach.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to explain the principles of cryptography and sandboxing.</li>
+<li>Students will understand how these techniques are applied to improve software security.</li>
+<li>Students will be able to incorporate cryptography and sandboxing into software development practices.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<p><strong>Using Cryptography and Sandboxing in 'Security by Design'</strong></p>
+<p>The 'security by design' approach involves integrating security measures into the software development process rather than adding them as an afterthought. Cryptography and sandboxing are two critical components of this approach, which significantly protect software from various threats.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h4 class="dp-panel-heading ">Cryptography</h4>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Cryptography is securing information by transforming it into an unreadable format, which can only be deciphered by those with the correct key. This technique is essential for protecting sensitive data and ensuring its confidentiality, integrity, and authenticity.</p>
+</div>
+</div>
+<p><strong>Contribution to 'Security by Design':</strong></p>
+<ul>
+<li><strong>Confidentiality:</strong> Cryptography ensures that sensitive information remains private by encrypting data to only be accessible to authorised users. This is crucial in preventing data breaches and unauthorised access.</li>
+<li><strong>Integrity:</strong> Cryptographic techniques such as hashing verify that data has not been altered during transmission or storage, thus maintaining its integrity.</li>
+<li><strong>Authentication:</strong> Cryptography is used in authentication processes to verify the identities of users and devices, ensuring that only authorised parties can access the system.</li>
+<li><strong>Non-repudiation:</strong> Digital signatures, a form of cryptographic evidence, provide proof of the origin and integrity of data, preventing parties from denying their actions.</li>
+</ul>
+<h4>Example</h4>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/4cabafb026f699c0.png" alt="image.png" width="640" height="584" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527444" data-api-returntype="File" loading="lazy"></p>
+<ul>
+<li><strong>Encryption:</strong> In this Flask application, cryptography encrypts data before storing or transmitting it. The data is converted into an unreadable format using a key required for decryption.</li>
+<li><strong>Decryption:</strong> When the data needs to be accessed, it is decrypted using the same key, converting it back into its original readable format. This ensures that sensitive information remains secure throughout its lifecycle.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h4 class="dp-panel-heading ">Sandboxing</h4>
+<div class="dp-panel-content ">
+<div class="dp-panel-content ">
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Sandboxing is a security mechanism that isolates running programs or processes, limiting their access to the system and preventing them from making permanent changes. This technique executes untrusted code safely without risking the entire system's security.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Contribution to 'Security by Design':</strong></p>
+<ul>
+<li><strong>Isolation:</strong> By isolating applications or processes in a sandbox, developers can prevent potential threats from spreading to the rest of the system. This containment reduces the risk of malware infections and system breaches.</li>
+<li><strong>Testing:</strong> Sandboxing allows developers to test new or untrusted code in a controlled environment. Any malicious behaviour or unexpected outcomes are contained within the sandbox, protecting the main system.</li>
+<li><strong>Mitigating Risks:</strong> Even if an application or process within a sandbox is compromised, the impact is limited to the sandboxed environment, thereby reducing the overall security risk.</li>
+</ul>
+<h4>Example</h4>
+<p>In software development, sandboxing is often used during testing to run potentially harmful code or untrusted applications without affecting the production environment. It ensures that the damage is contained even if the code has vulnerabilities.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/99bada6d573f9ac2.png" alt="image.png" width="640" height="358" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527422" data-api-returntype="File" loading="lazy"></p>
+<ul>
+<li><strong>Sandboxing Execution:</strong> In this example, the Flask application accepts code from the user and runs it in a sandboxed environment using the <code>subprocess</code> module. The code is executed with restricted permissions and a timeout, ensuring it does not affect the main system.</li>
+<li><strong>Controlled Environment:</strong> If the code contains harmful instructions or behaves unexpectedly, the damage is contained within the sandbox. This approach allows developers to test untrusted code securely without compromising the overall system's security.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://www.cyber.gov.au/resources-business-and-government/governance-and-user-education/secure-by-design#:~:text=Secure%2Dby%2DDesign%20is%20a,organisational%20approach%20to%20cyber%20security." target="_blank">ASD Secure-By-Design</a></li>
+<li><a class="inline_disabled" href="https://www.encryptionconsulting.com/education-center/what-is-cryptography/" target="_blank">What is Cryptography in Security? What are the different types of Cryptography?</a></li>
+<li><a class="inline_disabled" href="https://www.paloaltonetworks.com.au/cyberpedia/what-is-ci-cd-security" target="_blank">What Is CI/CD Security?</a></li>
+<li><a class="inline_disabled" href="https://www.kaspersky.com/resource-center/definitions/what-is-cryptography" target="_blank">What is Cryptography | Kaspersky</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity<br></strong></p>
+<ul class="card-text">
+<li><a title="1.6 Security by Design" href="https://canvas.kings.edu.au/courses/12951/assignments/204812" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204812" data-api-returntype="Assignment">1.6 Security by Design</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://cryptograms.puzzlebaron.com/play.php" target="_blank">Solve the Cryptograms!</a></li>
+<li><a class="inline_disabled" href="https://puzzlemaker.discoveryeducation.com/cryptogram" target="_blank">Make your own Cryptograms</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.6%20Security%20By%20Design.pptx?d=wd7a26b673ae24eb7ac72840aa659e157&amp;csf=1&amp;web=1&amp;e=j8zUyo">1.6 Security By Design.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-6-security-by-design" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={d7a26b67-3ae2-4eb7-ac72-840aa659e157}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">1.7 Privacy by Design</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Use and explain the 'privacy by design' approach in the development of software solutions, including:&nbsp;<br></span>- p<span class="card-text">roactive not reactive approach</span><br class="card-text">- e<span class="card-text">mbed privacy into design</span><br class="card-text">- r<span class="card-text">espect for user privacy</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand the core principles of software development's‘ privacy by design' approach.</li>
+<li>Learn how to implement privacy-first practices throughout the software development lifecycle.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to explain the key principles of 'privacy by design'.</li>
+<li>Students will be able to integrate privacy-focused features into software solutions.</li>
+<li>Students will respect user privacy by embedding it directly into the software design.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;The <strong>'privacy by design'</strong> approach means that privacy considerations are incorporated from the beginning of the software development process. It's not an afterthought but rather a proactive and essential part of the design process to safeguard user privacy throughout the software's lifecycle.</p>
+<p>The three main principles of privacy by design are:</p>
+<ul>
+<li><strong>Proactive, not reactive approach</strong></li>
+<li><strong>Embed privacy into design</strong></li>
+<li><strong>Respect for user privacy</strong></li>
+</ul>
+<p>Each plays a crucial role in protecting users' personal information and complying with privacy regulations.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Proactive not reactive approach</h3>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>A proactive approach ensures that potential privacy issues are addressed before they occur. Instead of reacting to privacy breaches after they happen, developers anticipate and mitigate risks early in the design process.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><span>Privacy by design is <strong>not</strong> <strong>reactive</strong> to privacy risks that materialise or occur. Instead, it is <strong>proactive</strong> by aiming to <strong>prevent any privacy threats from occurring</strong>. In the initial stages of the software development cycle, privacy impact assessments (PIAs) are conducted to identify and evaluate potential risks.</span></p>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/ddb68accdc468144.png" alt="image.png" width="655" height="262" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527420" data-api-returntype="File" loading="lazy"><br><br>Developers will ensure the software design addresses these privacy issues proactively - where privacy protections are embedded into the software architecture and design before deployment.</span></p>
+<p><strong>How It Works:</strong></p>
+<ul>
+<li>
+<p><strong>Risk Assessment:</strong><br>Conduct privacy risk assessments during the planning and design stages to identify potential vulnerabilities and mitigate them before deployment.</p>
+</li>
+<li>
+<p><strong>Prevention Over Detection:</strong><br>Build privacy features that prevent issues rather than relying solely on detection mechanisms. This means implementing measures like anonymising data, minimising data collection, and encrypting sensitive information.</p>
+</li>
+</ul>
+<p><strong>Example in Software Development:</strong></p>
+<p>A proactive approach would involve setting up privacy controls like consent mechanisms and data anonymisation during the project's initial stages and ensuring that these are embedded before the software is even deployed.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Embed privacy into design</h3>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">Embedding privacy into the design means that privacy measures are integrated directly into thesoftware'ss architecture, ensuring privacy is considered at every step of the development process. Privacy considerations should be incorporated into the core design and the software</span><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;"> architecture. Privacy by design should include systematic embedding of privacy, data minimisation and encryption techniques to protect user privacy.&nbsp;</span></p>
+</div>
+</div>
+<p><strong>How It Works:</strong></p>
+<ul>
+<li>
+<p><strong>Privacy as a Default:</strong><br>Systems should be designed with privacy features enabled by default. Users should not have to take extra steps to protect their privacy—it should be built into the system.</p>
+</li>
+<li>
+<p><strong>Minimal Data Collection:</strong><br>Limit the amount of personal data collected to the minimum required for the software to function, reducing the risk of data exposure.</p>
+</li>
+</ul>
+<p><strong>Example in Software Development:</strong></p>
+<p>During the design phase, developers should ensure that all features respect user privacy by limiting data collection and securing stored data.</p>
+<p><span><br></span><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/69710ba2d5ef7a23.png" alt="image.png" width="608" height="243" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527433" data-api-returntype="File" loading="lazy"><br></span></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Respect for user privacy</h3>
+<div class="dp-panel-content">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Respecting user privacy means giving users control over their data and ensuring transparency in handling their data. Users should be informed about what data is being collected and how it will be used, and they should be given options to manage or delete their information.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Respect for User Privacy aims to <strong>prioritise</strong> the <strong>interests</strong> <strong>and needs </strong>of individual users as the centre of Privacy by Design and is <strong>user-centric</strong>. The goal is to ensure that users have an active role in managing their data.&nbsp;<br><br>This includes providing unambiguous consent to the use of private data. User Privacy should also be respected by limiting user data sharing with external third parties,&nbsp;ensuring confidentiality.&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/e717771668c3b047.png" alt="image.png" width="672" height="269" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527306" data-api-returntype="File" loading="lazy"></p>
+<p><strong>How It Works:</strong></p>
+<ul>
+<li>
+<p><strong>User Control:</strong><br>Provide users with options to edit, delete, or export their information to manage their data. This shows respect for their ownership of the data.</p>
+</li>
+<li>
+<p><strong>Transparency:</strong><br>Clearly communicate with users about how their data is being used. Implement privacy policies that explain data practices in simple, understandable language.</p>
+</li>
+</ul>
+<p><strong>Example in Software Development:</strong></p>
+<p>Incorporating user controls and transparency into the application's interface allows users to manage their personal information easily.</p>
+</div>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://medium.com/@onqlave/what-is-privacy-by-design-df953d73a676" target="_blank">What is Privacy by Design</a></li>
+<li><a class="inline_disabled" href="https://www.linkedin.com/advice/1/how-can-you-respect-user-privacy-protect-data#:~:text=Limit%20data%20sharing-,Another%20step%20to%20respect%20user%20privacy%20and%20protect%20their%20data,and%20knowledge%20of%20your%20users." target="_blank">How can you respect user privacy and protect their data?</a></li>
+<li><a class="inline_disabled" href="https://dataprivacymanager.net/seve-principles-of-privacy-by-design-and-default-what-is-data-protection-by-design-and-default/" target="_blank">7 principles of Privacy by Design and Default</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.7 Privacy by Design" href="https://canvas.kings.edu.au/courses/12951/assignments/204813" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204813" data-api-returntype="Assignment">1.7 Privacy by Design</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.7%20Privacy%20by%20Design.pptx?d=wbcd6c974605849d9a8e79f9105b43324&amp;csf=1&amp;web=1&amp;e=QbXXQV">1.7 Privacy by Design.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-7-privacy-by-design" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={bcd6c974-6058-49d9-a8e7-9f9105b43324}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">1.8 Test Security &amp; Resilience</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Test and evaluate the security and resilience of software by determining vulnerabilities, hardening systems, handling breaches, maintaining business continuity and conducting disaster recovery</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand the core principles of software development's ‘privacy by design’ approach.</li>
+<li>Learn how to implement privacy-first practices throughout the software development lifecycle.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to explain the key principles of ‘privacy by design’.</li>
+<li>Students will be able to integrate privacy-focused features into software solutions.</li>
+<li>Students will respect user privacy by embedding it directly into the software design.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Testing and evaluating software security and resilience ensures systems remain robust against attacks, can handle security breaches effectively, and recover quickly to maintain business continuity. This process involves determining vulnerabilities, hardening systems, handling breaches, and implementing disaster recovery plans.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Determining Vulnerabilities</h3>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Vulnerabilities are weaknesses in software that attackers can exploit. Identifying and addressing these vulnerabilities is critical for building secure software.</p>
+</div>
+</div>
+<p><strong>How Vulnerabilities Are Addressed:</strong></p>
+<ul>
+<li>
+<p><strong>Penetration Testing (Pen Testing):</strong><br>Penetration testing involves ethical hackers attempting to exploit system weaknesses to identify potential vulnerabilities before attackers do.</p>
+</li>
+<li>
+<p><strong>Automated Vulnerability Scanning:</strong><br>Tools like Nessus and Qualys are used to scan systems for known vulnerabilities, comparing the system against databases of known security issues.</p>
+</li>
+<li>
+<p><strong>Code Audits and Reviews:</strong><br>Regular manual code reviews ensure secure coding practices and help identify weaknesses such as input validation issues or improper access control.</p>
+</li>
+</ul>
+<p><strong>Example:</strong><br>Financial institutions continuously automate vulnerability scanning to detect flaws in their infrastructure. They supplement this with periodic penetration testing by security specialists who simulate real-world attack scenarios, allowing the organisation to discover and fix vulnerabilities before attackers can exploit them.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Hardening Systems</h3>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Hardening involves securing a system by reducing its potential attack surface. This is achieved by limiting services, closing unused ports, and enforcing strict security policies.</p>
+</div>
+</div>
+<p><strong>How Systems Are Hardened:</strong></p>
+<ul>
+<li>
+<p><strong>Minimising Attack Surface:</strong><br>Disable or remove unnecessary services, applications, and features to reduce the points of entry for attackers.</p>
+</li>
+<li>
+<p><strong>Regular Patching and Updates:</strong><br>Systems are regularly updated with security patches to fix vulnerabilities. In industries like healthcare, maintaining updated systems is often a regulatory requirement.</p>
+</li>
+<li>
+<p><strong>Configuration Management:</strong><br>Secure configurations are enforced across systems using tools like Chef, Puppet, or Ansible, ensuring all systems are hardened with uniform security policies.</p>
+</li>
+</ul>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/7ca433b524ec38c9.png" alt="image.png" width="675" height="479" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527437" data-api-returntype="File" loading="lazy"></span></p>
+<p><strong>Example:</strong><br>A global tech company enforces strict access control policies and regularly patches its systems using automated tools to ensure no known vulnerabilities are left unpatched. They also apply least-privilege access controls, ensuring users can only access the data and systems necessary for their role.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Handling Breaches</h3>
+<div class="dp-panel-content">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>A security breach occurs when an attacker gains unauthorised access to a system. Effectively handling a breach involves detecting, containing, and mitigating the damage caused.</p>
+</div>
+</div>
+<p><strong>How Breaches Are Managed:</strong></p>
+<ul>
+<li>
+<p><strong>Incident Response Teams (IRTs):</strong><br>Organisations have dedicated teams trained to detect, contain, and mitigate security breaches. These teams follow incident response plans, which outline procedures for addressing breaches.</p>
+</li>
+<li>
+<p><strong>Containment and Mitigation:</strong><br>When a breach is detected, affected systems are isolated to prevent the attacker from moving laterally within the network. Mitigation involves fixing the exploited vulnerability and preventing further attacks.</p>
+</li>
+<li>
+<p><strong>Forensic Investigation:</strong><br>After containment, forensic investigators analyse logs and network traffic to determine how the breach occurred and what data was compromised.</p>
+</li>
+</ul>
+<p><strong>Example:</strong><br>In 2020, a leading tech company detected a breach where hackers accessed their internal systems. Their incident response team immediately isolated the compromised servers, preventing the attack from spreading further. A forensic investigation revealed how the attackers had entered through an unpatched vulnerability, prompting an immediate patch and policy update.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Maintaining Business Continuity</h3>
+<div class="dp-panel-content">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Business continuity ensures that essential operations can continue despite system disruptions or breaches. The goal is to minimise downtime and maintain operational capability.</p>
+</div>
+</div>
+<p><strong>How Business Continuity Is Maintained:</strong></p>
+<ul>
+<li>
+<p><strong>Redundancy and Failover:</strong><br>Critical systems have backup or redundant systems that automatically take over in the event of a failure. Cloud-based failover systems ensure that if one server goes down, another seamlessly takes over.</p>
+</li>
+<li>
+<p><strong>Data Backups:</strong><br>Regular backups ensure that the organisation can restore its systems in case of a data loss. Cloud backups or offsite storage ensures that data is protected even if physical infrastructure is compromised.</p>
+</li>
+<li>
+<p><strong>Business Continuity Plans (BCPs):</strong><br>Companies create detailed business continuity plans that outline how to maintain operations during a system outage or attack. These plans include steps for failover, key personnel assignments, and system recovery.</p>
+</li>
+</ul>
+<p><strong>Example:</strong><br>An e-commerce platform that operates globally uses a failover system to switch traffic between data centres in case one fails. By routing traffic through other servers, the company ensures minimal downtime, maintaining the ability for customers to make purchases during system maintenance or failure.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Conducting Disaster Recovery</h3>
+<div class="dp-panel-content">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Disaster recovery focuses on restoring systems after a significant event, such as a security breach or natural disaster. The aim is to recover quickly and minimise long-term impact.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>How Disaster Recovery Is Conducted:</strong></p>
+<ul>
+<li>
+<p><strong>Disaster Recovery Plans (DRPs):</strong><br>A Disaster Recovery Plan includes the steps needed to restore critical systems and services. This involves prioritising which systems to restore and ensuring resources are in place for recovery.</p>
+</li>
+<li>
+<p><strong>Backup Restoration:</strong><br>Regularly testing the restoration of backups ensures that backups are reliable and can be used in the event of data loss or system failure. Offsite or cloud backups are commonly used for redundancy.</p>
+</li>
+<li>
+<p><strong>Recovery Time Objective (RTO) and Recovery Point Objective (RPO):</strong><br>Organisations set goals for how quickly services must be restored (RTO) and how much data loss is acceptable (RPO). These metrics help define recovery processes and ensure that critical services are restored within acceptable timeframes.</p>
+</li>
+</ul>
+<p><strong>Example:</strong><br>A bank that stores financial transactions in real-time performs regular disaster recovery drills to ensure it can restore operations within minutes of a failure. Data is mirrored across multiple servers, ensuring that the most recent transactions can be recovered and no critical data is lost.</p>
+</div>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info  card dp-callout-position-default dp-callout-type-default" style="border-left-color: #9e9e9e;">
+<div class="card-body">
+<ul>
+<li class="">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a href="https://snyk.io/learn/code-review/finding-vulnerabilities-in-source-code/">How to find security vulnerabilities</a></li>
+<li><a href="https://www.paloaltonetworks.com.au/cyberpedia/what-is-attack-surface-management">What Is Attack Surface Management?</a></li>
+<li><a href="https://www.beyondtrust.com/resources/glossary/systems-hardening">What is Systems Hardening?</a><strong><strong><br></strong></strong> <strong><br></strong></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.8 Test Security &amp; Resilience" href="https://canvas.kings.edu.au/courses/12951/assignments/204814" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204814" data-api-returntype="Assignment">1.8 Test Security &amp; Resilience</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.8%20Test%20Security%20%26%20Resilience.pptx?d=w6bdcef08e8454d4a9a3e612910b6f877&amp;csf=1&amp;web=1&amp;e=lqGzS0">1.8 Test Security &amp; Resilience.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-8-test-security-and-resilience" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={6bdcef08-e845-4d4a-9a3e-612910b6f877}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">1.9 Security Strategies &amp; Tools</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Apply and evaluate strategies used by software developers to manage the security of programming code:&nbsp;<br></span>- code review<br class="card-text">- s<span class="card-text">tatic application security testing (SAST)</span><br class="card-text">- d<span class="card-text">ynamic application security testing (DAST)</span><br class="card-text">- v<span class="card-text">ulnerability assessment</span><br class="card-text">- p<span class="card-text">enetration testing</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand the strategies software developers use to manage and improve the security of programming code.</li>
+<li>Learn about the various testing methods and assessments used to identify and address security vulnerabilities in code.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to explain different strategies used to evaluate and secure programming code.</li>
+<li>Students will understand how to identify security flaws by applying code reviews, static and dynamic testing, vulnerability assessments, and penetration testing.</li>
+<li>Students will evaluate the effectiveness of these strategies in real-world software development.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Code review</h3>
+<div class="dp-panel-content ">
+<h2>Sources of Error</h2>
+<p>Often, as programmers, we overlook errors within the code we write. This can stem from any number of reasons. Personal bias may be up there, and it is the same with negligence, but a far more frequent source of such errors comes from our understanding. We understand this code and believe it's the best way to do this specific task because we wrote it. We often don't see a need to question or refine our approach, not because of ego, but simply because we don't spare any more thought to our ideas and how we implement</p>
+<p>&nbsp;</p>
+<p>The idea is that when a programmer needs to debug their code, they should explain the program line-by-line to a rubber duck. This results in a greater depth of code analysis and can help identify problem areas or find better approaches to issues. If your code is errored and you feel stuck, this might be one way to think through your problem rationally. And don't worry; you don't need a don't duck for this; it's purely metaphoricit'sYou can explain your code to any object, toy, dog, cat, or some fancy esoteric pet you might have around, or even.</p>
+<p>As incredible as chatting to a rubber duck about your code may sound, it doesn't precisely. And, of course, the duck can't exactly talk, meaning you're stuck with your thoughts throughout the process. Sure, the thoughts might be more organised, but that doesn't always help; it's fresh out of you and doesn't account for sources of mistakes, bias and overconfidence, for example.</p>
+<p>That's why we are involved in the process! Another person can bring a fresh perspective to your code and, this time around, even voice it. Of course, it's better if they are themselves programmers, even better if they have more knowledge to share, and even better if they are part of your team.</p>
+<h2>Professional Setting</h2>
+<p>If you are in a professional setting, or specifically in an experienced team, running your code by others to identify errors or mistakes is called a Code Review.</p>
+<p>This has several aspects to it, though most organisations will have this as a last 'sanity check' before the code is deployed or added to the project but after the bots and testing software have had their way with it (we will cover these in the following sections), though some may place it before. Generally, these are done in the text through comments, as nobody has the time to hold a meeting after every change of code, but everyone has time to write up a couple of lines of text about some error they found while glancing the code over.</p>
+<p>This is a more formal process than you may be used to. The scale of the professional software environment is much greater than the one you typically study in, with large teams cooperating on larger projects. So, let's run through an example code review in the developer platform you should all be familiar with at this point: GitHub.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/7a11db7c6ce3515b.png" alt="image.png" width="640" height="637" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527455" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Static application security testing (SAST)</h3>
+<div class="dp-panel-content ">
+<h2>Testing Software</h2>
+<p>We can have our digital tools check our code for us. They won’t be perfect either, as they can only do what we taught them to do. But they are accurate and can be relied on to do a job a relatively infinite amount of times without fail, which isn’t the case with people. As we saw prior, these are generally run after code is deemed “completed” by the programmer but can be run at any stage of development to ensure you’re on the right track.</p>
+<p>Now, let’s look at our first digital Method of Testing.</p>
+<p>&nbsp;</p>
+<h2>SAST</h2>
+<p>Passive. That’s generally what the Static in the name represents. The defining characteristic of this testing method is that it looks through your code without running it.</p>
+<p>The software used here is the programming equivalent of Microsoft Word Spellcheck. It looks through your code and tries to find possible issues and flaws based on information and patterns it has in its database. Generally, these are common flaws previously identified and added in. Much like our beloved Spellcheck holds a dictionary of words and checks grammar based on them, a SAST tool holds a dictionary of vulnerability patterns, meaning it works a bit in reverse, checking that none of these unsafe practices and patterns are within the code you give it. It then generates a report of its findings and recommendations for improving your code.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/d6e0bd83a545a096.png" alt="image.png" width="555" height="312" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527436" data-api-returntype="File" loading="lazy"></p>
+<p>Let’s make an analogy that will help us contrast this methodology with another one later on. A SAST tool sits on the couch until you come and give it code to review. It takes out a highlighter and, still on the couch, circles everything you got wrong. It returns it to you, tells you what you should do, and keeps you sitting on the couch.</p>
+<p>If that sounds a bit dull… It is, but there are two reasons. Firstly, it’s one-half of two methodologies used together, so hold your breath. Secondly, SAST tools are handy since they are pretty fast and tell you if you’re on the right track without using too much time or resources.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/b1fcce4b1957178f.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527322" data-api-returntype="File" loading="lazy"></p>
+<div class="flex max-w-full flex-col flex-grow">
+<div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5" data-message-author-role="assistant" data-message-id="deca6abc-f731-42ff-a600-c6cfe17dda23">
+<div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
+<div class="markdown prose w-full break-words dark:prose-invert dark">
+<p>Bandit is a tool for performing Static Application Security Testing (SAST) on Python code, including Flask applications. By integrating Bandit into your development workflow, you can proactively identify and remediate security vulnerabilities early in the coding process, enhancing the overall security posture of your application.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Dynamic application security testing (DAST)</h3>
+<div class="dp-panel-content">
+<p>DAST is a black-box testing method that evaluates an application's security while running. It simulates external attacks on the application to identify vulnerabilities that attackers could exploit.</p>
+<p><strong>How DAST Works:</strong></p>
+<ul>
+<li>
+<p><strong>Testing in a Live Environment:</strong><br>DAST tools simulate attacks on the running application by sending inputs, such as malformed requests or known attack patterns, to see how the application responds.</p>
+</li>
+<li>
+<p><strong>Common Tools:</strong><br>Tools like OWASP ZAP (Zed Attack Proxy) and Burp Suite perform DAST by identifying security issues such as cross-site scripting (XSS), insecure authentication mechanisms, and weak session management.</p>
+</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/6f039e0b5e2746fe.png" alt="image.png" width="446" height="446" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527429" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Vulnerability assessment</h3>
+<div class="dp-panel-content">
+<p>The Vulnerability Assessment process, a comprehensive approach to system security, involves identifying, quantifying, and prioritising vulnerabilities within a system. Programmers are responsible for ensuring the system's security by conducting checks before sending the code for review or production. This assessment entails a thorough analysis and documentation, typically a checklist of items to be reviewed and verified, ensuring robust system security.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/84f73db0a64a6173.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527439" data-api-returntype="File" loading="lazy"></p>
+<p>In an extensive application, the process generally includes the following steps:</p>
+<p>1. Identifying possible vulnerabilities.<br>2. Analysing the findings to determine potential issues and risks associated with the identified vulnerabilities.<br>3. Perform a risk assessment to evaluate the likelihood and consequences of each risk and prioritise the risks for mitigation.<br>4. Remediation of the identified risks and vulnerabilities may involve removing vulnerabilities, managing risks in alternative ways, and establishing preventive measures or contingencies for potential risks.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Penetration testing</h3>
+<div class="dp-panel-content">
+<p>On the other hand, Penetration Testing involves simulating cyberattacks to evaluate a system's security. It is an authorised attempt to breach Penetration testing, often called "pen testing," which simulates real-world cyberattacks to identify security vulnerabilities that malicious actors could exploit. Pen testing helps determine an application's security posture by actively attempting to breach its defences.</p>
+<p><strong>How Penetration Testing Works:</strong></p>
+<ul>
+<li>
+<p><strong>Simulated Attacks:</strong><br>Ethical hackers (pen testers) use various methods to exploit known and unknown vulnerabilities in a system. This can include attempting to bypass authentication, gain access to sensitive data, or escalate privileges.</p>
+</li>
+<li>
+<p><strong>Manual and Automated Approaches:</strong><br>Pen testers use automated tools and manual techniques to simulate realistic attacks. Tools like Metasploit and Kali Linux are often used alongside manual methods to perform penetration tests.</p>
+</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/6fc5460940ddd0d9.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527352" data-api-returntype="File" loading="lazy"></p>
+<p>This process typically follows a five-step approach:</p>
+<p>1. Planning and reconnaissance: Gathering information about the target system.<br>2. Scanning: Using tools to understand how the target system responds to various intrusion attempts.<br>3. Gaining Access: Attempting to exploit vulnerabilities to gain access to the system.<br>4. Maintaining Access: Trying to sustain access to achieve the test's goals while overcoming protective measures.<br>5. Analysis and Reporting: Compiling the results and providing recommendations based on the penetration test findings.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://www.synopsys.com/glossary/what-is-dast.html#:~:text=Dynamic%20application%20security%20testing%20(DAST)%20is%20a%20method%20of%20AppSec,visibility%20into%20the%20source%20program." target="_blank">Dynamic Application Security Testing (DAST)</a></li>
+<li><a class="inline_disabled" href="https://www.synopsys.com/glossary/what-is-sast.html#A" target="_blank">Static Application Security Testing</a></li>
+<li><a class="inline_disabled" href="https://www.opentext.com/en-gb/what-is/sast" target="_blank">What is Static Application Security Testing (SAST)?</a></li>
+<li><a class="inline_disabled" href="https://www.synopsys.com/glossary/what-is-penetration-testing.html" target="_blank">Penetration Testing</a></li>
+<li><a class="inline_disabled" href="https://snyk.io/learn/code-review/finding-vulnerabilities-in-source-code/#perform-static-code" target="_blank">How to find security vulnerabilities in source code</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.imperva.com/learn/application-security/vulnerability-assessment/" target="_blank">What is Vulnerability Assessment</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="1.9 Security Strategies &amp; Tools" href="https://canvas.kings.edu.au/courses/12951/assignments/204815" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204815" data-api-returntype="Assignment">1.9 Security Strategies &amp; Tools</a><strong><a title="1.9 Security Strategies &amp; Tools" href="https://canvas.kings.edu.au/courses/12951/assignments/204815" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204815" data-api-returntype="Assignment"></a></strong></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<p class="card-text"><a class="inline_disabled" href="https://edstem.org/au/courses/19403/lessons" target="_blank"><strong>SAST</strong></a></p>
+<p class="card-text"><a class="inline_disabled" href="https://edstem.org/au/courses/19403/lessons" target="_blank"><strong>DAST</strong></a></p>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.9%20Security%20Strategies%20%26%20Tools.pptx?d=wb17e8eb8707542a495f9c38451a22751&amp;csf=1&amp;web=1&amp;e=a9uyke">1.9 Security Strategies &amp; Tools.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-9-security-strategies-and-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={b17e8eb8-7075-42a4-95f9-c38451a22751}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+&nbsp;</div>
+</div>
+<h3 class="readles">1.10 Defensive Data</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">•&nbsp;&nbsp;&nbsp; Design, develop and implement code using defensive data input handling practices, including input validation, sanitisation and error handling</span><br class="card-text"><br class="card-text"></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li>Understand and implement defensive data input handling practices in software development.</li>
+<li>Learn the principles of input validation, data sanitisation, and error handling to safeguard applications from vulnerabilities.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul>
+<li>Correctly implement input validation to ensure user data adheres to the expected format.</li>
+<li>Apply data sanitisation techniques to prevent malicious input from compromising the software.</li>
+<li>Implement error-handling mechanisms that provide meaningful feedback while maintaining security.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>In software development, ensuring that data input is handled securely is critical to maintaining the integrity and security of the system. Implementing defensive data input handling practices is essential to protecting the system from common attacks such as SQL injection, cross-site scripting (XSS), and other input-based vulnerabilities.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Input Validation</h3>
+<div class="dp-panel-content ">
+<p>Input validation ensures that the data entered by users meets the expected format before it is processed or stored by the system. This is the first line of defence against invalid or malicious input.</p>
+<ul>
+<li>
+<p><strong>Types of Validation:</strong></p>
+<ul>
+<li><strong>Server-side Validation:</strong> This occurs on the server, validating the data after it has been sent to it. It is more secure but may introduce delays as it requires communication with the server.</li>
+<li><strong>Client-side Validation:</strong> Performed on the client (e.g., in the browser) before data is sent to the server. This improves user experience but can be bypassed, so it should never be the only validation step.</li>
+</ul>
+</li>
+<li>
+<p><strong>Examples of Input Validation:</strong></p>
+<ul>
+<li><strong>Type Checking:</strong> Ensure the input is of the expected data type (e.g., a number, string, date).&nbsp;<br><code><span class="hljs-keyword">if</span> <span class="hljs-built_in">type</span>(value) == <span class="hljs-built_in">int</span>:</code></li>
+<li><strong>Length Checking:</strong> Restrict input data length (e.g., the string must be &lt; 20).<br><code><span class="hljs-keyword">if</span> len(string) &lt; 20:</code></li>
+<li><strong>Range Checking:</strong> Validate that numerical inputs fall within an expected range (e.g., age must be between 0 and 120).<br><code><span class="hljs-keyword">if</span> age &gt;= 0 and age &lt;= 120:</code></li>
+<li><strong>Mandatory Fields:</strong>&nbsp; Ensure that required fields are not left blank.<br><code><span class="hljs-keyword">if</span> not name:</code></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Sanitisation<span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">&nbsp;</span></h3>
+<div class="dp-panel-content ">
+<p>Data sanitisation involves cleaning user input by removing or escaping characters that could be interpreted as executable code, thereby preventing malicious data from compromising the system.</p>
+<ul>
+<li>
+<p><strong>Why it’s important:</strong> Untrusted input, if not properly sanitised, can lead to security vulnerabilities like SQL injection and XSS, where attackers can manipulate input to execute unintended commands.</p>
+</li>
+<li>
+<p><strong>Sanitisation Techniques:</strong></p>
+<ul>
+<li><strong>Escaping characters:</strong> Replacing potentially dangerous characters (like <code>&lt;</code>, <code>&gt;</code>, <code>'</code>, etc.) with safe representations.</li>
+<li><strong>Whitelist-based filtering:</strong> Accepting only known good input (e.g., allowing only alphanumeric characters for usernames).</li>
+<li><strong style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">Converting Data Types: </strong><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">Command-line inputs are strings, and the code requires the type to be a number/integer for calculations. For example,</span><br><code>age = <span class="hljs-built_in">input</span>(<span class="hljs-string">"Enter your age: "</span>) <span class="hljs-comment"># input is a string</span></code><br><code>age = <span class="hljs-built_in">int</span>(age) <span class="hljs-comment"># Convert to integer for numerical operations</span>&nbsp;</code></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Error Handling</h3>
+<div class="dp-panel-content">
+<p>Error handling is a critical practice that ensures that when unexpected input or issues occur, the system can respond gracefully without exposing sensitive information or crashing.</p>
+<ul>
+<li>
+<p><strong>Principles of Secure Error Handling:</strong></p>
+<ul>
+<li><strong>User-friendly messages:</strong> Provide generic error messages to the end-user that do not disclose sensitive system information.</li>
+<li><strong>Detailed logging:</strong> Record detailed error information for developers or system administrators to investigate while keeping this information hidden from the user.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example:</strong> Handling an error when an invalid file format is uploaded could involve rejecting the upload, notifying the user of acceptable formats, and logging the specific technical error for debugging.</p>
+</li>
+</ul>
+<p>In Python, error-handling messages can be used with the <code>print()</code> function. These error statements help log errors and provide feedback to guide users in correcting their inputs. For example,<span style="color: #2dc26b;">&nbsp;<code>print("Password must be at least 20 characters")</code>&nbsp;<span style="color: #000000;">.</span></span></p>
+</div>
+</div>
+</div>
+<p><strong>Example of Defensive Data Input Handling in Python:</strong></p>
+<p><strong><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/32356f1f6535bb4e.png" alt="image.png" width="640" height="501" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527353" data-api-returntype="File" loading="lazy"></strong></p>
+<ul>
+<li>The <code>is_valid_username</code> function validates that the username is alphanumeric and between 5-15 characters.</li>
+<li>The <code>re.escape()</code> method sanitises input by escaping special characters, preventing SQL injection or similar attacks.</li>
+<li>Error handling is implemented to provide a generic message when the user accesses an invalid route, keeping the system secure while offering meaningful feedback.</li>
+</ul>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://www.ninjaone.com/it-hub/endpoint-security/what-is-input-sanitization/#:~:text=Input%20sanitization%2C%20also%20known%20as,user%20inputs%20to%20ensure%20safety." target="_blank">What Is Input Sanitization?</a></li>
+<li><a class="inline_disabled" href="https://medium.com/@galiniostech/input-validation-vs-sanitization-8031713831f" target="_blank">Input Validation vs. Sanitisation</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="1.10 Defensive Data" href="https://canvas.kings.edu.au/courses/12951/assignments/204803" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204803" data-api-returntype="Assignment">1.10 Defensive Data</a><strong><a title="1.10 Defensive Data" href="https://canvas.kings.edu.au/courses/12951/assignments/204803" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204803" data-api-returntype="Assignment"></a></strong></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://guidedctf.sec.edu.au/sqli1/login" target="_blank">SQL Injection</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.10%20Defensive%20Data.pptx?d=w6b859e5cd3044635b2ffdccb2e7e8ccb&amp;csf=1&amp;web=1&amp;e=D5fexV">1.10 Defensive Data.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-10-defensive-data" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={6b859e5c-d304-4635-b2ff-dccb2e7e8ccb}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">After</h3>
+<div class="readnav"><a href="12951-m1.html">← previous module</a><a href="../course-12951.html">all modules</a><a href="12951-m3.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

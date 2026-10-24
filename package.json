@@ -1,0 +1,20 @@
+{
+  "name": "hsc-se-study",
+  "version": "1.0.0",
+  "description": "HSC Software Engineering study kit",
+  "scripts": {
+    "exam": "node exam-app/server.mjs",
+    "fetch": "node fetch.mjs",
+    "build": "node build.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "marked": "^12.0.2",
+    "playwright-core": "^1.64.1",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2"
+  }
+}

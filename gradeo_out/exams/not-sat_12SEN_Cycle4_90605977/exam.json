@@ -1,0 +1,265 @@
+{
+  "exam": "12SEN_Cycle4",
+  "syllabus": "Software Engineering",
+  "publisher": null,
+  "topics": [
+    "Secure Software Architecture"
+  ],
+  "outcomes": [
+    "SE-12-05",
+    "SE-12-04",
+    "SE-12-03",
+    "SE-12-02",
+    "SE-12-06",
+    "SE-12-07",
+    "SE-12-01"
+  ],
+  "status": "LIVE",
+  "results_released": true,
+  "submitted": null,
+  "started": null,
+  "duration_minutes": null,
+  "markers": [
+    "TKS CST"
+  ],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/90605977-b8fc-4947-a386-a2bf339e90f6",
+  "marking_session_id": "90605977-b8fc-4947-a386-a2bf339e90f6",
+  "exam_id": "df5e9ec9-cbd0-4566-a972-f9fd154a22dd",
+  "session_id": "d929d4b3-ace0-42bb-8dfc-6093ed9446ed",
+  "total_mark": null,
+  "parts_answered": 0,
+  "parts_marked": 0,
+  "parts_total": 3,
+  "total_available": 9,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "52c6c8f7-9457-4e1b-b24e-937f66d43d20",
+      "title": "Efficient Execution (OR, TKS 2025)",
+      "topic": "Efficient Execution",
+      "label": "OR",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "3ff7834a-9187-4d8e-8f53-540a3ad4c746",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "For each scenario, select the most appropriate technique related to efficient execution in software development.\n\nOnly one correct cell per row",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "Memory Management",
+              "Session Management",
+              "Exception Management"
+            ],
+            "rows": [
+              {
+                "statement": "Processing large datasets one item at a time using yield",
+                "correct": [
+                  "Memory Management"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Logging users out after 15 minutes of inactivity",
+                "correct": [
+                  "Session Management"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Catching specific exceptions and logging errors without showing them to users",
+                "correct": [
+                  "Exception Management"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Minimising data stored per user session",
+                "correct": [
+                  "Session Management"
+                ],
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "rows": [
+              {
+                "statement": "Processing large datasets one item at a time using yield",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Logging users out after 15 minutes of inactivity",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Catching specific exceptions and logging errors without showing them to users",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Minimising data stored per user session",
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Correctly selects all options"
+            },
+            {
+              "marks": "1",
+              "criterion": "Partially correct selection"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "99317d23-d872-443c-b764-b6c3f2bebfee",
+      "title": "Collaboration Benefits (SA, TKS 2025)",
+      "topic": "Collaboration Benefits",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "129b6f70-2854-4453-a529-de4300a840c8",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe how collaborative code reviews contribute to the security of a software system. In your answer, refer to specific benefits of having multiple team members involved in reviewing code.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Demonstrates a thorough understanding of how collaborative code reviews improve security, with specific and relevant benefits clearly explained"
+            },
+            {
+              "marks": "3",
+              "criterion": "Shows a sound understanding of code review benefits with some relevant explanation."
+            },
+            {
+              "marks": "2",
+              "criterion": "Identifies a general benefit of code reviews with limited or vague explanation."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides a basic or general statement about teamwork or checking code, without clear links to security."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Collaboration is important in secure software development because no single developer can identify every possible vulnerability or threat. Security is a complex area that benefits from multiple perspectives and areas of expertise. While one developer may be skilled in coding secure authentication, another may be better at identifying potential network vulnerabilities. By working together, the team can address more risks and validate each other’s work, which increases the overall quality and resilience of the software. Relying on one person increases the chance of blind spots or overlooked errors, while collaboration spreads responsibility and strengthens the final product."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "0edf9b36-5998-439e-b74c-364dea60e842",
+      "title": "Social/Ethical/Legal Issues (SA, TKS 2025)",
+      "topic": "Social/Ethical/Legal Issues",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "e60c0d3a-45e8-4c0d-91b0-e81cbaff8a33",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Discuss the ethical considerations enterprises must address regarding privacy when developing secure software.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly discusses ethical privacy considerations with relevant details."
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides a general explanation of privacy ethics with limited specifics."
+            },
+            {
+              "marks": "1",
+              "criterion": "Makes vague or incomplete statements about privacy ethics."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Enterprises must ensure that secure software respects individuals' privacy rights by protecting personal data from unauthorized access and misuse. Ethically, users should have control over how their data is collected and used, including options to consent or opt-out. Developers should implement features like encryption and data anonymization to safeguard privacy. Ignoring these ethical responsibilities can lead to loss of trust and harm to users. For example, an online platform that allows users to manage their privacy settings demonstrates respect for user autonomy and complies with ethical standards."
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "Efficient Execution": {
+      "mark": 0,
+      "available": 2
+    },
+    "Collaboration Benefits": {
+      "mark": 0,
+      "available": 4
+    },
+    "Social/Ethical/Legal Issues": {
+      "mark": 0,
+      "available": 3
+    }
+  }
+}

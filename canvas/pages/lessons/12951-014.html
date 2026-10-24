@@ -1,0 +1,254 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.8 Test Security &amp; Resilience — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 2 (Term 4: Weeks 3-4) Secure Software Architecture</div>
+<h1 style="margin-top:.2rem">1.8 Test Security &amp; Resilience</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-8-test-security-and-resilience" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Test and evaluate the security and resilience of software by determining vulnerabilities, hardening systems, handling breaches, maintaining business continuity and conducting disaster recovery</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand the core principles of software development's ‘privacy by design’ approach.</li>
+<li>Learn how to implement privacy-first practices throughout the software development lifecycle.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to explain the key principles of ‘privacy by design’.</li>
+<li>Students will be able to integrate privacy-focused features into software solutions.</li>
+<li>Students will respect user privacy by embedding it directly into the software design.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Testing and evaluating software security and resilience ensures systems remain robust against attacks, can handle security breaches effectively, and recover quickly to maintain business continuity. This process involves determining vulnerabilities, hardening systems, handling breaches, and implementing disaster recovery plans.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Determining Vulnerabilities</h3>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Vulnerabilities are weaknesses in software that attackers can exploit. Identifying and addressing these vulnerabilities is critical for building secure software.</p>
+</div>
+</div>
+<p><strong>How Vulnerabilities Are Addressed:</strong></p>
+<ul>
+<li>
+<p><strong>Penetration Testing (Pen Testing):</strong><br>Penetration testing involves ethical hackers attempting to exploit system weaknesses to identify potential vulnerabilities before attackers do.</p>
+</li>
+<li>
+<p><strong>Automated Vulnerability Scanning:</strong><br>Tools like Nessus and Qualys are used to scan systems for known vulnerabilities, comparing the system against databases of known security issues.</p>
+</li>
+<li>
+<p><strong>Code Audits and Reviews:</strong><br>Regular manual code reviews ensure secure coding practices and help identify weaknesses such as input validation issues or improper access control.</p>
+</li>
+</ul>
+<p><strong>Example:</strong><br>Financial institutions continuously automate vulnerability scanning to detect flaws in their infrastructure. They supplement this with periodic penetration testing by security specialists who simulate real-world attack scenarios, allowing the organisation to discover and fix vulnerabilities before attackers can exploit them.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Hardening Systems</h3>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Hardening involves securing a system by reducing its potential attack surface. This is achieved by limiting services, closing unused ports, and enforcing strict security policies.</p>
+</div>
+</div>
+<p><strong>How Systems Are Hardened:</strong></p>
+<ul>
+<li>
+<p><strong>Minimising Attack Surface:</strong><br>Disable or remove unnecessary services, applications, and features to reduce the points of entry for attackers.</p>
+</li>
+<li>
+<p><strong>Regular Patching and Updates:</strong><br>Systems are regularly updated with security patches to fix vulnerabilities. In industries like healthcare, maintaining updated systems is often a regulatory requirement.</p>
+</li>
+<li>
+<p><strong>Configuration Management:</strong><br>Secure configurations are enforced across systems using tools like Chef, Puppet, or Ansible, ensuring all systems are hardened with uniform security policies.</p>
+</li>
+</ul>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/7ca433b524ec38c9.png" alt="image.png" width="675" height="479" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527437" data-api-returntype="File" loading="lazy"></span></p>
+<p><strong>Example:</strong><br>A global tech company enforces strict access control policies and regularly patches its systems using automated tools to ensure no known vulnerabilities are left unpatched. They also apply least-privilege access controls, ensuring users can only access the data and systems necessary for their role.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Handling Breaches</h3>
+<div class="dp-panel-content">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>A security breach occurs when an attacker gains unauthorised access to a system. Effectively handling a breach involves detecting, containing, and mitigating the damage caused.</p>
+</div>
+</div>
+<p><strong>How Breaches Are Managed:</strong></p>
+<ul>
+<li>
+<p><strong>Incident Response Teams (IRTs):</strong><br>Organisations have dedicated teams trained to detect, contain, and mitigate security breaches. These teams follow incident response plans, which outline procedures for addressing breaches.</p>
+</li>
+<li>
+<p><strong>Containment and Mitigation:</strong><br>When a breach is detected, affected systems are isolated to prevent the attacker from moving laterally within the network. Mitigation involves fixing the exploited vulnerability and preventing further attacks.</p>
+</li>
+<li>
+<p><strong>Forensic Investigation:</strong><br>After containment, forensic investigators analyse logs and network traffic to determine how the breach occurred and what data was compromised.</p>
+</li>
+</ul>
+<p><strong>Example:</strong><br>In 2020, a leading tech company detected a breach where hackers accessed their internal systems. Their incident response team immediately isolated the compromised servers, preventing the attack from spreading further. A forensic investigation revealed how the attackers had entered through an unpatched vulnerability, prompting an immediate patch and policy update.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Maintaining Business Continuity</h3>
+<div class="dp-panel-content">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Business continuity ensures that essential operations can continue despite system disruptions or breaches. The goal is to minimise downtime and maintain operational capability.</p>
+</div>
+</div>
+<p><strong>How Business Continuity Is Maintained:</strong></p>
+<ul>
+<li>
+<p><strong>Redundancy and Failover:</strong><br>Critical systems have backup or redundant systems that automatically take over in the event of a failure. Cloud-based failover systems ensure that if one server goes down, another seamlessly takes over.</p>
+</li>
+<li>
+<p><strong>Data Backups:</strong><br>Regular backups ensure that the organisation can restore its systems in case of a data loss. Cloud backups or offsite storage ensures that data is protected even if physical infrastructure is compromised.</p>
+</li>
+<li>
+<p><strong>Business Continuity Plans (BCPs):</strong><br>Companies create detailed business continuity plans that outline how to maintain operations during a system outage or attack. These plans include steps for failover, key personnel assignments, and system recovery.</p>
+</li>
+</ul>
+<p><strong>Example:</strong><br>An e-commerce platform that operates globally uses a failover system to switch traffic between data centres in case one fails. By routing traffic through other servers, the company ensures minimal downtime, maintaining the ability for customers to make purchases during system maintenance or failure.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Conducting Disaster Recovery</h3>
+<div class="dp-panel-content">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Disaster recovery focuses on restoring systems after a significant event, such as a security breach or natural disaster. The aim is to recover quickly and minimise long-term impact.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>How Disaster Recovery Is Conducted:</strong></p>
+<ul>
+<li>
+<p><strong>Disaster Recovery Plans (DRPs):</strong><br>A Disaster Recovery Plan includes the steps needed to restore critical systems and services. This involves prioritising which systems to restore and ensuring resources are in place for recovery.</p>
+</li>
+<li>
+<p><strong>Backup Restoration:</strong><br>Regularly testing the restoration of backups ensures that backups are reliable and can be used in the event of data loss or system failure. Offsite or cloud backups are commonly used for redundancy.</p>
+</li>
+<li>
+<p><strong>Recovery Time Objective (RTO) and Recovery Point Objective (RPO):</strong><br>Organisations set goals for how quickly services must be restored (RTO) and how much data loss is acceptable (RPO). These metrics help define recovery processes and ensure that critical services are restored within acceptable timeframes.</p>
+</li>
+</ul>
+<p><strong>Example:</strong><br>A bank that stores financial transactions in real-time performs regular disaster recovery drills to ensure it can restore operations within minutes of a failure. Data is mirrored across multiple servers, ensuring that the most recent transactions can be recovered and no critical data is lost.</p>
+</div>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info  card dp-callout-position-default dp-callout-type-default" style="border-left-color: #9e9e9e;">
+<div class="card-body">
+<ul>
+<li class="">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a href="https://snyk.io/learn/code-review/finding-vulnerabilities-in-source-code/">How to find security vulnerabilities</a></li>
+<li><a href="https://www.paloaltonetworks.com.au/cyberpedia/what-is-attack-surface-management">What Is Attack Surface Management?</a></li>
+<li><a href="https://www.beyondtrust.com/resources/glossary/systems-hardening">What is Systems Hardening?</a><strong><strong><br></strong></strong> <strong><br></strong></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.8 Test Security &amp; Resilience" href="https://canvas.kings.edu.au/courses/12951/assignments/204814" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204814" data-api-returntype="Assignment">1.8 Test Security &amp; Resilience</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.8%20Test%20Security%20%26%20Resilience.pptx?d=w6bdcef08e8454d4a9a3e612910b6f877&amp;csf=1&amp;web=1&amp;e=lqGzS0">1.8 Test Security &amp; Resilience.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-8-test-security-and-resilience" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={6bdcef08-e845-4d4a-9a3e-612910b6f877}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-013.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-015.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

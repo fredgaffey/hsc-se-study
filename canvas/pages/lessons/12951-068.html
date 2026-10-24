@@ -1,0 +1,406 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.5 Models for Designing and Analysing — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 11 (Term 2: Weeks 3-4) Software Automation</div>
+<h1 style="margin-top:.2rem">3.5 Models for Designing and Analysing</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-5-models-for-designing-and-analysing" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Research models used by software engineers to design and analyse ML including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>decision trees</li>
+<li>neural networks</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand and describe the models used by software engineers to design and analyse machine learning systems, focusing on decision trees and neural networks.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Define and explain decision trees, including their structure, strengths, and limitations.</span></li>
+<li><span style="font-size: 10pt;">Describe neural networks, outlining their architecture, types, and applications.</span></li>
+<li><span style="font-size: 10pt;">Compare and contrast the benefits and drawbacks of decision trees and neural networks.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Machine learning (ML) models are integral to the development of intelligent systems, and software engineers rely on various models to design and analyse them. Two of the most commonly used models are <strong>decision trees</strong> and <strong>neural networks</strong>, each serving different purposes in the ML lifecycle. These models help software engineers understand data patterns, make predictions, and improve system performance.</p>
+<p>&nbsp;</p>
+<h4><strong>Decision Trees</strong></h4>
+<p>A <strong>decision tree</strong> is a visual diagram that represents all possible combinations of decisions and their resulting actions. It is commonly used in both classification and regression tasks in machine learning (ML). The structure of the tree follows a sequence of decisions, where each decision path leads to either another decision or a final action (or outcome).</p>
+<p>The decision tree builds paths based on the conditions at each decision point. For example, if the current condition satisfies a decision criterion, the branch will move in one direction (e.g., "Yes"). If not, it will move in another (e.g., "No"). Each path eventually leads to either another decision or an end result, making it clear how a combination of conditions leads to specific outcomes.</p>
+<p>The following decision tree shows the rules in controlling the temperature system within a ‘smart’ house.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/1a41a4e0f74c074d.png" alt="image.png" width="671" height="280" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527567" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>The following diagram shows another way to represent a decision tree.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/5a03c606c6a31374.png" alt="image.png" width="454" height="329" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527483" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Key Strengths</strong></p>
+<ul>
+<li>
+<p><strong>Interpretability</strong>: The flowchart-like structure makes decision trees easy to understand and interpret, showing how decisions lead to specific actions.</p>
+</li>
+<li>
+<p><strong>Versatility</strong>: Decision trees are useful for a wide range of problems, particularly when the goal is to map out possible outcomes based on a set of conditions.</p>
+</li>
+</ul>
+<p><strong>Limitations</strong></p>
+<ul>
+<li>
+<p><strong>Overfitting</strong>: Decision trees can grow too complex when trained on noisy data, leading to overfitting.</p>
+</li>
+<li>
+<p><strong>Instability</strong>: Small changes in the data can lead to a very different tree structure.</p>
+</li>
+</ul>
+<p><strong>Common Use Cases</strong></p>
+<ul>
+<li>
+<p><strong>Classification</strong>: E.g., determining whether an email is spam or not.</p>
+</li>
+<li>
+<p><strong>Regression</strong>: E.g., predicting the price of a house based on its features like size and location.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h4><strong>Neural Networks</strong></h4>
+<p>Neural networks (NNs) are a foundational model in machine learning, particularly when dealing with large and complex datasets. They are inspired by the biological neural networks in the human brain and are capable of learning patterns, making predictions, and transforming raw data into actionable insights.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/45f15a767fe2a2b7.png" alt="image.png" width="538" height="231" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527569" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>Neural networks are at the core of <strong>deep learning</strong>, a subset of machine learning that has advanced fields such as <strong>computer vision</strong>, <strong>natural language processing (NLP)</strong>, and <strong>reinforcement learning</strong>. The power of neural networks lies in their ability to capture highly non-linear relationships, making them suitable for both structured (e.g., tabular) and unstructured (e.g., images, text) data.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Structure</h3>
+<div class="dp-panel-content ">
+<p>A neural network is composed of three main types of layers:</p>
+<ol>
+<li><strong>Input Layer</strong>
+<ul>
+<li>This layer takes in the raw data as input. Each node in the input layer represents one feature of the data (e.g., pixel values in an image, numerical features in tabular data, or words in a text).</li>
+</ul>
+</li>
+<li><strong>Hidden Layers</strong>
+<ul>
+<li>These are the layers between the input and output layers. A neural network can have multiple hidden layers, and each layer consists of <strong>neurons</strong> (nodes) that perform mathematical transformations on the input data. The more hidden layers, the "deeper" the network.</li>
+<li><strong>Activation Functions</strong>: Each neuron applies an activation function to introduce non-linearity into the model, allowing it to learn complex patterns. Common activation functions include:
+<ul>
+<li><strong>ReLU (Rectified Linear Unit)</strong>: Sets negative values to zero and leaves positive values unchanged, making it highly efficient for deep learning models.</li>
+<li><strong>Sigmoid</strong>: Maps values between 0 and 1, often used in binary classification tasks.</li>
+<li><strong>Tanh (Hyperbolic Tangent)</strong>: Maps values between -1 and 1, allowing negative values to have a stronger influence on the output than Sigmoid.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Output Layer</strong>
+<ul>
+<li>The output layer produces the final prediction based on the learned weights and transformations. For example:
+<ul>
+<li>In <strong>classification tasks</strong>, the output might be a probability distribution over different classes (e.g., "cat" or "dog" in image classification).</li>
+<li>In <strong>regression tasks</strong>, the output is typically a continuous value (e.g., predicting a house price).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/de47d735bbaa889d.png" alt="image.png" width="643" height="378" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527568" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Learning Mechanism</strong></p>
+<p>The learning process in neural networks involves the following steps:</p>
+<ol>
+<li>
+<p><strong>Forward Propagation</strong>: Data moves from the input layer, through the hidden layers, to the output layer. Each neuron applies a weighted sum of its inputs, passes the result through an activation function, and forwards the output to the next layer.</p>
+</li>
+<li>
+<p><strong>Loss Function</strong>: The loss function calculates the error between the predicted output and the actual target. For instance:</p>
+<ul>
+<li><strong>Mean Squared Error (MSE)</strong> is commonly used in regression tasks.</li>
+<li><strong>Cross-Entropy Loss</strong> is used for classification tasks, measuring how far the predicted probability distribution is from the actual distribution.</li>
+</ul>
+</li>
+<li>
+<p><strong>Backpropagation</strong>: Once the loss is calculated, the model adjusts the weights of the connections using an optimisation algorithm, typically <strong>gradient descent</strong>. Gradient descent updates the weights in the direction that minimises the error, with the learning rate controlling the size of the steps taken during each update.</p>
+</li>
+<li>
+<p><strong>Training and Convergence</strong>: The process of forward propagation, loss computation, and backpropagation is repeated iteratively over many epochs (iterations of the training dataset). The network learns to minimise the loss, improving its performance.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Types of Neural Networks</h3>
+<div class="dp-panel-content ">
+<p>Different types of neural networks are optimised for specific tasks. Below are the most prominent types:</p>
+<p>1. <strong>Feedforward Neural Networks (FNN)</strong></p>
+<ul>
+<li>
+<p><strong>Structure</strong>: Data moves in one direction, from input to output, without cycles or feedback loops.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>: Simple tasks such as regression or basic classification (e.g., predicting the outcome of a stock market price).</p>
+</li>
+</ul>
+<p><img class="sFlh5c FyHeAf iPVvYb" style="max-width: 960px; width: 446px; height: 251px; margin: 0px auto; display: block;" src="https://learnopencv.com/wp-content/uploads/2017/10/mlp-diagram.jpg" alt="Understanding Feedforward Neural Networks | LearnOpenCV [online-only image]" aria-hidden="false" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>2. <strong>Convolutional Neural Networks (CNN)</strong></p>
+<ul>
+<li>
+<p><strong>Structure</strong>: CNNs have a specialised architecture for handling grid-like data such as images. They consist of convolutional layers that apply filters (kernels) to detect local patterns such as edges, textures, or colours. After convolution, pooling layers reduce the spatial dimensions, preserving essential information while reducing computational cost.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>: Computer vision tasks like image classification (e.g., identifying objects in images), object detection (e.g., detecting faces in a picture), and video analysis.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/6c7050bf8cf13dbc.png" alt="image.png" width="705" height="315" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527457" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>3. <strong>Recurrent Neural Networks (RNN)</strong></p>
+<ul>
+<li>
+<p><strong>Structure</strong>: RNNs are designed for sequence data (e.g., time series, text, or speech). They have feedback connections that allow information to be passed from one time step to the next. This structure makes them powerful for capturing temporal dependencies in data.</p>
+</li>
+<li>
+<p><strong>Variants</strong>: Long Short-Term Memory (LSTM) networks and Gated Recurrent Units (GRU) are special types of RNNs designed to overcome the problem of <strong>vanishing gradients</strong>, allowing the network to remember long-term dependencies.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>: Time series forecasting, language translation, speech recognition.</p>
+</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/00c63eb001f2023f.png" alt="image.png" width="372" height="372" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527463" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>4. <strong>Deep Neural Networks (DNN)</strong></p>
+<ul>
+<li>
+<p><strong>Structure</strong>: These are neural networks with multiple hidden layers. The depth allows the network to learn more abstract and complex features from the data. However, training these networks requires large datasets and computational power.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>: Deep learning applications such as recommendation systems (e.g., Netflix movie recommendations), autonomous vehicles, and advanced AI systems like OpenAI's GPT.</p>
+</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/c12cfdbe5db7ad0c.png" alt="image.png" width="784" height="344" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527464" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>5. <strong>Generative Adversarial Networks (GANs)</strong></p>
+<ul>
+<li>
+<p><strong>Structure</strong>: GANs consist of two networks, a <strong>generator</strong> and a <strong>discriminator</strong>, that are trained together. The generator creates fake data, and the discriminator evaluates whether the data is real or fake. This adversarial process continues until the generator produces realistic outputs.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>: Image generation (e.g., generating realistic faces), style transfer, and deepfake creation.</p>
+</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/0044f2577cbf0842.png" alt="image.png" width="790" height="336" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527571" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-primary">
+<div class="card-body">
+<p class="card-text">Check out this fascinating challenge: <a href="https://www.whichfaceisreal.com/index.php" target="_new"><span>Which</span><span> Face</span><span> Is</span><span> Real?</span></a> Can you tell the difference between a real human face and one generated by artificial intelligence (AI)?</p>
+<p>The faces in this challenge are generated by a <strong>Generative Adversarial Network (GAN)</strong>, where two neural networks—the <strong>generator</strong> and the <strong>discriminator</strong>—compete in a process known as adversarial training. The generator creates increasingly realistic fake faces, while the discriminator tries to distinguish them from real faces. Over time, the generator improves to the point where even humans find it difficult to tell which face is real and which is AI-generated.</p>
+<p>Try the test and see how well you perform compared to AI!</p>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Key Concepts</h3>
+<div class="dp-panel-content">
+<ol>
+<li>
+<p><strong>Weight Initialisation</strong></p>
+<ul>
+<li>The initial values of the weights can significantly impact how fast the network converges. Poor initialisation may lead to vanishing gradients or slow training. Common strategies include <strong>Xavier initialisation</strong> or <strong>He initialisation</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Regularisation</strong></p>
+<ul>
+<li>To prevent overfitting, various techniques are applied:
+<ul>
+<li><strong>Dropout</strong>: Randomly drops a subset of neurons during training, forcing the network to learn more robust features.</li>
+<li><strong>L2 Regularisation (Weight Decay)</strong>: Penalises large weights by adding a term to the loss function, helping to generalise better.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Batch Normalisation</strong></p>
+<ul>
+<li>Batch normalisation normalises the input to each layer, ensuring that the inputs are on a similar scale. This technique speeds up training and improves performance by reducing internal covariate shift.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimisation Algorithms</strong></p>
+<ul>
+<li><strong>Gradient Descent Variants</strong>: Standard gradient descent can be computationally expensive. Variants like <strong>Stochastic Gradient Descent (SGD)</strong>, <strong>Adam (Adaptive Moment Estimation)</strong>, and <strong>RMSprop</strong> adapt the learning rate during training, accelerating convergence.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Strengths &amp; Limitations</h3>
+<div class="dp-panel-content">
+<p><strong>Strengths of Neural Networks</strong></p>
+<ul>
+<li>
+<p><strong>Versatility</strong>: Can be applied to various tasks, from image recognition to language processing.</p>
+</li>
+<li>
+<p><strong>Representation Learning</strong>: Automatically learns features from raw data, reducing the need for manual feature engineering.</p>
+</li>
+<li>
+<p><strong>Scalability</strong>: Can handle massive datasets and is capable of scaling across distributed systems (e.g., cloud computing frameworks like TensorFlow or PyTorch).</p>
+</li>
+<li>
+<p><strong>State-of-the-Art Performance</strong>: Especially in tasks such as speech recognition, object detection, and game playing.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Limitations of Neural Networks</strong></p>
+<ul>
+<li>
+<p><strong>Data Hungry</strong>: Neural networks typically require large datasets for optimal performance. Small datasets may lead to overfitting and poor <strong>generalisation</strong>.</p>
+</li>
+<li>
+<p><strong>Computationally Intensive</strong>: Training deep neural networks is resource-heavy, requiring high-performance hardware such as GPUs or TPUs.</p>
+</li>
+<li>
+<p><strong>Black Box Nature</strong>: Despite their success, neural networks are often criticised for their lack of interpretability. It can be difficult to understand why a network makes certain decisions.</p>
+</li>
+<li>
+<p><strong>Overfitting</strong>: Without proper regularisation, neural networks may perform very well on training data but fail to generalise to new, unseen data.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/00dee7fc45e20f4b.png" alt="image.png" width="542" height="315" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527573" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentations</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/Ea3PAEM6ilNLjwD33mpuc0YBUVohq03G4-NTbpNcUNvl5A?e=jWrTw7" target="_blank">Decision Tree</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-5-models-for-designing-and-analysing" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={4300cfad-8a3a-4b53-8f00-f7de6a6e7346}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.5 Models for Designing and Analysing" href="https://canvas.kings.edu.au/courses/12951/assignments/204843" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204843" data-api-returntype="Assignment">3.5 Models for Designing and Analysing</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%203.%20Software%20Automation/PPTs/3.5%20Design%20%26%20Anaylsis%20Models.pptx?d=w309196ada1dd4f2595089c9f58fdc3e3&amp;csf=1&amp;web=1&amp;e=f5rVQb">3.5 Design &amp; Anaylsis Models.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-5-models-for-designing-and-analysing" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={309196ad-a1dd-4f25-9508-9c9f58fdc3e3}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-067.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-069.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

@@ -1,0 +1,374 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>4.24 Effectiveness — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 6 (Term 1: Weeks 3-4) Software Engineering Project</div>
+<h1 style="margin-top:.2rem">4.24 Effectiveness</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/4-dot-24-effectiveness" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Evaluate the effectiveness of a software engineering solution, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>developing a report to synthesise feedback</li>
+<li>developing a test plan</li>
+<li>testing data used/generated based on path and boundary testing</li>
+<li>comparing actual output with expected output</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">To evaluate the effectiveness of a software engineering solution by synthesising feedback, developing a test plan, applying path and boundary testing, and comparing actual versus expected outcomes.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Develop a structured report that synthesises feedback from stakeholders.</span></li>
+<li><span style="font-size: 10pt;">Create a comprehensive test plan covering all relevant scenarios.</span></li>
+<li><span style="font-size: 10pt;">Apply path and boundary testing techniques to evaluate software robustness.</span></li>
+<li><span style="font-size: 10pt;">Accurately compare actual output with expected output to assess the solution's performance.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>An effective software evaluation begins by gathering feedback from a range of stakeholders. This feedback offers valuable insights into how the software performs from different perspectives, such as user experience, performance, and feature implementation.</p>
+<p><strong>Synthesising Feedback</strong>:</p>
+<p>Once feedback is gathered, it must be <strong>synthesised</strong> into a clear, actionable report. The report should:</p>
+<ol>
+<li><strong>Categorise feedback</strong> into relevant sections (e.g., user experience, performance, functionality).</li>
+<li><strong>Prioritise feedback</strong> based on severity or frequency of issues. A common approach is to categorise issues as <strong>critical</strong>, <strong>high</strong>, <strong>medium</strong>, or <strong>low</strong> priority.</li>
+<li><strong>Provide action items</strong> based on feedback, such as recommendations for further testing, redesign, or feature modification.</li>
+</ol>
+<hr class="dp-hr-solid-light">
+<div class="dp-panels-wrapper dp-accordion-plus">
+<div class="dp-panel-group">
+<h5 class="dp-panel-heading ">Effectiveness: Test Plan</h5>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-title-bar dp-callout-color-lg-tip">
+<div class="card-body">
+<h6 class="card-title"><strong>Effectiveness Criteria:</strong></h6>
+<ul>
+<li>
+<p><strong>Completeness:</strong> Includes all functional and non-functional requirements.</p>
+<ul data-start="158" data-end="224">
+<li data-start="158" data-end="224"><em data-start="160" data-end="176">Effectiveness:</em> Ensures no critical feature is left untested.</li>
+</ul>
+</li>
+<li data-start="158" data-end="224">
+<p data-pm-slice="1 1 []"><strong>Accuracy &amp; Reliability of Tests: </strong>Produce consistent and reproducible results?</p>
+<ul>
+<li data-start="158" data-end="224">
+<p data-pm-slice="1 1 []">Effectiveness: Prevents false positives/negatives, ensuring reliable test outcomes.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Testing Environment:&nbsp;</strong></p>
+<ul>
+<li><strong></strong>Performance Testing: Stress, load, and performance testing?
+<ul>
+<li><em>Effectiveness: </em>Ensures software stability under peak usage conditions.<br><br></li>
+</ul>
+</li>
+<li>Real-World Simulation: Replicates high traffic, concurrent users, and hardware variations.
+<ul>
+<li data-start="890" data-end="954"><em data-start="892" data-end="908">Effectiveness:</em> Confirms system resilience and scalability.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Test Execution Time &amp; Resource Usage</strong></p>
+<ul>
+<li>
+<p><strong></strong>Optimised Execution: Avoids redundant or slow-running tests.</p>
+<ul>
+<li>
+<p><em>Effectiveness</em>: Speeds up testing without compromising coverage.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Resource Efficiency: Minimises CPU, memory, and network overhead.</p>
+<ul>
+<li><em>Effectiveness</em>: Prevents performance bottlenecks during testing cycles.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h5 class="dp-panel-heading ">Effectiveness: Path Testing</h5>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-title-bar dp-callout-color-lg-danger">
+<div class="card-body">
+<h6 class="card-title">Effectiveness Criteria:&nbsp;</h6>
+<ul>
+<li>
+<p><strong>Test Coverage: Ensure all logical paths in the program are executed at least once.</strong></p>
+<ul>
+<li data-start="423" data-end="504"><em data-start="370" data-end="386">Effectiveness: </em>Detects missing logic, dead code, and untested execution flows.</li>
+</ul>
+</li>
+<li data-start="368" data-end="469">
+<p><strong data-start="287" data-end="308">Boundary Testing: </strong><span style="color: var(--bs-card-color); background-color: var(--bs-card-bg); font-family: inherit; font-size: 1rem;">Focuses on </span><strong style="color: var(--bs-card-color); background-color: var(--bs-card-bg); font-family: inherit; font-size: 1rem;" data-start="320" data-end="335">edge values</strong><span style="color: var(--bs-card-color); background-color: var(--bs-card-bg); font-family: inherit; font-size: 1rem;"> rather than general inputs.</span></p>
+<ul>
+<li data-start="368" data-end="469"><em data-start="370" data-end="386">Effectiveness:</em> Identifies off-by-one errors, overflow issues, and incorrect condition handling</li>
+</ul>
+</li>
+<li>
+<p><strong data-start="472" data-end="503">Comprehensive Testing Data:</strong></p>
+<ul>
+<li><em data-start="370" data-end="386">Effectiveness: </em>Uses a mix of <strong data-start="518" data-end="567">valid, invalid, extreme, and edge case inputs</strong> to test system reliability.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h5 class="dp-panel-heading ">Effectiveness: Synthesis Report</h5>
+<div class="dp-panel-content">
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-title-bar dp-callout-color-success">
+<div class="card-body">
+<h6 class="card-title">Effectiveness Criteria:&nbsp;</h6>
+<ul>
+<li>
+<p><strong>Accuracy of Feedback Aggregation: </strong>Collects, categorises, and summarises feedback</p>
+<ul>
+<li>
+<p><em>Effectiveness</em>: Ensures feedback is grouped correctly without misclassification or data loss.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Relevance &amp; Quality of Insights: </strong>Extracts key trends and actionable insights from feedback.</p>
+<ul>
+<li data-start="461" data-end="539">
+<p><em data-start="463" data-end="479">Effectiveness:</em> Avoids generating overly generic or irrelevant summaries.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<hr class="dp-hr-solid-light">
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Developing a Test Plan</h3>
+<div class="dp-panel-content ">
+<p>A <strong>test plan</strong> is essential for systematically evaluating the functionality, performance, and reliability of the software. The test plan should be comprehensive, covering all critical aspects of the solution.</p>
+<p><strong>Components of a Test Plan</strong>:</p>
+<ul>
+<li>
+<p><strong>Scope</strong>: Clearly defines what features and functionalities are being tested, as well as any areas that will not be covered in this round of testing. This ensures focused and efficient testing.</p>
+</li>
+<li>
+<p><strong>Objectives</strong>: Outline what the testing seeks to achieve, such as verifying that the system meets performance benchmarks or that the user interface behaves correctly under different conditions.</p>
+</li>
+<li>
+<p><strong>Test cases</strong>: Individual scenarios to be tested, often based on user stories or specific functional requirements. Each test case should include:</p>
+<ul>
+<li>
+<p><strong>Preconditions</strong>: The state of the system before the test is run.</p>
+</li>
+<li>
+<p><strong>Test data</strong>: Input values required to execute the test.</p>
+</li>
+<li>
+<p><strong>Steps</strong>: The sequence of actions to perform the test.</p>
+</li>
+<li>
+<p><strong>Expected outcome</strong>: What should happen when the test is executed.</p>
+</li>
+<li>
+<p><strong>Example</strong>: For a password reset feature, a test case might involve the following:</p>
+<ul>
+<li><strong>Precondition</strong>: The user must have an account.</li>
+<li><strong>Test data</strong>: Email address associated with the account.</li>
+<li><strong>Steps</strong>: Request password reset, enter email, receive reset link, enter new password.</li>
+<li><strong>Expected outcome</strong>: User is redirected to the login page, and the password reset email is successfully delivered.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Test environment</strong>: Specifies the hardware, software, and network configurations under which the tests will be executed, ensuring consistency and accuracy in results.</p>
+</li>
+<li>
+<p><strong>Test criteria</strong>: Define success or failure for each test case. For example, a pass might be logged if the system behaves exactly as described in the expected outcomes, while deviations would be logged as failures.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Path and Boundary Testing</h3>
+<div class="dp-panel-content ">
+<p><strong>Path testing</strong> and <strong>boundary testing</strong> are key techniques for ensuring that a software solution behaves correctly under various conditions.</p>
+<p><strong>Path Testing</strong>:</p>
+<p>Path testing involves exploring the different execution paths within a software system to ensure that all logic flows and decision points are correctly implemented. This is particularly useful for <strong>condition-heavy</strong> code, such as authentication systems or decision-making algorithms.</p>
+<ul>
+<li>
+<p><strong>How it works</strong>: In path testing, testers identify <strong>all possible paths</strong> a user might take through the software. For each path, they create test cases to ensure that every branch and conditional statement in the code is executed at least once.</p>
+<ul>
+<li><strong>Example</strong>: A payment system that checks for available funds, verifies the user's identity, and processes the payment must have tests for paths where the payment succeeds, paths where the payment fails due to insufficient funds, and paths where the user authentication fails.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Boundary Testing</strong>:</p>
+<p>Boundary testing focuses on <strong>edge cases</strong>—the extreme ends of input values. These are often the points where software can fail due to overlooked assumptions or insufficient validation.</p>
+<ul>
+<li>
+<p><strong>How it works</strong>: Testers design inputs that lie just <strong>inside</strong> and <strong>outside</strong> the boundary values of input ranges. By doing so, they assess how the software behaves when pushed to its limits.</p>
+<ul>
+<li><strong>Example</strong>: For a form field requiring a username between 5 and 15 characters, boundary tests would include:
+<ul>
+<li><strong>Valid inputs</strong>: 5 characters, 15 characters.</li>
+<li><strong>Invalid inputs</strong>: 4 characters, 16 characters.</li>
+</ul>
+</li>
+</ul>
+<p>Boundary testing is crucial in identifying issues like array overflows, incorrect validation, or performance degradation under extreme input conditions.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Comparing Actual Output with Expected Output</h3>
+<div class="dp-panel-content">
+<p>Once testing is complete, it’s essential to compare the <strong>actual output</strong> of the software with the <strong>expected output</strong> defined during the test planning phase. This step helps validate the correctness of the solution and identify discrepancies that indicate bugs or unmet requirements.</p>
+<p><strong>Key Comparison Steps</strong>:</p>
+<ul>
+<li>
+<p><strong>Capture actual output</strong>: During the execution of test cases, record the system’s behaviour. This could involve logging error messages, system responses, database states, or interface behaviours.</p>
+</li>
+<li>
+<p><strong>Compare against expected outcomes</strong>: For each test case, the actual results are compared to the expected outcomes to verify correctness.</p>
+<ul>
+<li><strong>Example</strong>: For a login system:
+<ul>
+<li><strong>Test case</strong>: User enters correct credentials.</li>
+<li><strong>Expected output</strong>: System redirects to the dashboard.</li>
+<li><strong>Actual output</strong>: If the user is instead redirected to an error page, there is a discrepancy that needs addressing.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Document discrepancies</strong>: If the actual and expected outcomes differ, document the details for further investigation. Each discrepancy should be classified according to its severity (e.g., critical, high, medium, low) and assigned to a development team for resolution.</p>
+</li>
+</ul>
+<p><strong>Regression Testing</strong>:</p>
+<p>If fixes are applied, it’s important to conduct <strong>regression testing</strong> to ensure that the changes do not introduce new issues elsewhere in the software. This process involves re-running relevant test cases to verify the integrity of the overall system after modifications.</p>
+</div>
+</div>
+</div>
+<hr class="dp-hr-solid-light">
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+</div><h3 class="sub">After</h3></main>
+<div class="pnrow"><a class="pn" href="12951-097.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-099.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

@@ -1,0 +1,123 @@
+{
+  "exam": "Generated quiz 2026-02-09 09:28:35",
+  "syllabus": "Software Engineering",
+  "publisher": "Gradeo AI",
+  "topics": [
+    "Secure Software Architecture"
+  ],
+  "outcomes": [
+    "SE-12-05",
+    "SE-12-09"
+  ],
+  "status": "COMPLETED",
+  "results_released": false,
+  "submitted": "2026-02-08T22:29:45.005Z",
+  "started": "2026-02-08T22:28:40.525Z",
+  "duration_minutes": null,
+  "markers": [],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/0cfa3874-e936-4d67-997a-9c5c65f14d8a",
+  "marking_session_id": "0cfa3874-e936-4d67-997a-9c5c65f14d8a",
+  "exam_id": "a4c21eb3-f544-4cbd-ba50-e57871ca80e2",
+  "session_id": "b1bb9be8-2ea1-40d2-be8e-d182a84a71c0",
+  "total_mark": null,
+  "parts_answered": 0,
+  "parts_marked": 0,
+  "parts_total": 2,
+  "total_available": 4,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "d9522578-e59d-4ec5-a240-6f91b14d4823",
+      "title": "A local football club has approached a commercial system development...",
+      "topic": "A local football club has approached a commercial system development...",
+      "label": null,
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "fb1d263b-8736-4b12-9f5f-be7570c5b89c",
+          "part": "Question 22(a)",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "A local football club has approached a commercial system development company, ABC Tech Solutions, to develop a website and integrated database for the club. The system is to contain personal details of the members of the club, such as names, addresses and contact details. As the club operates on a volunteer basis, ABC Tech Solutions have agreed to keep the development costs to a minimum. \n\nDiscuss the ethical considerations for the developer.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Provides comprehensive explanation of ethical issues involved"
+            },
+            {
+              "marks": null,
+              "criterion": "Describes ethical issues involved"
+            },
+            {
+              "marks": null,
+              "criterion": "Identifies an ethical issue"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        },
+        {
+          "part_id": "892f431c-1a0e-47f8-a639-e82841162eff",
+          "part": "Question 22(b)",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain the role of a GANTT chart in the software development cycle.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Provides a clear explanation of the purpose of the Gantt chart"
+            },
+            {
+              "marks": null,
+              "criterion": "Describes the features of a Gantt chart"
+            },
+            {
+              "marks": null,
+              "criterion": "Identifies features of a Gantt chart"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "A local football club has approached a commercial system development...": {
+      "mark": 0,
+      "available": 4
+    }
+  }
+}

@@ -1,0 +1,143 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.6 Message passing — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 8 (Term 2: Weeks 5-6) OOP</div>
+<h1 style="margin-top:.2rem">2.6 Message passing</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-6-message-passing" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Investigate how OOP languages handle message-passing between objects</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Understand how object-oriented programming (OOP) languages handle message passing between objects to facilitate communication and interaction in software systems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Explain the concept of message passing in OOP and its role in enabling object interactions within software systems.</span></li>
+<li><span style="font-size: 13.3333px;">Demonstrate how to implement message passing between objects in an OOP language, using methods and parameters to simulate real-world interactions.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>In Object-Oriented Programming (OOP), objects are the fundamental building blocks of a program. These objects communicate with each other to perform tasks, much like how individuals exchange information in real-life interactions. This communication is achieved through <strong>message-passing</strong>, where one object sends a request to another, prompting it to perform an action or share information.</p>
+<p>Message-passing is more than just a way for objects to interact—it underpins core OOP principles like <strong>encapsulation</strong>, <strong>polymorphism</strong>, and <strong>abstraction</strong>, enabling flexible and modular software design. In this lesson, we will explore how different programming languages handle message-passing, the mechanics behind it, and its importance in creating scalable and maintainable systems.</p>
+<p>&nbsp;</p>
+<h4><strong>Message Passing</strong></h4>
+<p>Message passing in object-oriented programming (OOP) refers to the process by which <strong>objects can interact with each other.</strong> Objects interact with each other by sending a message that requests to run a method from a different object.</p>
+<p>In other words, <strong>objects interact with each other by calling the methods of another object. </strong>For example, when Object A runs a method in Object B, then Object A is sending a message to Object B.</p>
+<p>The process of message passing between objects works as follows:</p>
+<ol style="list-style-type: decimal;">
+<li>The sender object constructs a message that specifies: the name of the method and the required parameters to use that method.</li>
+<li>The message is sent to the receiving object to be processed.</li>
+<li>The receiving object then interprets the message. If the specified method exists and the message contains the all of the required parameters, then that method is run using those parameters.</li>
+<li>If the method returns a value, then it is sent back to the sender object.</li>
+</ol>
+<p><span>Message passing allows different objects (the components of a program) to <strong>talk to each other without needing to know all the details about how the other works.</strong> This makes it easier for them to work together and simplifies the overall design. </span>This approach promotes abstraction and encapsulation, where objects interact only through the well-defined interfaces of their methods, ensuring modularity and flexibility in software design.</p>
+<p>&nbsp;</p>
+<p><strong>Example of Message Passing</strong></p>
+<p>In Python, the concept of message passing involves <strong>any method that calls a method from another object.</strong></p>
+<p>Consider the <code>Car</code> class below which has a simple behavioural method called <code>start()</code> that starts the car's engine (represented using a <code>print()</code> statement for simplicity).</p>
+<p><img src="../../assets/24beef8974cd585c.png" alt="image.png" width="600" height="292" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197854" data-api-returntype="File" loading="lazy"></p>
+<p>Now consider the <code>Driver</code> class. It has a behavioural method called <code>drive(car)</code> that takes in a car object as a parameter and runs that car object's <code>start()</code> method.</p>
+<p>It is important to note that <strong>the&nbsp;<code>drive(car)</code> method does not need to know exactly how a car starts</strong> (i.e. putting the fuel in the engine, igniting the fuel, etc). The inner workings of the car are only being handled in the <code>Car</code> class itself, hidden away by its method interface. All the <code>drive(car)</code> method needs to know is that we can start a car object just by using its <code>start()</code> method.</p>
+<p><img src="../../assets/8af34ca81b0bdd6f.png" alt="image.png" width="700" height="289" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197855" data-api-returntype="File" loading="lazy"></p>
+<p>The use of the <code>drive(car)</code> method through message passing is demonstrated in the mainline below. The car and driver objects are created before interacting with each other when the <code>drive(car)</code> method is called.</p>
+<p><em><img src="../../assets/bf4a9dceb3c336df.png" alt="image.png" width="450" height="356" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197856" data-api-returntype="File" loading="lazy"></em></p>
+<p><em>Output:</em></p>
+<pre>Kevin is sending a message to start the car.<br>BMW car is starting...</pre>
+<p>&nbsp;</p>
+<p>From the output, we can see that by calling the <code>drive(car)</code> method in the driver object, we also call the <code>start()</code> method in the given car object.</p>
+<p>&nbsp;</p>
+<p><strong>Note on Code Design</strong></p>
+<p>By using message passing, the <code>drive(car)</code> method is inherently designed to always require a car object (which makes sense because a driver needs a car in order to drive). If a driver is not given a car, then they cannot drive.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a href="https://www.enjoyalgorithms.com/blog/message-passing-oops" target="_blank">https://www.enjoyalgorithms.com/blog/message-passing-oops</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%202.%20The%20Object-Oriented%20Paradigm/PPs/2.6%20Message%20Pairing.pptx?d=w624de7afebd241f792456659038f6873&amp;csf=1&amp;web=1&amp;e=wkSy4f">2.6 Message Passing.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-6-message-passing" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={624de7af-ebd2-41f7-9245-6659038f6873}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="11962-048.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-050.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

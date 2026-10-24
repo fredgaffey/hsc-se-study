@@ -1,0 +1,1426 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 11 (Term 2: Weeks 3-4) Software Automation — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">12SENX2 Software Engineering 2026 · module 10 of 15</p>
+<h1>Cycle 11 (Term 2: Weeks 3-4) Software Automation</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="12951-all.html">Whole course</a><span class="cur">By module</span><a href="../course-12951.html">By lesson</a></div>
+<h3 class="readles">3.1 Machine Learning and Automation</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate how machine learning (ML) supports automation through the use of DevOps, robotic process automation (RPA) and business process automation (BPA)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explore the role of machine learning (ML) in automation, particularly in relation to DevOps, Robotic Process Automation (RPA), and Business Process Automation (BPA).</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Define and explain Machine Learning.</span></li>
+<li><span style="font-size: 10pt;">Define DevOps, RPA, and BPA, and describe their purposes.</span></li>
+<li><span style="font-size: 10pt;">Describe how Machine Learning is integrated into each form of automation.</span></li>
+<li><span style="font-size: 10pt;">Provide practical examples of ML in DevOps, RPA, and BPA.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>As technology becomes more important in our everyday lives, automation helps make tasks faster and easier. Machine Learning (ML) is a type of artificial intelligence that allows computers to learn from data and make decisions without constant human help.&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h3 class="card-title">What is Machine Learning (ML)?</h3>
+<p class="card-text">Machine Learning (ML) is a subset of artificial intelligence (AI) that allows computer systems to learn from and make decisions based on data without explicit programming. ML algorithms use patterns and inference from data to improve their performance over time. These algorithms can process large datasets, detect trends, and make decisions with minimal human intervention.</p>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><strong>Learning from data:</strong> ML systems improve with more data and experience.</li>
+<li><strong>Prediction and decision-making:</strong> ML helps predict future trends and outcomes based on historical data.</li>
+<li><strong>Automation:</strong> It enables machines to automate processes by identifying patterns that a human may not detect easily.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>DevOps</strong></h4>
+<p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). Its goal is to shorten the system development life cycle and deliver high-quality software more efficiently. DevOps promotes continuous integration and continuous delivery (CI/CD), automation of infrastructure, and collaboration across teams.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Predictive Analytics in CI/CD Pipelines</h3>
+<div class="dp-panel-content ">
+<p>In DevOps, the CI/CD pipeline automates the process of building, testing, and deploying code. This allows development teams to deliver features and fixes rapidly. However, managing CI/CD pipelines involves frequent monitoring and adjustments, especially when builds fail or deployments break down. Machine learning can automate this monitoring and introduce predictive analytics that anticipates issues before they occur.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Supports CI/CD:</strong></p>
+<p>Machine learning models can analyse historical build data—such as failure patterns, commit frequency, and the types of changes made—to predict which builds are likely to fail or which changes may introduce bugs. This predictive capability helps DevOps teams by:</p>
+<ul>
+<li><strong>Failure Prediction:</strong> ML algorithms can assess new code changes against past failures, identifying patterns where similar modifications have led to problems. The system can flag potentially risky code early, suggesting additional tests or fixes before the pipeline proceeds to production.</li>
+<li><strong>Build Optimisation</strong>: DevOps aims to optimise the CI/CD process to ensure faster and more reliable releases. ML can identify bottlenecks, such as slow-running tests or frequently failing deployments, and recommend solutions, such as prioritising high-risk test cases or automatically rerouting jobs to alternative environments if a failure is predicted.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>A global company like <strong>Spotify</strong> could use ML to analyse its CI/CD pipeline performance. ML models would detect patterns that lead to build failures, allowing engineers to address these proactively. For instance, if a specific module tends to cause issues after a large update, ML can recommend running more rigorous tests on this module, or even rerouting jobs to a healthier pipeline node.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Intelligent Resource Management</h3>
+<div class="dp-panel-content ">
+<p>Managing infrastructure efficiently is crucial in DevOps, especially when systems must handle varying loads while avoiding both over-provisioning (wasting resources) and under-provisioning (leading to system crashes). In traditional DevOps, infrastructure scaling is based on pre-defined rules and monitoring data, but this approach can struggle with unexpected traffic surges or complex cloud environments.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Enhances Resource Management:</strong></p>
+<p>Machine learning enables dynamic, predictive resource management by analysing patterns in system usage and predicting future demands. This allows DevOps teams to move beyond reactive scaling and instead implement intelligent, proactive autoscaling. ML models can:</p>
+<ul>
+<li><strong>Predict Traffic Spikes:</strong> Based on historical data, machine learning can forecast when traffic spikes might occur—such as during a product launch or sale. By predicting these spikes, ML can automatically scale infrastructure up or down to ensure enough resources are available without over-allocating.</li>
+<li><strong>Optimise Cost Efficiency:</strong> ML can identify opportunities to save costs by automatically selecting the most cost-effective instance types or cloud regions. It can also ensure that resources are de-allocated when they’re no longer needed, reducing wastage.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p><strong>Netflix</strong>, a company that operates at a massive scale, can use ML-driven autoscaling in its cloud infrastructure. By analysing user activity data and predicting peak times (like evenings when more users are likely to stream content), Netflix can ensure that its infrastructure can handle the load without over-provisioning. This intelligent scaling supports DevOps efforts by minimising downtime and improving cost efficiency.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Automated Incident Management</h3>
+<div class="dp-panel-content">
+<p>In DevOps, handling incidents—such as failures in deployment, downtime, or performance degradation—requires quick identification of the root cause. Traditional incident management involves manual log analysis and cross-referencing of metrics, which can be time-consuming, especially in complex, large-scale environments.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Improves Incident Management:</strong></p>
+<p>Machine learning automates incident detection and root cause analysis by continuously monitoring system logs, metrics, and traces, and identifying patterns that indicate potential problems. ML can:</p>
+<ul>
+<li><strong>Predict Failures:</strong> Based on historical data, ML models can detect early warning signs that a system or service may be about to fail, allowing teams to address the issue before it escalates. This reduces downtime and prevents service outages.</li>
+<li><strong>Log Analysis and Correlation:</strong> ML can process and analyse vast amounts of log data across multiple services and systems, automatically correlating events and narrowing down the root cause of an issue. Instead of engineers spending hours sifting through logs, the ML system provides insights into the most likely causes, speeding up incident resolution.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>In a cloud environment like <strong>AWS</strong>, DevOps teams might use ML-driven tools like Amazon’s CloudWatch to automatically analyse logs and performance data. If an application starts to slow down or experience high error rates, ML models can correlate this to recent code deployments or configuration changes. This allows the team to pinpoint the cause and apply fixes faster, thus supporting the DevOps goal of minimising downtime.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/da056a27ec294037.png" alt="image.png" width="490" height="294" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527562" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h3 class="card-title">What is MLOps?</h3>
+<p class="card-text">MLOps is the automated process of designing, training and deploying machine learning models. It borrows many of the same principles and practices used in DevOps, bringing together the teams involved in developing machine learning models and the operational teams involved in deploying and supporting the models in production.</p>
+<p class="card-text"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/0631bf08594f4834.png" alt="image.png" width="437" height="147" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527566" data-api-returntype="File" loading="lazy"></p>
+<p class="card-text">&nbsp;</p>
+<p class="card-text">Design:</p>
+<ul>
+<li class="card-text">defining the business problem to be solved</li>
+<li class="card-text">refactoring the business problem into a machine learning problem</li>
+<li class="card-text">defining success metrics</li>
+<li class="card-text">researching available data.</li>
+</ul>
+<p>Model development:</p>
+<ul>
+<li>data wrangling</li>
+<li>feature engineering</li>
+<li>model training</li>
+<li>model testing and validation.</li>
+</ul>
+<p>Operations:</p>
+<ul>
+<li>model deployment</li>
+<li>supporting operations/use</li>
+<li>monitoring model performance.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Robotic Process Automation (RPA)</strong></h4>
+<p>Robotic process automation (RPA) uses software robots or "bots" to automate repetitive, rule-based tasks traditionally performed by humans. These tasks include activities like data entry, report generation, and interacting with multiple software systems. RPA mimics human actions by interacting with user interfaces, handling tasks that follow structured logic and defined workflows.</p>
+<p>While RPA is highly effective for automating simple, repetitive tasks, it has limitations when it comes to handling complex, unstructured data or tasks that require cognitive decision-making. This is where machine learning (ML) significantly enhances RPA. By integrating ML, RPA systems can move beyond rule-based automation and tackle more sophisticated processes, including those that require learning from past data, making predictions, or adapting to new information.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Handling Unstructured Data</h3>
+<div class="dp-panel-content ">
+<p>Traditional RPA excels at automating tasks with structured data, like extracting information from spreadsheets or entering data into form fields. However, many business processes involve unstructured data, such as emails, PDFs, images, and scanned documents, which are harder for rule-based RPA bots to interpret. Machine learning enables RPA to process and extract insights from these types of data.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Supports Unstructured Data Processing:</strong></p>
+<p>Machine learning models, particularly those involving natural language processing (NLP) and computer vision, allow RPA bots to interpret and process unstructured data:</p>
+<ul>
+<li><strong>Text Recognition:</strong> Using optical character recognition (OCR) combined with ML, RPA bots can read and extract relevant information from scanned documents, images, or handwritten notes. This allows automation of tasks like processing invoices, where data is often presented in non-standard formats.</li>
+<li><strong>Natural Language Understanding (NLU):</strong> ML models can analyse and understand human language, enabling RPA bots to automate processes that involve reading and interpreting emails, customer feedback, or documents. This allows bots to respond to inquiries, route requests, or generate reports from unstructured text data.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>In the banking sector, <strong>automating loan application processing</strong> often involves reading customer-submitted documents like bank statements and identification forms. RPA bots equipped with ML-powered OCR can extract key information from these documents, such as names, addresses, and financial details, even if the formats vary. ML models ensure that the bot learns to improve its accuracy over time by recognising common patterns and reducing errors in data extraction.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/387ee8607b77bc22.png" alt="image.png" width="370" height="282" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527366" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Intelligent Decision-Making</h3>
+<div class="dp-panel-content ">
+<p>Traditional RPA follows pre-defined workflows, where bots execute tasks based on if-then rules. While effective for simple tasks, this rule-based approach lacks flexibility when dealing with more dynamic, decision-based processes that require analysing data and choosing actions based on context. Machine learning introduces intelligence into RPA by enabling bots to make decisions based on historical data and learned patterns.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Enables Intelligent RPA:</strong></p>
+<p>ML models can<strong> analyse</strong> large datasets to identify trends and predict outcomes, enabling RPA to:</p>
+<ul>
+<li><strong>Predictive Decision-Making:</strong> Bots can use ML to predict outcomes based on past data. For example, in customer service, ML can predict the best resolution path based on previous interactions, allowing the bot to automatically choose the best response or action.</li>
+<li><strong>Adaptive Workflows:</strong> Machine learning enables RPA bots to adapt to changes in workflows by learning from past experiences. If a task has multiple possible outcomes, the bot can choose the best option based on previous success rates, making the process more efficient and accurate over time.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>In <strong>insurance claims processing</strong>, ML-enhanced RPA can automatically review claims and predict whether a claim is likely to be approved based on past data. The bot analyses historical claims data, learns which claims tend to be successful, and applies that knowledge to new claims. This predictive capability streamlines decision-making and reduces the need for manual review, speeding up the entire process.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>By integrating ML into RPA, organisations can significantly expand the scope and efficiency of their automation efforts. Key benefits include:</p>
+<ul>
+<li><strong>Improved Accuracy:</strong> Machine learning allows RPA bots to continually improve through experience, reducing errors and improving performance over time.</li>
+<li><strong>Enhanced Flexibility:</strong> Unlike rule-based RPA, ML-enabled bots can handle a wide range of tasks, including those involving unstructured data or complex decision-making.</li>
+<li><strong>Scalability:</strong> With the ability to learn and adapt, ML-empowered RPA can easily scale to handle larger workloads or more complex tasks without needing constant reprogramming.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/40e4807d2e6dfac5.png" alt="image.png" width="463" height="463" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527482" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4><strong>Business Process Automation (BPA)</strong></h4>
+<p>Business Process Automation (BPA) is the use of technology to automate complex business processes, aiming to increase efficiency, reduce human error, and improve overall productivity. BPA handles tasks that typically involve multiple systems, departments, or workflows and helps streamline operations by automating end-to-end processes.</p>
+<p>Unlike simple task automation, BPA addresses larger, cross-functional workflows, such as onboarding employees, managing customer service requests, or automating financial operations. Traditionally, BPA follows predefined rules and processes but struggles to handle tasks that involve complex decision-making or unstructured data.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Automating Decision-Making</h3>
+<div class="dp-panel-content ">
+<p>Traditional BPA systems follow rigid rules to automate business processes. However, many business operations involve decision-making that can’t be fully captured by predefined logic. Machine learning can analyse historical data and current context to automate decisions, enhancing BPA’s capabilities by making workflows more dynamic and responsive.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Supports Decision-Making in BPA:</strong></p>
+<ul>
+<li><strong>Pattern Recognition and Decision Support:</strong> ML models <strong>analyse</strong> large volumes of historical data and use these insights to identify patterns that guide decision-making. For example, in customer service processes, ML can automatically route inquiries to the right department based on past ticket handling efficiency.</li>
+<li><strong>Predictive Analytics:</strong> ML can predict the outcome of different business processes, enabling BPA systems to make smarter decisions in real-time. For instance, when processing loan applications or approving insurance claims, ML models can predict approval likelihood based on applicant data, reducing the need for manual reviews.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>In <strong>supply chain management</strong>, machine learning enhances BPA by predicting inventory levels based on past sales, current trends, and external factors like seasonality. Instead of manually adjusting orders or running reports, BPA systems equipped with ML automatically place orders or make recommendations to <strong>optimise</strong> stock levels and avoid shortages or overstocking.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Handling Unstructured Data in Business Workflows</h3>
+<div class="dp-panel-content ">
+<p>One of the limitations of traditional BPA is its reliance on structured data—data that fits neatly into tables, forms, or databases. However, a significant portion of business operations involves unstructured data, such as emails, reports, contracts, and customer feedback. Machine learning, especially through natural language processing (NLP) and computer vision, enables BPA to automate tasks that involve interpreting and processing unstructured data.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Helps Process Unstructured Data in BPA:</strong></p>
+<ul>
+<li><strong>Text and Document Processing:</strong> ML models, particularly those involving NLP, allow BPA systems to process unstructured text. For example, ML-enhanced BPA can automatically classify and extract information from emails, contracts, or reports and integrate it into workflows.</li>
+<li><strong>Document Classification and Information Extraction:</strong> ML can be used to classify incoming documents or identify relevant pieces of information. For instance, when onboarding a new client, BPA systems can scan documents, extract important details (like contract terms or customer details), and automatically populate fields in relevant systems.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>In <strong>human resources (HR) processes</strong>, ML-enhanced BPA can automatically handle unstructured resumes submitted by job applicants. Machine learning models can scan resumes, extract key information such as work history and qualifications, and rank candidates based on their likelihood to be a good fit for a particular role. This significantly reduces the manual effort involved in resume screening and allows HR teams to focus on more strategic tasks.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Integrating machine learning into BPA leads to several benefits, including:</p>
+<ul>
+<li><strong>Enhanced Efficiency:</strong> ML reduces manual intervention by automating decision-making and tasks involving unstructured data, resulting in faster workflows.</li>
+<li><strong>Improved Accuracy:</strong> By learning from past data, ML models improve over time, increasing the accuracy of predictions and reducing errors in business processes.</li>
+<li><strong>Scalability:</strong> With ML, BPA systems can easily scale to handle increasing amounts of data and more complex processes without requiring significant reprogramming.</li>
+<li><strong>Adaptability:</strong> ML allows BPA systems to adapt to changing business conditions, making them more flexible and responsive to dynamic environments.</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title=" 3.1 Machine Learning and Automation" href="https://canvas.kings.edu.au/courses/12951/assignments/204837" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204837" data-api-returntype="Assignment"> 3.1 Machine Learning and Automation</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.atlassian.com/devops" target="_blank">What Is DevOps?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.tungstenautomation.com/learn/blog/rpa-vs-bpa" target="_blank">RPA vs BPA: What’s the Difference?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://medium.com/codex/how-machine-learning-can-be-used-for-ai-powered-autoscaling-9d03385ff8a" target="_blank">How Machine Learning can be used for AI-powered Autoscaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%203.%20Software%20Automation/PPTs/3.1%20Machine%20Learning%20%26%20Automation.pptx?d=w929b6b27b4d248e2b19d6caad6335408&amp;csf=1&amp;web=1&amp;e=mNULxM">3.1 Machine Learning &amp; Automation.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-1-machine-learning-and-automation" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={929b6b27-b4d2-48e2-b19d-6caad6335408}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">3.2 Artificial Intelligence and Machine Learning</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Distinguish between artificial intelligence (AI) and machine learning (ML)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the distinction between Artificial Intelligence (AI) and Machine Learning (ML), and how these concepts relate to each other.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Define and explain what AI and ML are.</span><span style="font-size: 10pt;"><br></span></li>
+<li><span style="font-size: 10pt;">Explain key differences between AI and ML.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h4 class="card-title">Artificial Intelligence (AI) vs Machine Learning (ML)</h4>
+<p>Artificial Intelligence (AI) refers to the development of computer systems that can perform tasks typically requiring human intelligence. These tasks include reasoning, problem-solving, understanding natural language, perception (e.g., visual processing), and decision-making. AI aims to simulate or replicate aspects of human cognition and behaviour.</p>
+<p>AI can be classified into <strong>two main types</strong>:</p>
+<ol>
+<li><strong>Narrow AI (Weak AI):</strong> This is the most common form of AI, designed to perform a specific task, such as speech recognition (e.g., Siri or Google Assistant) or image classification.</li>
+<li><strong>General AI (Strong AI):</strong> This is a theoretical form of AI that would have the ability to perform any intellectual task that a human can do. Currently, no such system exists.</li>
+</ol>
+<p>&nbsp;</p>
+<p>While, <strong>Machine Learning (ML)</strong> is a <strong>subset of AI</strong> that focuses on the idea that systems can learn from data, identify patterns, and make decisions with minimal human intervention. Instead of being explicitly programmed to carry out every task, ML algorithms are designed to "learn" from vast amounts of data and improve their performance over time.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Think of <strong>Artificial Intelligence (AI)</strong> as the <em>big idea</em>—like trying to build machines that can act and think like humans. AI covers everything from making decisions, understanding languages, recognising objects, and even playing games.</p>
+<p>Now, <strong>Machine Learning (ML)</strong> is a <em>specific method</em> within AI. It's like teaching a machine by showing it lots of examples so that it can learn on its own. Instead of telling it exactly what to do for every situation, we give it data, and it figures out the best way to make decisions.</p>
+<p><strong>The key differences are:</strong></p>
+<ul>
+<li>
+<p><strong>AI is the big picture</strong>, aiming to create smart systems. ML is just one way to do that, focusing on learning from data.</p>
+</li>
+<li>
+<p><strong>AI can follow pre-set rules</strong> (like a robot that follows instructions). But ML is all about <em>learning</em> from data to get better without being given specific instructions for every task.</p>
+</li>
+<li>
+<p><strong>AI can do many things</strong>, like controlling robots or translating languages. ML focuses more on tasks like finding patterns in data or predicting outcomes (like recommending shows on Netflix).</p>
+</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/9df055ca67fafb02.png" alt="image.png" width="746" height="314" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527604" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Artificial Intelligence Examples</h3>
+<div class="dp-panel-content ">
+<ol style="list-style-type: decimal;">
+<li>
+<p><strong>AI in Virtual Assistants</strong><br>Virtual assistants like <strong>Siri</strong>, <strong>Google Assistant</strong>, and <strong>Alexa</strong> use AI to process and respond to voice commands, answer questions, and manage tasks like setting alarms or sending texts. AI enables these systems to understand natural language and simulate human-like conversations.</p>
+</li>
+<li>
+<p><strong>AI in Healthcare</strong><br>AI is transforming healthcare by supporting doctors in diagnosing diseases. It can analyse medical images, detect anomalies (such as tumours or fractures), and even predict the likelihood of patient outcomes based on previous medical data. AI systems assist with decision-making in treatments and surgeries.</p>
+</li>
+<li>
+<p><strong>AI in Video Games</strong><br>In video games, AI is used to create <strong>intelligent NPCs (Non-Playable Characters)</strong> that can respond to the player’s actions. These characters learn from player behaviour and adapt to offer challenges or simulate real-life interactions, making the gaming experience more immersive.</p>
+</li>
+<li>
+<p><strong>AI in Smart Home Devices</strong><br>Devices like <strong>smart thermostats</strong> (e.g., Nest) and <strong>smart lighting systems</strong> use AI to learn your habits and preferences, automatically adjusting the temperature or lighting based on your routine. Over time, these systems predict your preferences, improving energy efficiency and convenience.</p>
+</li>
+<li>
+<p><strong>AI in Fraud Detection</strong><br>Financial institutions use AI to detect <strong>fraudulent activities</strong>. AI systems monitor transactions and identify unusual patterns that may indicate fraud, such as unusual spending behaviour or location changes, helping to prevent unauthorised transactions.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Machine Learning Examples</h3>
+<div class="dp-panel-content ">
+<ol style="list-style-type: decimal;">
+<li>
+<p><strong>ML in Recommendations</strong><br>Streaming platforms like <strong>Netflix</strong> and <strong>Spotify</strong> use machine learning to recommend movies, shows, or music based on a user's previous choices. The more you watch or listen, the better the system becomes at suggesting content tailored to your tastes.</p>
+</li>
+<li>
+<p><strong>ML in Self-Driving Cars</strong><br><strong>Self-driving cars</strong> like those from Tesla use ML to interpret data from cameras, sensors, and GPS systems to navigate roads. The car learns to recognise obstacles, traffic signs, and other vehicles, improving its driving abilities with each trip and data input.</p>
+</li>
+<li>
+<p><strong>ML in Email Spam Filters</strong><br><strong>Gmail</strong> and other email providers use ML to classify emails as spam or legitimate. The system learns from millions of emails to detect patterns in spam messages, such as specific words or senders, and becomes more effective over time at keeping your inbox clean.</p>
+</li>
+<li>
+<p><strong>ML in Social Media Feeds</strong><br>Platforms like <strong>Instagram</strong>, <strong>Facebook</strong>, and <strong>Twitter</strong> use ML algorithms to personalise your news feed. The system analyses your interactions, such as likes, shares, and comments, and curates content that it predicts will interest you most, keeping your feed relevant.</p>
+</li>
+<li>
+<p><strong>ML in Predictive Text</strong><br><strong>Smart keyboards</strong> and applications like <strong>Google’s predictive text</strong> use machine learning to predict what word you might want to type next. By analysing your typing history and common phrases, these systems suggest words or auto-complete sentences to make typing faster and more accurate.</p>
+</li>
+<li>
+<p><strong>ML in Online Shopping</strong><br>E-commerce sites like <strong>Amazon</strong> use ML to recommend products based on your previous purchases, browsing history, and what similar customers have bought. ML helps personalise the shopping experience by predicting what you might want to buy next.</p>
+</li>
+<li>
+<p><strong>ML in Voice Recognition</strong><br>Voice assistants and speech-to-text systems, such as <strong>Google’s Voice Typing</strong> or <strong>Apple’s Dictation</strong>, use ML to continually improve their ability to recognise different accents, speech patterns, and languages. This allows the system to better understand users' spoken commands over time.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.2 Artificial Intelligence and Machine Learning" href="https://canvas.kings.edu.au/courses/12951/assignments/204840" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204840" data-api-returntype="Assignment">3.2 Artificial Intelligence and Machine Learning</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://cloud.google.com/learn/artificial-intelligence-vs-machine-learning" target="_blank">Artificial intelligence (AI) vs. machine learning (ML)</a></li>
+<li><a class="inline_disabled" title="Link" href="https://braincube.com/resource/manufacturing-ai-vs-machine-learning-vs-data-science/" target="_blank">AI vs. Machine Learning vs. Data Science for Industry</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%203.%20Software%20Automation/PPTs/3.2%20AI%20vs%20ML.pptx?d=w92c83887d21146be9c2e1ed61aeb8570&amp;csf=1&amp;web=1&amp;e=Esaq52">3.2 AI vs ML.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-2-artificial-intelligence-and-machine-learning" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={92c83887-d211-46be-9c2e-1ed61aeb8570}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">3.3 ML Training Models</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Explore models of training ML</p>
+</div>
+<div class="bold mb-1 mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>supervised learning</li>
+<li>unsupervised learning</li>
+<li>semi-supervised learning</li>
+<li>reinforcement learning</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explore different models of training in machine learning and understand how each model processes data to achieve specific tasks.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explain the core concept of supervised learning and its real-world applications.</span></li>
+<li><span style="font-size: 10pt;">Identify how unsupervised learning functions and where it is used.</span></li>
+<li><span style="font-size: 10pt;">Describe semi-supervised learning and its advantages.</span></li>
+<li><span style="font-size: 10pt;">Understand the principles of reinforcement learning and its applications in decision-making processes.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Machine learning models are designed to enable computers to learn and make decisions or predictions based on data. The way these models are trained determines their capabilities and applications. There are several key models of training, each suited to different types of tasks and datasets.</p>
+<p>In this page, we explore the main models of training in machine learning: <strong>supervised learning</strong>, <strong>unsupervised learning</strong>, <strong>semi-supervised learning</strong>, and <strong>reinforcement learning</strong>. Each model uses distinct techniques for processing data, from learning with labelled examples to discovering patterns autonomously or improving through trial and error. Understanding these models is fundamental to applying machine learning effectively across various real-world problems.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Supervised Learning</h3>
+<div class="dp-panel-content ">
+<p>Supervised learning is the most common type of machine learning model. In this approach, the model is trained on a <strong>labelled dataset</strong>, meaning that each input has a corresponding output (also known as the target or label). The algorithm learns to map inputs to the correct outputs, so when it encounters new, unseen data, it can make accurate predictions based on the learned relationships.</p>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><strong>Labelled Data</strong>: Each training example includes both an input and its correct output.</li>
+<li><strong>Task</strong>: The model learns to generalise from the input-output pairs to make predictions on unseen data.</li>
+<li><strong>Example Algorithms</strong>: Linear Regression, Decision Trees, Support Vector Machines (SVM), Neural Networks.</li>
+</ul>
+<p><strong>Example Application:</strong></p>
+<ul>
+<li><strong>Spam Detection</strong>: The model is trained on a dataset of emails, where each email is labelled as "spam" or "not spam." Once trained, the model can predict whether a new email is spam.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Unsupervised Learning</h3>
+<div class="dp-panel-content ">
+<p>Unsupervised learning operates without labelled data. Instead, the model is given <strong>unlabelled data</strong> and tasked with finding hidden patterns or structures within that data. The primary goal is to identify groupings or similarities between data points, often used for tasks like clustering or dimensionality reduction.</p>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><strong>No Labels</strong>: Data is not labelled, and the model must infer patterns based on the input data alone.</li>
+<li><strong>Task</strong>: The model looks for similarities or structures in data, such as grouping data points into clusters.</li>
+<li><strong>Example Algorithms</strong>: K-Means Clustering, Hierarchical Clustering, Principal Component Analysis (PCA).</li>
+</ul>
+<p><strong>Example Application:</strong></p>
+<ul>
+<li><strong>Customer Segmentation</strong>: In marketing, unsupervised learning can be used to group customers based on their buying behaviour, enabling businesses to target specific segments with <strong>personalised</strong> offers.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Semi-Supervised Learning</h3>
+<div class="dp-panel-content">
+<p>Semi-supervised learning is a hybrid approach that combines elements of both supervised and unsupervised learning. This model is trained on a <strong>small amount of labelled data</strong> and a <strong>large amount of unlabelled data</strong>. The idea is that the labelled data can help guide the learning process while leveraging the abundance of unlabelled data to improve performance.</p>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><strong>Limited Labelled Data</strong>: Only a portion of the data is labelled.</li>
+<li><strong>Task</strong>: The model uses the labelled data to guide the learning process, improving performance by incorporating unlabelled data.</li>
+<li><strong>Example Algorithms</strong>: Self-training, Label Propagation, Semi-supervised Support Vector Machines (S3VM).</li>
+</ul>
+<p><strong>Example Application:</strong></p>
+<ul>
+<li><strong>Image Recognition</strong>: <strong>Labelling</strong> large datasets of images can be time-consuming and expensive. Semi-supervised learning allows for the use of fewer labelled images while still achieving high accuracy in classifying new images.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Reinforcement Learning</h3>
+<div class="dp-panel-content">
+<p>Reinforcement learning involves training a model through <strong>interactions with an environment</strong>. The model, often called an agent, learns by receiving feedback in the form of <strong>rewards</strong> or <strong>penalties</strong> based on the actions it takes. The goal is to learn a strategy, or policy, that maximises the cumulative reward over time.</p>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><strong>Trial and Error</strong>: The agent explores different actions to discover which ones yield the best rewards.</li>
+<li><strong>Task</strong>: The model learns to make decisions by balancing exploration (trying new actions) and exploitation (using known actions that yield high rewards).</li>
+<li><strong>Example Algorithms</strong>: Q-Learning, Deep Q-Networks (DQN), Proximal Policy <strong>Optimisation</strong> (PPO).</li>
+</ul>
+<p><strong>Example Application</strong>:</p>
+<ul>
+<li><strong>Game Playing</strong>: In video games like chess or Go, reinforcement learning models can be trained to play by rewarding the model for making moves that lead to a win. Notable examples include AlphaGo and AlphaZero.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="relative overflow-hidden shadow-md rounded-lg" title="embedded content">
+<table class="table-auto w-full text-left" style="width: 100%; height: 421px;">
+<thead class="bg-[#c64224] text-[#ffffff] text-uppercase" style="background-color: #c64224; color: #ffffff;">
+<tr style="height: 33px;">
+<td class="py-1 border text-center font-bold p-4" style="width: 19.6561%; height: 33px;"><strong>MODEL TYPE</strong></td>
+<td class="py-1 border text-center font-bold p-4" style="width: 32.347%; height: 33px;"><strong>DATA REQUIREMENT </strong></td>
+<td class="py-1 border text-center font-bold p-4" style="width: 19.6652%; height: 33px;"><strong>LEARNING TYPE </strong></td>
+<td class="py-1 border text-center font-bold p-4" style="width: 28.2409%; height: 33px;"><strong>EXAMPLE USE CASE</strong></td>
+</tr>
+</thead>
+<tbody class="bg-white text-gray-500 bg-[#FFFFFF] text-[#000000]" style="background-color: #ffffff; color: #000000;">
+<tr class="py-7" style="height: 97px;">
+<td class="py-7 border text-center  p-4" style="width: 19.6561%; height: 97px;"><strong>Supervised Learning</strong></td>
+<td class="py-7 border text-center  p-4" style="width: 32.347%; height: 97px;">Labelled data</td>
+<td class="py-7 border text-center  p-4" style="width: 19.6652%; height: 97px;">Predictive or Classification</td>
+<td class="py-7 border text-center  p-4" style="width: 28.2409%; height: 97px;">Spam detection, language translation</td>
+</tr>
+<tr class="py-7" style="height: 97px;">
+<td class="py-7 border text-center  p-4" style="width: 19.6561%; height: 97px;"><strong>Unsupervised Learning</strong></td>
+<td class="py-7 border text-center  p-4" style="width: 32.347%; height: 97px;">Unlabelled data</td>
+<td class="py-7 border text-center  p-4" style="width: 19.6652%; height: 97px;">Pattern finding, Clustering</td>
+<td class="py-7 border text-center  p-4" style="width: 28.2409%; height: 97px;">Customer segmentation, anomaly detection</td>
+</tr>
+<tr class="py-7" style="height: 97px;">
+<td class="py-7 border text-center  p-4" style="width: 19.6561%; height: 97px;"><strong>Semi-Supervised Learning<br></strong></td>
+<td class="py-7 border text-center  p-4" style="width: 32.347%; height: 97px;">Mostly unlabelled data with a small portion labelled</td>
+<td class="py-7 border text-center  p-4" style="width: 19.6652%; height: 97px;">Combination of both</td>
+<td class="py-7 border text-center  p-4" style="width: 28.2409%; height: 97px;">Image recognition, fraud detection</td>
+</tr>
+<tr class="py-7" style="height: 97px;">
+<td class="py-7 border text-center  p-4" style="width: 19.6561%; height: 97px;"><strong>Reinforcement Learning</strong></td>
+<td class="py-7 border text-center  p-4" style="width: 32.347%; height: 97px;">Environment-driven feedback</td>
+<td class="py-7 border text-center  p-4" style="width: 19.6652%; height: 97px;">Decision-making over time</td>
+<td class="py-7 border text-center  p-4" style="width: 28.2409%; height: 97px;">Autonomous vehicles, robotics</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/5d13374d1aff34ce.png" alt="image.png" width="797" height="542" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527564" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.3 ML Training Models" href="https://canvas.kings.edu.au/courses/12951/assignments/204841" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204841" data-api-returntype="Assignment">3.3 ML Training Models</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.techtarget.com/searchenterpriseai/tip/Types-of-learning-in-machine-learning-explained" target="_blank">The different types of machine learning explained</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%203.%20Software%20Automation/PPTs/3.3%20ML%20Training%20Models.pptx?d=w6d7aed5c0abb4661b558d3307c77bbd8&amp;csf=1&amp;web=1&amp;e=RvasnL">3.3 ML Training Models.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-3-ml-training-models" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={6d7aed5c-0abb-4661-b558-d3307c77bbd8}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">3.4 Applications of Machine Learning Algorithms</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate common applications of key ML algorithms</p>
+</div>
+<div class="bold mb-1 mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>data analysis and forecasting</li>
+<li>virtual personal assistants</li>
+<li>image recognition</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explore and understand the common applications of key machine learning (ML) algorithms, focusing on their roles in data analysis and forecasting, virtual personal assistants, and image recognition.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Identify key machine learning algorithms commonly used in data analysis, virtual assistants, and image recognition.</span></li>
+<li><span style="font-size: 10pt;">Explain how these algorithms are applied in real-world scenarios.</span></li>
+<li><span style="font-size: 10pt;">Understand the impact of ML algorithms in automating and improving tasks across various industries.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Machine learning (ML) algorithms are at the core of many modern technologies, driving innovation across industries. These algorithms enable machines to learn from data, recognise patterns, and make decisions with minimal human intervention. Understanding their applications is essential for harnessing their potential to solve complex problems.</p>
+<p>In this page, we explore three key areas where ML algorithms are widely applied: <strong>data analysis and forecasting</strong>, <strong>virtual personal assistants</strong>, and <strong>image recognition</strong>. These applications illustrate the versatility and impact of machine learning in automating tasks, improving accuracy, and enhancing user experiences in everyday life.</p>
+<p>&nbsp;</p>
+<h4><strong>Data Analysis and Forecasting</strong></h4>
+<p>Machine learning is widely used for analysing large datasets and making predictions. Common ML algorithms for this include <strong>linear regression</strong>, <strong>decision trees</strong>, and <strong>neural networks</strong>.</p>
+<ul>
+<li>
+<p><strong>Data Analysis:</strong> ML algorithms can identify patterns and correlations in large datasets that are beyond human capacity to analyse. For example, <strong>clustering algorithms</strong> like <strong>k-means</strong> group data points based on similarity, allowing businesses to segment customer groups based on purchasing behaviour or preferences.</p>
+</li>
+<li>
+<p><strong>Forecasting:</strong> Predictive models, such as <strong>time series algorithms</strong> and <strong>regression models</strong>, are used to make forecasts based on historical data. In financial markets, ML models analyse past stock performance to predict future trends. In weather forecasting, <strong>recurrent neural networks (RNNs)</strong> are employed to model temporal data and predict future weather conditions based on past data patterns.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Netflix's Content Recommendations</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Algorithm Used:</strong> Collaborative Filtering (Matrix Factorisation)</li>
+<li><strong>Application:</strong> Netflix uses <strong>collaborative filtering</strong> algorithms to analyse user preferences and viewing history to predict what content viewers are likely to enjoy. By analysing vast amounts of user data (watch time, ratings, searches), Netflix can forecast what a user might want to watch next, leading to highly personalised recommendations. This data-driven forecasting helps Netflix retain subscribers by keeping them engaged with tailored content.</li>
+</ul>
+<p>Read more about this example <a class="inline_disabled" title="Link" href="https://medium.com/@adityak2305/a-case-study-on-netflix-recommendation-algorithm-dbb288e8da66" target="_blank">here</a>.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/0a08c5dd6d8bede9.png" alt="image.png" width="461" height="214" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527484" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4><strong>Virtual Personal Assistants</strong></h4>
+<p>Virtual personal assistants like Siri, Alexa, and Google Assistant rely heavily on machine learning algorithms to understand and respond to user requests.</p>
+<ul>
+<li>
+<p><strong>Natural Language Processing (NLP):</strong> ML algorithms like <strong>recurrent neural networks (RNNs)</strong> and <strong>transformers</strong> (e.g., <strong>BERT</strong> and <strong>GPT</strong> models) enable virtual assistants to process, understand, and generate human language. These models can interpret voice commands, answer questions, and even perform tasks like setting reminders.</p>
+</li>
+<li>
+<p><strong>Speech Recognition:</strong> Algorithms such as <strong>Hidden Markov Models (HMMs)</strong> and <strong>deep learning networks</strong> convert spoken language into text that can be understood by the system. Virtual assistants use these models to transcribe speech and process it as input.</p>
+</li>
+<li>
+<p><strong>Personalisation and Recommendations:</strong> Through <strong>reinforcement learning</strong> and <strong>collaborative filtering</strong>, virtual assistants can learn user preferences over time and tailor responses and recommendations. For example, they might suggest apps or music based on past interactions or usage patterns.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Amazon Alexa</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Algorithm Used:</strong> Deep Neural Networks (DNNs) for Speech Recognition and Natural Language Processing (NLP)</li>
+<li><strong>Application:</strong> <strong>Amazon Alexa</strong> is one of the most popular virtual personal assistants. Alexa uses deep learning algorithms to convert speech into text, understand user queries, and provide responses or execute tasks. For instance, when a user says, “Turn off the living room lights,” Alexa processes the voice command using natural language processing and interacts with connected smart devices to perform the requested action.</li>
+</ul>
+<p>Learn more about Amaxon Alexa's architecture <a class="inline_disabled" title="Link" href="https://www.amazon.science/blog/the-scalable-neural-architecture-behind-alexas-ability-to-select-skills" target="_blank">here</a>.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Image Recognition</strong></h4>
+<p>&nbsp;Image recognition is one of the most prominent applications of machine learning, particularly in fields like healthcare, security, and social media.</p>
+<ul>
+<li>
+<p><strong>Convolutional Neural Networks (CNNs):</strong> These are the cornerstone of most image recognition systems. CNNs are used to identify patterns within images, making them effective for tasks like facial recognition, medical image analysis (e.g., detecting tumors in X-rays), and autonomous vehicle navigation.</p>
+</li>
+<li>
+<p><strong>Object Detection and Classification:</strong> Algorithms such as <strong>YOLO (You Only Look Once)</strong> and <strong>RCNN (Region-based CNN)</strong> are used to detect and classify objects within images. These are applied in areas like surveillance, where detecting suspicious items or identifying individuals is crucial, and in social media, where photos are automatically tagged based on face recognition.</p>
+</li>
+<li>
+<p><strong>Medical Imaging:</strong> In healthcare, image recognition algorithms are trained to detect abnormalities in radiology images, such as tumours, fractures, or lesions. <strong>Deep learning models</strong> such as <strong>CNNs</strong> are particularly effective in analysing MRI or CT scans.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Tesla's Autopilot</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Algorithm Used:</strong> Convolutional Neural Networks (CNNs)</li>
+<li><strong>Application:</strong> <strong>Tesla’s Autopilot</strong> uses <strong>CNNs</strong> to analyse images from multiple cameras mounted on the car to detect and classify objects such as pedestrians, road signs, and other vehicles. These models allow the car to "see" its surroundings and make driving decisions such as lane keeping, adaptive cruise control, and automatic parking. CNNs enable Tesla's Autopilot to process the visual data in real time, contributing to the development of autonomous driving technologies.</li>
+</ul>
+<p>Find out more about how Tesla uses Computer Vision <a class="inline_disabled" href="https://www.thinkautonomous.ai/blog/computer-vision-at-tesla/" target="_blank">here</a>.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/ce1cb648fac8bfbd.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527565" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.4 Applications of Machine Learning Algorithms" href="https://canvas.kings.edu.au/courses/12951/assignments/204842" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204842" data-api-returntype="Assignment">3.4 Applications of Machine Learning Algorithms</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf" target="_blank">Matrix Factorisation Techniques for Recommender Systems</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.amazon.science/blog/amazon-scientists-applying-deep-neural-networks-to-custom-skills" target="_blank">Amazon scientists applying deep neural networks to custom skills</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%203.%20Software%20Automation/PPTs/3.4%20ML%20Applications.pptx?d=w3d0a2a557b8047e585b714cda5a4ff60&amp;csf=1&amp;web=1&amp;e=vNc1Uy">3.4 ML Applications.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-4-applications-of-machine-learning-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={3d0a2a55-7b80-47e5-85b7-14cda5a4ff60}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">3.5 Models for Designing and Analysing</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Research models used by software engineers to design and analyse ML including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>decision trees</li>
+<li>neural networks</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand and describe the models used by software engineers to design and analyse machine learning systems, focusing on decision trees and neural networks.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Define and explain decision trees, including their structure, strengths, and limitations.</span></li>
+<li><span style="font-size: 10pt;">Describe neural networks, outlining their architecture, types, and applications.</span></li>
+<li><span style="font-size: 10pt;">Compare and contrast the benefits and drawbacks of decision trees and neural networks.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Machine learning (ML) models are integral to the development of intelligent systems, and software engineers rely on various models to design and analyse them. Two of the most commonly used models are <strong>decision trees</strong> and <strong>neural networks</strong>, each serving different purposes in the ML lifecycle. These models help software engineers understand data patterns, make predictions, and improve system performance.</p>
+<p>&nbsp;</p>
+<h4><strong>Decision Trees</strong></h4>
+<p>A <strong>decision tree</strong> is a visual diagram that represents all possible combinations of decisions and their resulting actions. It is commonly used in both classification and regression tasks in machine learning (ML). The structure of the tree follows a sequence of decisions, where each decision path leads to either another decision or a final action (or outcome).</p>
+<p>The decision tree builds paths based on the conditions at each decision point. For example, if the current condition satisfies a decision criterion, the branch will move in one direction (e.g., "Yes"). If not, it will move in another (e.g., "No"). Each path eventually leads to either another decision or an end result, making it clear how a combination of conditions leads to specific outcomes.</p>
+<p>The following decision tree shows the rules in controlling the temperature system within a ‘smart’ house.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/1a41a4e0f74c074d.png" alt="image.png" width="671" height="280" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527567" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>The following diagram shows another way to represent a decision tree.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/5a03c606c6a31374.png" alt="image.png" width="454" height="329" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527483" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Key Strengths</strong></p>
+<ul>
+<li>
+<p><strong>Interpretability</strong>: The flowchart-like structure makes decision trees easy to understand and interpret, showing how decisions lead to specific actions.</p>
+</li>
+<li>
+<p><strong>Versatility</strong>: Decision trees are useful for a wide range of problems, particularly when the goal is to map out possible outcomes based on a set of conditions.</p>
+</li>
+</ul>
+<p><strong>Limitations</strong></p>
+<ul>
+<li>
+<p><strong>Overfitting</strong>: Decision trees can grow too complex when trained on noisy data, leading to overfitting.</p>
+</li>
+<li>
+<p><strong>Instability</strong>: Small changes in the data can lead to a very different tree structure.</p>
+</li>
+</ul>
+<p><strong>Common Use Cases</strong></p>
+<ul>
+<li>
+<p><strong>Classification</strong>: E.g., determining whether an email is spam or not.</p>
+</li>
+<li>
+<p><strong>Regression</strong>: E.g., predicting the price of a house based on its features like size and location.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h4><strong>Neural Networks</strong></h4>
+<p>Neural networks (NNs) are a foundational model in machine learning, particularly when dealing with large and complex datasets. They are inspired by the biological neural networks in the human brain and are capable of learning patterns, making predictions, and transforming raw data into actionable insights.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/45f15a767fe2a2b7.png" alt="image.png" width="538" height="231" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527569" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>Neural networks are at the core of <strong>deep learning</strong>, a subset of machine learning that has advanced fields such as <strong>computer vision</strong>, <strong>natural language processing (NLP)</strong>, and <strong>reinforcement learning</strong>. The power of neural networks lies in their ability to capture highly non-linear relationships, making them suitable for both structured (e.g., tabular) and unstructured (e.g., images, text) data.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Structure</h3>
+<div class="dp-panel-content ">
+<p>A neural network is composed of three main types of layers:</p>
+<ol>
+<li><strong>Input Layer</strong>
+<ul>
+<li>This layer takes in the raw data as input. Each node in the input layer represents one feature of the data (e.g., pixel values in an image, numerical features in tabular data, or words in a text).</li>
+</ul>
+</li>
+<li><strong>Hidden Layers</strong>
+<ul>
+<li>These are the layers between the input and output layers. A neural network can have multiple hidden layers, and each layer consists of <strong>neurons</strong> (nodes) that perform mathematical transformations on the input data. The more hidden layers, the "deeper" the network.</li>
+<li><strong>Activation Functions</strong>: Each neuron applies an activation function to introduce non-linearity into the model, allowing it to learn complex patterns. Common activation functions include:
+<ul>
+<li><strong>ReLU (Rectified Linear Unit)</strong>: Sets negative values to zero and leaves positive values unchanged, making it highly efficient for deep learning models.</li>
+<li><strong>Sigmoid</strong>: Maps values between 0 and 1, often used in binary classification tasks.</li>
+<li><strong>Tanh (Hyperbolic Tangent)</strong>: Maps values between -1 and 1, allowing negative values to have a stronger influence on the output than Sigmoid.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Output Layer</strong>
+<ul>
+<li>The output layer produces the final prediction based on the learned weights and transformations. For example:
+<ul>
+<li>In <strong>classification tasks</strong>, the output might be a probability distribution over different classes (e.g., "cat" or "dog" in image classification).</li>
+<li>In <strong>regression tasks</strong>, the output is typically a continuous value (e.g., predicting a house price).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/de47d735bbaa889d.png" alt="image.png" width="643" height="378" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527568" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Learning Mechanism</strong></p>
+<p>The learning process in neural networks involves the following steps:</p>
+<ol>
+<li>
+<p><strong>Forward Propagation</strong>: Data moves from the input layer, through the hidden layers, to the output layer. Each neuron applies a weighted sum of its inputs, passes the result through an activation function, and forwards the output to the next layer.</p>
+</li>
+<li>
+<p><strong>Loss Function</strong>: The loss function calculates the error between the predicted output and the actual target. For instance:</p>
+<ul>
+<li><strong>Mean Squared Error (MSE)</strong> is commonly used in regression tasks.</li>
+<li><strong>Cross-Entropy Loss</strong> is used for classification tasks, measuring how far the predicted probability distribution is from the actual distribution.</li>
+</ul>
+</li>
+<li>
+<p><strong>Backpropagation</strong>: Once the loss is calculated, the model adjusts the weights of the connections using an optimisation algorithm, typically <strong>gradient descent</strong>. Gradient descent updates the weights in the direction that minimises the error, with the learning rate controlling the size of the steps taken during each update.</p>
+</li>
+<li>
+<p><strong>Training and Convergence</strong>: The process of forward propagation, loss computation, and backpropagation is repeated iteratively over many epochs (iterations of the training dataset). The network learns to minimise the loss, improving its performance.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Types of Neural Networks</h3>
+<div class="dp-panel-content ">
+<p>Different types of neural networks are optimised for specific tasks. Below are the most prominent types:</p>
+<p>1. <strong>Feedforward Neural Networks (FNN)</strong></p>
+<ul>
+<li>
+<p><strong>Structure</strong>: Data moves in one direction, from input to output, without cycles or feedback loops.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>: Simple tasks such as regression or basic classification (e.g., predicting the outcome of a stock market price).</p>
+</li>
+</ul>
+<p><img class="sFlh5c FyHeAf iPVvYb" style="max-width: 960px; width: 446px; height: 251px; margin: 0px auto; display: block;" src="https://learnopencv.com/wp-content/uploads/2017/10/mlp-diagram.jpg" alt="Understanding Feedforward Neural Networks | LearnOpenCV [online-only image]" aria-hidden="false" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>2. <strong>Convolutional Neural Networks (CNN)</strong></p>
+<ul>
+<li>
+<p><strong>Structure</strong>: CNNs have a specialised architecture for handling grid-like data such as images. They consist of convolutional layers that apply filters (kernels) to detect local patterns such as edges, textures, or colours. After convolution, pooling layers reduce the spatial dimensions, preserving essential information while reducing computational cost.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>: Computer vision tasks like image classification (e.g., identifying objects in images), object detection (e.g., detecting faces in a picture), and video analysis.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/6c7050bf8cf13dbc.png" alt="image.png" width="705" height="315" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527457" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>3. <strong>Recurrent Neural Networks (RNN)</strong></p>
+<ul>
+<li>
+<p><strong>Structure</strong>: RNNs are designed for sequence data (e.g., time series, text, or speech). They have feedback connections that allow information to be passed from one time step to the next. This structure makes them powerful for capturing temporal dependencies in data.</p>
+</li>
+<li>
+<p><strong>Variants</strong>: Long Short-Term Memory (LSTM) networks and Gated Recurrent Units (GRU) are special types of RNNs designed to overcome the problem of <strong>vanishing gradients</strong>, allowing the network to remember long-term dependencies.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>: Time series forecasting, language translation, speech recognition.</p>
+</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/00c63eb001f2023f.png" alt="image.png" width="372" height="372" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527463" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>4. <strong>Deep Neural Networks (DNN)</strong></p>
+<ul>
+<li>
+<p><strong>Structure</strong>: These are neural networks with multiple hidden layers. The depth allows the network to learn more abstract and complex features from the data. However, training these networks requires large datasets and computational power.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>: Deep learning applications such as recommendation systems (e.g., Netflix movie recommendations), autonomous vehicles, and advanced AI systems like OpenAI's GPT.</p>
+</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/c12cfdbe5db7ad0c.png" alt="image.png" width="784" height="344" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527464" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>5. <strong>Generative Adversarial Networks (GANs)</strong></p>
+<ul>
+<li>
+<p><strong>Structure</strong>: GANs consist of two networks, a <strong>generator</strong> and a <strong>discriminator</strong>, that are trained together. The generator creates fake data, and the discriminator evaluates whether the data is real or fake. This adversarial process continues until the generator produces realistic outputs.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>: Image generation (e.g., generating realistic faces), style transfer, and deepfake creation.</p>
+</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/0044f2577cbf0842.png" alt="image.png" width="790" height="336" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527571" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-primary">
+<div class="card-body">
+<p class="card-text">Check out this fascinating challenge: <a href="https://www.whichfaceisreal.com/index.php" target="_new"><span>Which</span><span> Face</span><span> Is</span><span> Real?</span></a> Can you tell the difference between a real human face and one generated by artificial intelligence (AI)?</p>
+<p>The faces in this challenge are generated by a <strong>Generative Adversarial Network (GAN)</strong>, where two neural networks—the <strong>generator</strong> and the <strong>discriminator</strong>—compete in a process known as adversarial training. The generator creates increasingly realistic fake faces, while the discriminator tries to distinguish them from real faces. Over time, the generator improves to the point where even humans find it difficult to tell which face is real and which is AI-generated.</p>
+<p>Try the test and see how well you perform compared to AI!</p>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Key Concepts</h3>
+<div class="dp-panel-content">
+<ol>
+<li>
+<p><strong>Weight Initialisation</strong></p>
+<ul>
+<li>The initial values of the weights can significantly impact how fast the network converges. Poor initialisation may lead to vanishing gradients or slow training. Common strategies include <strong>Xavier initialisation</strong> or <strong>He initialisation</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Regularisation</strong></p>
+<ul>
+<li>To prevent overfitting, various techniques are applied:
+<ul>
+<li><strong>Dropout</strong>: Randomly drops a subset of neurons during training, forcing the network to learn more robust features.</li>
+<li><strong>L2 Regularisation (Weight Decay)</strong>: Penalises large weights by adding a term to the loss function, helping to generalise better.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Batch Normalisation</strong></p>
+<ul>
+<li>Batch normalisation normalises the input to each layer, ensuring that the inputs are on a similar scale. This technique speeds up training and improves performance by reducing internal covariate shift.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimisation Algorithms</strong></p>
+<ul>
+<li><strong>Gradient Descent Variants</strong>: Standard gradient descent can be computationally expensive. Variants like <strong>Stochastic Gradient Descent (SGD)</strong>, <strong>Adam (Adaptive Moment Estimation)</strong>, and <strong>RMSprop</strong> adapt the learning rate during training, accelerating convergence.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Strengths &amp; Limitations</h3>
+<div class="dp-panel-content">
+<p><strong>Strengths of Neural Networks</strong></p>
+<ul>
+<li>
+<p><strong>Versatility</strong>: Can be applied to various tasks, from image recognition to language processing.</p>
+</li>
+<li>
+<p><strong>Representation Learning</strong>: Automatically learns features from raw data, reducing the need for manual feature engineering.</p>
+</li>
+<li>
+<p><strong>Scalability</strong>: Can handle massive datasets and is capable of scaling across distributed systems (e.g., cloud computing frameworks like TensorFlow or PyTorch).</p>
+</li>
+<li>
+<p><strong>State-of-the-Art Performance</strong>: Especially in tasks such as speech recognition, object detection, and game playing.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Limitations of Neural Networks</strong></p>
+<ul>
+<li>
+<p><strong>Data Hungry</strong>: Neural networks typically require large datasets for optimal performance. Small datasets may lead to overfitting and poor <strong>generalisation</strong>.</p>
+</li>
+<li>
+<p><strong>Computationally Intensive</strong>: Training deep neural networks is resource-heavy, requiring high-performance hardware such as GPUs or TPUs.</p>
+</li>
+<li>
+<p><strong>Black Box Nature</strong>: Despite their success, neural networks are often criticised for their lack of interpretability. It can be difficult to understand why a network makes certain decisions.</p>
+</li>
+<li>
+<p><strong>Overfitting</strong>: Without proper regularisation, neural networks may perform very well on training data but fail to generalise to new, unseen data.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/00dee7fc45e20f4b.png" alt="image.png" width="542" height="315" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527573" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentations</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/Ea3PAEM6ilNLjwD33mpuc0YBUVohq03G4-NTbpNcUNvl5A?e=jWrTw7" target="_blank">Decision Tree</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-5-models-for-designing-and-analysing" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={4300cfad-8a3a-4b53-8f00-f7de6a6e7346}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.5 Models for Designing and Analysing" href="https://canvas.kings.edu.au/courses/12951/assignments/204843" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204843" data-api-returntype="Assignment">3.5 Models for Designing and Analysing</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%203.%20Software%20Automation/PPTs/3.5%20Design%20%26%20Anaylsis%20Models.pptx?d=w309196ada1dd4f2595089c9f58fdc3e3&amp;csf=1&amp;web=1&amp;e=f5rVQb">3.5 Design &amp; Anaylsis Models.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-5-models-for-designing-and-analysing" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={309196ad-a1dd-4f25-9508-9c9f58fdc3e3}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">3.6 Types of Machine Learning Algorithms</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Describe types of algorithms associated with ML, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>linear regression</li>
+<li>logistic regression</li>
+<li>K-nearest neighbour</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand different types of machine learning algorithms and their purposes, with a focus on linear regression, logistic regression, and K-nearest neighbour.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explain the function and purpose of linear regression in machine learning.</span></li>
+<li><span style="font-size: 10pt;">Describe logistic regression and its application in classification tasks.</span></li>
+<li><span style="font-size: 10pt;">Identify how the K-nearest neighbour algorithm works and when it is used.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>In machine learning, algorithms are the foundation for making predictions and uncovering patterns in data. Different types of algorithms are designed for various tasks, such as predicting continuous values or classifying data into categories. This page will explore three fundamental algorithms:</p>
+<ul>
+<li><strong>Linear regression</strong>, which predicts continuous outcomes by modelling relationships between variables.</li>
+<li><strong>Logistic regression</strong>, which classifies data into distinct categories based on probability.</li>
+<li><strong>K-nearest neighbour (KNN)</strong>, which makes predictions by comparing new data points to similar instances in the dataset.</li>
+</ul>
+<p>Understanding how these algorithms work and when to apply them is crucial for solving diverse problems in data analysis and prediction.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h3 class="card-title">What is Regression?</h3>
+<p><strong>Regression</strong> is a type of machine learning algorithm used to predict <strong>continuous values</strong>. It helps to understand the relationship between one or more input variables (also called <strong>features</strong> or <strong>independent variables</strong>) and an output variable (the <strong>dependent variable</strong>).</p>
+<p>In simple terms, regression tries to find a pattern in data and uses that pattern to make predictions. For example, it can help predict things like:</p>
+<ul>
+<li>A house's price based on its size and location.</li>
+<li>A student's test score based on the number of hours they studied.</li>
+</ul>
+<p>In regression, the goal is to find the best line or curve that fits the data points, allowing us to predict future outcomes accurately.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Linear Regression</h3>
+<div class="dp-panel-content ">
+<p>Linear regression is a type of algorithm that helps predict <strong>continuous values</strong>, meaning numbers that can go up or down like prices, scores, or temperatures. It tries to find a straight line that best fits the data and shows the relationship between a set of inputs (called <strong>independent variables</strong>) and the result (the <strong>dependent variable</strong>).</p>
+<p><strong>How It Works:</strong></p>
+<p>Imagine you want to predict someone's exam score based on the number of hours they studied. Linear regression will draw a line on a graph of the data (like hours studied on one axis and scores on the other). This line helps us make predictions, like "If you study for 4 hours, your predicted score is 85."</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Predicted&nbsp;Score</mtext><mo>=</mo><mtext>Line&nbsp;equation</mtext><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><mo>×</mo><mo stretchy="false">(</mo><mtext>hours&nbsp;studied</mtext><mo stretchy="false">)</mo></mrow></semantics></math></span></span></span></p>
+<p>Where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\beta_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span> is the starting point (where the line crosses the Y-axis), and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\beta_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span> shows how much the score increases for each extra hour studied.</p>
+<p><strong><span class="katex-display"><span class="katex"><span class="katex-mathml">Example:</span></span></span></strong></p>
+<p>If you want to predict the price of a house based on its size (in square meters), linear regression helps create a formula. The bigger the house, the higher the price, and linear regression shows this as a line on a graph.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/f117cd0a9f28909b.png" alt="image.png" width="291" height="291" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527574" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Logistic Regression</h3>
+<div class="dp-panel-content ">
+<p>Logistic regression is used for <strong>classification</strong> tasks, which means putting things into categories. It's great when you need to decide between two or more options, like "yes" or "no," "pass" or "fail," or "spam" and "not spam."</p>
+<p><strong>How It Works:</strong></p>
+<p>Instead of predicting a number like linear regression, logistic regression predicts the <strong>probability</strong> of something happening. For example, if you were predicting whether a student passes or fails based on their study hours, logistic regression gives you a probability, like "There’s a 90% chance this student will pass."</p>
+<p>The algorithm uses something called a <strong>sigmoid function</strong> to turn any number into a probability between 0 and 1. If the probability is greater than 0.5, it might say "yes" (pass), and if it’s lower, it might say "no" (fail).</p>
+<p><strong>Example:</strong></p>
+<p>A school might use logistic regression to predict whether students will pass an exam based on their homework scores and study hours. It will classify each student into either "pass" or "fail" by calculating the likelihood for each category.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/dd41f6a8c473b018.png" alt="image.png" width="355" height="237" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527575" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">K-Nearest Neighbour (KNN)</h3>
+<div class="dp-panel-content">
+<p>K-nearest neighbour, or KNN, is an algorithm used for both <strong>classification</strong> and <strong>regression</strong>. It’s very simple—it predicts new outcomes by looking at the results of the <strong>K most similar examples</strong> (or neighbours) in the data.</p>
+<p><strong>How It Works:</strong></p>
+<p>Imagine you want to classify whether a fruit is an apple or an orange based on its size and colour. KNN works by comparing a new fruit to the closest examples in your dataset (like looking at its nearest neighbours). If most of the similar fruits are apples, it will classify the new fruit as an apple. You decide how many neighbours to compare by choosing a value for <strong>K</strong>.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><strong>Pick a number</strong> <em>K</em> which is the number of neighbours to look at.</li>
+<li>For a new data point, check the <strong>K closest data points</strong> in the training set (which is the data we already know).</li>
+<li><strong>Majority vote</strong>: For classification, KNN assigns the class that most of these neighbours belong to (like deciding if the new fruit is an apple or orange). For regression, it takes the average of these neighbours' values.</li>
+</ol>
+<p><strong>Example:</strong></p>
+<p>If you want to predict what kind of animal a new image shows, KNN will look at other images nearby in the data. If most of the nearest images show dogs, it will classify the new image as a dog too.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/bde1474ee828049c.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527462" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.6 Types of Machine Learning Algorithms" href="https://canvas.kings.edu.au/courses/12951/assignments/204844" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204844" data-api-returntype="Assignment">3.6 Types of Machine Learning Algorithms</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.analyticsvidhya.com/blog/2022/01/different-types-of-regression-models/" target="_blank">Different Types of Regression Models</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%203.%20Software%20Automation/PPTs/3.6%20Types%20of%20ML%20Algorithms.pptx?d=w1c6d2871ce714657b7669299c623943b&amp;csf=1&amp;web=1&amp;e=e84zWq">3.6 Types of ML Algorithms.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-6-types-of-machine-learning-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={1c6d2871-ce71-4657-b766-9299c623943b}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">After</h3>
+<div class="readnav"><a href="12951-m8.html">← previous module</a><a href="../course-12951.html">all modules</a><a href="12951-m10.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

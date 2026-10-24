@@ -1,0 +1,323 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.1 Machine Learning and Automation — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 11 (Term 2: Weeks 3-4) Software Automation</div>
+<h1 style="margin-top:.2rem">3.1 Machine Learning and Automation</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-1-machine-learning-and-automation" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate how machine learning (ML) supports automation through the use of DevOps, robotic process automation (RPA) and business process automation (BPA)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explore the role of machine learning (ML) in automation, particularly in relation to DevOps, Robotic Process Automation (RPA), and Business Process Automation (BPA).</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Define and explain Machine Learning.</span></li>
+<li><span style="font-size: 10pt;">Define DevOps, RPA, and BPA, and describe their purposes.</span></li>
+<li><span style="font-size: 10pt;">Describe how Machine Learning is integrated into each form of automation.</span></li>
+<li><span style="font-size: 10pt;">Provide practical examples of ML in DevOps, RPA, and BPA.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>As technology becomes more important in our everyday lives, automation helps make tasks faster and easier. Machine Learning (ML) is a type of artificial intelligence that allows computers to learn from data and make decisions without constant human help.&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h3 class="card-title">What is Machine Learning (ML)?</h3>
+<p class="card-text">Machine Learning (ML) is a subset of artificial intelligence (AI) that allows computer systems to learn from and make decisions based on data without explicit programming. ML algorithms use patterns and inference from data to improve their performance over time. These algorithms can process large datasets, detect trends, and make decisions with minimal human intervention.</p>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><strong>Learning from data:</strong> ML systems improve with more data and experience.</li>
+<li><strong>Prediction and decision-making:</strong> ML helps predict future trends and outcomes based on historical data.</li>
+<li><strong>Automation:</strong> It enables machines to automate processes by identifying patterns that a human may not detect easily.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>DevOps</strong></h4>
+<p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). Its goal is to shorten the system development life cycle and deliver high-quality software more efficiently. DevOps promotes continuous integration and continuous delivery (CI/CD), automation of infrastructure, and collaboration across teams.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Predictive Analytics in CI/CD Pipelines</h3>
+<div class="dp-panel-content ">
+<p>In DevOps, the CI/CD pipeline automates the process of building, testing, and deploying code. This allows development teams to deliver features and fixes rapidly. However, managing CI/CD pipelines involves frequent monitoring and adjustments, especially when builds fail or deployments break down. Machine learning can automate this monitoring and introduce predictive analytics that anticipates issues before they occur.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Supports CI/CD:</strong></p>
+<p>Machine learning models can analyse historical build data—such as failure patterns, commit frequency, and the types of changes made—to predict which builds are likely to fail or which changes may introduce bugs. This predictive capability helps DevOps teams by:</p>
+<ul>
+<li><strong>Failure Prediction:</strong> ML algorithms can assess new code changes against past failures, identifying patterns where similar modifications have led to problems. The system can flag potentially risky code early, suggesting additional tests or fixes before the pipeline proceeds to production.</li>
+<li><strong>Build Optimisation</strong>: DevOps aims to optimise the CI/CD process to ensure faster and more reliable releases. ML can identify bottlenecks, such as slow-running tests or frequently failing deployments, and recommend solutions, such as prioritising high-risk test cases or automatically rerouting jobs to alternative environments if a failure is predicted.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>A global company like <strong>Spotify</strong> could use ML to analyse its CI/CD pipeline performance. ML models would detect patterns that lead to build failures, allowing engineers to address these proactively. For instance, if a specific module tends to cause issues after a large update, ML can recommend running more rigorous tests on this module, or even rerouting jobs to a healthier pipeline node.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Intelligent Resource Management</h3>
+<div class="dp-panel-content ">
+<p>Managing infrastructure efficiently is crucial in DevOps, especially when systems must handle varying loads while avoiding both over-provisioning (wasting resources) and under-provisioning (leading to system crashes). In traditional DevOps, infrastructure scaling is based on pre-defined rules and monitoring data, but this approach can struggle with unexpected traffic surges or complex cloud environments.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Enhances Resource Management:</strong></p>
+<p>Machine learning enables dynamic, predictive resource management by analysing patterns in system usage and predicting future demands. This allows DevOps teams to move beyond reactive scaling and instead implement intelligent, proactive autoscaling. ML models can:</p>
+<ul>
+<li><strong>Predict Traffic Spikes:</strong> Based on historical data, machine learning can forecast when traffic spikes might occur—such as during a product launch or sale. By predicting these spikes, ML can automatically scale infrastructure up or down to ensure enough resources are available without over-allocating.</li>
+<li><strong>Optimise Cost Efficiency:</strong> ML can identify opportunities to save costs by automatically selecting the most cost-effective instance types or cloud regions. It can also ensure that resources are de-allocated when they’re no longer needed, reducing wastage.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p><strong>Netflix</strong>, a company that operates at a massive scale, can use ML-driven autoscaling in its cloud infrastructure. By analysing user activity data and predicting peak times (like evenings when more users are likely to stream content), Netflix can ensure that its infrastructure can handle the load without over-provisioning. This intelligent scaling supports DevOps efforts by minimising downtime and improving cost efficiency.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Automated Incident Management</h3>
+<div class="dp-panel-content">
+<p>In DevOps, handling incidents—such as failures in deployment, downtime, or performance degradation—requires quick identification of the root cause. Traditional incident management involves manual log analysis and cross-referencing of metrics, which can be time-consuming, especially in complex, large-scale environments.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Improves Incident Management:</strong></p>
+<p>Machine learning automates incident detection and root cause analysis by continuously monitoring system logs, metrics, and traces, and identifying patterns that indicate potential problems. ML can:</p>
+<ul>
+<li><strong>Predict Failures:</strong> Based on historical data, ML models can detect early warning signs that a system or service may be about to fail, allowing teams to address the issue before it escalates. This reduces downtime and prevents service outages.</li>
+<li><strong>Log Analysis and Correlation:</strong> ML can process and analyse vast amounts of log data across multiple services and systems, automatically correlating events and narrowing down the root cause of an issue. Instead of engineers spending hours sifting through logs, the ML system provides insights into the most likely causes, speeding up incident resolution.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>In a cloud environment like <strong>AWS</strong>, DevOps teams might use ML-driven tools like Amazon’s CloudWatch to automatically analyse logs and performance data. If an application starts to slow down or experience high error rates, ML models can correlate this to recent code deployments or configuration changes. This allows the team to pinpoint the cause and apply fixes faster, thus supporting the DevOps goal of minimising downtime.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/da056a27ec294037.png" alt="image.png" width="490" height="294" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527562" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h3 class="card-title">What is MLOps?</h3>
+<p class="card-text">MLOps is the automated process of designing, training and deploying machine learning models. It borrows many of the same principles and practices used in DevOps, bringing together the teams involved in developing machine learning models and the operational teams involved in deploying and supporting the models in production.</p>
+<p class="card-text"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/0631bf08594f4834.png" alt="image.png" width="437" height="147" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527566" data-api-returntype="File" loading="lazy"></p>
+<p class="card-text">&nbsp;</p>
+<p class="card-text">Design:</p>
+<ul>
+<li class="card-text">defining the business problem to be solved</li>
+<li class="card-text">refactoring the business problem into a machine learning problem</li>
+<li class="card-text">defining success metrics</li>
+<li class="card-text">researching available data.</li>
+</ul>
+<p>Model development:</p>
+<ul>
+<li>data wrangling</li>
+<li>feature engineering</li>
+<li>model training</li>
+<li>model testing and validation.</li>
+</ul>
+<p>Operations:</p>
+<ul>
+<li>model deployment</li>
+<li>supporting operations/use</li>
+<li>monitoring model performance.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Robotic Process Automation (RPA)</strong></h4>
+<p>Robotic process automation (RPA) uses software robots or "bots" to automate repetitive, rule-based tasks traditionally performed by humans. These tasks include activities like data entry, report generation, and interacting with multiple software systems. RPA mimics human actions by interacting with user interfaces, handling tasks that follow structured logic and defined workflows.</p>
+<p>While RPA is highly effective for automating simple, repetitive tasks, it has limitations when it comes to handling complex, unstructured data or tasks that require cognitive decision-making. This is where machine learning (ML) significantly enhances RPA. By integrating ML, RPA systems can move beyond rule-based automation and tackle more sophisticated processes, including those that require learning from past data, making predictions, or adapting to new information.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Handling Unstructured Data</h3>
+<div class="dp-panel-content ">
+<p>Traditional RPA excels at automating tasks with structured data, like extracting information from spreadsheets or entering data into form fields. However, many business processes involve unstructured data, such as emails, PDFs, images, and scanned documents, which are harder for rule-based RPA bots to interpret. Machine learning enables RPA to process and extract insights from these types of data.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Supports Unstructured Data Processing:</strong></p>
+<p>Machine learning models, particularly those involving natural language processing (NLP) and computer vision, allow RPA bots to interpret and process unstructured data:</p>
+<ul>
+<li><strong>Text Recognition:</strong> Using optical character recognition (OCR) combined with ML, RPA bots can read and extract relevant information from scanned documents, images, or handwritten notes. This allows automation of tasks like processing invoices, where data is often presented in non-standard formats.</li>
+<li><strong>Natural Language Understanding (NLU):</strong> ML models can analyse and understand human language, enabling RPA bots to automate processes that involve reading and interpreting emails, customer feedback, or documents. This allows bots to respond to inquiries, route requests, or generate reports from unstructured text data.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>In the banking sector, <strong>automating loan application processing</strong> often involves reading customer-submitted documents like bank statements and identification forms. RPA bots equipped with ML-powered OCR can extract key information from these documents, such as names, addresses, and financial details, even if the formats vary. ML models ensure that the bot learns to improve its accuracy over time by recognising common patterns and reducing errors in data extraction.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/387ee8607b77bc22.png" alt="image.png" width="370" height="282" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527366" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Intelligent Decision-Making</h3>
+<div class="dp-panel-content ">
+<p>Traditional RPA follows pre-defined workflows, where bots execute tasks based on if-then rules. While effective for simple tasks, this rule-based approach lacks flexibility when dealing with more dynamic, decision-based processes that require analysing data and choosing actions based on context. Machine learning introduces intelligence into RPA by enabling bots to make decisions based on historical data and learned patterns.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Enables Intelligent RPA:</strong></p>
+<p>ML models can<strong> analyse</strong> large datasets to identify trends and predict outcomes, enabling RPA to:</p>
+<ul>
+<li><strong>Predictive Decision-Making:</strong> Bots can use ML to predict outcomes based on past data. For example, in customer service, ML can predict the best resolution path based on previous interactions, allowing the bot to automatically choose the best response or action.</li>
+<li><strong>Adaptive Workflows:</strong> Machine learning enables RPA bots to adapt to changes in workflows by learning from past experiences. If a task has multiple possible outcomes, the bot can choose the best option based on previous success rates, making the process more efficient and accurate over time.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>In <strong>insurance claims processing</strong>, ML-enhanced RPA can automatically review claims and predict whether a claim is likely to be approved based on past data. The bot analyses historical claims data, learns which claims tend to be successful, and applies that knowledge to new claims. This predictive capability streamlines decision-making and reduces the need for manual review, speeding up the entire process.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>By integrating ML into RPA, organisations can significantly expand the scope and efficiency of their automation efforts. Key benefits include:</p>
+<ul>
+<li><strong>Improved Accuracy:</strong> Machine learning allows RPA bots to continually improve through experience, reducing errors and improving performance over time.</li>
+<li><strong>Enhanced Flexibility:</strong> Unlike rule-based RPA, ML-enabled bots can handle a wide range of tasks, including those involving unstructured data or complex decision-making.</li>
+<li><strong>Scalability:</strong> With the ability to learn and adapt, ML-empowered RPA can easily scale to handle larger workloads or more complex tasks without needing constant reprogramming.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/40e4807d2e6dfac5.png" alt="image.png" width="463" height="463" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527482" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4><strong>Business Process Automation (BPA)</strong></h4>
+<p>Business Process Automation (BPA) is the use of technology to automate complex business processes, aiming to increase efficiency, reduce human error, and improve overall productivity. BPA handles tasks that typically involve multiple systems, departments, or workflows and helps streamline operations by automating end-to-end processes.</p>
+<p>Unlike simple task automation, BPA addresses larger, cross-functional workflows, such as onboarding employees, managing customer service requests, or automating financial operations. Traditionally, BPA follows predefined rules and processes but struggles to handle tasks that involve complex decision-making or unstructured data.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Automating Decision-Making</h3>
+<div class="dp-panel-content ">
+<p>Traditional BPA systems follow rigid rules to automate business processes. However, many business operations involve decision-making that can’t be fully captured by predefined logic. Machine learning can analyse historical data and current context to automate decisions, enhancing BPA’s capabilities by making workflows more dynamic and responsive.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Supports Decision-Making in BPA:</strong></p>
+<ul>
+<li><strong>Pattern Recognition and Decision Support:</strong> ML models <strong>analyse</strong> large volumes of historical data and use these insights to identify patterns that guide decision-making. For example, in customer service processes, ML can automatically route inquiries to the right department based on past ticket handling efficiency.</li>
+<li><strong>Predictive Analytics:</strong> ML can predict the outcome of different business processes, enabling BPA systems to make smarter decisions in real-time. For instance, when processing loan applications or approving insurance claims, ML models can predict approval likelihood based on applicant data, reducing the need for manual reviews.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>In <strong>supply chain management</strong>, machine learning enhances BPA by predicting inventory levels based on past sales, current trends, and external factors like seasonality. Instead of manually adjusting orders or running reports, BPA systems equipped with ML automatically place orders or make recommendations to <strong>optimise</strong> stock levels and avoid shortages or overstocking.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Handling Unstructured Data in Business Workflows</h3>
+<div class="dp-panel-content ">
+<p>One of the limitations of traditional BPA is its reliance on structured data—data that fits neatly into tables, forms, or databases. However, a significant portion of business operations involves unstructured data, such as emails, reports, contracts, and customer feedback. Machine learning, especially through natural language processing (NLP) and computer vision, enables BPA to automate tasks that involve interpreting and processing unstructured data.</p>
+<p>&nbsp;</p>
+<p><strong>How ML Helps Process Unstructured Data in BPA:</strong></p>
+<ul>
+<li><strong>Text and Document Processing:</strong> ML models, particularly those involving NLP, allow BPA systems to process unstructured text. For example, ML-enhanced BPA can automatically classify and extract information from emails, contracts, or reports and integrate it into workflows.</li>
+<li><strong>Document Classification and Information Extraction:</strong> ML can be used to classify incoming documents or identify relevant pieces of information. For instance, when onboarding a new client, BPA systems can scan documents, extract important details (like contract terms or customer details), and automatically populate fields in relevant systems.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>In <strong>human resources (HR) processes</strong>, ML-enhanced BPA can automatically handle unstructured resumes submitted by job applicants. Machine learning models can scan resumes, extract key information such as work history and qualifications, and rank candidates based on their likelihood to be a good fit for a particular role. This significantly reduces the manual effort involved in resume screening and allows HR teams to focus on more strategic tasks.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Integrating machine learning into BPA leads to several benefits, including:</p>
+<ul>
+<li><strong>Enhanced Efficiency:</strong> ML reduces manual intervention by automating decision-making and tasks involving unstructured data, resulting in faster workflows.</li>
+<li><strong>Improved Accuracy:</strong> By learning from past data, ML models improve over time, increasing the accuracy of predictions and reducing errors in business processes.</li>
+<li><strong>Scalability:</strong> With ML, BPA systems can easily scale to handle increasing amounts of data and more complex processes without requiring significant reprogramming.</li>
+<li><strong>Adaptability:</strong> ML allows BPA systems to adapt to changing business conditions, making them more flexible and responsive to dynamic environments.</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title=" 3.1 Machine Learning and Automation" href="https://canvas.kings.edu.au/courses/12951/assignments/204837" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204837" data-api-returntype="Assignment"> 3.1 Machine Learning and Automation</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.atlassian.com/devops" target="_blank">What Is DevOps?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.tungstenautomation.com/learn/blog/rpa-vs-bpa" target="_blank">RPA vs BPA: What’s the Difference?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://medium.com/codex/how-machine-learning-can-be-used-for-ai-powered-autoscaling-9d03385ff8a" target="_blank">How Machine Learning can be used for AI-powered Autoscaling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%203.%20Software%20Automation/PPTs/3.1%20Machine%20Learning%20%26%20Automation.pptx?d=w929b6b27b4d248e2b19d6caad6335408&amp;csf=1&amp;web=1&amp;e=mNULxM">3.1 Machine Learning &amp; Automation.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-1-machine-learning-and-automation" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={929b6b27-b4d2-48e2-b19d-6caad6335408}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-063.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-065.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

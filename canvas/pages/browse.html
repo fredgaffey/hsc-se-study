@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quizzes — SEN Offline</title>
+<style>
+:root{--bg:#fff;--fg:#16181d;--mut:#5a6472;--card:#fff;--bd:#e2e8f0;--ac:#2b6cb0;--ok:#2f855a}
+@media(prefers-color-scheme:dark){:root{--bg:#15171c;--fg:#e6e8ec;--mut:#9aa4b2;--card:#1c1f26;--bd:#2d3340}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+.appnav{position:sticky;top:0;z-index:99;display:flex;gap:.25rem;flex-wrap:wrap;background:#1a202c;padding:.5rem .75rem}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+main{max-width:880px;margin:0 auto;padding:1.25rem 1.25rem 4rem}
+h1{font-size:1.5rem;margin:.2rem 0 .8rem}
+.search{position:sticky;top:44px;z-index:98;background:var(--bg);padding:.6rem 0}
+.filters{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 .3rem}
+.fchip{font:inherit;font-size:.78rem;padding:.3rem .65rem;border-radius:999px;cursor:pointer;
+ border:1px solid var(--bd);background:var(--card);color:var(--mut);display:inline-flex;gap:.4rem;
+ align-items:center;user-select:none}
+.fchip:hover{border-color:var(--ac)}
+.fchip.sel{background:var(--ac);border-color:var(--ac);color:#fff}
+.fchip .cnt{font-size:.7rem;opacity:.75;font-variant-numeric:tabular-nums}
+.fchip.lite{font-size:.74rem;color:var(--ac);border-style:dashed}
+.fchip.lite:hover{background:rgba(43,108,176,.08)}
+.fsep{width:1px;height:1.1rem;background:var(--bd);margin:0 .2rem}
+.search input{width:100%;font:inherit;padding:.65rem .9rem;border-radius:10px;border:1px solid var(--bd);
+ background:var(--card);color:var(--fg)}
+details.unitbox{border:1px solid var(--bd);border-radius:10px;margin:.7rem 0;overflow:hidden}
+summary.unithead{cursor:pointer;list-style:none;display:flex;align-items:center;gap:.6rem;
+ padding:.6rem .8rem;background:var(--ac);color:#fff;font-weight:700;font-size:.95rem}
+summary.unithead::-webkit-details-marker{display:none}
+summary.unithead .car{width:.9rem;font-size:.8rem;opacity:.9}
+summary.unithead .uct{margin-left:auto;font-weight:400;font-size:.74rem;opacity:.9}
+details.unitbox > details.quiz{margin:.5rem .7rem;border-radius:9px}
+details.unitbox > details.quiz:first-of-type{margin-top:.7rem}
+details.quiz{border:1px solid var(--bd);border-radius:10px;margin:.5rem 0;background:var(--card)}
+details.quiz>summary{cursor:pointer;padding:.6rem .9rem;font-weight:600;list-style:none;display:flex;gap:.55rem;align-items:center;flex-wrap:wrap}
+details.quiz>summary::-webkit-details-marker{display:none}
+details.quiz>summary::before{content:'▸';color:var(--mut)}
+summary .qname{flex:0 1 auto}
+summary a.qname{color:var(--ac);text-decoration:none}
+summary a.qname:hover{text-decoration:underline}
+summary .badge{font-size:.7rem;font-weight:700;padding:.12rem .5rem;border-radius:999px}
+summary .badge.good{background:rgba(47,133,90,.16);color:var(--ok)}
+summary .badge.mid{background:rgba(183,121,31,.18);color:#b7791f}
+summary .badge.low{background:rgba(43,108,176,.16);color:var(--ac)}
+summary .up{font-size:.7rem;font-weight:700;color:var(--ok)}
+summary .btn{font:inherit;font-size:.76rem;padding:.25rem .65rem;border-radius:7px;cursor:pointer;
+ border:1px solid var(--ac);background:var(--ac);color:#fff;text-decoration:none;white-space:nowrap}
+summary .btn.ghost{background:transparent;color:var(--ac)}
+summary .btn:hover{filter:brightness(1.08)}
+.results{margin:.1rem .9rem .7rem;padding:.7rem .9rem;border:1px solid var(--bd);border-radius:9px;
+ background:rgba(43,108,176,.05);font-size:.86rem;color:var(--mut)}
+@media(prefers-color-scheme:dark){.results{background:rgba(43,108,176,.1)}}
+.results b{color:var(--fg)}
+.spark{display:flex;align-items:flex-end;gap:3px;height:38px;margin-top:.5rem}
+.spark .bar{width:9px;border-radius:2px;background:var(--ac);opacity:.85}
+.spark .bar.good{background:var(--ok)} .spark .bar.mid{background:#b7791f}
+details.quiz[open]>summary::before{content:'▾'}
+summary .n{margin-left:auto;font-size:.75rem;color:var(--mut);font-weight:400}
+.q{border-top:1px solid var(--bd);padding:.8rem .9rem}
+.qt{font-weight:600;margin-bottom:.5rem}
+.opt{padding:.3rem .5rem;border-radius:6px;margin:.2rem 0;font-size:.94rem}
+.opt.c{background:rgba(47,133,90,.14);font-weight:600}
+.opt.c::after{content:' ✓';color:var(--ok)}
+.tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.muted{color:var(--mut);font-size:.86rem}
+mark{background:rgba(43,108,176,.20);color:inherit;border-radius:3px;padding:0 2px;box-shadow:inset 0 -2px 0 rgba(43,108,176,.55);font-weight:600}
+[x-cloak]{display:none!important}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+</style>
+<script src="../data/questions.js" defer></script>
+<script src="../data/links.js" defer></script>
+<script src="../vendor/sync.js" defer></script>
+<script src="../vendor/alpine.min.js" defer></script>
+<script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../index.html" class="brand">SEN Offline</a><a href="search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="course-12951.html">HSC Course</a><a href="course-11962.html">Yr 11 Course</a><a href="browse.html">Quizzes</a><a href="quiz.html">Quiz Generator</a><a href="sync.html">Sync</a></nav>
+
+<main x-data="browseApp()" x-cloak>
+ <h1>Quizzes</h1>
+ <div class="search"><input type="search" x-model="term"
+   placeholder="Search 803 questions — try 'encryption', 'SQL', 'agile'…"></div>
+ <div class="filters">
+   <template x-for="u in allUnits" :key="u.name">
+    <button type="button" class="fchip" :class="on(u.name)&&'sel'"
+            @click="toggle(u.name)"
+            :title="on(u.name)?'Click to hide '+u.name:'Click to show '+u.name">
+      <span x-text="u.short"></span><span class="cnt" x-text="u.n"></span>
+    </button>
+   </template>
+   <span class="fsep"></span>
+   <button type="button" class="fchip lite" @click="setAll(true)">All</button>
+   <button type="button" class="fchip lite" @click="setAll(false)">None</button>
+   <button type="button" class="fchip lite" @click="onlyCourse('12951')">HSC only</button>
+   <button type="button" class="fchip lite" @click="onlyCourse('11962')">Yr 11 only</button>
+   <span class="fsep"></span>
+   <button type="button" class="fchip lite" @click="allUnitsOpen(true)">Open all</button>
+   <button type="button" class="fchip lite" @click="allUnitsOpen(false)">Close all</button>
+ </div>
+ <p class="muted" x-text="summary"></p>
+ <template x-for="u in groups" :key="u.name">
+  <details class="unitbox" :open="uopen(u.name)" @toggle="setUopen(u.name,$event.target.open)">
+   <summary class="unithead">
+     <span class="car" x-text="uopen(u.name)?'▾':'▸'"></span>
+     <span x-text="u.name"></span>
+     <span class="uct" x-text="u.quizzes.length+' quizzes · '+u.quizzes.reduce((a,q)=>a+q.items.length,0)+' questions'"></span>
+   </summary>
+   <template x-for="qz in u.quizzes" :key="qz.name">
+    <details class="quiz" :open="!!term">
+     <summary>
+       <template x-if="lessonHref(qz)">
+         <a class="qname link" :href="lessonHref(qz)" @click.stop
+            :title="'Open lesson: '+qz.name" x-text="qz.name"></a>
+       </template>
+       <template x-if="!lessonHref(qz)">
+         <span class="qname" x-text="qz.name"></span>
+       </template>
+       <template x-if="sc(qz)">
+         <span class="badge" :class="band(sc(qz).best)" x-text="'best '+sc(qz).best+'%'"></span>
+       </template>
+       <template x-if="sc(qz)&&sc(qz).prev>0&&sc(qz).best>sc(qz).prev">
+         <span class="up" x-text="'▲ +'+(sc(qz).best-sc(qz).prev)"></span>
+       </template>
+       <span class="n" x-text="qz.items.length+' questions'"></span>
+       <a class="btn go" :href="'quiz.html?quiz='+encodeURIComponent(qz.name)"
+          @click.stop x-text="sc(qz)?'Retake':'Practise'"></a>
+       <button class="btn ghost" @click.stop.prevent="show[qz.name]=!show[qz.name]"
+               x-show="sc(qz)" x-text="show[qz.name]?'Hide results':'View results'"></button>
+     </summary>
+     <template x-if="show[qz.name]&&sc(qz)">
+       <div class="results">
+         <div class="rrow"><b x-text="sc(qz).attempts"></b> attempt<span x-show="sc(qz).attempts!=1">s</span>
+           · last <b x-text="sc(qz).last+'%'"></b>
+           (<span x-text="sc(qz).lastN+'/'+sc(qz).lastOf"></span>)
+           · best <b x-text="sc(qz).best+'%'"></b>
+           · <span x-text="new Date(sc(qz).when).toLocaleString()"></span></div>
+         <div class="spark">
+           <template x-for="(h,hi) in sc(qz).history" :key="hi">
+             <span class="bar" :class="band(h.p)" :style="'height:'+Math.max(6,h.p*0.34)+'px'"
+                   :title="h.p+'% · '+new Date(h.at).toLocaleString()"></span>
+           </template>
+         </div>
+       </div>
+     </template>
+     <template x-for="q in qz.items" :key="q.id">
+      <div class="q">
+       <div class="tag" x-text="q.type"></div>
+       <div class="qt" x-html="hl(q.q)"></div>
+       <template x-for="(o,oi) in q.opts" :key="oi">
+        <div class="opt" :class="o.c?'c':''" x-html="hl(o.t)"></div>
+       </template>
+      </div>
+     </template>
+    </details>
+   </template>
+  </details>
+ </template>
+ <p x-show="!groups.length" class="muted">No questions match that search.</p>
+</main>
+
+<script>
+function browseApp(){return{
+ term:'', show:{}, scores:{}, hidden:[], uclosed:[],
+ init(){ this.all=window.QB||[];
+   try{ this.hidden=JSON.parse(localStorage.getItem('sen_hidden_units'))||[] }catch(e){ this.hidden=[] }
+   try{ this.uclosed=JSON.parse(localStorage.getItem('sen_closed_units'))||[] }catch(e){ this.uclosed=[] }
+   try{ this.scores=JSON.parse(localStorage.getItem('sen_scores'))||{} }catch(e){ this.scores={} }
+   addEventListener('sen-scores-updated',e=>{ this.scores=e.detail||{} });
+   addEventListener('focus',()=>{ try{ this.scores=JSON.parse(localStorage.getItem('sen_scores'))||{} }catch(e){} });
+ },
+ get allUnits(){
+   var m={},c={};
+   (this.all||[]).forEach(function(q){ m[q.unit]=(m[q.unit]||0)+1; c[q.unit]=q.course; });
+   return Object.keys(m).sort().map(function(u){
+     return { name:u, n:m[u], course:c[u],
+              // "Unit 2 · Programming for the Web" -> "Unit 2 · Programming for the Web"
+              short:u.replace(/^Unit (\d+) · /,'U$1 · ').replace(/^Yr11 · /,'Y11 · ') };
+   });
+ },
+ on(u){ return this.hidden.indexOf(u)===-1 },
+ uopen(u){ return !!this.term.trim() || this.uclosed.indexOf(u)===-1 },
+ setUopen(u,open){
+   var i=this.uclosed.indexOf(u);
+   if(open && i>-1) this.uclosed.splice(i,1);
+   else if(!open && i===-1) this.uclosed.push(u);
+   try{ localStorage.setItem('sen_closed_units',JSON.stringify(this.uclosed)) }catch(e){}
+ },
+ allUnitsOpen(open){
+   this.uclosed = open ? [] : this.groups.map(function(g){return g.name});
+   try{ localStorage.setItem('sen_closed_units',JSON.stringify(this.uclosed)) }catch(e){}
+ },
+ saveHidden(){ try{ localStorage.setItem('sen_hidden_units',JSON.stringify(this.hidden)) }catch(e){} },
+ toggle(u){
+   var i=this.hidden.indexOf(u);
+   if(i===-1) this.hidden.push(u); else this.hidden.splice(i,1);
+   this.saveHidden();
+ },
+ setAll(show){
+   this.hidden = show ? [] : this.allUnits.map(function(u){return u.name});
+   this.saveHidden();
+ },
+ onlyCourse(cid){
+   this.hidden = this.allUnits.filter(function(u){return u.course!==cid}).map(function(u){return u.name});
+   this.saveHidden();
+ },
+ lessonHref(qz){ var q=qz.items[0]; if(!q) return null;
+   var f=(window.LINKS||{})[q.course+'|'+qz.name];
+   return f ? f : null; },
+ sc(qz){ var q=qz.items[0]; return q ? this.scores[q.course+'|'+qz.name] : null; },
+ band(p){ return p>=80?'good':(p>=50?'mid':'low'); },
+ esc(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))},
+ hl(s){ const e=this.esc(s); if(!this.term.trim())return e;
+   const t=this.term.trim().replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+   return e.replace(new RegExp('('+t+')','ig'),'<mark>$1</mark>'); },
+ get visible(){ var h=this.hidden; return (this.all||[]).filter(function(q){ return h.indexOf(q.unit)===-1 }); },
+ get filtered(){ const t=this.term.trim().toLowerCase(); if(!t)return this.visible;
+   return this.visible.filter(q=>q.q.toLowerCase().includes(t)
+     || q.quiz.toLowerCase().includes(t)
+     || q.opts.some(o=>o.t.toLowerCase().includes(t))); },
+ get groups(){
+   const byU={};
+   for(const q of this.filtered){ (byU[q.unit]=byU[q.unit]||{})[q.quiz]=(byU[q.unit][q.quiz]||[]); byU[q.unit][q.quiz].push(q); }
+   return Object.keys(byU).sort().map(u=>({name:u,
+     quizzes:Object.keys(byU[u]).sort((a,b)=>{
+       const ka=byU[u][a][0].sk, kb=byU[u][b][0].sk;
+       return ka[0]-kb[0] || ka[1]-kb[1] || ka[2]-kb[2] || a.localeCompare(b);
+     }).map(n=>({name:n,items:byU[u][n]}))}));
+ },
+ get summary(){
+   const n=this.filtered.length, tot=(this.all||[]).length, hid=tot-this.visible.length;
+   const base = this.term.trim() ? n+' matching questions'
+              : n+' questions across '+this.groups.length+' modules';
+   return base + (hid ? '  ·  '+hid+' hidden by filters' : ''); }
+}}
+</script><link rel="stylesheet" href="../vendor/findbar.css?v=5800f209">
+<script src="../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

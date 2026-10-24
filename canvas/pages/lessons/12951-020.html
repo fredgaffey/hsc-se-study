@@ -1,0 +1,241 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.13 Minimise Vulnerabilities — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 3 (Term 4: Weeks 5-6) Secure Software Architecture</div>
+<h1 style="margin-top:.2rem">1.13 Minimise Vulnerabilities</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-13-minimise-vulnerabilities" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Design, develop and implement secure code to minimise vulnerabilities in user action controls, including:<br class="card-text"><span class="card-text" style="font-size: 18pt;"><span style="font-size: 10pt;">•</span></span> broken authentication and session management<br class="card-text"><span class="card-text" style="font-size: 18pt;"><span style="font-size: 10pt;">•</span></span> cross-site scripting (XSS) and cross-site request forgery (CSRF)<br class="card-text"><span class="card-text" style="font-size: 18pt;"><span style="font-size: 10pt;">•</span></span> invalid forwarding and redirecting<br class="card-text"><span class="card-text" style="font-size: 18pt;"><span style="font-size: 10pt;">•</span></span> race conditions</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:<br></span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand common vulnerabilities related to user action controls in software applications.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Implement secure coding practices to minimize the risks of attacks that exploit these vulnerabilities.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 12pt;"><span style="font-size: 10pt;">Students can identify vulnerabilities such as broken authentication, XSS, CSRF, and race conditions.</span></span></li>
+<li class="card-text"><span style="font-size: 12pt;"><span style="font-size: 10pt;">Students are able to write secure code to mitigate these vulnerabilities.</span></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<p>In modern software development, applications are frequently exposed to numerous threats, particularly in handling user interactions. Vulnerabilities in user action controls, such as broken authentication, cross-site scripting (XSS), and race conditions, can leave applications susceptible to attacks that compromise data integrity, security, and user privacy.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>Broken Authentication</strong></h3>
+<div class="dp-panel-content ">
+<p>Broken authentication and session management could allow attackers to bypass authentication mechanisms, hijack user sessions to impersonate users and gain unauthorised access to server resources.&nbsp;</p>
+<p>Broken authentication occurs when authentication mechanisms are not implemented securely.&nbsp;</p>
+<ul>
+<li>Weak passwords: Lack of input validation where client users are allowed to set short, easily guessable passwords.</li>
+<li>Password storage: Passwords are stored as plaintext in the database. If the database is stolen, users' passwords are exposed.&nbsp;</li>
+<li>Password reuse: Allowing users to reuse old passwords weakens security over time.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/4760469505ed28f9.png" alt="image.png" width="491" height="158" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527333" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Mitigation Strategies:</strong></p>
+<ul>
+<li>Enforce strong password policies: Require complex passwords and encourage multi-factor authentication (MFA) for critical operations. Regex expressions and validation for expected passwords.&nbsp;</li>
+<li>Communication channels: Ensure that all authentication-related requests use HTTPS to encrypt data transmitted between the client and the server.</li>
+<li>Account lockout mechanisms: Implement a mechanism that temporarily locks the account after multiple failed login attempts to prevent brute force attacks.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>Broken Session Management</strong></h3>
+<div class="dp-panel-content">
+<p>Session management controls how sessions are created, maintained, and destroyed. Insecure session management can lead to session hijacking and fixation attacks.</p>
+<ul>
+<li>Session Hijacking: Attackers can steal active session tokens and impersonate users.</li>
+<li>Session Fixation: Attackers provide a session ID to a victim before logging in and then hijack their session using the same ID.</li>
+</ul>
+<p><br><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/11e4720b1f39bee2.png" alt="image.png" width="516" height="387" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527451" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Mitigation Strategies:</strong></p>
+<ul>
+<li>Random Generated Tokens: &nbsp;Each user session is associated with a unique session token.</li>
+<li>Hashed Storage: Session tokens are cryptographically hashed to ensure attackers cannot deduce the token generation algorithm.</li>
+<li>Session Expiration: Implement session timeouts and expiration of tokens&nbsp;</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>XSS</strong></h3>
+<div class="dp-panel-content ">
+<p>Cross-Site Scripting (XSS) is a client-side vulnerability where an attacker injects malicious JavaScript into a website's backend storage or directly into its content. When this malicious script is executed in the victim's browser, the attacker can gain unauthorised access to sensitive information or perform actions as the victim.&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/e6fde7d8d455c75d.png" alt="image.png" width="477" height="366" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527334" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Mitigation Strategies:</strong></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Input validation and sanitization: Always validate and sanitize user inputs before processing them. Ensure that special characters like &lt;, &gt;, and " are properly escaped.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Output encoding: Encode any user-generated data before displaying it on a webpage. Use functions that escape HTML, JavaScript, and CSS elements in the output.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Content Security Policy (CSP): Implement a strict Content Security Policy to restrict the execution of inline scripts and reduce the risk of script-based attacks.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>CSRF</strong></h3>
+<div class="dp-panel-content">
+<p>Cross-site request forgery occurs<span> when an attacker tricks a user into performing unwanted actions where they are already authenticated. An attacker <em>forges</em> a request by exploiting the fact that the user is already authenticated, with session tokens stored in the browser.</span></p>
+<p><span>If the attacker can trick the user into interacting with a malicious website (hence, "cross-site"), the browser automatically includes the stored session tokens when making the request. The server cannot distinguish between a legitimate user-initiated request and the forged one (as the session token is passed in), and assumes the authenticated user initiated it and grants authorisation.&nbsp;&nbsp;</span></p>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/9bd03b08eb66ce42.png" alt="image.png" width="660" height="372" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527335" data-api-returntype="File" loading="lazy"></span></p>
+<p><strong>Mitigation Strategies:</strong></p>
+<p><a class="inline_disabled" href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" target="_blank">CSRF Cheat Sheat</a></p>
+<ul>
+<li>CSRF Token: Create CSRF tokens to verify where a request is coming from. Each CSRF token is linked to a specific user session, making it unique for every user. Allow access to server resources only if both the CSRF token and session token match the user's session.</li>
+<li>Brower Storage: Configure HTTP-only cookies with the SameSite attribute to ensure cookies are only sent with requests from the same front-end URL, preventing them from being shared with other sites.</li>
+</ul>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<p class="card-text">IMPORTANT: Cross-Site Scripting (XSS) can defeat most CSRF mitigation techniques!&nbsp;<br><span style="color: var(--bs-card-color); background-color: var(--bs-card-bg); font-family: inherit; font-size: 1rem;">If a </span><code>&lt;script&gt;</code><span style="color: var(--bs-card-color); background-color: var(--bs-card-bg); font-family: inherit; font-size: 1rem;"> tag executes a API request within it, even with HTTP-only cookies, all credentials can be sent with the cookies, making them vulnerable.</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>Invalid Forwarding and Redirecting</strong></h3>
+<div class="dp-panel-content">
+<p>Invalid forwarding and redirecting occur when attackers manipulate URL parameters to redirect users to unintended locations or bypass authentication and authorization checks.&nbsp;</p>
+<p><strong>Risks:</strong></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Open Redirect Vulnerabilities: Attackers can manipulate redirect parameters to send users to malicious websites, leading to phishing attacks or malware distribution.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Unintended Access to Restricted Pages: An attacker could exploit forwarding mechanisms to bypass access controls and access sensitive pages without proper authorization.</p>
+<p><strong>Mitigation Strategies:</strong></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Whitelist redirect destinations: Instead of allowing freeform redirects, restrict redirects to a predefined list of trusted URLs.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Implement proper access controls: Ensure that redirects and forwards check the user’s authentication status and permissions before granting access to the destination.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Parameter validation: Validate and sanitize any user-controlled input, such as URLs and parameters, before redirecting users.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/9ca79b7619ffcca5.png" alt="7-1.png" width="731" height="227" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527336" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>Race Conditions</strong></h3>
+<div class="dp-panel-content">
+<p>Race conditions occur when multiple processes or threads access and manipulate shared resources in an unsynchronised manner, leading to data corruption or unintended behaviour. These vulnerabilities are particularly prevalent in multi-threaded applications or systems that handle concurrent requests.</p>
+<p>By default, Flask servers run synchronously (each request is processed sequentially). However, there are ways to run the server asynchronously, such as via an ASGI server like Hypercorn or Uvicorn.&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-danger">
+<div class="card-body">
+<p class="card-text"><span style="color: var(--bs-card-color); background-color: var(--bs-card-bg); font-family: inherit; font-size: 1rem;"><strong>You are not expected to have a Flask server run asynchronously,</strong> but your code should be designed to <strong>easily adapt to an asynchronous platform</strong> using existing <code>async</code> and <code>await</code> features.</span></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Risks:</strong></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Data Integrity Issues: When multiple users or processes attempt to modify the same data simultaneously, it can lead to inconsistent or incorrect data being saved or processed.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Exploitation of Time Gaps: Attackers can exploit the time gap between checking a condition and performing an operation. For example, in a banking application, an attacker might be able to transfer money multiple times by exploiting race conditions between balance checks and transaction approvals.</p>
+<p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/923e9633638aaccc.png" alt="image.png" width="805" height="260" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527454" data-api-returntype="File" loading="lazy"><em>Example of a simple race condition where the order of threads changes the result</em></p>
+<p><strong>Mitigation Strategies:</strong></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Locking mechanisms: Use locking mechanisms (e.g., mutexes or semaphores) to ensure that only one process can access a critical section of code or resource at a time.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Atomic operations: Where possible, use atomic operations to ensure that critical tasks are completed in one step, avoiding interruptions by other processes.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Queue management: Implement queue systems that control the order of operations and prevent concurrent access to sensitive data or resources.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Why User Action Control Security is Critical</strong></h4>
+<p>Ensuring security in user action controls is a vital aspect of secure software development. These vulnerabilities directly impact the user experience and can lead to severe breaches, including unauthorised access, data theft, or manipulation of system processes. Understanding these threats and implementing strong defences helps to build trust between users and the application, while also safeguarding sensitive information.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-primary">
+<div class="card-body">
+<h3 class="card-title">GuidedCTF</h3>
+<p class="card-text">Explore a hands-on exercise in SQL injection vulnerability exploitation by following this <a class="inline_disabled" href="https://guidedctf.sec.edu.au/sqli1/login" target="_blank">link</a>.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Emerging Threats and Solutions</strong></h4>
+<p>With the rise of more sophisticated attack techniques, traditional defences against vulnerabilities like XSS and CSRF are no longer sufficient. Emerging solutions include:</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Web Application Firewalls (WAFs): Automatically filter and monitor HTTP requests to block attacks such as XSS, SQL Injection, and CSRF before they reach the application.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Zero Trust Architecture: Every user action must be verified and authenticated, regardless of their previous authentication state, ensuring that every interaction is treated as potentially harmful unless proven otherwise.</p>
+<p>&nbsp;</p>
+<h4><strong>Practical Implementation Tips</strong></h4>
+<p>To ensure a secure development lifecycle:</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Security Audits and Code Reviews: Regularly perform audits and peer code reviews with a focus on identifying potential vulnerabilities in user action controls.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Integrating Security Tools: Leverage tools such as static analysis scanners and automated vulnerability testing platforms (e.g., OWASP ZAP) in your CI/CD pipeline.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Security Training: Developers should receive regular training on secure coding practices to stay current with the latest vulnerabilities and mitigation techniques.</p>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-13-minimise-vulnerabilities" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube-nocookie.com/embed/2RmUMmUj3u8?si=YoAKv9AckcfU4qC5</span></div></div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" target="_blank">Cross-Site Request Forgery Prevention Cheat Sheet</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul>
+<li class="card-text"><a class="inline_disabled" title="Link" href="https://edstem.org/au/courses/19403/lessons" target="_blank">Race Conditions</a></li>
+</ul>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.13%20Minimise%20Vulnerabilities.pptx?d=wffc2915d727a40a68be625a672b7242d&amp;csf=1&amp;web=1&amp;e=wqcuAH">1.13 Minimise Vulnerabilities.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-13-minimise-vulnerabilities" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={ffc2915d-727a-40a6-8be6-25a672b7242d}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-019.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-021.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

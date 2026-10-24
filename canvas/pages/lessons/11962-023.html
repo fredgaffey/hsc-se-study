@@ -1,0 +1,236 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.13 Data types — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 3 (Term 1: Weeks 5-6) Programming Fundamentals</div>
+<h1 style="margin-top:.2rem">1.13 Data types</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-13-data-types" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Investigate standard data types<br class="card-text">- <span class="card-text">char (character) and string</span><br class="card-text">- <span class="card-text">Boolean</span><br class="card-text">- <span class="card-text">real</span><br class="card-text">- <span class="card-text">single precision floating point</span><br class="card-text">- <span class="card-text">integer</span><br class="card-text">- <span class="card-text">date and time</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Explore and understand standard data types, including char (character), string, Boolean, real, single precision floating point, integer, and date and time, and their applications in programming.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Identify and define each standard data type.</span></li>
+<li><span style="font-size: 13.3333px;">Understand the purpose and use of each data type in programming.</span></li>
+<li><span style="font-size: 13.3333px;">Provide examples of how each data type can be used in a programming context.</span></li>
+<li><span style="font-size: 13.3333px;">Recognise the differences and similarities between various data types.</span></li>
+<li><span style="font-size: 13.3333px;">Determine appropriate data types for specific scenarios or problems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content<strong></strong></h3>
+<p class="amber-el amber-paragraph amber-content">When variables are declared, they are <strong class="amber-el amber-bold">assigned a specific Data Type</strong> which tell the computer <strong class="amber-el amber-bold">how much memory is required to store a value.</strong></p>
+<p class="amber-el amber-paragraph amber-content">The most common Data Types used in programming are:</p>
+<ul class="amber-el amber-list">
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Integer (Int)</p>
+</li>
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Floating Point (Float)</p>
+</li>
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Character (Char)</p>
+</li>
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">String (Str)</p>
+</li>
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Boolean (Bool)</p>
+</li>
+</ul>
+<p class="amber-el amber-paragraph amber-content">Variables can <strong class="amber-el amber-bold">only store values that are of its own Data Type</strong> unless converted using <strong class="amber-el amber-bold">Type Casting.</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning">Depending on the Data Type being converted, there may be a <strong class="amber-el amber-bold">loss of data</strong> (i.e. Type Casting from a Floating Point to Integer will lose the fraction component).</p>
+<p>&nbsp;</p>
+<h4><strong>Integers</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Like in Mathematics, Integers are <strong class="amber-el amber-bold">whole numbers with no fractions or decimals.</strong> They are commonly stored as <strong class="amber-el amber-bold">4 bytes (32 bits)</strong> which allow for the <strong class="amber-el amber-bold">accurate</strong> representation of all whole numbers between <strong class="amber-el amber-bold">-2,147,483,648 to 2,147,483,647.</strong></p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">-27, -5, 0, 4, 15, 207</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content"><strong class="amber-el amber-bold">Note:</strong> The value of the integer itself <strong class="amber-el amber-bold">does not affect the amount of memory used to store it</strong> (i.e. the integers -5, 1 and 500,000 are all 4 bytes in size).</p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Example</strong></p>
+<div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp;Note that in Python the function <strong>type() </strong>will return the type of a variable. It is being used here for demonstration purposes.<br></span></p>
+</div>
+</div>
+<p><img src="../../assets/1e36b0f1373dac49.png" alt="Screenshot 2024-02-22 at 4.16.14 pm.png" width="265" height="60" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197782" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Output</strong></p>
+<p><img src="../../assets/26ba86e2771748a5.png" alt="Screenshot 2024-02-22 at 4.16.26 pm.png" width="149" height="41" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197783" data-api-returntype="File" loading="lazy"></p>
+<h4><strong>Floating Point Numbers </strong></h4>
+<p class="amber-el amber-paragraph amber-content">Floating Point Numbers can represent decimal point values and can thus represent real numbers (not just whole numbers but also fractions). They are commonly stored as 4 bytes (32 bits) which allow for the <strong class="amber-el amber-bold">approximate</strong> representation of decimal values.</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">-15.67, -6.5, 0, 7.08, 72.57</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content"><strong class="amber-el amber-bold">Note:</strong> The value of the floating point number itself <strong class="amber-el amber-bold">does not affect the amount of memory used to store it</strong> (i.e. the integers -5.8, 0 and 708.91 are all 4 bytes in size).</p>
+<p class="amber-el amber-callout amber-content amber-callout-warning">Floating Point Numbers are only approximate representations of a given number, so it will <strong class="amber-el amber-bold">pose a risk to applications that require a great deal of accuracy.</strong> Thus, there are other data types that use more memory to <strong class="amber-el amber-bold">store more accurate representations of numbers</strong> such as <strong class="amber-el amber-bold">Double</strong> which uses 8 bytes instead of 4.</p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Example</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong><img src="../../assets/30ee830398de6213.png" alt="Screenshot 2024-02-22 at 4.21.00 pm.png" width="338" height="58" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197784" data-api-returntype="File" loading="lazy"></strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Output</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong><img src="../../assets/fde446cfd5bd3844.png" alt="Screenshot 2024-02-22 at 4.21.21 pm.png" width="200" height="48" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196919" data-api-returntype="File" loading="lazy"></strong></p>
+<h4 class="amber-el amber-callout amber-content amber-callout-warning"><strong>Characters</strong></h4>
+<p>Characters are <strong class="amber-el amber-bold">single letters and symbols</strong> that are <strong class="amber-el amber-bold">defined and encoded within the ASCII table</strong> by being assigned a <strong class="amber-el amber-bold">unique numerical value.</strong> They are commonly stored as <strong class="amber-el amber-bold">1 byte (8 bits)</strong> per character and thus <strong class="amber-el amber-bold">limits the range of letters and symbols that can be represented</strong> using this data type.</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">'a', 'b', 'c', 'A', 'B', 'C', '$', '@', '%', ' ', '\n', '\t'</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content"><strong class="amber-el amber-bold">Note:</strong> '\n' means to create a new line of text and '\t' means to print a tab space</p>
+<p class="amber-el amber-callout amber-content amber-callout-info">The most popular character encoding method on the web is UTF-8 as it allows for the representation of other languages and emojis.</p>
+<div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp;Note that Python does not have a specific data type for characters. Instead, they are simply represented as strings with a length of one.<br></span></p>
+</div>
+</div>
+<h4><strong>Strings</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Strings are <strong class="amber-el amber-bold">an array of characters</strong>. Since each character is stored as 1 byte each, a string's size depends on the number of characters in the string.</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre"># These two strings are the same <br>string_1 = "Hello World"<br>string_2 = ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd']</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">Hence, we can interact with a string like an array (see 1.15 for more information about arrays).</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">string = "Hello World"<br><br># Output: 'o'<br>print(string[4])</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">Combining multiple strings together is called <strong class="amber-el amber-bold">Concatenation.</strong></p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">string_1 = "Hello" <br>string_2 = "World" <br>full_string = string_1 + ' ' + string_2<br><br># Output: "Hello World"<br>print(full_string)</pre>
+<p><strong class="amber-el amber-bold" style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">Note:</strong><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;"> ' ' is a </span><i class="amber-el amber-italic" style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">space</i> <span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;"> character</span></p>
+</div>
+</div>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Example</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><img src="../../assets/cd4f5e6ba6057099.png" alt="Screenshot 2024-02-22 at 4.24.16 pm.png" width="549" height="109" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197785" data-api-returntype="File" loading="lazy"></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Output</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><img src="../../assets/7acdd241a68514e9.png" alt="Screenshot 2024-02-22 at 4.24.27 pm.png" width="277" height="76" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196924" data-api-returntype="File" loading="lazy"></p>
+<h4 class="amber-el amber-callout amber-content amber-callout-warning"><strong>Boolean</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Booleans are a <strong class="amber-el amber-bold">two-state data type</strong> because they <strong class="amber-el amber-bold">only have two possible values, either TRUE or FALSE.</strong> They are mainly associated with conditional statements (in loops, if statements, etc) that change the flow of logic in a program. They are commonly stored as <strong class="amber-el amber-bold">1 bit</strong> and thus <strong class="amber-el amber-bold">limits the data type as either a literal 1 or 0.</strong></p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">flag = false <br><br>IF flag = true THEN<br>    Display "Flag is set to TRUE" <br>ELSE <br>    Display "Flag is set to FALSE" <br>ENDIF</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">In the example above, the program would print "Flag is set to FALSE" because <strong class="amber-el amber-bold">if the boolean is not TRUE, then it must be FALSE.</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Example</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><img src="../../assets/e3678a232cd8e424.png" alt="Screenshot 2024-02-22 at 4.25.43 pm.png" width="318" height="116" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196927" data-api-returntype="File" loading="lazy"></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Output</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><img src="../../assets/6612c9cc3a9185ec.png" alt="Screenshot 2024-02-22 at 4.25.57 pm.png" width="213" height="77" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196929" data-api-returntype="File" loading="lazy"></p>
+<h4 class="amber-el amber-callout amber-content amber-callout-warning"><strong>Date and Time</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Date and time is not a standard data type in Python, however we can use a module called <code>datetime</code> to work with dates and times. Here's an example of getting the current date and time.</p>
+<pre class="amber-el amber-paragraph amber-content"><span class="pythonkeywordcolor">import</span><span>&nbsp;datetime</span><br><br><span>current_time = datetime.datetime.now()</span><br><br><span># Output: 2024-02-23 16:16:05.864977</span><br><span class="pythonkeywordcolor">print</span><span>(current_time)</span></pre>
+<p class="amber-el amber-callout amber-content amber-callout-warning">We can also specify our own date and time.</p>
+<pre class="amber-el amber-callout amber-content amber-callout-warning"><span class="pythonkeywordcolor">import</span>&nbsp;datetime<br><br>birthday = datetime.datetime(2024, 8, 3)<br><br># Output: 2024-02-23 16:16:05.864977<br><span class="pythonkeywordcolor">print</span>(birthday)</pre>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Note:</strong> The datetime function <strong>requires</strong> at least 3 parameters <code>(year, month, day)</code>. The function can also take in further optional parameters <code>(year, month, day, hour, minute, second, microsecond, timezone)</code>. Any optional parameters that are left out are set to a default value of 0.</p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>E</strong><strong>xample</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong><img src="../../assets/0b5f0e9ee30fa357.png" alt="Screenshot 2024-02-22 at 4.27.24 pm.png" width="433" height="101" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196932" data-api-returntype="File" loading="lazy"></strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Output</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><img src="../../assets/b6d9894eea783746.png" alt="Screenshot 2024-02-22 at 4.27.42 pm.png" width="293" height="41" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196935" data-api-returntype="File" loading="lazy"></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-13-data-types" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/bgxbwcWzi2w?si=RQ3xwaU8LDf9tTn3</span></div></div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank">Standard Data Types</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EQUB7GYanTZGqxHKqmgu9wsB6n4Q7UfcKggh4gpE_igRXw?e=MUveuv" target="_blank">1.13 Data Types</a></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-13-data-types" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={66ec0105-9d1a-4636-ab11-caaa682ef70b}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank"></a></p>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="11962-022.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-024.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

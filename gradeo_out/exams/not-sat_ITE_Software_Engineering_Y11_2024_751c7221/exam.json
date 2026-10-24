@@ -1,0 +1,2348 @@
+{
+  "exam": "ITE Software Engineering Y11 2024",
+  "syllabus": "Software Engineering",
+  "publisher": "Independent Trials",
+  "topics": [
+    "Programming Fundamentals",
+    "The Object-Oriented Paradigm",
+    "Programming Mechatronics"
+  ],
+  "outcomes": [
+    "SE-11-02",
+    "SE-11-01",
+    "SE-11-08",
+    "SE-11-06",
+    "SE-11-03",
+    "SE-11-05"
+  ],
+  "status": "LIVE",
+  "results_released": false,
+  "submitted": null,
+  "started": null,
+  "duration_minutes": 95,
+  "markers": [],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/751c7221-da86-4477-bec2-106e075fea3f",
+  "marking_session_id": "751c7221-da86-4477-bec2-106e075fea3f",
+  "exam_id": "6138ef66-48f7-42ae-8ba6-77c1154051f2",
+  "session_id": "86766607-54ab-4ab7-bf9c-8be70861277d",
+  "total_mark": null,
+  "parts_answered": 0,
+  "parts_marked": 0,
+  "parts_total": 29,
+  "total_available": 57,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "d2a612de-37ad-43c2-9fa5-fa651417e5cb",
+      "title": "Which of these is NOT a feature of the Agile development approach?  (Question 1, ITE 2024)",
+      "topic": "Which of these is NOT a feature of the Agile development approach?",
+      "label": "Question 1",
+      "kind": "ITE 2024",
+      "source": null,
+      "copyright": null,
+      "stimulus": "For question 1-9 select the choice that best answers the question.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "92ada154-437e-4049-8fd1-b2cc42484e56",
+          "part": "Question 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of these is NOT a feature of the Agile development approach?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "The client is involved with the development process.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Working versions of the software are regularly released for use.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "The nature of the final product is clearly understood at the start.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Developers can incorporate changing requirements.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "264030a6-e327-485e-b23b-fe01d4384097",
+      "title": "What system modelling tool is represented by the symbols below? (Question 2, ITE 2024)",
+      "topic": "What system modelling tool is represented by the symbols below?",
+      "label": "Question 2",
+      "kind": "ITE 2024",
+      "source": null,
+      "copyright": null,
+      "stimulus": "![](assets/79895a69-8aff-45d7-9b22-b27618fb0cca.png)",
+      "stimulus_images": [
+        "assets/79895a69-8aff-45d7-9b22-b27618fb0cca.png"
+      ],
+      "parts": [
+        {
+          "part_id": "bb074ed6-8831-4ca9-bafa-62b35958d8e8",
+          "part": "Question 2",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "What system modelling tool is represented by the symbols in the stimulus?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Context diagram",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Data flow diagram",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Structure chart",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Storyboard",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "f9080e27-7e8f-41e1-b9e7-1e074db2f45d",
+      "title": "Which of the following only contains primitive data types? (Question 3, ITE 2024)",
+      "topic": "Which of the following only contains primitive data types?",
+      "label": "Question 3",
+      "kind": "ITE 2024",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "558bf5a4-7cd8-4787-8c4f-392a6edb87a1",
+          "part": "Question 3",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following only contains primitive data types?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Boolean, integer, character",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "String, array, floating-point",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Floating-point, character, variable",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Binary, octal, decimal",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question_id": "bc6bcac4-a0e2-40c6-86b2-78d8d4c4a669",
+      "title": "Python code (Question 4, ITE 2024 Y11)",
+      "topic": "Python code",
+      "label": "Question 4",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": "Consider the following Python code:\n\nclass Animal:\n\ndef \\_\\_init\\_\\_(self, name):\n\nself.\\_name = name\n\ndef make\\_sound(self):\n\nraise NotImplementedError(\"Subclass must implement method\")\n\nclass Dog(Animal):\n\ndef make\\_sound(self):\n\nreturn \"Woof\"\n\nclass Cat(Animal):\n\ndef make\\_sound(self):\n\nreturn \"Meow\"\n\ndef describe\\_animal(animal):\n\nprint(f\"{animal.\\_name} says {animal.make\\_sound()}\")\n\ndog = Dog(\"Buddy\")\n\ncat = Cat(\"Whiskers\")\n\ndescribe\\_animal(dog)\n\ndescribe\\_animal(cat)",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "39a6fe56-71cb-472e-9220-86c7ac7976a5",
+          "part": "Question 4",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following statements is correct?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "The make_sound method in the Animal class is an example of inheritance.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "The Animal class is an example of generalisation because it hides the details of the _name attribute.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "The describe_animal function demonstrates abstraction by working with the specific types Dog and Cat.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "The Dog and Cat classes demonstrate polymorphism by implementing the make_sound method differently.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question_id": "e768bf55-dde1-4560-9113-022f5c81fbd9",
+      "title": "Which of the following best describes the facade design pattern in object-oriented programming? (Question 5, ITE 2024 Y11)",
+      "topic": "Which of the following best describes the facade design pattern in object-oriented programming?",
+      "label": "Question 5",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "00c5ba24-a92b-4bb8-8105-0f85358c988c",
+          "part": "Question 5",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best describes the facade design pattern in object-oriented programming?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It allows objects to communicate directly, bypassing the need for a mediator.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It provides a simplified interface to a complex subsystem, making it easier to use.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "It ensures that a class has only one instance and provides a global point of access to it.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "It defines a family of algorithms, encapsulates each one, and makes them interchangeable.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question_id": "c107d57a-fcbe-4b9a-afff-e293d33bcf14",
+      "title": "Which of the following concepts in object-oriented programming refers to the bundling of data and methods within a single unit? (Question 6, ITE 2024 Y11)",
+      "topic": "Which of the following concepts in object-oriented programming refers to the bundling of data and methods within a single unit?",
+      "label": "Question 6",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "31480c02-b28d-476d-bbe3-1750c37e5225",
+          "part": "Question 6",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following concepts in object-oriented programming refers to the bundling of data and methods within a single unit?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Inheritance",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Abstraction",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Encapsulation",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Polymorphism",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question_id": "b66397aa-57d4-499f-8b1f-cc63d92938a9",
+      "title": "The crane has how many degrees of freedom? (Question 7, ITE 2024 Y11)",
+      "topic": "The crane has how many degrees of freedom?",
+      "label": "Question 7",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": "![](assets/6985eca3-117a-40f2-9d04-fd650f74e9c0.png)",
+      "stimulus_images": [
+        "assets/6985eca3-117a-40f2-9d04-fd650f74e9c0.png"
+      ],
+      "parts": [
+        {
+          "part_id": "6890ff8e-2482-4261-9131-0cc49ca1e52f",
+          "part": "Question 7",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "The crane shown is used to move containers off ships and onto trucks. The crane has how many degrees of freedom?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "2",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "3",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "4",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "6",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question_id": "cbc14707-4c3a-48a9-b71d-10168be63daa",
+      "title": "What is the function of resistors in an electrical circuit? (Question 8, ITE 2024 Y11)",
+      "topic": "What is the function of resistors in an electrical circuit?",
+      "label": "Question 8",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "cb03bcd3-1270-479c-ac28-5b31dc33df49",
+          "part": "Question 8",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "What is the function of resistors in an electrical circuit?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "To store and release electrical energy",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "To increase power or current in a circuit",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "To restrict current flow to a single direction",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "To limit the flow of electrical current in a circuit",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question_id": "8ca14549-54d4-40c9-9179-417814e846ab",
+      "title": "Which of the following statements represents an Assembly language statement? (Question 9, ITE 2024 YR11)",
+      "topic": "Which of the following statements represents an Assembly language statement?",
+      "label": "Question 9",
+      "kind": "ITE 2024 YR11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "aa52240c-5d7f-40ce-8125-8e536eeca64a",
+          "part": "Question 9",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following statements represents an Assembly language statement?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "x = 2",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "MOV EAX, 5",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "001 1 0010",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "#include <stdio.h>",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question_id": "ee3f1b8b-d5cc-4352-b94d-2e968fe63767",
+      "title": "What control structures are present in the following flowchart algorithm? (Question 10, ITE 2024 Y11)",
+      "topic": "What control structures are present in the following flowchart algorithm?",
+      "label": "Question 10",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": "For questions 10-12 tick each option that answers the question. (Multiple items may be selected).\n\n![](assets/6e36321a-35b7-4a4a-bd5c-f6d69e616683.png)",
+      "stimulus_images": [
+        "assets/6e36321a-35b7-4a4a-bd5c-f6d69e616683.png"
+      ],
+      "parts": [
+        {
+          "part_id": "7c1b4f72-bffe-4f06-9fdc-ba0d03619f82",
+          "part": "Question 10",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "What control structures are present in the following flowchart algorithm?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Sequence",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Binary selection",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Multiway selection",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Pre-test repetition",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "E",
+                "text": "Post-test repetition",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "F",
+                "text": "Counted loop",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "G",
+                "text": "Subroutine",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A",
+              "B",
+              "E",
+              "G"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question_id": "a6da9ced-3407-4a31-b4ce-e86a6b65bd1c",
+      "title": "Which of the following statements are correct regarding the effectiveness of this code implementation? (Question 11, ITE 2024 Y11)",
+      "topic": "Which of the following statements are correct regarding the effectiveness of this code implementation?",
+      "label": "Question 11",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": "You are evaluating the following Python code. The code is intended to verify user credentials and handle login attempts.\n\ndef login(username, password):\n\n\\# Dummy user credentials\n\nstored\\_username = \"admin\"\n\nstored\\_password = \"password123\"\n\nif username == stored\\_username and password == stored\\_password:\n\nreturn \"Login successful\"\n\nelse:\n\nreturn \"Invalid credentials\"\n\n\\# Example usage\n\nprint(login(\"admin\", \"password123\")) # Expected output: Login successful\n\nprint(login(\"user\", \"pass\")) # Expected output: Invalid credentials",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "d749d153-5bb1-4f4f-b22d-d7571d7e202c",
+          "part": "Question 11",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following statements are correct regarding the effectiveness of this code implementation?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "The code effectively handles valid and invalid login attempts based on the hardcoded credentials.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "The implementation includes mechanisms for password encryption and secure storage of user credentials.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "The code has been tested with a variety of input scenarios to ensure that it behaves correctly in all cases.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "The code is designed to handle various types of input, including special characters and different username formats.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "E",
+                "text": "The code uses hardcoded credentials, which is a security risk and does not follow best practices for managing sensitive information.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "F",
+                "text": "The code is simple and easy to understand but lacks functionality for handling multiple users or password complexity requirements.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A",
+              "E",
+              "F"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question_id": "45246b8c-166e-4e32-a645-d9b8d28f49e1",
+      "title": "Which of the following are features of closed loop control systems? (Question 12, ITE 2024 Y11)",
+      "topic": "Which of the following are features of closed loop control systems?",
+      "label": "Question 12",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "a6b44cc2-2332-4bda-9d47-24afac306c34",
+          "part": "Question 12",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following are features of closed loop control systems?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "System stability as operation is adjusted continually to maintain a steady state.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Inputs are not altered by the system, hence outputs are predictable.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Automatic adaptation to changes in the environment.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Simplicity as tasks are completed sequentially based on preset inputs.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "E",
+                "text": "Feedback loop continually monitors the output and adjust the inputs accordingly.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "F",
+                "text": "Differences between the desired and actual output are not detected.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A",
+              "C",
+              "E"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question_id": "9d8c7d69-68db-40a8-bc41-1ede0142b457",
+      "title": "Match each set of data to the most appropriate data structure (Q13, ITE Y11 2024)",
+      "topic": "Match each set of data to the most appropriate data structure",
+      "label": "Q13",
+      "kind": "ITE Y11 2024",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "33634a98-736c-4da5-a093-e4deead83ec2",
+          "part": "Question 13",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "RICH_TABLE",
+          "prompt": "Using the drop-down menus, match each set of data to the most appropriate data structure.",
+          "prompt_images": [],
+          "question": {
+            "table": [
+              [
+                {
+                  "type": "text",
+                  "text": "Details for a single student (such as name and date of birth)"
+                },
+                {
+                  "type": "dropdown",
+                  "options": [
+                    "Array",
+                    "2D Array",
+                    "Record",
+                    "Stack",
+                    "Tree",
+                    "File"
+                  ],
+                  "correct": [
+                    "Record"
+                  ],
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "Average daily temperatures across a month"
+                },
+                {
+                  "type": "dropdown",
+                  "options": [
+                    "Array",
+                    "2D Array",
+                    "Record",
+                    "Stack",
+                    "Tree",
+                    "File"
+                  ],
+                  "correct": [
+                    "Array"
+                  ],
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "High score data for a game"
+                },
+                {
+                  "type": "dropdown",
+                  "options": [
+                    "Array",
+                    "2D Array",
+                    "Record",
+                    "Stack",
+                    "Tree",
+                    "File"
+                  ],
+                  "correct": [
+                    "File"
+                  ],
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "File directory structure in a computer"
+                },
+                {
+                  "type": "dropdown",
+                  "options": [
+                    "Array",
+                    "2D Array",
+                    "Record",
+                    "Stack",
+                    "Tree",
+                    "File"
+                  ],
+                  "correct": [
+                    "Tree"
+                  ],
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "Sequence of operations performed by a calculator"
+                },
+                {
+                  "type": "dropdown",
+                  "options": [
+                    "Array",
+                    "2D Array",
+                    "Record",
+                    "Stack",
+                    "Tree",
+                    "File"
+                  ],
+                  "correct": [
+                    "Stack"
+                  ],
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "The squares on a chessboard"
+                },
+                {
+                  "type": "dropdown",
+                  "options": [
+                    "Array",
+                    "2D Array",
+                    "Record",
+                    "Stack",
+                    "Tree",
+                    "File"
+                  ],
+                  "correct": [
+                    "2D Array"
+                  ],
+                  "yours": null
+                }
+              ]
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "filled_cells": 0
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": "-   Details for a single student (such as name and date of birth) = Record\n-   Average daily temperatures across a month = Array\n-   High score data for a game = File\n-   File directory structure in a computer = Tree\n-   Sequence of operations performed by a calculator = Stack\n-   The squares on a chessboard = 2D Array",
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question_id": "9c7cdc8c-c399-4d0a-a65c-0f40b7ba0cfe",
+      "title": "Match the description with the corresponding type of testing (Q14, ITE Y11 2024)",
+      "topic": "Match the description with the corresponding type of testing",
+      "label": "Q14",
+      "kind": "ITE Y11 2024",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "50f30704-2d16-4f5d-9eae-c19eeac4e566",
+          "part": "Question 14",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "RICH_TABLE",
+          "prompt": "Using the drop-down menus, match the description with the corresponding type of testing.",
+          "prompt_images": [],
+          "question": {
+            "table": [
+              [
+                {
+                  "type": "text",
+                  "text": "Testing the software with no knowledge of the internal workings or structure, focusing only on the outputs in response to selected inputs."
+                },
+                {
+                  "type": "dropdown",
+                  "options": [
+                    "Unit testing",
+                    "Subsystem testing",
+                    "System testing",
+                    "Black box testing",
+                    "Grey box testing",
+                    "White box testing"
+                  ],
+                  "correct": [
+                    "Black box testing"
+                  ],
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "Testing the software with partial knowledge of the internal workings, often used to design test cases while having an understanding of the code or logic."
+                },
+                {
+                  "type": "dropdown",
+                  "options": [
+                    "Unit testing",
+                    "Subsystem testing",
+                    "System testing",
+                    "Black box testing",
+                    "Grey box testing",
+                    "White box testing"
+                  ],
+                  "correct": [
+                    "Grey box testing"
+                  ],
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "Testing individual components or modules of a system in isolation to ensure they work correctly."
+                },
+                {
+                  "type": "dropdown",
+                  "options": [
+                    "Unit testing",
+                    "Subsystem testing",
+                    "System testing",
+                    "Black box testing",
+                    "Grey box testing",
+                    "White box testing"
+                  ],
+                  "correct": [
+                    "Unit testing"
+                  ],
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "Testing the complete and integrated system to evaluate the system's compliance with its specified requirements."
+                },
+                {
+                  "type": "dropdown",
+                  "options": [
+                    "Unit testing",
+                    "Subsystem testing",
+                    "System testing",
+                    "Black box testing",
+                    "Grey box testing",
+                    "White box testing"
+                  ],
+                  "correct": [
+                    "System testing"
+                  ],
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "Testing the software with full knowledge of the internal workings, focusing on the flow of inputs and outputs through the code, ensuring all paths are tested."
+                },
+                {
+                  "type": "dropdown",
+                  "options": [
+                    "Unit testing",
+                    "Subsystem testing",
+                    "System testing",
+                    "Black box testing",
+                    "Grey box testing",
+                    "White box testing"
+                  ],
+                  "correct": [
+                    "White box testing"
+                  ],
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "Testing a combination of integrated modules or components to verify interactions between them."
+                },
+                {
+                  "type": "dropdown",
+                  "options": [
+                    "Unit testing",
+                    "Subsystem testing",
+                    "System testing",
+                    "Black box testing",
+                    "Grey box testing",
+                    "White box testing"
+                  ],
+                  "correct": [
+                    "Subsystem testing"
+                  ],
+                  "yours": null
+                }
+              ]
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "filled_cells": 0
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question_id": "c137723c-5cc3-4b9b-a4e2-9610e7066a7e",
+      "title": "Is a structured approach more suited to the development of large, critical software systems? (Question 16, ITE 2024 Y11)",
+      "topic": "Is a structured approach more suited to the development of large, critical software systems?",
+      "label": "Question 16",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "141265b9-cb58-4372-8b50-8869d9c11a4e",
+          "part": "Question 16",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Is a structured approach more suited to the development of large, critical software systems? Justify your response.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Gives two valid reasons for the use of a structured approach."
+            },
+            {
+              "marks": "1",
+              "criterion": "Gives at least one valid reason for the use of a structured approach."
+            }
+          ],
+          "marking_rubric": "Answers may include:\n\n-   The use of sequential stages provides clear milestones, making it easier to manage complex projects.\n    \n-   Each phase produces detailed documentation, which is essential to understand and manage a large project.\n    \n-   Well-defined requirements make it easier to effectively implement the varied aspects of a very large, complex project.\n    \n-   Thorough testing helps ensure accuracy, reliability and safety, which are necessary for critical systems.",
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question_id": "16a32656-62b2-4c29-8459-7c11d969590b",
+      "title": "Describe the purpose of the testing stage of software development. (Question 17, ITE 2024 Y11)",
+      "topic": "Describe the purpose of the testing stage of software development.",
+      "label": "Question 17",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "60117240-625a-4c69-b293-6378f8757397",
+          "part": "Question 17",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe the purpose of the testing stage of software development.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Accurately describes the purpose of the testing stage; better answers will draw connections to quality assurance."
+            },
+            {
+              "marks": "1",
+              "criterion": "Makes a correct statement about the testing stage, without describing the purpose."
+            }
+          ],
+          "marking_rubric": "Answers may include:\n\n-   Ensure that the software meets the requirements\n    \n-   Ensure that no bugs or errors are present\n    \n-   Ensure that the software is compatible with all intended systems\n    \n-   Ensure that the software fulfils the quality assurance criteria",
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question_id": "47c63976-d0ae-4b8d-8e19-c368bf088e1e",
+      "title": "Distinguish between syntax and logic errors, providing an example of each (Question 18, ITE 2024 Y11)",
+      "topic": "Distinguish between syntax and logic errors, providing an example of each",
+      "label": "Question 18",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "505c1eaa-28c4-4a4a-8ca0-7499544c9e65",
+          "part": "Question 18",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Distinguish between syntax and logic errors, providing an example of each.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes the distinguishing features of syntax and logic errors, with use of examples."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes some feature of syntax and logic errors."
+            },
+            {
+              "marks": "1",
+              "criterion": "Describes a feature of syntax or logic errors, OR identifies an example."
+            }
+          ],
+          "marking_rubric": "Sample answer:\n\nSyntax errors occur when the code does not follow the rules of the programming language, such as “print hello world” in Python (missing parentheses), whereas logic errors occur when the program appears to function but does not produce the expected output, such as a loop that executes the wrong number of times.",
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question_id": "54f8a7a0-e5ba-41d3-8e56-216fcee69701",
+      "title": "Perform a desk check of the Python code below (Question 19, ITE 2024 Y11)",
+      "topic": "Perform a desk check of the Python code below",
+      "label": "Question 19",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": "def findMaximum(numbers):\n\nmax\\_value = numbers\\[0\\]\n\nfor num in numbers:\n\nif num > max\\_value:\n\nmax\\_value = num\n\nelse:\n\nmax\\_value = numbers\\[0\\]\n\nreturn max\\_value",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "56c86391-1b93-4fc0-9ea6-6f9231b6a9a9",
+          "part": "Question 19",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "RICH_TABLE",
+          "prompt": "Refer to the stimulus. Perform a desk check of the Python code below, when numbers = \\[2,4,8,6\\].",
+          "prompt_images": [],
+          "question": {
+            "table": [
+              [
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                }
+              ],
+              [
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                }
+              ]
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "filled_cells": 0
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Completes an accurate desk check, including the error and the duplication of the first check"
+            },
+            {
+              "marks": "2",
+              "criterion": "Completes a desk check with minor errors or omissions."
+            },
+            {
+              "marks": "1",
+              "criterion": "Attempts to perform a desk check, but contains many errors."
+            }
+          ],
+          "marking_rubric": "![](assets/a1c69917-859b-4508-8561-9a0b4461413b.png)",
+          "marking_rubric_images": [
+            "assets/a1c69917-859b-4508-8561-9a0b4461413b.png"
+          ],
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question_id": "d5011f0a-2144-40e0-a363-1949a8654c35",
+      "title": "Pseudocode Algorithm (Question 20, ITE 2024 Y11)",
+      "topic": "Pseudocode Algorithm",
+      "label": "Question 20",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": "A ‘magic square’ is a grid with a width and height of n, containing the numbers from 1 to n2. Each row, column, and diagonal adds up to the same sum. For example, in the grid below n is 3; the grid contains the numbers 1-9, and every row, column, and diagonal adds up to 15.\n\n![](assets/0b61efb6-d02d-49bb-bd76-ca64a38b107c.png)",
+      "stimulus_images": [
+        "assets/0b61efb6-d02d-49bb-bd76-ca64a38b107c.png"
+      ],
+      "parts": [
+        {
+          "part_id": "b8967ee9-b473-495f-b45e-ea51c3f9a100",
+          "part": "Question 20",
+          "marks_available": 5,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "Write an algorithm in pseudocode for a function which, when passed a 2D array of integers called “square”, will return True if the square is “magic” and False otherwise.",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": null
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 5,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "5",
+              "criterion": "Creates a substantially correct algorithm, using NESA&rsquo;s format for pseudocode, which attempts all of the following:\n\nChecks the size of the 2D array\n\nIterates through the 2D array\n\nCalculates the sum for each row and column\n\nCalculates the sum for each diagonal\n\nReturns true if all sums are equal\n\nReturns false otherwise"
+            },
+            {
+              "marks": "4",
+              "criterion": "Creates an algorithm in pseudocode which attempts at least four of the above criteria."
+            },
+            {
+              "marks": "3",
+              "criterion": "Creates an algorithm, or language-specific code, which attempts at least three of the above criteria."
+            },
+            {
+              "marks": "2",
+              "criterion": "Creates an algorithm or code which includes some of the required logic for two or more of the above criteria."
+            },
+            {
+              "marks": "1",
+              "criterion": "Creates an algorithm or code which addresses some part of the question."
+            }
+          ],
+          "marking_rubric": "![](assets/c9b59de4-d43e-4394-bcba-c8a2200cc2fe.png)\n\n![](assets/1c9e4b65-c996-4666-9c93-c835ebe4ce99.png)",
+          "marking_rubric_images": [
+            "assets/c9b59de4-d43e-4394-bcba-c8a2200cc2fe.png",
+            "assets/1c9e4b65-c996-4666-9c93-c835ebe4ce99.png"
+          ],
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question_id": "9aa578e7-768d-4efb-bf60-c054874f887d",
+      "title": "Describe ONE technique for optimising code performance. (Question 21, ITE 2024 Y11)",
+      "topic": "Describe ONE technique for optimising code performance.",
+      "label": "Question 21",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "05eb032d-789a-4be5-a647-f126dd302db7",
+          "part": "Question 21",
+          "marks_available": null,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe ONE technique for optimising code performance.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": null,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Describes ONE technique for optimising code performance."
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies ONE technique for optimising code performance."
+            }
+          ],
+          "marking_rubric": "Answers may include:\n\n-   Algorithm optimisation: using more efficient algorithms to reduce execution time and memory requirements. For example, changing the sorting algorithm used in a program to improve the sorting performance on large datasets.\n    \n-   Code refactoring: Revising and restructuring code to make it more efficient, such as removing redundant operations. For example, refactoring a loop that performs multiple operations per iteration by pre-computing values outside the loop to reduce the number of calculations that need to be performed inside the loop.",
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question_id": "bd63a3c6-a559-478b-a4d8-6b4d341d0a16",
+      "title": "Describe how version control systems support collaborative code development. (Question 22, ITE 2024 Y11)",
+      "topic": "Describe how version control systems support collaborative code development.",
+      "label": "Question 22",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "e5c150fc-a24a-4575-86b8-0e61ce8338b5",
+          "part": "Question 22",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe how version control systems support collaborative code development.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Describes ONE way that version control tools can assist with collaborative code development."
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies ONE way that version control tools can assist with collaborative code development OR identifies the purpose of version control tools."
+            }
+          ],
+          "marking_rubric": "Answers may include:\n\n-   Allows multiple developers to work on the same project simultaneously without overwriting each other's work - along with providing conflict resolution tools should multiple developers change the same code at the same time.\n    \n-   Keeps a record of all changes made to the codebase, allowing developers to review the work of others and revert changes if necessary.\n    \n-   Supports multiple development paths through branches, which can be independently developed and later merged into the main codebase.",
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question_id": "f6677890-d523-4952-a122-f47ef7e4f985",
+      "title": "Contrast top-down design and bottom-up design in software development. (Question 23, ITE 2024 Y11)",
+      "topic": "Contrast top-down design and bottom-up design in software development.",
+      "label": "Question 23",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "f440381b-947e-451f-adda-b1aac53a1b33",
+          "part": "Question 23",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Contrast top-down design and bottom-up design in software development.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Contrasts top-down design AND bottom-up design in software development."
+            },
+            {
+              "marks": "2",
+              "criterion": "Defines top-down design OR bottom-up design in software development."
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies features of top-down design OR bottom-up design in software development."
+            }
+          ],
+          "marking_rubric": "Top-down design is an approach where the system is designed from the highest level of abstraction down to the more detailed and specific components. The process starts with the broadest overview of the system and progressively breaks it down into smaller more manageable parts, through a process called decomposition.\n\nIn contrast, bottom-up design is where the system is developed from the ground up, starting with the detailed components and integrating them into higher-level functionalities. It focuses on building and testing individual components or modules before combining them to form the complete system.",
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question_id": "e2be8abd-45e0-4cb0-a91e-6e6292fdb624",
+      "title": "Write a task definition for the book reservation feature (Question 24, ITE 2024 Y11)",
+      "topic": "Write a task definition for the book reservation feature",
+      "label": "Question 24",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "cb39fe8c-f2e3-418a-8450-ab4b0b19ae63",
+          "part": "Question 24",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "You are part of a development team working on a project to create a new feature for a library management system. The feature involves implementing a user interface for managing book reservations. The system should include functionalities for reserving, cancelling, and viewing reservations.\n\nWrite a task definition for the book reservation feature. Include the objective, functional and non-functional requirements, constraints, and acceptance criteria.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Provides a comprehensive task definition which includes all of the following: functional requirements, non-functional requirements, constraints, and acceptance criteria."
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides a task definition which includes at least TWO of the following: functional requirements, non-functional requirements, constraints, and acceptance criteria."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides an attempt at a relevant task definition."
+            }
+          ],
+          "marking_rubric": "Sample answer:\n\nObjective: Develop a user interface for managing book reservations, allowing users to reserve, cancel, and view reservations.\n\nFunctional Requirements:\n\n-   Users must be able to reserve a book from available options.\n    \n-   Users must be able to cancel a reservation and receive confirmation.\n    \n-   Users must be able to view their reservation history.\n    \n\nNon-Functional Requirements:\n\n-   The interface should load within 2 seconds.\n    \n-   The system should handle up to 500 simultaneous users.\n    \n\nConstraints:\n\n-   The feature must integrate with the existing library management system.\n    \n-   Must adhere to security and data privacy regulations.\n    \n\nAcceptance Criteria:\n\n-   The feature successfully performs reservations, cancellations, and viewing of reservations.\n    \n-   The interface is responsive and performs well under expected load.",
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question_id": "0aa018e9-c064-4950-9037-278bbfb2c9cf",
+      "title": "Provide Python implementations (Question 25, ITE 2024 Y11)",
+      "topic": "Provide Python implementations",
+      "label": "Question 25",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": "Consider the following class diagram which models an employee management system:\n\n![](assets/edb989f6-09ea-4aa6-bd41-d011f99cc86e.png)\n\nYou can assume:\n\n-   The display\\_info() method prints the properties of the object created from that class.\n    \n-   The Manager has a property called subordinates which stores an array of Employee objects representing the employees who report to that manager.\n    \n-   The add\\_subordinate() method adds a given Employee object to the subordinates property of that Manager object.\n    \n-   You do not need to enforce the relationship cardinalities (1..1, 1..\\*) between Employee and Manager objects.",
+      "stimulus_images": [
+        "assets/edb989f6-09ea-4aa6-bd41-d011f99cc86e.png"
+      ],
+      "parts": [
+        {
+          "part_id": "b30c0c25-bb96-4e77-98a2-b6fb376c9399",
+          "part": "Question 25",
+          "marks_available": 5,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "Provide Python implementations for each of the Employee, Manager and Developer classes.",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": null
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 5,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "5",
+              "criterion": "Provides correct definitions for ALL of the three classes in Python, providing at least the following for each class:\n\nEmployee\n\n__init__ method to initialise and populate the object's properties\n\ndisplay_info method to print the object's properties\n\nManager\n\n__init__ method calls super then initialises and populates the object's properties\n\nadd_subordinate method to append an Employee object to the subordinate array\n\nDeveloper\n\n__init__ method calls super then initialises and populates the object's properties\n\ndisplay_info method calls super and also prints the specialisation value"
+            },
+            {
+              "marks": "4",
+              "criterion": "Provides substantially correct definitions for ALL of the three classes in Python, which may contain some minor errors or omissions."
+            },
+            {
+              "marks": "3",
+              "criterion": "Provides substantially correct definitions for AT LEAST TWO of the three classes in Python, which may contain some minor errors or omissions."
+            },
+            {
+              "marks": "2",
+              "criterion": "An attempt at providing definitions for AT LEAST TWO of the three classes in Python."
+            },
+            {
+              "marks": "1",
+              "criterion": "An attempt at providing a definition for AT LEAST ONE of the three classes in Python."
+            }
+          ],
+          "marking_rubric": "![](assets/bd05b1bb-59f1-45de-8129-448550d4ce0e.png)",
+          "marking_rubric_images": [
+            "assets/bd05b1bb-59f1-45de-8129-448550d4ce0e.png"
+          ],
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question_id": "6776a6b3-48da-443c-9e76-5d92cb7da717",
+      "title": "Describe one of the fields that make up Mechatronics.  (Question 26, ITE 2024 Y11)",
+      "topic": "Describe one of the fields that make up Mechatronics.",
+      "label": "Question 26",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "56f1cea5-352c-460a-a8f5-f1110f3f6233",
+          "part": "Question 26",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe one of the fields that make up Mechatronics.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Describes in detail a discipline that make up Mechatronics"
+            },
+            {
+              "marks": "1",
+              "criterion": "Outlines a discipline that makes up Mechatronics"
+            }
+          ],
+          "marking_rubric": "Answers could include any of the following:\n\nMechanical Engineering \\- is a discipline where you design and maintain a variety of machinery, including transport, computing and biomedical systems. This field also includes environmental systems and renewable energy solutions.  \n\nMechanisation \\- involves the conversion of working by hand to working by machinery. Much of today's farming has been mechanised with planting and harvesting machinery replacing more traditional farming methods. \n\nElectrical Technologies \\- is the study of machines, equipment, technology and systems that conduct electrical charges and produce electricity. This field involves the study, design, development, application and practical implementation of principles related to electrical and electronics engineering. \n\nInformation Technology and Software – is the study of the hardware and software necessary to run a computer-based system. \n\nElectromechanical systems – is the combination of electrical systems and mechanical systems and how the two systems interact with one another. An example is a garage door opener and washing machines. \n\nElectronics \\- is the study of machines, equipment, technology and systems that conduct electrical charges and produce electricity.",
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question_id": "4766371c-baaf-457c-b79d-dbec7db81b10",
+      "title": "Describe the process of converting analogue sound to digital. (Question 27, ITE 2024 Y11)",
+      "topic": "Describe the process of converting analogue sound to digital.",
+      "label": "Question 27",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "92da7ec5-3ee7-4b01-a7ef-6faa41eb6aad",
+          "part": "Question 27",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "An analogue to digital converter converts analogue signals to digital signals. Describe the process of converting analogue sound to digital.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Describes in detail the process of converting analogue sound to digitised sound"
+            },
+            {
+              "marks": "1",
+              "criterion": "Describes in summary the process of converting analogue sound to digitised sound"
+            }
+          ],
+          "marking_rubric": "Sample answer:\n\nThe analogue signal, captured by a microphone, is measured at regular intervals (sampling rate) to create discrete data points. Each sampled data point's amplitude is approximated to the nearest value within a set range, determined by the bit depth, which defines the resolution and precision of the digital representation.\n\nThe values are then converted into binary code (0s and 1s), resulting in a digital signal that represents the original analogue sound. This digital signal can then be stored, processed, or transmitted in various digital formats, enabling high-quality sound reproduction and manipulation.",
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question_id": "555f02b0-6897-46d3-8388-b608c1bbc1de",
+      "title": "Distinguish between sensors and actuators. (Question 28, ITE 2024 Y11)",
+      "topic": "Distinguish between sensors and actuators.",
+      "label": "Question 28",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "a11943cd-cf9c-4a48-9934-4968bde8f0a7",
+          "part": "Question 28",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Distinguish between sensors and actuators. Give an example of a sensor and an actuator in your answer.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Describe the difference between the two with examples"
+            },
+            {
+              "marks": "2",
+              "criterion": "Describe a sensor or an actuator with an example of 1 of them only"
+            },
+            {
+              "marks": "1",
+              "criterion": "Identify a sensor or an actuator"
+            }
+          ],
+          "marking_rubric": "Sample answer:\n\nA sensor is a device used for the conversion of physical events or characteristics into the electrical signals. A sensor that converts input from the environment and converts it into an electrical signal for the system. A thermometer takes the temperature and converts it into an electrical signal for the system.\n\nAn actuator is a device that converts electrical signals into physical events or characteristics. It takes input from the system and gives output to the environment. For example, motors and heaters are some of the commonly used actuators.",
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question_id": "ed38da16-681d-4453-97f5-62056dcf12ae",
+      "title": "Explain how Opcodes and Operands create a link between programmers and the CPU (Question 29, ITE 2024 Y11)",
+      "topic": "Explain how Opcodes and Operands create a link between programmers and the CPU",
+      "label": "Question 29",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "b016d2d1-3fdc-4a16-b22e-48e9e38175eb",
+          "part": "Question 29",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain how Opcodes and Operands create a link between programmers and the CPU. Give an example of an assembly language statement in your answer identifying the Opcode and Operand.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Demonstrates an excellent understanding of Assembly Language and Mnemonics giving an example of Opcodes and Operands"
+            },
+            {
+              "marks": "2",
+              "criterion": "Demonstrates a good understanding of Assembly Language and Mnemonics"
+            },
+            {
+              "marks": "1",
+              "criterion": "Demonstrates a basic understanding of Assembly Language"
+            }
+          ],
+          "marking_rubric": "Sample answer:\n\nOpcodes and Operands are a link between assembly programming language, a second-generation language, and machine code a first-generation programming language. Assembly languages sit between high level languages such as Python and C++ and Machine code. These languages are much easier for humans to understand. \n\nAssembly language uses Mnemonics Opcodes which are a shortened brief description of what is taking place – MOV for move or LDA for load accumulator, for example. Each mnemonic directly corresponds with a machine code instruction for the family of CPUs on which the code executes. As a result, assembly language is known as a one-to-one language. \n\nIn x86 assembler the code MOV BL, 8 moves the value 8 into the BL register (the lower 8 bits of register BX). MOV is the Opcode. BL (register name) and 8 are the Operands.\n\nThe binary (machine code) equivalent of MOV BL,8 is 1011 0100 0000 1000. The first byte combines the opcode and the operand BL, the second byte is the operand 8 in binary.",
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question_id": "da4ae7fb-946a-4325-a17e-d1030336bb8e",
+      "title": "How have mechatronic systems changed the manufacturing industry (Question 30, ITE 2024 Y11)",
+      "topic": "How have mechatronic systems changed the manufacturing industry",
+      "label": "Question 30",
+      "kind": "ITE 2024 Y11",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "d1ee39d7-9bb4-44df-ae1c-fa5cdafdcadc",
+          "part": "Question 30",
+          "marks_available": 5,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Discuss how Mechatronic systems have changed the manufacturing industry over the last 20 years using examples.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 5,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "5",
+              "criterion": "Discusses how manufacturing systems have changed over time with at least three examples"
+            },
+            {
+              "marks": "4",
+              "criterion": "Discusses how manufacturing systems have changed over time with the introduction of Mechatronic systems with two examples."
+            },
+            {
+              "marks": "3",
+              "criterion": "Discusses how manufacturing systems have changed over time with the introduction of Mechatronic systems with one example."
+            },
+            {
+              "marks": "2",
+              "criterion": "Gives two different examples of Mechatronics systems in manufacturing"
+            },
+            {
+              "marks": "1",
+              "criterion": "Gives one example of a Mechatronics system in manufacturing."
+            }
+          ],
+          "marking_rubric": "Suggested Solution:\n\nMechatronics systems have significantly transformed the manufacturing industry over the last 20 years, driving advancements in efficiency, precision, and flexibility. Here’s how:\n\nMechatronics has reshaped the manufacturing industry by integrating mechanical, electrical, and computer engineering to create highly efficient, flexible, and intelligent systems. This transformation has led to significant improvements in productivity, quality, and sustainability while also reducing costs and enhancing global competitiveness.\n\n-   Increased Automation: Mechatronics has enabled the development of advanced robotic systems that automate complex tasks, reducing the need for human labour in repetitive and hazardous environments.\n    \n\n-   Enhanced Precision: Mechatronic systems have improved the precision of manufacturing processes through advanced sensors and control mechanisms. This has led to higher product quality and reduced waste.\n    \n-   Real-time Monitoring and Feedback: Integrated sensors and software allow for real-time monitoring of production processes. Any deviations from the set parameters can be instantly corrected, ensuring consistent quality.\n    \n\n-   Lower Operational Costs: Automation and precision reduce the need for manual labour and minimise errors, leading to lower operational costs.\n    \n\n-   Energy-Efficient Systems: Modern mechatronics systems are designed with energy efficiency in mind, reducing the overall energy consumption of manufacturing processes.\n    \n-   Increased Competitiveness: By adopting mechatronics, manufacturers can produce higher-quality products at lower costs, improving their competitive position in the global market.\n    \n-   Sustainable Manufacturing Practices: Mechatronics enables more sustainable manufacturing practices by minimizing waste, optimizing resource use, and supporting recycling processes.",
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "Which of these is NOT a feature of the Agile development approach?": {
+      "mark": 0,
+      "available": 1
+    },
+    "What system modelling tool is represented by the symbols below?": {
+      "mark": 0,
+      "available": 1
+    },
+    "Which of the following only contains primitive data types?": {
+      "mark": 0,
+      "available": 1
+    },
+    "Python code": {
+      "mark": 0,
+      "available": 1
+    },
+    "Which of the following best describes the facade design pattern in object-oriented programming?": {
+      "mark": 0,
+      "available": 1
+    },
+    "Which of the following concepts in object-oriented programming refers to the bundling of data and methods within a single unit?": {
+      "mark": 0,
+      "available": 1
+    },
+    "The crane has how many degrees of freedom?": {
+      "mark": 0,
+      "available": 1
+    },
+    "What is the function of resistors in an electrical circuit?": {
+      "mark": 0,
+      "available": 1
+    },
+    "Which of the following statements represents an Assembly language statement?": {
+      "mark": 0,
+      "available": 1
+    },
+    "What control structures are present in the following flowchart algorithm?": {
+      "mark": 0,
+      "available": 1
+    },
+    "Which of the following statements are correct regarding the effectiveness of this code implementation?": {
+      "mark": 0,
+      "available": 1
+    },
+    "Which of the following are features of closed loop control systems?": {
+      "mark": 0,
+      "available": 1
+    },
+    "Match each set of data to the most appropriate data structure": {
+      "mark": 0,
+      "available": 1
+    },
+    "Match the description with the corresponding type of testing": {
+      "mark": 0,
+      "available": 1
+    },
+    "Is a structured approach more suited to the development of large, critical software systems?": {
+      "mark": 0,
+      "available": 2
+    },
+    "Describe the purpose of the testing stage of software development.": {
+      "mark": 0,
+      "available": 2
+    },
+    "Distinguish between syntax and logic errors, providing an example of each": {
+      "mark": 0,
+      "available": 3
+    },
+    "Perform a desk check of the Python code below": {
+      "mark": 0,
+      "available": 3
+    },
+    "Pseudocode Algorithm": {
+      "mark": 0,
+      "available": 5
+    },
+    "Describe ONE technique for optimising code performance.": {
+      "mark": 0,
+      "available": 0
+    },
+    "Describe how version control systems support collaborative code development.": {
+      "mark": 0,
+      "available": 2
+    },
+    "Contrast top-down design and bottom-up design in software development.": {
+      "mark": 0,
+      "available": 3
+    },
+    "Write a task definition for the book reservation feature": {
+      "mark": 0,
+      "available": 3
+    },
+    "Provide Python implementations": {
+      "mark": 0,
+      "available": 5
+    },
+    "Describe one of the fields that make up Mechatronics.": {
+      "mark": 0,
+      "available": 2
+    },
+    "Describe the process of converting analogue sound to digital.": {
+      "mark": 0,
+      "available": 2
+    },
+    "Distinguish between sensors and actuators.": {
+      "mark": 0,
+      "available": 3
+    },
+    "Explain how Opcodes and Operands create a link between programmers and the CPU": {
+      "mark": 0,
+      "available": 3
+    },
+    "How have mechatronic systems changed the manufacturing industry": {
+      "mark": 0,
+      "available": 5
+    }
+  }
+}

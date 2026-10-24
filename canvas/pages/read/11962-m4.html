@@ -1,0 +1,1489 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 4 (Term 1: Weeks 7-8) Programming Fundamentals — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">11SENX Software Engineering 2025 · module 5 of 17</p>
+<h1>Cycle 4 (Term 1: Weeks 7-8) Programming Fundamentals</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="11962-all.html">Whole course</a><span class="cur">By module</span><a href="../course-11962.html">By lesson</a></div>
+<h3 class="readles">Introduction to Cycle 4</h3>
+<div id="kl_wrapper_3" class="kl_bookmark variation_2 kl_wrapper">
+<div id="kl_banner" class="">
+
+</div>
+<div id="kl_custom_block_1" class="">
+<h3 class=""><i class="fas fa-hand-sparkles" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Introduction</h3>
+<p>Cycle 4 begins the next phase of your syllabus. This fortnight you begin looking at 'Developing solutions with Code'. We will take a look at developing, testing and debugging software using programming concepts, data structures, project management tools as well as evaluation techniques.</p>
+</div>
+<div id="kl_custom_block_3" class="">
+<h3><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Syllabus</h3>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div>
+<div class="nsw-h4" data-kontent-item-id="52f6232c-eb44-4666-a699-339ef7d978f1" data-kontent-element-codename="title">
+<div id="cg-ecd41d10-0c87-471a-b2de-1454076094d9" class="group nsw-h4 mui-style-1qtqq7p" data-kontent-item-id="ecd41d10-0c87-471a-b2de-1454076094d9" data-kontent-element-codename="title"><span class="align-middle mr-2 [&amp;&gt;*]:inline [&amp;&gt;*]:scroll-mt-4">Developing solutions with code</span></div>
+<div class="mt-3 space-y-8">
+<div>
+<ul class="list-disc mt-0 space-y-0 pl-[1.1875rem]">
+<li data-kontent-item-id="c4cad8bd-158d-4f3f-8ed8-4afff87e8bf8">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Apply skills in computational thinking and programming to develop a software solution</p>
+</div>
+<div class="bold mb-1 mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>converting an algorithm into code</li>
+<li>using control structures</li>
+<li>using data structures</li>
+<li>using standard modules</li>
+<li>creating relevant subprograms that incorporate parameter passing</li>
+</ul>
+</div>
+</li>
+<li data-kontent-item-id="5ae74299-e0b4-485c-aec0-4fc0f735b7fe">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Implement data structures that support data storage</p>
+</div>
+<div class="bold mb-1 mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>single and multidimensional arrays</li>
+<li>lists</li>
+<li>trees</li>
+<li>stacks</li>
+<li>hash tables</li>
+</ul>
+</div>
+</li>
+<li data-kontent-item-id="4a28b772-f21a-4f6b-953c-ac7e370b1dd8">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Compare the execution of the Waterfall and Agile project management models as applied to software development</p>
+</div>
+</li>
+<li data-kontent-item-id="cca72bee-2ea8-4e03-bdff-caad5e3a679c">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Test and evaluate solutions, considering key aspects including functionality, performance, readability of code, quality of documentation</p>
+</div>
+</li>
+<li data-kontent-item-id="606f84a4-d06d-4d3f-9ded-2935b5444f83">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Use debugging tools</p>
+</div>
+<div class="bold mb-1 mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>breakpoints</li>
+<li>single line stepping</li>
+<li>watches</li>
+<li>interfaces between functions</li>
+<li>debugging output statements</li>
+<li>debugging software available in an integrated development environment (IDE)</li>
+</ul>
+</div>
+</li>
+<li data-kontent-item-id="f2b6ff71-f822-4c32-866b-ea3e7fbd682f">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Determine sets of suitable test data</p>
+</div>
+<div class="bold mb-1 mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>boundary values</li>
+<li>path coverage</li>
+<li>faulty and abnormal data</li>
+</ul>
+</div>
+</li>
+<li data-kontent-item-id="c67de485-d8ea-40ff-a0b9-1deee62014dd">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Determine typical errors experienced when developing code, including syntax, logic and runtime, and explain their likely causes</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="kl_custom_block_2" class="">
+<h3 class=""><i class="fas fa-comments" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>Activity</h3>
+<p>Through the activities in this cycle, you will complete the following EdStem activities:</p>
+<ul>
+<li>Hash Tables</li>
+<li>Debugging Tools</li>
+<li>Test Data</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p><h3 class="sub">During</h3><h3 class="sub">Developing Solutions with Code</h3>
+<h3 class="readles">1.16 Developing solutions</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Apply skills in computational thinking and programming to develop a software solution, including:<br class="card-text">- <span class="card-text">converting an algorithm into code</span><br class="card-text">- <span class="card-text">using control structures</span><br class="card-text">- <span class="card-text">using data structures</span><br class="card-text">- <span class="card-text">using standard modules</span><br class="card-text">- <span class="card-text">creating relevant subprograms that incorporate parameter passing</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Apply their computational thinking and programming skills to develop a software solution that involves converting an algorithm into code, utilising control structures, incorporating standard modules, and creating subprograms involving parameter passing.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Successfully convert a given algorithm into functional code.</span></li>
+<li><span style="font-size: 13.3333px;">Demonstrate the effective use of control structures, such as loops and conditional statements.</span></li>
+<li><span style="font-size: 13.3333px;">Implement appropriate data structures for storing and manipulating data, such as lists, dictionaries, or tuples.</span></li>
+<li><span style="font-size: 13.3333px;">Integrate standard modules and libraries to enhance the functionality of the software solution.</span></li>
+<li><span style="font-size: 13.3333px;">Create and utilise subprograms (functions or methods) that effectively incorporate parameter passing to achieve modular and reusable code.</span></li>
+<li><span style="font-size: 13.3333px;">Test and debug the software solution to ensure it meets the desired requirements and functions as intended.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4><strong>Control Structures</strong></h4>
+<p>&nbsp;</p>
+<table style="border-collapse: collapse; width: 128.153%; height: 1167px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 10.1577%; text-align: center; height: 29px;"><strong>Control Structure</strong></td>
+<td style="width: 29.0817%; text-align: center; height: 29px;"><strong>Psuedocode</strong></td>
+<td style="width: 26.8089%; text-align: center; height: 29px;"><strong>Flowchart</strong></td>
+<td style="width: 33.8589%; text-align: center; height: 29px;"><strong>Python</strong></td>
+</tr>
+<tr style="height: 195px;">
+<td style="width: 10.1577%; text-align: center; height: 195px;"><strong>Sequence</strong></td>
+<td style="width: 29.0817%; text-align: left; height: 195px;">
+<pre>process 1<br>process 2<br>...<br>...<br>process n<strong><br></strong></pre>
+</td>
+<td style="width: 26.8089%; text-align: center; height: 195px;"><strong><img src="../../assets/a1744496ae97d933.png" alt="Screenshot 2024-03-01 at 3.53.58 pm.png" width="111" height="191" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197402" data-api-returntype="File" loading="lazy"><br></strong></td>
+<td style="width: 33.8589%; text-align: left; height: 195px;">
+<pre>process_1()<br>process_2()<br>...<br>...<br>process_n()</pre>
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 10.1577%; text-align: center; height: 29px;"><strong>Binary Selection</strong></td>
+<td style="width: 29.0817%; text-align: left; height: 29px;">
+<pre>IF condition THEN<br>    process 2<br>ELSE <br>    process 1<br>END IF</pre>
+</td>
+<td style="width: 26.8089%; text-align: center; height: 29px;"><img src="../../assets/44f69270ae7df8d6.png" alt="Screenshot 2024-03-01 at 3.56.08 pm.png" width="268" height="146" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197338" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 33.8589%; text-align: left; height: 29px;">
+<pre>if condition:<br>    process_2()<br>else:<br>    process_1()</pre>
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 10.1577%; text-align: center; height: 29px;"><strong>Nested If</strong></td>
+<td style="width: 29.0817%; text-align: left; height: 29px;">
+<pre>IF condition A THEN<br>    process 1<br>ELSEIF condition B THEN<br>    process 2<br>ELSEIF condition C THEN<br>    process 3<br>ELSE<br>    process 4<br>ENDIF</pre>
+</td>
+<td style="width: 26.8089%; text-align: center; height: 29px;"><strong><img src="../../assets/847db8f6d5e4686f.png" alt="Screenshot 2024-03-01 at 3.58.17 pm.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197406" data-api-returntype="File" loading="lazy"><br></strong></td>
+<td style="width: 33.8589%; text-align: left; height: 29px;">
+<pre>if condition A:<br>    process_1()<br>elif condition B:<br>    process_2()<br>elif condition C:<br>    process_3()<br>else<br>    process_4()</pre>
+</td>
+</tr>
+<tr style="height: 172px;">
+<td style="width: 10.1577%; text-align: center; height: 172px;"><strong>Multi-way Selection<br></strong></td>
+<td style="width: 29.0817%; text-align: left; height: 172px;">
+<pre>CASEWHERE expression evaluates to<br>    choice a: process a<br>    choice b: process b<br>    ...<br>    OTHERWISE: default process<br>END CASE</pre>
+</td>
+<td style="width: 26.8089%; text-align: center; height: 172px;"><img src="../../assets/08ed45e657b9c654.png" alt="Screenshot 2024-03-01 at 4.00.35 pm.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197412" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 33.8589%; text-align: left; height: 172px;">
+<pre>match expression evaluates to:<br>    case a:<br>        process_a()<br>    case b:<br>        process_b()<br>    ...<br>    case _:<br>        default_process()</pre>
+</td>
+</tr>
+<tr style="height: 253px;">
+<td style="width: 10.1577%; text-align: center; height: 253px;"><strong>Pre-test Repetition</strong></td>
+<td style="width: 29.0817%; text-align: left; height: 253px;">
+<pre>WHILE condition is true<br>    process<br>ENDWHILE</pre>
+</td>
+<td style="width: 26.8089%; text-align: center; height: 253px;"><img src="../../assets/20290f4d0d1b70e1.png" alt="Screenshot 2024-03-01 at 4.06.54 pm.png" width="180" height="248" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197419" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 33.8589%; text-align: left; height: 253px;">
+<pre>while condition:<br>    process()</pre>
+</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 10.1577%; text-align: center; height: 53px;"><strong>Post-test Repetition<br></strong></td>
+<td style="width: 29.0817%; text-align: left; height: 53px;">
+<pre>REPEAT<br>    process<br>UNTIL condition is true</pre>
+</td>
+<td style="width: 26.8089%; text-align: center; height: 53px;"><img src="../../assets/0d0def3863acac28.png" alt="Screenshot 2024-03-01 at 4.15.26 pm.png" width="164" height="214" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197432" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 33.8589%; height: 53px; text-align: center;">
+<p>N/A</p>
+<p>(Python has no Post-test structure)</p>
+</td>
+</tr>
+<tr style="height: 407px;">
+<td style="width: 10.1577%; text-align: center; height: 407px;"><strong>FOR / NEXT<br></strong></td>
+<td style="width: 29.0817%; text-align: left; height: 407px;">
+<pre>FOR variable = start to finish STEP inc<br>    statements<br>NEXT variable</pre>
+</td>
+<td style="width: 26.8089%; text-align: center; height: 407px;"><img src="../../assets/965c1922514a9bc1.png" alt="Screenshot 2024-03-01 at 4.14.43 pm.png" width="193" height="403" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197425" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 33.8589%; text-align: left; height: 407px;">
+<pre>for variable in range(start, finish + 1, inc):<br>    statements</pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h4>Number Guessing Game</h4>
+<div class="dp-panels-wrapper dp-tabs dp-panel-active-color-dp-white">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Psuedocode</h3>
+<div class="dp-panel-content">
+<p><span data-contrast="none">Let's consider the following algorithm for a number-guessing game:</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span></p>
+<ol>
+<li><span data-contrast="none"> Generate a random number.</span></li>
+</ol>
+<pre><span data-contrast="none">BEGIN Number-Guessing Game</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">    GET RandomNumber</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">END Number-Guessing Game</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span></pre>
+<ol start="2">
+<li><span data-contrast="none"> Ask the user to guess the number.</span></li>
+</ol>
+<pre><span data-contrast="none">BEGIN Number-Guessing Game</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">    GET RandomNumber</span><span>&nbsp;<br></span><span data-contrast="none">    Display "Guess the hidden number."</span><span>&nbsp;<br></span><span data-contrast="none">    GET UserGuess</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;<br></span><span data-contrast="none">END Number-Guessing Game</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span></pre>
+<ol start="3">
+<li><span data-contrast="none"> If the user's guess equals the generated number, congratulate the user; otherwise, console the user and exit the game from both conditions.</span></li>
+</ol>
+<pre><span data-contrast="none">BEGIN Number-Guessing Game</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">    GET RandomNumber</span><span>&nbsp;<br></span><span data-contrast="none">    Display "Guess the hidden number."</span><span>&nbsp;<br></span><span data-contrast="none">    GET UserGuess</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">    IF UserGuess = RandomNumber THEN</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">        Display  "Congratulations!"</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><br><span data-contrast="none">ELSE</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><br><span data-contrast="none">Display "Unlucky! You did not guess the number correctly."</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><br><span data-contrast="none">ENDIF</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><br><span data-contrast="none">END Number-Guessing Game</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span></pre>
+<ol start="4">
+<li><span data-contrast="none"> If the user's guess is greater than the generated number, inform the user their guess is too high.</span></li>
+</ol>
+<pre><span data-contrast="none">BEGIN Number-Guessing Game</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">    GET RandomNumber</span><span>&nbsp;<br></span><span data-contrast="none">    Display "Guess the hidden number."</span><span>&nbsp;<br></span><span data-contrast="none">    GET UserGuess</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">    IF UserGuess = RandomNumber THEN</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;<br>        </span><span data-contrast="none">Display  "Congratulations!"</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;<br>    </span><span data-contrast="none">ELSEIF UserGuess &gt; RandomNumber THEN</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;<br>        </span><span data-contrast="none">Display "Your guess is too high!"</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;<br>    </span><span data-contrast="none">ELSE</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">        Display "Unlucky! You did not guess the number correctly."</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">    ENDIF</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">END Number-Guessing Game</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span></pre>
+<ol start="5">
+<li><span data-contrast="none"> If the user's guess is less than the generated number, inform the user their guess is too low.</span></li>
+</ol>
+<pre><span data-contrast="none">BEGIN Number-Guessing Game</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;<br>    </span><span data-contrast="none">GET RandomNumber</span><span>&nbsp;<br></span><span data-contrast="none">    Display "Guess the hidden number."</span><span>&nbsp;<br></span><span data-contrast="none">    GET UserGuess</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">    IF UserGuess = RandomNumber THEN</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">        Display  "Congratulations!"</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">    ELSEIF UserGuess &gt; RandomNumber THEN</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">        Display "Your guess is too high!"</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">    ELSEIF UserGuess &lt; RandomNumber THEN</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;<br>        </span><span data-contrast="none">Display "Your guess is too low!"</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;<br>    </span><span data-contrast="none">ELSE</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">        Display "Unlucky! You did not guess the number correctly."</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;<br>  </span><span data-contrast="none">  ENDIF</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">END Number-Guessing Game</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span></pre>
+<ol start="6">
+<li><span data-contrast="none"> Repeat steps 2-5 until the user guesses the correct number</span></li>
+</ol>
+<pre><span data-contrast="none">BEGIN Number-Guessing Game</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">    GET RandomNumber</span><span>&nbsp;<br></span><span data-contrast="none"> &nbsp;  LET Correct = false</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none"> &nbsp;  WHILE Correct = false</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none"> &nbsp;      Display "Guess the hidden number."</span><span>&nbsp;<br></span><span data-contrast="none">        GET UserGuess</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">        IF UserGuess = RandomNumber THEN</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">            Display  "Congratulations!"</span><span>&nbsp;<br></span><span data-contrast="none">            LET Correct = true</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">        ELSEIF UserGuess &gt; RandomNumber THEN</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">            Display "Your guess is too high!"</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">        ELSEIF UserGuess &lt; RandomNumber THEN</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">            Display "Your guess is too low!"</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">        ELSE</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">            Display "Unlucky! You did not guess the number correctly."</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">        ENDIF</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">    ENDWHILE</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><span data-contrast="none">END Number-Guessing Game</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span></pre>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Python Code</h3>
+<div class="dp-panel-content">
+<p>Now, let's convert this algorithm into Python code:</p>
+<pre><span data-contrast="none">import random</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><br><span data-contrast="none"># Generate a random number between 1 and 100 (inclusive)</span><span>&nbsp;<br></span><span data-contrast="none">target_number = random.randint(1, 100)</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><br><span data-contrast="none">while True:</span><span>&nbsp;<br></span><span data-contrast="none">    # Ask the user to guess the number</span><span>&nbsp;<br></span><span data-contrast="none">    user_guess = int(input("Guess a number between 1 and 100: "))</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}">&nbsp;</span><br><br><span data-contrast="none">    # If the user's guess is equal to the generated number, congratulate the user and exit the game</span><span>&nbsp;<br></span><span data-contrast="none">    if user_guess == target_number:</span><span>&nbsp;<br></span><span data-contrast="none">        print("Congratulations! You guessed the correct number!")</span><span>&nbsp;<br></span><span data-contrast="none">        break</span><span>&nbsp;<br></span><span data-contrast="none">    # If the user's guess is greater than the generated number, inform the user their guess is too high</span><span>&nbsp;<br></span><span data-contrast="none">    elif user_guess &gt; target_number:</span><span>&nbsp;<br></span><span data-contrast="none">        print("Your guess is too high.")</span><span>&nbsp;<br></span><span data-contrast="none">    # If the user's guess is less than the generated number, inform the user their guess is too low</span><span>&nbsp;<br></span><span data-contrast="none">    else:</span><span>&nbsp;<br></span><span data-contrast="none">        print("Your guess is too low.")</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559738&quot;:180,&quot;335559739&quot;:180}"><br></span></pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs dp-panel-active-color-dp-white">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Login Module</h3>
+<div class="dp-panel-content">
+<p>Here is an example of a standard login module. This can be used for future projects where login screen is required.</p>
+<table style="border-collapse: collapse; width: 98.1447%; height: 390px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 51.5905%; text-align: center; height: 29px;"><strong>Pseudocode</strong></td>
+<td style="width: 48.315%; text-align: center; height: 29px;"><strong>Python</strong></td>
+</tr>
+<tr style="height: 361px;">
+<td style="width: 51.5905%; height: 361px;">
+<pre>BEGIN Login(Username, Password) <br>    Let Match = FALSE<br>    WHILE Match = FALSE<br>        GET EntUsername<br>        GET EntPassword<br>        IF Username = EntUsername AND Password = EntPassword THEN<br>            LET Match = TRUE<br>            Display "Login Sucessful"<br>        ELSE<br>            Display "<span class="hljs-string">Incorrect login credentials</span>"<br>        ENDIF<br>   ENDWHILE       <br>END Login</pre>
+</td>
+<td style="width: 48.315%; text-align: left; height: 361px;">
+<pre><span class="hljs-keyword">def</span> <span class="hljs-title function_">login</span><span>(</span><span class="hljs-params">username, password</span><span>): <br></span><span class="hljs-keyword">    match</span><span> = </span><span class="hljs-literal">False</span> <br><span class="hljs-keyword">    while</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">match</span><span>: <br>        ent_username = </span><span class="hljs-built_in">input</span><span>(</span><span class="hljs-string">"Enter Username: "</span><span>) <br>        ent_password = </span><span class="hljs-built_in">input</span><span>(</span><span class="hljs-string">"Enter Password: "</span><span>) <br></span><span class="hljs-keyword">        if</span><span> username == ent_username </span><span class="hljs-keyword">and</span><span> password == ent_password: <br></span><span class="hljs-keyword">            match</span><span> = </span><span class="hljs-literal">True</span> <br><span class="hljs-built_in">            print</span><span>(</span><span class="hljs-string">"Login Successful"</span><span>) <br></span><span class="hljs-keyword">        else</span><span>: <br></span><span class="hljs-built_in">            print</span><span>(</span><span class="hljs-string">"Incorrect login credentials"</span><span>) <br><br></span><span><br>username = </span><span class="hljs-string">"example_user"</span><span> <br>password = </span><span class="hljs-string">"example_password"</span><span> <br>login(username, password)</span></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Linear Array Iteration Module</h3>
+<div class="dp-panel-content">
+<div>
+<p>Here is an example of an interaction through a standard array. Linear iteration is very common for coding fundamentals, and the skills are also transferable to string manipulation.&nbsp;</p>
+<p>&nbsp;</p>
+<table style="border-collapse: collapse; width: 98.1447%; height: 390px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 51.5905%; text-align: center; height: 29px;"><strong>Pseudocode</strong></td>
+<td style="width: 48.315%; text-align: center; height: 29px;"><strong>Python</strong></td>
+</tr>
+<tr style="height: 361px;">
+<td style="width: 51.5905%; height: 361px;">
+<pre>BEGIN LinearArray <br>    Get Array()<br>    LET i = 0<br>    WHILE i &lt; number of elements in the array<br>        LET Array(i) = i<br>        LET i = i +1<br>        Display "Array at position "+i+" = "+i<br>    ENDWHILE<br>END LinearArray</pre>
+</td>
+<td style="width: 48.315%; text-align: left; height: 361px;">
+<pre><br>def linear_array():<br>  array = [] #Empty array<br>  num_elements = 10 #Example number of elements<br>  i=0<br>  while i &lt; num_elements:<br>    array.append(i)<br>    print("Array at position",i,"=",array[i])<br>    i+=1<br><br>linear_array()</pre>
+</td>
+</tr>
+<tr>
+<td style="width: 51.5905%;"></td>
+<td style="width: 48.315%; text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<p><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">&nbsp;</span></p>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Binary Search</h3>
+<div class="dp-panel-content">
+<p><strong>Binary Search</strong></p>
+<p>The task is to determine whether or not a particular data value (the target) is present in a set of data. If the target is found the position of its first occurrence is reported and the search ends.</p>
+<div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Note that the binary search will only work on <strong>sorted data.</strong><br></span></p>
+</div>
+</div>
+<p>Binary search divides the data set into two parts and determines in which part the element is likely to be found. The other part of the data is discarded, and the retained part is divided into two parts. The process is continued until the value is found or there are no more elements in the data set to be checked. If a match is found then the position of the match is reported otherwise a message is written telling the user that the target is not present in the data.</p>
+<p>At each division, there are three possibilities for the target (if it exists in the data set):</p>
+<ol style="list-style-type: decimal;">
+<li>the target lies at the division point</li>
+<li>the target lies to the left of the division point</li>
+<li>the target lies to the right of the division point</li>
+</ol>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/83b8d3acce7d7741.png" alt="Screenshot 2024-03-01 at 4.30.10 pm.png" width="381" height="322" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197447" data-api-returntype="File" loading="lazy"></p>
+<table style="border-collapse: collapse; width: 98.1447%; height: 390px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 45.1358%; text-align: center; height: 29px;"><strong>Pseudocode</strong></td>
+<td style="width: 54.7697%; text-align: center; height: 29px;"><strong>Python</strong></td>
+</tr>
+<tr style="height: 361px;">
+<td style="width: 45.1358%; height: 361px;">
+<pre>BEGIN BinarySearch<br>    LET Lower = 1<br>    LET Upper = number of elements in the array<br>    LET FoundIt = false<br>    GET RequiredName<br>    REPEAT<br>        LET Middle = (Upper + Lower) / 2<br>        LET Middle = integer part of Middle<br>        IF RequiredName = Name (Middle) THEN<br>            LET FoundIt = true<br>            LET PositionFound = Middle<br>        ELSE<br>            IF RequiredName &lt; Name (Middle) THEN<br>                LET Upper = Middle – 1<br>            ELSE<br>                LET Lower = Middle + 1<br>            ENDIF<br>        ENDIF<br>    UNTIL FoundIt OR Lower &gt; Upper<br>    IF FoundIt THEN<br>        Display “Required name found at ” PositionFound<br>    ELSE<br>        Display “Required name ” RequiredName “ not found.”<br>    ENDIF<br>END BinarySearch</pre>
+</td>
+<td style="width: 54.7697%; text-align: left; height: 361px;">
+<pre>def binary_search(names, required_name): <br>    lower = 0 <br>    upper = len(names) - 1 <br>    found_it = False <br><br>    while not found_it and lower &lt;= upper: <br>        middle = (upper + lower) // 2 <br>        if required_name == names[middle]: <br>            found_it = True <br>            position_found = middle <br>        else: <br>            if required_name &lt; names[middle]: <br>                upper = middle - 1 <br>            else: lower = middle + 1 <br><br>    if found_it: <br>        print(f"Required name found at position {position_found}") <br>    else: <br>        print(f"Required name {required_name} not found.")</pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="amber-el amber-paragraph amber-content"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn></mn> </mrow> </semantics> </math></span></span></span></p>
+<div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Note that the Pseudocode uses a post-test loop while the Python uses a pre-test loop as Python does not have a built-in post-test loop.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.16 Developing solutions" href="https://canvas.kings.edu.au/courses/11962/assignments/179139" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179139" data-api-returntype="Assignment">1.16 Developing solutions</a></li>
+<li><a title="Interpreting Code Quiz" href="https://canvas.kings.edu.au/courses/11962/assignments/179193" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179193" data-api-returntype="Assignment">Interpreting Code Quiz</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">1.17 Data structures for storage</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2">
+    <header class="dp-header dp-bookmark variation-2 ">
+        
+    </header>
+    <div class="dp-content-block kl_custom_block_0">
+        <div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+            <div class="card-body">
+                <p class="card-text"><strong class="card-text">Syllabus<br></strong>Implement data structures that support data storage- <span class="card-text">converting an algorithm into code including:</span><br class="card-text">- <span class="card-text">single and multidimensional arrays</span><br class="card-text">- <span class="card-text">lists</span><br class="card-text">- <span class="card-text">trees</span><br class="card-text">- <span class="card-text">stacks<br></span>- <span class="card-text">hash tables</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_content_block_1">
+        <h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4" style="padding: 0px 5px 0px 0px;">
+                    <div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 10pt;">be able to implement data structures that support data storage, including single and multidimensional arrays, lists, trees, stacks, and hash tables, by converting an algorithm into code.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8" style="padding: 0px 0px 0px 5px;">
+                    <div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 13.3333px;">Students can identify and explain the purpose of each data structure.</span></li>
+                                <li><span style="font-size: 13.3333px;">Students can implement single and multidimensional arrays, lists, trees, stacks, and hash tables in code.</span></li>
+                                <li><span style="font-size: 13.3333px;">Students can convert an algorithm into code using the appropriate data structure.</span></li>
+                                <li><span style="font-size: 13.3333px;">Students can apply their understanding of data structures to solve programming problems.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_custom_block_1">
+        <h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+        <p><strong>Note:</strong> Single and multidimensional arrays, and trees were covered in the previous unit <strong>1.15 Data Structures</strong>.</p>
+        <div class="dp-panels-wrapper dp-accordion-plus">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading "><strong>Lists</strong></h3>
+                <div class="dp-panel-content ">
+                    <p><span>A List is a linear data structure that can store data belonging to </span><strong class="amber-el amber-bold">multiple data types</strong><span>.</span></p>
+                    <div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+                        <div class="card-body" style="padding: 5px;">
+                            <p class="card-text" style="text-align: left;"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Lists are essentially the same as Arrays except multiple data types can be stored. The syntax between the data structures are the same in Python.</span></p>
+                        </div>
+                    </div>
+                    <p class="amber-el amber-paragraph amber-content">An <strong class="amber-el amber-bold">Index</strong> is the location of an item in the List, with the <strong class="amber-el amber-bold">first Index being 0</strong>.</p>
+                    <p class="amber-el amber-paragraph amber-content"><strong class="amber-el amber-bold">Elements</strong> are the items stored in the List.</p>
+                    <p class="amber-el amber-paragraph amber-content"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/4799e3d8d514ed36.png" alt="image.png" width="517" height="329" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3251877" data-api-returntype="File" loading="lazy"></p>
+                    <p class="amber-el amber-paragraph amber-content"><span>&nbsp;</span></p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading"><strong>Stacks</strong></h3>
+                <div class="dp-panel-content ">
+                    <p class="amber-el amber-paragraph amber-content">A Stack is a linear data structure that behaves in a certain way when adding and removing items, using a <strong class="amber-el amber-bold">'Last-in, first-out' structure (LIFO).</strong> This can be implemented by either an array or list but a Stack will always be limited in the number of items it can store.</p>
+                    <p class="amber-el amber-paragraph amber-content">This means that <strong class="amber-el amber-bold">the item that was last added to the Stack will be the next item to be removed.</strong> In other words, the way you retrieve items will be in the <strong class="amber-el amber-bold">reverse order</strong> that you added them into the Stack.</p>
+                    <ul>
+                        <li class="amber-el amber-paragraph amber-content"><strong>Push</strong>: The process of pushing is <strong class="amber-el amber-bold">adding an item to the top of the Stack.</strong></li>
+                        <li class="amber-el amber-paragraph amber-content"><strong style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">Pop</strong><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">: The process of popping is </span><strong class="amber-el amber-bold" style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">removing an item from the top of the Stack.</strong></li>
+                    </ul>
+                    <div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+                        <div class="card-body" style="padding: 5px;">
+                            <p class="card-text" style="text-align: left;"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp;<span>Think of a stack like a pile of plates. You would want to only </span><strong class="amber-el amber-bold">add and removed plates from the top of the pile.</strong><span> Removing plates from the bottom would cause the pile to fall over!</span></span></p>
+                        </div>
+                    </div>
+                    <div class="dp-panels-wrapper dp-expander-default">
+                        <div class="dp-panel-group">
+                            <h3 class="dp-panel-heading ">Python Example</h3>
+                            <div class="dp-panel-content">
+                                <p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/0f8ec2485a884755.png" alt="image.png" width="555" height="719" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3251880" data-api-returntype="File" loading="lazy"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/220bea0c247939bf.png" alt="image.png" width="488" height="650" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197409" data-api-returntype="File" loading="lazy"></p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading"><strong>Hash Tables</strong></h3>
+                <div class="dp-panel-content">
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-tip">
+                        <div class="card-body">
+                            <p class="card-text"><strong>Hashing is the process of converting a given key into a code (a hash).</strong> In the case of implementing a Hash Table, the resulting hash is used to indicate the index in which data is being inserted.</p>
+                            <p class="card-text">Depending on the complexity of the hash function,<strong> it is possible for the resulting code to be the same for multiple keys</strong> (e.g. the keys "cat", "act" and "tac" could all generate the same hash).</p>
+                            <p class="card-text" style="text-align: left;"><img src="../../assets/892c80d1ce501a07.png" alt="image.png" width="243" height="172" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197415" data-api-returntype="File" loading="lazy"></p>
+                        </div>
+                    </div>
+                    <p class="amber-el amber-paragraph amber-content">&nbsp;</p>
+                    <p><strong>Positional Indexing (Ordered Containers)</strong></p>
+                    <p><i class="amber-el amber-italic">(i.e. Lists, arrays, trees)</i> have <strong><span class="amber-el amber-bold">a sense of order</span></strong> between elements. Typically you can assign a <strong><span class="amber-el amber-bold">meaningful index</span></strong> to each element that denotes an order or sequence.</p>
+                    <p><strong>Associative Indexing (Associative Containers)</strong></p>
+                    <p><i class="amber-el amber-italic">(i.e. Hash Tables)</i> <span> use </span><strong class="amber-el amber-bold">unique "keys"</strong><span> to map their values. Items in associative containers have </span><strong class="amber-el amber-bold">no sense of order</strong><span>. Keys are typically strings (but for now, we will use integers as keys).</span>&nbsp;</p>
+                    <p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/eb6798ac2674da86.png" alt="image.png" width="542" height="345" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3251881" data-api-returntype="File" loading="lazy"></p>
+                    <h4 class="amber-el amber-paragraph amber-content">Hash Table</h4>
+                    <p class="amber-el amber-paragraph amber-content"><strong>A Hash Table implements Associative Indexing through the use of a Hashing Function.</strong></p>
+                    <p class="amber-el amber-paragraph amber-content">The Hashing Function is given a unique key (i.e. "HISTORY"), which then converts the key into an integer (i.e. 2) between 0 and the <em>length of the array - 1</em>.</p>
+                    <div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+                        <div class="card-body" style="padding: 5px;">
+                            <p class="card-text" style="text-align: left;"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp;<span class="amber-el amber-italic">Note: As stated above, the Hashing Function may allow multiple keys to generate the same integer code. This is called a <strong class="amber-el amber-bold">collision</strong> and there are advanced ways to handle this (see advanced section below).</span></span></p>
+                        </div>
+                    </div>
+                    <p class="amber-el amber-paragraph amber-content">This integer represents the index in which data (i.e. data about the "HISTORY" subject) will be inserted.</p>
+                    <p class="amber-el amber-paragraph amber-content">The Hashing Function for the purposes of this course can be very simple, but when it comes to the 'real-world' these functions can be very complex.</p>
+                    <p class="amber-el amber-paragraph amber-content"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/28c2d083b0e39275.png" alt="image.png" width="612" height="372" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197422" data-api-returntype="File" loading="lazy"></p>
+                    <p class="amber-el amber-paragraph amber-content"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/8b6e052228d91dfb.png" alt="image.png" width="611" height="390" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3251882" data-api-returntype="File" loading="lazy"></p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading "><strong>Hash Tables - Collision Handling</strong></h3>
+                <div class="dp-panel-content">
+                    <p class="amber-el amber-paragraph amber-content">Separate Chaining is an advanced collision handling strategy that <strong class="amber-el amber-bold">allows multiple items to be stored in a single index</strong>. In this example, the Hash Table is an array made up of lists in each index.</p>
+                    <p class="amber-el amber-paragraph amber-content">Whenever a key produces a hash, the item is appended to the end of the list which is contained inside the index (as defined by the hash value).</p>
+                    <p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/6763f4a377c0e26a.png" alt="image.png" width="598" height="423" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197436" data-api-returntype="File" loading="lazy"></p>
+                </div>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      <div class="dp-panels-wrapper dp-accordion-default">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading ">Presentation</h3>
+                <div class="dp-panel-content ">
+                    <p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EefudVD3xXRDppqCfCef7hgBOAmvHeF9DNaz5RPnyYTiow?e=Jk6fWK" target="_blank">1.17 Data Structures</a></p>
+                    <div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-17-data-structures-for-storage" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={5075eee7-c5f7-4374-a69a-827c279fee18}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+                <ul class="card-text">
+                    <li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+                <ul class="card-text">
+                    <li><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank">Hash tables</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p>&nbsp;</p>
+    </div>
+</div>
+<h3 class="readles">1.18 Test and evaluate</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2">
+    <header class="dp-header dp-bookmark variation-2 ">
+        
+    </header>
+    <div class="dp-content-block kl_custom_block_0">
+        <div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+            <div class="card-body">
+                <p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Test and evaluate solutions, considering key aspects including functionality, performance, readability of code, quality of documentation</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_content_block_1">
+        <h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4" style="padding: 0px 5px 0px 0px;">
+                    <div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 10pt;">Be able to test and evaluate solutions, considering key aspects, including functionality, performance, code readability, and documentation quality.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8" style="padding: 0px 0px 0px 5px;">
+                    <div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 13.3333px;">Create test cases to evaluate the functionality of their code.</span></li>
+                                <li><span style="font-size: 13.3333px;">Measure and analyse the performance of their code.</span></li>
+                                <li><span style="font-size: 13.3333px;">Write readable code that is easy to understand and maintain.</span></li>
+                                <li><span style="font-size: 13.3333px;">Produce high-quality documentation that describes their code and how to use it effectively.</span></li>
+                                <li><span style="font-size: 13.3333px;">Apply their evaluation skills to identify and resolve problems in their code.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_custom_block_1">
+        <h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+        <p>Testing and evaluation ensure that the software <strong>meets all specified requirements</strong>, both functional and non-functional, and adheres to an acceptable standard of <strong>quality, reliability, and security.</strong> The client must confirm that the original objectives have been <strong>tested for compliance.</strong> By identifying and rectifying defects early, testing helps optimise performance and enhance user satisfaction. Testing also evaluates<strong> the software's performance against industry standards</strong> or benchmarks like FurMark and Geekbench.</p>
+        <p>&nbsp;</p>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Levels of Testing</h3>
+                <div class="dp-panel-content">
+                    <ul>
+                        <li>
+                            <p><strong>Unit (Module) Level Testing:</strong> At this stage, each module or component of the software is tested independently. The focus is ensuring each module functions as expected and meets its specified requirements. Testing at this level involves examining the inputs and outputs of each module, as well as verifying the internal logic and functionality. Various techniques, such as unit testing, integration testing, and regression testing, may be employed to validate the behaviour of the modules. By testing at the module level, developers can identify and rectify defects early in the development process, minimising the risk of issues propagating to higher levels.</p>
+                        </li>
+                        <li>
+                            <p><strong>Sub-System (Program) Level Testing:</strong> Once the individual modules have been tested and verified, the focus shifts to testing the integration and interaction between these modules within a more extensive program context. Program-level testing ensures the modules and subroutines work together seamlessly to achieve the desired functionality. This involves testing different paths of execution, error-handling mechanisms, and data flow between modules. Integration testing plays a crucial role at this stage, as it verifies the interfaces and interactions between modules, identifying any compatibility issues or inconsistencies. The goal is to ensure the program behaves as expected and produces the correct results under various scenarios.</p>
+                        </li>
+                        <li>
+                            <p><strong>System Level Testing:</strong> System level testing encompasses the comprehensive evaluation of the entire software system, including its hardware, software, data, procedures, and personnel. This stage aims to validate the system's behaviour in a real-world environment and ensure it meets the specified requirements and objectives. Testing at this level involves executing end-to-end scenarios, simulating user interactions, and assessing system performance under normal and stressful conditions. Various types of testing, such as functional, performance, security, and usability, may be conducted to evaluate different aspects of the system. System-level testing not only verifies the correctness of the software but also assesses its reliability, scalability, and maintainability, providing confidence in its deployment and operation.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Hardware and Software Testing</h3>
+                <div class="dp-panel-content">
+                    <p>Testing software on different combinations of hardware and ensuring compatibility with various operating systems, drivers, and other software applications is crucial to guarantee its functionality and performance across diverse environments. Here's an expansion on this:</p>
+                    <p><strong>Hardware Compatibility Testing:</strong><br>&nbsp; &nbsp;Software solutions should be tested on various hardware configurations to ensure compatibility and optimal performance. This includes testing different types of processors, memory capacities, storage devices, graphics cards, and other peripherals. By testing various hardware configurations, developers can identify and address hardware dependencies, resource utilisation, and performance optimisation issues. Additionally, compatibility testing should consider hardware limitations, driver support, and compatibility with legacy systems to ensure seamless operation across a broad spectrum of hardware environments.</p>
+                    <p><strong>Operating System Compatibility Testing:</strong><br>&nbsp; &nbsp;Compatibility with various operating systems is essential to ensure the software functions correctly on different platforms. Testing should encompass popular operating systems such as Windows, macOS, Linux, iOS, Android, and other versions and editions. This involves verifying that the software installs and runs smoothly on each operating system and that all features and functionalities are fully supported. Compatibility testing should also consider platform-specific requirements, user interface conventions, and performance characteristics to ensure a consistent user experience across different operating environments.</p>
+                    <p><strong>Driver Compatibility Testing:</strong><br>&nbsp; &nbsp;Software solutions often rely on device drivers to communicate with hardware components and peripherals. Therefore, testing for compatibility with various device drivers, including those provided by hardware manufacturers and third-party vendors, is crucial. This involves verifying that the software can interface correctly with various drivers, support different driver versions, and handle driver-related errors gracefully. Driver compatibility testing helps ensure the software can effectively utilise hardware resources and maintain stability and reliability across different configurations.</p>
+                    <p><strong>Compatibility with Other Software Applications:</strong><br>&nbsp; &nbsp;Many software solutions interact with or depend on other third-party applications and libraries. Therefore, testing for compatibility with these dependencies is essential to avoid conflicts or interoperability issues. Compatibility testing should include integration testing with commonly used software applications, middleware, databases, and web services. This involves verifying that the software can coexist with other applications, exchange data seamlessly, and maintain interoperability without compromising performance or functionality. Thorough testing of integration points helps ensure a smooth and cohesive user experience, particularly in environments where multiple software solutions are used concurrently.</p>
+                    <p><strong>&nbsp;Thorough Testing of Interactions:</strong><br>&nbsp; &nbsp;When deploying the software alongside other applications, thorough testing should be conducted to assess how they interact. This includes testing for potential conflicts, compatibility issues, or unexpected behaviour that may arise when multiple applications are running simultaneously. Additionally, testing should cover scenarios where the software interacts with peripherals, network devices, and external systems to ensure seamless integration and interoperability. By thoroughly testing interactions with hardware, operating systems, drivers, and other software applications, developers can identify and resolve compatibility issues early in the development process, ensuring a smoother deployment and a more positive user experience.</p>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Test Data</h3>
+                <div class="dp-panel-content">
+                    <p>Testing software with a diverse range and large quantity of test data is essential to ensure its reliability and performance under real-world conditions. Here's an elaboration on the specific conditions that should be tested and their significance:</p>
+                    <p><strong>Large File Sizes:</strong> <br>Testing with large files helps uncover potential issues related to data access and processing efficiency. It identifies whether the system can handle larger datasets' increased resource demands and processing time. Problems with slow response times or inefficient code may become more apparent when dealing with large volumes of data.</p>
+                    <p><strong>A mix of Transaction Types:<br></strong> Testing with a mix of transaction types simulates real-world scenarios where multiple operations coincide. It ensures the system can handle concurrent transactions without data integrity issues or conflicts. It also helps identify and address potential race conditions, deadlocks, or inconsistencies that may arise when transactions interact unpredictably.</p>
+                    <p><strong>Response Times: <br></strong>Evaluating response times measures the efficiency and performance of the system under different workloads. It assesses the time taken for processes to complete and the system's responsiveness to user interactions. It also identifies bottlenecks, performance degradation, or resource constraints that may impact user experience or system reliability.</p>
+                    <p><strong>Volume Data (Load Testing):</strong> <br>Load testing involves subjecting the system to stress conditions with large amounts of data or concurrent users. It evaluates the system's scalability and ability to handle increased loads without degradation in performance or stability. It helps identify performance thresholds, capacity limits, and potential points of failure under heavy usage scenarios. Multi-user applications need to ensure smooth operation and responsiveness even during peak usage.</p>
+                    <p>By testing software under these conditions, developers can uncover potential issues early in development, allowing for timely adjustments and optimisations. This proactive approach helps ensure the software meets performance expectations, delivers a positive user experience, and maintains reliability under live conditions.</p>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Acceptance testing</h3>
+                <div class="dp-panel-content">
+                    <div class="flex-1 overflow-hidden">
+                        <div class="react-scroll-to-bottom--css-vfydk-79elbk h-full">
+                            <div class="react-scroll-to-bottom--css-vfydk-1n7m0yu">
+                                <div class="flex flex-col text-sm pb-9">
+                                    <div class="w-full text-token-text-primary" data-testid="conversation-turn-5">
+                                        <div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
+                                            <div class="flex flex-1 text-base mx-auto gap-3 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] group final-completion">
+                                                <div class="relative flex w-full flex-col agent-turn">
+                                                    <div class="flex-col gap-1 md:gap-3">
+                                                        <div class="flex flex-grow flex-col max-w-full">
+                                                            <div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="e3cdb09c-eb2f-46cf-a2da-8325dac2ac85">
+                                                                <div class="markdown prose w-full break-words dark:prose-invert light">
+                                                                    <p>Acceptance testing is a critical phase in the software development lifecycle where the focus shifts from technical validation to ensure that the product meets the client's or end-users expectations and requirements. Here's an elaboration on this:</p>
+                                                                    <ol>
+                                                                        <li>
+                                                                            <p><strong>Client's Requirements Validation:</strong> Acceptance testing aims to validate that the software product aligns with the specified requirements provided by the client or stakeholders. These requirements could encompass functional features, performance expectations, usability standards, security measures, and other criteria defined during the project's initiation and planning phases. The testing process involves comparing the actual behaviour of the software against these predefined requirements to assess compliance.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><strong>User and Management Involvement:</strong> Unlike earlier stages of testing, which were primarily conducted by developers and quality assurance teams, acceptance testing involves active participation from end-users and management representatives. Users are typically involved in executing test cases and providing feedback on the software's usability, functionality, and overall satisfaction with the product. Management stakeholders oversee the testing process, ensuring it aligns with business objectives and addresses key concerns.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><strong>Transfer of Ownership:</strong> Successful completion of acceptance testing often signifies the software's readiness for deployment and operational use. Upon passing acceptance tests, the ownership of the software product is typically transferred from the development team to the client or end-users. This transition marks the official handover of responsibility for maintaining, supporting, and utilising the software.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><strong>Legal Implications of Failure:</strong> If the software fails to meet the acceptance criteria or does not satisfy the client's requirements, it may have significant consequences, including legal ramifications. Clients may take legal action against the development company for breach of contract or failure to deliver the promised product. Common issues that may lead to such disputes include inadequate performance, incorrect functionality, security vulnerabilities, or failure to meet agreed-upon deadlines.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><strong>Mitigating Risks and Ensuring Compliance:</strong> To reduce the risks associated with acceptance testing, development teams must maintain clear communication with clients throughout the development process, accurately document requirements, and actively involve stakeholders in the testing process. Additionally, incorporating ongoing feedback and iteration mechanisms can help address any discrepancies or shortcomings identified during acceptance testing, ultimately ensuring client satisfaction and compliance with contractual obligations.</p>
+                                                                        </li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Benchmarking</h3>
+                <div class="dp-panel-content">
+                    <p><span>Benchmarking systematically evaluates a product's performance using standardised tests to compare it against industry standards. It involves selecting relevant tests, executing them rigorously, measuring performance metrics, comparing results with established benchmarks, and making informed decisions for improvement. Benchmarking helps assess competitiveness, identify strengths and weaknesses, and drive continuous improvement efforts.</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Quality Assurance</h3>
+                <div class="dp-panel-content">
+                    <p>Quality Assurance (QA) is a crucial aspect of the software development process, ensuring that the final product meets or exceeds users' expectations regarding quality and reliability. Here's a deeper explanation:</p>
+                    <p>Quality Assurance involves systematic activities and processes to verify and validate that the software product conforms to specified requirements and standards. It encompasses various practices, methodologies, and tools designed to prevent defects, identify deviations from requirements, and ensure that the product meets established quality criteria.</p>
+                    <p>The primary goal of QA is to instil confidence in the quality and reliability of the software by addressing potential issues early in the development lifecycle and throughout the entire software development process. By adhering to QA principles, organisations can minimise risks, enhance customer satisfaction, and maintain competitiveness in the market.</p>
+                    <p>Critical aspects of Quality Assurance include:</p>
+                    <ol>
+                        <li>
+                            <p><strong>Standards and Guidelines:</strong> QA relies on established national and international standards, guidelines, and best practices to define quality criteria and ensure compliance. These standards provide frameworks for quality management systems, processes, and methodologies that help organisations achieve consistent and reliable results.</p>
+                        </li>
+                        <li>
+                            <p><strong>Quality Planning:</strong> QA begins with quality planning, where project stakeholders define quality objectives, requirements, and acceptance criteria. This involves identifying quality attributes relevant to the software product, such as functionality, usability, reliability, performance, and security, and establishing metrics to measure them.</p>
+                        </li>
+                        <li>
+                            <p><strong>Quality Control:</strong> QA activities include quality control processes to monitor and evaluate the quality of the software throughout its development lifecycle. This involves conducting reviews, inspections, and testing to detect defects, identify deviations from requirements, and ensure adherence to quality standards.</p>
+                        </li>
+                        <li>
+                            <p><strong>Testing and Validation:</strong> Testing is a fundamental component of QA. It involves the systematic execution of test cases to verify that the software functions correctly and meets specified requirements. This includes various types of testing, such as functional, usability, performance, security, and regression, to validate different aspects of the software's quality.</p>
+                        </li>
+                        <li>
+                            <p><strong>Continuous Improvement:</strong> QA promotes a culture of constant improvement, where organisations strive to identify areas for enhancement and implement corrective and preventive actions to address quality issues. This involves analysing stakeholder feedback, reviewing process performance, and implementing lessons learned to optimise quality management practices.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Purpose of Testing and Evaluation</h3>
+                <div class="dp-panel-content">
+                    <p>Software testing and evaluation play a critical role in ensuring software products' quality, reliability, and performance. Here's a deeper look at the purposes and objectives of software testing and evaluation:</p>
+                    <ol>
+                        <li>
+                            <p><strong>Ensuring Requirement Compliance:</strong></p>
+                            <ul>
+                                <li>One of the primary purposes of software testing and evaluation is to ensure that the software meets its specified requirements during the development phase. This involves verifying that the software's functionality, features, and behaviour align with the intended specifications outlined by stakeholders, including clients, end-users, and regulatory authorities.</li>
+                                <li>Testing ensures that all functional and non-functional requirements, such as usability, scalability, and compatibility, are adequately addressed and implemented in the software product. By validating requirement compliance, testing helps mitigate the risk of delivering software that fails to meet user expectations or regulatory standards.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Identifying and Fixing Bugs:</strong></p>
+                            <ul>
+                                <li>Another key objective of software testing and evaluation is identifying and rectifying software defects, errors, or inconsistencies before deploying to production environments. Testing helps uncover bugs in the code, logic errors, usability issues, and other discrepancies that could impact the software's functionality or performance.</li>
+                                <li>By detecting and addressing bugs early in the development lifecycle, testing minimises the likelihood of costly rework, system failures, or customer dissatisfaction post-deployment. It enables developers to troubleshoot and resolve issues promptly, improving the overall quality and reliability of the software.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Ensuring Reliability, Performance, and Security:</strong></p>
+                            <ul>
+                                <li>Software testing is instrumental in validating the software product's reliability, performance, and security. Reliability testing assesses the software's ability to perform consistently and predictably under various conditions, ensuring that it meets uptime requirements and delivers consistent results.</li>
+                                <li>Performance testing evaluates the software's responsiveness, scalability, and resource utilisation under different workloads and stress conditions. It helps identify performance bottlenecks, latency issues, and capacity limits, enabling optimisation for optimal performance.</li>
+                                <li>Security testing aims to identify software vulnerabilities, weaknesses, and security risks that malicious actors could exploit. It includes penetration testing, vulnerability scanning, and code analysis to assess the software's resilience against cyber threats and ensure data confidentiality, integrity, and availability.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Functionality testing</h3>
+                <div class="dp-panel-content">
+                    <p><strong>Definition of Functionality Testing:</strong></p>
+                    <p>Functionality testing is software testing that aims to validate the functional behaviour of the software application or system. It involves testing all the software's features, functionalities, and capabilities to ensure that they meet the specified requirements and perform as expected by end-users.</p>
+                    <p><strong>Key Objectives of Functionality Testing:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Testing All Features:</strong></p>
+                            <ul>
+                                <li>The primary objective of functionality testing is to verify that all software features and functionalities are working correctly. This includes testing both basic and advanced features and any specialised functionalities unique to the software.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Handling Various Data Types:</strong></p>
+                            <ul>
+                                <li>Functionality testing involves putting various types of data into the software to ensure that it can effectively handle different input scenarios. This includes testing with different data formats, data structures, and data sources to validate data processing and manipulation functionalities.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Verification of Integration:</strong></p>
+                            <ul>
+                                <li>Functionality testing includes verifying the software's integration points with external systems, such as databases, APIs, or third-party applications. This ensures that data exchange, communication, and interoperability with external systems are seamless and error-free.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p><strong>Key Activities in Functionality Testing:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Test Case Design:</strong></p>
+                            <ul>
+                                <li>Functionality testing begins with the design of test cases that cover all the software's functional requirements and features. Test cases are designed to validate each function or feature independently and in combination with other functions.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Test Execution:</strong></p>
+                            <ul>
+                                <li>Test cases are executed systematically to verify the software's behaviour under different conditions and scenarios. This involves inputting test data, interacting with the user interface, and validating the expected outcomes against the actual results.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Defect Reporting and Tracking:</strong></p>
+                            <ul>
+                                <li>During test execution, any defects or issues identified are documented, reported, and tracked using a defect tracking system. This includes providing detailed information about the defect, such as steps to reproduce, severity, and priority, to facilitate resolution by the development team.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Regression Testing:</strong></p>
+                            <ul>
+                                <li>As new features are added or existing features are modified, functionality testing may include regression testing to ensure that the changes do not introduce regressions or unintended side effects. This involves retesting previously validated functionalities to confirm they still work as expected.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p><strong>Techniques of Functionality Testing:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Black Box Testing:</strong></p>
+                            <ul>
+                                <li><span>Black box testing is a testing method where the tester does not have any knowledge of the internal workings or code structure of the module(s) being tested. The tester focuses on the inputs and outputs without being concerned with how the software achieves its functionality.</span></li>
+                                <li><span>The aim is not to identify the specific source of the problem, only to identify that a problem exists in the software's functionality when the outputs are not as expected. When a black box test fails, the developer uses white box testing to find the exact problem.</span></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>White Box Testing:</strong></p>
+                            <ul>
+                                <li><span>White box testing involves examining the internal logic, code, and structure of the module being tested. Testers have knowledge of the internal workings of the code and use this information to design test cases and find the problem identified in the black box test.</span></li>
+                                <li><span>The aim is to ensure the correctness of the internal logic and code structure of the software and that all code paths are tested to uncover any errors in logic.</span></li>
+                            </ul>
+                        </li>
+                        <li><strong>Grey Box Testing:</strong>
+                            <ul>
+                                <li><span>Grey box testing is a software testing method that combines elements of both black box and white box testing methodologies to test a program.</span></li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p><strong>Benefits of Functionality Testing:</strong></p>
+                    <ul>
+                        <li>Ensures that the software meets user expectations and requirements.</li>
+                        <li>Identifies defects, errors, or inconsistencies in the functional behaviour of the software.</li>
+                        <li>Validates the completeness and correctness of all features and functionalities.</li>
+                        <li>It helps improve software quality, reliability, and user satisfaction.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Performance</h3>
+                <div class="dp-panel-content">
+                    <p><strong>Understanding Performance Testing:</strong></p>
+                    <p>Performance testing evaluates how well a software application performs under various conditions, such as average and peak loads, to ensure it meets performance expectations and requirements. It measures critical performance metrics, including response time, throughput, resource utilisation, and scalability, to identify bottlenecks, performance limitations, and areas for optimisation.</p>
+                    <p><strong>Types of Performance Testing:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Load Testing:</strong></p>
+                            <ul>
+                                <li>Load testing evaluates the application's performance under anticipated load conditions by simulating a specific number of users or data volume.</li>
+                                <li>The goal is to determine how the application handles the expected workload without degradation in performance or stability.</li>
+                                <li>Load testing helps identify performance bottlenecks, capacity limits, and scalability issues under typical usage scenarios.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Stress Testing:</strong></p>
+                            <ul>
+                                <li>Stress testing assesses the application's behaviour under extreme conditions beyond standard operating capacity.</li>
+                                <li>It involves subjecting the application to high loads, data volumes, or user concurrency levels to determine its breaking point.</li>
+                                <li>The objective is to identify the point at which the software becomes unresponsive, crashes or exhibits unexpected behaviour under stress.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Scalability Testing:</strong></p>
+                            <ul>
+                                <li>Scalability testing evaluates the application's ability to scale up or down based on changing workload demands.</li>
+                                <li>It tests how well the software adapts to increased or decreased user loads, data volumes, or system resources without compromising performance or stability.</li>
+                                <li>Scalability testing helps assess the application's ability to handle growth and accommodate future expansion or contraction.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Readability of code</h3>
+                <div class="dp-panel-content">
+                    <p><strong>Why Readability Matters:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Ease of Understanding and Maintenance:</strong></p>
+                            <ul>
+                                <li>Readable code is more accessible for other developers to comprehend, allowing them to quickly grasp the code's purpose, logic, and functionality.</li>
+                                <li>When code is easy to understand, it facilitates collaboration among team members and simplifies reviewing, modifying, and maintaining the codebase over time.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Efficiency of Debugging and Updating:</strong></p>
+                            <ul>
+                                <li>Readable code reduces the time and effort required for debugging and troubleshooting issues because developers can more easily identify and isolate problematic areas.</li>
+                                <li>Readability ensures that developers can confidently make changes without introducing unintended side effects or errors when updating or extending existing code.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p><strong>Tips for Improving Readability:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Use Meaningful Variable and Method Names:</strong></p>
+                            <ul>
+                                <li>Choose descriptive and meaningful names for variables, methods, classes, and other code elements to convey their purpose and functionality.</li>
+                                <li>Avoid cryptic or ambiguous abbreviations, opting for names that accurately reflect each component's role or behaviour.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Follow Consistent Coding Style and Conventions:</strong></p>
+                            <ul>
+                                <li>Adhere to a consistent coding style and formatting conventions throughout the codebase to promote uniformity and clarity.</li>
+                                <li>Consistency in coding style makes it easier for developers to navigate and understand the code, regardless of who originally wrote it.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Comment Your Code Where Necessary:</strong></p>
+                            <ul>
+                                <li>Use comments strategically to document complex logic, algorithms, or business rules that may not be immediately obvious from the code itself.</li>
+                                <li>Comments should provide valuable insights into the rationale behind particular design or implementation choices, aiding comprehension and maintenance.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Break Down Complex Logic into Readable Chunks:</strong></p>
+                            <ul>
+                                <li>Divide complex tasks or algorithms into smaller, more manageable functions or methods with clear and concise responsibilities.</li>
+                                <li>Breaking down code into smaller units improves readability and enhances modularity, reusability, and testability.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Ensure Adequate White Space and Formatting:</strong></p>
+                            <ul>
+                                <li>Use consistent indentation, spacing, and formatting to enhance code readability and organisation.</li>
+                                <li>Adequately formatted code improves visual clarity and makes it easier to identify the structure and flow of the code.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Quality of Documentation</h3>
+                <div class="dp-panel-content">
+                    <p><strong>Importance of Documentation:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Guide for Users:</strong></p>
+                            <ul>
+                                <li>Documentation is a vital guide for users, providing instructions and information on utilising the software effectively.</li>
+                                <li>It outlines the software's features, functionalities, and workflows, helping users navigate the application and perform tasks efficiently.</li>
+                                <li>Well-crafted documentation reduces users' learning curve, enhances their understanding of the software, and empowers them to maximise its capabilities.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Reference for Developers:</strong></p>
+                            <ul>
+                                <li>Documentation is a valuable reference for developers, offering insights into the codebase, functionality, and overall architecture.</li>
+                                <li>It provides developers with essential information about the system's design decisions, module interactions, data structures, and algorithms, aiding in code comprehension and troubleshooting.</li>
+                                <li>By documenting the codebase comprehensively, developers can quickly locate relevant sections, understand their purpose, and make informed decisions when modifying or extending the software.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p><strong>Effective Documentation Practices:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>User Documentation:</strong></p>
+                            <ul>
+                                <li>User documentation is intended for end-users and typically includes manuals, user guides, tutorials, and frequently asked questions (FAQs).</li>
+                                <li>It should be written in clear, understandable language, avoiding technical jargon and complexities that might confuse users.</li>
+                                <li>User documentation should cover basic tasks, advanced features, troubleshooting steps, and best practices, ensuring users have the necessary information to utilise the software effectively.</li>
+                                <li>Incorporating examples, screenshots, and step-by-step instructions enhances the clarity and usability of user documentation.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Technical Documentation:</strong></p>
+                            <ul>
+                                <li>Technical documentation focuses on providing detailed insights into the software's architecture, codebase, and internal workings, and it is primarily targeted at developers.</li>
+                                <li>It should include information about the software's architecture, design patterns, coding conventions, and API references.</li>
+                                <li>Technical documentation should offer a comprehensive codebase overview, including class hierarchies, module dependencies, and data flow diagrams, facilitating code understanding and maintenance.</li>
+                                <li>Including code comments, inline documentation, and high-level overviews of key components enhances the comprehensibility and maintainability of technical documentation.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Clarity and Conciseness:</strong></p>
+                            <ul>
+                                <li>Regardless of the type of documentation, clarity and conciseness are paramount. Documentation should be easy to understand and navigate.</li>
+                                <li>Use clear, straightforward language and organise content logically to facilitate quick comprehension and reference.</li>
+                                <li>Incorporate examples, illustrations, and diagrams where applicable to illustrate concepts and clarify complex topics, enhancing the overall readability of the documentation.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+      <div class="dp-panels-wrapper dp-accordion-default">
+        <div class="dp-panel-group">
+            <h3 class="dp-panel-heading ">Presentation</h3>
+            <div class="dp-panel-content ">
+                <p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EYXNtMLtlJ5FgLRBlag3mTABuByvt3M_NJCxZThq0Atc7g?e=a6un5a" target="_blank">1.18 Test and Evaluate</a></p>
+                <div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-18-test-and-evaluate" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={c2b4cd85-94ed-459e-80b4-4195a8379930}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+            </div>
+        </div>
+    </div>
+        <div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-18-test-and-evaluate" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/TmGYRAQ8s0I?si=WkjYLZ-BDe3J7tAU</span></div></div>
+        <div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+                <ul class="card-text">
+                    <li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+                <ul class="card-text">
+                    <li><a title="1.18 Test and evaluate" href="https://canvas.kings.edu.au/courses/11962/assignments/179143" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179143" data-api-returntype="Assignment">1.18 Test and evaluate</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+    </div>
+    
+    <p>&nbsp;</p>
+</div>
+<h3 class="readles">1.19 Debugging</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2">
+    <header class="dp-header dp-bookmark variation-2 ">
+        
+    </header>
+    <div class="dp-content-block kl_custom_block_0">
+        <div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+            <div class="card-body">
+                <p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Use debugging tools, including:<br></span>- <span class="card-text">breakpoints</span><br class="card-text">- <span class="card-text">single line stepping</span><br class="card-text">- <span class="card-text">watches</span><br class="card-text">- <span class="card-text">interfaces between functions</span><br class="card-text">- <span class="card-text">debugging output statements</span><br class="card-text">- <span class="card-text">debugging software available in an integrated development environment (IDE)</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_content_block_1">
+        <h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4" style="padding: 0px 5px 0px 0px;">
+                    <div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 10pt;">Use debugging tools, including breakpoints, single-line stepping, watches, interfaces between functions, output statements, and debugging software, in an integrated development environment (IDE).</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8" style="padding: 0px 0px 0px 5px;">
+                    <div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 13.3333px;">Identify and explain the purpose of different debugging tools.</span></li>
+                                <li><span style="font-size: 13.3333px;">Apply debugging tools to identify and resolve errors in code.</span></li>
+                                <li><span style="font-size: 13.3333px;">Use breakpoints to pause the execution of code and examine the state of variables.</span></li>
+                                <li><span style="font-size: 13.3333px;">Use single-line stepping to execute code one line at a time.</span></li>
+                                <li><span style="font-size: 13.3333px;">Use watches to monitor the value of variables during code execution.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_custom_block_1">
+        <h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+        <p class="amber-el amber-paragraph amber-content"><strong class="amber-el amber-bold">Debugging is finding and resolving issues (bugs) within software.</strong> Bugs are errors that prevent the program from working as intended and are caused by something written (or not written) in the program.</p>
+        <p class="amber-el amber-paragraph amber-content">&nbsp;</p>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+            <div class="card-body">
+                <p class="amber-el amber-paragraph amber-content"><strong>The main types of bugs are:</strong></p>
+                <ul class="amber-el amber-list">
+                    <li class="amber-el amber-listItem">
+                        <p class="amber-el amber-paragraph amber-content"><u class="amber-el amber-underline">Syntax Errors</u></p>
+                        <ul class="amber-el amber-list">
+                            <li class="amber-el amber-listItem">
+                                <p class="amber-el amber-paragraph amber-content">It occurs when the code statements do not adhere to the programming language's rules.</p>
+                            </li>
+                            <li class="amber-el amber-listItem">
+                                <p class="amber-el amber-paragraph amber-content">For example, spelling 'print' wrong or placing parenthesis incorrectly.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="amber-el amber-listItem">
+                        <p class="amber-el amber-paragraph amber-content"><u class="amber-el amber-underline">Runtime Errors</u></p>
+                        <ul class="amber-el amber-list">
+                            <li class="amber-el amber-listItem">
+                                <p class="amber-el amber-paragraph amber-content">It occurs when the computer cannot continue executing instructions due to a hardware or software fault.</p>
+                            </li>
+                            <li class="amber-el amber-listItem">
+                                <p class="amber-el amber-paragraph amber-content">For example, division by 0, infinite calls or data that lies outside a range.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="amber-el amber-listItem">
+                        <p class="amber-el amber-paragraph amber-content">L<u class="amber-el amber-underline">ogic Errors</u></p>
+                        <ul class="amber-el amber-list">
+                            <li class="amber-el amber-listItem">
+                                <p class="amber-el amber-paragraph amber-content">This occurs when programs do not work correctly as anticipated. They can still execute, but their outputs are wrong. Thus, they do not achieve their purpose. Often, logic errors cause runtime errors, which then lead to the halting of execution.</p>
+                            </li>
+                            <li class="amber-el amber-listItem">
+                                <p class="amber-el amber-paragraph amber-content">For example, incorrect variable assignment, wrong mathematical equation or misunderstanding the problem that the program is trying to solve.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <p class="amber-el amber-paragraph amber-content">The debugging process can be frustrating and may take up most of the programming time.</p>
+        <p>&nbsp;</p>
+        <p class="amber-el amber-paragraph amber-content">There are a variety of tools and techniques that can be utilised to detect the location and correct errors, such as:</p>
+        <ul class="amber-el amber-list">
+            <li class="amber-el amber-listItem">
+                <p class="amber-el amber-paragraph amber-content">Debug Output Statements</p>
+            </li>
+            <li class="amber-el amber-listItem">
+                <p class="amber-el amber-paragraph amber-content">Breakpoints</p>
+            </li>
+            <li class="amber-el amber-listItem">
+                <p class="amber-el amber-paragraph amber-content">Single Line Stepping</p>
+            </li>
+            <li class="amber-el amber-listItem">
+                <p class="amber-el amber-paragraph amber-content">Watches</p>
+            </li>
+            <li class="amber-el amber-listItem">
+                <p class="amber-el amber-paragraph amber-content">Interfaces Between Functions</p>
+            </li>
+        </ul>
+        <div class="dp-panels-wrapper dp-tabs dp-panel-active-color-dp-white">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Debugging Output Statements</h3>
+                <div class="dp-panel-content">
+                    <p>Debug output statements are invaluable tools for developers during debugging and testing software. They serve as checkpoints in the code, providing visibility into the program's internal state at specific points in its execution. By strategically placing these output statements, typically in print statements, developers can monitor the values of variables, track the flow of execution, and verify if certain sections of code are being executed as expected.</p>
+                    <p>One of the primary purposes of debug output statements is to assist in locating and fixing errors or bugs within the software. By observing the values of variables as the program runs, developers can identify unexpected behaviour, incorrect calculations, or logical errors. For example, suppose a variable's value is not what was anticipated at a particular point in the program. In that case, it can indicate a code logic flaw or data processing issue.</p>
+                    <p>Debug output statements can help developers confirm whether specific subroutines or code sections are invoked during program execution. This is particularly useful for understanding the program's control flow and ensuring all necessary components function as intended. By inserting output statements at the beginning and end of critical code sections, developers can trace the program's execution path and identify any deviations from the expected behaviour. Below is a Python example.</p>
+                    <p><img src="../../assets/236031ed15b357a3.png" alt="Screenshot 2024-03-06 at 11.29.26 am.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197609" data-api-returntype="File" loading="lazy"></p>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Breakpoints</h3>
+                <div class="dp-panel-content">
+                    <p>Breakpoints are essential tools in a developer's arsenal during the debugging process. They serve as markers within the code where execution is temporarily halted, allowing the developer to inspect the program's state, including the values of variables, before deciding whether to continue or make adjustments to the code.</p>
+                    <p>When a breakpoint is encountered during execution, the program pauses, allowing the developer to analyze the program's current state. This includes examining the values of variables, checking the call stack, and even evaluating expressions in the context of the program's execution.</p>
+                    <p>Breakpoints are typically set at specific lines of code or under specific conditions. For example, a developer might set a breakpoint at the beginning of a function to inspect the input parameters or within a loop to examine the iteration variables at each iteration.</p>
+                    <p>Once the program is paused at a breakpoint, the developer can interact with the debugging environment to gain insights into the program's behaviour. This may involve stepping through the code line-by-line, continuing execution until the next breakpoint, or modifying variable values to simulate different scenarios.</p>
+                    <p>It's important to note that breakpoints are temporary aids used during the development and debugging phase of software development. They are not intended to be part of the final codebase and should be removed before deploying the software to production. Failing to remove breakpoints can lead to unintended behaviour and performance issues in the deployed application.</p>
+                    <p><img src="../../assets/8988e457ffb82797.png" alt="Screenshot 2024-03-06 at 11.36.23 am.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197613" data-api-returntype="File" loading="lazy"></p>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Single Line Stepping</h3>
+                <div class="dp-panel-content">
+                    <p>Single-line stepping is a debugging technique that allows developers to meticulously examine the behaviour of their code by pausing execution after each statement. This granular approach provides developers with detailed insights into the flow of their program, enabling them to identify issues, track variable values, and ensure the correctness of their code.</p>
+                    <p>In Single-Line Stepping, each line of code is highlighted to indicate that it has been processed. Execution halts after the execution of each individual statement, allowing developers to review the program's state at that precise moment. This enables them to observe the effects of each statement on the program's variables and control flow, helping to pinpoint any unexpected behaviour or errors.</p>
+                    <p>Furthermore, single-line stepping typically offers commands or keyboard shortcuts that developers can use to navigate the code. These commands allow developers to proceed to the following statement: step into function calls to examine their behaviour, step out of function calls to return to the calling context, or even set breakpoints at specific lines for more targeted debugging.</p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Watches</h3>
+                <div class="dp-panel-content">
+                    <p>Watches are a powerful debugging feature that allows developers to monitor the values of specific variables as they step through their program. This functionality is invaluable when tracking the behaviour of critical variables, ensuring they change as expected and identifying unexpected behaviour promptly.</p>
+                    <p>When using watches, developers pre-specify the variables they want to monitor by adding them to a watch list before executing the program. Once the program starts execution and the debugger is invoked, the debugger continuously monitors these variables. Whenever the value of a watched variable changes during program execution, the debugger automatically displays the updated value. This feature lets developers quickly and efficiently track the evolution of variables' values and detect any anomalies or unexpected behaviour.</p>
+                    <p>Watches are particularly useful in complex applications where numerous variables interact and evolve dynamically throughout program execution. By focusing on specific variables of interest, developers can narrow their debugging efforts and concentrate on understanding and resolving issues affecting them.</p>
+                    <p>Swatches do not require developers to insert temporary code into their programs. Instead, they leverage the debugging environment's capabilities to monitor variable values dynamically during program execution. This means that developers can use watches without modifying their source code, streamlining the debugging process and minimizing disruptions to the codebase.</p>
+                    <p>&nbsp;</p>
+                    <p><img src="../../assets/5330e7f587377001.png" alt="Screenshot 2024-03-06 at 11.53.33 am.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197617" data-api-returntype="File" loading="lazy"></p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Interfaces Between Functions</h3>
+                <div class="dp-panel-content">
+                    <p>"Interfaces between functions" refers to the interactions and connections between different functions within a software system. In the context of debugging, this technique focuses on examining how data and control flow between functions, identifying any inconsistencies or errors in this communication, and resolving issues to ensure the software's smooth operation.</p>
+                    <ol>
+                        <li>
+                            <p><strong>Understanding Function Interfaces</strong>: Functions in a software system often communicate with each other through parameters, return values, and shared data structures. Debugging involves understanding the interfaces between functions, including the types and formats of data passed between them, the expectations of each function regarding input and output, and any dependencies between functions.</p>
+                        </li>
+                        <li>
+                            <p><strong>Tracing Data Flow</strong>: One aspect of debugging interfaces between functions is tracing the flow of data as it moves between different functions. This involves tracking how input data is processed, modified, and passed to other functions and how output data is returned and used by other parts of the system. By tracing data flow, developers can identify any discrepancies or unexpected transformations that may occur, leading to incorrect behaviour or errors.</p>
+                        </li>
+                        <li>
+                            <p><strong>Identifying Communication Issues</strong>: Debugging also involves identifying communication issues or misunderstandings between functions. This may include mismatches in data types or formats, incorrect assumptions about input data, missing error handling mechanisms, or inconsistencies in how functions interpret and process shared data. By pinpointing these communication issues, developers can address them to ensure proper coordination between functions.</p>
+                        </li>
+                        <li>
+                            <p><strong>Testing Function Interactions</strong>: Effective debugging of function interfaces often involves testing the interactions between functions under different scenarios and conditions. This may include designing test cases to cover various input combinations, edge cases, and error conditions and observing how functions interact and respond to different inputs. Testing helps uncover potential issues and ensures that functions behave as expected when integrated into the larger software system.</p>
+                        </li>
+                        <li>
+                            <p><strong>Modularization and Encapsulation</strong>: Modularization and encapsulation are essential for effectively managing function interfaces. By encapsulating functionality within well-defined modules and defining clear interfaces for interaction between modules, developers can reduce the complexity of function interactions, minimize dependencies, and isolate issues to specific modules or components, making debugging more manageable.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Debugging in an IDE</h3>
+                <div class="dp-panel-content">
+                    <p>Debugging in an Integrated Development Environment (IDE) offers a streamlined and efficient way to identify and resolve issues within Python code. Python IDEs typically provide comprehensive debugging tools and features tailored to the language's syntax and conventions. Here's an overview of debugging in Python IDEs:</p>
+                    <ol>
+                        <li>
+                            <p><strong>Interactive Debuggers</strong>: Python IDEs often include interactive debuggers that allow developers to pause execution at specific points in the code, inspect variables, and step through the code line by line. These debuggers provide a graphical interface for controlling the debugging process, making it easy to navigate and analyze code during debugging sessions.</p>
+                        </li>
+                        <li>
+                            <p><strong>Breakpoints</strong>: Breakpoints are markers placed within the code where execution will pause when reached. Python IDEs allow developers to set breakpoints by clicking on specific lines of code or using keyboard shortcuts. Once a breakpoint is hit, developers can inspect the program's state, including variable values and the call stack, and interactively debug the code.</p>
+                        </li>
+                        <li>
+                            <p><strong>Variable Inspection</strong>: Python IDEs provide tools for inspecting variable values during debugging sessions. Developers can hover over variables to view their current values or use dedicated panels to explore variables and data structures in more detail. This makes it easy to track how variables change over time and identify potential issues in the code.</p>
+                        </li>
+                        <li>
+                            <p><strong>Expression Evaluation</strong>: IDEs often allow developers to evaluate expressions and execute code snippets interactively during debugging sessions. This can be useful for testing hypotheses, verifying assumptions, and experimenting with code changes without modifying the source files.</p>
+                        </li>
+                        <li>
+                            <p><strong>Call Stack Navigation</strong>: Python IDEs provide features for navigating the call stack, allowing developers to understand the sequence of function calls leading up to the current execution point. This helps in tracing the flow of execution and understanding how different parts of the code interact.</p>
+                        </li>
+                        <li>
+                            <p><strong>Exception Handling</strong>: IDEs offer tools for handling exceptions and errors during debugging sessions. Developers can configure the debugger to pause execution when an exception occurs, allowing them to inspect the exception details and diagnose the underlying cause of the error.</p>
+                        </li>
+                        <li>
+                            <p><strong>Integration with Version Control</strong>: Many Python IDEs integrate with version control systems like Git, allowing developers to track changes to the codebase and collaborate with team members more effectively. Debugging tools in IDEs often support version control workflows, making debugging code across different branches and commits easy.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+      <div class="dp-panels-wrapper dp-accordion-default">
+        <div class="dp-panel-group">
+            <h3 class="dp-panel-heading ">Presentation</h3>
+            <div class="dp-panel-content ">
+                <p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EY6r9rKjm6pEgL8ctG5Ru8sBe811FFSX2rfkF1uZbqDDUA?e=DNaUnP" target="_blank">1.19 Deubgging</a></p>
+                <div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-19-debugging" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={b2f6ab8e-9ba3-44aa-80bf-1cb46e51bbcb}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+            </div>
+        </div>
+    </div>
+        <div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+                <ul class="card-text">
+                    <li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+                <ul class="card-text">
+                    <li><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank">EdStem activity&nbsp;✅ 🧰 Debugging Tools 🧰</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+    </div>
+    
+    <p>&nbsp;</p>
+</div>
+<h3 class="readles">1.20 Test data</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2">&nbsp;&nbsp;&nbsp;<header class="dp-header dp-bookmark variation-2 ">
+        
+    </header>
+    <div class="dp-content-block kl_custom_block_0">
+        <div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+            <div class="card-body">
+                <p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text"><span>Determine sets of suitable test data </span>including:<br></span>- <span class="card-text">boundary values<br></span>- <span class="card-text">path coverage<br>- faulty and abnormal data</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_content_block_1">
+        <h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4" style="padding: 0px 5px 0px 0px;">
+                    <div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 10pt;">be able to determine sets of suitable test data, including boundary values, path coverage, faulty and abnormal data.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8" style="padding: 0px 0px 0px 5px;">
+                    <div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 13.3333px;">identify and explain the importance of using suitable test data in software testing.</span></li>
+                                <li><span style="font-size: 13.3333px;">apply their knowledge of boundary values to select test data that includes boundary cases.</span></li>
+                                <li><span style="font-size: 13.3333px;">apply their knowledge of path coverage to select test data that tests all possible paths through the code.</span></li>
+                                <li><span style="font-size: 13.3333px;">identify and select faulty and abnormal data to test the code's robustness.</span></li>
+                                <li><span style="font-size: 13.3333px;">create test data sets that cover boundary values, path coverage, and faulty and abnormal data.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_custom_block_1">
+        <h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+        <p>Testing is a critical phase in the software development lifecycle, aimed at identifying and fixing bugs before the software is deployed. The selection of appropriate test data plays a pivotal role in the testing process, as it directly influences the test's effectiveness in uncovering defects. Test data can be categorized into boundary values, path coverage data, and faulty or abnormal data, each targeting different aspects of software behavior.</p>
+        <p>&nbsp;</p>
+        <h4><strong>Boundary Values</strong></h4>
+        <p>Boundary Value Analysis is a testing technique that focuses on the values at the edge of input domains. It is based on the principle that errors are more likely to occur at the boundaries of input value ranges.</p>
+        <p><strong>Key Concepts:</strong></p>
+        <ul>
+            <li><strong>Boundary Values:</strong> Include the minimum and maximum values, just inside/outside boundaries, and typical values just beyond the extremes.</li>
+            <li><strong>Advantages:</strong> Highly effective in finding errors in input validation and data processing.</li>
+            <li><strong>Techniques:</strong>
+                <ul>
+                    <li>Identify the input ranges for all input variables.</li>
+                    <li>Determine the boundary values for each range.</li>
+                    <li>Create test cases for these boundary values.</li>
+                </ul>
+            </li>
+        </ul>
+        <p><strong>Example:</strong> If an input field accepts numbers from 1 to 100, the boundary values would be 0, 1, 2, 99, 100, and 101.</p>
+        <p><strong>Python Example:</strong></p>
+        <p>Consider a function that verifies if an age is within the legal driving age (18-65 inclusive) in a certain jurisdiction.</p>
+        <p><strong><img src="../../assets/921a35d82e22e77d.png" alt="Screenshot 2024-02-16 at 5.24.27 pm-1.png" width="728" height="150" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197656" data-api-returntype="File" loading="lazy"></strong></p>
+        <br>
+        <h4><strong>Path Coverage</strong></h4>
+        <p>Path coverage testing ensures that all possible paths through a given part of the code are executed at least once. This approach helps in identifying untested parts of a codebase.</p>
+        <p><strong>Key Concepts:</strong></p>
+        <ul>
+            <li><strong>Path Coverage:</strong> Involves creating test cases to cover every possible path through the software, including loops and conditional branches.</li>
+            <li><strong>Advantages:</strong> Ensures a comprehensive testing of the logic and decision-making processes within the code.</li>
+            <li><strong>Techniques:</strong><br>
+                <ul>
+                    <li>Develop test cases that will navigate each path.</li>
+                    <li>Consider loops and their iterations for comprehensive coverage.</li>
+                </ul>
+            </li>
+        </ul>
+        <p><strong>Example:</strong> For a simple conditional statement, paths would include both the true and false branches of the condition.</p>
+        <p><strong>Python Example:</strong></p>
+        <p>Consider a simple function that categorizes an input number into positive, negative, or zero.</p>
+        <p><strong><img src="../../assets/bea7ca924c12620f.png" alt="Screenshot 2024-02-16 at 5.26.20 pm.png" width="505" height="242" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197660" data-api-returntype="File" loading="lazy"></strong></p>
+        <p>&nbsp;</p>
+        <h4><strong>Faulty and Abnormal Data</strong></h4>
+        <p>&nbsp;</p>
+        <p>Testing with faulty and abnormal data involves intentionally providing incorrect, invalid, or unexpected data to the system to observe how it behaves, ensuring that it can handle such situations gracefully.</p>
+        <p><strong>Key Concepts:</strong></p>
+        <ul>
+            <li><strong>Faulty Data:</strong> Data that is incorrect or malformed.</li>
+            <li><strong>Abnormal Data:</strong> Data that is unusual or unexpected, but not necessarily incorrect.</li>
+            <li><strong>Advantages:</strong> Helps in testing the robustness and error handling capabilities of the software.</li>
+            <li><strong>Techniques:</strong>
+                <ul>
+                    <li>Identify data types and inputs that are prone to errors.</li>
+                    <li>Create test cases with invalid formats, extreme values, and unexpected input combinations.</li>
+                    <li>Evaluate the system's response to ensure it fails safely without causing harm or data corruption.</li>
+                </ul>
+            </li>
+        </ul>
+        <p><strong>Example:</strong> Entering a string of characters where a numerical input is expected, or submitting a file with an unsupported format.</p>
+        <p><strong>Python Example:</strong><strong></strong></p>
+        <p>A function expects a numerical grade between 0 and 100 but receives various types of abnormal data.</p>
+        <p><strong><img src="../../assets/7e5fa47ec42d6527.png" alt="Screenshot 2024-02-16 at 5.27.37 pm.png" width="608" height="267" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197665" data-api-returntype="File" loading="lazy"></strong></p>
+        <p>&nbsp;</p>
+      <div class="dp-panels-wrapper dp-accordion-default">
+        <div class="dp-panel-group">
+            <h3 class="dp-panel-heading ">Presentation</h3>
+            <div class="dp-panel-content ">
+                <p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/Ed4jOz2Lm_dMk5oiHGKsjV8BiDlJdyQaTD2rNKy0CM_dvQ?e=1VKhPq" target="_blank">1.20 Test Data</a></p>
+                <div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-20-test-data" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={3d3b23de-9b8b-4cf7-939a-221c62ac8d5f}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+            </div>
+        </div>
+    </div>
+        <div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+                <ul class="card-text">
+                    <li>List sources here</li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+                <ul class="card-text">
+                    <li><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank">EdStem activity 📋 Test Data 📋</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+    </div>
+    
+    <p>&nbsp;</p>
+</div><h3 class="sub">After</h3>
+<h3 class="readles">Assignment — Cycle 4 spaced repetition</h3>
+<p><em>[no description]</em></p><p><strong>Points:</strong> 20</p>
+<div class="readnav"><a href="11962-m3.html">← previous module</a><a href="../course-11962.html">all modules</a><a href="11962-m5.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

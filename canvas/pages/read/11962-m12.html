@@ -1,0 +1,829 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 13 (Term 3: Weeks 5-6) Mechatronics — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">11SENX Software Engineering 2025 · module 13 of 17</p>
+<h1>Cycle 13 (Term 3: Weeks 5-6) Mechatronics</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="11962-all.html">Whole course</a><span class="cur">By module</span><a href="../course-11962.html">By lesson</a></div>
+<h3 class="readles">3.9 Algorithms</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Develop, modify and apply algorithms to control a mechatronic system</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Gain an understanding of the key components and operations of mechatronic systems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Create and modify algorithms to effectively control a mechatronic system's operations.</span></li>
+<li><span style="font-size: 13.3333px;">Evaluate the performance of their algorithms in practical mechatronic system scenarios.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Algorithms are just as important for mechatronics as they were in the units before, you will need to be able to use and understand algorithms in order to design practical mechatronic systems.</p>
+<p>To revise algorithm specific content: <a title="1.5 Structured algorithms" href="../lessons/11962-011.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/1-dot-5-structured-algorithms" data-api-returntype="Page">1.5 Structured algorithms</a></p>
+<p>&nbsp;</p>
+<h4><strong>Algorithms: VexCode VR</strong></h4>
+<p>Open up VexCode VR, create a new text project and select the playground <strong>Art Canvas+<br></strong></p>
+<table style="border-collapse: collapse; width: 100%; border-style: none;" border="1">
+<tbody>
+<tr>
+<td style="width: 49.9752%;"><img src="../../assets/9a90cb4304a8a28a.png" alt="1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197580" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 49.9737%;"><img src="../../assets/8d9b21d4f19e3375.png" alt="3.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197592" data-api-returntype="File" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>Before you can begin this exercise you will need to download the&nbsp;<strong>Number Grid</strong> (the image below) and upload it into the playground.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/4f597ecb08672a92.png" alt="VEXcode VR - Art Canvas + Smart Delivery-1.png" width="184" height="184" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197598" data-api-returntype="File" loading="lazy"></p>
+<div class="dp-panels-wrapper dp-panel-active-color-dp-primary dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">How to Upload Image</h3>
+<div class="dp-panel-content">
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/f147efa2954748ad.png" alt="Screenshot 2024-05-14 at 15-17-03 Using the Playground Window in Art Canvas.png" width="616" height="654" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197602" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p>Let's have a go at applying what you have learnt about algorithms in this exercise.</p>
+<p>&nbsp;</p>
+<p><strong>Challenges:</strong><span>&nbsp;&nbsp;</span></p>
+<p><span>In this game, the VR Robot starts in the center of the Number Grid City. The object of the game is to drive the VR Robot to grid 0 to pick up a secret package, then make a delivery to a randomly assigned number grid. The robot can only drive in the directions parallel to the x-axis or parallel to the y-axis. Can you successfully drive the VR Robot to deliver the secret package to the destination number grid?</span></p>
+<p><strong>Level 1:</strong><span> Create an algorithm to drive the VR Robot to grid 0, then to an assigned grid randomly selected from 1 to 9.</span></p>
+<ul>
+<li aria-level="1"><span>Use a variable to store the randomly selected number.</span></li>
+<li aria-level="1"><span>Print the variable value to the Print Console to show the assigned grid number.</span></li>
+<li aria-level="1"><span>Use the Pen on the robot to draw the delivery path using the variable to determine the drive distance parallel to the x-axis.</span></li>
+<li aria-level="1"><span>Use <code>pen.set_pen_color_rgb()</code> to fill in grid 0 and the assigned grid.</span></li>
+</ul>
+<p><strong>Level 2: </strong><span>Create an algorithm to drive the VR Robot to grid 0, then to an assigned grid randomly selected from 20 to 29.</span></p>
+<ul>
+<li aria-level="1"><span>Use a variable to store the randomly selected number.</span></li>
+<li aria-level="1"><span>Print the variable value to the Print Console to show the assigned grid number.</span></li>
+<li aria-level="1"><span>Use the Pen on the robot to draw the delivery path using a variable to determine the drive distance in the directions parallel to the x-axis. Use 400mm as the distance to drive parallel to the y-axis.</span></li>
+<li aria-level="1"><span>Use <code>pen.set_pen_color_rgb()</code> to fill in grid 0 and the assigned grid.</span></li>
+</ul>
+<p><strong>Level 3:</strong><span> Create an algorithm to drive the VR Robot to grid 0, then to an assigned grid randomly selected from 1 to 99.</span></p>
+<ul>
+<li aria-level="1"><span>Use a variable to store the randomly selected number.</span></li>
+<li aria-level="1"><span>Print the variable value to the Print Console to show the assigned grid number.</span></li>
+<li aria-level="1"><span>Use the Pen on the VR Robot+ to draw the delivery path using variables to determine the drive distances in the directions parallel to the x-axis and y-axis.</span></li>
+<li aria-level="1"><span>Use <code>pen.set_pen_color_rgb()</code> to fill in grid 0 and the assigned grid.</span></li>
+</ul>
+<br>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">3.10 Open &amp; Closed Control Systems</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus</strong><br class="card-text">Explore the algorithmic patterns, code and applications for open and closed control systems</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">understand the fundamental concepts and differences between open and closed control systems.</span></li>
+<li><span style="font-size: 10pt;">explore algorithmic patterns and coding practices used in the development of these systems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">identify and describe examples of open and closed control systems in various applications.</span></li>
+<li><span style="font-size: 13.3333px;">develop basic algorithms that simulate the behavior of open and closed control systems.</span></li>
+<li><span style="font-size: 13.3333px;">analyse and compare the efficiency and applications of these systems in real-world scenarios.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4><strong>Definitions and Basic Concepts</strong></h4>
+<p><strong>Open Control Systems (Open Loop Systems): </strong>Open control systems operate without feedback. Rather, these perform their functions based solely on input data and a pre-set sequence of operations</p>
+<p><strong>Closed Control Systems (Closed Loop Systems): </strong>Closed control systems used feedback to control their operations. They continuously monitor the output and adjust it by comparing it to a desired set point via a feedback loop. This process helps in maintaining the desired level of performance despite external disturbances</p>
+<p>&nbsp;</p>
+<h4><strong>Algorithmic Patterns</strong></h4>
+<p><strong>Open Loop Systems:</strong></p>
+<p>The algorithm in an open loop system generally will follow a straightforward sequence:</p>
+<ol style="list-style-type: decimal;">
+<li>Receive data input</li>
+<li>Process the input based on pre-defined settings or configurations</li>
+<li>Output the result directly without and feedback consideration</li>
+</ol>
+<p>&nbsp;</p>
+<p>Here is an example of an algorithm an open loop system may follow in Python:</p>
+<p><img src="../../assets/ec938f54f113f18d.png" alt="image.png" width="498" height="440" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197332" data-api-returntype="File" loading="lazy"></p>
+<p>Notice how the algorithm never gets an feedback, the movements it performs are all pre-defined and hardcoded into it.</p>
+<p>&nbsp;</p>
+<p><strong>Closed Loop Systems:</strong></p>
+<p>Closed loop systems incorporate feedback to adjust their behaviour dynamically:</p>
+<ol style="list-style-type: decimal;">
+<li>Set the goal, decide what you want the output to be</li>
+<li>Continuously measure the actual output of the system</li>
+<li>Check the difference between the desired output and the actual output</li>
+<li>Use the difference to make adjustments. If the actual output is too low, increase it; if its too high, decrease it</li>
+<li>Repeat until the desired goal is met</li>
+</ol>
+<p>&nbsp;</p>
+<p>Take a look at this example of a closed control system:</p>
+<p><img src="../../assets/e201409b07737089.png" alt="image.png" width="625" height="661" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197324" data-api-returntype="File" loading="lazy"></p>
+<p>The algorithm continues to loop until the robot reaches the margin of the target distance, using the feedback from the position to calculate the correct position.</p>
+<p>&nbsp;</p>
+<h4><strong>Applications</strong></h4>
+<p>Examples of Open Loop Systems may include:</p>
+<ul>
+<li>Simple household appliances like toasters and microwave ovens,</li>
+<li>Washing machines,</li>
+<li>Heating elements where precision is not critical.</li>
+</ul>
+<p>Examples of Closed Loop Systems may include:</p>
+<ul>
+<li>Automotive systems like cruise control and advanced breaking systems,</li>
+<li>Industrial automation systems, including robotics and assembly lines,</li>
+<li>Aerospace applications like autopilot and altitude control,</li>
+<li>Home heating and air conditioning systems for maintaining temperature.</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%203.%20Programming%20Mechatronics/PPTs/3.10%20Open-Closed%20Control%20Systems.pptx?d=w6b23218369c043d7a79fc66a6f92417c&amp;csf=1&amp;web=1&amp;e=PwUK2i">3.10 Open-Closed Control Systems.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-10-open-and-closed-control-systems" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={6b232183-69c0-43d7-a79f-c66a6f92417c}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%203.%20Programming%20Mechatronics/PPTs/3.10%20Open-Closed%20Control%20Systems.pptx?d=w6b23218369c043d7a79fc66a6f92417c&amp;csf=1&amp;web=1&amp;e=PwUK2i"></a></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">3.11 Autonomous Control</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus</strong><br class="card-text">Outline the features of an algorithm and program code used for autonomous control</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">understand the key features of an algorithm and program code used for autonomous control.</span></li>
+<li><span style="font-size: 10pt;">be able to identify and outline the components that make up an algorithm and program code for autonomous system</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">explain the main features of an algorithm used in autonomous control systems, including input, output, processing, and decision-making steps.</span></li>
+<li><span style="font-size: 13.3333px;">describe the structure and elements of program code necessary for autonomous control, such as loops, conditionals, and functions.</span></li>
+<li><span style="font-size: 13.3333px;">develop a basic algorithm and corresponding program code that demonstrates autonomous control in a given scenario.</span></li>
+<li><span style="font-size: 13.3333px;">test and debug the program code to ensure it performs the intended autonomous functions accurately.</span></li>
+<li><span style="font-size: 13.3333px;">evaluate the effectiveness of their algorithm and program code in achieving autonomous control and suggest potential improvements for optimization and efficiency.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Autonomous control refers to the capability of a system to operate independently, making decisions and performing tasks without human intervention. This involves using sensors, algorithms, and actuators to perceive the environment, plan actions, and execute commands. Autonomous control systems are widely used in various applications, such as self-driving cars, drones, robotics, and industrial automation.</p>
+<p>&nbsp;</p>
+<p class="p1">Autonomous control algorithms manage mechatronic systems by sensing the system state, calculating the error from a desired setpoint, and computing the required control values. This process repeats continuously in a control loop. The three common types of algorithms are:</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">On/Off Control (Bang-Bang Control)</h3>
+<div class="dp-panel-content ">
+<p class="p1"><strong>Functionality:</strong></p>
+<ul>
+<li class="p1">Turns actuators fully on or fully off based on the system state relative to the desired setpoint.</li>
+<li class="p1">Operates in a binary manner, switching between two extremes.</li>
+</ul>
+<p class="p1"><strong>Strengths:</strong></p>
+<ul>
+<li class="p2">Simple to implement.</li>
+<li class="p2">Suitable for systems where precise control is unnecessary.</li>
+</ul>
+<p class="p1"><strong>Weaknesses:</strong></p>
+<ul>
+<li class="p2">Tends to overshoot or undershoot the setpoint.</li>
+<li class="p2">Can cause oscillations as the system repeatedly hits its limits.</li>
+</ul>
+<p class="p1"><strong>Additional Feature: Hysteresis:</strong></p>
+<p class="p3">To reduce rapid switching and potential damage to components, a tolerance band around the setpoint is introduced. This creates stability by ensuring the system only activates when deviations exceed a certain threshold.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Proportional Control</h3>
+<div class="dp-panel-content ">
+<p class="p1"><strong>Functionality:</strong></p>
+<ul>
+<li class="p2">Adjusts the actuator’s response proportionally to the error (the difference between the system state and the desired setpoint).</li>
+<li class="p2">The larger the error, the stronger the response.</li>
+</ul>
+<p class="p3"><strong>Strengths:</strong></p>
+<ul>
+<li class="p2">Smoother and more refined control compared to on/off systems.</li>
+<li class="p2">Reduces oscillations by varying the strength of the response.</li>
+</ul>
+<p class="p3"><strong>Weaknesses:</strong></p>
+<ul>
+<li class="p2">When the error is small, the control signal may be too weak to move actuators effectively.</li>
+<li class="p2">Can result in steady-state errors, where the system stabilises near, but not exactly at, the setpoint.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PID Control (Proportional-Integral-Derivative)</h3>
+<div class="dp-panel-content">
+<p class="p1">PID control enhances proportional control by adding two components: <strong>integral</strong> and <strong>derivative</strong> control.</p>
+<p class="p1"><strong>Proportional Component (P):</strong></p>
+<ul>
+<li class="p2">Provides immediate adjustments based on the size of the error.</li>
+</ul>
+<p class="p3"><strong>Integral Component (I):</strong></p>
+<ul>
+<li class="p2">Accumulates past errors over time.</li>
+<li class="p2">Helps eliminate steady-state errors by ensuring that small deviations are corrected gradually.</li>
+</ul>
+<p class="p3"><strong>Derivative Component (D):</strong></p>
+<ul>
+<li class="p2">Reacts to the rate of change in error.</li>
+<li class="p2">Dampens overshoot by reducing the control response as the system approaches the setpoint too quickly.</li>
+</ul>
+<p class="p3"><strong>Strengths:</strong></p>
+<ul>
+<li class="p2">Combines the benefits of proportional, integral, and derivative control for precise and stable operation.</li>
+<li class="p2">Adapts to dynamic conditions, correcting both short-term and long-term deviations.</li>
+</ul>
+<p class="p3"><strong>Weaknesses:</strong></p>
+<ul>
+<li>More complex to configure due to the need to tune proportional, integral, and derivative gains.</li>
+<li>Can be computationally intensive for some systems.</li>
+</ul>
+</div>
+</div>
+</div>
+<p class="p1">&nbsp;</p>
+<p>&nbsp;</p>
+<h4><strong>Features of an Algorithm for Autonomous Control</strong></h4>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs-pills-group-vertical">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Sensor Integration</h3>
+<div class="dp-panel-content ">
+<p>Usage in Autonomous Control: Sensors provide real-time data about the environment. This data is crucial for making informed decisions and executing precise actions.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Data Acquisition: Collecting data from various sensors like GPS, LIDAR and cameras.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Sensor Fusion: Combining data from multiple sensors to create a comprehensive understanding of the environment.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Perception</h3>
+<div class="dp-panel-content ">
+<p>Usage in Autonomous Control: Perception allows the system to interpret and understand its surroundings, which is essential for safe and efficient operation.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Object Detection and Classification: Identifying and classifying objects in the environment.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Environment Mapping: Creating and updating a map of the surroundings.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Localisation: Determining the system’s position within the map.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Decision Making</h3>
+<div class="dp-panel-content">
+<p>Usage in Autonomous Control: Decision-making algorithms determine the best course of action based on the current situation and goals.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Path Planning: Generating an optimal path to the destination, considering obstacles and objectives.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Behaviour Planning: Deciding on high-level actions based on the current situation (e.g., lane changing, stopping).</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Control</h3>
+<div class="dp-panel-content">
+<p>Usage in Autonomous Control: Control algorithms convert decisions into actionable commands to guide the system’s movement and actions.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Motion Control: Converting path planning into executable commands for actuators (e.g., steering, acceleration, braking).<br>&nbsp; &nbsp; • &nbsp; &nbsp;Trajectory Tracking: Ensuring the system follows the planned path accurately.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Communication</h3>
+<div class="dp-panel-content">
+<p>Usage in Autonomous Control: Communication ensures coordination within the system and with external entities, enhancing situational awareness and safety.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Inter-System Communication: Exchanging data between different parts of the system (e.g., sensors, controllers).<br>&nbsp; &nbsp; • &nbsp; &nbsp;External Communication: Interfacing with external systems (e.g., traffic signals, other vehicles).</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Safety and Redundancy</h3>
+<div class="dp-panel-content">
+<p>Usage in Autonomous Control: Safety mechanisms and redundancy are critical to handle errors and ensure continuous operation in case of failures.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Error Handling: Detecting and responding to errors or failures in the system.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Fail-Safe Mechanisms: Implementing backup systems to maintain control if the primary system fails.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Features of Program Code for Autonomous Control</strong></h4>
+<p>Let's consider how all of these different features come together by thinking about Autonomous Control in VexVR.</p>
+<p>&nbsp;</p>
+<ol style="list-style-type: decimal;">
+<li><strong>Sensor Integration<br></strong>
+<p><img src="../../assets/47499404b5cc6f74.png" alt="image.png" width="418" height="194" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197885" data-api-returntype="File" loading="lazy"><br>&nbsp; &nbsp; • &nbsp; &nbsp;Purpose: This step collects data from multiple sensors. In this example, we use the distance sensor to measure the distance to objects and the gyro sensor to measure the robot’s orientation.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Relevance to Autonomous Control: Gathering accurate and real-time data from sensors is crucial for the robot to understand its environment and make informed decisions.<br><br></p>
+</li>
+<li><strong>Perception</strong><strong><br></strong>
+<p><img src="../../assets/54639248a6a28cd1.png" alt="image.png" width="553" height="268" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197886" data-api-returntype="File" loading="lazy"><br>&nbsp; &nbsp; • &nbsp;&nbsp; Purpose: This step involves interpreting sensor data to detect objects and determine the robot’s position.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Relevance to Autonomous Control: Perception allows the robot to recognize obstacles and know its orientation, which is essential for navigating and performing tasks safely and effectively.</p>
+</li>
+<li><strong>Decision Making<br></strong>
+<p><img src="../../assets/7bf56157adbea89e.png" alt="image.png" width="587" height="290" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197887" data-api-returntype="File" loading="lazy"><br>&nbsp; &nbsp; • &nbsp; &nbsp;Purpose: This step involves deciding the actions the robot should take based on its perception of the environment.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Relevance to Autonomous Control: Effective decision-making is crucial for the robot to navigate towards its goal while avoiding obstacles. The path planning function creates a sequence of movements, and behavior planning determines whether to proceed or stop based on detected objects.</p>
+</li>
+<li><strong>Control <br></strong>
+<p><img src="../../assets/596d909c674d3911.png" alt="image.png" width="460" height="334" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197888" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Purpose: This step converts the planned actions into executable commands for the robot.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Relevance to Autonomous Control: Control algorithms ensure that the robot moves as intended, following the planned path and adjusting its actions based on real-time feedback.</p>
+</li>
+<li><strong>Communication<br></strong>
+<p><img src="../../assets/09b617a374d6161a.png" alt="image.png" width="541" height="156" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197889" data-api-returntype="File" loading="lazy"><br>&nbsp; &nbsp; • &nbsp; &nbsp;Purpose: This step involves sharing information within the system and with external entities.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Relevance to Autonomous Control: Effective communication helps in monitoring the system’s state and coordinating actions, which is essential for maintaining situational awareness and safety.</p>
+</li>
+<li><strong>Safety and Redundancy<br></strong>
+<p><img src="../../assets/3341d010ec1d6953.png" alt="image.png" width="506" height="251" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197890" data-api-returntype="File" loading="lazy"></p>
+</li>
+<li><strong>Putting It All Together<br></strong><img src="../../assets/3cff2cc9ed6b547a.png" alt="image.png" width="595" height="653" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197891" data-api-returntype="File" loading="lazy"><br>&nbsp; &nbsp; • &nbsp; &nbsp;Purpose: The main control loop orchestrates all the steps, ensuring the robot continuously gathers sensor data, perceives the environment, makes decisions, controls movements, communicates data, and handles errors.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Relevance to Autonomous Control: The control loop integrates all components of the autonomous system, allowing the robot to operate independently and adapt to changing conditions in real-time.</li>
+</ol>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%203.%20Programming%20Mechatronics/PPTs/3.11%20Autonomous%20Control.pptx?d=w7df085ccd6f647d5ae0ecdc79ac9f918&amp;csf=1&amp;web=1&amp;e=Li9SIr">3.11 Autonomous Control.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-11-autonomous-control" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={7df085cc-d6f6-47d5-ae0e-cdc79ac9f918}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div><h3 class="sub">Programming and building</h3>
+<h3 class="readles">3.12 Design/Develop</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus</strong><br class="card-text">Design, develop and produce a mechatronic system for a real-world problem including:<br class="card-text">software control<br class="card-text">mechanical engineering<br class="card-text">electronics and mathematics</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Students will understand how to design, develop, and produce a mechatronic system for a real-world problem, integrating software control, mechanical engineering, electronics, and mathematics.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Students can design a mechatronic system, develop and implement software control, apply mechanical engineering principles, integrate electronics, and utilize mathematics to solve real-world problems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Software Control</h3>
+<div class="dp-panel-content ">
+<p>Software Control involves using computer programs to manage, operate and monitor mechanical and electronic system. This includes algorithms, user interfaces and real-time processing that ensure the system operates correctly and efficiently.</p>
+<p><strong>Role in Mechatronic Systems:</strong></p>
+<ul>
+<li><strong>Control Algorithms:</strong> Software control implements algorithms that dictate how the system responds to different inputs and conditions. For example, in a robotic arms, software determines the precise movements required to pick up an object.</li>
+<li><strong>Data Processing:</strong> Software processes data from sensors to make <em>real-time </em>decisions. For example, an autonomous vehicle uses software to process data from cameras and LIDAR to navigate safely</li>
+<li><strong>User Interface: </strong>Software provides interfaces for users to interact with the system, such as touch screens or remote controls</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Robotics</li>
+<li>Automation Systems</li>
+<li>Automotive Systems</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Mechanical Engineering</h3>
+<div class="dp-panel-content ">
+<p>Mechanical Engineering involves using principles of physics, mathematics, and materials science to design, analyse, manufacture, and maintain mechanical systems. This includes the application of these principles to ensure the systems operate efficiently and effectively.</p>
+<p>&nbsp;</p>
+<p><strong>Role in Mechatronic Systems:</strong></p>
+<ul>
+<li><strong>Structural Design:</strong> Mechanical engineering provides the structural design and analysis required for mechatronic systems. For example, in a robotic arm, mechanical engineering determines the materials and structural configuration to ensure strength and durability.</li>
+<li><strong>Dynamics and Kinematics:</strong> Mechanical engineers analyze and design the motion of mechanical systems. For instance, they determine the movement and forces in mechanisms, ensuring precise and efficient operation.</li>
+<li><strong>Thermal Management:</strong> Mechanical engineering involves managing the thermal aspects of mechatronic systems. For example, in electronic devices, mechanical engineers design cooling systems to prevent overheating.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Robotics</li>
+<li>Automotive Systems</li>
+<li>Aerospace Systems</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Electronics</h3>
+<div class="dp-panel-content">
+<p>Electronics involves using electrical circuits and components to design and develop devices that manage electrical energy and signals. This includes the development of integrated circuits, microcontrollers, and power electronics that are critical for system functionality.</p>
+<p>&nbsp;</p>
+<p><strong>Role in Mechatronic Systems:</strong></p>
+<ul>
+<li><strong>Circuit Design:</strong> Electronics involves designing circuits that control and power mechanical systems. For example, in an autonomous vehicle, electronic circuits manage sensor inputs and motor outputs.</li>
+<li><strong>Signal Processing:</strong> Electronic systems process signals from sensors to make real-time decisions. For instance, electronic circuits in a drone process signals to stabilise and control flight.</li>
+<li><strong>Power Management:</strong> Electronics ensures efficient power management within the system. For example, in a wearable device, electronic circuits manage battery power to extend operational life.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Applications:</strong></p>
+<ul>
+<li><strong>Consumer Electronics</strong></li>
+<li><strong>Medical Devices</strong></li>
+<li><strong>Industrial Automation</strong></li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Mathematics</h3>
+<div class="dp-panel-content">
+<p>Mathematics involves using mathematical theories and techniques to model, analyse, and solve problems in various fields. This includes the application of mathematics to ensure accuracy and optimisation in system design and operation.</p>
+<p>&nbsp;</p>
+<p><strong>Role in Mechatronic Systems:</strong><strong></strong></p>
+<ul>
+<li><strong>Modeling and Simulation: </strong>Mathematics is used to model and simulate the behaviour of mechatronic systems. For example, mathematical models predict the performance of a robotic system under different conditions.</li>
+<li><strong>Optimisation: </strong>Mathematics is used to optimise the design and operation of systems. For instance, algorithms optimise the path planning for autonomous robots to minimise energy consumption.</li>
+<li><strong>Control Theory: </strong>Mathematical principles underpin control theory, which governs how systems respond to inputs. For example, control algorithms use mathematics to ensure stability and performance in automated systems.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Applications:</strong></p>
+<ul>
+<li><strong>Robotics</strong></li>
+<li><strong>Telecommunications</strong></li>
+<li><strong>Engineering Design</strong></li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Applications: VexCode VR</strong></h4>
+<p>Open up VexCode VR, create and next text project and select the playground <strong>Encoded Message</strong>.</p>
+<table style="border-collapse: collapse; width: 100%; border-style: none;" border="1">
+<tbody>
+<tr>
+<td style="width: 49.9752%;"><img src="../../assets/9a90cb4304a8a28a.png" alt="1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197556" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 49.9737%;"><img src="../../assets/cf693e2dd7819dd0.png" alt="2.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197552" data-api-returntype="File" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>Let's have a go at applying what you have learnt about algorithms in this exercise.</p>
+<p>&nbsp;</p>
+<p><strong>Level 1: </strong><span>Program the VR Robot to drive forward for 1 grid square and detect if a blue or green surface is located in the grid square by using the Down Eye Sensor. Store the results from the Down Eye Sensor as a '1' if the grid square is green, and a '0' if the grid square is blue. Repeat these actions for each of the 8 segments in the first grid column. At the end of the project, print the results to the Print Console as a binary value.</span></p>
+<p>&nbsp;</p>
+<p><strong>Level 2: </strong><span>Building from the Level 1 project, create an algorithm to convert the stored 8 binary segments (individual bits) into a 1 byte decimal value. Print the results to the Print Console as a both a binary and decimal value. Use the ASCII lookup table below in order to validate your answer and determine the corresponding character to the 1 byte value.</span></p>
+<p>&nbsp;</p>
+<p><strong>Level 3</strong><span>: Building from the Level 2 project, extend your project to drive the VR Robot around the Playground to determine the decimal values from each of the 5 grid columns. Print the results to the Print Console as a both a binary and decimal value for each column. Use the ASCII lookup table below in order to validate your answer and decode the hidden message.</span></p>
+<p>&nbsp;</p>
+<p><strong>Level 4:</strong><span> Building from the Level 3 project, explore different Python library commands to automate the conversion from binary to decimal, and then decimal to character values. The Python project should print the results to the Print Console as both a binary and decimal value for each column, and then finally print the hidden message as a string.</span></p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-panel-active-color-dp-primary dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Hints</h3>
+<div class="dp-panel-content">
+<ul>
+<li aria-level="1"><span>To choose a puzzle, select the Starting Location button.&nbsp;</span></li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/61d71a7104fc72c0.png" alt="bilde.png" width="51" height="51" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197570" data-api-returntype="File" loading="lazy"></p>
+<ul>
+<li aria-level="1"><span>The solution can be found using the Reveal Answer button after the VR Robot has driven over every coloured grid square in the Playground.</span></li>
+</ul>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/866ea4fd8338959c.png" alt="bilde.png" width="50" height="49" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197574" data-api-returntype="File" loading="lazy"></span></p>
+<ul>
+<li><span>An ASCII lookup table containing binary, decimal, and character conversions is provided for quick reference.</span></li>
+</ul>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/18629f0ac8d24258.png" alt="bilde.png" width="582" height="538" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197577" data-api-returntype="File" loading="lazy"></span></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%203.%20Programming%20Mechatronics/PPTs/3.12%20Design%20%26%20Develop.pptx?d=wde40f0e4c1f74539a4d74367ca8450b6&amp;csf=1&amp;web=1&amp;e=lDhagg">3.12 Design &amp; Develop.pptx</a></p>
+<div class="dp-embed-wrapper" data-ratio-w="32.88" data-ratio-h="0.03"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-12-design-slash-develop" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={de40f0e4-c1f7-4539-a4d7-4367ca8450b6}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">3.13 Implement</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus</strong><br class="card-text">Implement algorithms and design programming code to drive mechatronic devices</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">learn to implement algorithms and design programming code to control and drive mechatronic devices, integrating both software and hardware components to achieve specified tasks.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">create and implement algorithms to effectively control mechatronic devices.</span></li>
+<li><span style="font-size: 13.3333px;">design and write programming code that integrates with mechatronic hardware, ensuring proper functionality and performance.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4><strong>Implementation: VexCode VR</strong></h4>
+<p>Open up VexCode VR, create and next text project and select the playground <strong>Hidden Pixel Art</strong>.</p>
+<table style="border-collapse: collapse; width: 100%; border-style: none;" border="1">
+<tbody>
+<tr>
+<td style="width: 49.9752%;"><img src="../../assets/9a90cb4304a8a28a.png" alt="1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197556" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 49.9737%;"><img src="../../assets/3eee63fe076a8b18.png" alt="Screenshot 2024-05-15 at 15-04-36 VEXcode VR.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197675" data-api-returntype="File" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>Let's have a go at applying what you have learnt about algorithms in this exercise.</p>
+<p>&nbsp;</p>
+<p><span>Discover the Hidden Pixel Art by navigating around the entire Playground surface under the gold colored roof. Each pixel in the Hidden Pixel Art is 1 grid square in size, and the entire Hidden Pixel Art is 8 pixels by 8 pixels in size. Filled pixels will report to the Down Eye Sensor as ‘Green’ and empty pixels will report to the Down Eye Sensor as ‘Blue.’</span></p>
+<p>&nbsp;</p>
+<p><strong>Level 1: </strong><span>Using a piece of paper, create an 8 x 8 grid. Program the VR Robot to navigate across the Hidden Pixel Art Playground. While the VR Robot is driving, use the </span><a href="https://kb.vex.com/hc/en-us/articles/360041790771-Understanding-the-Dashboard-in-VEXcode-VR"><span>Dashboard</span></a><span> to observe and record the color value of the Down Eye Sensor on the paper 8 x 8 grid. The colors recorded on your 8 x 8 grid will reveal the Hidden Pixel Art. Once the VR Robot has traveled every square, use the Reveal Answer button to check your solution.</span></p>
+<p><strong>Level 2: </strong><span>In VEXcode VR, create a 2D List with 8 rows and 8 columns. Program the VR Robot to navigate across the Hidden Pixel Art Playground. While the VR Robot is driving, record the data from the Hidden Pixel Art in the 2D List. Once the VR Robot has navigated around the entire Playground surface under the gold colored roof, use the Reveal Answer button to check your solution.</span></p>
+<p><strong>Level 3</strong><span>: Building from the Level 2 project, extend your project to display a representation of the Hidden Pixel Art using data from the 2D List to the Print Console. Once the VR Robot has navigated around the entire Playground surface under the gold colored roof, use the Reveal Answer button to check your solution.</span><strong></strong></p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-panel-active-color-dp-primary dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Hints</h3>
+<div class="dp-panel-content">
+<ul>
+<li aria-level="1"><span>To choose a puzzle, select the Starting Location button.&nbsp;</span></li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/61d71a7104fc72c0.png" alt="bilde.png" width="51" height="51" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197570" data-api-returntype="File" loading="lazy"></p>
+<ul>
+<li aria-level="1"><span><span>The solution can be found using the Reveal Answer button after the VR Robot has navigated around the entire Playground surface under the gold colored roof.</span></span></li>
+</ul>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/866ea4fd8338959c.png" alt="bilde.png" width="50" height="49" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197574" data-api-returntype="File" loading="lazy"></span></p>
+<ul>
+<li aria-level="1"><span>Monitor the data in your 2D List in real time using the </span><a href="https://kb.vex.com/hc/en-us/articles/360042979851-Monitoring-Variable-and-Sensing-Values-in-VEXcode-VR"><span>Monitor Console</span></a><span>.&nbsp;</span></li>
+</ul>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/e1b4e17c710f756c.png" alt="image.png" width="317" height="96" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197679" data-api-returntype="File" loading="lazy"></span></p>
+<ul>
+<li><span>Display a representation of the Hidden Pixel Art from the 2D list using the <a href="https://kb.vex.com/hc/en-us/articles/360042540272-Using-the-Print-Console-in-VEXcode-VR">Print Console</a>.</span></li>
+</ul>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/a3179114d2bdcd06.png" alt="image.png" width="325" height="307" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197682" data-api-returntype="File" loading="lazy"></span></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">3.14 Simulations</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus</strong><br class="card-text">Develop simulations and prototypes of a potential mechatronic system to test programming code</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">develop simulations and prototypes of a potential mechatronic system to test programming code.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">understand the purpose and importance of simulations and prototypes in mechatronic system development.</span></li>
+<li><span style="font-size: 13.3333px;">identify key components and tools required for creating simulations and prototypes.</span></li>
+<li><span style="font-size: 13.3333px;">create a basic simulation of a mechatronic system using appropriate software.</span></li>
+<li><span style="font-size: 13.3333px;">develop a physical prototype of a mechatronic system.</span></li>
+<li><span style="font-size: 13.3333px;">write and test programming code within the simulation and prototype to ensure system functionality.</span></li>
+<li><span style="font-size: 13.3333px;">analyse and interpret the results of the simulations and prototypes to refine the system and code.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4><strong>Simulations: VexCode VR</strong></h4>
+<p>&nbsp;Open up VexCode VR, create and next text project and select the playground <strong>Disk Maze</strong>.</p>
+<table style="border-collapse: collapse; width: 100%; border-style: none;" border="1">
+<tbody>
+<tr>
+<td style="width: 49.9752%;"><img src="../../assets/9a90cb4304a8a28a.png" alt="1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197556" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 49.9737%;"><img src="../../assets/65e116181679c654.png" alt="Screenshot 2024-05-30 at 10-41-28 VEXcode VR.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197806" data-api-returntype="File" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Level 1</strong><span>: Program the VR Robot to move through the Disk Maze from Start to Finish using the Front Eye Sensor to detect the disk colors. Detect at least 5 disk colors before moving to the finish. The green square is the starting point, and the red disk is the finish.</span></p>
+<p><strong>Level 2</strong><span>: Program the VR Robot to move through the Disk Maze from Start to Finish using the Down Eye Sensor to detect the floor colors.&nbsp;</span></p>
+<p><strong>Level 3</strong><span>: Program the VR Robot to move through the Disk Maze from Start to Finish, turn around 180 degrees, and then move back through the Disk Maze to the original starting point.</span></p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-panel-active-color-dp-primary dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Hints</h3>
+<div class="dp-panel-content">
+<ul>
+<li aria-level="1"><span>Use a </span><i><span>while&nbsp; </span></i> <span>loop to keep the Eye Sensors constantly checking for certain colours.</span></li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/72e0fdf1c6210e9b.png" alt="image.png" width="97" height="27" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197810" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Competition Challenges:&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p><strong>Level 1: </strong><span>How fast can you move through the Disk Maze using the Front Eye Sensor? Use the Pen to trace your path. Fastest time wins!&nbsp;</span></p>
+<p><strong>Level 2</strong><span>: Use the timer to see how fast you can navigate the maze using the Down Eye Sensor.&nbsp; Use the Pen to trace your path.&nbsp; Fastest time wins!</span></p>
+<p><strong>Level 3: </strong><span>How fast can you go to the end of the Disk Color Maze </span><strong>AND</strong><span> back to the start? Use any combination of sensors to increase your speed. Use the Pen to trace your path. Fastest time wins!&nbsp;</span></p>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div><h3 class="sub">After</h3>
+<div class="readnav"><a href="11962-m11.html">← previous module</a><a href="../course-11962.html">all modules</a><a href="11962-m13.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

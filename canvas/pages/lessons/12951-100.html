@@ -1,0 +1,249 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.8 Predictions with Neural Network Models — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 12 (Term 2: Weeks 5-6) Software Automation</div>
+<h1 style="margin-top:.2rem">3.8 Predictions with Neural Network Models</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-8-predictions-with-neural-network-models" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Apply neural network models using an OOP to make predictions</p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Apply neural network models using an object-oriented programming (OOP) approach to make predictions by building and training simple feedforward neural networks.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explain the structure and functioning of a neural network.</span></li>
+<li><span style="font-size: 10pt;">Design a neural network model class using OOP principles.</span></li>
+<li><span style="font-size: 10pt;">Implement a basic neural network to perform prediction tasks and assess its performance.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Neural networks are powerful machine learning algorithms inspired by the structure of the human brain, designed to recognise complex patterns in data. By using an <strong>object-oriented programming (OOP)</strong> approach, we can create flexible and reusable neural network models to solve prediction tasks effectively.</p>
+<p>Neural networks, particularly <strong>feedforward neural networks</strong>, consist of layers of interconnected nodes (neurons). These models are especially useful when dealing with large datasets with complex relationships that traditional regression models might struggle to capture.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<h3 class="card-title">Recall: Key Concepts of Neural Networks</h3>
+<ul>
+<li>
+<p><strong>Neurons and Layers</strong>:</p>
+<ul>
+<li>A neural network consists of an input layer, one or more hidden layers, and an output layer. Each neuron in a layer receives inputs, applies weights and biases, and passes the result through an activation function to produce an output.</li>
+</ul>
+</li>
+<li>
+<p><strong>Feedforward Process</strong>:</p>
+<ul>
+<li>In a <strong>feedforward neural network</strong>, data flows in one direction—from the input layer, through hidden layers, and to the output layer—without loops or cycles.</li>
+</ul>
+</li>
+<li>
+<p><strong>Activation Function</strong>:</p>
+<ul>
+<li>The activation function introduces non-linearity to the model, enabling the network to learn and model complex relationships. Common activation functions include <strong>ReLU</strong> (Rectified Linear Unit) and <strong>sigmoid</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Backpropagation and Gradient Descent</strong>:</p>
+<ul>
+<li>Neural networks are trained using <strong>backpropagation</strong>, a method that calculates the gradient of the loss function with respect to each weight in the network. This information is used to update the weights through <strong>gradient descent</strong>.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Implementing a Neural Network Using OOP</strong></h4>
+<p>To build a neural network, we'll use OOP principles, creating a class-based design that encapsulates the functionality of a neural network and its training process. The structure of the class will allow for flexibility in modifying the network's architecture and training process.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Class Structure</h3>
+<div class="dp-panel-content ">
+<p>A key benefit of OOP is the ability to encapsulate the functionality of the neural network into a single class. This class can manage the network's architecture (layers, neurons, weights, and biases), the forward and backward passes, and the training loop. Think of the class as the "blueprint" for how the neural network behaves.</p>
+<p><strong>Attributes</strong>:</p>
+<p>In the neural network class, the attributes will store the essential information about the network:</p>
+<ul>
+<li><strong>Layers</strong>: Define the architecture of the neural network (e.g., input layer, hidden layers, output layer).</li>
+<li><strong>Weights and Biases</strong>: Initialise random weights and biases for the connections between neurons in different layers.</li>
+<li><strong>Learning Rate</strong>: Controls how much the model's weights are updated with respect to the error gradient during training.</li>
+</ul>
+<p>Example class initialisation:</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/c7569bb8b815ca90.png" alt="image.png" width="870" height="341" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527300" data-api-returntype="File" loading="lazy"><strong></strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Weight Initialisation</strong>:</p>
+<p>Neural networks rely on weights and biases to adjust their predictions during training. These are initialised randomly at first.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/2c11a04b87933c07.png" alt="image.png" width="682" height="360" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527302" data-api-returntype="File" loading="lazy"></p>
+<p>Each connection between neurons in different layers gets a corresponding weight and bias.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Feedforward Process</h3>
+<div class="dp-panel-content ">
+<p>The feedforward process computes the output of the neural network by passing the input data through each layer, applying weights, biases, and an <strong>activation function</strong>. This process is central to how neural networks make predictions.</p>
+<p>How it Works:</p>
+<ul>
+<li>Multiply the input by the weights, add the bias, and apply an activation function to introduce non-linearity. Popular activation functions include <strong>ReLU (Rectified Linear Unit)</strong> and <strong>sigmoid</strong>.</li>
+</ul>
+<p>In code, the forward pass might look like this:</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/a95a9588e384be55.png" alt="image.png" width="614" height="486" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527582" data-api-returntype="File" loading="lazy"></p>
+<p>The <code>a_values</code> variable stores the activations at each layer, which are passed through the network.</p>
+<p>&nbsp;</p>
+<p>As neural networks involve multiple layers and complex transformations, the forward pass can be thought of like a journey: the input data gets progressively transformed through each layer until it reaches the output.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Activation Function</h3>
+<div class="dp-panel-content">
+<p>An <strong>activation function</strong> is essential in neural networks to introduce non-linearity, allowing the network to learn complex patterns. Without it, the model would simply perform linear transformations and wouldn't be able to solve complex tasks.</p>
+<p>Popular choices:</p>
+<ul>
+<li><strong>ReLU</strong>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>=</mo><mi>max</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(z) = \max(0, z)</annotation></semantics></math></span></span></li>
+<li><strong>Sigmoid</strong>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>z</mi></mrow></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">f(z) = \frac{1}{1 + e^{-z}}</annotation></semantics></math></span></span></li>
+</ul>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/05e95a6783ca9901.png" alt="image.png" width="660" height="257" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527301" data-api-returntype="File" loading="lazy"></span></span></span></span></span></span></span></span></p>
+<p>Think of the activation function like a "filter" that lets the network make more nuanced decisions, much like how our brain processes subtle details. The activation function, by allowing non-linearity, gives the machine a form of intelligence to handle complex problems.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Backpropagation</h3>
+<div class="dp-panel-content">
+<p>Backpropagation is the heart of neural network training. It calculates the gradient of the loss function with respect to each weight using the <strong>chain rule</strong> of calculus, allowing the network to update its weights to <strong>minimise</strong> the prediction error.</p>
+<p><strong>How it Works:</strong></p>
+<ul>
+<li>During backpropagation, the network compares its output to the actual target (label) and computes the error (using a loss function like <strong>mean squared error</strong> for regression or <strong>cross-entropy</strong> for classification).</li>
+<li>The network then "propagates" this error backward through the layers, calculating how much each weight contributed to the error.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/ca041f1a6f62cfbe.png" alt="image.png" width="692" height="587" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527583" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>The <code>backward()</code> method adjusts the weights and biases according to the gradients to minimise the error. Just as in life, where we <em>learn from our mistakes</em>, the network adjusts its internal parameters based on the errors it encounters.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Training</h3>
+<div class="dp-panel-content">
+<p>The <code>train()</code> method loops through the data, performs forward and backward passes, and updates the weights. This is where the network actually learns.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/69d6d5bbaf13e1d2.png" alt="image.png" width="625" height="428" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527584" data-api-returntype="File" loading="lazy"></p>
+<p>Training involves multiple iterations (epochs) over the dataset. With each iteration, the model’s predictions improve as the weights are refined.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Complete Network</h3>
+<div class="dp-panel-content">
+<p>Here is the completed code for the network, it includes some other helper functions that where skipped in the previous steps for brevity (i.e. <code>softmax()</code>).</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/dacc1e67b76adad4.png" alt="image.png" width="873" height="2552" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527585" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-text"><i class="dp-icon fas fa-download " aria-hidden="true"> </i>&nbsp;Model Download: <a class="instructure_file_link instructure_scribd_file inline_disabled" title="Model.py" href="../../assets/c97c26b4294f4142.py" target="_blank" data-canvas-previewable="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527586" data-api-returntype="File" download="Model.py">Model.py</a> <span class="tag">saved offline · 6 KB</span></p>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.8 Predictions with Neural Network Models" href="https://canvas.kings.edu.au/courses/12951/assignments/204846" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204846" data-api-returntype="Assignment">3.8 Predictions with Neural Network Models</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+</div><h3 class="sub">Significance and impact of ML and AI</h3></main>
+<div class="pnrow"><a class="pn" href="12951-099.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-101.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

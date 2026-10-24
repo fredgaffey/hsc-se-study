@@ -1,0 +1,241 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.9 Impact of Automation — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 12 (Term 2: Weeks 5-6) Software Automation</div>
+<h1 style="margin-top:.2rem">3.9 Impact of Automation</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-9-impact-of-automation" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Assess the impact of automation on the individual, society and the environment, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>safety of workers</li>
+<li>people with disability</li>
+<li>the nature and skills required for employment</li>
+<li>production efficiency, waste and the environment</li>
+<li>the economy and distribution of wealth</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Assess the impact of automation on individuals, society, and the environment, particularly in terms of worker safety, inclusivity for people with disabilities, employment skills, production efficiency, and economic disparities.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explain how automation affects worker safety and people with disabilities.</span></li>
+<li><span style="font-size: 10pt;">Evaluate how automation changes the nature of work and the skills required for employment.</span></li>
+<li><span style="font-size: 10pt;">Assess the effects of automation on production efficiency, waste, and environmental sustainability.</span></li>
+<li><span style="font-size: 10pt;">Analyse the impact of automation on the economy and the distribution of wealth.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Automation has revolutionised industries worldwide, driving significant changes in how we live and work. It involves the use of machines, robots, and artificial intelligence (AI) to perform tasks traditionally carried out by humans. This technological advancement has led to increased efficiency and productivity across sectors, but it has also raised concerns about its broader impacts on individuals, society, and the environment. Understanding these effects is crucial to navigate the benefits and challenges posed by automation.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Safety of Workers</h3>
+<div class="dp-panel-content ">
+<p>Automation has transformed industries where hazardous conditions are a daily concern. By replacing humans in dangerous tasks, automation significantly reduces the risk of injury or fatality. <strong>Robotics and AI-driven systems</strong> are used in industries such as mining, manufacturing, and construction, where high risks were once unavoidable.</p>
+<ul>
+<li>
+<p><strong>Case Study: Mining Industry</strong><br>In the mining sector, companies like <strong>Rio Tinto</strong> have integrated autonomous haulage systems (AHS) in Australian mines. These driverless trucks reduce the risks miners face from equipment accidents, toxic environments, and cave-ins. Workers are removed from the hazardous environment and instead operate the trucks remotely. This has led to a <strong>50% reduction in safety incidents</strong> at some sites. However, it requires workers to have new skills in technology and system management.</p>
+</li>
+<li>
+<p><strong>Risks of Automation</strong>: While automation improves safety, it introduces new risks related to <strong>technical malfunctions</strong>. For example, in industries using robotic arms or automated machinery, a system failure could lead to accidents if proper safety protocols aren’t in place. Furthermore, automation’s increasing complexity requires skilled human oversight to maintain and operate these systems safely.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-text">Read about the Rio Tinto Autonomous Train Collision Incident <a class="inline_disabled" href="https://meu.org.au/catastrophic-failure-of-safety-systems/" target="_blank">here</a></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/a1c28df2131ca21a.png" alt="image.png" width="551" height="310" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527576" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">People with Disability</h3>
+<div class="dp-panel-content ">
+<p>Automation offers significant opportunities to improve the lives and employment prospects of people with disabilities through <strong>assistive technologies</strong>. These systems range from robotic prosthetics to AI-powered software that assists with communication, mobility, and task performance.</p>
+<ul>
+<li>
+<p><strong>Case Study: Assistive Robotics</strong><br><strong>Ekso Bionics</strong>, a company that develops robotic exoskeletons, enables people with mobility impairments to walk again. This innovation allows individuals who previously would have been excluded from physically demanding jobs to participate in the workforce. <strong>Voice-activated systems</strong> like Amazon's Alexa or Apple's Siri allow people with disabilities to control workspaces with minimal physical interaction, boosting independence and productivity in office settings.</p>
+</li>
+<li>
+<p><strong>Challenges</strong>: Despite these benefits, the rise of automation also risks excluding people with disabilities in jobs heavily reliant on routine tasks. For instance, <strong>call centres</strong> or <strong>manufacturing</strong> roles, which often employ individuals with cognitive disabilities, are increasingly automated. This raises the concern that these workers could be displaced unless retraining initiatives are prioritised to help them transition to new roles.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/834cfcfe88adb9fc.png" alt="image.png" width="446" height="334" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527577" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Skills Required for Development</h3>
+<div class="dp-panel-content">
+<p>Automation is reshaping the job market by displacing roles that involve repetitive or predictable tasks, while creating demand for workers skilled in new technologies such as AI, data science, and robotics. As traditional jobs disappear, workers must adapt to new roles that emphasise <strong>creative problem-solving</strong>, <strong>collaboration with machines</strong>, and <strong>technical expertise</strong>.</p>
+<ul>
+<li>
+<p><strong>Case Study: Manufacturing Industry</strong><br><strong>Foxconn</strong>, a leading electronics manufacturer for companies like Apple, replaced <strong>over 60,000 workers with robots</strong> at one of its plants in China in 2016. The robots performed repetitive tasks more efficiently than humans, reducing labour costs and increasing production speed. However, the company also announced that workers would be retrained for more technical jobs, such as maintaining and overseeing the robots.</p>
+</li>
+<li>
+<p><strong>New Skill Demands</strong>: In Australia, the agriculture industry is experiencing a similar shift. Automated harvesting machines, such as <strong>robotic fruit pickers</strong>, are being introduced to address labour shortages and improve efficiency. Farmers now need to understand how to program, operate, and repair these machines, moving away from traditional manual labour to roles requiring technical and IT skills.</p>
+</li>
+<li>
+<p><strong>Lifelong Learning</strong>: The shift towards automation emphasises the need for continuous <strong>reskilling and upskilling</strong>. Workers must frequently update their skill sets to stay competitive in an automated job market. This has led to an increase in training programs focused on digital literacy, robotics, and data analytics, often supported by governments or private industries.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Efficiency, Waste and Environment</h3>
+<div class="dp-panel-content">
+<p>Automation has brought dramatic improvements to production efficiency, leading to cost savings and higher output while reducing waste. However, it also raises environmental concerns, particularly around energy use and the ecological impact of producing automated technologies.</p>
+<ul>
+<li>
+<p><strong>Case Study: Tesla Gigafactory</strong><br><strong>Tesla’s Gigafactory</strong> is an excellent example of how automation can optimise production while striving for sustainability. The factory uses a combination of robotics, AI, and renewable energy to produce electric vehicle batteries at an unprecedented scale. By integrating automated systems, Tesla has drastically reduced production time and costs. The factory also aims to be powered entirely by renewable energy, minimising its environmental impact. Additionally, automation in the factory has led to significant reductions in waste, as precision manufacturing ensures minimal material loss.</p>
+</li>
+<li>
+<p><strong>Environmental Concerns</strong>: Despite these advances, automation can contribute to increased energy consumption, particularly when automated systems are reliant on non-renewable energy. For example, the widespread use of <strong>data centres</strong> to support automation and AI processes leads to significant energy demands. According to the <strong>International Energy Agency (IEA)</strong>, data centres consumed about 1% of the world’s electricity in 2021. Companies must invest in green technologies to ensure automation is environmentally sustainable.</p>
+</li>
+<li>
+<p><strong>Waste Reduction</strong>: Automation also reduces waste through <strong>precision agriculture</strong>. In Australian agriculture, <strong>automated irrigation systems</strong> and drones equipped with AI can monitor crop health and deliver water or pesticides precisely where needed, reducing water waste and the overuse of chemicals. This technology enhances both productivity and environmental sustainability.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Economy and Wealth</h3>
+<div class="dp-panel-content">
+<p>The economic impact of automation is profound, with both positive and negative consequences. While it drives <strong>economic growth</strong> and <strong>increases productivity</strong>, it also poses significant challenges to the fair distribution of wealth. Automation tends to disproportionately benefit capital owners and highly skilled workers, potentially widening the gap between the rich and poor.</p>
+<ul>
+<li>
+<p><strong>Case Study: Amazon's Automated Warehouses</strong><br><strong>Amazon</strong> uses automated systems in its warehouses to sort and ship products efficiently. Robots, such as <strong>Kiva Systems</strong>, transport goods within warehouses, reducing reliance on human labour. While this has allowed Amazon to scale rapidly, it has led to concerns over job losses and poor working conditions for the remaining human workers. <strong>Low-skilled workers</strong> are often at risk of displacement, while the wealth generated by these automated systems primarily benefits Amazon's shareholders and executives.</p>
+</li>
+<li>
+<p><strong>Wealth Inequality</strong>: Automation has a tendency to concentrate wealth in the hands of those who own the technology. <strong>AI and robotics companies</strong>, for example, see increased profits while workers, particularly in low-skilled jobs, are often displaced without a clear path to new employment. A <strong>2020 study by MIT</strong> found that automation in the U.S. has contributed to wage stagnation for middle-class workers, while increasing profits for firms that deploy these technologies.</p>
+</li>
+<li>
+<p><strong>Policy Responses</strong>: In response, some governments are exploring policies like <strong>universal basic income (UBI)</strong> to mitigate the economic displacement caused by automation. This policy is being trialled in several countries, including Finland and Spain, as a means of providing financial security to those affected by job losses due to automation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.9 Impact of Automation" href="https://canvas.kings.edu.au/courses/12951/assignments/204847" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204847" data-api-returntype="Assignment">3.9 Impact of Automation</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%203.%20Software%20Automation/PPTs/3.9%20Impact%20of%20Automation.pptx.pptx?d=w9a1b055a75194c9584209bd40e991745&amp;csf=1&amp;web=1&amp;e=OgXqFA">3.9 Impact of Automation.pptx.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-9-impact-of-automation" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={9a1b055a-7519-4c95-8420-9bd40e991745}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-100.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-102.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

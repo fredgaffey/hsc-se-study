@@ -1,0 +1,91 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>12SENX2 Software Engineering 2026 — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:2px solid var(--ac);padding-bottom:.3rem;font-size:1.6rem;margin:.6rem 0 .4rem}
+h2.mod{margin:0;background:var(--ac);color:#fff;padding:.45rem .75rem;border-radius:0;font-size:.98rem;font-weight:600}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.4rem 0 .6rem;padding-left:2.1rem;font-size:.94rem} .ll li{margin:.18rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:8px;margin:.3rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.4rem 0 .6rem;padding-left:2.1rem;font-size:.94rem}
+.ll li{margin:.18rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.45rem;flex-wrap:wrap;align-items:center;margin:.7rem 0 1rem}
+.tsep{width:1px;height:1.1rem;background:#dde;margin:0 .3rem}
+.tbtn{font:inherit;font-size:.8rem;padding:.35rem .75rem;border-radius:999px;cursor:pointer;
+ border:1px solid var(--ac);background:var(--ac);color:#fff}
+.tbtn:hover{filter:brightness(1.07)}
+.viewsw .count{font-size:.75rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.tsep{background:#333}.viewsw .count{color:#9aa4b2}}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="index.html" class="brand">SEN Offline</a><a href="search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="course-12951.html">HSC Course</a><a href="course-11962.html">Yr 11 Course</a><a href="browse.html">Quizzes</a><a href="quiz.html">Quiz Generator</a><a href="sync.html">Sync</a></nav>
+<h1>12SENX2 Software Engineering 2026</h1>
+<p><em>105 lessons across 15 modules — each opens as its own page.</em></p>
+<div class="viewsw"><b>VIEW</b><a href="read/12951-all.html">Whole course</a><a href="read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span><span class="tsep"></span><button id="tgl" class="tbtn">Expand all</button><span class="count" id="cnt"></span></div>
+<details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Course Information</span><span class="ct">5 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-000.html">Course overview</a></li><li><a href="lessons/12951-001.html">Assessment overview</a></li><li><a href="lessons/12951-002.html">Staff</a></li><li><a href="lessons/12951-003.html">Equipment</a></li><li><a href="lessons/12951-004.html">Discussion — Student Introductions</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Cycle 1 (Term 4: Weeks 1-2) Secure Software Architecture</span><span class="ct">6 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-005.html">Introduction to Cycle 1</a></li><li><a href="lessons/12951-006.html">1.1 Secure Code Benefits</a></li><li><a href="lessons/12951-007.html">1.2 Software Development Steps</a></li><li><a href="lessons/12951-008.html">1.3 End Users</a></li><li><a href="lessons/12951-009.html">1.4 Design Security Concepts</a></li><li><a href="lessons/12951-010.html">1.5 Security Features</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Cycle 2 (Term 4: Weeks 3-4) Secure Software Architecture</span><span class="ct">6 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-011.html">Introduction to Cycle 2</a></li><li><a href="lessons/12951-012.html">1.6 Security by Design</a></li><li><a href="lessons/12951-013.html">1.7 Privacy by Design</a></li><li><a href="lessons/12951-014.html">1.8 Test Security &amp; Resilience</a></li><li><a href="lessons/12951-015.html">1.9 Security Strategies &amp; Tools</a></li><li><a href="lessons/12951-016.html">1.10 Defensive Data</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Cycle 3 (Term 4: Weeks 5-6) Secure Software Architecture</span><span class="ct">5 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-017.html">Introduction to Cycle 3</a></li><li><a href="lessons/12951-018.html">1.11 APIs</a></li><li><a href="lessons/12951-019.html">1.12 Efficient Execution</a></li><li><a href="lessons/12951-020.html">1.13 Minimise Vulnerabilities</a></li><li><a href="lessons/12951-021.html">1.14 File Security</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Cycle 4 (Term 4: Weeks 7-8) Secure Software Architecture</span><span class="ct">5 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-022.html">Introduction to Cycle 4</a></li><li><a href="lessons/12951-023.html">1.15 Collaboration Benefits</a></li><li><a href="lessons/12951-024.html">1.16 Enterprise Benefits</a></li><li><a href="lessons/12951-025.html">1.17 Social/Ethical/Legal Issues</a></li><li><a href="lessons/12951-026.html">TODO app Calendar Module</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Cycle 5 (Term 1: Weeks 1-2) Software Engineering Project</span><span class="ct">12 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-027.html">4.1 Requirements</a></li><li><a href="lessons/12951-028.html">4.2 Generate Solutions</a></li><li><a href="lessons/12951-029.html">4.3 Implementation Methods</a></li><li><a href="lessons/12951-030.html">4.4 Waterfall Approach</a></li><li><a href="lessons/12951-031.html">4.5 Agile Approach</a></li><li><a href="lessons/12951-032.html">4.6 WAgile approach</a></li><li><a href="lessons/12951-033.html">4.7 Project Management</a></li><li><a href="lessons/12951-034.html">4.8 Social and Ethical</a></li><li><a href="lessons/12951-035.html">4.9 Communication Issues</a></li><li><a href="lessons/12951-036.html">4.10 Quality Assurance</a></li><li><a href="lessons/12951-037.html">4.11 Modelling Tools</a></li><li><a href="lessons/12951-038.html">4.12 Back-End Engineering</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Cycle 7 (Term 1: Weeks 5-6) Programming for the Web</span><span class="ct">9 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-039.html">Introduction to Cycle 6</a></li><li><a href="lessons/12951-040.html">Introduction to Cycle 7</a></li><li><a href="lessons/12951-041.html">2.1 Web Programming Applications</a></li><li><a href="lessons/12951-042.html">2.2 Data Transfer</a></li><li><a href="lessons/12951-043.html">2.3 Web Protocols</a></li><li><a href="lessons/12951-044.html">2.4 Securing the Web</a></li><li><a href="lessons/12951-045.html">2.5 Big Data</a></li><li><a href="lessons/12951-046.html">2.6 World Wide Web Consortium</a></li><li><a href="lessons/12951-047.html">2.7 Web Elements</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Cycle 8 (Term 1: Weeks 7-8) Programming for the Web</span><span class="ct">8 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-048.html">Introduction to Cycle 8</a></li><li><a href="lessons/12951-049.html">2.8 Web Browsers</a></li><li><a href="lessons/12951-050.html">2.9 Cascading Style Sheets</a></li><li><a href="lessons/12951-051.html">2.10 Version Control</a></li><li><a href="lessons/12951-052.html">2.11 Frontend Code Libraries</a></li><li><a href="lessons/12951-053.html">2.12 Open-Source Software</a></li><li><a href="lessons/12951-054.html">2.13 Managing Load Times</a></li><li><a href="lessons/12951-055.html">2.14 Content Management Systems</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Cycle 9 (Term 1: Weeks 9-10) Programming for the Web</span><span class="ct">8 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-056.html">Introduction to Cycle 9</a></li><li><a href="lessons/12951-057.html">2.15 Backend Development</a></li><li><a href="lessons/12951-058.html">2.16 Web Requests</a></li><li><a href="lessons/12951-059.html">2.17 Scripting Languages</a></li><li><a href="lessons/12951-060.html">2.18 Web-Based Databases</a></li><li><a href="lessons/12951-061.html">2.19 Object-Relational Mapping</a></li><li><a href="lessons/12951-062.html">2.20 Collaborative Work Practises</a></li><li><a href="lessons/12951-063.html">2.21 Progressive Web Apps</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Cycle 11 (Term 2: Weeks 3-4) Software Automation</span><span class="ct">6 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-064.html">3.1 Machine Learning and Automation</a></li><li><a href="lessons/12951-065.html">3.2 Artificial Intelligence and Machine Learning</a></li><li><a href="lessons/12951-066.html">3.3 ML Training Models</a></li><li><a href="lessons/12951-067.html">3.4 Applications of Machine Learning Algorithms</a></li><li><a href="lessons/12951-068.html">3.5 Models for Designing and Analysing</a></li><li><a href="lessons/12951-069.html">3.6 Types of Machine Learning Algorithms</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Exam Revision</span><span class="ct">16 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-070.html">Revision Notes</a></li><li><a href="lessons/12951-071.html">2025 NESA HSC Exam Walkthroughs</a></li><li><a href="lessons/12951-072.html">NESA Practice Exam Walkthroughs</a></li><li><a href="lessons/12951-073.html">NESA HSC Sample Exam Walkthroughs</a></li><li><a href="lessons/12951-074.html">Mastering the HSC Exam</a></li><li><a href="lessons/12951-075.html">How to Learn Better</a></li><li><a href="lessons/12951-076.html">Exam Tips</a></li><li><a href="lessons/12951-077.html">Multi-Choice</a></li><li><a href="lessons/12951-078.html">Multi-Select</a></li><li><a href="lessons/12951-079.html">Drag into Order</a></li><li><a href="lessons/12951-080.html">Fill in the Blanks</a></li><li><a href="lessons/12951-081.html">Drawing Questions (DFD, Storyboard, User Interface, Flowchart, Class Diagram, Decision Tree, Structure Chart, ERD)</a></li><li><a href="lessons/12951-082.html">Pseudocode Questions</a></li><li><a href="lessons/12951-083.html">Python Programming Questions</a></li><li><a href="lessons/12951-084.html">SQL Questions</a></li><li><a href="lessons/12951-085.html">Written Short Answer (Outline, Describe, Compare, Discuss, Explain, Justify, Analyse/Assess)</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Tutor Programs</span><span class="ct">1 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-086.html">Term 1 - Python Tutorials</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Cycle 6 (Term 1: Weeks 3-4) Software Engineering Project</span><span class="ct">12 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-087.html">4.13 Solution</a></li><li><a href="lessons/12951-088.html">4.14 Presentation</a></li><li><a href="lessons/12951-089.html">4.15 Algorithms</a></li><li><a href="lessons/12951-090.html">4.16 Development</a></li><li><a href="lessons/12951-091.html">4.17 Backup</a></li><li><a href="lessons/12951-092.html">4.18 Version Control</a></li><li><a href="lessons/12951-093.html">4.19 Difficulties</a></li><li><a href="lessons/12951-094.html">4.20 Additional solution</a></li><li><a href="lessons/12951-095.html">4.21 Test and Evaluate Code</a></li><li><a href="lessons/12951-096.html">4.22 Code Optimisation</a></li><li><a href="lessons/12951-097.html">4.23 Feedback</a></li><li><a href="lessons/12951-098.html">4.24 Effectiveness</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Cycle 12 (Term 2: Weeks 5-6) Software Automation</span><span class="ct">5 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-099.html">3.7 Regression Models</a></li><li><a href="lessons/12951-100.html">3.8 Predictions with Neural Network Models</a></li><li><a href="lessons/12951-101.html">3.9 Impact of Automation</a></li><li><a href="lessons/12951-102.html">3.10 Human Behaviour Influences</a></li><li><a href="lessons/12951-103.html">3.11 Investigating Bias</a></li></ol></details><details class="modbox"><summary><h2 class="mod"><span class="car">▸</span><span>Revision Activities</span><span class="ct">1 lessons</span></h2></summary><ol class="ll"><li><a href="lessons/12951-104.html">Post Trial Revision Activities</a></li></ol></details>
+<script>const KEY='sen_mods_12951';</script>
+<script>
+const boxes=()=>[...document.querySelectorAll('details.modbox')];
+function setAll(open){boxes().forEach(d=>d.open=open);sync();save();}
+window.setAll=setAll;
+function sync(){const n=boxes().filter(d=>d.open).length;
+ document.getElementById('cnt').textContent=n+' of '+boxes().length+' modules open';
+ document.getElementById('tgl').textContent=n===boxes().length?'Collapse all':'Expand all';}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(boxes().map(d=>d.open)))}catch(e){}}
+document.addEventListener('DOMContentLoaded',()=>{
+ let st=null; try{st=JSON.parse(localStorage.getItem(KEY))}catch(e){}
+ if(Array.isArray(st)&&st.length===boxes().length) boxes().forEach((d,i)=>d.open=st[i]);
+ boxes().forEach(d=>d.addEventListener('toggle',()=>{sync();save();}));
+ document.getElementById('tgl').addEventListener('click',()=>{
+   setAll(boxes().filter(b=>b.open).length!==boxes().length);});
+ sync();
+});
+</script>
+
+<link rel="stylesheet" href="../vendor/findbar.css?v=5800f209">
+<script src="../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

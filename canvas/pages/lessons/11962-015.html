@@ -1,0 +1,335 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.7 Logic and structure — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 2 (Term 1: Weeks 3-4) Programming Fundamentals</div>
+<h1 style="margin-top:.2rem">1.7 Logic and structure</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-7-logic-and-structure" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Analyse the logic and structure of written algorithms including<br class="card-text">- <span class="card-text">determining inputs and outputs</span><br class="card-text">- <span class="card-text">determining the purpose of the algorithm</span><br class="card-text">- <span class="card-text">desk checking and peer checking<br></span>- <span class="card-text">determining connections of written algorithms to other subroutines or functions</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Analyse the logic and structure of written algorithms by identifying inputs, outputs, and purposes, as well as to engage in desk checking and peer checking processes to ensure connections with other subroutines or functions are understood.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Accurately identify inputs and outputs in a given algorithm.</span></li>
+<li><span style="font-size: 10pt;">Clearly understand and articulate the purpose of the algorithm.</span></li>
+<li><span style="font-size: 10pt;">Effectively perform desk checking to verify the correctness of the algorithm.</span></li>
+<li><span style="font-size: 10pt;">Engage in peer checking to receive and provide feedback on algorithm logic and structure.</span></li>
+<li><span style="font-size: 10pt;">Demonstrate the ability to determine how the algorithm connects with other subroutines or functions within a program.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Analysing algorithms to understand their logic and structure is a fundamental skill in software engineering. It involves understanding how a set of instructions (the algorithm) solves a particular problem. A well-analysed algorithm ensures efficiency, clarity, and effectiveness in solving problems.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs-pills-vertical">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Inputs and Outputs</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Inputs</strong>: These are the data or variables that are fed into an algorithm. Understanding inputs is crucial as they directly affect how the algorithm operates.</li>
+<li><strong>Outputs</strong>: These are the results produced by the algorithm. Knowing the desired output helps in shaping the steps of the algorithm.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Algorithm Purpose</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>This involves understanding what the algorithm is designed to achieve. Is it sorting data, solving a mathematical problem, or processing user input?</li>
+<li>Understanding the purpose helps in evaluating the effectiveness of the algorithm and its suitability for a task.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Desk Checking &amp; Peer Checking</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Desk Checking</strong>: This is a manual process of tracing the execution of an algorithm using a sample set of inputs. It helps in understanding the flow and identifying any logical errors.</li>
+<li><strong>Peer Checking</strong>: Involves having another person (preferably a peer) review the algorithm. This collaborative approach can uncover issues that the original author might have missed.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Connections to Subroutines</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Algorithms often interact with other parts of the software, like subroutines or functions. Understanding these interactions is crucial for ensuring the algorithm integrates smoothly into the larger system.</li>
+<li>It’s important to analyse how data is passed between these components and how they affect the overall functionality.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Desk Check Examples (Pseudocode + Flowchart)</h3>
+<div class="dp-panel-content "><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-7-logic-and-structure" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/embed.aspx?UniqueId=0b9c1d73-5222-4f6d-9c8a-527becbb1d39&amp;amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;amp;referrer=StreamWebApp&amp;amp;referrerScenario=EmbedDialog.Create</span></div>
+<div class="dp-content-block kl_custom_block_2">
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-7-logic-and-structure" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/embed.aspx?UniqueId=6edf388c-c90d-48e3-b0de-bb64dfdc8a3d&amp;amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;amp;referrer=StreamWebApp&amp;amp;referrerScenario=EmbedDialog.Create</span></div></div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<div class="dp-content-block kl_custom_block_3"><br>
+<h4><strong>Examples</strong></h4>
+<div class="dp-panels-wrapper dp-tabs dp-panel-active-color-dp-white">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Number Guessing Game</h3>
+<div class="dp-panel-content">
+<p>Given below is psuedocode for a Number Guessing Game.</p>
+<table class="table" style="border-collapse: collapse; width: 98.1447%;" data-active-table="true">
+<tbody>
+<tr>
+<td style="width: 99.9055%;">
+<p><strong>BEGIN</strong> NumberGuessingGame</p>
+<p style="padding-left: 40px;">minNumber = 1</p>
+<p style="padding-left: 40px;">maxNumber = 100</p>
+<p style="padding-left: 40px;">attempts = 0</p>
+<p style="padding-left: 40px;">secretNumber = <span style="text-decoration: underline;">GenerateRandomNumber(minNumber, maxNumber)</span></p>
+<p style="padding-left: 40px;">Display "I have chosen a number between " + minNumber + " and " + maxNumber</p>
+<p style="padding-left: 40px;"><strong>REPEAT</strong></p>
+<p style="padding-left: 80px;">Display "Enter your guess:"</p>
+<p style="padding-left: 80px;">Get userGuess</p>
+<p style="padding-left: 80px;">attempts = attempts + 1</p>
+<p style="padding-left: 80px;"><strong>IF</strong> userGuess &lt; secretNumber <strong>THEN</strong></p>
+<p style="padding-left: 120px;">Display "Too low. Try again."</p>
+<p style="padding-left: 80px;"><strong>ELSEIF </strong>userGuess &gt; secretNumber <strong>THEN</strong></p>
+<p style="padding-left: 120px;">Display "Too high. Try again."</p>
+<p style="padding-left: 80px;"><strong>ELSE</strong></p>
+<p style="padding-left: 120px;">Display "Congratulations! You've guessed the number in " + attempts."</p>
+<p style="padding-left: 80px;"><strong>ENDIF</strong></p>
+<p style="padding-left: 40px;"><strong>UNTIL </strong>userGuess = secretNumber</p>
+<p><strong>END </strong>NumberGuessingGame</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>1. Desk Checking and Peer Checking</strong></p>
+<ul>
+<li><strong>Desk Checking:</strong> This involves manually going through the pseudocode line by line to simulate what would happen during its execution. It helps identify logical errors and ensures that the program's flow makes sense. For example, manually checking that the loop continues until the correct guess is made.</li>
+<li><strong>Peer Checking:</strong> Having another person review the pseudocode can uncover issues the original author might overlook. Peers can provide feedback on the clarity of the logic and suggest improvements or identify bugs, such as ensuring the random number generation is within the specified range.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>2. Inputs and Outputs</strong></p>
+<ul>
+<li><strong>Inputs:</strong> The inputs in this program include the user's guess (<code>userGuess</code>) of the secret number. These are obtained through the <code>Input</code> statement within the loop.</li>
+<li><strong>Outputs:</strong> Outputs consist of prompts and feedback to the user, such as asking for a guess, indicating whether the guess is too low or too high, or congratulating the user upon a correct guess. The output also includes the number of attempts made to guess the correct number.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>3. Determining Connections of Written Algorithms to Other Subroutines or Functions</strong></p>
+<ul>
+<li>The main program connects to the <code>RandomNumberGenerator</code> module through the <code>GenerateRandomNumber(min, max)</code> function. This function is essential for generating the secret number that the user tries to guess. It demonstrates how subroutines or modules can be utilised within a larger program to perform specific tasks, in this case, generating a random number within a defined range.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>4. Purpose of Algorithm</strong></p>
+<ul>
+<li>The primary purpose of this algorithm is to create an interactive number guessing game where the user attempts to guess a randomly generated number within a certain range.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Mystery Program</h3>
+<div class="dp-panel-content">
+<p>An algorithm is included below, however the names of the variables have been obfuscated. It is our job to analyse the algorithm to understand its logic and structure.</p>
+<table style="border-collapse: collapse; width: 98.1447%;" border="1">
+<tbody>
+<tr>
+<td style="width: 99.9055%;">
+<p><strong>BEGIN </strong>MysteryProgram</p>
+<p style="padding-left: 40px;">Display "Enter the first number: "</p>
+<p style="padding-left: 40px;">Get X</p>
+<p style="padding-left: 40px;">Display "Enter the second number: "</p>
+<p style="padding-left: 40px;">Get Y</p>
+<p style="padding-left: 40px;">Display X, Y</p>
+<p style="padding-left: 40px;">Z = X</p>
+<p style="padding-left: 40px;">X = Y</p>
+<p style="padding-left: 40px;">Y = Z</p>
+<p style="padding-left: 40px;">Display X, Y</p>
+<p><strong>END </strong>MysteryProgram</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h4>1. Desk Checking and Peer Checking</h4>
+<ul>
+<li><strong>Desk Checking:</strong> This involves going through the algorithm step-by-step to understand the changes happening to the variables.</li>
+<li><strong>Peer Checking:</strong> By discussing the steps and the effect of the operation with peers, students can share insights or confusions, which can lead to a deeper understanding of the process. This collaborative analysis can help uncover the algorithm's purpose through observation and reasoning.</li>
+</ul>
+<p>Desk Check with X = 1, Y = 2</p>
+<table style="border-collapse: collapse; width: 98.1447%; height: 116px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>Input</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>X</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>Y</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>Z</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>Output</strong></td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 19.9811%; text-align: center; height: 29px;">1</td>
+<td style="width: 19.9811%; text-align: center; height: 29px;">1<strong><br></strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>&nbsp;</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>&nbsp;</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>&nbsp;</strong></td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 19.9811%; text-align: center; height: 29px;">2</td>
+<td style="width: 19.9811%; text-align: center; height: 29px;">1</td>
+<td style="width: 19.9811%; text-align: center; height: 29px;">2<strong><br></strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>&nbsp;</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>&nbsp;</strong></td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 19.9811%; text-align: center; height: 29px;"></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;">1</td>
+<td style="width: 19.9811%; text-align: center; height: 29px;">2</td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>&nbsp;</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;">1, 2<strong><br></strong></td>
+</tr>
+<tr>
+<td style="width: 19.9811%; text-align: center;"></td>
+<td style="width: 19.9811%; text-align: center;">1</td>
+<td style="width: 19.9811%; text-align: center;">2</td>
+<td style="width: 19.9811%; text-align: center;">1<strong><br></strong></td>
+<td style="width: 19.9811%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 19.9811%; text-align: center;"></td>
+<td style="width: 19.9811%; text-align: center;">2</td>
+<td style="width: 19.9811%; text-align: center;">2</td>
+<td style="width: 19.9811%; text-align: center;">1</td>
+<td style="width: 19.9811%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 19.9811%; text-align: center;"></td>
+<td style="width: 19.9811%; text-align: center;">2</td>
+<td style="width: 19.9811%; text-align: center;">1</td>
+<td style="width: 19.9811%; text-align: center;">1</td>
+<td style="width: 19.9811%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 19.9811%; text-align: center;"></td>
+<td style="width: 19.9811%; text-align: center;">2</td>
+<td style="width: 19.9811%; text-align: center;">1</td>
+<td style="width: 19.9811%; text-align: center;">1</td>
+<td style="width: 19.9811%; text-align: center;">2, 1</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h4>2. Inputs and Outputs</h4>
+<ul>
+<li><strong>Inputs:</strong> The algorithm starts by asking the user for two numbers, <code>X</code> and <code>Y</code>, establishing the initial state of the variables.</li>
+<li><strong>Outputs:</strong> It then presents the values of <code>X</code> and <code>Y</code> both before and after the operation, allowing the user to observe the effect of the algorithm on these variables.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>3. Determining Connections of Written Algorithms to Other Subroutines or Functions</h4>
+<ul>
+<li>The algorithm does not make use of other subroutines or functions</li>
+</ul>
+<p>&nbsp;</p>
+<h4>4. Purpose of Algorithm</h4>
+<ul>
+<li>The purpose of this algorithm is revealed through its execution: it swaps the values of two variables. This is a foundational technique in programming, enabling the handling and manipulation of data in a controlled manner. Understanding how to swap values is crucial in various applications, such as sorting algorithms, where the position of elements needs to be rearranged. The method of using a temporary storage (<code>Z</code>) to hold a value while the swap is performed is a classic solution to avoid data loss during the operation.</li>
+<li><strong>Notice how hard it is to read this algorithm?</strong> This is why it is important to use <strong>meaningful variable names</strong> when designing your algorithms so that another programmer can easily understand your code.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> </strong><strong>&nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.7 Logic and structure" href="https://canvas.kings.edu.au/courses/11962/assignments/179169" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179169" data-api-returntype="Assignment">1.7 Logic and Structure</a></li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div></main>
+<div class="pnrow"><a class="pn" href="11962-014.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-016.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

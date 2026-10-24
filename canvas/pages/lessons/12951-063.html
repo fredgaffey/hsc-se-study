@@ -1,0 +1,295 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.21 Progressive Web Apps — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 9 (Term 1: Weeks 9-10) Programming for the Web</div>
+<h1 style="margin-top:.2rem">2.21 Progressive Web Apps</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-21-progressive-web-apps" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Design, develop and implement a progressive web app (PWA), including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>the application of design and user interface (UI) and user experience (UX) principles of font, colour, audio, video and navigation</li>
+<li>a UI that considers accessibility and inclusivity</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">understand how to design and develop a Progressive Web App (PWA) with a focus on applying user interface (UI) and user experience (UX) design principles, ensuring accessibility and inclusivity.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -<span style="font-size: 10pt;">&nbsp;Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">design and implement a PWA that applies key UX/UI principles, including effective use of fonts, colors, multimedia, and clear navigation.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">create a user interface that is accessible to all users, with features such as screen reader compatibility and inclusive design elements.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>A <strong>Progressive Web App (PWA) </strong>is a hybrid between a web application and a native mobile application. It uses modern web technologies like HTML, CSS, JavaScript and APIs to provide an experience similar to that of a traditional native app, but it is accessible through a web browser without needing to be downloaded from an app store. The “progressive” part refers to its ability to enhance functionality depending on the device and browser capabilities.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-warning dp-callout-type-default">
+<div class="card-body">
+<h4 class="card-title">PWA Key Features</h4>
+<ul>
+<li class="card-text"><strong>Progressive</strong>: It works for every user, regardless of browser choice, as it’s built with progressive enhancement at its core.</li>
+<li class="card-text"><strong>Responsive</strong>: It fits any form factor — whether on desktop, mobile, or tablet — using responsive design techniques.</li>
+<li class="card-text"><strong>Offline Capabilities:</strong> Through Service Workers, PWAs can cache essential resources and operate even when the device is offline or has poor network conditions.</li>
+<li class="card-text"><strong>App-like Feel: </strong>PWAs mimic the look and feel of a native app using the app shell model. This means fast, smooth transitions between screens and a consistent experience.</li>
+<li class="card-text"><strong>Installable: </strong>Users can add the PWA to their home screen without visiting an app store. Once installed, it behaves like a standalone app, launching in its own window without the browser UI.</li>
+<li class="card-text"><strong>Secure</strong>: PWAs are always served over HTTPS, ensuring that the content delivered is safe and tamper-proof.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Developing a PWA differs from a traditional full stack by heavily focusing on client-side capabilities like offline access and a UI accessible across various devices, using technologies like service workers and responsive design. In contrast, traditional full-stack apps rely more on server-side logic and consistent internet connectivity.<br><br>From a <strong>practical and development perspective</strong>, a PWA generally includes the following key features:&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs-buttons-vertical">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>Caching</strong></h3>
+<div class="dp-panel-content">
+<p>Caching allows web apps to store frequently accessed assets (such as HTML, CSS, JavaScript, and images) in the browser. This means these assets can be <strong>loaded from the local cache</strong> on subsequent visits without fetching from the web server, giving it offline capabilities.&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-info dp-callout-type-info">
+<div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-info-circle dp-default-icon">​</i></div>
+<div class="card-body">
+<p class="card-text"><strong>Caching is a way of storing copies of important data or files in a special place so they can be accessed quickly without having to re-download.&nbsp;</strong></p>
+</div>
+</div>
+<ol>
+<li><strong>First Visit</strong>: When you visit a website for the first time, your browser downloads all the necessary files from the server to display the page (like <code>index.html</code>, <code>styles.css</code> and JavaScript files).<br><br></li>
+<li><strong>Saving Files</strong>: The browser stores these files locally in its cache (a special storage area) while downloading.<br><br></li>
+<li><strong>Reusing Files</strong>: The next time you visit the same website, the browser checks its cache instead of downloading everything again. If the files haven’t changed, it loads them directly from the cache, loading the website much faster.</li>
+</ol>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/200fee35b40e7513.png" alt="image.png" width="525" height="393" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527618" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading"><strong>Service Workers</strong></h3>
+<div class="dp-panel-content">
+<p>A service worker that helps manage your web app and configure offline capabilities.&nbsp;</p>
+<p>A service worker is like a "<strong><em>helper</em></strong>" that sits between your web app and the Internet. When your browser requests a webpage or image from the server, the service worker can <strong>decide</strong> whether to <strong>fetch it from the Internet</strong> or <strong>use a saved version </strong>(called a <em>cache</em>). After configuring a service worker, it can effectively automate decisions on whether to cache or fetch files from the server.</p>
+<ul>
+<li><strong>Runs Separately:</strong> Service workers operate independently from the web app, which allows them to continue functioning even if the page is closed.&nbsp;</li>
+<li><strong>Event-Driven:</strong> Service workers are built around an event-based model. Hence, they respond to specific user and system events, such as API fetching, installation, and activation.&nbsp;</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/3685e953c0ee99e5.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527356" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading"><strong>Web Manifest</strong></h3>
+<div class="dp-panel-content">
+<p>A web <code>manifest.json</code> is a JSON file that provides metadata or critical information about your web app and the UI design when the app is launched.&nbsp;<br><br>Traditional web apps typically rely on fetching to load a page's appearance. A web manifest automates this process by defining the structure of the PWA on the client's device or browser.&nbsp;</p>
+<ul>
+<li><strong>App Appearance:</strong> Defines how the app appears when launched, including its icons, screens, and theme colours.</li>
+<li><strong>Behaviour:</strong> Specifies the display mode (e.g., fullscreen, standalone) and orientation, determining how the app interacts with the device's UI.</li>
+<li><strong>Navigation</strong>: Sets the start URL, determining which page loads when the app is launched from the home screen. Usually, this is handled by server-side routing (via Flask) or client frameworks (via React or Angular)&nbsp;&nbsp;</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/7028e2d974b6557b.png" alt="image.png" width="520" height="325" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527357" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>Responsive Design</strong></h3>
+<div class="dp-panel-content">
+<p>UI design that is responsive to different devices and browsers. PWAs aim to deliver a native-like experience, and users might access them from various devices, such as smartphones, tablets, and desktops. Designing our UI, we should consider:</p>
+<ul>
+<li><strong>Flexible Layouts</strong>: PWAs use fluid grids that scale content proportionally based on the screen size. This ensures that elements like buttons, text, and images resize appropriately, whether on a small mobile screen or a large desktop monitor</li>
+<li><strong>Media Queries</strong>: CSS media queries help define different styles for screen sizes or device characteristics. For example, you might adjust font sizes or change navigation menus for mobile versus desktop views</li>
+<li><strong>Viewport</strong>: Setting the HTML viewport meta tag ensures that the app is scaled and displays properly on different devices. This prevents users from needing to zoom in or scroll horizontally to see content</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/26d35137931052a1.png" alt="image.png" width="611" height="338" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527359" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<h4>UI/UX Principles</h4>
+<p>&nbsp;When designing a PWA, it’s crucial to create an interface and experience that is not only visually appealing but also intuitive and user-friendly.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<h5 class="card-title">UI vs UX</h5>
+<p class="card-text"><strong>UI (User Interface)</strong> refers to the visual elements and layout that users interact with, such as buttons, icons, and menus, while <strong>UX (User Experience) </strong>focuses on the overall feel and usability of the app, ensuring that interactions are intuitive, efficient, and enjoyable for the user.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Fonts</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Readability: Select fonts that ensure readability across various devices and screen sizes. Avoid overly decorative fonts that might reduce legibility, especially on smaller screens.</li>
+<li>Web-safe Fonts: Use fonts that are either available on most devices (like Arial, Verdana, or Times New Roman) or utilise web fonts from libraries like Google Fonts. Ensure they are lightweight to maintain performance.</li>
+<li>Consistency: Maintain font consistency across the app by limiting the number of typefaces and styles. Use font hierarchies (e.g., larger fonts for headers, smaller for body text) to guide users.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Colour</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Contrast: Ensure sufficient contrast between text and background colours to make content readable, especially for users with visual impairments. You can use tools like WCAG colour contrast checkers to verify accessibility.</li>
+<li>Branding and Visual Identity: Use colour schemes that align with your app’s branding and purpose. Colours evoke emotions; for example, blue conveys trust, while green suggests growth or success.</li>
+<li>Colour Psychology: Consider how colour impacts user perception. Choose your palette based on the emotions or actions you want to encourage.</li>
+<li>Accessibility: Ensure colour-blind users can navigate and understand the app by avoiding colour-dependent actions (e.g., only using colour to convey meaning). Incorporate additional visual cues such as icons or text.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Audio and Video</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Appropriate Use: Use multimedia elements like audio or video to enhance the user experience without overwhelming the interface. For example, videos can be used for tutorials, but they should not auto-play with sound, which can disrupt user experience.</li>
+<li>Performance Considerations: Multimedia should be optimised to reduce loading times. Use techniques such as lazy loading and responsive media queries to ensure smooth performance on all devices.</li>
+<li>Accessibility: Provide captions for videos and transcripts for audio to make the content accessible to users who are deaf or hard of hearing.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Navigation</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Intuitive Structure: Simplify navigation so users can easily find what they need. Follow the “three-click rule” — users should reach any part of the app within three taps or clicks.</li>
+<li>Consistent UI Patterns: Use familiar patterns such as hamburger menus, tabs, and bottom navigation bars to make navigation intuitive.</li>
+<li>Sticky Elements: Consider using sticky navigation bars that remain visible as users scroll to give them easy access to primary navigation options.</li>
+<li>Interactive Feedback: Provide clear feedback when a user interacts with navigation elements, like button animations or visual cues (hover effects, loading indicators).</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/086057c7bd754a9c.png" alt="image.png" width="628" height="329" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527535" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Accessibility and Inclusivity</h4>
+<p>Accessibility ensures that your PWA can be used by as many people as possible, including those with disabilities. Inclusivity means that the app design takes into account different cultural backgrounds, devices, and levels of ability.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Accessibility</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Screen Reader Support: Ensure your app’s content is compatible with screen readers. Use semantic HTML (e.g., &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, etc.) to structure your app properly. Provide alt text for images and make sure every actionable element is keyboard-accessible.</li>
+<li>Keyboard Navigation: Users who rely on a keyboard or other input devices should be able to navigate through the entire PWA. Elements such as buttons, links, and form fields should be focusable using the keyboard (using the tab key).</li>
+<li>ARIA (Accessible Rich Internet Applications): Use ARIA attributes to enhance accessibility, especially for dynamic content. For instance, aria-live can alert users of important updates, or aria-expanded can indicate if a dropdown is open.</li>
+<li>Contrast Ratios: The Web Content Accessibility Guidelines (WCAG) recommend a contrast ratio of 4.5:1 for normal text and 3:1 for large text to ensure readability for visually impaired users.</li>
+<li>Forms and Labels: Always associate form inputs with labels so users relying on screen readers can understand what information is being requested.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Inclusivity</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Language Support: Provide language options for international users. Ensure the app can switch seamlessly between different languages and that text expansion (in languages like German or Arabic) is accounted for.</li>
+<li>Cultural Sensitivity: Avoid using icons, symbols, or colours that could be misinterpreted across different cultures. For example, the colour red may mean “danger” in some cultures, but in others, it signifies celebration or good luck.</li>
+<li>Diverse User Needs: Design for different physical and cognitive abilities. This might involve simplifying complex tasks, providing visual and text cues, or giving users the option to adjust font sizes and contrast settings.</li>
+<li>Flexible Interfaces: Allow users to customise the app to suit their needs, such as changing font sizes, colour schemes (dark mode), and enabling or disabling animations.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/5fcb4d59ef9c02bc.png" alt="image.png" width="416" height="224" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527536" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://www.interaction-design.org/literature/topics/inclusive-design" target="_blank">Inclusive Design</a></li>
+<li><a class="inline_disabled" href="https://www.uxdesigninstitute.com/blog/ux-vs-ui-design/" target="_blank">What’s the difference between UX vs UI design?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.21 Progressive Web Apps" href="https://canvas.kings.edu.au/courses/12951/assignments/204829" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204829" data-api-returntype="Assignment">2.21 Progressive Web Apps</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.21%20PWA.pptx?d=wfe47a9f877124dfd98ce486eca53950a&amp;csf=1&amp;web=1&amp;e=EGSzPD">2.21 PWA.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-21-progressive-web-apps" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={fe47a9f8-7712-4dfd-98ce-486eca53950a}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div><h3 class="sub">After</h3></main>
+<div class="pnrow"><a class="pn" href="12951-062.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-064.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

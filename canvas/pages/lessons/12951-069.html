@@ -1,0 +1,214 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.6 Types of Machine Learning Algorithms — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 11 (Term 2: Weeks 3-4) Software Automation</div>
+<h1 style="margin-top:.2rem">3.6 Types of Machine Learning Algorithms</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-6-types-of-machine-learning-algorithms" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Describe types of algorithms associated with ML, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>linear regression</li>
+<li>logistic regression</li>
+<li>K-nearest neighbour</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand different types of machine learning algorithms and their purposes, with a focus on linear regression, logistic regression, and K-nearest neighbour.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explain the function and purpose of linear regression in machine learning.</span></li>
+<li><span style="font-size: 10pt;">Describe logistic regression and its application in classification tasks.</span></li>
+<li><span style="font-size: 10pt;">Identify how the K-nearest neighbour algorithm works and when it is used.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>In machine learning, algorithms are the foundation for making predictions and uncovering patterns in data. Different types of algorithms are designed for various tasks, such as predicting continuous values or classifying data into categories. This page will explore three fundamental algorithms:</p>
+<ul>
+<li><strong>Linear regression</strong>, which predicts continuous outcomes by modelling relationships between variables.</li>
+<li><strong>Logistic regression</strong>, which classifies data into distinct categories based on probability.</li>
+<li><strong>K-nearest neighbour (KNN)</strong>, which makes predictions by comparing new data points to similar instances in the dataset.</li>
+</ul>
+<p>Understanding how these algorithms work and when to apply them is crucial for solving diverse problems in data analysis and prediction.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h3 class="card-title">What is Regression?</h3>
+<p><strong>Regression</strong> is a type of machine learning algorithm used to predict <strong>continuous values</strong>. It helps to understand the relationship between one or more input variables (also called <strong>features</strong> or <strong>independent variables</strong>) and an output variable (the <strong>dependent variable</strong>).</p>
+<p>In simple terms, regression tries to find a pattern in data and uses that pattern to make predictions. For example, it can help predict things like:</p>
+<ul>
+<li>A house's price based on its size and location.</li>
+<li>A student's test score based on the number of hours they studied.</li>
+</ul>
+<p>In regression, the goal is to find the best line or curve that fits the data points, allowing us to predict future outcomes accurately.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Linear Regression</h3>
+<div class="dp-panel-content ">
+<p>Linear regression is a type of algorithm that helps predict <strong>continuous values</strong>, meaning numbers that can go up or down like prices, scores, or temperatures. It tries to find a straight line that best fits the data and shows the relationship between a set of inputs (called <strong>independent variables</strong>) and the result (the <strong>dependent variable</strong>).</p>
+<p><strong>How It Works:</strong></p>
+<p>Imagine you want to predict someone's exam score based on the number of hours they studied. Linear regression will draw a line on a graph of the data (like hours studied on one axis and scores on the other). This line helps us make predictions, like "If you study for 4 hours, your predicted score is 85."</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Predicted&nbsp;Score</mtext><mo>=</mo><mtext>Line&nbsp;equation</mtext><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><mo>×</mo><mo stretchy="false">(</mo><mtext>hours&nbsp;studied</mtext><mo stretchy="false">)</mo></mrow></semantics></math></span></span></span></p>
+<p>Where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\beta_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span> is the starting point (where the line crosses the Y-axis), and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\beta_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span> shows how much the score increases for each extra hour studied.</p>
+<p><strong><span class="katex-display"><span class="katex"><span class="katex-mathml">Example:</span></span></span></strong></p>
+<p>If you want to predict the price of a house based on its size (in square meters), linear regression helps create a formula. The bigger the house, the higher the price, and linear regression shows this as a line on a graph.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/f117cd0a9f28909b.png" alt="image.png" width="291" height="291" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527574" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Logistic Regression</h3>
+<div class="dp-panel-content ">
+<p>Logistic regression is used for <strong>classification</strong> tasks, which means putting things into categories. It's great when you need to decide between two or more options, like "yes" or "no," "pass" or "fail," or "spam" and "not spam."</p>
+<p><strong>How It Works:</strong></p>
+<p>Instead of predicting a number like linear regression, logistic regression predicts the <strong>probability</strong> of something happening. For example, if you were predicting whether a student passes or fails based on their study hours, logistic regression gives you a probability, like "There’s a 90% chance this student will pass."</p>
+<p>The algorithm uses something called a <strong>sigmoid function</strong> to turn any number into a probability between 0 and 1. If the probability is greater than 0.5, it might say "yes" (pass), and if it’s lower, it might say "no" (fail).</p>
+<p><strong>Example:</strong></p>
+<p>A school might use logistic regression to predict whether students will pass an exam based on their homework scores and study hours. It will classify each student into either "pass" or "fail" by calculating the likelihood for each category.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/dd41f6a8c473b018.png" alt="image.png" width="355" height="237" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527575" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">K-Nearest Neighbour (KNN)</h3>
+<div class="dp-panel-content">
+<p>K-nearest neighbour, or KNN, is an algorithm used for both <strong>classification</strong> and <strong>regression</strong>. It’s very simple—it predicts new outcomes by looking at the results of the <strong>K most similar examples</strong> (or neighbours) in the data.</p>
+<p><strong>How It Works:</strong></p>
+<p>Imagine you want to classify whether a fruit is an apple or an orange based on its size and colour. KNN works by comparing a new fruit to the closest examples in your dataset (like looking at its nearest neighbours). If most of the similar fruits are apples, it will classify the new fruit as an apple. You decide how many neighbours to compare by choosing a value for <strong>K</strong>.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><strong>Pick a number</strong> <em>K</em> which is the number of neighbours to look at.</li>
+<li>For a new data point, check the <strong>K closest data points</strong> in the training set (which is the data we already know).</li>
+<li><strong>Majority vote</strong>: For classification, KNN assigns the class that most of these neighbours belong to (like deciding if the new fruit is an apple or orange). For regression, it takes the average of these neighbours' values.</li>
+</ol>
+<p><strong>Example:</strong></p>
+<p>If you want to predict what kind of animal a new image shows, KNN will look at other images nearby in the data. If most of the nearest images show dogs, it will classify the new image as a dog too.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/bde1474ee828049c.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527462" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.6 Types of Machine Learning Algorithms" href="https://canvas.kings.edu.au/courses/12951/assignments/204844" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204844" data-api-returntype="Assignment">3.6 Types of Machine Learning Algorithms</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.analyticsvidhya.com/blog/2022/01/different-types-of-regression-models/" target="_blank">Different Types of Regression Models</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%203.%20Software%20Automation/PPTs/3.6%20Types%20of%20ML%20Algorithms.pptx?d=w1c6d2871ce714657b7669299c623943b&amp;csf=1&amp;web=1&amp;e=e84zWq">3.6 Types of ML Algorithms.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-6-types-of-machine-learning-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={1c6d2871-ce71-4657-b766-9299c623943b}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">After</h3></main>
+<div class="pnrow"><a class="pn" href="12951-068.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-070.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

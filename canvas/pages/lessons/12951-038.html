@@ -1,0 +1,222 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>4.12 Back-End Engineering — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 5 (Term 1: Weeks 1-2) Software Engineering Project</div>
+<h1 style="margin-top:.2rem">4.12 Back-End Engineering</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/4-dot-12-back-end-engineering" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Explain the contribution of back-end engineering to the success and ease of software development, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>technology used</li>
+<li>error handling</li>
+<li>interfacing with front end</li>
+<li>security engineering</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the role of back-end engineering in ensuring the successful development of software applications, with a focus on technology, error handling, front-end interfacing, and security.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explain key back-end technologies and their contribution to software projects.</span></li>
+<li><span style="font-size: 10pt;">Describe how error handling is managed in back-end systems.</span></li>
+<li><span style="font-size: 10pt;">Discuss how back-end systems interface with front-end development to provide seamless user experiences.</span></li>
+<li><span style="font-size: 10pt;">Identify security practices implemented in back-end engineering to protect software systems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Back-end engineering refers to the server-side logic and infrastructure that powers a software application. While front-end development focuses on the user interface and experience, the back end ensures the smooth functioning, security, and data processing of the application. Back-end systems handle requests, manage databases, ensure security protocols are followed, and communicate with the front end. Let's explore how back-end engineering plays a vital role in software development by looking at key aspects like technology, error handling, interfacing, and security.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Technology Used</h3>
+<div class="dp-panel-content ">
+<p>Back-end engineering relies on various technologies, including programming languages, frameworks, databases, and servers. These technologies are crucial for ensuring that the back-end system can process requests efficiently, store data securely, and scale when necessary.</p>
+<ul>
+<li>
+<p><strong>Programming Languages</strong>: Common back-end languages include Python, Java, PHP, Ruby, and Node.js. These languages are used to create server-side logic and handle requests from the front end.</p>
+</li>
+<li>
+<p><strong>Frameworks</strong>: Frameworks like Django (Python), Spring (Java), or Express (Node.js) streamline development by providing pre-built components that developers can use to manage routing, authentication, and data handling.</p>
+</li>
+<li>
+<p><strong>Databases</strong>: Back-end engineering involves working with databases to store, retrieve, and manage data. Databases can be relational (SQL) or non-relational (NoSQL) depending on the needs of the application. For example, MySQL, PostgreSQL, and MongoDB are popular database systems used in back-end development. </p>
+</li>
+<li>
+<p><strong>Servers</strong>: Servers such as Apache, Nginx, or cloud-based services (like AWS or Microsoft Azure) handle requests from users, execute code, and return the appropriate data or responses.</p>
+</li>
+</ul>
+<p>These technologies form the backbone of a software application, ensuring that it can manage data, handle traffic, and scale efficiently as the user base grows.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Error Handling</h3>
+<div class="dp-panel-content ">
+<p>Error handling in back-end engineering ensures that applications continue running smoothly even when unexpected issues arise. Errors can occur for many reasons, such as invalid inputs from users, database failures, or server issues. Effective error handling helps maintain the reliability and stability of an application.</p>
+<ul>
+<li>
+<p><strong>Error Detection</strong>: Back-end systems need mechanisms to detect errors when they occur, such as invalid database queries or exceptions in code execution. Modern frameworks often have built-in error handling methods.</p>
+</li>
+<li>
+<p><strong>Error Logging</strong>: Logging errors allows developers to track issues and debug them later. Tools like Logstash or Sentry help store and manage logs of errors, making it easier to identify recurring issues.</p>
+</li>
+<li>
+<p><strong>Graceful Recovery</strong>: Instead of letting the application crash, good error handling should allow the system to recover gracefully. This could involve retrying a failed request, showing an error message to users, or rolling back to a stable state.</p>
+</li>
+</ul>
+<p>Handling errors efficiently prevents major disruptions to the user experience and ensures the application continues to function even in the face of unforeseen problems.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Front-End</h3>
+<div class="dp-panel-content">
+<p>The back end and front end must communicate seamlessly to create a smooth and responsive user experience. This interaction typically happens through APIs (Application Programming Interfaces), which act as a bridge between the two.</p>
+<ul>
+<li>
+<p><strong>API Communication</strong>: APIs allow the front end to send requests to the back end (e.g., fetching data or submitting user input) and receive the necessary data or responses. APIs can be RESTful or GraphQL, depending on the design of the system. Refer to <a title="1.11 APIs" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-11-apis-2" class="ext" target="_blank" rel="noopener" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/1-dot-11-apis-2" data-api-returntype="Page">1.11 APIs</a> for more information</p>
+</li>
+<li>
+<p><strong>Data Exchange</strong>: Back-end systems typically process requests from the front end and return structured data, often in formats like JSON or XML. The front end can then display this data to users.</p>
+</li>
+<li>
+<p><strong>Real-Time Updates</strong>: In some applications, the front end needs real-time data from the back end (e.g., notifications, live chat, or financial transactions). Technologies like WebSockets or server-sent events enable real-time communication between the front end and back end.</p>
+</li>
+</ul>
+<p>By ensuring efficient communication, back-end systems make sure that front-end users get timely responses and can interact smoothly with the application.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Security Engineering</h3>
+<div class="dp-panel-content">
+<p>Security is one of the most critical aspects of back-end engineering. The back end is responsible for protecting sensitive data, ensuring that users are authenticated, and guarding against potential security threats. Some common security practices include:</p>
+<ul>
+<li>
+<p><strong>Authentication and Authorisation</strong>: Back-end systems manage user authentication (verifying a user’s identity) and authorisation (determining what resources a user can access). Technologies like OAuth or JWT (JSON Web Tokens) are often used to manage secure logins and user sessions. Refer to <a title="2.4 Securing the Web" href="12951-044.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/2-dot-4-securing-the-web" data-api-returntype="Page">2.4 Securing the Web</a> for more related info.</p>
+</li>
+<li>
+<p><strong>Data Encryption</strong>: Sensitive data (such as passwords, financial information, and personal details) must be encrypted both at rest (in the database) and in transit (as it moves between the front end and back end). HTTPS and SSL certificates are commonly used to encrypt data in transit. </p>
+</li>
+<li>
+<p><strong>Secure Coding Practices</strong>: Back-end engineers must write secure code to prevent vulnerabilities like SQL injection or cross-site scripting (XSS). Using parameterised queries and input validation are key techniques to protect against attacks. Refer to <a title="1.13 Minimise Vulnerabilities" href="12951-020.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/1-dot-13-minimise-vulnerabilities" data-api-returntype="Page">1.13 Minimise Vulnerabilities</a> for more related info.</p>
+</li>
+<li>
+<p><strong>Firewalls and Intrusion Detection</strong>: Firewalls can block unauthorised access to the server, while intrusion detection systems monitor for suspicious activity and potential breaches.</p>
+</li>
+</ul>
+<p>Security engineering ensures that the software application is protected from threats and that user data remains confidential and safe from malicious actors.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<h4 class="card-title">Related Content</h4>
+<p class="card-text">For a deeper look into how back-end engineering contributes to web applications specifically, refer to <a title="2.15 Backend Development" href="12951-057.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/2-dot-15-backend-development" data-api-returntype="Page">2.15 Backend Development</a>. It provides insights into the back-end components that ensure a web application's functionality, security, and scalability.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+</div><h3 class="sub">After</h3></main>
+<div class="pnrow"><a class="pn" href="12951-037.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-039.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

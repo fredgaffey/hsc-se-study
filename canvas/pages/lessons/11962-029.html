@@ -1,0 +1,208 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.17 Data structures for storage — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 4 (Term 1: Weeks 7-8) Programming Fundamentals</div>
+<h1 style="margin-top:.2rem">1.17 Data structures for storage</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-17-data-structures-for-storage" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2">
+    <header class="dp-header dp-bookmark variation-2 ">
+        
+    </header>
+    <div class="dp-content-block kl_custom_block_0">
+        <div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+            <div class="card-body">
+                <p class="card-text"><strong class="card-text">Syllabus<br></strong>Implement data structures that support data storage- <span class="card-text">converting an algorithm into code including:</span><br class="card-text">- <span class="card-text">single and multidimensional arrays</span><br class="card-text">- <span class="card-text">lists</span><br class="card-text">- <span class="card-text">trees</span><br class="card-text">- <span class="card-text">stacks<br></span>- <span class="card-text">hash tables</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_content_block_1">
+        <h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4" style="padding: 0px 5px 0px 0px;">
+                    <div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 10pt;">be able to implement data structures that support data storage, including single and multidimensional arrays, lists, trees, stacks, and hash tables, by converting an algorithm into code.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8" style="padding: 0px 0px 0px 5px;">
+                    <div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 13.3333px;">Students can identify and explain the purpose of each data structure.</span></li>
+                                <li><span style="font-size: 13.3333px;">Students can implement single and multidimensional arrays, lists, trees, stacks, and hash tables in code.</span></li>
+                                <li><span style="font-size: 13.3333px;">Students can convert an algorithm into code using the appropriate data structure.</span></li>
+                                <li><span style="font-size: 13.3333px;">Students can apply their understanding of data structures to solve programming problems.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_custom_block_1">
+        <h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+        <p><strong>Note:</strong> Single and multidimensional arrays, and trees were covered in the previous unit <strong>1.15 Data Structures</strong>.</p>
+        <div class="dp-panels-wrapper dp-accordion-plus">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading "><strong>Lists</strong></h3>
+                <div class="dp-panel-content ">
+                    <p><span>A List is a linear data structure that can store data belonging to </span><strong class="amber-el amber-bold">multiple data types</strong><span>.</span></p>
+                    <div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+                        <div class="card-body" style="padding: 5px;">
+                            <p class="card-text" style="text-align: left;"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Lists are essentially the same as Arrays except multiple data types can be stored. The syntax between the data structures are the same in Python.</span></p>
+                        </div>
+                    </div>
+                    <p class="amber-el amber-paragraph amber-content">An <strong class="amber-el amber-bold">Index</strong> is the location of an item in the List, with the <strong class="amber-el amber-bold">first Index being 0</strong>.</p>
+                    <p class="amber-el amber-paragraph amber-content"><strong class="amber-el amber-bold">Elements</strong> are the items stored in the List.</p>
+                    <p class="amber-el amber-paragraph amber-content"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/4799e3d8d514ed36.png" alt="image.png" width="517" height="329" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3251877" data-api-returntype="File" loading="lazy"></p>
+                    <p class="amber-el amber-paragraph amber-content"><span>&nbsp;</span></p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading"><strong>Stacks</strong></h3>
+                <div class="dp-panel-content ">
+                    <p class="amber-el amber-paragraph amber-content">A Stack is a linear data structure that behaves in a certain way when adding and removing items, using a <strong class="amber-el amber-bold">'Last-in, first-out' structure (LIFO).</strong> This can be implemented by either an array or list but a Stack will always be limited in the number of items it can store.</p>
+                    <p class="amber-el amber-paragraph amber-content">This means that <strong class="amber-el amber-bold">the item that was last added to the Stack will be the next item to be removed.</strong> In other words, the way you retrieve items will be in the <strong class="amber-el amber-bold">reverse order</strong> that you added them into the Stack.</p>
+                    <ul>
+                        <li class="amber-el amber-paragraph amber-content"><strong>Push</strong>: The process of pushing is <strong class="amber-el amber-bold">adding an item to the top of the Stack.</strong></li>
+                        <li class="amber-el amber-paragraph amber-content"><strong style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">Pop</strong><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">: The process of popping is </span><strong class="amber-el amber-bold" style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">removing an item from the top of the Stack.</strong></li>
+                    </ul>
+                    <div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+                        <div class="card-body" style="padding: 5px;">
+                            <p class="card-text" style="text-align: left;"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp;<span>Think of a stack like a pile of plates. You would want to only </span><strong class="amber-el amber-bold">add and removed plates from the top of the pile.</strong><span> Removing plates from the bottom would cause the pile to fall over!</span></span></p>
+                        </div>
+                    </div>
+                    <div class="dp-panels-wrapper dp-expander-default">
+                        <div class="dp-panel-group">
+                            <h3 class="dp-panel-heading ">Python Example</h3>
+                            <div class="dp-panel-content">
+                                <p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/0f8ec2485a884755.png" alt="image.png" width="555" height="719" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3251880" data-api-returntype="File" loading="lazy"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/220bea0c247939bf.png" alt="image.png" width="488" height="650" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197409" data-api-returntype="File" loading="lazy"></p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading"><strong>Hash Tables</strong></h3>
+                <div class="dp-panel-content">
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-tip">
+                        <div class="card-body">
+                            <p class="card-text"><strong>Hashing is the process of converting a given key into a code (a hash).</strong> In the case of implementing a Hash Table, the resulting hash is used to indicate the index in which data is being inserted.</p>
+                            <p class="card-text">Depending on the complexity of the hash function,<strong> it is possible for the resulting code to be the same for multiple keys</strong> (e.g. the keys "cat", "act" and "tac" could all generate the same hash).</p>
+                            <p class="card-text" style="text-align: left;"><img src="../../assets/892c80d1ce501a07.png" alt="image.png" width="243" height="172" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197415" data-api-returntype="File" loading="lazy"></p>
+                        </div>
+                    </div>
+                    <p class="amber-el amber-paragraph amber-content">&nbsp;</p>
+                    <p><strong>Positional Indexing (Ordered Containers)</strong></p>
+                    <p><i class="amber-el amber-italic">(i.e. Lists, arrays, trees)</i> have <strong><span class="amber-el amber-bold">a sense of order</span></strong> between elements. Typically you can assign a <strong><span class="amber-el amber-bold">meaningful index</span></strong> to each element that denotes an order or sequence.</p>
+                    <p><strong>Associative Indexing (Associative Containers)</strong></p>
+                    <p><i class="amber-el amber-italic">(i.e. Hash Tables)</i> <span> use </span><strong class="amber-el amber-bold">unique "keys"</strong><span> to map their values. Items in associative containers have </span><strong class="amber-el amber-bold">no sense of order</strong><span>. Keys are typically strings (but for now, we will use integers as keys).</span>&nbsp;</p>
+                    <p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/eb6798ac2674da86.png" alt="image.png" width="542" height="345" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3251881" data-api-returntype="File" loading="lazy"></p>
+                    <h4 class="amber-el amber-paragraph amber-content">Hash Table</h4>
+                    <p class="amber-el amber-paragraph amber-content"><strong>A Hash Table implements Associative Indexing through the use of a Hashing Function.</strong></p>
+                    <p class="amber-el amber-paragraph amber-content">The Hashing Function is given a unique key (i.e. "HISTORY"), which then converts the key into an integer (i.e. 2) between 0 and the <em>length of the array - 1</em>.</p>
+                    <div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+                        <div class="card-body" style="padding: 5px;">
+                            <p class="card-text" style="text-align: left;"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp;<span class="amber-el amber-italic">Note: As stated above, the Hashing Function may allow multiple keys to generate the same integer code. This is called a <strong class="amber-el amber-bold">collision</strong> and there are advanced ways to handle this (see advanced section below).</span></span></p>
+                        </div>
+                    </div>
+                    <p class="amber-el amber-paragraph amber-content">This integer represents the index in which data (i.e. data about the "HISTORY" subject) will be inserted.</p>
+                    <p class="amber-el amber-paragraph amber-content">The Hashing Function for the purposes of this course can be very simple, but when it comes to the 'real-world' these functions can be very complex.</p>
+                    <p class="amber-el amber-paragraph amber-content"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/28c2d083b0e39275.png" alt="image.png" width="612" height="372" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197422" data-api-returntype="File" loading="lazy"></p>
+                    <p class="amber-el amber-paragraph amber-content"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/8b6e052228d91dfb.png" alt="image.png" width="611" height="390" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3251882" data-api-returntype="File" loading="lazy"></p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading "><strong>Hash Tables - Collision Handling</strong></h3>
+                <div class="dp-panel-content">
+                    <p class="amber-el amber-paragraph amber-content">Separate Chaining is an advanced collision handling strategy that <strong class="amber-el amber-bold">allows multiple items to be stored in a single index</strong>. In this example, the Hash Table is an array made up of lists in each index.</p>
+                    <p class="amber-el amber-paragraph amber-content">Whenever a key produces a hash, the item is appended to the end of the list which is contained inside the index (as defined by the hash value).</p>
+                    <p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/6763f4a377c0e26a.png" alt="image.png" width="598" height="423" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197436" data-api-returntype="File" loading="lazy"></p>
+                </div>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      <div class="dp-panels-wrapper dp-accordion-default">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading ">Presentation</h3>
+                <div class="dp-panel-content ">
+                    <p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EefudVD3xXRDppqCfCef7hgBOAmvHeF9DNaz5RPnyYTiow?e=Jk6fWK" target="_blank">1.17 Data Structures</a></p>
+                    <div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-17-data-structures-for-storage" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={5075eee7-c5f7-4374-a69a-827c279fee18}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+                <ul class="card-text">
+                    <li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+                <ul class="card-text">
+                    <li><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank">Hash tables</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <p>&nbsp;</p>
+    </div>
+</div></main>
+<div class="pnrow"><a class="pn" href="11962-028.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-030.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

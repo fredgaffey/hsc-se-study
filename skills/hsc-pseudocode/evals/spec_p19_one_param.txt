@@ -1,0 +1,14 @@
+BEGIN
+    read (name)
+    read (address)
+END
+
+BEGIN read (arrayname)
+    Set pointer to first position
+    Get a character
+    WHILE more data AND space in array
+        Store data in arrayname at the position given by the pointer
+        Increment the pointer
+        Get next character
+    ENDWHILE
+END read (arrayname)

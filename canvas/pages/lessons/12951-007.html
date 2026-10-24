@@ -1,0 +1,305 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.2 Software Development Steps — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 1 (Term 4: Weeks 1-2) Secure Software Architecture</div>
+<h1 style="margin-top:.2rem">1.2 Software Development Steps</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-2-software-development-steps" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div class="dp-wrapper dp-bookmark variation-2" id="dp-wrapper"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2">
+
+<header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid"><div class="card-body"><p class="card-text" data-mce-style=""><strong class="card-text">Syllabus<br></strong>Interpret and apply fundamental software development steps to develop secure code:&nbsp;<br class="card-text">- requirements definition<br class="card-text">- determining specifications&nbsp;<br class="card-text">- design<br class="card-text">- development<br class="card-text">- integration<br class="card-text">- testing and debugging<br class="card-text">- installation<br class="card-text">- maintenance&nbsp;</p></div></div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;"><div class="card-body">
+<p style="margin-bottom: 0px;" class="card-text"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand the fundamental steps of software development necessary for creating secure code.</li>
+<li>Apply these steps in alignment with the NSW Year 12 Software Engineering syllabus to ensure secure software development.</li>
+</ul>
+</div></div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;"><div class="card-body">
+<p style="margin-bottom: 0px;" class="card-text"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to describe each step in the software development lifecycle (SDLC) and its associated documentation.</li>
+<li>Students will be able to explain how each step contributes to developing secure code.</li>
+<li>Students will be able to apply these steps in practical scenarios, ensuring software security and compliance with the syllabus.</li>
+</ul>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>  Content</h3>
+<p>Developing secure software occurs in each major step of the software development life cycle, preventing vulnerabilities from being introduced. By addressing security during planning, design, development, testing, and maintenance, developers can create robust, resilient software that protects against threats and maintains user trust.</p>
+<p><img src="../../assets/46db7a3141fd0f65.png" alt="SDLC Diagram-1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527311" data-api-returntype="File" loading="lazy"></p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Requirements Definition</h3>
+<div class="dp-panel-content ">
+<p><strong>Definition:</strong><br>The definition of requirements involves gathering and documenting the software's functional and non-functional requirements, with a strong focus on security needs.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Client Scenario:</strong><br>Understanding the client's needs and expectations regarding security features. This involves meeting with the client to discuss their requirements and the potential security threats relevant to their specific context.</p>
+</li>
+<li>
+<p><strong>Environment Specifications:</strong><br>Defining the operational environment, including hardware, software, and network considerations, to ensure security compatibility. This step involves assessing the current environment to identify any security gaps that must be addressed.</p>
+</li>
+<li>
+<p><strong>List of Objectives:</strong><br>Creating a comprehensive list of security objectives that the software must achieve. This includes setting specific, measurable goals such as data encryption, access controls, and compliance with regulatory standards.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Determining Specifications</h3>
+<div class="dp-panel-content ">
+<p><strong>Definition:</strong><br>Determining specifications involves creating a detailed description of the software's functionality and technical requirements, focusing on how it will meet the defined security needs.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Technical Requirements:</strong><br>Defining specific technical details, such as encryption standards, authentication methods, and data handling protocols. These requirements form the technical backbone of the software, ensuring that security measures are robust and effective.</p>
+</li>
+<li>
+<p><strong>Performance Criteria:</strong><br>Establishing security-related performance benchmarks, such as response times for security features and the capacity to handle security events, ensures that the software performs efficiently while maintaining a high level of security.</p>
+</li>
+<li>
+<p><strong>Compliance Standards:</strong><br>Identifying and incorporating relevant security compliance standards that the software must adhere to. This involves ensuring the software meets industry-specific regulations and standards, such as GDPR or PCI DSS.</p>
+</li>
+<li>
+<p><strong>IPO Model:</strong><br>Defining the Input-Process-Output (IPO) model clearly articulates how data inputs will be processed and what secure outputs will be generated. This model helps understand how data flows through the system and where security controls need to be applied.</p>
+</li>
+<li>
+<p><strong>Gantt Charts:</strong><br>Developing a Gantt chart to plan and schedule the various tasks involved in developing secure code. The Gantt chart provides a visual timeline of the project, helping to ensure that each task is completed on time and security milestones are met.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Design</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>The design phase involves creating a blueprint for the software, including architecture, data flow, and user interfaces, while embedding security principles.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>System Architecture:</strong><br>Designing a secure architecture that incorporates layers of security, such as firewalls, encryption, and secure access points. This step ensures that the software's overall structure is designed to protect against potential security threats.</p>
+</li>
+<li>
+<p><strong>Modelling Tools:</strong></p>
+<ul>
+<li>
+<p><strong>Structure Chart:</strong><br>Used to represent the hierarchy and relationships between modules in the software, ensuring that secure data flow and control mechanisms are clearly defined.</p>
+</li>
+<li>
+<p><strong>Class Diagram:</strong><br>Represents the system's classes, attributes, methods, and relationships, with attention to secure data handling and encapsulation of sensitive information.</p>
+</li>
+<li>
+<p><strong>Data Flow Diagram (DFD):</strong><br>Maps out how data moves through the system, identifying where data must be protected during transmission and processing.</p>
+</li>
+<li>
+<p><strong>User Interface Design:</strong><br>Ensuring the user interface supports secure interactions, including secure login processes and protection against unauthorised access.</p>
+</li>
+<li>
+<p><strong>Storyboards:</strong><br>Creating visual storyboards to represent how users interact with the software, focusing on secure navigation and user experience. Storyboards help design intuitive, secure interfaces by visualising user flows.</p>
+</li>
+<li>
+<p><strong>Data Dictionaries:</strong><br>Developing a data dictionary to document all the data elements used in the software, including their definitions, formats, and relationships. The data dictionary ensures that data is consistently and securely handled throughout the system.</p>
+</li>
+<li>
+<p><strong>Pseudocode:</strong><br>Writing pseudocode to outline the logic and flow of the program in a human-readable format. Pseudocode helps ensure that security measures, such as input validation and error handling, are planned and implemented correctly.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Logbooks:</strong><br>Maintaining a logbook to document decisions, design changes, and security considerations throughout the design phase. The logbook records the design process, helping to track security-related decisions and ensuring that all security aspects are thoroughly documented.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Development</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>The development phase is where the software is coded, with an emphasis on secure coding practices to prevent vulnerabilities.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Secure Coding Standards:</strong><br>Implementing coding practices that protect against vulnerabilities such as SQL injection, cross-site scripting (XSS), and buffer overflows. This ensures that the code is inherently secure and resistant to attacks.</p>
+</li>
+<li>
+<p><strong>Version Control:</strong><br>Using version control systems to track changes and ensure that secure coding practices are consistently applied. Version control allows developers to manage code changes effectively, ensuring that security is maintained throughout development.</p>
+</li>
+<li>
+<p><strong>Code Review:</strong><br>Conducting peer reviews of code to identify and address potential security issues before they are integrated into the main codebase. Code reviews help catch security flaws early, reducing the risk of vulnerabilities in the final product.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Integration</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>Integration involves combining individual components into a fully functioning system and ensuring that security controls work across the system.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Component Compatibility:</strong><br>Ensuring that all components interact securely and that security measures are effective across the entire system. This step verifies that security features are not compromised when components are combined.</p>
+</li>
+<li>
+<p><strong>Integration Testing:</strong><br>Performing tests to verify that security features function correctly when different components are combined. Integration testing ensures that the system is secure and that no vulnerabilities are introduced during integration.</p>
+</li>
+<li>
+<p><strong>Security Verification:</strong><br>Conducting a final check to ensure that all integrated components meet the security objectives defined in the requirements stage. This verification step confirms the software is secure before moving on to the next phase.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Testing and Debugging</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>Testing and debugging involve identifying and resolving issues, focusing on uncovering security vulnerabilities.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Security Testing:</strong><br>Implementing various testing methods to identify and exploit potential vulnerabilities, including:</p>
+<ul>
+<li>
+<p><strong>Static Application Security Testing (SAST):</strong><br>SAST analyses the source code for security vulnerabilities without executing the code. It helps identify coding errors that could lead to security flaws.</p>
+</li>
+<li>
+<p><strong>Dynamic Application Security Testing (DAST):</strong><br>Testing the running application for security vulnerabilities in a live environment. DAST helps detect vulnerabilities that are not visible in the source code alone.</p>
+</li>
+<li>
+<p><strong>Vulnerability Scanning:</strong><br>Scanning the application and environment for known vulnerabilities. This step identifies potential weaknesses that attackers could exploit.</p>
+</li>
+<li>
+<p><strong>Penetration Testing:</strong><br>Simulating attacks to discover potential vulnerabilities in the system. Penetration testing helps assess the system's ability to withstand real-world attack scenarios.</p>
+</li>
+<li>
+<p><strong>Regression Testing:</strong><br>Ensuring that new updates or changes have not introduced new vulnerabilities. Regression testing verifies that the software remains secure after modifications.</p>
+</li>
+<li>
+<p><strong>User Acceptance Testing (UAT):</strong><br>Verifying that the software meets security requirements and is ready for deployment. UAT ensures that the final product is secure and functional according to user expectations.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Debugging:</strong><br>Address any identified security issues and ensure that all vulnerabilities are resolved before deployment. Debugging is essential for fixing security flaws that could compromise the system.</p>
+</li>
+<li>
+<p><strong>Final Security Assessment:</strong><br>Conduct a comprehensive review to confirm the software is secure and ready for release. This assessment provides the final check before the software is deployed to production.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Installation</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>The installation phase involves deploying the software in a production environment, ensuring it is securely configured.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Secure Configuration:</strong><br>Applying secure settings during installation, such as setting strong passwords, disabling unnecessary services, and configuring firewalls. Secure configuration helps prevent unauthorised access and ensures the system is protected from the start.</p>
+</li>
+<li>
+<p><strong>Deployment Procedures:</strong><br>Follow best practices for secure deployment, including ensuring that all data is encrypted during the installation process. Proper deployment procedures help maintain the software's integrity and confidentiality.</p>
+</li>
+<li>
+<p><strong>Post-Installation Testing:</strong><br>Tests will be performed after installation to verify that the software is functioning securely in its new environment. This step ensures that the system remains secure after deployment and that no new vulnerabilities have been introduced.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Maintenance</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>Maintenance involves ongoing updates and software monitoring to address new security threats.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Security Patching:</strong><br>Apply updates and patches regularly to fix any newly discovered vulnerabilities. Security patching is critical for keeping the software protected against emerging threats.</p>
+</li>
+<li>
+<p><strong>Monitoring:</strong><br>Continuously monitoring the software for security breaches or unusual activity. Monitoring helps detect potential security incidents early, allowing for a quick response.</p>
+</li>
+<li>
+<p><strong>Incident Response:</strong><br>Having a plan to respond to security incidents promptly minimises the impact of any breaches. An effective incident response plan ensures that security incidents are managed efficiently and the system can recover quickly.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity <br></strong></p>
+<ul class="card-text">
+<li><a title="1.2 Software Development Steps" href="https://canvas.kings.edu.au/courses/12951/assignments/204808" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204808" data-api-returntype="Assignment">1.2 Software Development Steps</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;"><div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a href="https://www.atlassian.com/software-development">Learn the essentials of software development | Atlassian</a></li>
+<li><a href="https://www.paloaltonetworks.com.au/cyberpedia/what-is-secure-software-development-lifecycle">What Is Secure Software Development Lifecycle (Secure SDLC)?</a></li>
+</ul>
+</div></div>
+&nbsp;</div>
+
+</div></div></main>
+<div class="pnrow"><a class="pn" href="12951-006.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-008.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

@@ -1,0 +1,386 @@
+{
+  "exam": "12SEN_Cycle6",
+  "syllabus": "Software Engineering",
+  "publisher": null,
+  "topics": [
+    "Software Engineering Project"
+  ],
+  "outcomes": [
+    "SE-12-06",
+    "SE-12-09",
+    "SE-12-04",
+    "SE-12-01"
+  ],
+  "status": "COMPLETED",
+  "results_released": true,
+  "submitted": "2026-04-20T05:47:46.330Z",
+  "started": "2026-04-20T05:40:51.889Z",
+  "duration_minutes": null,
+  "markers": [
+    "TKS CST"
+  ],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/c31fb9f2-2f38-4769-9419-d4282efee1be",
+  "marking_session_id": "c31fb9f2-2f38-4769-9419-d4282efee1be",
+  "exam_id": "c2793d18-d1d1-43bb-9db8-8027518dea80",
+  "session_id": "d267c7ab-77ca-4c85-afe2-7cce89310be1",
+  "total_mark": 6,
+  "parts_answered": 5,
+  "parts_marked": 5,
+  "parts_total": 5,
+  "total_available": 11,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "ffda77cb-cfae-4f27-908d-549859ef7fe1",
+      "title": "WAgile Approach (MC, TKS2025)",
+      "topic": "WAgile Approach",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "aa214ada-9e56-4d8e-b751-a75a604a523f",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Why might WAgile be unsuitable for very small projects?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It requires no documentation at all.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It doesn&rsquo;t support team collaboration.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Its iterative cycles are too short for small teams.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "The structured setup may cause extra overhead.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C",
+              "D"
+            ],
+            "correct": false
+          },
+          "result": {
+            "mark": 0,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 0,
+                "feedback": null,
+                "marked": "2026-03-06T02:10:19.297Z"
+              }
+            ]
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "79e4f26c-80f2-46b0-b64a-f12a11d2bef6",
+      "title": "Feedback (SA, TKS 2025)",
+      "topic": "Feedback",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "adc312cd-2800-4e43-9af8-7ca8f89d7a34",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe two steps involved in analysing feedback during software development.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 120
+          },
+          "your_response": {
+            "answered": true,
+            "text": "revevint it \n\nthen implmeting it",
+            "images": [],
+            "word_count": 5
+          },
+          "result": {
+            "mark": 0,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 0,
+                "feedback": null,
+                "marked": "2026-03-06T02:10:19.297Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes two steps involved in analysing feedback during software development."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines AT LEAST ONE step involved in analysing feedback during software development."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "One step in analysing feedback is categorisation, where feedback is sorted based on its source such as user, stakeholder, peer, or automated. This helps developers prioritise feedback appropriately, ensuring that critical issues like user-reported bugs are addressed before less urgent suggestions. Another step is impact analysis, which involves evaluating how implementing the feedback will affect the software’s architecture, performance, or user experience. This helps developers avoid introducing new problems and ensures that changes lead to meaningful improvements."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "56d57ae1-42b6-44e7-a914-d4f45da2c3f2",
+      "title": "Backup (SA, TKS 2025)",
+      "topic": "Backup",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "0f5a1c2b-cacc-4635-ac2c-07f17a6f4b31",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe how programmed data backup supports business continuity in software systems.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 100
+          },
+          "your_response": {
+            "answered": true,
+            "text": "Programed/automated backups suport bisnues connutit plans by providing a way of reverting and resorring. so if there is a ransomwhere atack  of acidentil dedeation of the prod database the compony can insted of losing the data they can restor from a backup. this allows bunuess opration to contue.",
+            "images": [],
+            "word_count": 48
+          },
+          "result": {
+            "mark": 2,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "Expand on how the programmed or automated nature of the backups specifically helps by ensuring data is saved at regular, scheduled intervals without requiring manual intervention. You should also explicitly mention how this process minimises operational downtime and helps maintain overall system reliability and data integrity during a disruption.",
+                "marked": "2026-03-06T02:10:19.297Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes how programmed data backup supports business continuity in software systems."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines how programmed data backup can support business continuity in software systems."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Programmed data backup supports business continuity by automatically creating copies of important data at scheduled intervals. This reduces the risk of data loss due to hardware failure, accidental deletion, or cyber threats like ransomware. By ensuring that backups are consistently made without manual input, organisations can quickly restore data and continue operations with minimal disruption, helping maintain both data integrity and system reliability."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question_id": "20030942-fb18-4ea6-9d88-7dffffde82cf",
+      "title": "Version Control (MC + SA, TKS 2025)",
+      "topic": "Version Control",
+      "label": "MC + SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A development team is working on a collaborative project using Git and GitHub. Each developer is assigned a feature and works on a separate branch. Before merging their work into the main branch, the team conducts code reviews and tests for compatibility. One developer notices that their branch has diverged significantly from main due to recent updates by others.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "d4a97530-0aee-41cc-a72d-3e2a0796ebe1",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe the steps the developer should take to ensure their branch is compatible with the latest version of main before merging.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 120
+          },
+          "your_response": {
+            "answered": true,
+            "text": "they should pull from the lates in origen/master/main or whatever branch then wish \n\nthey should follow best practis (keping the signture of a function the same where posible ect) \n\nthen they will need to relve any mearge conflicts\n\nthen make a PR",
+            "images": [],
+            "word_count": 42
+          },
+          "result": {
+            "mark": 3,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 3,
+                "feedback": null,
+                "marked": "2026-03-06T02:10:19.297Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes the steps the developer should take to ensure their branch is compatible with the latest version of main before merging."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines how the developer can ensure their branch is compatible with main without causing unnecessary conflicts."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "To ensure their branch is compatible with the latest version of main, the developer should first use \"git fetch\" to retrieve the most recent changes from the remote repository. Then, they can use \"git rebase main\" while on their feature branch to apply their changes on top of the updated \"main\" branch. This helps integrate the latest updates and resolve any conflicts before merging. Git supports this process by allowing developers to rebase or merge branches, which helps maintain a clean and linear project history. Rebasing is especially useful for keeping feature branches up to date without creating unnecessary merge commits."
+        },
+        {
+          "part_id": "c1c1903f-496f-4abc-a0fa-0f7970826307",
+          "part": "Part B",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "In addition, what is the most appropriate action the developer should take to maintain team workflow discipline and avoid integration issues?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Skip code review and merge their branch immediately to avoid delaying the sprint timeline.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Archive their branch and start a new one from main, assuming the original work will be too difficult to integrate.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Push their branch to the remote repository and collaborate with other team members to resolve any conflicts during the merge.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Communicate with the team, pull the latest changes from main, and rebase their branch to align with the current codebase before requesting a merge.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "D"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "WAgile Approach": {
+      "mark": 0,
+      "available": 1
+    },
+    "Feedback": {
+      "mark": 0,
+      "available": 3
+    },
+    "Backup": {
+      "mark": 2,
+      "available": 3
+    },
+    "Version Control": {
+      "mark": 4,
+      "available": 4
+    }
+  }
+}

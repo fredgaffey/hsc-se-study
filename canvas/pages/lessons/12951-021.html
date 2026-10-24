@@ -1,0 +1,281 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.14 File Security — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 3 (Term 4: Weeks 5-6) Secure Software Architecture</div>
+<h1 style="margin-top:.2rem">1.14 File Security</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-14-file-security" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Design, develop and implement secure code to protect user file and hardware vulnerabilities from file attacks and side channel attacks</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Students will learn how to design, develop, and implement secure Python code to protect user files and hardware from file attacks and side-channel attacks.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">design secure code that addresses file and hardware vulnerabilities.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">develop Python code that protects user files from file attacks.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">implement techniques to defend against side-channel attacks.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">understand how to prevent unauthorised access to sensitive user data.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">apply security best practices to safeguard against file and hardware-based threats.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Designing secure software is critical in preventing unauthorised access to user data and protecting system hardware from malicious exploitation.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;File Attacks: How to prevent vulnerabilities related to file access and manipulation.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Side-Channel Attacks: How to mitigate hardware vulnerabilities that leak sensitive information indirectly.</p>
+<p>&nbsp;</p>
+<h4>&nbsp;What Are File Attacks?</h4>
+<p>File attacks exploit weaknesses in how a program accesses or handles files. Attackers often use methods like file inclusion, directory traversal, and buffer overflow to gain unauthorised access, alter, or corrupt files.</p>
+<p>Examples of File Attacks:</p>
+<ul>
+<li>Path Traversal Attack: Manipulating file paths to access directories outside the intended location (e.g., ../../../etc/passwd).</li>
+<li>Insecure File Upload: When a web application improperly handles file uploads, allowing attackers to upload malicious files (e.g., .php files).</li>
+<li>Buffer Overflow: Writing more data into a buffer than it can hold, causing memory corruption, which may lead to arbitrary code execution.</li>
+</ul>
+<p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/b102633397713845.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527337" data-api-returntype="File" loading="lazy"><em>Visualisation of a software buffer overflow. <br>Data is written into A, but is too large to fit within A, so it overflows into B.</em></p>
+<p>&nbsp;</p>
+<h4>What Are Side-Channel Attacks?</h4>
+<p>Side-channel attacks exploit indirect information leakage such as timing, electromagnetic emissions, or power consumption to infer sensitive data.</p>
+<p>Examples of Side-Channel Attacks:</p>
+<ul>
+<li>Timing Attacks: By measuring the time it takes to process different inputs, an attacker can deduce private data (e.g., cryptographic keys).</li>
+<li>Power Analysis: Observing power consumption during cryptographic operations to derive keys.</li>
+<li>Electromagnetic Emanation: Analysing electromagnetic emissions to recover sensitive information processed by hardware.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>The Role of Secure Code</h4>
+<p>Secure coding involves writing software that minimises the risk of exploitation. It ensures that both user files and hardware components are safeguarded from malicious actors.</p>
+<p>Core Security Objectives: Ensure Confidentiality (keeping data private), Integrity (data can’t be altered maliciously), and Availability (systems remain operational and accessible).</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Secure Code Design Principles</h3>
+<div class="dp-panel-content ">
+<p><strong>Principle of Least Privilege (POLP)</strong></p>
+<ul>
+<li>Each process, user, or system component should operate with the minimum level of access necessary to perform its function. This limits the damage that could be done if a vulnerability is exploited.</li>
+<li>Example: A file handler should only have permission to access files it is required to process, rather than full directory access.<br><strong></strong></li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/937a06b4aa3f2591.png" alt="image.png" width="361" height="361" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527339" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Input Validation</strong></p>
+<ul>
+<li>One of the most critical steps to secure file handling. All inputs from users should be treated as untrusted and validated/sanitized before further processing.</li>
+<li>Example: Reject file names with unexpected characters (e.g., ../ to prevent path traversal attacks).</li>
+</ul>
+<p><strong>Fail-Safe Defaults</strong></p>
+<ul>
+<li>When a program fails, it should do so in a way that maintains system security. Deny access by default unless explicitly allowed.</li>
+<li>Example: If a file access check fails, default to denying the operation rather than allowing access.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Preventing File Attacks</h3>
+<div class="dp-panel-content ">
+<p><strong>File Permissions and Access Control</strong></p>
+<ul>
+<li>Assign appropriate file permissions (read, write, execute) to limit unauthorised access. Set files to read-only where necessary.</li>
+<li>Example: Avoid running web applications with elevated permissions like root/admin.<br><strong></strong></li>
+</ul>
+<p><strong>File Path Sanitisation</strong></p>
+<ul>
+<li>Validate and normalise file paths to avoid directory traversal vulnerabilities.</li>
+<li>Example: Instead of allowing users to provide relative file paths, resolve all paths to absolute ones and check if they are within the allowed directory structure.</li>
+</ul>
+<p><strong>Secure File I/O Operations</strong></p>
+<ul>
+<li>Ensure that file operations (e.g., opening, reading, writing files) are done securely.</li>
+<li>Techniques:
+<ul>
+<li>Use secure libraries for handling file I/O.</li>
+<li>Ensure file locks to avoid race conditions where two processes might access the same file simultaneously.</li>
+<li>Restrict file uploads to specific directories and file types.</li>
+</ul>
+</li>
+</ul>
+<p><strong>File Encryption</strong></p>
+<ul>
+<li>Encrypt sensitive files at rest using modern encryption standards (e.g., AES-256) to protect against unauthorised access if a file system is compromised.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Mitigating Side-Channel Attacks</h3>
+<div class="dp-panel-content">
+<p><strong>Constant-Time Algorithms</strong></p>
+<ul>
+<li>Many cryptographic algorithms and operations vary their execution time depending on input, allowing attackers to infer sensitive information. Using constant-time algorithms prevents timing discrepancies.</li>
+<li>Example: Implement constant-time comparison for password validation to avoid timing attacks.</li>
+</ul>
+<p><strong>Blinding and Masking</strong></p>
+<ul>
+<li>Mask sensitive data during computations to prevent attackers from correlating external observations (such as power consumption or timing) with the actual data.</li>
+<li>Example: Apply blinding techniques during cryptographic operations, where the input is randomised before being processed and then corrected afterward.</li>
+</ul>
+<p><strong>Reducing Information Leakage</strong></p>
+<ul>
+<li>Limit external signals like power usage or electromagnetic emissions from hardware that could be analysed by attackers.</li>
+<li>Example: Use shielding to prevent electromagnetic emissions from leaking sensitive information processed by hardware.</li>
+</ul>
+<p><strong>Defensive Coding Techniques</strong></p>
+<ul>
+<li>Be mindful of operations that may unintentionally reveal sensitive data.</li>
+<li>Example: Insert artificial delays or noise into program execution to obscure timing information.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Secure Code Development Best Practises</h3>
+<div class="dp-panel-content">
+<p><strong>Regular Code Review and Testing</strong></p>
+<ul>
+<li>Always conduct manual code reviews with a focus on security. During code reviews, look for:
+<ul>
+<li>Improper input validation.</li>
+<li>Unsafe file handling or insecure defaults.</li>
+<li>Hard coded credentials or secrets.</li>
+</ul>
+</li>
+<li>Ensure that reviewers pay special attention to critical security areas like user authentication, file access, and data encryption.</li>
+<li>Create automated test cases to ensure your application behaves securely under various conditions, including edge cases and malicious inputs.</li>
+<li>Ensure that test cases check for:
+<ul>
+<li>Injection vulnerabilities (e.g., SQL, command injection).</li>
+<li>Unexpected file or input handling behaviours.</li>
+<li>Secure handling of sensitive data like passwords.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Dependency Management</strong></p>
+<ul>
+<li>Regularly update your dependencies to ensure you’re using the latest versions that contain security patches.</li>
+<li>Before updating, review change logs and test your application to confirm the updates don’t introduce breaking changes.</li>
+</ul>
+<p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/cd457ac9825e8c6b.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527338" data-api-returntype="File" loading="lazy"><em>Checking outdated dependencies with </em><code>pip list --outdated</code></p>
+<p><strong>Memory Management</strong></p>
+<ul>
+<li>Properly handle memory allocation and de-allocation to prevent buffer overflows and memory leaks.</li>
+<li>Avoid Exposing Sensitive Data:
+<ul>
+<li>Do not store sensitive information, like passwords or private keys, in memory longer than necessary.</li>
+<li>Be cautious about logging or printing sensitive information, even during development.</li>
+</ul>
+</li>
+<li>Techniques:
+<ul>
+<li>Use safer functions like <code>strncpy</code> instead of <code>strcpy</code> when programming in C.</li>
+<li>Perform boundary checks to avoid writing outside of allocated buffers.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Logging and Monitoring</strong></p>
+<ul>
+<li>Log suspicious file access or unusual program behaviour, but avoid logging sensitive information like user passwords or encryption keys.</li>
+<li>Example: Use monitoring tools to detect unusual file access patterns, like a large number of read/write operations on sensitive files.</li>
+</ul>
+</div>
+</div>
+</div>
+<p style="text-align: center;">&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-14-file-security" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube-nocookie.com/embed/QINoB1_OXUk?si=s4vvv-cHGLB-COwW</span></div></div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.strongdm.com/blog/principle-of-least-privilege" target="_blank">Principle of Least Privilege</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="1.14 File Security" href="https://canvas.kings.edu.au/courses/12951/assignments/204804" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204804" data-api-returntype="Assignment">1.14 File Security</a></li>
+</ul>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.14%20File%20Security.pptx?d=wb478bcc6283247a2b424bfb9d998546f&amp;csf=1&amp;web=1&amp;e=R0GdS0">1.14 File Security.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-14-file-security" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={b478bcc6-2832-47a2-b424-bfb9d998546f}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div><h3 class="sub">After</h3></main>
+<div class="pnrow"><a class="pn" href="12951-020.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-022.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

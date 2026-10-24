@@ -1,0 +1,250 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.15 Backend Development — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 9 (Term 1: Weeks 9-10) Programming for the Web</div>
+<h1 style="margin-top:.2rem">2.15 Backend Development</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-15-backend-development" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Assess the contribution of back-end web development to the success of a web application</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">understand the role of back-end web development in ensuring the functionality, performance, security, and scalability of a web application<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">explain the main components of back-end development (server, database, APIs, security).</span></li>
+<li class="card-text"><span style="font-size: 10pt;">assess how a well-implemented back end contributes to a web application’s performance, security, and scalability.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">provide examples of successful web applications that rely on strong back-end development to meet user needs.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Back-end web development refers to the server-side components of a web application. It involves managing the database, server, and application logic. While front-end development focuses on what users see and interact with, back-end development ensures the app functions properly, processes requests, and delivers the correct data.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<h5 class="card-title">Recall: Components of Back-End</h5>
+<ul>
+<li class="card-text"><strong>Server</strong>: Handles client requests, processes data, and sends responses</li>
+<li class="card-text"><strong>Database</strong>: Stores and manages data that the application needs to function</li>
+<li class="card-text"><strong>APIs</strong> (Application Programming Interfaces): Allow communication between different parts of the application or between external services</li>
+<li class="card-text"><strong>Security</strong>: Ensures that data is stored and transferred securely (e.g., authentication and encryption)</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/b9da8f0d85463c0e.png" alt="image.png" width="288" height="288" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527534" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Contribution to Web Application</h4>
+<p>Back-end web development is the backbone of a web application. It ensures the application runs smoothly, securely, and efficiently behind the scenes. A strong back-end infrastructure supports key aspects like performance, scalability, data management, security, and integration, all of which are crucial for the overall success and growth of the application.&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Performance and Speed</h3>
+<div class="dp-panel-content ">
+<p>The back end plays a crucial role in determining the speed and responsiveness of a web application. When a user interacts with the front end (such as clicking a button or submitting a form), the request is sent to the back end, which processes it and returns the necessary data. Well optimised back-end processes ensure minimal delays, which enhances the overall user experience.</p>
+<ul>
+<li>Example: In an e-commerce application, when a user searches for a product, the back-end queries the database to retrieve the relevant results. If the back end is inefficient or poorly structured, it could lead to long wait times or even timeouts, frustrating the user and potentially causing them to leave the site.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Scalability</h3>
+<div class="dp-panel-content ">
+<p>Scalability is the ability of a web application to handle growth, whether it’s more users, larger datasets, or increased functionality. A scalable back end allows the application to handle high traffic without crashing or experiencing significant slowdowns.</p>
+<ul>
+<li>Vertical Scaling: Adding more resources (like CPU or memory) to a single server.</li>
+<li>Horizontal Scaling: Adding more servers to handle the workload.</li>
+</ul>
+<p>Back-end technologies, such as load balancers, distributed databases, and cloud services, enable scalability. A scalable back end ensures that an application can grow along with its user base, without performance degradation.</p>
+<ul>
+<li>Example: Social media platforms like Facebook or Instagram handle millions of concurrent users and enormous amounts of data. Their back-end systems are designed to scale horizontally, allowing them to manage this load effectively without crashing.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Data Management and Integrity</h3>
+<div class="dp-panel-content">
+<p>Back-end development is essential for managing how data is stored, retrieved, and updated. This includes designing and maintaining databases that handle structured (e.g., SQL databases) or unstructured (e.g., NoSQL databases) data. A robust back end ensures that user information, content, and transactions are handled efficiently and with high integrity, preventing data loss or inconsistencies.</p>
+<ul>
+<li>Example: In a banking application, the back end ensures that data such as account balances and transaction history are accurately stored and updated in real time. Proper data management guarantees that users see the correct information without errors or discrepancies.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Security</h3>
+<div class="dp-panel-content">
+<p>A key responsibility of back-end development is ensuring the security of the web application. The back end manages user authentication, authorisation, and encryption of sensitive data. Security measures include safeguarding the database against SQL injections, securing APIs, and implementing HTTPS to encrypt data transferred between the client and the server.</p>
+<ul>
+<li>Authentication: Verifying a user’s identity (e.g., login systems).</li>
+<li>Authorisation: Controlling what resources a user can access based on their role.</li>
+<li>Data Encryption: Ensuring that sensitive information like passwords and financial data are stored securely.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Example: An online banking application’s back end is responsible for securing user accounts, ensuring only authorised users can access personal financial information, and encrypting sensitive data during transmission.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Reliability and Availability</h3>
+<div class="dp-panel-content">
+<p>Reliability refers to the ability of the web application to perform its functions correctly and consistently, even in the face of errors or system failures. Back-end development ensures that the web app can recover quickly from unexpected issues such as server crashes or network failures. It also involves designing fail over mechanisms, where backups are automatically activated if something goes wrong.</p>
+<p>High availability ensures that the application is accessible to users 24/7. This is achieved through techniques like database replication, server clustering, and the use of cloud services.</p>
+<ul>
+<li>Example: Netflix ensures reliability and availability by using distributed server architecture and multiple data centres across the globe. Even if one server fails, users can continue to stream content without disruption because the back-end systems automatically route them to another server.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">API and Third-Party Integration</h3>
+<div class="dp-panel-content">
+<p>A modern web application often relies on third-party services for added functionality (e.g., payment gateways, social media logins, geolocation services). The back end is responsible for integrating these external APIs (Application Programming Interfaces) into the web application securely and efficiently.</p>
+<p>Effective back-end development ensures that data is passed between the application and third-party services without errors and that performance is not hindered. This can also extend the capabilities of the app, making it more versatile and useful to the user.</p>
+<ul>
+<li>Example: Uber integrates with Google Maps and third-party payment services through its back-end APIs. This seamless integration enables real-time location tracking and secure payments without disrupting the user experience.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Real World Examples</h4>
+<p>These real-world examples demonstrate that back-end web development is fundamental to ensuring scalability, performance, security, and data management in high-traffic applications. In each case, the back end is what enables these companies to deliver reliable, seamless services to millions of users globally, contributing to their overall success.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading dp-has-icon"><i class="dp-icon fab fa-amazon " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp;Amazon</h3>
+<div class="dp-panel-content ">
+<p><strong>Back-End Contribution:</strong></p>
+<p>Amazon’s success as the largest e-commerce platform is heavily reliant on its robust back-end infrastructure, which supports millions of users, thousands of vendors, and enormous amounts of transaction data.</p>
+<ul>
+<li>Performance: Amazon uses distributed databases and caching mechanisms to ensure fast product search and retrieval. This allows users to browse thousands of products quickly without noticeable delay.</li>
+<li>Scalability: The back-end system is built to handle massive traffic surges, such as on Prime Day or Black Friday. Amazon achieves this scalability by using cloud services like AWS (Amazon Web Services), which allows the infrastructure to expand or contract based on demand.</li>
+<li>Data Management: The back end efficiently manages customer data, product inventory, and transaction histories. The system ensures data integrity for orders, payments, and shipping.</li>
+<li>Security: Amazon uses sophisticated encryption and token-based authentication mechanisms to protect user data, especially during payment transactions.</li>
+</ul>
+<p><strong>Success Impact:</strong> Without a scalable and secure back-end infrastructure, Amazon wouldn’t be able to process millions of orders, handle thousands of sellers, and provide real-time updates on shipping or inventory. The back end’s capability to handle these elements is crucial to the platform’s ability to grow and meet customer demands worldwide.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading dp-has-icon"><i class="dp-icon fab fa-uber " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp;Uber</h3>
+<div class="dp-panel-content ">
+<p><strong>Back-End Contribution:</strong></p>
+<p>Uber’s ride-hailing service connects drivers with passengers, and its success hinges on a highly efficient and scalable back-end system.</p>
+<ul>
+<li>Performance: Uber’s back end manages real-time data to match passengers with available drivers based on their locations, traffic conditions, and estimated wait times. The back end ensures that this happens quickly, minimising waiting time for users.</li>
+<li>Scalability: The back-end system is designed to handle millions of users across different cities and countries. Uber’s infrastructure dynamically scales based on peak usage times (e.g., during holidays or major events). The platform uses a microservices architecture, allowing various back-end components to scale independently.</li>
+<li>Data Management: Uber’s back-end system manages various types of data, including user profiles, ride histories, and payment information. It also stores real-time data like GPS locations for drivers and passengers.</li>
+<li>Integration: The back-end seamlessly integrates with third-party services for payments (e.g., credit cards, digital wallets) and location services like Google Maps for navigation and route optimisation.</li>
+<li>Security: Uber’s back end secures user data and handles payment processing, using encryption and secure payment gateways to protect both drivers and passengers.</li>
+</ul>
+<p><strong>Success Impact: </strong>The reliability and speed of Uber’s back end is crucial for providing a seamless experience to users. The ability to scale efficiently allows Uber to serve millions of rides per day, while ensuring users feel safe and confident in their transactions.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://aws.amazon.com/compare/the-difference-between-frontend-and-backend/" target="_blank">What’s the Difference Between Frontend and Backend in Application Development?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.15 Backend Development" href="https://canvas.kings.edu.au/courses/12951/assignments/204822" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204822" data-api-returntype="Assignment">2.15 Backend Development</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.15%20Backend%20Development.pptx?d=wd8374290b4aa4202a8d026ce78cb1d8d&amp;csf=1&amp;web=1&amp;e=byMwRs">2.15 Backend Development.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-15-backend-development" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={d8374290-b4aa-4202-a8d0-26ce78cb1d8d}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-056.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-058.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

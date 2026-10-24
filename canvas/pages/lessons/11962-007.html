@@ -1,0 +1,415 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.1 Software Development Steps — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 1 (Term 1: Weeks 1-2) Programming Fundamentals</div>
+<h1 style="margin-top:.2rem">1.1 Software Development Steps</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-1-software-development-steps" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Explore fundamental software development steps used by programmers when designing software including:</p>
+<ul>
+<li class="card-text">requirements definition</li>
+<li class="card-text">determining specifications</li>
+<li class="card-text">design</li>
+<li class="card-text">development</li>
+<li class="card-text">integration</li>
+<li class="card-text">testing and debugging</li>
+<li class="card-text">installation</li>
+<li class="card-text">maintenance</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text" style="list-style-type: disc;">
+<li><span style="font-size: 10pt;">be able to explore the fundamental steps involved in software development and evaluate their impact on software design and quality.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">describe the different steps involved in software development and provide examples of their use in different contexts.</span></li>
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">explain how each step contributes to the overall software development process and the quality of the final product.</span></li>
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">evaluate the importance of software development methodologies and provide evidence to support their arguments.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Software development follows a structured process made up of clearly defined stages. Each stage must be completed before moving on to the next to ensure the project progresses smoothly. This is especially important because development teams consist of individuals with different roles and expertise. For instance, coding cannot begin until a detailed plan for the solution has been created. The people responsible for writing the code are often not the same as those who handle the planning and design.</p>
+<p>&nbsp;</p>
+<p><img src="../../assets/46db7a3141fd0f65.png" alt="SDLC Diagram.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197909" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs dp-panel-heading-p-2">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Requirements Definition</h3>
+<div class="dp-panel-content ">
+<p>The first step in the software development process is to <strong>clearly and accurately understand the requirements</strong> of the problem. Any mistakes or omissions at this stage can be extremely costly to fix later in the development process. System analysts, who specialise in gathering and defining requirements, play a key role here.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> </i> <strong>&nbsp;Key Terminology</strong></p>
+<ul class="card-text">
+<li><strong>Requirements</strong> - The specific features, characteristics, or behaviours that a system needs to meet its intended purpose. Each requirement must be clearly defined and testable to ensure it can be verified.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>During this stage, the <strong>requirements of the system are identified and agreed upon with the client</strong>. It is crucial to fully understand the users' needs, expectations, and objectives before beginning the design of the software.</p>
+<p>Requirements define the specific features, functions, and behaviours the system must have to fulfil its purpose. For a project to be successful, each requirement must be clear, accurate, and measurable, as these requirements will later serve as the basis for testing the final solution.</p>
+<p>&nbsp;</p>
+<p><img src="../../assets/67f1391959c35a77.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197992" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Software Specifications</h3>
+<div class="dp-panel-content ">
+<p>After identifying what the software needs to accomplish (the <strong>requirements</strong>), the next step is figuring out how to make it happen. This is where <strong>specifications</strong> come into play. They act as detailed, technical instructions for turning the requirements into a working solution. While requirements focus on <strong>what</strong> the software should do from a user or business perspective, specifications explain the <strong>how</strong> in technical detail.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> </i> <strong>&nbsp;Key Terminology</strong></p>
+<ul class="card-text">
+<li><strong>Functional specifications</strong> - The specific <strong>actions</strong> the software will perform. For instance, if the software needs to calculate the <strong>average</strong> of student scores, the functional specification would outline how the scores will be entered (<strong>input</strong>), how the calculation will be done (<strong>process</strong>), and how the result will be displayed (<strong>output</strong>).<br><br></li>
+<li><strong>Non-functional specifications -</strong> The overall <strong>qualities</strong> of the software, such as <strong>performance</strong>, <strong>security</strong>, and <strong>usability</strong>. These standards determine <strong>how well</strong> the software operates rather than what it does.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Specifications</strong> are crucial because they translate the broader goals of the requirements into actionable plans for developers. They provide the detailed framework needed to ensure the software is built correctly and fulfils its purpose.</p>
+<p><strong>Refining requirements into specifications</strong> involves breaking down each requirement and defining it in precise technical terms. For example, a general request like "I want fast software" might be refined to specify "The software should process data in under three seconds."</p>
+<p>Throughout the development process, <strong>specifications</strong> serve as a <strong>benchmark</strong> for evaluating the software. They guide developers and ensure that the final product meets the agreed-upon <strong>standards</strong> and <strong>expectations</strong>.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/ad530de358485fb9.png" alt="image.png" width="521" height="380" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197995" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Design</h3>
+<div class="dp-panel-content">
+<p><strong>Design</strong> involves planning the structure of the software, including its <strong>architecture</strong>, tools, programming languages, <strong>data models</strong>, and <strong>user interface</strong>.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> </i> <strong>&nbsp;Key Terminology</strong></p>
+<ul class="card-text">
+<li><strong>Algorithms</strong> - Step-by-step instructions to solve a problem or complete a task. To design an algorithm, <strong>break down</strong> the problem into smaller steps and <strong>test</strong> it with different inputs to ensure it works correctly.</li>
+<li><strong>Subroutines -</strong> Simplify complex tasks by dividing them into smaller, manageable parts. Learn how to pass data into and out of subroutines using <strong>parameters</strong> and <strong>variables</strong>. Use testing methods like <strong>drivers</strong> to check if subroutines perform as expected.</li>
+<li><strong>Modular programming -</strong> Creating reusable code components called <strong>modules</strong>. Use <strong>existing modules</strong> or build <strong>custom modules</strong> to make programs more efficient and organised.</li>
+</ul>
+</div>
+</div>
+<p><br><strong></strong></p>
+<p><strong>User interface design</strong> should match the needs of the intended audience. Consider factors like <strong>screen size</strong>, <strong>layout</strong>, and <strong>consistency</strong> to make the interface user-friendly and visually clear.</p>
+<p><strong>Help systems</strong> assist users in understanding the software. Include features like <strong>tutorials</strong>, <strong>wizards</strong>, and <strong>context-specific help</strong> to provide clear and relevant guidance.</p>
+<p>When choosing a <strong>programming language</strong> or <strong>technology</strong>, consider the project’s requirements, the hardware it will run on, and the skills of the developers. Evaluate <strong>performance</strong> through <strong>benchmarking</strong> to select the most suitable option.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Development</h3>
+<div class="dp-panel-content">
+<p>During the development phase, the actual coding of the software takes place. Developers write and compile code to create functions and features outlined in the design phase. After development, the process and loop back to the design phase. This allows for modifications in design based on challenges or insights gained during development.</p>
+<p>In this course we will be using <strong>Python</strong> as the main programming language to develop software.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<p>The process of development varies depending on the approach used:</p>
+<ul>
+<li><strong>Waterfall Approach:</strong> In this linear approach, development occurs after the design phase is fully completed. The entire system is coded as a single project, focusing on implementing all planned features in one continuous phase before moving to testing. This method is suitable when requirements are well-defined and unlikely to change.</li>
+<li><strong>Agile Approach:</strong> Development happens incrementally over multiple iterations, called sprints. Each sprint focuses on coding a small part of the product, progressively adding functionality until the software is complete.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>During development, it is crucial to ensure that the code performs its intended tasks, handles unexpected data appropriately, and protects against potential security vulnerabilities. Debugging is a key part of this process, with modern tools like integrated development environments (IDEs) providing automated features to detect and fix errors efficiently.</p>
+<p>A widely used practice in development is <strong>Test-Driven Development (TDD)</strong>, where tests are written first, defining the criteria the code must meet. The code is then written and refined until it passes all these tests, ensuring it meets the specifications. This contrasts with traditional methods where testing is performed after the code is written.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Integration</h3>
+<div class="dp-panel-content">
+<p>After writing code, it often needs to be integrated with other existing systems, such as older legacy systems, external databases, or APIs. Different parts of the software, like individual modules, may be developed by multiple people simultaneously. These modules must then be combined into one working system.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body"><strong>Version Control Systems (VCS)</strong> help manage this process by tracking changes to the code. They allow multiple programmers to work on the same project without overwriting each other’s work. VCS also provides a backup of the code, ensuring that previous versions can be accessed if needed.</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/091d9fc178402dbd.png" alt="image.png" width="531" height="337" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197991" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Testing and Debugging</h3>
+<div class="dp-panel-content">
+<p>Testing and debugging are crucial steps in the software development process to ensure the final product works as intended. Once coding is complete, testing focuses on checking the product for errors and ensuring it meets the original requirements.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> </i> <strong>&nbsp;Key Terminology</strong></p>
+<ul class="card-text">
+<li><strong>Alpha testing</strong> - Testing done by the software development team using real data before the product is released.</li>
+<li><strong>Beta testing </strong>- Giving the product to a small group of external users to test it in real-world conditions. These users report any issues or suggest improvements.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Testing is part of quality assurance, which ensures the product meets industry standards and performs well. This process also checks if the design and development stages were successful.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">Testing happens at different levels:
+<ul>
+<li>Unit testing checks small sections of code.</li>
+<li>Program testing checks the entire program.</li>
+<li>System testing checks how the program works as a whole.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Test data is created to simulate real usage, including large file sizes, response times, and various transactions. Automated tools often help manage and report on the testing process.</p>
+<p>The results of testing are used to identify and fix problems. Each requirement and specification is checked against the final product to confirm it is fully implemented. Any faults found are corrected, ensuring the software meets its goals.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Installation</h3>
+<div class="dp-panel-content">
+<p>Once a new software product is ready, it needs to be installed and put into use. This process often involves replacing an older system with the new one, and there are different methods to do this, depending on the situation.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<p>The main methods are:</p>
+<ul>
+<li><strong>Direct cut-over</strong>: The old system is immediately replaced with the new one.</li>
+<li><strong>Parallel</strong>: Both systems run at the same time until the new one proves reliable.</li>
+<li><strong>Phased</strong>: The new system is introduced in stages, one part at a time.</li>
+<li><strong>Pilot</strong>: The new system is tested by a small group first before being rolled out to everyone.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Each method has its benefits and is chosen based on the needs of the project.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Maintenance</h3>
+<div class="dp-panel-content">
+<p><strong>Maintenance</strong> is the process of improving and fixing software after it has been released to ensure it continues to meet user needs. Over time, this often involves correcting errors (bugs), enhancing performance, or adding new features to adapt to changing requirements.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> </i> <strong>&nbsp;Key Terminology</strong></p>
+<ul class="card-text">
+<li><strong>Software Maintenance</strong> - The ongoing process of fixing issues, improving performance, and updating software to ensure it remains functional and relevant to user needs.<strong></strong></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>To decide on changes, developers communicate with users to understand issues or requests. Small changes, like bug fixes, might be released as patches, while larger changes, like redesigning the interface, may require a full upgrade. The process of making these updates often restarts the software development cycle.</p>
+<p>Good documentation of the original software is essential for maintenance. It helps developers—often different from the original team—understand the code and make changes efficiently. Many companies even have separate teams specifically for software maintenance.</p>
+<p>Software evolves over time as new versions are released. These updates typically fix bugs and add new features based on user feedback. Companies must prioritize requests for changes, often using surveys or support data to decide which modifications will have the greatest impact.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Understanding Software Development Steps</strong></h4>
+<p>In order to better understand the steps explored above, let's consider a simple scenario.&nbsp;</p>
+<p>Let's imagine we are tasked with developing a <strong>library management system</strong> for a local library. The system should allow librarians to manage books, members, and borrowing transactions. We will walk through the fundamental software development steps in the context of this scenario.</p>
+<div class="dp-panels-wrapper dp-tabs-buttons-vertical">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Requirements Definition</h3>
+<div class="dp-panel-content ">
+<p>First, we need to gather and define the requirements of the system by interviewing stakeholders, such as librarians and library staff. Through this process, we determine that the system must be able to:</p>
+<ul>
+<li>Add, edit, and delete book records</li>
+<li>Add, edit, and delete member records</li>
+<li>Record book borrowing and returning transactions</li>
+<li>Generate reports on overdue books and member activities</li>
+<li>Handle book reservation requests</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Determining Specifications</h3>
+<div class="dp-panel-content ">
+<p>Based on the requirements, we create a detailed specification document that outlines two key areas:</p>
+<ul>
+<li>
+<p><strong>Functional specifications</strong>: These describe the system's specific features and capabilities, such as:</p>
+<ul>
+<li>Adding or editing book and member records</li>
+<li>Recording borrowing and returning of books</li>
+<li>Generating overdue reports</li>
+</ul>
+</li>
+<li>
+<p><strong>Non-functional specifications</strong>: These define the performance, security, and usability expectations, such as:</p>
+<ul>
+<li>The system must process transactions quickly, with no delays</li>
+<li>Data must be secured to prevent unauthorised access</li>
+<li>The system should be user-friendly and easy to navigate for staff</li>
+</ul>
+</li>
+</ul>
+<p>This combination ensures the system not only performs the required tasks but also meets quality and user expectations.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Design</h3>
+<div class="dp-panel-content">
+<p>We then design the system by creating a high-level architecture and detailed component plans. This includes:</p>
+<ul>
+<li><strong>User interface mockups</strong> that show how screens will look and how users will interact with the system</li>
+<li><strong>Class diagrams</strong> to outline the code structure and relationships between features</li>
+<li>Planning how the different components (e.g., user input, processing, and reporting) will connect to ensure smooth operation</li>
+</ul>
+<p>At this stage, we also decide on the technologies to use, such as programming languages (e.g., Python, Java) and frameworks.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Development</h3>
+<div class="dp-panel-content">
+<p>With the design ready, we move to the development phase. Developers:</p>
+<ul>
+<li>Build the user interface, including forms for managing books and members</li>
+<li>Write the backend logic to process borrowing and returning transactions</li>
+<li>Integrate components to ensure data flows correctly between the user interface and the backend</li>
+</ul>
+<p>This phase often involves collaboration, with developers working on different parts of the system simultaneously.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Integration</h3>
+<div class="dp-panel-content">
+<p>Once the individual components are developed, we integrate them into a single, fully functioning system. For example:</p>
+<ul>
+<li>Ensuring the user interface communicates with the backend correctly</li>
+<li>Verifying that data from borrowing and returning books is processed and stored accurately</li>
+</ul>
+<p>Integration ensures that all parts of the system work together as intended.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Testing and Debugging</h3>
+<div class="dp-panel-content">
+<p>The library management system is then rigorously tested to identify and resolve any issues. Testing includes:</p>
+<ul>
+<li><strong>Unit testing</strong> – verifying that individual features, like adding a member record, work correctly</li>
+<li><strong>End-to-end testing</strong> – ensuring that complete workflows, such as borrowing a book, function as expected</li>
+</ul>
+<p>Feedback from librarians and staff is gathered to confirm the system meets their needs. Any bugs or issues are fixed, and the system is re-tested.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Installation</h3>
+<div class="dp-panel-content">
+<p>Once testing is complete, the library management system is deployed on the library's computers or servers. To ensure a smooth transition, we may also:</p>
+<ul>
+<li>Install the system on user devices</li>
+<li>Provide training for librarians and staff to help them use the new system effectively</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Maintenance</h3>
+<div class="dp-panel-content">
+<p>After the system is installed and operational, maintenance begins. This involves:</p>
+<ul>
+<li>Fixing any new issues that arise (e.g., bugs or crashes)</li>
+<li>Updating the system to meet new requirements, such as adding features for improved usability</li>
+<li>Providing regular updates to ensure security and compatibility with new technologies</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" title="Link" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EcPhBtqz2xFPto9oxTzZ08ABywcQgpBpfXZW1-jlYUdkow?e=JGXl0m" target="_blank">1.1 Software Development Steps</a></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-1-software-development-steps" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={da06e1c3-dbb3-4f11-b68f-68c53cd9d3c0}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+<li>Earth Online. (n.d.). <em>You can master Git: Git commands with these diagrams</em>. Retrieved June 17, 2024, from <a href="https://programming.earthonline.us/you-can-master-git-git-commands-with-these-diagrams-40a0b2f5cc42" target="_new"><span>https</span><span>://programming.earthonline.us</span><span>/you</span><span>-can</span><span>-master</span><span>-git</span><span>-git</span><span>-commands</span><span>-with</span><span>-these</span><span>-diagrams</span><span>-40a0b2f5cc42</span></a></li>
+<li>UppLabs. (n.d.). <em>The importance of functional and non-functional requirements in software development</em>. Retrieved June 17, 2024, from <a href="https://upplabs.com/blog/the-importance-of-functional-and-non-functional-requirements-in-software-development/" target="_new"><span>https</span><span>://upplabs.com</span><span>/blog</span><span>/the</span><span>-importance</span><span>-of</span><span>-functional</span><span>-and</span><span>-non</span><span>-functional</span><span>-requirements</span><span>-in</span><span>-software</span><span>-development/</span></a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.1 Software development steps" href="https://canvas.kings.edu.au/courses/11962/assignments/179125" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179125" data-api-returntype="Assignment">1.1 Software development steps</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="11962-006.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-008.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

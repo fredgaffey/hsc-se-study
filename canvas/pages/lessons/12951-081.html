@@ -1,0 +1,1363 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Drawing Questions (DFD, Storyboard, User Interface, Flowchart, Class Diagram, Decision Tree, Structure Chart, ERD) — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Exam Revision</div>
+<h1 style="margin-top:.2rem">Drawing Questions (DFD, Storyboard, User Interface, Flowchart, Class Diagram, Decision Tree, Structure Chart, ERD)</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/drawing-questions-dfd-storyboard-user-interface-flowchart-class-diagram-decision-tree-structure-chart-erd" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+<h2 class="dp-heading"><span class="dp-header-title"><span>Mastering the HSC Exam</span> (Drawing Questions)</span></h2>
+</header>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Learn how to use the drawing tool in the online HSC exam.</span></li>
+<li><span style="font-size: 10pt;">Learn how to draw system modelling tools using the HSC online drawing tools.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Apply their knowledge to answer questions that require using the HSC online exam drawing tool.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<h4>Overview: What's on this page?</h4>
+<ol>
+<li><strong>General procedure</strong> for answering drawing questions in the HSC.</li>
+<li><strong>Specific guidance</strong> on how to answer the different types of drawing questions.</li>
+<li><strong>Example HSC questions</strong> with <span style="background-color: #fbeeb8;">sample answers, questions walkthroughs, and marking guidelines.</span> Below is a question grid.</li>
+</ol>
+<table style="border-collapse: collapse; width: 100%; height: 332.088px;" border="1" data-active-table="true">
+<tbody>
+<tr style="height: 52.8977px;">
+<td class="align-middle text-center" style="width: 26.3828%; height: 52.8977px;"><strong>Question</strong></td>
+<td class="align-middle text-center" style="width: 7.00509%; height: 52.8977px;"><strong>Marks</strong></td>
+<td class="align-middle text-center" style="width: 17.6492%; height: 52.8977px;"><strong>Target Band</strong></td>
+<td class="align-middle text-center" style="width: 13.1004%; height: 52.8977px;"><strong>Sample Answer</strong></td>
+<td class="align-middle text-center" style="width: 18.6499%; height: 52.8977px;"><strong>Question Walkthrough</strong></td>
+<td class="align-middle text-center" style="width: 17.1943%; height: 52.8977px;"><strong>Marking Guidelines/Criteria</strong></td>
+</tr>
+<tr style="height: 28.8991px;">
+<td class="align-middle text-center" style="width: 26.3828%; height: 28.8991px;">Dataflow Diagram (DFD)</td>
+<td class="align-middle text-center" style="width: 7.00509%; height: 28.8991px;">4</td>
+<td class="align-middle text-center" style="width: 17.6492%; height: 28.8991px;">4-6</td>
+<td class="align-middle text-center" style="width: 13.1004%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 18.6499%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 17.1943%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+</tr>
+<tr style="height: 28.8991px;">
+<td class="align-middle text-center" style="width: 26.3828%; height: 28.8991px;">Storyboard</td>
+<td class="align-middle text-center" style="width: 7.00509%; height: 28.8991px;">3</td>
+<td class="align-middle text-center" style="width: 17.6492%; height: 28.8991px;">3-4</td>
+<td class="align-middle text-center" style="width: 13.1004%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 18.6499%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 17.1943%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+</tr>
+<tr style="height: 28.8991px;">
+<td class="align-middle text-center" style="width: 26.3828%; height: 28.8991px;">User Interface</td>
+<td class="align-middle text-center" style="width: 7.00509%; height: 28.8991px;">3</td>
+<td class="align-middle text-center" style="width: 17.6492%; height: 28.8991px;">3-4</td>
+<td class="align-middle text-center" style="width: 13.1004%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 18.6499%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 17.1943%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+</tr>
+<tr style="height: 28.8991px;">
+<td class="align-middle text-center" style="width: 26.3828%; height: 28.8991px;">Flowchart</td>
+<td class="align-middle text-center" style="width: 7.00509%; height: 28.8991px;">3</td>
+<td class="align-middle text-center" style="width: 17.6492%; height: 28.8991px;">3-5</td>
+<td class="align-middle text-center" style="width: 13.1004%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 18.6499%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 17.1943%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+</tr>
+<tr style="height: 28.8991px;">
+<td class="align-middle text-center" style="width: 26.3828%; height: 28.8991px;">Class Diagram</td>
+<td class="align-middle text-center" style="width: 7.00509%; height: 28.8991px;">4</td>
+<td class="align-middle text-center" style="width: 17.6492%; height: 28.8991px;">5-6</td>
+<td class="align-middle text-center" style="width: 13.1004%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 18.6499%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 17.1943%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+</tr>
+<tr style="height: 28.8991px;">
+<td class="align-middle text-center" style="width: 26.3828%; height: 28.8991px;">Decision Tree</td>
+<td class="align-middle text-center" style="width: 7.00509%; height: 28.8991px;">3</td>
+<td class="align-middle text-center" style="width: 17.6492%; height: 28.8991px;">4-5</td>
+<td class="align-middle text-center" style="width: 13.1004%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 18.6499%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 17.1943%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+</tr>
+<tr style="height: 28.8991px;">
+<td style="width: 26.3828%; text-align: center; height: 28.8991px;">Structure Chart</td>
+<td style="width: 7.00509%; text-align: center; height: 28.8991px;">4</td>
+<td style="width: 17.6492%; text-align: center; height: 28.8991px;">5-6</td>
+<td class="align-middle text-center" style="width: 13.1004%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 18.6499%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 17.1943%; height: 28.8991px;"><span style="background-color: #bfedd2;">Yes</span></td>
+</tr>
+<tr style="height: 76.8963px;">
+<td class="align-middle text-center" style="width: 26.3828%; height: 76.8963px;">Entity Relationship Diagram (ERD) - <span style="color: #ba372a;">technically not in your syllabus, but give it a go for fun if you want.</span></td>
+<td class="align-middle text-center" style="width: 7.00509%; height: 76.8963px;">4</td>
+<td class="align-middle text-center" style="width: 17.6492%; height: 76.8963px;">4-5</td>
+<td class="align-middle text-center" style="width: 13.1004%; height: 76.8963px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 18.6499%; height: 76.8963px;"><span style="background-color: #bfedd2;">Yes</span></td>
+<td class="align-middle text-center" style="width: 17.1943%; height: 76.8963px;"><span style="background-color: #bfedd2;">Yes</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h4>How to Answer Drawing Questions</h4>
+<p><strong>General Procedure:</strong></p>
+<ol id="" class="">
+<li class=""><strong><span style="color: #236fa1;">Read</span></strong> the question <span style="color: #236fa1;"><strong>carefully </strong><span style="color: #000000;">to determine what you need to draw.</span></span></li>
+<li class=""><span style="color: #236fa1;"><strong>Analyse</strong></span> any provided stimulus.</li>
+<li class=""><span style="color: #236fa1;"><strong>Create </strong></span>your response using the online HSC exam drawing.</li>
+<li class=""><span style="color: #236fa1;"><strong>Re-read the question </strong></span>and examine your work to ensure your answer is correct.</li>
+</ol>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>How do I use the online HSC exam drawing tool?</strong></p>
+<p class="card-text">NESA has produced two videos explaining how the drawing tools works. They can be found in the assessment section of your syllabus or linked below.</p>
+<ul id="" class="">
+<li class="">Using the online HSC exam <a class="" href="https://players.brightcove.net/2750693524001/default_default/index.html?videoId=6361114003112">Drawing Tool.</a></li>
+<li class="">Using the online HSC exam <a class="" href="https://players.brightcove.net/2750693524001/default_default/index.html?videoId=6358388775112">Screen Design Tool.</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Examples</h4>
+<p>Drawing questions normally<strong> test your skills</strong> rather than content recall. This is why information on them is typically found in your course specifications with the exception of user interfaces which is under your "designing web applications" syllabus dot point. In the HSC exam, you could be asked to draw a selection of the following:</p>
+<ul>
+<li>dataflow diagram (DFD)</li>
+<li>storyboard</li>
+<li>user Interface (screen design)</li>
+<li>flowchart</li>
+<li>class diagrams</li>
+<li>decision trees</li>
+<li>data dictionary (more common as a fill-in-the-blanks question so a drawn example is not here, but make sure you know what it looks like just in case.)</li>
+</ul>
+<div class="dp-panels-wrapper dp-panel-heading-text-center dp-tabs-buttons">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Dataflow Diagram</h3>
+<div class="dp-panel-content">
+<p class=""><span style="font-size: 14pt;"><strong>Drawing Questions — Dataflow Diagram (DFD)</strong></span></p>
+<p class="">Dataflow diagram can be <strong>assessed in many formats </strong>(including, but not limited to multi-choice, fill in the blank, written short answer), but the <strong>most common format is for you to draw one</strong> using the NESA HSC Drawing tool.</p>
+<p class="">The two different types of dataflow diagram you will need to be able to draw are</p>
+<ul>
+<li><strong>Level 0 DFD</strong> (Only <span style="text-decoration: underline;">one single process representing the entire</span> system in the centre and the external entities around it.)</li>
+<li><strong>Level 1 DFD</strong> (The <span style="text-decoration: underline;">more common</span> one where you include the varied processes and data stores that allow the system to work.)</li>
+</ul>
+<p><img src="../../assets/ed68e0d925ccf606.png" alt="Difference Between Level 1 and Level 0-1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542328" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Steps for Answering DFD Questions:</strong></p>
+<ol>
+<li><span style="color: #236fa1;"><strong>Read</strong></span> the question carefully to see what you have to do.</li>
+<li><span style="color: #236fa1;"><strong>Read and highlight the stimulus.</strong> </span>DFD almost always have a stimulus. When you read the stimulus, you need to use the highlighter tool to highlight the <strong>processes, external entities, and data flows, and data stores.</strong></li>
+<li>Use the drawing tool to create your response:
+<ol>
+<li><strong><span style="color: #236fa1;">Draw the core</span></strong> of your diagram. This involves putting down the <strong>most important processes and external entities.</strong></li>
+<li><span style="color: #236fa1;"><strong>Expand</strong></span> on the existing diagram by <strong>adding the additional processes.</strong></li>
+</ol>
+</li>
+<li><span style="color: #236fa1;"><strong>Reread</strong></span> the question/stimulus and make sure you <strong>haven't missed anything</strong> in your diagram.</li>
+</ol>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<p class="card-title"><span style="color: #34495e;"><strong>ACTIVITY: Practice HSC Style Question</strong></span></p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-pen-fancy " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Answer the Question:</strong></span> Using the question procedure above, <strong>expand</strong> <strong>DFD Example Question 1</strong> below and complete it either on a piece of paper or using the online HSC Drawing Tool. You can access it by navigating to question 9 the <a class="" href="https://fam.hsconline.nesa.nsw.edu.au/">HSC Software Engineering Familiarisation Exam,</a>&nbsp;which has a drawing space you can repurpose for this question.</p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-graduation-cap " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learn from the Question: </strong></span></p>
+<ol>
+<li class="card-text"><strong>Compare</strong> your answer with the <strong>sample answer</strong> in the<strong> second expander below.</strong></li>
+<li class="card-text"><strong>Read</strong> the <strong>question walkthrough</strong> to see how to improve and for tips on how to maximise your marks in this type of HSC question.</li>
+<li class="card-text">Formally <strong>mark your response</strong> from the eyes of a marker <strong>using the provided marking criteria.</strong></li>
+</ol>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-expander-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Dataflow Diagram — Example Question (without annotations)</h3>
+<div class="dp-panel-content ">
+<p><img src="../../assets/3f058dacd5d7b82a.png" alt="Frame 64-1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542331" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Dataflow Diagram — Example Question (sample answer, question walkthrough, how to mark your work)</h3>
+<div class="dp-panel-content ">
+<p><span style="font-size: 14pt;"><strong>Sample Answer</strong></span></p>
+<p><img src="../../assets/7ce1e453d3e14257.png" alt="Frame 67-3.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542334" data-api-returntype="File" loading="lazy"></p>
+<hr class="dp-hr-solid-light">
+<p><span style="font-size: 14pt;"><strong>&nbsp;Question Breakdown &amp; Tips and Tricks</strong></span></p>
+<p><span style="font-size: 12pt;"><strong>Question: <span style="color: #236fa1;">Draw</span></strong> a <strong><span style="color: #169179;">data flow diagram</span></strong> representing this new <strong><span style="color: #236fa1;">online booking system.</span></strong> (4 marks)</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 1. Read the question carefully</strong></span></h3>
+<p class="card-title">When reading the question, it's important to ask these two questions:</p>
+<ol id="" class="">
+<li class=""><strong>What is the topic/content area?</strong><span> This question is testing our skill of <span style="color: #169179;"><strong>drawing data-flow diagrams</strong></span> to represent a system. This means we need to immediately recall the symbols used which are Circles for processes, Rectangles for external entities, Open Rectangles for data stores and Arrows for data flows. A handy acronym for this is<strong> ORCA</strong> (<strong>O</strong>pen Rectangles, <strong>R</strong>ectangles, <strong>C</strong>ircles, <strong>A</strong>rrows). More information is available on page 5 and 6 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></span><span>&nbsp;If you've forgotten how to draw dataflow diagram, this annotated answer should remind you, however a full tutorial can be found at <a class="dp-course-link" title="4.11 Modelling Tools" href="12951-037.html" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/4-dot-11-modelling-tools" data-api-returntype="Page">4.11 Modelling Tools.</a></span></li>
+<li class=""><strong>What are we required to do?</strong><span> We need to <span style="color: #236fa1;"><strong>draw</strong></span> a dataflow diagram that represents the online booking system. This means we need to <span style="color: #236fa1;"><span style="color: #000000;">analyse the scenario of the</span><strong> online booking system</strong></span> identifying all the different parts and how they fit together in a dataflow diagram.&nbsp;</span></li>
+</ol>
+</div>
+</div>
+<p><strong>Stimulus:</strong></p>
+<p><span>A theme park wants to create a new <strong>online booking service</strong> for their <span style="background-color: #fbeeb8;">customers.</span></span></p>
+<p><span><span style="background-color: #fbeeb8;">Customers</span> needs to be able to <span style="background-color: #f8cac6;">see park availabilities</span> for a given day and be able to select a <span style="background-color: #c2e0f4;">day</span> they want to attend the park. They also need to be able to <span style="background-color: #f8cac6;">purchase tickets</span> for their <span style="background-color: #c2e0f4;">chosen date</span> by providing their <span style="background-color: #c2e0f4;">payment details.</span></span></p>
+<p><span>Customers can also <span style="background-color: #f8cac6;">create an account</span> which gives them <span style="background-color: #f8cac6;">10% off their first purchase</span>.</span></p>
+<p><span>All the <span style="background-color: #c2e0f4;">customer details</span>, <span style="background-color: #c2e0f4;">park availabilities</span>, and <span style="background-color: #c2e0f4;">transactions</span> are stored in a database.</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dark">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 2. Analyse the stimulus</strong></span></h3>
+<p class="card-text">When analysing the stimulus for a dataflow diagram question, we need to <strong>identify all the components</strong> and start <strong>thinking about how they fit together.</strong> The HSC Online exam platform has <strong>three different highlighter colours</strong> which we will use to annotate the scenario. For this example, I will highlight <span style="background-color: #fbeeb8;"><strong>external entities</strong> in yellow</span>, <span style="background-color: #f8cac6;"><strong>processes</strong> in red</span>, and <span style="background-color: #c2e0f4;"><strong>data flows </strong>in blue</span>. We will just keep the data stores in our head.</p>
+<p class="card-text">Also, not everything you need to include will be spelled out explicitly in the scenario. Sometimes it will just mention a feature and expect you to come up with a process and data flows to make it happen. In this question, that is the <em>calculate cost</em> process and the <em>membership</em> data flow. The <em>bank</em> as an external entity is also not mentioned explicit, but is required for transactions. Adding these extra pieces will help turn your response into a <strong><span style="color: #169179;">band six response.</span></strong></p>
+<p class="card-text"><strong>External Entities</strong></p>
+<ul id="" class="">
+<li class="">Customers — Since they are providing information to the system and receiving something in exchange.</li>
+<li class=""><span style="color: #169179;">Bank (Since there are transactions happening, the customers bank will be consulted. This is a band 6 thing to include.)&nbsp;</span><br>
+<div class="dp-card card">
+<div class="card-body">
+<h5 class="card-title dp-ignore-theme"><strong><span style="font-size: 12pt;">Note</span></strong></h5>
+<p class="card-text"><span style="color: var(--bs-card-color); background-color: var(--bs-card-bg); font-family: inherit; font-size: 1rem;">In this scenario, the water park isn't really an external entity since they are not actively providing anything to the system.&nbsp;</span></p>
+</div>
+</div>
+</li>
+</ul>
+<p><strong>Processes</strong></p>
+<ul id="" class="">
+<li class="">See park availabilities</li>
+<li class="">purchases tickets</li>
+<li class="">create an account</li>
+<li class="">login (since we can create an account)</li>
+<li class=""><span style="color: #169179;">Calculate price (I've added this since there was mention of a discount)</span></li>
+</ul>
+<p><strong>Data flows&nbsp;</strong></p>
+<ul id="" class="">
+<li class="">chosen date</li>
+<li class="">day</li>
+<li class="">payment details</li>
+<li class="">customer details</li>
+<li class=""><span style="color: #169179;">membership details (not explicitly in the question but required for discount/price calculation)</span></li>
+<li class="">park availabilities</li>
+<li class="">transactions</li>
+</ul>
+<p><strong>Data Stores</strong></p>
+<ul id="" class="">
+<li class="">Customer Info</li>
+<li class="">Park availabilities</li>
+</ul>
+<div class="dp-card card">
+<div class="card-body">
+<h5 class="card-title dp-ignore-theme"><strong><span style="font-size: 12pt;">Note</span></strong></h5>
+<p class="card-text">You could combine everything into one database so long as it's somewhat related content, but sometimes it can make the data flows diagram neater it you split the data stores up a little.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong><span style="font-size: 12pt;">Step 3.1. Draw the core of the diagram</span></strong></p>
+<p class="card-text">It's often best to start with the most important processes. For this, we will first draw the <span style="text-decoration: underline;"><em>Customer</em></span> external entity, the <span style="text-decoration: underline;"><em>create account</em></span> process, and the <span style="text-decoration: underline;"><em>customer info data store</em></span> since these are all associated with that functionality. Now, we just need to draw arrows between each of them to create a flow of data which makes sense. If you're ever confused, think back to similar experience, e.g., when you last created an account. You probably had to provide your first name, last name, email, phone number, etc, which we will just abbreviate to <em>customer information. </em>This will then be sent into the database. We can then pass back confirmation to the customer. We will also do a similar thing for the <span style="text-decoration: underline;"><em>login</em></span> process.</p>
+<div class="dp-card card">
+<div class="card-body">
+<h5 class="card-title dp-ignore-theme"><strong><span style="font-size: 12pt;">Processes should always have an input and output</span></strong></h5>
+<p class="card-text">Each process should <strong>always have an input and an output</strong>. We don't want processes that are blackholes gobbling up information or likewise ones that just generate information from nowhere. Even if you can't think of a logical output, normally "confirmation" is a good return dataflow, or "request data" as an initiative data flow.</p>
+</div>
+</div>
+<p class="card-text">Many data flow diagram questions involve some sort of login/sign up process and the way you draw it is almost identical from question to question. Getting this step done usually guarantees about 1 marks, so even if you don't understand the rest of the question, doing this simple core of the diagram will get you started.</p>
+<p class="card-text"><img src="../../assets/225305caa17eb3f7.png" alt="Screenshot 2025-04-17 at 10.26.10 AM.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542595" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 3.2. Add the other processes</strong></p>
+<p class="card-text">The next most important process is the <span style="text-decoration: underline;"><em>get park availabilities</em></span> process which needs to interface with the <em><span style="text-decoration: underline;">park availabilities</span></em> data store. After the user decides on a date, they can send it to the book tickets process along with their payment details and member details. Since the cost of the order changes based on their membership status, we will need another process which calculates the price and communicates with the bank regarding the transaction.&nbsp;</p>
+<p class="card-text">You'll also notice that we've included multiple data items on some of the arrows. This is because we can't have more than one arrow going in each direction so we bundle stuff on one arrow/data flow. If you want to condense the amount of writing by abbreviating <em>booking date, payment details, num tickets and member details</em> to <em>order/personal information</em>, you might be able to get away with that, but you need to ensure you don't loose precision by doing so. You want to show the marker a nuanced understanding of the question, so it's often best to show a little extra detail that you think is necessary. An example of loosing precision would be abbreviating the previous to something like <em>booking details&nbsp;</em>since this neglects the <em>membership details</em>.</p>
+<p class="card-text"><img src="../../assets/ce2e3332b345263d.png" alt="Screenshot 2025-04-17 at 10.31.04 AM.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542315" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 4. Examine your work and make sure it's correct</strong></p>
+<p class="card-text">Looking back to our highlights of the stimulus, it looks likes we've addressed all the required external entities, we've got all the main processes and the data flows between everything make sense and are adequate. This dataflow diagram is more than you would need to do for full marks, but it's what you should be aiming for.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong>Marking Criteria (through the eyes of a marker)</strong></span></p>
+<p><img class="mx-auto d-block" src="../../assets/38efcb99c6823028.png" alt="Frame 90-1.png" width="500" height="246" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542521" data-api-returntype="File" loading="lazy"></p>
+<p><strong>How to get full marks?</strong></p>
+<ol id="" class="">
+<li class="">The first key phrase is <strong><em>"substantially correct"</em></strong>. This means, to get full marks, your diagram doesn't have to be perfect. If you missed one or two small things, you can still get 4/4, so don't stress, just focus on doing your best job. If you didn't include the bank as an external entity or you combined the calculate cost process with the booking, you might still be get full marks too, however you don't want to take any chances, so it's best to include a bit of extra detail to ensure a 4/4 like the exemplar does.</li>
+<li class="">The other key phrase is <strong>"related to the scenario". </strong>This means you can't just create a generic diagram that would work for many questions. Your answer must be<strong> tailor made for the question. </strong>The simplest way you can do this is <strong>use words from the question.</strong> Make sure you include the exact phrasing of the external entities and processes you highlighted. Not all the things you need to include will be in the question though, so you need to come up with more of your own. E.g since the mentioned membership can give a 10% discount, I've included an extra process to the booking features called <span style="text-decoration: underline;"><em>calculate cost</em></span> which takes in and validates membership details.</li>
+</ol>
+<p><strong>I'm completely stuck and not getting anywhere. How do I salvage as many marks as a I can?</strong></p>
+<ul id="" class="">
+<li class=""><strong>Don't leave the question blank.</strong> If you're totally stuck, there are always some basic things you can do to guarantee at least one or two marks. After this, <strong>flag the question</strong> so you can come back to it after you finish the rest of the exam, hopefully with fresh ideas to claim a few more marks.</li>
+<li class="">You'll notice there is one mark for <em><strong>"identifying some features of a dataflow diagram".</strong> </em>This means that if you're stuck, you only need to provide two things related to a dataflow diagram to get at least one mark. This could be as easy as drawing the customer external entity which is super easy to identify and then create account process or the get park availability process.</li>
+<li class="">Now to try and get two marks, you would start drawing some arrows from customers to a process and put some relevant label on it and then return something valid or even just a confirmation. From there you may feel more confident to add some other processes you've highlighted in the question and possibly a datastore. At this point you would definitely have two mark or maybe even three. <strong>This is why putting something down for the answer even if you don't think it's correct if valuable since you could easily get at least 2-3 marks just by working through what you've highlighted in the stimulus, which is better than 0/4.</strong></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Storyboard</h3>
+<div class="dp-panel-content">
+<p class=""><span style="font-size: 14pt;"><strong>Drawing Questions — Storyboard</strong></span></p>
+<p class="">Storyboard question typically require you to <strong>read a stimulus</strong> and come up with a <strong>series of frames/screen needed for an app. </strong>Each screen needs to have a <strong>low-fidelity mockup of the UI elements on it's screen</strong> and most importantly, you need to show the <span style="background-color: #fbeeb8;"><strong>links between the different screens.</strong></span> E.g if clicking a button takes you to another page, you need an array from that button to the page it links to. An example from your course specifications is below:</p>
+<p class=""><img class="mx-auto d-block" src="../../assets/2186214eaf94e91c.png" alt="Screenshot 2025-06-07 at 10.06.12 am.png" width="600" height="305" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542526" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Steps for Answering Storyboard Questions:</strong></p>
+<ol>
+<li><span style="color: #236fa1;"><strong>Read</strong></span> the question carefully to see what you have to do.</li>
+<li><span style="color: #236fa1;"><strong>Read and highlight the stimulus.</strong> <span style="color: #000000;">Storyboard questions </span></span>almost always have a stimulus. When you read the stimulus, you need to use the highlighter tool to highlight the <strong>different screens you need, what's on the pages, and the links between the pages.&nbsp;</strong>(note you often need to add extra detail from your own knowledge of UI/UX.)</li>
+<li>Use the drawing tool to create your response:
+<ol>
+<li><strong><span style="color: #236fa1;">Draw the screens.</span></strong></li>
+<li><span style="color: #236fa1;"><strong>Add the links </strong><span style="color: #000000;">between them.</span></span></li>
+</ol>
+</li>
+<li><span style="color: #236fa1;"><strong>Reread</strong></span> the question/stimulus and make sure you <strong>haven't missed anything.</strong></li>
+</ol>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<p class="card-title"><span style="color: #34495e;"><strong>ACTIVITY: Practice HSC Style Question</strong></span></p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-pen-fancy " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Answer the Question:</strong></span> Using the question procedure above, <span style="background-color: #fbeeb8;"><strong>expand</strong></span> <strong>Storyboard Example Question</strong> below and complete it either on a piece of paper or using the online HSC Drawing Tool. You can access it by navigating to question 9 the <a class="" href="https://fam.hsconline.nesa.nsw.edu.au/">HSC Software Engineering Familiarisation Exam,</a>&nbsp;which has a drawing space you can repurpose for this question.</p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-graduation-cap " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learn from the Question: </strong></span></p>
+<ol>
+<li class="card-text"><strong>Compare</strong> your answer with the <strong>sample answer</strong> in the<strong> second expander below.</strong></li>
+<li class="card-text"><strong>Read</strong> the <strong>question walkthrough</strong> to see how to improve and for tips on how to maximise your marks in this type of HSC question.</li>
+<li class="card-text">Formally <strong>mark your response</strong> from the eyes of a marker <strong>using the provided marking criteria.</strong></li>
+</ol>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-expander-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Storyboard — Example Question (without annotations)</h3>
+<div class="dp-panel-content">
+<p><img src="../../assets/409a0c97b5a1a5c7.png" alt="storyboard (unanswered)-4.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542529" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Storyboard — Example Question (sample answer, question walkthrough, how to mark your work)</h3>
+<div class="dp-panel-content ">
+<p><span style="font-size: 14pt;"><strong>Sample Answer</strong></span></p>
+<p><img src="../../assets/0da4fdd68457f0a0.png" alt="Screenshot 2025-05-26 at 8.48.11 am.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542535" data-api-returntype="File" loading="lazy"></p>
+<p><span style="font-size: 14pt;"><strong>Question Breakdown &amp; Tips and Tricks</strong></span></p>
+<p><span style="font-size: 12pt;"><strong>Question: <span style="color: #236fa1;">Design</span></strong> a <span style="color: #169179;"><strong>storyboard</strong></span> for the <span style="color: #236fa1;"><strong>laptop version</strong></span> of the learning management <span style="color: #236fa1;"><strong>system dashboard and sub pages.</strong></span></span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 1. Read the question carefully</strong></span></h3>
+<p class="card-title">When reading the question, it's important to ask these two questions:</p>
+<ol id="" class="">
+<li class=""><strong>What is the topic/content area?</strong><span> This question is testing our ability to create a <span style="color: #169179;"><strong>storyboard.</strong></span> This can be found on page 9 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a> Recall that a storyboard doesn't need to show too much detail on each individual screen. It's primary purpose is to show the general layout of the screens and how they all link together.</span></li>
+<li class=""><span style="color: #000000;"><strong>What are we required to do?</strong> We need to <span style="color: #e67e23;"><span style="color: #236fa1;"><span style="color: #000000;"><span style="color: #236fa1;"><strong>design</strong></span> a storyboard for the <span style="color: #236fa1;"><strong>laptop version</strong></span> of this LMS showing the <strong><span style="color: #236fa1;">dashboard and sub pages</span></strong> it links to. <span style="text-decoration: underline;">When we read the stimulus</span>, we are now going to be looking closely for what the <span style="text-decoration: underline;">sub pages are and how they link to the dashboard.</span> We also need to create screens that have roughly the <span style="text-decoration: underline;">aspect ratio</span> of a <span style="color: #236fa1;"><strong>laptop screen.</strong></span></span></span></span></span></li>
+</ol>
+</div>
+</div>
+<p><strong>Stimulus:</strong></p>
+<p><span>A school wants to implement a new learning management system (LMS). One of the exciting new features will be a <span style="background-color: #fbeeb8;">dashboard</span> for students to manage their <span style="background-color: #fbeeb8;">homework, assignments, and calendar</span> all in one place.</span></p>
+<p><span>This <span style="background-color: #f8cac6;">dashboard will allow students to view the progress of their homework, assignments, and upcoming events</span> with the <span style="background-color: #eccafa;"><span style="background-color: #c2e0f4;">option to click on one of them to navigate to a new page</span></span> <span style="background-color: #eccafa;"><span style="background-color: #f8cac6;">focussing on one of the three in more detail.</span></span> Student will be able to view their progress as charts and see individual items as well.</span></p>
+<p><span>The app will also use a <span style="background-color: #c2e0f4;">sidebar to navigate between the different pages.</span></span></p>
+<p><span>The app will also have a floating help button which will give students easy access to online help.</span></p>
+<p><span>The school would like the app to work on a laptop device for pilot testing with with a mobile compatible version to come later.</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dark">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 2. Analyse the stimulus</strong></span></h3>
+<p class="card-text">After reading the question, we know we are looking out for what screens the app has and how they link together. While reading the stimulus, i've highlighted all the screens in yellow, and the links between them in blue. I've also highlighted what goes in each screen in red.&nbsp;</p>
+<ul>
+<li class="card-text"><strong>What are the screens?</strong>&nbsp;<span style="background-color: #fbeeb8;">Dashboard</span> (mentioned in question). Subpages are <span style="background-color: #fbeeb8;">homework, assignments and calendar.</span></li>
+<li class="card-text"><strong>What's on the pages?</strong> Dashboard will have a <span style="background-color: #f8cac6;">summary of the homework, assignments and calendar.</span> Each of those corresponding page has <span style="background-color: #f8cac6;">more detailed information</span> of each item. Note how we don't need to include every small little detail like the graphs and help button since the screens in a storyboard only need to show the general layout, not every small detail.</li>
+<li class="card-text"><strong>What are the links?</strong> <span style="background-color: #c2e0f4;">Clicking on each of the summaries on the dashboard takes the user to the corresponding page.</span> There is also a <span style="background-color: #c2e0f4;">sidebar </span>which links all the pages to each other.</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong><span style="font-size: 12pt;">Step 3.1. Draw the screens</span></strong></p>
+<ol>
+<li class="card-text">Start by drawing each of your screens. In this case we will use the<strong> rectangle tool </strong>to create a screen roughly the same aspect ratio as your laptop screen.</li>
+<li class="card-text">Next we can use the rectangle and circle tools to draw the <strong>sidebar and top menubar.</strong></li>
+<li class="card-text">Since we need four screens for this storyboard, we will <strong>copy this template three times.</strong></li>
+<li class="card-text">We can then add text to <strong>name each screen</strong> and start to add some more boxes and lines to show the layout of the content and buttons on the screen. You should include a little bit of text on the screens where applicable for context like labelling each of the sections on the dashboard. Note that you can <strong>change the font size</strong> to add some hierarchy if needed.</li>
+</ol>
+<p class="card-text">&nbsp;</p>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 3.2. Add the links</strong></p>
+<ul>
+<li class="card-text">It can get quite messy as you start adding the arrows, this is mostly unavoidable, however by arranging each of your screen you can reduce the clutter. Often times a<strong> 'T' shape will work well for four screens</strong> which is what the sample answer has used.&nbsp;</li>
+<li class="card-text">Draw the arrows using the <strong>arrow tool.</strong> You can press 'A' on your keyboard as a shortcut to access this tool.</li>
+<li class="card-text">Click where you want the arrow to start and then drag it to where you want it to end and release. You can<strong> click on the little anchor point on the arrow</strong> to introduce a bend. If you want even more control over the shape of the arrow, make sure you have it selected and scroll down to the <em><strong>Actions</strong> </em>section in the sidebar. Then click the edit arrow tool. Watch the NESA <a class="" href="https://players.brightcove.net/2750693524001/default_default/index.html?videoId=6361114003112">drawing tool video</a> for more information on this.</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 4. Examine your work and make sure it's correct</strong></p>
+<p class="card-text">Looking back to our highlights of the stimulus, it's easy to see we've <strong>included all the required screens </strong>and we've also i<strong>ncluded all the links</strong> required.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong>Marking Criteria (through the eyes of a marker)</strong></span></p>
+<p><img class="mx-auto d-block" src="../../assets/c5d408a464e61c81.png" alt="Frame 90.png" width="500" height="217" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542543" data-api-returntype="File" loading="lazy"></p>
+<p><strong>How to get full marks?</strong></p>
+<ul>
+<li>To get full marks you need to include all four screens (dashboard, homework, assignments, and calendar). You also need to include the links from the dashboard summary sections to each of the individual screens and also the links between the pages from the menubar. To ensure you don't miss any of these its important to <strong>read and highlight the stimulus</strong> so you can easily <strong>glance back at the requirements as you work on the storyboard.</strong></li>
+<li><strong>Know how to create storyboards. </strong>Review page 9 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></li>
+</ul>
+<p><strong>I'm completely stuck and not getting anywhere. How do I salvage as many marks as a I can?</strong></p>
+<ul id="" class="">
+<li class=""><strong>Don't leave the question blank.</strong> If you're totally stuck, there are always some basic things you can do to guarantee at least one or two marks. E.g there is &nbsp;one mark for <em><strong>"making an attempt at drawing a related storyboard". </strong></em>After this, <strong style="font-family: inherit; font-size: 1rem;">flag the question</strong><span style="font-family: inherit; font-size: 1rem;"> so you can come back to it after you finish the rest of the exam, hopefully with fresh ideas to claim a few more marks.</span></li>
+<li class="">Storyboards are relatively easy questions, so as long as you include all the screens, have some content on each and include all the required links, you will get full marks.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">User Interface</h3>
+<div class="dp-panel-content">
+<p class=""><span style="font-size: 14pt;"><strong>Drawing Questions — User Interface</strong></span></p>
+<p class="">User Interface question typically require you to <strong>read a stimulus</strong> and come up with a <strong>suitable user interface to achieve the required task/goal. </strong>The UI needs to be a <strong>high fidelity</strong> mock up of the final application screen including all required input fields, buttons, UI elements, text, etc. If there are input fields, you should <strong>include labels specifying any appropriate data validation</strong> and other elements on the screen should also be <strong>labeled outlining their purpose.</strong></p>
+<p class=""><img class="mx-auto d-block" src="../../assets/3a5694dbf2bc57be.png" alt="Screenshot 2025-06-07 at 10.19.16 am.png" width="600" height="338" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542370" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Steps for Answering Storyboard Questions:</strong></p>
+<ol>
+<li><span style="color: #236fa1;"><strong>Read</strong></span> the question carefully to see what you have to do.</li>
+<li><span style="color: #236fa1;"><strong>Read and highlight the stimulus.</strong> <span style="color: #000000;">User Interface questions </span></span>almost always have a stimulus and are typically part of a multi-part question. When you read the stimulus, you need to use the highlighter tool to highlight the <strong>what UI elements are needed on the screen and any clues on how the user interacts with them </strong>(note you often need to add extra detail from your own knowledge of UI/UX)</li>
+<li>Use the drawing tool to create your response:
+<ol>
+<li><strong><span style="color: #236fa1;">Draw the screen </span></strong><span style="color: #000000;">and its UI Elements.</span></li>
+<li><span style="color: #236fa1;"><strong>Label the UI elements.</strong></span></li>
+</ol>
+</li>
+<li><span style="color: #236fa1;"><strong>Reread</strong></span> the question/stimulus and make sure you <strong>haven't missed anything.</strong></li>
+</ol>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<p class="card-title"><span style="color: #34495e;"><strong>ACTIVITY: Practice HSC Style Question</strong></span></p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-pen-fancy " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Answer the Question:</strong></span> Using the question procedure above, <span style="background-color: #fbeeb8;"><strong>expand</strong></span> <strong>User Interface — Example Question</strong> below and complete it either on a piece of paper or using the online HSC Drawing Tool. You can access it by navigating to question 9 the <a class="" href="https://fam.hsconline.nesa.nsw.edu.au/">HSC Software Engineering Familiarisation Exam,</a>&nbsp;which has a drawing space you can repurpose for this question.</p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-graduation-cap " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learn from the Question: </strong></span></p>
+<ol>
+<li class="card-text"><strong>Compare</strong> your answer with the <strong>sample answer</strong> in the<strong> second expander below.</strong></li>
+<li class="card-text"><strong>Read</strong> the <strong>question walkthrough</strong> to see how to improve and for tips on how to maximise your marks in this type of HSC question.</li>
+<li class="card-text">Formally <strong>mark your response</strong> from the eyes of a marker <strong>using the provided marking criteria.</strong></li>
+</ol>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-expander-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">User Interface — Example Question (without annotations)</h3>
+<div class="dp-panel-content">
+<p><img src="../../assets/ff2fe4a4bddcfa00.png" alt="user interface (unanswered).png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542375" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">User Interface — Example Question&nbsp;(sample answer, question walkthrough, how to mark your work)</h3>
+<div class="dp-panel-content ">
+<p><span style="font-size: 14pt;"><strong>Sample Answer</strong></span></p>
+<p><img src="../../assets/2ee558f5a82e1811.png" alt="Screenshot 2025-05-26 at 9.32.53 am-1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542596" data-api-returntype="File" loading="lazy"></p>
+<p><span style="font-size: 14pt;"><strong>Question Breakdown &amp; Tips and Tricks</strong></span></p>
+<p><span style="font-size: 12pt;"><strong>Question: <span style="color: #236fa1;">Design</span></strong> a<strong> <span style="color: #169179;">user interface</span> </strong>for the <strong><span style="color: #236fa1;">laptop version</span></strong> of the learning management system <span style="color: #236fa1;"><strong>dashboard</strong></span>. (3 marks)</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 1. Read the question carefully</strong></span></h3>
+<p class="card-title">When reading the question, it's important to ask these two questions:</p>
+<ol id="" class="">
+<li class=""><strong>What is the topic/content area?</strong><span> This question is testing our ability to create a <span style="color: #169179;"><strong>user interface.</strong></span> Drawing user interfaces is not explicitly mentioned in your syllabus, however the UI/UX skills required to make one are included in your programming for the web topic under the <em>"Design, develop and implement a progressive web app (PWA)"</em> dot point of <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/content/year-12/fa6aab137e#cg-b41eaf65-d44a-4db3-916a-99bd3594651c">designing web applications.</a> &nbsp;Recall that a user interface is usually of a single screen only and includes far more detail of that single screen compared to a storyboard screen. It will often include lots of labels and even mention things like validation on inputs fields where a applicable.&nbsp;</span></li>
+<li class=""><span style="color: #000000;"><strong>What are we required to do?</strong> We need to <span style="color: #e67e23;"><span style="color: #236fa1;"><span style="color: #000000;"><span style="color: #236fa1;"><strong>design</strong></span> a user interface for the <span style="color: #236fa1;"><strong>laptop version</strong></span> of the dashboard for this app. <span style="text-decoration: underline;">When we read the stimulus</span>, we are now going to be looking closely for all the elements that are on this page since we need to create a relatively detailed and labeled screen design. We also need to create it is roughly the <span style="text-decoration: underline;">aspect ratio</span> of a <span style="color: #236fa1;"><strong>laptop screen.</strong></span></span></span></span></span></li>
+</ol>
+</div>
+</div>
+<p><strong>Stimulus:</strong></p>
+<p><span>A school wants to implement a new learning management system (LMS). One of the exciting new features will be a dashboard for students to manage their homework, assignments, and calendar all in one place.</span></p>
+<p>This dashboard will allow students to <span style="background-color: #fbeeb8;">view the progress of their homework, assignments, and upcoming events</span> with the <span style="background-color: #f8cac6;">option to click on one of them to navigate to a new page focussing on one of the three in more detail.</span> Student will be able to <span style="background-color: #fbeeb8;">view their progress as charts</span> and <span style="background-color: #fbeeb8;">see individual items as well.</span></p>
+<p>The app will also use a <span style="background-color: #fbeeb8;">sidebar</span> to <span style="background-color: #f8cac6;">navigate between the different pages.</span></p>
+<p><span>The app will also have a <span style="background-color: #fbeeb8;">floating help button</span> which will give students easy access to online help.</span></p>
+<p><span>The school would like the app to work on a laptop device for pilot testing with with a mobile compatible version to come later.</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dark">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 2. Analyse the stimulus</strong></span></h3>
+<p class="card-text">After reading the question, we know we are looking out for what is on the dashboard and how the user interacts with them.</p>
+<ul>
+<li class="card-text"><strong>What's on the screen? </strong>The students needs to be able to view the progress of <span style="background-color: #fbeeb8;">their homework, assignments, and upcoming events.</span> Using our UI/UX skills, it probably makes sense for these sections to be placed in a grid view on the screen to provide a summary of each whilst keeping their separated and distinct. Each of these sections will include a <span style="background-color: #fbeeb8;">chart showing user progress</span> as well as some individual items. There will be a <span style="background-color: #fbeeb8;">sidebar</span> which is typically on the left and a <span style="background-color: #fbeeb8;">floating help button</span> which is typically at the bottom right of the screen.</li>
+<li class="card-text"><strong>How does the user interact with it? </strong><span style="background-color: #f8cac6;">Clicking on the summary sections of the dashboard links the user to a page detailing that item</span> so we probably need a <em>"see more"</em> button somewhere in each grid section. We also need to label the menubar to show that they can <span style="background-color: #f8cac6;">link to other pages.</span></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong><span style="font-size: 12pt;">Step 3.1. Draw the user interface</span></strong></p>
+<ol>
+<li class="card-text">We will start by using the rectangle tool to draw a rectangle about the size of our drawing area and in the aspect ratio of a laptop screen.</li>
+<li class="card-text">We can then use the rectangle and circle tools to create the sidebar</li>
+<li class="card-text">Use the text and shape tools to create the top menu bar.</li>
+<li class="card-text">Use the rectangle tool to create the grid layout for the dashboard and add text to each section</li>
+<li class="card-text">Use the circle and and line tools to add some charts/plots of your choosing. The sample uses pie charts.</li>
+<li class="card-text">Add the "see more" buttons. These are typically at the top right of the summary sections.</li>
+<li class="card-text">Add some lines to indicate lines of text where the individual items would show.</li>
+<li class="card-text">Add the floating help button and use the text tool to place a question mark inside it.</li>
+</ol>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 3.2. Label the user interface</strong></p>
+<p class="card-text">This is an extremely important aspect of a user interface. You must include detailed labels.</p>
+<p class="card-text">We want to label everything specified in the question and more to make everything clear.</p>
+<p class="card-text">To add a label:</p>
+<ol>
+<li class="card-text">Using the text tool to add labels outside your screen.</li>
+<li class="card-text">Use the arrow tool to draw an arrow from the text to the item it is annotating.</li>
+</ol>
+<div class="dp-card card h-100">
+<div class="card-body"><strong>IMPORTANT: </strong>If you have input fields (e.g you were creating a screen design for a form) you should include any data validation/input format features. These are often specified in the stimulus, though you may be required to come up with them yourself. E.g if a user is selecting from a list of categories, you need to use a dropdown. If there are only a few options, maybe radio buttons could be better. If there is a phone number, there should be a phone number input mask.</div>
+</div>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 4. Examine your work and make sure it's correct</strong></p>
+<p class="card-text">Looking back to our highlights of the stimulus, it's easy to see we've included all the UI elements and enough labelling to explain the elements and UX.</p>
+</div>
+</div>
+<p><span style="font-size: 14pt;"><strong>Marking Criteria (through the eyes of a marker)</strong></span></p>
+<p><img class="mx-auto d-block" src="../../assets/aae9d0bdd1e712bd.png" alt="Frame 91 (2).png" width="500" height="217" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542378" data-api-returntype="File" loading="lazy"></p>
+<p><strong>How to get full marks?</strong></p>
+<ul>
+<li>To get full marks you need to create a user interface which includes all the UI components outlined in the stimulus. You also need to label each element. To ensure you don't miss any of these features its important to <strong>read and highlight the stimulus</strong> so you can easily <strong>glance back at the requirements as you work on the storyboard.</strong></li>
+<li><strong>Know how to create user interfaces. </strong>Revise the UI/UX section of <a class="dp-course-link" title="2.21 Progressive Web Apps" href="12951-063.html" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/2-dot-21-progressive-web-apps" data-api-returntype="Page">2.21 Progressive Web Apps.</a></li>
+</ul>
+<p><strong>I'm completely stuck and not getting anywhere. How do I salvage as many marks as a I can?</strong></p>
+<ul id="" class="">
+<li class=""><strong>Don't leave the question blank.</strong> If you're totally stuck, there are always some basic things you can do to guarantee at least one or two marks. E.g there is &nbsp;one mark for <em><strong>"showing some understanding of the problem". </strong></em>After this, <strong style="font-family: inherit; font-size: 1rem;">flag the question</strong><span style="font-family: inherit; font-size: 1rem;"> so you can come back to it after you finish the rest of the exam, hopefully with fresh ideas to claim a few more marks.</span></li>
+<li class="">User Interfaces are relatively easy questions, so as long as you include all the elements from the stimulus and label them appropriately with additional data validation information, you will get full marks.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Flowchart</h3>
+<div class="dp-panel-content">
+<p class=""><span style="font-size: 14pt;"><strong>Drawing Questions — Flowchart</strong></span></p>
+<p class="">Flowcharts are generally algorithm questions. They require you to read a stimulus that outlines the requirements of an algorithm and then represent it in flowchart form using appropriate symbols/control structures. Below is an example of a flowchart from your course specs. If you're not up to date on your algorithms or flowcharting knowledge, revise<span>&nbsp;pages 14–21 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></span></p>
+<p class=""><img class="mx-auto d-block" src="../../assets/11ab632bcc94755b.png" alt="Screenshot 2025-06-07 at 10.33.06 am.png" width="400" height="399" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542383" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Steps for Answering Flowchart Questions:</strong></p>
+<ol>
+<li><span style="color: #236fa1;"><strong>Read</strong></span> the question carefully to see what you have to do.</li>
+<li><span style="color: #236fa1;"><strong>Read and highlight the stimulus.</strong> <span style="color: #000000;">User Interface questions </span></span>almost always have a stimulus. When you read the stimulus, you need to use the highlighter tool to highlight the inputs/outputs of the algorithm, any specific process or subroutines it has and the control structures/different paths it has.</li>
+<li>Use the drawing tool to create your response. You always <strong>start and end with a terminator symbol.</strong> Make sure you use the correct symbols and logic to represent the specified algorithm as accurately as possible. <strong>Flowcharts always go down the page,</strong> not across.</li>
+<li><span style="color: #236fa1;"><strong>Reread</strong></span> the question/stimulus and make sure you <strong>haven't missed anything.</strong></li>
+</ol>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<p class="card-title"><span style="color: #34495e;"><strong>ACTIVITY: Practice HSC Style Question</strong></span></p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-pen-fancy " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Answer the Question:</strong></span> Using the question procedure above, <span style="background-color: #fbeeb8;"><strong>expand</strong></span> <strong>Flowchart — Example Question</strong> below and complete it either on a piece of paper or using the online HSC Drawing Tool. You can access it by navigating to question 9 the <a class="" href="https://fam.hsconline.nesa.nsw.edu.au/">HSC Software Engineering Familiarisation Exam,</a>&nbsp;which has a drawing space you can repurpose for this question.</p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-graduation-cap " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learn from the Question: </strong></span></p>
+<ol>
+<li class="card-text"><strong>Compare</strong> your answer with the <strong>sample answer</strong> in the<strong> second expander below.</strong></li>
+<li class="card-text"><strong>Read</strong> the <strong>question walkthrough</strong> to see how to improve and for tips on how to maximise your marks in this type of HSC question.</li>
+<li class="card-text">Formally <strong>mark your response</strong> from the eyes of a marker <strong>using the provided marking criteria.</strong></li>
+</ol>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-expander-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Flowchart — Example Question (without annotations)</h3>
+<div class="dp-panel-content">
+<p><img src="../../assets/92fe49300add4f79.png" alt="user interface (unanswered)-2.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542388" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Flowchart — Example Question&nbsp;(sample answer, question walkthrough, how to mark your work)</h3>
+<div class="dp-panel-content ">
+<p><span style="font-size: 14pt;"><strong>Sample Answer</strong></span></p>
+<p><img class="mx-auto d-block" src="../../assets/669b587fa5106ab6.png" alt="Screenshot 2025-05-26 at 1.06.55 pm.png" width="500" height="765" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542391" data-api-returntype="File" loading="lazy"></p>
+<p><span style="font-size: 14pt;"><strong>Question Breakdown &amp; Tips and Tricks</strong></span></p>
+<p><span style="font-size: 12pt;"><strong>Question: <span style="color: #236fa1;">Draw</span></strong> a <strong><span style="color: #169179;">flowchart</span> </strong>representing the<span style="color: #236fa1;"> <strong>game described.</strong></span> (3 marks)</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 1. Read the question carefully</strong></span></h3>
+<p class="card-title">When reading the question, it's important to ask these two questions:</p>
+<ol id="" class="">
+<li class=""><strong>What is the topic/content area?</strong><span> This question is testing our ability to create a represent a program or algorithm as a <span style="color: #169179;"><strong>flowchart.</strong></span> This is found on pages 14–21 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></span></li>
+<li class=""><span style="color: #000000;"><strong>What are we required to do?</strong> We need to <span style="color: #e67e23;"><span style="color: #236fa1;"><span style="color: #000000;"><span style="color: #236fa1;"><strong>draw</strong></span> a flowchart representing the game described in the stimulus. So, the next things we are going to do is read the stimulus, with a focus on identifying and highlighting the features of the game we need to model as a flowchart.</span></span></span></span></li>
+</ol>
+</div>
+</div>
+<p><strong>Stimulus:</strong></p>
+<p><span>A game called “guess the number” is being created, but before writing the code, a flowchart is going to be created to model the program. The game works as follows:</span></p>
+<ul>
+<li><span>The computer generates a random number between 1 and 10 using a <span style="background-color: #fbeeb8;">subroutine.</span> This provided subroutine is called <span style="background-color: #fbeeb8;">get_rand_num(min, max)</span>, where the two parameters min and max are the inclusive range for the random number generation.</span></li>
+<li><span>It then <span style="background-color: #fbeeb8;">lets the user guess what the number is.</span></span></li>
+<li><span>If the <span style="background-color: #fbeeb8;">user is correct the message “You guessed correctly!”</span> is displayed and the game ends.</span></li>
+<li><span>If the uses <span style="background-color: #fbeeb8;">guesses incorrectly,</span> the program will either output <span style="background-color: #fbeeb8;">“higher” if the guess was too low</span>, or <span style="background-color: #fbeeb8;">“lower” if it was too high</span> and let the <span style="background-color: #fbeeb8;">user guess again. </span></span></li>
+</ul>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dark">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 2. Analyse the stimulus</strong></span></h3>
+<p class="card-text">We need to read the stimulus to identify all the different pathways in this program. Luckily it's been laid out very clearly for us.</p>
+<p class="card-text">First, we need to get the random number using the subroutine. Then we take an input from the user. Then we will need to implement some decisions (diamonds) to figuring out what message to print and weather to continue the loop.</p>
+<p class="card-text">We will also need to output the correct message for each pathway.</p>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong><span style="font-size: 12pt;">Step 3. Draw the flowchart</span></strong></p>
+<ol>
+<li class="card-text">We will start with the terminator symbol at the start with the BEGIN 'program name' inside it. In this case, the program is just called 'main'.&nbsp;</li>
+<li class="card-text">Next we need to get the user input which is technically a subroutine, but since we are also assigning the output of the subroutine to a variable, we will just put the assignment inside a process which will call the subroutine and assign it to the variable for us.&nbsp;</li>
+<li class="card-text">Next we will use the input or output rhombus-like shape is get the user guess.</li>
+<li class="card-text">Then we need a decision (diamond) to see if the guess is correct. If it is correct, we want to jump straight to the end of the program and display 'You guessed correctly!' using an input/output symbol again. We will just draw this below the rest of the diagram leaving space below the diamond for some more logic.</li>
+<li class="card-text">Below that first decision diamond, we are going to add another diamond that checks if the user guess is greater than random num. Based on whether this is true or false, we can draw arrows to different input output shapes with different messages. Since we are displaying this presumably on a screen, we will use the pseudocode DISPLAY keyword.&nbsp;</li>
+<li class="card-text">We want both of these displays to link back up to the 'get user guess' stage so the game can continue.</li>
+<li class="card-text">Now we just need to draw arrows between all the shapes to show the logic of the game. We draw the arrows last because it makes it easier to move the shapes around as we tweak the logic and aesthetics.</li>
+</ol>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 4. Examine your work and make sure it's correct</strong></p>
+<p class="card-text">Looking back to our highlights of the stimulus it looks like we've included all the processes and accounted for all the pathways so the answer should be correct. It's often a good idea to step through your algorithm bit by bit to make sure the all the paths are correct, sort of like a quick desk check in your head.</p>
+</div>
+</div>
+<p><span style="font-size: 14pt;"><strong>Marking Criteria (through the eyes of a marker)</strong></span></p>
+<p><img class="mx-auto d-block" src="../../assets/75da6b77cd001f43.png" alt="Frame 92 (1) (1).png" width="500" height="202" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542394" data-api-returntype="File" loading="lazy"></p>
+<p><strong>How to get full marks?</strong></p>
+<ul>
+<li>To get full marks you need to provide a correct flowchart with all the correct processes and logical pathways and use the correct symbols for each part of the flowchart. Highlighting the stimulus will help ensure you don't miss anything.</li>
+<li><strong>Know how to create flowcharts. </strong>Revise pages 14–21 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></li>
+</ul>
+<p><strong>I'm completely stuck and not getting anywhere. How do I salvage as many marks as a I can?</strong></p>
+<ul id="" class="">
+<li class=""><strong>Don't leave the question blank.</strong> If you're totally stuck, there are always some basic things you can do to guarantee at least one or two marks. E.g there is &nbsp;one mark for <em><strong>"showing some understanding of flowcharts". </strong></em>This means you literally just need to put down the BEGIN terminator symbol and link it into one more symbol and you could get one mark.<strong></strong><em><strong> </strong></em>After this, <strong style="font-family: inherit; font-size: 1rem;">flag the question</strong><span style="font-family: inherit; font-size: 1rem;"> so you can come back to it after you finish the rest of the exam, hopefully with fresh ideas to claim a few more marks.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Class Diagrams</h3>
+<div class="dp-panel-content">
+<p class=""><span style="font-size: 14pt;"><strong>Drawing Questions — Class Diagram</strong></span></p>
+<p class="">Class diagrams are used to model the structure of programs written in the object orientated paradigm (OOP). They clearly show all the classes and their associated attributes/methods. They also show the types of relationships and inheritance between the classes. Below is an example of a class diagram from your course specifications. If you're not up to date on class diagrams, revise<span> page 9 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></span></p>
+<p class=""><img class="mx-auto d-block" src="../../assets/280826b52002363d.png" alt="Screenshot 2025-06-07 at 4.50.36 pm.png" width="750" height="258" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542397" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Steps for Answering Decision Tree Questions:</strong></p>
+<ol>
+<li><span style="color: #236fa1;"><strong>Read</strong></span> the question carefully to see what you have to do.</li>
+<li><span style="color: #236fa1;"><strong>Read and highlight the stimulus.</strong> <span style="color: #000000;">Class diagram drawing questions </span></span>almost always have a stimulus. When you read the stimulus, you need to use the highlighter tool to <strong>highlight</strong> any clues to what the <strong>classes, attributes, methods, and relationships/inheritance</strong> will be.&nbsp;</li>
+<li>Use the drawing tool to create your response.
+<ol>
+<li>Start by <span style="color: #236fa1;"><strong>drawing in each of the classes</strong></span> with their attributes and methods.</li>
+<li><span style="color: #236fa1;"><strong>Draw the connections</strong></span> (inheritance and relationships) between the classes.</li>
+</ol>
+</li>
+<li><span style="color: #236fa1;"><strong>Reread</strong></span> the question/stimulus and make sure you <strong>haven't missed anything.</strong></li>
+</ol>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<p class="card-title"><span style="color: #34495e;"><strong>ACTIVITY: Practice HSC Style Question</strong></span></p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-pen-fancy " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Answer the Question:</strong></span> Using the question procedure above, <span style="background-color: #fbeeb8;"><strong>expand</strong></span> <strong>Class Diagram — Example Question</strong> below and complete it either on a piece of paper or using the online HSC Drawing Tool. You can access it by navigating to question 9 the <a class="" href="https://fam.hsconline.nesa.nsw.edu.au/">HSC Software Engineering Familiarisation Exam,</a>&nbsp;which has a drawing space you can repurpose for this question.</p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-graduation-cap " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learn from the Question: </strong></span></p>
+<ol>
+<li class="card-text"><strong>Compare</strong> your answer with the <strong>sample answer</strong> in the<strong> second expander below.</strong></li>
+<li class="card-text"><strong>Read</strong> the <strong>question walkthrough</strong> to see how to improve and for tips on how to maximise your marks in this type of HSC question.</li>
+<li class="card-text">Formally <strong>mark your response</strong> from the eyes of a marker <strong>using the provided marking criteria.</strong></li>
+</ol>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-expander-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Class Diagram — Example Question (without annotations)</h3>
+<div class="dp-panel-content ">
+<p><img src="../../assets/018559c4db8bd927.png" alt="class diagram (unanswered).png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542404" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Class Diagram — Example Question (sample answer, question walkthrough, how to mark your work)</h3>
+<div class="dp-panel-content ">
+<p><span style="font-size: 14pt;"><strong>Sample Answer</strong></span></p>
+<p><img src="../../assets/f1d6776be5bf4061.png" alt="Screenshot 2025-06-08 at 11.08.12 pm.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542407" data-api-returntype="File" loading="lazy"></p>
+<p><span style="font-size: 14pt;"><strong>Question Breakdown &amp; Tips and Tricks</strong></span></p>
+<p><span style="font-size: 12pt;"><strong>Question: <span style="color: #236fa1;">Draw</span></strong> a <span style="color: #169179;"><strong>class diagram</strong> </span>to <span style="color: #236fa1;"><strong>represent the proposed calendar app.</strong></span> (4 marks)</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 1. Read the question carefully</strong></span></h3>
+<p class="card-title">When reading the question, it's important to ask these two questions:</p>
+<ol id="" class="">
+<li class=""><strong>What is the topic/content area?</strong><span> This question is testing our ability to create a <span style="color: #169179;"><strong>class diagram</strong></span> for a calendar app.<span style="color: #169179;"><strong>&nbsp;</strong><span style="color: #000000;">Class diagrams can be found on page 9</span></span>&nbsp;of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></span><span><em>&nbsp;</em>Revise <a class="dp-course-link" title="4.11 Modelling Tools" href="12951-037.html" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/4-dot-11-modelling-tools" data-api-returntype="Page">4.11 Modelling Tools</a> for more information or your year 11 "The object-orientated paradigm" topic.</span></li>
+<li class=""><span style="color: #000000;"><strong>What are we required to do?</strong> We need to <span style="color: #e67e23;"><span style="color: #236fa1;"><span style="color: #000000;"><span style="color: #236fa1;"><strong>draw</strong></span> a class diagram, specifically, one that <span style="color: #236fa1;"><strong>represents the proposed calendar app,</strong></span> so we now know that all our information is going to come from the requirements in the stimulus.</span></span></span></span></li>
+</ol>
+</div>
+</div>
+<p><strong>Stimulus:</strong></p>
+<p><span>A new calendar app is being created in an OOP language and the following requirements have been discovered.</span></p>
+<ul>
+<li><span>A <span style="background-color: #f8cac6;">user</span> can <span style="background-color: #fbeeb8;">add many <span style="background-color: #f8cac6;">calendars</span></span> but <span style="background-color: #fbeeb8;">gets one by default</span> when they open the app.</span></li>
+<li><span>A user can <span style="background-color: #fbeeb8;">add a range</span> of <span style="background-color: #f8cac6;">items</span> to their <span style="background-color: #f8cac6;">calendars</span>, but <span style="background-color: #fbeeb8;">an item can only belong to one calendar.</span> <span style="background-color: #fbeeb8;">These items include</span> <span style="background-color: #f8cac6;">events, tasks, meetings, and recurring events.</span></span></li>
+<li><span>All <span style="background-color: #f8cac6;">items</span> have a <span style="background-color: #c2e0f4;">start date/time and end date/time.</span> They also have the ability to <span style="background-color: #c2e0f4;">notify a user</span> a certain time before they start. In addition to this, <span style="background-color: #f8cac6;">tasks</span><span style="background-color: #c2e0f4;"> have a status</span>, <span style="background-color: #f8cac6;">recurring events</span><span style="background-color: #c2e0f4;"> have a recurrence type (e.g weekly/fortnightly, etc)</span>, and <span style="background-color: #f8cac6;">meetings</span><span style="background-color: #c2e0f4;"> have attendees.</span></span></li>
+<li><span>A <span style="background-color: #f8cac6;">user</span> can also <span style="background-color: #c2e0f4;">view and delete items</span> from a <span style="background-color: #f8cac6;">calendar</span> or <span style="background-color: #c2e0f4;">delete/view</span> an entire <span style="background-color: #f8cac6;">calendar</span> they’ve added themselves, <span style="background-color: #fbeeb8;">but they must always have at least one calendar.</span><br></span></li>
+</ul>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dark">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 2. Analyse the stimulus</strong></span></h3>
+<p class="card-text">When reading the stimulus, it's crucial that you highlight the important pieces of information so you don't leave anything out or have to go looking through a long stimulus. Here I've highlighted the <span style="background-color: #f8cac6;">classes in red</span>, the hints about the <span style="background-color: #fbeeb8;">relationships/inheritance/multiplicity in yellow</span>, and the <span style="background-color: #c2e0f4;">attributes/methods in blue.</span></p>
+<p class="card-text"><span style="background-color: #f8cac6;">Classes:</span></p>
+<ul>
+<li class="card-text">User</li>
+<li class="card-text">Calendar</li>
+<li class="card-text">Items (which we will rename calendar_items for clarity)
+<ul>
+<li class="card-text">events</li>
+<li class="card-text">tasks</li>
+<li class="card-text">meetings</li>
+<li class="card-text">recurring events</li>
+</ul>
+</li>
+</ul>
+<p><span style="background-color: #fbeeb8;"><strong>Relationships:</strong></span></p>
+<ul>
+<li><em>Users</em> have C<em>alendars</em> (1 to many calendars) We will make the assumption that a calendar can only belong to one user.</li>
+<li>A <em>calendar </em>has <em>calendar_items </em>(0 to many calendar_items for each calendar). The stimulus specifies that a calendar_item can only belong to one calendar.</li>
+<li>There is an inheritance relationship between <em>calendar_items</em> and all the different <em>calendar_items</em> (events, tasks, meetings, and recurring events). If you're even confused think, if this class is a type of another class, it would be inheritance but if a class belongs to or has some other class, then it is a relationship.</li>
+<li>There also needs to be a relationship between <em>User</em> and <em>Meetings.</em> This one is harder to catch, but it is required because a meeting can have multiple users and each of those users need to be able to see their meetings. Even though the creator of the meeting can see their meeting through the <em>calendar </em>and <em>calendar_item </em>relationships, other user will not be able to without this extra relationship. The multiplicity is 1 to many on the meeting since a meeting needs to have one person and 0 to many on the meeting since a user may have 0 to many meetings.</li>
+</ul>
+<p><span style="background-color: #c2e0f4;"><strong>Attributes/Methods:</strong></span></p>
+<table style="border-collapse: collapse; width: 99.9796%; height: 206.4px;" border="1">
+<tbody>
+<tr style="height: 28.8px;">
+<td style="width: 15.0426%; height: 28.8px;"><strong>Class</strong></td>
+<td style="width: 51.6105%; height: 28.8px;"><strong>Attributes</strong></td>
+<td style="width: 33.3265%; height: 28.8px;"><strong>Methods</strong></td>
+</tr>
+<tr style="height: 148.8px;">
+<td style="width: 15.0426%; height: 148.8px;">User</td>
+<td style="width: 51.6105%; height: 148.8px;">No explicit information on the attributes of a user have been mentioned so we just need to put ourselves in the shoes of the scenario and think, if we were developing a calendar app, what attributes would a user have? Logically the classics you can always fall back on are <strong>firstName, lastName and userID,</strong> though any reasonable attributes would be okay.</td>
+<td style="width: 33.3265%; height: 148.8px;">The user needs to be able to add, view and delete calendars so the methods all be <strong><em>addCalendar(), deleteCalendar()</em>, and <em>viewCalendar().</em></strong></td>
+</tr>
+<tr style="height: 28.8px;">
+<td style="width: 15.0426%; height: 28.8px;">Calendar</td>
+<td style="width: 51.6105%; height: 28.8px;">No explicit information has been provided in the stimulus, so we will need to infer reasonable attributes. If you're struggling, think to a time you've used a calendar app and think. It must have a <strong>name</strong> and <strong>dateAdded</strong> is always a good filler if you can't think of any other attributes. Colour would be another good attribute since many calendar apps allow you to customise the colour of different calendars.</td>
+<td style="width: 33.3265%; height: 28.8px;">We need to be able to add, view, and delete items on a calendar. Since these functions are directly associated with the feature of a calendar we will put them here. We need <em><strong>addCalendarItem(), viewCalendarItem, </strong></em><strong>and</strong><em><strong> deleteCalendarItem()</strong></em></td>
+</tr>
+<tr>
+<td style="width: 15.0426%;">Calendar_Item</td>
+<td style="width: 51.6105%;">
+<p>We are told that calendar item needs to have a <strong>start and end date </strong>and also be able to notify <em>Users</em>, so we will include a <strong>notify_time</strong> attribute. Since reminds usually give users an option from 5 mins or 10 mins before, the <em>notify_time</em> attribute will just be an integer which stores this value.</p>
+</td>
+<td style="width: 33.3265%;">To notify users, there will need to be a notify method.</td>
+</tr>
+<tr>
+<td style="width: 15.0426%;">Event</td>
+<td style="width: 51.6105%;">
+<p>Event will <strong>inherit</strong> all the properties from Calendar_Item and I can't think of any extra attributes to add, so it's perfectly okay to <strong>leave it blank.</strong></p>
+</td>
+<td style="width: 33.3265%;">Event will inherit the notify method, and we don't need any extras so we can leave it empty too.</td>
+</tr>
+<tr>
+<td style="width: 15.0426%;">Task</td>
+<td style="width: 51.6105%;">
+<p>Task It will <strong>inherit</strong> all the properties from Calendar_Item. However we need to add an extra <em>status</em> property. This status will be stored as an int. A string could also work, but an int is more robust. E.g 0 = not started, 1 = in progress and 2 = done, etc.</p>
+</td>
+<td style="width: 33.3265%;">Task will inherit the notify method, and we don't need any extras so we can leave it empty too.</td>
+</tr>
+<tr>
+<td style="width: 15.0426%;">Meeting</td>
+<td style="width: 51.6105%;">
+<p>We have a relationship which will encode who the meeting attendees are, but just for added clarity we will include <strong><em>attendees</em></strong> as an attribute and the data type will be an array of <em>User</em> objects.</p>
+</td>
+<td style="width: 33.3265%;">We need a method to <strong>start and end</strong> the meeting as the very least.</td>
+</tr>
+<tr>
+<td style="width: 15.0426%;">Recurring Event</td>
+<td style="width: 51.6105%;">
+<p>We need to store the recurrence type, eg. weekly, fortnightly and store it as an int e.g 0 =&nbsp; daily, 1 = weekly etc.</p>
+</td>
+<td style="width: 33.3265%;">We need a <em><strong>manage_recurrence()</strong></em> method to schedule/render all the recurrences when the item is added to the calendar.</td>
+</tr>
+</tbody>
+</table>
+<p>Note that you will be thinking through everything in this table as you highlight the stimulus. You can use a table like this to help you plan, but you have limited time in the exam, so it's best to just highlight the stimulus.</p>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong><span style="font-size: 12pt;">Step 3.1 Draw the Classes in the Class Diagram</span></strong></p>
+<ol>
+<li>Click the <em><strong>library</strong></em> icon at the top right of the drawing area to open the <strong>shape library.</strong></li>
+<li>Select the <strong>class diagram shape</strong> to insert it into the canvas. Note that this is a composite shape. <strong>It's just a set of lines grouped together. If you want to resize the shape</strong> (e.g to add more space for attribute) you just need to right click the shape and select <strong><em>"Ungroup selection"</em> </strong>or select the shape, scroll to the bottom of the sidebar and in the <em>"actions"</em> section, click the ungroup button.</li>
+<li>Use the<strong> text tool </strong>to add a title in the top row of the shape. Then add the attributes in the second row and methods in the last row. It's perfectly okay to leave sections empty (link in <em>Event</em>) if it makes sense in the context of the scenario.</li>
+<li>Duplicate the class and update each duplicate with the information for <strong>all the other classes.</strong></li>
+<li><strong>Try and arrange your diagram so lines don't cross. </strong>E.g have all child class below the parent and related classes next to each other.</li>
+</ol>
+<p><img src="../../assets/905528a1e979f2d4.png" alt="just classes.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542410" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 3.2. Draw the connections</strong></p>
+<ol>
+<li class="card-title">Use the <strong>arrow tool to draw a the relationships and inheritance</strong> between the classes. Recall that <strong>relationships use unfilled arrows and inheritance uses filled arrows.</strong> You can set the arrow heads by clicking on the arrow an navigating to the <em><strong>arrowheads</strong></em> section in the drawing tool sidebar and set the type of arrow (including none) for each side of the arrow.</li>
+<li class="card-title">If you have added a relationship, use the text tool to add a word on the arrow that indicates the type of relationship such as "has", "studies", "uses", etc.</li>
+<li class="card-title">Add the multiplicity on each side of the arrow. There are a range of multiplicity options. <strong>Use the one that makes more logical sense from your analysis of the stimulus.</strong> Also remember that <strong>the multiplicity as attributed to the class it is closest to,</strong> e.g in the diagram below, the 1..1 next to the U<em>ser </em>class<em> </em>means there can only be one user mapping to a calendar and the 1..* next to the <em>Calendar</em> class means that 1 to many calendars can map to a User, so together they reveal that a <em>User</em> can have as many <em>calendars</em> as they want, as long as they have one and those calendar can only belong to that one User. The inheritance arrows don't have multiplicities.</li>
+</ol>
+<p class="card-text"><img src="../../assets/f1d6776be5bf4061.png" alt="Screenshot 2025-06-08 at 11.08.12 pm-1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542597" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 4. Examine your work and make sure it's correct</strong></p>
+<p class="card-text">Our diagram has all the classes is needs, it has fully featured attributes and methods (including ones we created ourselves based on the scenario) and all the links have been made appropriately. The last thing to glance at would be the multiplicities to make sure you haven't mistyped one of them. This is a common mistake, so double check.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong>Marking Criteria (through the eyes of a marker)</strong></span></p>
+<p><img class="mx-auto d-block" src="../../assets/fd6157f34750e6f3.png" alt="Class Diagram - 1 - Marking Criteria-1.png" width="500" height="295" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542400" data-api-returntype="File" loading="lazy"></p>
+<p><strong>How to get full marks?</strong></p>
+<ul>
+<li>To get full marks you need to create a substantially correct class diagram. This means that if one of your relationships was a bit off (e.g if you didn't include the relationship from Users to Meetings and just went with the attendees attribute storing the User object being enough, that would be substantially correct. Likewise, if you missed one of the non essential attributes, that would still be considered substantially correct. However, besides that, you need to have all the suitable classes kitted out with attributes, methods and have the correct arrows/multiplicities on the whole.</li>
+<li><strong>Know how to create class diagrams. </strong>Revise <a class="dp-course-link" title="4.11 Modelling Tools" href="12951-037.html" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/4-dot-11-modelling-tools" data-api-returntype="Page">4.11 Modelling Tools</a> for more information or your year 11 "The object-orientated paradigm" topic. Also revise page 9 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></li>
+</ul>
+<p><strong>I'm completely stuck and not getting anywhere. How do I salvage as many marks as a I can?</strong></p>
+<ul id="" class="">
+<li class=""><strong>Don't leave the question blank.</strong> If you're totally stuck, there are always some basic things you can do to guarantee at least one or two marks. E.g there is one mark for <em><strong>"showing some understanding of the scenario".</strong></em><em><strong>&nbsp;</strong></em>After this, <strong style="font-family: inherit; font-size: 1rem;">flag the question</strong><span style="font-family: inherit; font-size: 1rem;"> so you can come back to it after you finish the rest of the exam, hopefully with fresh ideas to claim a few more marks.</span></li>
+<li class=""><span style="font-family: inherit; font-size: 1rem;">Providing <strong>something that resembles a class diagram with some words from the stimulus </strong>would get you one mark and if you were just able to show the relationship between Users, Calendars, and Calendar_Items or just the inheritance between Calendar_Items and the children, that would be two marks. If you are total stuck,<strong> try making a table like in Step 2</strong> above and use that a guide to build your class diagram and even if it's not perfect, you should land 3 marks.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Decision Trees</h3>
+<div class="dp-panel-content">
+<p class=""><span style="font-size: 14pt;"><strong>Drawing Questions — Decision Tree</strong></span></p>
+<p class="">Decision trees are composed of a series of question in rectangles attached to a series of possible answers that link into further questions below. There is a path from the root of the tree all the way to every leaf based on the answered made to each question in the tree. They can go vertically down the page or horizontally across the page. Below is an example of a vertical decision tree. If you're not up to date on decision trees, revise<span> page 10 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></span></p>
+<p class=""><img class="mx-auto d-block" src="../../assets/f6b96f8ddebc5ced.png" alt="Screenshot 2025-06-07 at 10.41.34 am.png" width="600" height="310" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542425" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Steps for Answering Decision Tree Questions:</strong></p>
+<ol>
+<li><span style="color: #236fa1;"><strong>Read</strong></span> the question carefully to see what you have to do.</li>
+<li><span style="color: #236fa1;"><strong>Read and highlight the stimulus.</strong> <span style="color: #000000;">Decision tree questions </span></span>almost always have a stimulus. When you read the stimulus, you need to use the highlighter tool to <strong>highlight</strong> any clues to the <strong>questions you need to ask</strong> as well as <strong>what the end points (leaves) of the tree will be.</strong></li>
+<li>Use the drawing tool to create your response. You always start with the root of the tree and decide how many different answers there are (binary selection or multiple) and make your way down the tree until you have all the required solutions/leaves.</li>
+<li><span style="color: #236fa1;"><strong>Reread</strong></span> the question/stimulus and make sure you <strong>haven't missed anything.</strong></li>
+</ol>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<p class="card-title"><span style="color: #34495e;"><strong>ACTIVITY: Practice HSC Style Question</strong></span></p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-pen-fancy " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Answer the Question:</strong></span> Using the question procedure above, <span style="background-color: #fbeeb8;"><strong>expand</strong></span> <strong>Decision Tree — Example Question</strong> below and complete it either on a piece of paper or using the online HSC Drawing Tool. You can access it by navigating to question 9 the <a class="" href="https://fam.hsconline.nesa.nsw.edu.au/">HSC Software Engineering Familiarisation Exam,</a>&nbsp;which has a drawing space you can repurpose for this question.</p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-graduation-cap " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learn from the Question: </strong></span></p>
+<ol>
+<li class="card-text"><strong>Compare</strong> your answer with the <strong>sample answer</strong> in the<strong> second expander below.</strong></li>
+<li class="card-text"><strong>Read</strong> the <strong>question walkthrough</strong> to see how to improve and for tips on how to maximise your marks in this type of HSC question.</li>
+<li class="card-text">Formally <strong>mark your response</strong> from the eyes of a marker <strong>using the provided marking criteria.</strong></li>
+</ol>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-expander-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Decision Tree — Example Question (without annotations)</h3>
+<div class="dp-panel-content">
+<p><img src="../../assets/60b95c83d15bf1a7.png" alt="decision tree (unanswered)-3.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542428" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Decision Tree — Example Question (sample answer, question walkthrough, how to mark your work)</h3>
+<div class="dp-panel-content ">
+<p><span style="font-size: 14pt;"><strong>Sample Answer</strong></span></p>
+<p><img src="../../assets/a62dd2a46afab426.png" alt="Screenshot 2025-05-30 at 3.07.03 pm.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542439" data-api-returntype="File" loading="lazy"></p>
+<p><span style="font-size: 14pt;"><strong>Question Breakdown &amp; Tips and Tricks</strong></span></p>
+<p><span style="font-size: 12pt;"><strong>Question: <span style="color: #236fa1;">Draw</span></strong><span style="color: #236fa1;"> </span>the <span style="color: #169179;"><strong>decision tree</strong> </span>to <span style="color: #236fa1;"><strong>distinguish between the <span style="color: #169179;">web protocols.</span></strong></span> (3 marks)</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 1. Read the question carefully</strong></span></h3>
+<p class="card-title">When reading the question, it's important to ask these two questions:</p>
+<ol id="" class="">
+<li class=""><strong>What is the topic/content area?</strong><span> This question is testing our ability to create a <span style="color: #169179;"><strong>decision tree</strong></span> in the context of <span style="color: #169179;"><strong>web protocols. </strong><span style="color: #000000;">Decision trees can be found on page 10</span></span>&nbsp;of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications </a></span><span>and web protocols are in your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/content/year-12/fa6aab137e">Programming for the Web</a> topic under <em>"Investigate and describe the function of web protocols and their ports". </em>Revise <a class="dp-course-link" title="2.3 Web Protocols" href="12951-043.html" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/2-dot-3-web-protocols" data-api-returntype="Page">2.3 Web Protocols</a> for more information.</span></li>
+<li class=""><span style="color: #000000;"><strong>What are we required to do?</strong> We need to <span style="color: #e67e23;"><span style="color: #236fa1;"><span style="color: #000000;"><span style="color: #236fa1;"><strong>draw</strong></span> a decision tree that allows us to <span style="color: #236fa1;"><strong>distinguish between web protocols. </strong></span>We will need to refer to the stimulus for the exact requirements.</span></span></span></span></li>
+</ol>
+</div>
+</div>
+<p><strong>Stimulus:</strong></p>
+<p><span>A student is interested in testing their knowledge of web protocols so they <span style="background-color: #fbeeb8;">create a decision tree</span> that can <span style="background-color: #fbeeb8;">identify a protocol based on it’s characteristics.</span></span></p>
+<p><span>The decision tree needs to allow someone <span style="background-color: #f8cac6;">distinguish between HTTP, HTTPS, POP, SMTP, and IMAP.</span> It should ask appropriate yes/no questions about the protocol’s characteristics to arrive at a unique conclusion.</span></p>
+<p><span>For example if a protocol is used for transferring web pages on the internet and runs on port 80, then it is HTTP. This could be one of the paths in the decision tree, but it also needs to account for the other protocols by asking appropriate questions and <span style="background-color: #fbeeb8;">including appropriate pathways that end at a single protocol.</span><br></span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dark">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 2. Analyse the stimulus</strong></span></h3>
+<p class="card-text">The stimulus makes it clear that we need to make a decision tree that asks <span style="background-color: #f8cac6;">increasingly nuanced questions that allow us to differentiate between the five protocols mentioned.</span> We also need to arrive at a unique conclusion, so we can have one branch that says it could be HTTP or HTTPS, we need to have a <span style="background-color: #f8cac6;">single protocol at the end of each pathway.</span> Also, we can only ask <span style="background-color: #f8cac6;">yes/no questions</span> so we can't just have one level with five branches that ask what port the protocol runs on and distinguish the protocols like that. Instead, we need to ask four yes no questions to adequately tell the five protocols apart.</p>
+<p class="card-text">For each question as we move down the tree, we need to think of a new more targeted characteristic that can allow us to separate the protocols from each other sort of like how we would use a decision tree to diagnose an illness — first we start broad like where the pain is or what the protocol is used for and get finer such as what type of pain is felt or what port the protocol runs on.</p>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong><span style="font-size: 12pt;">Step 3. Draw the decision tree</span></strong></p>
+<ol>
+<li class="card-text">Since we need to ask<strong> at least three questions</strong> before arriving at a conclusion, we will ask a <strong>broad question to begin</strong> with like 'what is the protocol used for'. To make this a <strong>yes or no question</strong>, we will use "Used for transferring webpage data." If this question is yes it could be either HTTP or HTTPS and if not, it could be SMTP, IMAP, or POP3.</li>
+<li class="card-text">Now to differentiate between HTTP and HTTPS the we could use the <strong>port</strong> it runs on. If it runs on port 80 it is HTTPS and if not, it is HTTPS. We could also ask a question of if it is encrypted or not which is another valid characteristic. Now we have finished this side of the tree.</li>
+<li class="card-text">Now we need to start differentiating between SMTP, IMAP, and POP3. To do this we need to <strong>find a characteristic that only one of the three has.</strong> In this case we will ask if the protocol is used to transfer mail between mail servers since only SMTP is used for this.</li>
+<li class="card-text">Now we are only left with the branch that deals with IMAP and POP3. To distinguish between these we need another appropriate characteristic. We know that only IMAP is used to synchronise mail across devices while POP3 simply retrieves mail from the server to one device. So, we can ask weather the protocol is used to synchronise email across devices and if yes, it is IMAP and if no, it's POP3.</li>
+</ol>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 4. Examine your work and make sure it's correct</strong></p>
+<p class="card-text">Looking back to our highlights of the stimulus we have <strong>only used yes/no questions,</strong> all <strong>our branches end at single protocols</strong>, and all the questions use defining features of the protocols to <strong>accurately distinguish them. </strong>Therefore we can be fairly confident our answer is correct.</p>
+</div>
+</div>
+<p><span style="font-size: 14pt;"><strong>Marking Criteria (through the eyes of a marker)</strong></span></p>
+<p><img class="mx-auto d-block" src="../../assets/fe78d23888cca7e5.png" alt="Frame 93 (1).png" width="500" height="248" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542446" data-api-returntype="File" loading="lazy"></p>
+<p><strong>How to get full marks?</strong></p>
+<ul>
+<li>To get full marks you need to provide a correct decision tree that uniquely distinguishes between all the protocols. This means each question needs to clearly and accurately divide the pool of protocols into smaller ones until we are only left with one clear result at the end of a brach of the decision tree. Highlighting the stimulus will help ensure you don't miss any of the key requirements.</li>
+<li><strong>Know how to create decision trees. </strong>Revise page 10 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></li>
+</ul>
+<p><strong>I'm completely stuck and not getting anywhere. How do I salvage as many marks as a I can?</strong></p>
+<ul id="" class="">
+<li class=""><strong>Don't leave the question blank.</strong> If you're totally stuck, there are always some basic things you can do to guarantee at least one or two marks. E.g there is one mark for <em><strong>"showing some understanding of decision trees". </strong></em>This means you just need to put down one question with a yes and no leading into two results and that would get you one mark.<em><strong>&nbsp;</strong></em>After this, <strong style="font-family: inherit; font-size: 1rem;">flag the question</strong><span style="font-family: inherit; font-size: 1rem;"> so you can come back to it after you finish the rest of the exam, hopefully with fresh ideas to claim a few more marks.</span></li>
+<li class=""><span style="font-family: inherit; font-size: 1rem;">Even if you're not sure how to differentiate between the protocols, try and do the broader questions at the top of the tree and you may get enough correct so that you sit in the two mark range where up to two questions can be wrong.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Structure Chart</h3>
+<div class="dp-panel-content">
+<p class=""><span style="font-size: 14pt;"><strong>Drawing Questions — Structure Chart</strong></span></p>
+<p class="">Structure charts represent a system by showing the separate subroutines that make up the system and their relationship to each other. They show the hierarchy of a program including which subroutines work together to produce a particular result and the data/flags passed between them all. They show the order in which modules/submodules are called since they are read from left to right top to bottom and there can be repetition and selection using appropriate symbols. Another sub tasks go down the diagram and any distinct steps of a process go across the diagram. If you're not up to date on structure charts, revise<span> page 7 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a> </span></p>
+<p class=""><span>The image below is from page 7 of your course specs and it is <span style="color: #ba372a;"><strong>not a good example of a structure chart.</strong></span> </span></p>
+<ul>
+<li><span>Firstly, <strong>all subroutines that are on the same level must be in line with each other,</strong> however the example in your course specs has them all over the place. </span></li>
+<li><span>They also have data and flags going down and up on inconsistent sides of the line. <strong>Stuff going down into a subroutine goes on the left of the connecting line and stuff coming up out of the subroutine goes on the right of the connecting line. </strong></span></li>
+<li><span>Also, <strong>connecting lines should all start at the bottom centre of the parent node and connect to the top centre of the child node</strong> for consistency and neatness. This is not adhered to in the course specs. </span></li>
+<li><span>Other than that, the symbols are correct and the logic is okay.</span></li>
+</ul>
+<p class=""><img class="mx-auto d-block" src="../../assets/acfe86c86a3052be.png" alt="Screenshot 2025-06-30 at 9.28.24 pm.png" width="650" height="660" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542455" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Steps for Answering Entity Relationship Diagram (ERD) Questions:</strong></p>
+<ol>
+<li><span style="color: #236fa1;"><strong>Read</strong></span> the question carefully to see what you have to do.</li>
+<li><span style="color: #236fa1;"><strong>Read and highlight the stimulus.</strong> <span style="color: #000000;">Structure chart questions </span></span>almost always have a stimulus. When you read the stimulus, you need to use the highlighter tool to <strong>highlight</strong> any clues to what the modules are, their hierarchy and what data/flags/repetition/decision you will need.</li>
+<li>Use the drawing tool to create your structure chart.&nbsp;
+<ol>
+<li>Draw the modules and arrange them in their hierarchy and leave enough space so data/flags can be placed along side the connecting lines.</li>
+<li>Draw all the data/flags/repetition/decisions.</li>
+</ol>
+</li>
+<li><span style="color: #236fa1;"><strong>Reread</strong></span> the question/stimulus and make sure you <strong>haven't missed anything.</strong></li>
+</ol>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<p class="card-title"><span style="color: #34495e;"><strong>ACTIVITY: Practice HSC Style Question</strong></span></p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-pen-fancy " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Answer the Question:</strong></span> Using the question procedure above, <span style="background-color: #fbeeb8;"><strong>expand</strong></span> <strong>Structure Chart&nbsp;— Example Question</strong> below and complete it either on a piece of paper or using the online HSC Drawing Tool. You can access it by navigating to question 9 the <a class="" href="https://fam.hsconline.nesa.nsw.edu.au/">HSC Software Engineering Familiarisation Exam,</a>&nbsp;which has a drawing space you can repurpose for this question.</p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-graduation-cap " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learn from the Question: </strong></span></p>
+<ol>
+<li class="card-text"><strong>Compare</strong> your answer with the <strong>sample answer</strong> in the<strong> second expander below.</strong></li>
+<li class="card-text"><strong>Read</strong> the <strong>question walkthrough</strong> to see how to improve and for tips on how to maximise your marks in this type of HSC question.</li>
+<li class="card-text">Formally <strong>mark your response</strong> from the eyes of a marker <strong>using the provided marking criteria.</strong></li>
+</ol>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-expander-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Structure Chart — Example Question (without annotations)</h3>
+<div class="dp-panel-content">
+<p><img src="../../assets/8dc06d66f1dc06eb.png" alt="SE - structuure chart (unanswered)-1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542462" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Structure Chart — Example Question (sample answer, question walkthrough, how to mark your work)</h3>
+<div class="dp-panel-content ">
+<p><span style="font-size: 14pt;"><strong>Sample Answer</strong></span></p>
+<p><img src="../../assets/0de08fb3b8fdc94d.png" alt="Screenshot 2025-06-30 at 10.06.20 pm.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542495" data-api-returntype="File" loading="lazy"></p>
+<p><span style="font-size: 14pt;"><strong>Question Breakdown &amp; Tips and Tricks</strong></span></p>
+<p><span style="font-size: 12pt;"><strong>Question: <span style="color: #236fa1;">Draw</span></strong> a <strong><span style="color: #169179;">structure chart</span></strong> to represent this <span style="color: #236fa1;"><strong>home automation system.</strong></span> (4 marks)</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 1. Read the question carefully</strong></span></h3>
+<p class="card-title">When reading the question, it's important to ask these two questions:</p>
+<ol id="" class="">
+<li class=""><strong>What is the topic/content area?</strong> This question is testing our ability to create an <span style="font-size: 12pt;"><strong><span style="color: #169179;">structure chart. </span></strong></span><span style="color: #169179;"><span style="color: #000000;">They can be found on page 7</span></span>&nbsp;of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></li>
+<li class=""><span style="color: #000000;"><strong>What are we required to do?</strong> We need to <span style="color: #e67e23;"><span style="color: #236fa1;"><span style="color: #000000;"><span style="color: #236fa1;"><strong>draw</strong></span> a structure chart that <span style="color: #236fa1;"><strong>represents the home automation system</strong></span> in the stimulus.</span></span></span></span></li>
+</ol>
+</div>
+</div>
+<p><strong>Stimulus:</strong></p>
+<p><span>A home automation system uses a <span style="background-color: #fbeeb8;">variety or sensors and actuators to automate home functions</span> such as <span style="background-color: #fbeeb8;">turning on lights, arming alarms, and locking/unlocking doors.</span></span></p>
+<p><span>The central computer <span style="background-color: #c2e0f4;">monitors all sensor inputs</span> and then <span style="background-color: #c2e0f4;">processes the sensor input.</span> <span style="background-color: #c2e0f4;">Depending on the analysis of the sensor values, certain actions are completed.</span> E.g if <span style="background-color: #c2e0f4;"><span style="background-color: #f8cac6;">motion is detected</span> in a room, the lights will be turned on.</span> <span style="background-color: #c2e0f4;">After <span style="background-color: #f8cac6;">9PM</span>, the door automatically lock</span> and if the <span style="background-color: #c2e0f4;">motion sensors are triggers while the system is armed, an alarm will go off</span> a the <span style="background-color: #c2e0f4;">home owners will have a text message sent to them.</span></span></p>
+<p><span>There is a <span style="background-color: #c2e0f4;">web dashboard which is used to control the system</span> such as<span style="background-color: #f8cac6;"> sensor sensitivity</span> and what times the door lock / alarm is armed.<br></span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dark">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 2. Analyse the stimulus</strong></span></h3>
+<p class="card-text">As you read the stimulus, highlight any processes/ subroutines you see and also the data/flags/repetition/decisions.</p>
+<p class="card-text"><strong>Subroutines</strong></p>
+<p class="card-text">In the second paragraph of the stimulus, we can see the first subroutine is probably <strong>"get sensor values"</strong> followed by <strong>"process sensor value"</strong>. Then there will be a bunch of actions that need to happen based on that data analysis. The examples in the second sentence of the second paragraph indicate the need for <strong>"manage lights"</strong> and <strong>"lock/unlock doors",</strong> and <strong>"manage alarm system". </strong></p>
+<p class="card-text">Now it also mentioned s<strong>etting off an alarm</strong> and <strong>messaging the home owners.</strong> <span style="background-color: #fbeeb8;">We need to decide if these go on the same level as "get sensor values" and "manage alarm system" or if they are subprocesses of an exisiting subroutine</span> we've identified, and indeed they can definitely fit as subprocesses of the <span style="background-color: #fbeeb8;">"manage alarm system" subroutine.</span> This is because the stimulus said&nbsp; that while the system is armed, if motion is detected, the alarm is set off and the home owners are contacted <span style="background-color: #fbeeb8;">and this is all part of the alarm system.</span> Now <span style="background-color: #fbeeb8;">these two happen in an order, first the alarm is set off, and then the home owners are sent a message,</span> so the "set off alarm" sub process will be below the "manage alarm system" subroutine but going to the left and "message owner" will be below "manage alarm system" too, but to the right of "set off alarm" since it happens only after the alarm is actually set off. Then the process "manage alarm system" is able to coordinate these two subprocesses based on the data/flags it receives.</p>
+<p class="card-text">Finally, it also mentioned a web dashboard which allows settings to be adjusted. This means we need <strong>subroutine for adjusting settings. </strong><span style="background-color: #fbeeb8;">This will be on the same level as all the other main processes since it's a distinct step in the home automation system rather than a subprocess or an exisiting subroutine.</span></p>
+<p class="card-text"><strong>Data/Flags/Decisions</strong></p>
+<table style="border-collapse: collapse; width: 99.9796%;" border="1">
+<tbody>
+<tr>
+<td style="width: 13.9031%;"><strong>Subroutine</strong></td>
+<td style="width: 41.8273%;"><strong>Input</strong></td>
+<td style="width: 44.2492%;"><strong>Output</strong></td>
+</tr>
+<tr>
+<td style="width: 13.9031%;">get sensor values</td>
+<td style="width: 41.8273%;"><strong>sensor settings</strong> as data which are passed up from the "configure smart home settings" and back down the the "get sensor values" process</td>
+<td style="width: 44.2492%;"><strong>Sensor readings (including the time)</strong> as data since a clock is sort of a type of sensor.</td>
+</tr>
+<tr>
+<td style="width: 13.9031%;">analyse sensor data</td>
+<td style="width: 41.8273%;"><strong>Sensor readings </strong>as data</td>
+<td style="width: 44.2492%;"><strong>MotionDetected as a flag. </strong>There will obviously be data/flags returned, but for the functionality described in the stimulus, this is enough.</td>
+</tr>
+<tr>
+<td style="width: 13.9031%;">manage alarm system</td>
+<td style="width: 41.8273%;">
+<p><strong>motion detected as a flag</strong></p>
+<p><strong>isArmed as a flag </strong>(isArmed is considered to be part of the configure smart home settings and is selectively passed down from the parent module "home automation system" which coordinates all submodules.)</p>
+</td>
+<td style="width: 44.2492%;"><strong>alarmActive as a flag</strong> (not used for much, but still important to return something relevant.)</td>
+</tr>
+<tr>
+<td style="width: 13.9031%;">lock/unlock doors</td>
+<td style="width: 41.8273%;">
+<p><strong>time as data</strong></p>
+<p><strong>doorSettings as data </strong>(so it knows when to lock and unlock doors)</p>
+</td>
+<td style="width: 44.2492%;"><strong>doorsLocked as a flag </strong>so the system knows the state of the doors.</td>
+</tr>
+<tr>
+<td style="width: 13.9031%;">Manage lights</td>
+<td style="width: 41.8273%;">
+<p><strong>motionDetected as flag</strong></p>
+</td>
+<td style="width: 44.2492%;"><strong>lightsOn as flag </strong>so the system knows if the the lights are on or not.</td>
+</tr>
+<tr>
+<td style="width: 13.9031%;">configure smart home settings</td>
+<td style="width: 41.8273%;">
+<p><strong>current settings as data </strong>passed down form the parent module "home automation system" which stores /passes the settings around.</p>
+</td>
+<td style="width: 44.2492%;"><strong>newSettings as data </strong>after they have been edited by the user.</td>
+</tr>
+<tr>
+<td style="width: 13.9031%;">set off alarm</td>
+<td style="width: 41.8273%;">
+<p><strong>motionDetected as flag</strong></p>
+<p><strong>isArmed as flag</strong></p>
+<p>The <strong>decision diamond</strong> tells us that we only take this branch if both of the flags are true.</p>
+</td>
+<td style="width: 44.2492%;"><strong>alarmActive as a flag </strong>so we know weather to send the home owners a message.</td>
+</tr>
+<tr>
+<td style="width: 13.9031%;">message owner</td>
+<td style="width: 41.8273%;">
+<p><strong>alarmActive as flag</strong></p>
+<p>The <strong>decision diamond</strong> tells us that we only take this branch is alarmActive is true.</p>
+</td>
+<td style="width: 44.2492%;"><strong>success as a flag </strong>so the system know the message was sent correctly.</td>
+</tr>
+</tbody>
+</table>
+<p class="card-text"><strong>Repetition</strong></p>
+<p class="card-text">Since we want to constantly monitor the sensors, complete the action and be able to update the settings any time, we need all of the processes on level 1 of the diagram to be looped.</p>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong><span style="font-size: 12pt;">Step 3.1 Draw the modules and arrange them in their hierarchy</span></strong></p>
+<ol>
+<li class="card-text">First, we need to insert a rectangle and inside place some text that says "home automation system". This will be the top (level 0) of our diagram.</li>
+<li class="card-text">Then we add all the level 1 subroutines and make sure the are spaced far enough apart and far enough below level 0 so when we add the data/flags, they fit.</li>
+<li class="card-text">Now add the level 2 subroutines below "manage alarm system" and place them below, the same distance from level 1 as level 1 is from level 0. Everything should be aligned properly.</li>
+<li class="card-text">Add the lines between everything and make sure it looks like there is enough space. If not, move stuff around.</li>
+</ol>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 3.2&nbsp;Draw all the data/flags/repetition/decisions.</strong></p>
+<ol>
+<li class="card-text">Open the shape library and you'll see the structure chart diamond, repetition, data, and flag shapes. They are below.<img class="mx-auto d-block" src="../../assets/17e0152e02306c57.png" alt="Screenshot 2025-06-30 at 10.12.53 pm-1.png" width="200" height="259" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542591" data-api-returntype="File" loading="lazy"></li>
+<li class="card-text">Always make sure <strong>data/flags go down of the left side of the line</strong> and c<strong>ome up on the right side of the line.</strong></li>
+<li class="card-text">Use the <strong>text tool</strong> the label the data/flags.</li>
+<li class="card-text">Add the <strong>repetition symbol</strong> at the top over all the level one processes.</li>
+<li class="card-text">Add the <strong>diamond decisions </strong>at the bottom for the "set off alarm" and "message owner" processes.</li>
+</ol>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 4. Examine your work and make sure it's correct</strong></p>
+<p class="card-text">Looking back to our highlights of the stimulus we can see we've included all the required functionality and added a great deal of our own interpretation to make the diagram better. All the data/flags make sense are are positioned on the correct sides of the connecting lines. Everything is neatly aligned.</p>
+</div>
+</div>
+<p><span style="font-size: 14pt;"><strong>Marking Criteria (through the eyes of a marker)</strong></span></p>
+<p><img class="mx-auto d-block" src="../../assets/f0c160c627fcee02.png" alt="SE - Structure chart - Marking Criteria.png" width="500" height="261" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542506" data-api-returntype="File" loading="lazy"></p>
+<p><strong>How to get full marks?</strong></p>
+<ul>
+<li>To get full marks, you need to create a <strong><em>"substantially correct entity relationship diagram"</em></strong> that includes all the core processes, flags, data, repetition, and decisions. When we analysed the stimulus, we made sure we were aware of all the processes needed and we also planned all the data/flags, repetition and decision. Even if we missed one small detail, we could still be "substantially correct" and get full marks, but by being rigorous and not just relying on our memory we can reduce the number of silly mistakes whist also improving our understanding of the question and quality of our solution.</li>
+<li><strong>Know how to create structure charts.</strong><strong>&nbsp;</strong>Revise page 7 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></li>
+</ul>
+<p><strong>I'm completely stuck and not getting anywhere. How do I salvage as many marks as a I can?</strong></p>
+<ul id="" class="">
+<li class=""><strong>Don't leave the question blank.</strong> If you're totally stuck, there are always some basic things you can do to guarantee at least one or two marks. E.g there is one mark for <em><strong>"providing a diagram that shows some understanding of the scenario". </strong></em>This means you just need to put down some of the subroutines.</li>
+<li class=""><span style="font-family: inherit; font-size: 1rem;">Even if you're not totally sure about something, just give it a go and you might be right. E.g even if you don't exactly how to arrange all the subroutines if you include as many as you can and attach appropriate data, you can still get 2 to 3 marks.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Entity Relationship Diagram</h3>
+<div class="dp-panel-content">
+<p class=""><span style="font-size: 14pt;"><strong>Drawing Questions — Entity Relationship Diagrams (ERD)</strong></span></p>
+<p class="">An entity relationship diagram (sometimes called a database schema) is used to represent the <strong>tables and relationships in a relational database.</strong> They use rectangles to represent the tables with the table's title at the top and separate from the attributes below via a dividing line. These attributes are all the fields in each record of the table and include the primary and foreign keys of the table. Lines are drawn between them and labeled with the nature of the relationship. See the example below from your course specs. If you're not up to date on entity relationship diagrams, revise<span> page 23 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></span></p>
+<p class=""><img class="mx-auto d-block" src="../../assets/1a26678d1292e62e.png" alt="Screenshot 2025-06-13 at 3.04.07 pm.png" width="600" height="207" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542512" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Steps for Answering Entity Relationship Diagram (ERD) Questions:</strong></p>
+<ol>
+<li><span style="color: #236fa1;"><strong>Read</strong></span> the question carefully to see what you have to do.</li>
+<li><span style="color: #236fa1;"><strong>Read and highlight the stimulus.</strong> <span style="color: #000000;">Decision tree questions </span></span>almost always have a stimulus. When you read the stimulus, you need to use the highlighter tool to <strong>highlight</strong> any clues to the <strong>questions you need to ask</strong> as well as <strong>what the end points (leaves) of the tree will be.</strong></li>
+<li>Use the drawing tool to create your ERD.&nbsp;
+<ol>
+<li>Draw the tables with the table title, attributes and labeled primary keys (P) and foreign keys (F).</li>
+<li>Draw the links between the tables and label them with the multiplicity.</li>
+</ol>
+</li>
+<li><span style="color: #236fa1;"><strong>Reread</strong></span> the question/stimulus and make sure you <strong>haven't missed anything.</strong></li>
+</ol>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<p class="card-title"><span style="color: #34495e;"><strong>ACTIVITY: Practice HSC Style Question</strong></span></p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-pen-fancy " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Answer the Question:</strong></span> Using the question procedure above, <span style="background-color: #fbeeb8;"><strong>expand</strong></span> <strong>ERD — Example Question</strong> below and complete it either on a piece of paper or using the online HSC Drawing Tool. You can access it by navigating to question 9 the <a class="" href="https://fam.hsconline.nesa.nsw.edu.au/">HSC Software Engineering Familiarisation Exam,</a>&nbsp;which has a drawing space you can repurpose for this question.</p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-graduation-cap " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learn from the Question: </strong></span></p>
+<ol>
+<li class="card-text"><strong>Compare</strong> your answer with the <strong>sample answer</strong> in the<strong> second expander below.</strong></li>
+<li class="card-text"><strong>Read</strong> the <strong>question walkthrough</strong> to see how to improve and for tips on how to maximise your marks in this type of HSC question.</li>
+<li class="card-text">Formally <strong>mark your response</strong> from the eyes of a marker <strong>using the provided marking criteria.</strong></li>
+</ol>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-expander-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">ERD — Example Question (without annotations)</h3>
+<div class="dp-panel-content">
+<p><img src="../../assets/5dfae81d085b4316.png" alt="ERD (unanswered).png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542532" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">ERD — Example Question (sample answer, question walkthrough, how to mark your work)</h3>
+<div class="dp-panel-content ">
+<p><span style="font-size: 14pt;"><strong>Sample Answer</strong></span></p>
+<p><img src="../../assets/1365b080574af3ae.png" alt="ERD Answer.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542539" data-api-returntype="File" loading="lazy"></p>
+<p><span style="font-size: 14pt;"><strong>Question Breakdown &amp; Tips and Tricks</strong></span></p>
+<p><span style="font-size: 12pt;"><strong>Question: <span style="color: #236fa1;">Draw</span></strong> an <strong><span style="color: #169179;">entity relationship diagram</span></strong> to represent the <span style="color: #236fa1;"><strong>proposed calendar app.</strong></span> (4 marks)</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 1. Read the question carefully</strong></span></h3>
+<p class="card-title">When reading the question, it's important to ask these two questions:</p>
+<ol id="" class="">
+<li class=""><strong>What is the topic/content area?</strong> This question is testing our ability to create an <span style="font-size: 12pt;"><strong><span style="color: #169179;">entity relationship diagram. </span></strong></span><span style="color: #169179;"><span style="color: #000000;">Entity relationship diagrams can be found on page 23</span></span>&nbsp;of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a><em>&nbsp;</em>Revise <a class="dp-course-link" title="2.3 Web Protocols" href="12951-043.html" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/2-dot-3-web-protocols" data-api-returntype="Page">2.3 Web Protocols</a> for more information.</li>
+<li class=""><span style="color: #000000;"><strong>What are we required to do?</strong> We need to <span style="color: #e67e23;"><span style="color: #236fa1;"><span style="color: #000000;"><span style="color: #236fa1;"><strong>draw</strong></span> a decision tree that allows us to <span style="color: #236fa1;"><strong>distinguish between web protocols. </strong></span>We will need to refer to the stimulus for the exact requirements.</span></span></span></span></li>
+</ol>
+</div>
+</div>
+<p><strong>Stimulus:</strong></p>
+<p><span>A new website calendar app is being created for a learning management system and the following requirements have been identified:</span></p>
+<ol>
+<li><span>A <span style="background-color: #f8cac6;">user</span> can <span style="background-color: #fbeeb8;">add many</span> <span style="background-color: #f8cac6;">calendars</span> to their account.</span></li>
+<li><span>A <span style="background-color: #f8cac6;">user</span> can <span style="background-color: #fbeeb8;">add a range of items</span> to their <span style="background-color: #f8cac6;">calendars</span>, but an <span style="background-color: #fbeeb8;">item can only belong to one calendar</span>. These items include</span></li>
+</ol>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><span><span style="background-color: #f8cac6;">events</span> (<span style="background-color: #c2e0f4;">start date/time, end date/time, description</span>).</span></li>
+<li><span><span style="background-color: #f8cac6;">tasks</span> (<span style="background-color: #c2e0f4;">due date, duration, description, priority, status</span>).</span></li>
+<li><span><span style="background-color: #f8cac6;">meetings</span> (<span style="background-color: #c2e0f4;">start date/time, end date/time, has other users as</span> <span style="background-color: #c2e0f4;"><span style="background-color: #f8cac6;">attendees</span></span> <span style="background-color: #c2e0f4;"><span style="background-color: #fbeeb8;">who can also see the meeting on their calendar</span></span>).</span></li>
+</ul>
+</li>
+</ul>
+<p><span>The following tables have been identified for the schema</span></p>
+<ul>
+<li><span style="background-color: #f8cac6;">Users</span></li>
+<li><span style="background-color: #f8cac6;">Calendars</span></li>
+<li><span style="background-color: #f8cac6;">Events</span></li>
+<li><span style="background-color: #f8cac6;">Tasks</span></li>
+<li><span style="background-color: #f8cac6;">Meetings</span></li>
+<li><span><span style="background-color: #f8cac6;">Meeting_Attendees</span><br></span></li>
+</ul>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dark">
+<div class="card-body">
+<h3 class="card-title"><span style="font-size: 16px;"><strong>Step 2. Analyse the stimulus</strong></span></h3>
+<p class="card-text">As you read the stimulus, highlight any tables you identify as red, any attributes in blue, and any clues as to the relationships between the tables in yellow.</p>
+<p class="card-text"><strong>Tables</strong></p>
+<p class="card-text">In the stimulus above, the question has been kind enough to give us all the tables we need, although even with out it, there is enough information in the main part of the stimulus to identify these. The tables we need are Users, Calendars, Events, Tasks, Meetings and Meeting_Attendees. Meeting_Attendees is an intermediary table which allows there to be a many to many relationship between Users and Meetings.</p>
+<p class="card-text"><strong>Relationships</strong></p>
+<ul>
+<li class="card-text">Since users can have multiple calendars there will be a one-to-many relationship between Users and Calendars.</li>
+<li class="card-text">Since calendars can have many events, tasks and meetings, there will be a one to many relationship between Calendars and all these tables.</li>
+<li class="card-text">In the stimulus, the description for the meetings table is that it "has other users as attendees who also see the meeting on their calendar." This gives us a hint that the attendees are not merely stored as an attribute in the meetings table, but rather, there is a many to many relationship between Users and Meetings where all users are linked to and can see their meetings and multiple meetings can be linked to a User. This explains the presence of the&nbsp; Meeting_Attendees table which is an intermediary table between Users and Meetings to allow this many-to-many relationship.</li>
+</ul>
+<p class="card-text"><strong>Attributes</strong></p>
+<p class="card-text">Now that we know the relationship we also know the primary and foreign keys needed for each tables along with their other attributes.</p>
+<ul>
+<li class="card-text">Below some of the attributes are in <span style="color: #169179;">green font</span>. These are the I've added to relate to the scenario better and fill in the gaps of the stimulus.</li>
+<li class="card-text">The primary and foreign keys we've derived from the stimulus a in <span style="color: #e67e23;">orange font.</span></li>
+<li class="card-text"><span style="color: #000000;">The provided attributes form the stimulus are in black font.</span></li>
+</ul>
+<table style="border-collapse: collapse; width: 99.9796%; height: 201.6px;" border="1">
+<tbody>
+<tr style="height: 28.8px;">
+<td style="width: 18.719%; height: 28.8px;"><strong>Table</strong></td>
+<td style="width: 81.2605%; height: 28.8px;"><strong>Attributes</strong></td>
+</tr>
+<tr style="height: 28.8px;">
+<td style="width: 18.719%; height: 28.8px;">Users</td>
+<td style="width: 81.2605%; height: 28.8px;"><span style="color: #e67e23;">userId (P),</span> firstName, lastName, <span style="color: #169179;">dateJoined</span></td>
+</tr>
+<tr style="height: 28.8px;">
+<td style="width: 18.719%; height: 28.8px;">Calendars</td>
+<td style="width: 81.2605%; height: 28.8px;"><span style="color: #e67e23;">calendarId (P)</span>, <span style="color: #169179;">name, colour, dateAdded</span>, <span style="color: #e67e23;">userId (F)</span></td>
+</tr>
+<tr style="height: 28.8px;">
+<td style="width: 18.719%; height: 28.8px;">Events</td>
+<td style="width: 81.2605%; height: 28.8px;"><span style="color: #e67e23;">eventId (P)</span>, startDateTime, endDateTime, description, <span style="color: #e67e23;">calendarId (F)</span></td>
+</tr>
+<tr style="height: 28.8px;">
+<td style="width: 18.719%; height: 28.8px;">Tasks</td>
+<td style="width: 81.2605%; height: 28.8px;"><span style="color: #e67e23;">taskId (P),</span> dueDate, duration, description, priority, status, <span style="color: #e67e23;">calendarId (F)</span></td>
+</tr>
+<tr style="height: 28.8px;">
+<td style="width: 18.719%; height: 28.8px;">Meetings</td>
+<td style="width: 81.2605%; height: 28.8px;"><span style="color: #e67e23;">meetingId (P)</span>, startDateTime, endDateTime, <span style="color: #e67e23;">calendarId (F)</span></td>
+</tr>
+<tr style="height: 28.8px;">
+<td style="width: 18.719%; height: 28.8px;">Meeting_Attendees</td>
+<td style="width: 81.2605%; height: 28.8px;"><span style="color: #e67e23;">meeting_attendeeId (P), meetingId (F), userId (F)</span></td>
+</tr>
+</tbody>
+</table>
+<p class="card-text">Now we are ready to draw our ERD.</p>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong><span style="font-size: 12pt;">Step 3.1 Draw the tables with their attributes.</span></strong></p>
+<ol>
+<li class="card-text">First, we need to insert a table item. It looks like a two row table with the top part only large enough for a title and the lower part with plenty of space for all the attributes. You can find it by open by clicking on the "library" button at the top right of the drawing tool. Inside you will see the shape below. Click to insert it on your Canvas.<img class="mx-auto d-block" src="../../assets/92bb365ccbe51925.png" alt="Screenshot 2025-06-13 at 3.59.33 pm-1.png" width="200" height="234" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542599" data-api-returntype="File" loading="lazy"></li>
+<li class="card-text">Use the text tool to add the title of the table in the top row of the shape. Double click on the rectangle to customise the positioning of the text on it.</li>
+<li class="card-text">Add another text box in the large portion below and add all the attributes making sure to include a (P) after primary keys and an (F) after foreign keys. If you need to resize the table shape, you need to right click on it and select "Ungroup selection". This will disassemble the shape into a rectangle and dividing line. You can now resize each part of the shape individually weather you need more width or height.</li>
+</ol>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 3.2 Draw the relationships between the tables.</strong></p>
+<ol>
+<li class="card-text">Using the arrow tool (press A on your keyboard as a shortcut), <strong>draw a line from one table to the other</strong> making sure the l<strong>ine intersects the table's boarder at the height of the attribute the relationship is being made on.</strong> It's often a good idea to ensure the text box inside the table shape spans the width of the table so the arrows link consistently.&nbsp;</li>
+<li class="card-text">Select the arrow and then s<strong>et the type of be "elbow arrow"</strong> from the "arrow type" section in the sidebar. This will make it from a curvy/straight arrow into one that makes right angle turns.</li>
+<li class="card-text"><strong>Set the arrowheads of both sides of the arrow to none.</strong> This will make it look like a line, but we needed to use an arrow to get to "elbow" style often used in ERDs.</li>
+<li class="card-text">Repeat step 1 adding the arrows between all the tables. You may find that you need to move some of the tables so the lines don't cross. <strong>We don't want to have crossing lines on ERDs if it's possible. </strong>Sometimes the arrow tool can be frustrating. Just make sure you start them right on the edge boarder of the shape and then let go when you are hovering over the destination for the line.</li>
+<li class="card-text">Only after you've added all your lines should you <strong>add the multiplicities</strong> since we don't want to keep moving them around as we rearrange the diagram and it can also confuse the arrow tool making it produce all sorts of crazy results. <strong>To add a "1" use the text tool</strong> and type "1" into it. <strong>For the infinity symbol, open the library again and select the infinity symbol from the list of shapes.</strong> Once you've got one of each, you can just copy them to all the other lines.</li>
+</ol>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 4. Examine your work and make sure it's correct</strong></p>
+<p class="card-text">Looking back to our highlights of the stimulus we can see we've added all the required tables and attributes. We've also added a few of our own to add extra detail. We've also included all the correct relationships required.</p>
+</div>
+</div>
+<p><span style="font-size: 14pt;"><strong>Marking Criteria (through the eyes of a marker)</strong></span></p>
+<p><img class="mx-auto d-block" src="../../assets/5d0285f6e6e9bfb7.png" alt="ERD - 1 - Marking Criteria.png" width="500" height="295" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3542556" data-api-returntype="File" loading="lazy"></p>
+<p><strong>How to get full marks?</strong></p>
+<ul>
+<li>To get full marks, you need to create a <strong><em>"substantially correct entity relationship diagram"</em></strong> that includes all required tables/attributes, primary/foreign keys and relationships + multiplicities. To ensure we included all of these, we highlighted them stimulus. Even if we missed one small detail, we could still be "substantially correct" and get full marks, but by being rigorous and not just relying on our memory we can reduce the number of silly mistakes whist also improving our understanding of the question and quality of our solution.</li>
+<li><strong>Know how to create entity relationship diagrams. </strong>In this question, the hardest part with the many-to-many relationship involving the intermediary table.<strong> </strong>Revise page 23 of your <a class="" href="https://curriculum.nsw.edu.au/learning-areas/tas/software-engineering-11-12-2022/overview#software-engineering-course-specifications-software_engineering_11_12_2022">course specifications.</a></li>
+</ul>
+<p><strong>I'm completely stuck and not getting anywhere. How do I salvage as many marks as a I can?</strong></p>
+<ul id="" class="">
+<li class=""><strong>Don't leave the question blank.</strong> If you're totally stuck, there are always some basic things you can do to guarantee at least one or two marks. E.g there is one mark for <em><strong>"providing a diagram that shows some understanding of the scenario". </strong></em>This means you just need to put down one or two tables the have a title and some attributes and you would get one mark. If you had two correct tables and maybe a simple relationship, that could get you two marks which is better that none, so always put down what you know.</li>
+<li class=""><span style="font-family: inherit; font-size: 1rem;">Even if you're not totally sure about something, just give it a go and you might be right. E.g even if you're not sure how to do the many to many relationship, just look at the relationships you've identified and the tables and try something that might work.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-card card">
+<div class="card-body">
+<p class="card-title dp-ignore-theme"><strong>Disclaimer</strong></p>
+<p class="card-text">Please note that these are not official HSC questions from NESA — You will not be able to find them on the internet. They have been designed to look very similar to what you can expect in the exam, so you can complete them like any official NESA exam question. Marking criteria that reflect the HSC have also been provided where applicable.</p>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-080.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-082.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

@@ -1,0 +1,720 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 11 (Term 3: Weeks 1-2) Mechatronics — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">11SENX Software Engineering 2025 · module 11 of 17</p>
+<h1>Cycle 11 (Term 3: Weeks 1-2) Mechatronics</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="11962-all.html">Whole course</a><span class="cur">By module</span><a href="../course-11962.html">By lesson</a></div>
+<h3 class="readles">3.1 Mechatronic Systems</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<p class="alert alert-primary overflow-hidden"><strong>Syllabus<br></strong>Outline applications of mechatronic systems in a variety of specialised fields</p>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">develop an understanding of the diverse applications of mechatronic systems in various specialised fields</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">demonstrate knowledge of various applications of mechatronic systems</span></li>
+<li><span style="font-size: 13.3333px;">assess the role of mechatronics in modern technology</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<div style="width: 100%;" title="embedded content">
+<div style="position: relative; padding-bottom: 62.5%; padding-top: 0; height: 0;">
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-1-mechatronic-systems" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://view.genially.com/6673684072a57000137c9852</span></div></div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Manufacturing and Industrial Automation</strong></h4>
+<p>Mechatronic systems significantly enhance manufacturing processes by integrating automation, which increases precision, efficiency, and flexibility.</p>
+<ul>
+<li><strong>Robotic Arms:</strong> Used for tasks such as welding, painting, assembly, pick and place, and packaging. They offer high precision and can work continuously without fatigue.</li>
+<li><strong>Automated Guided Vehicles (AGVs):</strong> These are used to transport materials within a factory autonomously, reducing the need for human labour and increasing operational efficiency.</li>
+<li><strong>Computer Numerical Control (CNC) Machines:</strong> These automated machining tools are controlled by a computer, allowing for the precise and complex manufacturing of parts, which is essential for maintaining high-quality production standards.</li>
+</ul>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/ba9330b47eecaa25.png" alt="image.png" width="545" height="396" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197857" data-api-returntype="File" loading="lazy"><em>Automation in Vehicle Production</em></p>
+<p>&nbsp;</p>
+<h4><strong>Mechatronic Industries</strong></h4>
+<div class="dp-panels-wrapper dp-tabs dp-panel-active-color-dp-white">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Automotive</h3>
+<div class="dp-panel-content">
+<p>In the automotive sector, mechatronic systems enhance vehicle safety, performance, and automation, leading to more reliable and intelligent vehicles.</p>
+<ul>
+<li><strong>Anti-lock Braking Systems (ABS):</strong> Prevents wheels from locking up during braking, which helps maintain vehicle control and reduces stopping distances, especially on slippery surfaces.</li>
+<li><strong>Electronic Stability Control (ESC):</strong> Enhances vehicle stability by detecting and reducing loss of traction, preventing skidding and rollovers.</li>
+<li><strong>Advanced Driver-Assistance Systems (ADAS):</strong> Features like adaptive cruise control, lane departure warnings, and automatic emergency braking improve driver safety and convenience by assisting with driving tasks and alerting drivers to potential hazards.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Aerospace</h3>
+<div class="dp-panel-content">
+<p>Mechatronic systems in aerospace contribute to enhanced control, stability, and operational efficiency of aircraft and spacecraft.</p>
+<ul>
+<li><strong>Unmanned Aerial Vehicles (UAVs):</strong> Also known as drones, these are used for surveillance, mapping, and delivery, providing valuable data and services with precision and flexibility.</li>
+<li><strong>Fly-by-Wire Systems:</strong> Replace traditional manual flight controls with electronic interfaces, improving aircraft performance and safety by allowing for more precise control and reducing pilot workload.</li>
+<li><strong>Satellite Attitude Control:</strong> Systems that maintain the orientation of satellites, ensuring they remain properly aligned for communication and observation tasks.</li>
+</ul>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/a0973d27ea6cd834.png" alt="image.png" width="633" height="265" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197858" data-api-returntype="File" loading="lazy"><em>Aerospace Engineering</em></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Medical Field</strong></h4>
+<p>Mechatronic systems revolutionise medical technology, enhancing diagnostic, therapeutic, and surgical capabilities.</p>
+<ul>
+<li><strong>Surgical Robots:</strong> Provide surgeons with enhanced precision and control during minimally invasive procedures, leading to better patient outcomes and faster recovery times.</li>
+<li><strong>Prosthetics:</strong> Advanced prosthetic limbs with integrated sensors and actuators allow for more natural movement and improved functionality for amputees.</li>
+<li><strong>Diagnostic Devices:</strong> Automated systems such as blood analysers and MRI machines offer quick, accurate diagnostics, which are essential for effective treatment planning.</li>
+</ul>
+<p>&nbsp;</p>
+<h4><strong>Consumer Electronics</strong></h4>
+<p>In consumer electronics, mechatronic systems improve functionality, user experience, and connectivity.</p>
+<ul>
+<li><strong>Smartphones:</strong> Integrate sensors, cameras, and actuators to offer a wide range of functionalities, from high-quality photography to health monitoring.</li>
+<li><strong>Home Automation Systems:</strong> Devices like smart thermostats, lighting, and security systems enhance home comfort, energy efficiency, and security through automation and remote control.</li>
+<li><strong>Wearable Technology:</strong> Fitness trackers and smartwatches monitor health parameters, providing users with valuable data to manage their health and fitness.</li>
+</ul>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/0458ffad65fb2ce4.png" alt="image.png" width="546" height="271" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197859" data-api-returntype="File" loading="lazy"><em>Home Automation System Graphic</em></p>
+<p>&nbsp;</p>
+<h4><strong>Agriculture</strong></h4>
+<p>Mechatronic systems in agriculture increase efficiency, precision, and sustainability in farming practices.</p>
+<ul>
+<li><strong>Autonomous Tractors:</strong> Perform tasks such as ploughing, seeding, and harvesting with minimal human intervention, increasing productivity and reducing labour costs.</li>
+<li><strong>Precision Farming Equipment:</strong> Utilises GPS and sensors to optimise field management, leading to better crop yields and reduced resource usage.</li>
+<li><strong>Drones:</strong> Used for crop monitoring, spraying pesticides, and surveying large areas, providing detailed insights that help farmers make informed decisions.</li>
+</ul>
+<p>&nbsp;</p>
+<h4><strong>Energy Sector</strong></h4>
+<p>Mechatronic systems help manage and optimise energy production, distribution, and consumption.</p>
+<ul>
+<li><strong>Smart Grids:</strong> Integrate digital technology to manage electricity supply efficiently, improving reliability and facilitating the integration of renewable energy sources.</li>
+<li><strong>Renewable Energy Systems:</strong> Automated systems manage wind turbines and solar panels, maximising energy production and efficiency.</li>
+<li><strong>Robotic Inspection Systems:</strong> Inspect and maintain power lines and pipelines, ensuring safety and reducing downtime through early detection of issues.</li>
+</ul>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/f678d6ca63dbd273.png" alt="image.png" width="639" height="391" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197860" data-api-returntype="File" loading="lazy"><em>Smart Grid Technology</em></p>
+<p>&nbsp;</p>
+<h4><strong>Defence and Military</strong></h4>
+<p>In defence and military applications, mechatronic systems enhance operational capabilities, safety, and effectiveness.</p>
+<ul>
+<li><strong>Unmanned Ground Vehicles (UGVs):</strong> Used for tasks like bomb disposal and reconnaissance missions, reducing the risk to human personnel.</li>
+<li><strong>Exoskeletons:</strong> Enhance soldier capabilities by providing additional strength and endurance, improving mobility and reducing fatigue.</li>
+<li><strong>Autonomous Combat Systems:</strong> Include drones and robotic systems that can operate in combat scenarios, providing surveillance, targeting, and offensive capabilities without putting human lives at risk.</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Automation in Production: <a href="https://www.txone.com/blog/potential-threats-to-automated-factories/" target="_blank">https://www.txone.com/blog/potential-threats-to-automated-factories/</a></li>
+<li>University of Sydney (2024). <a href="https://www.sydney.edu.au/engineering/study/scholarships/engineering-vacation-research-internship-program/aeronautical-engineering.html" target="_blank">Aeronautical Engineering</a></li>
+<li>Security.org (2024). <a href="https://www.security.org/home-automation/" target="_blank">Home Automation</a></li>
+<li>LEM (2024). <a href="https://www.lem.com/en/smart-grid" target="_blank">Smart Grid</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%203.%20Programming%20Mechatronics/PPTs/3.1%20Mechatronic%20Systems.pptx?d=wef2a5b2a52fc4aafb0f1efd8ad5cd88e&amp;csf=1&amp;web=1&amp;e=WzNgrb">3.1 Mechatronic Systems.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-1-mechatronic-systems" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={ef2a5b2a-52fc-4aaf-b0f1-efd8ad5cd88e}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">3.2 Hardware</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<p class="alert alert-primary overflow-hidden"><strong>Syllabus<br></strong>Identify the hardware requirements to run a program and the effect on code development including:<br>assessing the relationship of microcontrollers and the central processing unit (CPU)<br>the influence of instruction set and opcodes<br>the use of address and data registers</p>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">develop an understanding of the hardware requirements necessary to run a program and how these requirements affect code development, including the roles and interactions of microcontrollers and CPUs, the impact of instruction sets and opcodes, and the function of address and data registers.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">assess and explain the relationship between microcontrollers and the central processing unit (CPU) in the context of code execution.</span></li>
+<li><span style="font-size: 10pt;">analyse and discuss how the instruction set and opcodes influence program functionality and performance.</span></li>
+<li><span style="font-size: 10pt;">identify and describe the roles of address and data registers in the process of program execution.</span></li>
+<li><span style="font-size: 10pt;">evaluate hardware requirements for specific programs and determine their impact on code development and performance.</span></li>
+<li><span style="font-size: 10pt;">demonstrate the ability to make informed decisions about hardware requirements based on program needs and development goals.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Different systems have different requirements. A security camera has different functions and hardware than a smart light. Depending on the requirements of each system, our microcontroller may need more pins, Bluetooth capability, or more memory. For example, a smart light would need wireless capability, whereas a security camera would need a camera attached and a powerful enough processor to look at camera data and track faces in real time.&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<h4 class="card-title">Microcontrollers</h4>
+<p>Mechatronic systems are designed to perform specific fixed tasks and, to save cost and space, they do not execute their code on a normal computer or powerful microprocessor (CPU). Mechatronic systems execute their code in a microcontroller which contains a very small microprocessor, some memory to store program code and data and input/output pins to sense and react to their environment.</p>
+<p>To help prototype mechatronic systems, microcontrollers are widely available on circuit boards which include a method to connect and upload code. These boards are called microcontroller boards and may include extra functionality such as sensors, LEDs and buzzers.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/75dac929e35e4975.png" alt="image.png" width="192" height="130" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197994" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Relationship of microcontrollers and the central processing unit</strong></h4>
+<p>Most systems would include a central processing unit (CPU), which processes input and produces output. However, by itself a CPU is useless as there would be no place to store the outputs of the CPU, as well as use it to interface with the environment. In embedded systems, a microcontroller is used for this purpose. A microcontroller contains a CPU, alongside memory and registers (fast, set slots of memory stored within the CPU used for operations) to store the outputs of the CPU, as well as pins to connect peripherals to the CPU.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="../../assets/321c7eddca4e3406.png" alt="image.png" width="419" height="204" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197835" data-api-returntype="File" loading="lazy"><br>ATmega328P microcontroller. Contains the 8-bit microprocessor, registers, flash memory, and I/O lines.<br>From: <a href="https://www.microchip.com/en-us/product/atmega328p" target="_blank">https://www.microchip.com/en-us/product/atmega328p</a></p>
+<p>&nbsp;</p>
+<h4><strong>Instruction set and opcodes</strong></h4>
+<p>Each processor has an instruction set, which determines what instructions do based on the data that is given to the processor. The processor reads the instruction which is a number of bytes of machine code, where the bits that distinguish what instruction it is is called the opcode. The opcode tells the processor what to do, i.e. add two numbers together, move this number into memory. We can use the CHIP-8 programming language as an example as it uses opcodes as lines of code.</p>
+<p><u><span>Note that CHIP-8 is not an instruction but is solely a teaching example in these notes</span></u></p>
+<p><span>An opcode in CHIP-8 takes the form of ZZZZ where Z is a hexadecimal number. The opcode for adding two numbers is 8XY4, where X and Y specify the register slot. If we wanted to add two numbers together and the numbers were in registers 1 and 2, our instruction would be 8124.</span></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/5ac7ec18aaec91a0.png" alt="image.png" width="504" height="385" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197839" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><span>Example excerpt from <a href="https://en.wikipedia.org/wiki/CHIP-8">https://en.wikipedia.org/wiki/CHIP-8</a></span></p>
+<p>We can differentiate between types of CPU instruction sets, which are complex instruction set computers (CISC) and reduced instruction set computers (RISC). CISCs are processors in which opcodes can specify the processor to perform multiple low-level instructions in one opcode, including high-level abstracted instructions such as control flow. RISCs are processors which have two separate types of instructions, which are instructions that load and store from memory and registers, and instructions that use the ALU in conjunction with registers. This means to add a number, it cannot be in memory, it must be in the CPU registers. Thus CISC uses less instructions and system resources but is slower and more power hungry, while RISC uses more instructions and system resources but is faster and more efficient.</p>
+<p>&nbsp;</p>
+<p><strong><span style="text-decoration: underline;">RISC</span></strong><strong> (Reduced Instruction Set Computers)</strong></p>
+<table style="border-collapse: collapse; width: 49.7036%; height: 136px;" border="1">
+<tbody>
+<tr style="height: 53px;">
+<td style="width: 45.9231%; height: 53px; vertical-align: middle;">
+<p><strong>Advantages</strong><strong></strong></p>
+</td>
+<td style="width: 53.9687%; height: 53px; vertical-align: middle;">
+<p><strong>Disadvantages</strong><strong></strong></p>
+</td>
+</tr>
+<tr style="height: 83px;">
+<td style="width: 45.9231%; height: 83px; vertical-align: middle;">
+<ul>
+<li>Less power draw</li>
+<li>Simpler</li>
+<li>Faster execution speed</li>
+</ul>
+</td>
+<td style="width: 53.9687%; height: 83px; vertical-align: middle;">
+<ul>
+<li>More instructions needed</li>
+<li>Larger executable size</li>
+<li>More memory required</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong><span style="text-decoration: underline;">CISC</span></strong><strong> (Complex Instruction Set Computers)</strong></p>
+<table style="border-collapse: collapse; width: 49.7036%; height: 136px;" border="1">
+<tbody>
+<tr style="height: 53px;">
+<td style="width: 45.9231%; height: 53px; vertical-align: middle;">
+<p><strong>Advantages</strong><strong></strong></p>
+</td>
+<td style="width: 53.9687%; height: 53px; vertical-align: middle;">
+<p><strong>Disadvantages</strong><strong></strong></p>
+</td>
+</tr>
+<tr style="height: 83px;">
+<td style="width: 45.9231%; height: 83px; vertical-align: middle;">
+<ul>
+<li>Less instructions needed</li>
+<li>Smaller executable size</li>
+<li>Less memory required</li>
+</ul>
+</td>
+<td style="width: 53.9687%; height: 83px; vertical-align: middle;">
+<ul>
+<li>More power draw</li>
+<li>Complex</li>
+<li>Slower execution speed</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span>For example, the RISC instruction set, ARM, has instructions which are generally 4 bytes in length, while x86 - which is regarded as a CISC instruction set - has instructions that may be anywhere from 1 byte to 15 bytes in length.</span></p>
+<p><u><span>Please note that current instructions sets may include features of both CISC and RISC</span></u></p>
+<p>&nbsp;</p>
+<h4><strong>The use of address and data registers</strong></h4>
+<p>To identify the hardware requirements to run a program and the effect on code development, we must understand the role and use of address and data registers in computing systems.</p>
+<p>&nbsp;</p>
+<p><strong>Hardware Requirements and Address Registers</strong></p>
+<p>Different programs require different hardware capabilities, depending on their complexity and purpose. Address and data registers are critical components of a computer's central processing unit (CPU) and play a vital role in program execution.</p>
+<p>Address Registers: These are special-purpose registers used to store memory addresses. They are essential for accessing and managing memory locations during program execution. For instance, a program that performs extensive data manipulation might require a CPU with multiple address registers to handle the addresses of various data points efficiently. Address registers facilitate the CPU in quickly accessing specific memory locations, which is crucial for both reading from and writing to memory.</p>
+<p>&nbsp;</p>
+<p><strong>Data Registers and Their Impact on Code Development</strong></p>
+<p>Data Registers: These are used to store actual data values that the CPU needs to process. The number and size of data registers directly impact a program's performance and the complexity of operations it can perform. For example, a program that involves heavy numerical computations would benefit from having a CPU with larger and more numerous data registers, allowing it to handle more data simultaneously and execute complex instructions more efficiently.</p>
+<p>&nbsp;</p>
+<p><strong>Example of Use in Code Development</strong></p>
+<p>To illustrate, consider a simple arithmetic operation in assembly language:</p>
+<pre>MOV R1, #5 &nbsp; &nbsp; ; Move the value 5 into register R1<br>MOV R2, #10 &nbsp; &nbsp;; Move the value 10 into register R2<br>ADD R3, R1, R2 ; Add the values in R1 and R2, store the result in R3</pre>
+<p>In this example:<br>- `R1`, `R2`, and `R3` are data registers.<br>- The CPU uses address registers internally to fetch the instructions and operands from memory.<br>- The `MOV` instructions place data into the data registers.<br>- The `ADD` instruction performs the operation using the data in these registers.</p>
+<p>&nbsp;</p>
+<p><strong>Effect on Code Development</strong></p>
+<p>The availability and design of address and data registers influence how programmers write and optimise their code. For instance, a CPU with a limited number of registers might require more frequent access to slower main memory, leading to potential performance bottlenecks. Conversely, a CPU with ample registers can perform more operations in parallel and reduce the need for memory accesses, leading to more efficient and faster code execution.</p>
+<p>In summary, the hardware requirements to run a program, particularly the use of address and data registers, significantly affect how code is developed and optimised. Understanding these requirements helps in choosing the right hardware for specific applications and in writing efficient, high-performance programs.</p>
+<br>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-2-hardware" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube-nocookie.com/embed/fpnE6UAfbtU?si=SKAkBftBqDZyX0L2</span></div></div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity<br></strong></p>
+<ul class="card-text">
+<li>Quiz: <a title="(Mechatronics) Hardware Requirements of Programs" href="https://canvas.kings.edu.au/courses/11962/assignments/179176" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179176" data-api-returntype="Assignment">(Mechatronics) Hardware Requirements of Programs</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>
+<p class="p1">State of New South Wales (Department of Education). (2024). <i>Software engineering: Stage 6 (Year 11) – Teacher support resource</i>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%203.%20Programming%20Mechatronics/PPTs/3.2%20Hardware.pptx?d=w36c4ce211bd244d4a2aebb3ca1966168&amp;csf=1&amp;web=1&amp;e=ZGg181">3.2 Hardware.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-2-hardware" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={36c4ce21-1bd2-44d4-a2ae-bb3ca1966168}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">3.3 Sensors/Actuators</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<p class="alert alert-primary overflow-hidden"><strong>Syllabus<br></strong>Identify and describe a range of sensors, actuators and end effectors/manipulators within existing mechatronic systems including:<br>motion sensors<br>light level sensors<br>hydraulic actuators<br>robotic grippers</p>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">be able to identify and describe the functions and applications of various sensors, actuators, and end effectors/manipulators in existing mechatronic systems.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">identify and describe the purpose and operation of motion sensors, light level sensors, hydraulic actuators, and robotic grippers.</span></li>
+<li><span style="font-size: 13.3333px;">outline examples of mechatronic systems that use these components and explain their roles within the system. &nbsp; </span></li>
+<li><span style="font-size: 13.3333px;">analyse the advantages and limitations of using these sensors, actuators, and end effectors/manipulators in different mechatronic applications.</span></li>
+<li><span style="font-size: 13.3333px;">discuss how these components enhance the performance and functionality of mechatronic systems, using specific case studies or examples.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<div style="width: 100%;" title="embedded content">
+<div style="position: relative; padding-bottom: 62.5%; padding-top: 0; height: 0;">
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-3-sensors-slash-actuators" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://view.genially.com/66736fd3f2c1f0001490a1ea</span></div></div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h4 class="card-title">Inputs – transducers and sensors</h4>
+<p>An electronic transducer is a small device that converts energy from one form into electricity.</p>
+<p>The conversion uses no separate signal processing, and the resultant output signal is often too small for many microcontrollers to use directly.</p>
+<p>Different transducers can convert sound, pressure, temperature, capacitance, torque and other environmental factors to electricity.</p>
+<p>A sensor is a device that uses an appropriate transducer to measure an environmental quantity and convert it into an electrical signal appropriate for use in common microcontrollers.</p>
+<p>Sensors are generally connected directly to a microcontroller or microcontroller board which can be programmed to read in the sensor value and process it with logic to determine the next appropriate actions.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h4 class="card-title">Outputs – actuators and end effectors</h4>
+<p>Actuators and end effectors provide the outputs for movement of mechatronic systems.</p>
+<p>Actuators are motors that produce rotational or linear movement and, in some cases, may be all that is required for parts of a system.</p>
+<p>When more complex movement is desired, end effectors are used to convert the basic movement of an actuator, or a collection of actuators, to create more complex movement.</p>
+<p>Examples of end effectors include a robotic gripper and movement in a mechatronic prosthesis.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Examples of Sensors and Actuators</strong></h4>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs dp-panel-active-color-dp-white">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Motion Sensors</h3>
+<div class="dp-panel-content">
+<p>Motion sensors detect and measure various forms of <strong>movement, changes in position, and orientation</strong>. These are essential for providing feedback and control in dynamic systems.</p>
+<ul>
+<li>Accelerometers: Measure the rate of change of velocity to detect acceleration.
+<ul>
+<li>Applications: Used in smartphones for screen orientation, drones for stabilisation, and automotive systems for crash detection.</li>
+</ul>
+</li>
+<li>Gyroscopes: Measure the rate of rotation around an axis to track angular movement.
+<ul>
+<li>Applications: Utilised in navigation systems for orientation, stabilisation of cameras, and balance control in robots.</li>
+</ul>
+</li>
+<li>Infrared (IR) Sensors: Detect motion by measuring changes in infrared light emitted by objects.
+<ul>
+<li>Applications: Common in security systems for motion detection, automatic doors for activation, and in robotics for obstacle detection.</li>
+</ul>
+</li>
+<li>Ultrasonic Sensors: Use sound waves to measure the distance to an object by timing the echo return.
+<ul>
+<li>Applications: Widely used in autonomous vehicles for distance measurement and collision avoidance, as well as in industrial automation for object detection.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Light Level Sensor</h3>
+<div class="dp-panel-content">
+<p>Light level sensors measure the intensity of light in an environment, crucial for applications requiring light sensitivity and control.</p>
+<ul>
+<li>Photodiodes: Convert light into an electrical current proportional to the light intensity.<br>
+<ul>
+<li>Applications: Employed in light meters for precise measurement, camera systems for exposure control, and automatic lighting systems for environmental adaptation.</li>
+</ul>
+</li>
+<li>Photoresistors (LDRs): Change resistance based on the intensity of incident light.
+<ul>
+<li>Applications: Used in street lighting systems that turn on/off automatically, alarm devices that respond to light changes, and solar garden lights.</li>
+</ul>
+</li>
+<li>Light-to-Frequency Converters: Convert light intensity to a corresponding frequency signal.
+<ul>
+<li>Applications: Applied in colour sensing for quality control, ambient light sensing in electronic devices, and optical communication systems.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Hydraulic Actuators</h3>
+<div class="dp-panel-content">
+<p>Hydraulic actuators convert hydraulic energy into mechanical motion, vital for applications requiring high force and precise control.</p>
+<ul>
+<li>Linear Hydraulic Actuators: Use hydraulic fluid to create linear motion.
+<ul>
+<li>Applications: Utilised in construction equipment for lifting and moving heavy loads, industrial machinery for precise positioning, and aircraft landing gear systems for reliable deployment and retraction.</li>
+</ul>
+</li>
+<li>Rotary Hydraulic Actuators: Use hydraulic fluid to produce rotational motion.
+<ul>
+<li>Applications: Employed in conveyor systems for rotation control, robotics for joint actuation, and marine steering systems for precise directional control.</li>
+</ul>
+</li>
+<li>Hydraulic Cylinders: Convert fluid power into linear mechanical force and motion.
+<ul>
+<li>Applications: Used in hydraulic presses for shaping materials, automotive systems for braking and suspension, and agricultural machinery for lifting and tilting mechanisms.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Robotic Grippers</h3>
+<div class="dp-panel-content">
+<p>Robotic grippers are devices attached to the end of a robotic arm, essential for manipulating objects in various applications.</p>
+<ul>
+<li>Parallel Grippers: Use two fingers that move parallel to each other to grasp objects.
+<ul>
+<li>Applications: Utilised in manufacturing for assembly and packaging, electronics for handling delicate components, and laboratories for precise sample manipulation.</li>
+</ul>
+</li>
+<li>Vacuum Grippers: Use suction cups to hold objects by creating a vacuum.
+<ul>
+<li>Applications: Employed in material handling for picking and placing flat objects, logistics for palletising and depalletising boxes, and food processing for handling irregularly shaped items.</li>
+</ul>
+</li>
+<li>Magnetic Grippers: Use magnetic force to attract and hold ferromagnetic materials.
+<ul>
+<li>Applications: Used in metalworking for handling sheet metals, recycling for sorting magnetic materials, and automotive assembly for manipulating metal parts.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> <strong>&nbsp;Key Terminology</strong></p>
+<ul class="card-text">
+<li><strong>End Effector </strong>- End effectors are specific types of actuators attached to the end of a robotic arm that interact directly with the environment (e.g., grippers, welding torches). While all end effectors are actuators, not all actuators are end effectors.</li>
+<li><strong>Manipulators</strong> - Manipulators use both sensors and actuators to perform tasks. Sensors provide the necessary information about the environment (e.g., object location), actuators perform the required movements, and the manipulator integrates these components to achieve the desired task.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%203.%20Programming%20Mechatronics/PPTs/3.3%20Sensors%20and%20Actuators.pptx?d=w151801fa238042a7be92284093d22fda&amp;csf=1&amp;web=1&amp;e=y0hO5e">3.3 Sensors and Actuators.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-3-sensors-slash-actuators" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={151801fa-2380-42a7-be92-284093d22fda}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">3.4 Data</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<p class="alert alert-primary overflow-hidden"><strong>Syllabus<br></strong>Use different types of data and understand how it is obtained and processed in a mechatronic system, including diagnostic data and data used for optimisation</p>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">develop an understanding of different types of data and how it is obtained and processed in a mechatronic system, including diagnostic data and data used for optimisation</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">identify various types of data used in mechatronic systems </span></li>
+<li><span style="font-size: 13.3333px;">explain how data is obtained in mechatronic systems </span></li>
+<li><span style="font-size: 13.3333px;">describe the processes for handling and processing data in mechatronic systems </span></li>
+<li><span style="font-size: 13.3333px;">analyse the role of diagnostic data in system performance </span></li>
+<li><span style="font-size: 13.3333px;">evaluate the importance of data optimisation in mechatronic systems</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>When building mechatronic systems, data is gathered within the system and from the environment to regulate the system and maintain it, so as to make sure the system achieves its purpose in an efficient manner.</p>
+<p>&nbsp;</p>
+<h4><strong>Sensor Data</strong></h4>
+<div class="dp-panels-wrapper dp-tabs dp-panel-active-color-dp-white">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Types of Sensors</h3>
+<div class="dp-panel-content">
+<p>Data in mechatronic systems are given from sensors connected to the microcontroller. Sensors can either be analog or digital, where analog sensors give a range of values whereas digital sensors give a boolean value (HIGH or LOW, which is the value of VCC and GND). Analog sensors include potentiometers (dials), temperature sensors, pressure sensors, light sensors. Digital sensors include digital buttons such as light switches, keyboard switches, or sensors such as knock sensors.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/77c32d85cfa97ea0.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197819" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><span>Arduino pin diagram. VCC refers to control power which will be +5V or +3V3.<br></span><span>From: <a href="https://docs.arduino.cc/retired/boards/arduino-uno-rev3-with-long-pins/">https://docs.arduino.cc/retired/boards/arduino-uno-rev3-with-long-pins/</a></span></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Sensor Construction</h3>
+<div class="dp-panel-content">
+<p>Analog sensors are typically connected with at least three wires, one to ground pin, one to power, and one to data. To get a reading from the sensor, the sensor sends a current at a specific voltage to the data pin, allowing the microcontroller to convert the voltage reading to a value. The ground and power pins are used as LOW and HIGH references respectively as a reference for the voltage reading given by the sensor.</p>
+<p>Digital sensors such as buttons typically include only two pins which are typically connected to GND and data pins. When pressing the button with solely those wires, the voltage reading at the data pin is floating, meaning it is undefined. To get a solid reading there needs to be a pullup or pulldown resistor connected to the wire, which is connected to VCC.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/e002dafc5f954e6f.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197811" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><span>From: <a class="dp-ext-ignore" href="https://en.wikipedia.org/wiki/Potentiometer#/media/File:Electronic-Component-Potentiometer.jpg">https://en.wikipedia.org/wiki/Potentiometer#/media/File:Electronic-Component-Potentiometer.jpg</a></span></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">ADC</h3>
+<div class="dp-panel-content">
+<p><span>In the case of an analog sensor, the voltage signal needs to be converted into a digital value by an analog to digital converter (ADC), as digital computers can only manipulate discrete data and not the analog continuous voltage signal. The ADC samples the analog input at normal intervals to build a discrete snapshot of the continuous data, which converts the continuous signal into a digital bit format at each time interval. This would be similar to a histogram.</span></p>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/051823599147954d.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197824" data-api-returntype="File" loading="lazy"></span></p>
+<p style="text-align: center;"><span>From: <a class="dp-ext-ignore" href="https://en.wikipedia.org/wiki/Analog-to-digital_converter#/media/File:Conversion_AD_DA.png">https://en.wikipedia.org/wiki/Analog-to-digital_converter#/media/File:Conversion_AD_DA.png</a></span></p>
+<p style="text-align: left;"><span>With digital sensors, they will only give HIGH or LOW voltage readings, which is the value of power and ground respectively, and this will be read by the microcontroller pin which will read the signal as LOW unless it passes a set voltage threshold to be HIGH. The reason is that sometimes the signal will have voltage drops so the sensor will need to account for this.</span></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4><strong>Protocol Bus (I2C)</strong></h4>
+<p><span>Oftentimes we may want to use multiple peripherals despite only having a limited number of pins. To use multiple peripherals while only using two wires, the I2C protocol bus can be used. I2C functions by having the master controller - typically the microcontroller - request for a read or write from a specific peripheral based on its address, then having data sent across the bus. Data is sent across the bus through the SDA (Serial Data) pin bit by bit, which is synced by a clock signal sent by the master device on SCL (Serial Clock). This means that a bit is sent whenever the clock signal is at HIGH or LOW.</span></p>
+<p><span>An I2C message starts with the master sending the 7 bit address of the peripheral across the bus which tells it which peripheral to be read or written to. Then it sends 1 bit to signify a read or write operation. The peripheral then sends an acknowledgement bit to acknowledge that the information has been received. Then data is sent in 8 bits from either the controller or peripheral, and then the receiver sends an acknowledgement bit to receive the next chunk of data.</span></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/944ff7fb74212ddc.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197828" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;">From: <a href="https://docs.arduino.cc/learn/communication/wire/" target="_blank">https://docs.arduino.cc/learn/communication/wire/</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4><strong>Controlling actuators and PWM signals</strong></h4>
+<p>Data is used to control actuators such as DC motors. Since microcontrollers control signals and motors require large amounts of current, motor drivers with external power sources not from the microcontroller are used to power motors.</p>
+<p>For actuators with digital input, they are typically controlled by sending a pulse width modulated (PWM) signal. A PWM signal is a digital signal that sends data by encoding the data as the period of HIGH pulses within the signal. The percentage of time the signal is on is called the duty cycle, so a signal that is always on has a duty cycle of 100% which would be full power, and a signal that is always off has a duty cycle of 0% which would be grounded. To control an LED to be at half power, the microcontroller can send a PWM signal at a duty cycle of 50%. For the LED, the frequency of the signal should be fast enough to be invisible to the eye.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/4f44f72dd6d75d5d.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197830" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><span>From: <a href="https://learn.sparkfun.com/tutorials/pulse-width-modulation/all">https://learn.sparkfun.com/tutorials/pulse-width-modulation/all</a> </span></p>
+<p><span>Mechatronic systems also typically use servo motors. Servo motors, unlike DC motors, do not have speed, but instead have position as they rotate their axle from one specific angle to another specific angle. Most servo motors expect an update every 20ms with a pulse between 1 to 2ms, i.e. a 5% to 10% duty cycle. At a 5% duty cycle the servo motor will be at 0 degrees and at 10% it will be at 180 degrees, thus a pulse at 1.5ms will rotate the motor to be at 90 degrees. Therefore to rotate the servo motor at a specific position in between, the microcontroller must send a signal between 1 and 2ms.</span></p>
+<p>&nbsp;</p>
+<h4><strong>Feedback Loop</strong></h4>
+<p><span>Mechatronic systems are typically driven in a continuous feedback loop that takes in environmental data gathered by sensors to ensure optimal usage of actuators. A commonly used controller for these systems is PID (proportional, integral, derivative). For example, a line follow wheeled robot is tasked with following a black line on the floor, so its sensor picks up the deviation from the line which then tells the motors how to move. Once the robot moves, this then affects the readings taken by the sensor. Therefore the system must optimise by moving the motors in a path that reduces the deviance from the line. To minimise deviance, we can use the PID controller which attempts to minimise deviance from a target by moving the actuators in accordance to three terms.</span></p>
+<p>&nbsp;</p>
+<p>1. Proportional: Term that corrects for current error</p>
+<p>2. Integral: Term that corrects for past error</p>
+<p>3. Derivative: Term that corrects for the error's rate of change</p>
+<p>&nbsp;</p>
+<p><span>In real world applications, PID is used to automatically correct errors, sometimes this will be error along a path, such as in car cruise controls, or controlled variables such as temperature by setting a target temperature.</span></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/66b21d2335514ddb.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197813" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><span>Diagram of typical PID system. System corrects for the initial error, which causes an overshoot which is correcting, creating an oscillating pattern until it settles on the target.<br>From: <a href="https://www.ni.com/en/shop/labview/pid-theory-explained.html">https://www.ni.com/en/shop/labview/pid-theory-explained.html</a></span></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity<br></strong></p>
+<ul class="card-text">
+<li>Quiz: <a title="(Mechatronics) Data Processed in Mechatronic Systems" href="https://canvas.kings.edu.au/courses/11962/assignments/179177" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179177" data-api-returntype="Assignment">(Mechatronics) Data Processed in Mechatronic Systems</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%203.%20Programming%20Mechatronics/PPTs/3.4%20Data.pptx?d=w8f9f2e5f8da74926b8badb18b027c660&amp;csf=1&amp;web=1&amp;e=EGuyQG">3.4 Data.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-4-data" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={8f9f2e5f-8da7-4926-b8ba-db18b027c660}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div><h3 class="sub">After</h3><p class="embed">Quiz: Unit 3 Evaluation (classic) — see the Quizzes section below.</p>
+<div class="readnav"><a href="11962-m9.html">← previous module</a><a href="../course-11962.html">all modules</a><a href="11962-m11.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

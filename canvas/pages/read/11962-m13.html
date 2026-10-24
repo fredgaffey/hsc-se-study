@@ -1,0 +1,710 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 14 (Term 3: Weeks 7-8) Mechatronics — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">11SENX Software Engineering 2025 · module 14 of 17</p>
+<h1>Cycle 14 (Term 3: Weeks 7-8) Mechatronics</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="11962-all.html">Whole course</a><span class="cur">By module</span><a href="../course-11962.html">By lesson</a></div>
+<h3 class="readles">3.15 Closed Loop</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus</strong><br class="card-text">Design, develop and implement programming code for a closed loop control system</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">design, develop, and implement programming code for a closed loop control system.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">understand the basic principles of closed loop control systems and their applications.</span></li>
+<li><span style="font-size: 13.3333px;">identify the components required for a closed loop control system, including sensors, actuators, and controllers.</span></li>
+<li><span style="font-size: 13.3333px;">design a closed loop control system, including the selection of appropriate sensors and actuators.</span></li>
+<li><span style="font-size: 13.3333px;">develop programming code to control the system based on feedback from the sensors.</span></li>
+<li><span style="font-size: 13.3333px;">implement the programming code into a microcontroller or similar platform.</span></li>
+<li><span style="font-size: 13.3333px;">test the closed loop control system to ensure it responds correctly to varying inputs and maintains the desired output.</span></li>
+<li><span style="font-size: 13.3333px;">analyse the performance of the closed loop control system and make necessary adjustments to improve accuracy and stability.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Recall that a Closed Loop System is which uses feedback to constantly monitor their environment and modify their course. Revise this content here: <a title="3.10 Open &amp; Closed Control Systems" href="../lessons/11962-064.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/3-dot-10-open-and-closed-control-systems" data-api-returntype="Page">3.10 Open &amp; Closed Control Systems</a>.</p>
+<p>&nbsp;</p>
+<p>Use your knowledge of algorithms and mechatronics in order to complete the problem below.</p>
+<p>&nbsp;</p>
+<h4><strong>Closed Loop: VexCode VR</strong></h4>
+<p>Open up VexCode VR, create a new text project and select the playground <strong>Dynamic Castle Crasher</strong>.</p>
+<table style="border-collapse: collapse; width: 100%; border-style: none;" border="1">
+<tbody>
+<tr>
+<td style="width: 49.9752%;"><img src="../../assets/9a90cb4304a8a28a.png" alt="1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197580" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 49.9737%;"><img src="../../assets/0d85f09ff527bdae.png" alt="Screenshot 2024-05-30 at 09-09-44 VEXcode VR.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197808" data-api-returntype="File" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Challenges:</strong><span><br></span></p>
+<p><strong>Level 1</strong><span>: Create an algorithm to knock over all five buildings in one Castle layout using the VR Robot.</span></p>
+<p><strong>Level 2</strong><span>: Improve your algorithm to knock over all buildings in three different Castle layouts.</span></p>
+<p><strong>Level 3</strong><span>: Improve your algorithm to knock over all buildings in five Castle Layouts in eight minutes or less. </span></p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-panel-active-color-dp-primary dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Hints</h3>
+<div class="dp-panel-content">
+<ul>
+<li aria-level="1"><span>Each time the Playground is reset, the layout of the buildings randomly change. There are ten total Castle Crasher Playground layouts.</span></li>
+<li aria-level="1"><span>Keep in mind that the algorithm should be written so that the VR Robot can knock over all five buildings regardless of the Playground layout.</span></li>
+<li aria-level="1"><span>Castle building pieces will be detected as objects by the Distance sensor.</span></li>
+<li aria-level="1"><span>Be careful not to fall off the side of the Playground because there are no walls!</span></li>
+<li aria-level="1"><span>Use the </span><i><span>position of robot</span></i> <span> block from the Sensing category or the location values from the Playground Dashboard to detect the position of the VR Robot on the Playground. This can be used to ensure the VR Robot does not fall off of the Playground.</span></li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/2e4fbc5f62e950e3.png" alt="image.png" width="230" height="35" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197809" data-api-returntype="File" loading="lazy"></p>
+<ul>
+<li aria-level="1"><span>The Dynamic Castle Crasher Playground coordinates range from -1000mm to 1000mm for both the X and Y axes. For more information visit </span><a href="https://kb.vex.com/hc/en-us/articles/360041366072-Coordinate-System-Playground-Features-VEXcode-VR"><span>Coordinate System- Playground Features article.&nbsp;</span></a></li>
+<li aria-level="1"><span>Use the </span><i><span>color sensing</span></i> <span> block from the Sensing category to detect the hazard area (red stripe) around the Playground. The hazard area is detected as color "red" to the DownEye sensor.</span></li>
+</ul>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/eb9ecbdb5385d0e2.png" alt="image.png" width="210" height="36" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197812" data-api-returntype="File" loading="lazy"></span></p>
+<ul>
+<li><span>Use the </span><i><span>timer value</span></i> <span> block from the Sensing category to keep track of the time it takes to complete one or more Playground layouts.</span></li>
+</ul>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/b96bcc665f0d92dc.png" alt="Screenshot 2024-05-30 at 9.16.57 AM.png" width="252" height="29" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197815" data-api-returntype="File" loading="lazy"></span></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">3.16 Integrate Sensors</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus</strong><br class="card-text">Apply programming code to integrate sensors, actuators and end effectors/manipulators</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">apply programming code to integrate sensors, actuators, and end effectors/manipulators in a mechatronic system.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">write programming code to interface and communicate with sensors, actuators, and end effectors/manipulators.</span></li>
+<li><span style="font-size: 13.3333px;">integrate multiple sensors and actuators into a single system using programming code.</span></li>
+<li><span style="font-size: 13.3333px;">develop and implement control algorithms to coordinate the actions of sensors, actuators, and end effectors/manipulators.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4><strong>Integrate Sensors: VexCode VR</strong></h4>
+<p>Open up VexCode VR, create a new text project and select the playground <strong>Dynamic Wall Maze</strong>.</p>
+<table style="border-collapse: collapse; width: 100%; border-style: none;" border="1">
+<tbody>
+<tr>
+<td style="width: 49.9752%;"><img src="../../assets/9a90cb4304a8a28a.png" alt="1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197580" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 49.9737%;"><img src="../../assets/a582e6bfdad11870.png" alt="Screenshot 2024-05-30 at 09-32-06 VEXcode VR.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197821" data-api-returntype="File" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Challenges:</strong><span>&nbsp;&nbsp;</span></p>
+<p><strong>Level 1</strong><span>: Create an algorithm in which the VR Robot solves one maze.&nbsp;&nbsp;</span></p>
+<p><strong>Level 2</strong><span>: Create an algorithm that solves three mazes without any project modifications.</span></p>
+<p><strong>Level 3</strong><span>: Improve your algorithm to solve all nine mazes without any project modifications.&nbsp;&nbsp;</span></p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-panel-active-color-dp-primary dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Hints</h3>
+<div class="dp-panel-content">
+<ul>
+<li aria-level="1"><span>The Dynamic Wall Maze will change each time it is refreshed. There are nine different mazes.&nbsp;</span></li>
+<li aria-level="1"><span>Try to solve each maze in the most efficient path. You can use the </span><i><span>Print</span></i> <span> blocks along with the </span><i><span>Timer value</span></i> <span> block to display how long it takes to solve each maze.</span></li>
+<li aria-level="1"><span>The algorithm should be written so that the VR Robot can solve multiple Wall Mazes, regardless of their layouts.&nbsp;</span></li>
+<li aria-level="1"><span>Use the DownEye sensor</span><span> to report specific colors.&nbsp; For example, use this to detect the start and finish of the maze.&nbsp;</span></li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/58cbcea8a112b17f.png" alt="image.png" width="227" height="36" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197822" data-api-returntype="File" loading="lazy"></p>
+<ul>
+<li><span>&nbsp;The </span><i><span>Pressing bumper</span></i> <span> sensor can be used to detect if the VR Robot bumper touches a wall.&nbsp;</span></li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/6a595210aa932bd8.png" alt="image.png" width="240" height="32" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197823" data-api-returntype="File" loading="lazy"></p>
+<ul>
+<li aria-level="1"><span>Nest an </span><i><span>if then else</span></i> <span> statement inside a <i>while</i> </span><i><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> <span>loop so the VR Robot sensors are continuously </span><span>report</span><span>ing information.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">3.17 Control Algorithms</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus</strong><br class="card-text">Implement specific control algorithms that enhance the performance of a mechatronic system</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">implement specific control algorithms to enhance the performance of a mechatronic system.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">select appropriate control algorithms based on the specific requirements and constraints of a mechatronic system.</span></li>
+<li><span style="font-size: 13.3333px;">develop programming code to implement chosen control algorithms.</span></li>
+<li><span style="font-size: 13.3333px;">integrate control algorithms with the existing hardware and software of a mechatronic system.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4><strong>Control Algorithms: VexCode VR</strong></h4>
+<p>Open up VexCode VR, create a new text project and select the playground <strong>Disk Transport</strong>.</p>
+<table style="border-collapse: collapse; width: 100%; border-style: none;" border="1">
+<tbody>
+<tr>
+<td style="width: 49.9752%;"><img src="../../assets/9a90cb4304a8a28a.png" alt="1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197580" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 49.9737%;"><img src="../../assets/c5495ef09ba04617.png" alt="Screenshot 2024-05-30 at 11-08-55 VEXcode VR.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197817" data-api-returntype="File" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Level 1</strong><span>: Using the electromagnet, pick up and place one disk of each color inside the correct colored goals located outside the Castle walls.</span></p>
+<p><strong>Level 2</strong><span>: Using the electromagnet, pick up and place all four disks of each color inside the correct colored goals located outside the Castle walls.</span></p>
+<p><strong>Level 3</strong><span>: Using the electromagnet, pick up and place three disks of each color inside each colored goal, then hide the remaining 3 disks behind the wall around the Castle!</span></p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-panel-active-color-dp-primary dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Hints</h3>
+<div class="dp-panel-content">
+<ul>
+<li aria-level="1"><span>The electromagnet can only pick up one disk at a time.</span></li>
+<li aria-level="1"><span>Each square in the Disk Transport measures 200mm by 200mm</span></li>
+<li aria-level="1"><span>The disks are placed in the center of each grid square, however the electromagnet is at the front of the robot. Adjust your drivetrain values appropriately!</span></li>
+<li aria-level="1"><span>Pick up and drop disks by passing in either</span> <code>BOOST</code> or <code>DROP</code> into the <code>magnet.energize()</code> function.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/c28adf493b920191.png" alt="image.png" width="241" height="60" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197818" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Competition Challenges:</strong></h4>
+<p><strong>Level 1: </strong><span>How fast can you move the 4 disks to the matching goals? Use the timer to measure your speed. The fastest time wins!&nbsp;</span></p>
+<p><strong>Level 2:</strong><span> Use the timer to see how fast you can move all of the disks into the matching goals. The fastest time wins!&nbsp;</span></p>
+<p><strong>Level 3: </strong><span>See how fast you can move and hide the disks. The fastest time wins!</span></p>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">3.18 UI</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus</strong><br class="card-text">Design, develop and implement a user interface (UI) to control a mechatronic system</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">be able to design, develop, and implement a user interface (UI) to control a mechatronic system.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">design a user interface that is intuitive and user-friendly for controlling a mechatronic system.<br></span></li>
+<li><span style="font-size: 13.3333px;">develop the UI using appropriate software tools and programming languages.<br></span></li>
+<li><span style="font-size: 13.3333px;">implement the UI to effectively control various functions and components of the mechatronic system.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>The integration of User Interface (UI) in robotics marks a significant advancement in the way humans interact with machines. A well-designed UI is pivotal in enhancing the functionality, efficiency, and safety of robots, making them more accessible and effective for a variety of applications. This essay delves into the myriad ways UI is utilised in robotics, highlighting its critical importance.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<h3 class="card-title">Control Interfaces</h3>
+<p>One of the fundamental applications of UI in robotics is in control interfaces. These interfaces allow users to directly manipulate and control robotic systems.</p>
+<ul>
+<li><strong>Manual control</strong> interfaces, such as joysticks and touch screens, enable operators to guide robots in performing precise tasks. For instance, in manufacturing, robots are often manually controlled to assemble intricate components.</li>
+<li><strong>Teleoperation</strong> interfaces extend this capability to remote locations. Such systems are indispensable in environments where direct human intervention is risky or impossible, such as space exploration, underwater missions, or disaster response scenarios.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Monitoring and Feedback</h3>
+<div class="dp-panel-content ">
+<p>Effective monitoring and real-time feedback are crucial for the efficient operation of robots.</p>
+<ul>
+<li><strong>Dashboard displays</strong> are essential UI components that provide real-time data on robot status, performance metrics, and diagnostics. These dashboards enable operators to monitor multiple robots simultaneously, ensuring they operate within optimal parameters.</li>
+<li><strong>Visual feedback</strong> through integrated cameras and sensors further enhances situational awareness, allowing operators to make informed decisions based on real-time imagery and sensor data. This is particularly vital in precision tasks such as robotic surgery or detailed assembly processes.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">User Experience (UX)</h3>
+<div class="dp-panel-content ">
+<p>The success of robotic systems heavily relies on the user experience (UX) offered by their UIs.</p>
+<ul>
+<li><strong>Intuitive design</strong> is paramount, ensuring that interfaces are user-friendly and reduce the learning curve for new users. For instance, in healthcare, robots assist in patient care, and the UI must be straightforward enough for medical staff to use without extensive training.</li>
+<li><strong>Haptic feedback</strong> adds another layer of interaction, providing tactile sensations that enhance control, especially in teleoperation scenarios. This feedback can simulate the sense of touch, allowing operators to feel the environment the robot is interacting with, thus improving precision and control.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Safety and Compliance</h3>
+<div class="dp-panel-content">
+<p>Ensuring safety is a critical aspect of robotics, and UIs play a crucial role in this domain.</p>
+<ul>
+<li><strong>Emergency stop and safety protocols</strong> are integrated into UIs to provide quick and reliable methods to halt robot operations in case of emergencies. This is essential in environments where humans and robots work in close proximity, such as in collaborative robotics in manufacturing.</li>
+<li><strong>Compliance and monitoring</strong> interfaces ensure that robots operate within predefined safety parameters, adhering to industry standards and regulations. These interfaces help in monitoring robot behaviour and implementing corrective measures when deviations occur.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Case Study: NASA</h3>
+<div class="dp-panel-content">
+<p>In all systems that involve interactions between humans and machines, the element that defines the quality of that interaction is the human/machine interface, also known as the user interface. A graphical user interface (GUI) can make the human interaction more engaging and intuitive, constrain user inputs to valid ranges and units, supply tabular and plot-based output where needed, and provide users with data from sensors on the robots that are needed for control.</p>
+<p><strong>JPL Robotics</strong> has created a number of very successful user interfaces tailored to the robotic systems being controlled. These robots have ranged from multi-arm manipulators for microgravity deployment or terrestrial surgical applications, to legged prototype-rovers for rough terrains, to multi-wheeled rovers including flight systems such as the Mars Pathfinder Sojourner Rover, the Mars Exploration Rovers (MER), Spirit and Opportunity, the Phoenix Lander, the Mars Science Laboratory (MSL) rover Curiosity, and the current Mars 2020 (M2020) rover and Helicopter, Perseverance and Ingenuity.</p>
+<p>&nbsp;</p>
+<h4>Key Interfaces Developed at JPL:</h4>
+<ol>
+<li>
+<p><strong>RSVP (Robot Sequencing and Visualisation Program)</strong></p>
+<ul>
+<li>Used for all surface operations in Mars missions since 1997.</li>
+<li>Creates all command sequences for robotic operations sent to Mars rovers and landers.</li>
+<li>Tools within RSVP:
+<ul>
+<li><strong>RoSE (Rover Sequence Editor):</strong> Supports all commands in the mission-command dictionary and interfaces with simulation tools.</li>
+<li><strong>HyperDrive:</strong> Provides multiple 3D graphics interfaces to stereo images and 3D terrain-model data for planning rover motions.</li>
+<li><strong>ArmSketch:</strong> Visual sequencing tool for generating arm sequences with optimised path and collision avoidance.</li>
+<li><strong>MobSketch:</strong> Visual sequencing tool for generating drive sequences.</li>
+<li><strong>ROCS (Robotic Operations and Computational Services):</strong> Provides stateless, RESTful API for rover simulation, planning, and operations.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>SSim (Surface Simulation)</strong></p>
+<ul>
+<li>Flight-software-in-the-loop simulation software predicting rover command outcomes before uplink to Mars.</li>
+<li>Supports quick iteration of command development by rover planners.</li>
+<li>Takes inputs like rover command sequences, terrain models, and rover memory state to output motion history and command durations.</li>
+<li>Used in both MSL and M2020 for sequence validation and verification.</li>
+</ul>
+</li>
+<li>
+<p><strong>Honeycomb 3D Visualisation Platform</strong></p>
+<ul>
+<li>General, web-based 3D visualisation platform for understanding robotic systems from development to operations.</li>
+<li>Used in Mars 2020 for visualising autonomy products from the enhanced driving navigation system.</li>
+<li>Displays flight products during autonomous driving to help operators understand and debug the process.</li>
+<li>Allows toggling of displays, timeline scrubbing, and interaction with 3D views to analyze rover decisions.</li>
+<li>Planned for expansion to other missions.</li>
+</ul>
+</li>
+</ol>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/9c9046eeebd47ac5.png" alt="image.png" width="470" height="300" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197838" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Applications and Impact:</h4>
+<ul>
+<li><strong>RSVP:</strong> Critical for planning and executing complex rover missions, enabling precise control and movement on Mars.</li>
+<li><strong>SSim:</strong> Enhances mission success by simulating and validating commands, ensuring accurate and reliable rover operations.</li>
+<li><strong>Honeycomb:</strong> Improves understanding of autonomous driving decisions, facilitating mission planning and execution.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+<li><a href="https://www-robotics.jpl.nasa.gov/what-we-do/applications/user-interfaces/" target="_blank">https://www-robotics.jpl.nasa.gov/what-we-do/applications/user-interfaces/</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%203.%20Programming%20Mechatronics/PPTs/3.18%20UI.pptx?d=w81a43bd8f03e4ff79477a3317bef3ffb&amp;csf=1&amp;web=1&amp;e=2LrLfd">3.18 UI.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-18-ui" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={81a43bd8-f03e-4ff7-9477-a3317bef3ffb}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">3.19 Unit Tests</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus</strong><br class="card-text">Create and use unit tests to determine the effectiveness and repeatability of each component’s control algorithm</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">be able to create and use unit tests to determine the effectiveness and repeatability of each component’s control algorithm in a mechatronic system.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">write unit tests for control algorithms of various components within a mechatronic system.<br></span></li>
+<li><span style="font-size: 13.3333px;">use these unit tests to evaluate the effectiveness and accuracy of the control algorithms.<br></span></li>
+<li><span style="font-size: 13.3333px;">analyse the results of the unit tests to identify any inconsistencies or errors in the control algorithms.<br></span></li>
+<li><span style="font-size: 13.3333px;">demonstrate the ability to refine and improve control algorithms based on the outcomes of the unit tests.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>In control systems, ensuring that individual components operate effectively and consistently is critical for overall system performance. Unit testing plays a key role in achieving this by isolating and evaluating each component's control algorithm. By systematically testing these algorithms, we can verify their accuracy, detect potential errors, and ensure they produce repeatable results under various conditions. This page explores the importance of unit tests, provides steps to create them, and highlights their role in improving the reliability and precision of control systems.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<h3 class="card-title">What are Unit Tests?</h3>
+<p>Unit tests are a type of software testing that focus on individual components or modules of a system to determine whether they function as expected. In the context of control algorithms:</p>
+<ul>
+<li>A <strong>unit</strong> refers to a single component or section of the control system.</li>
+<li>The goal is to <strong>verify</strong> that the control algorithm performs correctly under specific conditions.</li>
+</ul>
+<p>Unit testing ensures:</p>
+<ol>
+<li><strong>Effectiveness</strong> – The control algorithm works as designed and produces the expected outcome.</li>
+<li><strong>Repeatability</strong> – The algorithm produces consistent results when tested repeatedly under the same conditions.</li>
+</ol>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Why are Unit Tests Important?</strong></h4>
+<p>Unit testing is critical for the development and maintenance of control algorithms because it:</p>
+<ul>
+<li>Detects errors early, reducing the cost and time of fixing issues.</li>
+<li>Ensures that individual components work as expected before integrating them into larger systems.</li>
+<li>Provides confidence that changes to the system do not break existing functionality.</li>
+<li>Validates the <strong>accuracy</strong>, <strong>consistency</strong>, and <strong>performance</strong> of control algorithms.</li>
+</ul>
+<p>In control systems, where precision and reliability are essential, unit tests help confirm that a component can handle real-world inputs effectively.</p>
+<p>&nbsp;</p>
+<h4><strong>Creating Unit Tests</strong></h4>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs-pills-vertical">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Define Test Scenarios</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Identify <strong>expected inputs</strong> and <strong>outputs</strong> for the component.</li>
+<li>Consider edge cases (e.g., maximum or minimum values, unexpected inputs, or boundary conditions).</li>
+</ul>
+<p>For example:</p>
+<table style="width: 93.9583%; height: 162px;">
+<thead>
+<tr style="height: 27px;">
+<th style="width: 50.0259%; height: 27px;">Test Input (Scenario)</th>
+<th style="width: 49.6858%; height: 27px;">Expected Output</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 50.0259%; height: 29px;">Component input = 0</td>
+<td style="width: 49.6858%; height: 29px;">Control output = 0</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 50.0259%; height: 53px;">Component input = 100</td>
+<td style="width: 49.6858%; height: 53px;">Control output = expected max</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 50.0259%; height: 53px;">Component input = invalid data</td>
+<td style="width: 49.6858%; height: 53px;">Control output = error handled</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Write the Unit Tests</h3>
+<div class="dp-panel-content ">
+<p>Write code or instructions that:</p>
+<ol>
+<li>Input specific test values into the control algorithm.</li>
+<li>Check the actual output against the expected output.</li>
+</ol>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Test Repeatability</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Run each test <strong>multiple times</strong> to check for consistent results.</li>
+<li>Record and compare outputs to ensure the algorithm behaves <strong>reliably</strong>.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Evaluate Test Results</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Analyse discrepancies between expected and actual outputs.</li>
+<li>Document and address any issues found.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Example: Unit Test for a Control Algorithm</h3>
+<div class="dp-panel-content ">
+<p><strong>Scenario:</strong> A temperature control algorithm adjusts the output power to maintain a desired temperature.</p>
+<table data-active-table="true">
+<thead>
+<tr>
+<th>Test Input</th>
+<th>Expected Output</th>
+<th>Pass/Fail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target Temp = 20°C</td>
+<td>Output = Stable at 20°C</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Target Temp = 100°C</td>
+<td>Output = Max Power</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Target Temp = -10°C</td>
+<td>Output = Min Power</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Sensor Error/Invalid</td>
+<td>Output = Error Handling</td>
+<td>Pass</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Key Considerations for Effective Unit Testing</strong></h4>
+<ul>
+<li><strong>Test Coverage</strong>: Ensure you test a wide range of conditions, including normal, edge, and error cases.</li>
+<li><strong>Automation</strong>: Use tools or software frameworks to automate tests for efficiency.</li>
+<li><strong>Consistency</strong>: Repeated tests must produce consistent results for reliability.</li>
+<li><strong>Documentation</strong>: Clearly document your test scenarios, expected outcomes, and any issues encountered.</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%203.%20Programming%20Mechatronics/PPTs/3.19%20Unit%20Tests.pptx?d=w3b8875ddcc444bb288e983b3751756fb&amp;csf=1&amp;web=1&amp;e=caN5rC">3.19 Unit Tests.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-19-unit-tests" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={3b8875dd-cc44-4bb2-88e9-83b3751756fb}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div><h3 class="sub">After</h3>
+<div class="readnav"><a href="11962-m12.html">← previous module</a><a href="../course-11962.html">all modules</a><a href="11962-m14.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

@@ -1,0 +1,2205 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 7 (Term 1: Weeks 5-6) Programming for the Web — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">12SENX2 Software Engineering 2026 · module 7 of 15</p>
+<h1>Cycle 7 (Term 1: Weeks 5-6) Programming for the Web</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="12951-all.html">Whole course</a><span class="cur">By module</span><a href="../course-12951.html">By lesson</a></div>
+<h3 class="readles">Introduction to Cycle 6</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div id="" class="dp-banner-image"><img class="dp-full-width" style="width: 100%; height: auto; max-width: 100%;" role="presentation" src="https://kingsnet.kings.edu.au/images/UserUploadedImages/1754/banner2.jpg" alt=" [online-only image]" loading="lazy"></div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-read-time-wrapper"><i class="fas fa-clock cp-txt-dp-primary" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> 3 min read&nbsp; |&nbsp; no activities&nbsp; |&nbsp;&nbsp;<i class="dp-icon fas fa-brain cp-txt-primary" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp; (easy)&nbsp;&nbsp;</div>
+<h4>Timing</h4>
+<p>Weeks 3 and 4</p>
+<p>&nbsp;</p>
+<h4>Content</h4>
+<p><strong>Software Engineering Project: Producing, Implementing, Testing &amp; Evaluating</strong></p>
+<p>In Cycle 6, you will shift from theory into the practical phases of your Software Engineering Project. This cycle is focused on bringing your designs to life through coding, managing the development process, and rigorously testing your resulting solution.</p>
+<p>This cycle encompasses two major subtopics from the syllabus:</p>
+<ul>
+<li><strong>Producing and Implementing:</strong> You will construct algorithms, apply development methodologies (like Agile or Waterfall), allocate resources, and utilise essential developer tools such as version control (Git) and automated backups. You will also practice presenting your solutions to stakeholders and overcoming common coding hurdles.</li>
+<li><strong>Testing and Evaluating:</strong> A working solution is only half the battle. You will learn to apply structured testing methodologies, evaluate your code's performance, implement language-specific optimisations (in Python), and critically analyse stakeholder feedback to measure the ultimate effectiveness of your project.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Deliverables</h4>
+<p>By the end of this cycle, you need to complete:</p>
+<ul>
+<li>Quiz — 4.13 Solution</li>
+<li>Quiz — 4.14 Presentation</li>
+<li>Quiz — 4.15 Algorithms</li>
+<li>Quiz — 4.16 Development</li>
+<li>Quiz — 4.17 Backup</li>
+<li>Quiz — 4.18 Version Control</li>
+<li>Software Engineering Project Checkin</li>
+<li>Quiz — 4.19 Difficulties</li>
+<li>Quiz — 4.20 Additional Solution</li>
+<li>Quiz — 4.21 Test and Evaluate Code</li>
+<li>Quiz — 4.22 Code Optimisation</li>
+<li>Quiz — 4.23 Feedback</li>
+<li>Quiz — 4.24 Effectiveness</li>
+<li>Gradeo — Cycle 6</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Lessons</h4>
+<div class="dp-table-scroll">
+<table style="border-collapse: collapse; width: 100%;" border="1" data-active-table="true">
+<tbody>
+<tr>
+<td style="width: 26.8426%;"><strong>Title</strong></td>
+<td style="width: 34.4899%;"><strong>Syllabus</strong></td>
+<td style="width: 38.6675%;"><strong>Page Focus</strong></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="4.13 Solution" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">4.13 Solution</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p>Design, construct and implement a solution to a software problem using appropriate development approach(es).</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>This page focuses on the practical application of software development methodologies. It guides you through designing, constructing, and implementing a solution to a specific problem using either Waterfall or Agile approaches.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="4.14 Presentation" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">4.14 Presentation</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Present a software engineering solution using presentation software.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Presenting a software solution effectively requires balancing technical depth with clear communication. This page explores strategies for using presentation software to engage stakeholders and clearly convey your design and development process.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="4.15 Algorithms" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">4.15 Algorithms</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Develop, construct and document algorithms.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Algorithms are the backbone of software engineering. This page guides you through the systematic process of defining a problem, drafting the logic in pseudocode, implementing it in Python, and documenting the result.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="4.16 Development" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">4.16 Development</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Allocate resources to support the development of a software engineering solution.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Effective resource allocation is critical to the success of any software engineering project. This page explores the optimal distribution of human, financial, and technical resources to ensure timely project completion, quality delivery, and cost management.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="4.17 Backup" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">4.17 Backup</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Demonstrate the use of programmed data backup.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Data loss can be catastrophic for both individuals and businesses. This page explores the importance of automated backup systems and provides a step-by-step guide on how to set up, schedule, and verify backups to ensure data security and integrity.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="4.18 Version Control" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">4.18 Version Control</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Implement version control when developing a software engineering solution.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Version control is the backbone of modern collaborative software engineering. This page covers the essential concepts of managing code changes, collaborating with teams, and maintaining project integrity using systems like Git.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="4.19 Difficulties" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">4.19 Difficulties</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Explore strategies to respond to difficulties when developing a software engineering solution, including:</p>
+<ul>
+<li>looking for a solution online</li>
+<li>collaboration with peers</li>
+<li>outsourcing</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>When developing software, hitting a wall is inevitable. This page covers three key strategies to overcome these obstacles: searching for solutions online, collaborating effectively with your team, and outsourcing tasks to external experts.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="4.20 Additional Solution" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">4.20 Additional Solution</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Propose an additional innovative solution using a prototype and user interface (UI) design.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Innovative solutions often require testing and refinement before they are ready for the real world. This page explores how prototyping and User Interface (UI) design work together to bring abstract ideas to life, ensuring they are practical, effective, and user-friendly.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="4.21 Test and Evaluate Code" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">4.21 Test and Evaluate Code</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Apply methodologies to test and evaluate code.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Testing ensures software is functional, efficient, and reliable. This page covers the essential methodologies of testing, including the four levels of testing (Unit, Integration, System, Acceptance) and techniques for debugging and evaluating performance.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="4.22 Code Optimisation" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">4.22 Code Optimisation</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Use a language-dependent code optimisation technique.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Code optimisation is crucial for creating efficient software. This page explores the difference between language-independent and language-dependent optimisation, with a specific focus on Python techniques like built-in functions and list comprehensions to improve performance.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="4.23 Feedback" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">4.23 Feedback</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Analyse and respond to feedback.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Feedback is the compass of software engineering. This page explores the different sources of feedback, how to categorise and analyse it, and the strategies for responding to ensure continuous improvement in software quality.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="4.24 Effectiveness" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">4.24 Effectiveness</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Evaluate the effectiveness of a software engineering solution, including:</p>
+<ul>
+<li>developing a report to synthesise feedback</li>
+<li>developing a test plan</li>
+<li>testing data used/generated based on path and boundary testing</li>
+<li>comparing actual output with expected output</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Evaluating the effectiveness of a software solution is critical to its success. This page explores how to synthesise stakeholder feedback into actionable reports, develop comprehensive test plans, apply path and boundary testing techniques, and accurately compare actual versus expected outputs.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">Introduction to Cycle 7</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div id="" class="dp-banner-image"><img class="dp-full-width" style="width: 100%; height: auto; max-width: 100%;" role="presentation" src="https://kingsnet.kings.edu.au/images/UserUploadedImages/1754/banner2.jpg" alt=" [online-only image]" loading="lazy"></div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-read-time-wrapper"><i class="fas fa-clock cp-txt-dp-primary" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> 2 min read&nbsp; |&nbsp; no activities&nbsp; |&nbsp;&nbsp;<i class="dp-icon fas fa-brain cp-txt-primary" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp; (easy)&nbsp;&nbsp;</div>
+<h4>Timing</h4>
+<p>Weeks 5 and 6</p>
+<p>&nbsp;</p>
+<h4>Content</h4>
+<p><strong>Programming for the Web</strong></p>
+<p>This cycle dives into the core technologies, protocols, and architectural concepts that power modern web applications. From understanding the underlying transmission of data to exploring the standards that govern the web, we will build a comprehensive understanding of how the internet functions and how to build applications for it.</p>
+<p>Throughout this cycle, we will cover the following key areas:</p>
+<ul>
+<li>The major applications of web programming, including interactive sites, e-commerce, and Progressive Web Apps (PWAs).</li>
+<li>The fundamental mechanisms of data transfer, encompassing data packets, IP addressing, and the Domain Name System (DNS).</li>
+<li>The essential web protocols and their corresponding ports that enable secure communication, file transfer, and email.</li>
+<li>The critical processes for securing the web, such as SSL certificates, encryption algorithms, hashing, and digital signatures.</li>
+<li>The profound impact of Big Data on web architecture, including data mining and streaming service management.</li>
+<li>The role of the World Wide Web Consortium (W3C) in establishing standards for accessibility, internationalisation, and web security.</li>
+<li>The core elements of a web development system, exploring the interplay between client-side (front-end) programming, server-side (back-end) programming, and database integration.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Deliverables</h4>
+<p>By the end of this cycle, you need to complete:</p>
+<ul>
+<li>Quiz — 2.1 Web Programming Applications</li>
+<li>Quiz — 2.2 Data Transfer</li>
+<li>Quiz — 2.3 Web Protocols</li>
+<li>Quiz — 2.4 Securing the Web</li>
+<li>Quiz — 2.5 Big Data</li>
+<li>Quiz — 2.6 World Wide Web Consortium</li>
+<li>Quiz — 2.7 Web Elements</li>
+<li>Gradeo — Cycle 7</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Lessons</h4>
+<div class="dp-table-scroll">
+<table style="border-collapse: collapse; width: 100%;" border="1" data-active-table="true">
+<tbody>
+<tr>
+<td style="width: 26.8426%;"><strong>Title</strong></td>
+<td style="width: 34.4899%;"><strong>Syllabus</strong></td>
+<td style="width: 38.6675%;"><strong>Page Focus</strong></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.1 Web Programming Applications" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.1 Web Programming Applications</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p>Explore the applications of web programming, including:</p>
+<ul>
+<li>interactive website/webpages</li>
+<li>e-commerce</li>
+<li>progressive web apps (PWAs)</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Web programming powers more than just static pages. This lesson explores three major applications: interactive websites that engage users, e-commerce platforms for online business, and Progressive Web Apps that bridge the gap between web and mobile.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.2 Data Transfer" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.2 Data Transfer</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Investigate and practise how data is transferred on the internet, including:</p>
+<ul>
+<li>data packets</li>
+<li>internet protocol (IP) addresses, including IPv4</li>
+<li>domain name systems (DNS)</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>The internet relies on breaking data into packets, addressing devices with IP, and translating names via DNS. This page explores how these three core components work together to enable global communication.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.3 Web Protocols" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.3 Web Protocols</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Investigate and describe the function of web protocols and their ports, including:</p>
+<ul>
+<li>HTTP, HTTPS</li>
+<li>TCP/IP</li>
+<li>DNS</li>
+<li>FTP, SFTP</li>
+<li>SSL, TLS</li>
+<li>SMTP, POP 3, IMAP</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Web protocols are the invisible rules that power the internet. This page breaks down the essential protocols (like HTTP, TCP/IP, and DNS) and their specific ports that allow devices to communicate, transfer files, and send emails securely.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.4 Securing the Web" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.4 Securing the Web</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Explain the processes for securing the web, including:</p>
+<ul>
+<li>Secure Sockets Layer (SSL) certificates</li>
+<li>encryption algorithms</li>
+<li>encryption keys</li>
+<li>plain text and cipher text</li>
+<li>authentication and authorisation</li>
+<li>hash values</li>
+<li>digital signatures</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>The web is built on trust. This page explores the fundamental technologies that secure web communications, from the certificates that prove a website's identity to the encryption and hashing algorithms that protect data from prying eyes and tampering.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.5 Big Data" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.5 Big Data</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Investigate the effect of big data on web architecture, including:</p>
+<ul>
+<li>data mining</li>
+<li>metadata</li>
+<li>streaming service management</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Big Data is transforming the architecture of the web in profound ways. This page explores the concepts of data mining, metadata, and streaming service management to understand how modern web systems evolve to meet the demands of an increasingly data-driven world.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.6 World Wide Web Consortium" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.6 World Wide Web Consortium</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Investigate and explain the role of the World Wide Web Consortium (W3C) in the development of applications for the web, including:</p>
+<ul>
+<li>Web Accessibility Initiative (WAI)</li>
+<li>internationalisation</li>
+<li>web security</li>
+<li>privacy</li>
+<li>machine-readable data</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>The World Wide Web Consortium (W3C) sets the standards that keep the web running smoothly. This page explores how the W3C influences accessibility, security, privacy, and how data is shared globally.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.7 Web Elements" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.7 Web Elements</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Model elements that form a web development system, including:</p>
+<ul>
+<li>client-side (front-end) web programming</li>
+<li>server-side (back-end) web programming</li>
+<li>interfacing with databases that are based on Structured Query Language (SQL) or non-SQL</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Web applications are built on a complex ecosystem of technologies. This page breaks down the core elements of a web development system, exploring how the front-end (what you see), the back-end (the logic), and databases (the storage) work together.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>&nbsp;</p>
+</div><h3 class="sub">During</h3><h3 class="sub">Data Transmission Using the Web</h3>
+<h3 class="readles">2.1 Web Programming Applications</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+<h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">Unit</span><span class="dp-header-pre-2" style="font-size: 14pt;">2</span> </span>2.1 Applications of Web Programming</h2>
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Explore the applications of web programming, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>interactive website/webpages</li>
+<li>e-commerce</li>
+<li>progressive web apps (PWAs)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explore the various web programming applications, including creating interactive websites, developing e-commerce platforms, and building Progressive Web Apps (PWAs).</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explain how interactive websites use technologies like JavaScript and APIs to provide dynamic user experiences.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Describe the key features of e-commerce websites, including product catalogues, shopping carts, and secure payment processing.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Understand the benefits of Progressive Web Apps (PWAs) and how they combine the best features of web and mobile applications to provide an enhanced user experience.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Interactive website/webpages</h3>
+<div class="dp-panel-content ">
+<p>Interactive websites respond to user actions, creating a dynamic and engaging experience. This interactivity can range from simple form submissions to real-time data updates and personalised content.</p>
+<p><strong>Why Interactivity Matters:</strong></p>
+<ul>
+<li><strong>User Engagement: </strong>Keeps users interested and encourages longer site visits</li>
+<li><strong>Personalisation: </strong>Provides tailored content based on user preferences</li>
+<li><strong>Feedback: </strong>Allows users to interact and provide input</li>
+</ul>
+<p><strong>Creating Interactivity with Python</strong></p>
+<p>While front-end technologies like HTML, CSS, and JavaScript often handle visual aspects, Python manages server-side logic through frameworks like Flask and Django.</p>
+<p>This example demonstrates a basic interactive web page built using Python and Flask. The "Welcome" page allows users to input their names. Upon submission, the server processes this input and dynamically responds by displaying a personalised greeting.<strong></strong></p>
+<p>Interactive websites engage users by responding to their input. In this case, the user inputs their name, and the web page dynamically updates to reflect the personalised message. This simple interaction is foundational to building more complex web applications, where users' actions (like submitting forms or clicking buttons) can trigger server-side logic, updating content in real-time. This example illustrates how Python, through Flask, enables such interactivity, making the web experience more engaging and personalised.</p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-1-web-programming-applications" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://4rj7mq-5000.csb.app/</span></div></div>
+<div class="dp-embed-wrapper">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Explore Code in Action</h3>
+<div class="dp-panel-content ">
+<p>In this panel, you can explore the interactive code that demonstrates how Python, using Flask, powers web applications. The embedded example below showcases a basic Flask web app where you can input data and receive a response from the server.</p>
+<p>Feel free to explore and modify the code to see how Flask handles web requests and generates dynamic responses.</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-warning">
+<div class="card-body">
+<p class="card-text">The embedded code sandbox may take a moment to load. If it fails to load, you can view it <a class="inline_disabled" title="Link" href="https://codesandbox.io/p/devbox/hidden-shadow-4rj7mq" target="_blank">here</a>.</p>
+</div>
+</div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-1-web-programming-applications" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://codesandbox.io/p/devbox/hidden-shadow-4rj7mq?embed=1&amp;amp;file=%2Fmain.py</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">E-commerce</h3>
+<div class="dp-panel-content ">
+<p>E-commerce websites enable the buying and selling of goods or services online. These websites require secure handling of user information, real-time inventory management, and seamless payment processing.</p>
+<p><strong>Core Features of E-commerce Websites:</strong></p>
+<ul>
+<li><strong>Product Listings:</strong> Display products, descriptions, and prices.</li>
+<li><strong>Shopping Cart:</strong> Allows users to add and manage items before checkout.</li>
+<li><strong>Secure Payment Processing:</strong> Handles transactions safely with encryption and security protocols.</li>
+<li><strong>User Accounts:</strong> Enables login and order tracking for personalised experiences.</li>
+</ul>
+<p><strong>Python in E-commerce:</strong></p>
+<p>Python's powerful frameworks, like Django and Flask, are commonly used in e-commerce to handle server-side functionality. For example, Django’s built-in admin panel makes managing products and orders easier, while Python libraries can integrate payment gateways like PayPal or Stripe.</p>
+<p><strong>E-commerce Example:</strong> In a Python-based e-commerce app, users can browse products, add them to a shopping cart, and securely pay for them. Python helps manage the entire process, from inventory updates to secure payment processing.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Progressive web apps (PWAs)</h3>
+<div class="dp-panel-content">
+<p>Progressive Web Apps (PWAs) are web applications that combine the best features of web and mobile apps. They are designed to work offline, load quickly, and offer an app-like experience in the browser, often without needing installation from an app store.</p>
+<p><strong>Benefits of PWAs:</strong></p>
+<ul>
+<li><strong>Offline Access:</strong> Thanks to cached resources, PWAs can function even without an internet connection.</li>
+<li><strong>Push Notifications:</strong> Users can receive updates even when not actively using the app.</li>
+<li><strong>Performance:</strong> PWAs are optimised for fast load times, enhancing the user experience.</li>
+<li><strong>Installable:</strong> Users can add PWAs to their home screens, providing the same functionality as native apps without requiring app store downloads.</li>
+</ul>
+<p><strong>PWAs in Python:</strong></p>
+<p>Although PWAs are largely built using web technologies like JavaScript and service workers, Python can be the back-end to manage data and process user requests. Using Python’s Flask or Django frameworks, you can build APIs that provide the data needed by the front end to display content even offline.</p>
+<p><strong>PWA Example:</strong> A progressive web app could be a news site that loads quickly, sends notifications for breaking news, and caches articles for offline reading. The back-end, powered by Python, handles the fetching of new data, while the front-end PWA provides a seamless, app-like experience.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Recognising a PWA</h3>
+<div class="dp-panel-content ">
+<p><strong>Installation prompt</strong></p>
+<p>If you visit a website that is a PWA, some browsers, especially on mobile devices, may prompt you to install the app to your home screen. This typically happens if you visit the site frequently.</p>
+<p><strong>Home screen icon after installation</strong></p>
+<p>If the PWA is added to your home screen, it will have an icon just like any other app. If you see an app icon for a website you frequently visit, it's likely a PWA.</p>
+<p><strong>Full-screen mode</strong></p>
+<p>PWAs often offer a full-screen mode, which hides the browser's URL bar and navigation controls, giving you an experience similar to an app.</p>
+<p><strong>Offline functionality</strong></p>
+<p>If you notice that the app still works even when you're offline or have a spotty internet connection, it's likely a PWA. PWAs use service workers to cache content and provide offline functionality.</p>
+<p><strong>Push notifications</strong></p>
+<p>PWAs can send push notifications, similar to native mobile apps. If you receive push notifications from a website, it might be a PWA.</p>
+<p><strong>Responsive design</strong></p>
+<p>PWAs are built to be responsive, meaning they adapt to various screen sizes and devices. If the app adjusts well to different screen sizes, it could be a PWA.</p>
+<p><strong>Check browser settings</strong></p>
+<p>Some browsers have specific settings or developer tools that allow you to see if a website is a PWA. For example, in Google Chrome, you can go to <strong>Settings</strong> &gt;<strong> Site Settings</strong> &gt;<strong> Installed Apps</strong> to see a list of installed PWAs.</p>
+<p><strong>Not all websites have PWAs</strong></p>
+<p>This means, if none of the above indicators are evident it is unlikely to be a PWA.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="2.1 Web Programming Applications " href="https://canvas.kings.edu.au/courses/12951/assignments/204816" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204816" data-api-returntype="Assignment">2.1 Web Programming Applications</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<div class="dp-embed-wrapper" style="text-align: center;" data-ratio-w="35.17" data-ratio-h="0.03"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-1-web-programming-applications" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={500230c2-5987-4f0f-bf1a-b868a4a4c16c}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">2.2 Data Transfer</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate and practise how data is transferred on the internet, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>data packets</li>
+<li>internet protocol (IP) addresses, including IPv4</li>
+<li>domain name systems (DNS)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Investigate how data is transferred over the internet using data packets, IP addresses, and the Domain Name System (DNS).</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Describe data packets and their role in internet data transfer.</span></li>
+<li><span style="font-size: 10pt;">Explain the function of IPv4 addresses in identifying devices.</span></li>
+<li><span style="font-size: 10pt;">Understand how DNS translates domain names into IP addresses.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>The internet enables billions of devices to communicate by breaking data into smaller, manageable packets, assigning unique IP addresses to every device, and using DNS to map human-readable domain names to machine-readable IP addresses. Understanding how these elements work together will provide you with a deeper insight into the foundations of modern networking and internet functionality.</p>
+<p>&nbsp;</p>
+<h4>Data Packet</h4>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title"><span style="color: #000000;">What is a packet?</span></h5>
+<p>Imagine sending a long letter through a mail system that only allows small envelopes. Instead of trying to fit the entire letter into one envelope, you would break it into smaller parts, put each part into its envelope, and send them individually. When the recipient receives all the envelopes, they put the parts back together to read the full letter.</p>
+<p>This is similar to how packets work in networking. When data, such as a file or image, is sent over the internet, it is <strong>broken down into smaller segments</strong> called packets. Each packet is <strong>transmitted independently</strong> and can take <strong>different routes</strong> to reach the destination. Once all packets arrive, the receiving device reassembles them to recreate the original data.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>The Importance of Packets</strong></p>
+<p>Theoretically, large chunks of data could be sent in one continuous stream; however, this method would be inefficient, especially on shared networks. Imagine trying to communicate with someone using a single long phone call that prevents others from using the network.</p>
+<p>Instead, packets allow multiple devices to use the same network resources simultaneously, as packets can be switched and routed through different paths independently.</p>
+<p>&nbsp;</p>
+<p><strong>Components of a Packet</strong></p>
+<div class="dp-panels-wrapper dp-tabs-buttons-vertical dp-panel-color-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Header</h3>
+<div class="dp-panel-content ">
+<p>The header contains crucial information required for data transmission:</p>
+<ul>
+<li><strong>Sender's IP Address</strong>: Identifies the source of the packet.</li>
+<li><strong>Receiver's IP Address</strong>: Specifies the intended recipient.</li>
+<li><strong>Protocol</strong>: Defines the communication rules (e.g., TCP, UDP).</li>
+<li><strong>Packet Number</strong>: Indicates the sequence order for reassembly.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Payload</h3>
+<div class="dp-panel-content ">
+<p>The payload is the actual data being transmitted. It could be part of a file, an email message, or any other information that needs to be sent.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Trailer</h3>
+<div class="dp-panel-content">
+<p>The trailer marks the end of the packet and includes:</p>
+<ul>
+<li><strong>Error Detection Data</strong>: Helps verify data integrity (e.g., checksum).</li>
+<li><strong>End of Packet Signal</strong>: Indicates that the packet transmission is complete.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Packet Switching and Routing</h3>
+<div class="dp-panel-content ">
+<p>In a packet-switching network, each packet can travel a different route to its destination. This flexibility allows multiple devices to send data over the same network simultaneously. Once all packets arrive at the destination, protocols like TCP (Transmission Control Protocol) reassemble them into the correct order.</p>
+<p>This method makes the internet robust, as packets can be rerouted if a path is busy or unavailable, ensuring that billions of devices can communicate concurrently.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Packet Security and Malicious Traffic</h3>
+<div class="dp-panel-content ">
+<p>While packets enable seamless communication, they are also susceptible to manipulation for malicious purposes. Hackers may generate packets designed to overwhelm networks (e.g., in Distributed Denial of Service (DDoS) attacks). Advanced cybersecurity measures, such as packet inspection and filtering, help safeguard networks from these attacks.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Internet Protocol (IP)</h4>
+<p>&nbsp;</p>
+<p><strong>Internet Protocol (IP) </strong>is a fundamental system that allows data to travel between devices over the internet. Every device connected to the internet is assigned a unique IP address, similar to a mailing address, that identifies it from other devices. This allows data to be sent and received across networks in a highly organised way.</p>
+<p>When a message or file is sent over the internet, it is assigned a source and destination IP address.&nbsp; After the packets arrive at the destination IP address, another protocol, like Transmission Control Protocol (TCP), reassembles them into the original message.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">What is IPv4?</h3>
+<div class="dp-panel-content ">
+<p><strong>Internet Protocol Version 4 (IPv4)</strong> is the most widely used IP version and has been the backbone of Internet communication for decades. IPv4 uses a 32-bit address system, meaning it can support around 4.3 billion unique IP addresses. This format typically represents four numbers separated by periods (e.g., 192.168.1.1).</p>
+<p>IPv4 has been instrumental in enabling global communication, but its main limitation is the finite number of available addresses. As the internet expanded, the demand for IP addresses increased, leading to the problem of<strong> </strong>IPv4 address exhaustion.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-tip">
+<div class="card-body">
+<p class="card-text">Microsoft Runs Out of U.S. Addresses For Azure Cloud: <a class="inline_disabled" title="Link" href="https://www.internetsociety.org/blog/2014/06/ipv4-exhaustion-gets-real-microsoft-runs-out-of-u-s-addresses-for-azure-cloud-time-to-move-to-ipv6/" target="_blank">Article</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Key Features of IPv4</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>
+<p><strong>Address Format</strong>:</p>
+<ul>
+<li>An IPv4 address consists of four octets (8-bit segments), separated by periods, each ranging from 0 to 255 (e.g., 172.16.254.1).</li>
+</ul>
+</li>
+<li>
+<p><strong>Routing</strong>:</p>
+<ul>
+<li>IPv4 supports <strong>dynamic routing</strong>, allowing packets to travel through different paths and networks to reach their destination.</li>
+</ul>
+</li>
+<li>
+<p><strong>Subnetting</strong>:</p>
+<ul>
+<li>IPv4 allows the division of large networks into smaller sub-networks, optimises traffic, and enhances security within large-scale organisations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Address Exhaustion</strong>:</p>
+<ul>
+<li>Despite its success, IPv4's limited address pool became a concern as internet usage grew exponentially, necessitating the development of a successor, <strong>IPv6</strong>.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/5bcda1e212c0d7d4.png" alt="image.png" width="570" height="301" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527430" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">IPv6</h3>
+<div class="dp-panel-content">
+<p>The introduction of <strong>Internet Protocol Version 6 (IPv6)</strong> was a response to the limitations of IPv4, particularly the exhaustion of available addresses. IPv6 provides a much larger address space, using 128-bit addresses, allowing for trillions of unique IP addresses. While IPv4 is still widely used, the adoption of IPv6 continues to grow to accommodate the increasing number of devices connected to the internet.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/1705b5bebc6e440e.png" alt="image.png" width="531" height="349" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527345" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Domain Name System</h4>
+<p>The Domain Name System (DNS) is a crucial technology that translates human-readable domain names (like <em><a href="http://bitly.com/98K8eH%C2%A0" target="_new">www.example.com</a></em>) into IP addresses (like <em>192.0.2.1</em>), which computers use to identify and communicate with each other over the internet. DNS acts as the internet's "phonebook," allowing users to access websites without remembering complex numerical IP addresses.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">What is DNS?</h3>
+<div class="dp-panel-content ">
+<p>Imagine trying to call someone, but instead of dialling their phone number, you say their name, and your phone automatically finds their number and places the call. DNS works similarly for the internet. When you type a website address into your browser, DNS translates the domain name into the correct IP address, allowing your computer to find and connect to the desired website.</p>
+<p>Without DNS, you would have to memorise the numerical IP addresses of every website you wanted to visit, making navigating the internet extremely cumbersome.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">How does DNS work?</h3>
+<div class="dp-panel-content ">
+<p>When a user enters a URL, such as <em><a href="https://www.kings.edu.au/" target="_new">www.kings.edu.au</a></em>, the browser initiates a DNS query to retrieve the IP address associated with that domain. This process involves multiple DNS servers, each performing a specific role:</p>
+<ol>
+<li><strong>User input</strong>: a user enters a domain name (like ‘example.com’) into their web browser.</li>
+<li><strong>DNS lookup</strong>: the browser sends a DNS query to a DNS resolver, typically provided by the user's internet service provider (ISP) or configured in their network settings</li>
+<li><strong>DNS resolver</strong>: the DNS resolver receives the query and checks its cache to see if it already has the IP address for the requested domain. If the address is found in the cache and is still valid (has not expired), the resolver returns it immediately to the browser. If not, it proceeds to step 4.</li>
+<li><strong>Recursive query</strong>: if the resolver doesn't have the IP address in its cache, it becomes responsible for finding it. It starts by querying the root DNS servers, which hold information about the top-level domains (like ‘.com’, ‘.org’, ‘.net’ and so on).</li>
+<li><strong>Top-level domain (TLD) server</strong>: the root server directs the resolver to the appropriate TLD server based on the domain extension (for example, ‘.com’). The TLD server holds information about the authoritative name servers responsible for the next level of the domain hierarchy.</li>
+<li><strong>Authoritative name server</strong>: the resolver contacts the authoritative name server for the specific domain (for example, ‘example.com’). This server holds the most up-to-date information about the domain, including its IP address.</li>
+<li><strong>Response</strong>: the authoritative name server responds to the resolver with the requested IP address.</li>
+<li><strong>Cache update</strong>: the resolver caches the IP address for future use, reducing the need for repeated lookups.</li>
+<li><strong>Browser request</strong>: armed with the IP address obtained from DNS, the browser can now send a request to the appropriate server hosting the website.</li>
+<li><strong>Website access</strong>: the server responds to the browser's request and the website is displayed to the user.</li>
+</ol>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Types of DNS Servers</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Recursive DNS Server</strong>: The first point of contact for the user’s DNS query. It resolves the request by communicating with other DNS servers.</li>
+<li><strong>Authoritative DNS Server</strong>: This server contains the actual DNS records (IP addresses) for domains and provides the definitive answer to a query.</li>
+<li><strong>Root Nameserver</strong>: Directs queries to the appropriate TLD nameserver.</li>
+<li><strong>TLD Nameserver</strong>: Responsible for resolving queries for specific top-level domains (like <em>.com</em>, <em>.org</em>).</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Types of DNS Queries</h3>
+<div class="dp-panel-content">
+<ul>
+<li>
+<p><strong>Recursive Query</strong>: The client expects the DNS server to return the correct IP address or an error message if the domain is not found.</p>
+</li>
+<li>
+<p><strong>Iterative Query</strong>: The DNS server provides the best answer, typically directing the query to another DNS server with the required information.</p>
+</li>
+<li>
+<p><strong>Non-Recursive Query</strong>: The DNS server returns a cached result, offering a faster response without contacting other servers.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Why is DNS Important?</h3>
+<div class="dp-panel-content">
+<p>DNS ensures that users can access websites using easy-to-remember domain names instead of complex IP addresses. It also optimises performance by caching results, reducing the time required for repeated lookups. Without DNS, navigating the internet would be both tedious and impractical.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">DNS Caching</h3>
+<div class="dp-panel-content">
+<p>Caching plays a critical role in DNS efficiency. When a DNS query is resolved, the result is stored temporarily (cached) by the resolver. The next time the same query is made, the DNS resolver can return the cached IP address without repeating the entire lookup process. This reduces latency and network traffic, allowing websites to load more quickly.</p>
+</div>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Security Considerations: DNS Cache Poisoning</h3>
+<div class="dp-panel-content ">
+<p>DNS is not without vulnerabilities. One of the most common security issues is <strong>DNS cache poisoning</strong> (also known as DNS spoofing). In this attack, malicious actors inject false DNS records into the resolver’s cache, causing users to be redirected to harmful websites. This can lead to phishing, malware infections, and other security breaches.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-tip">
+<div class="card-body">
+<p class="card-text">Find out more about the latest discovered method of DNS Cache Poisoning <a class="inline_disabled" title="Link" href="https://snapshot.internetx.com/en/sad-dns-a-revival-of-the-dns-cache-poisoning-attack/" target="_blank">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity<br></strong></p>
+<ul class="card-text">
+<li><a title="2.2 Data Transfer" href="https://canvas.kings.edu.au/courses/12951/assignments/204827" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204827" data-api-returntype="Assignment">2.2 Data Transfer</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.cloudflare.com/en-gb/learning/network-layer/what-is-a-packet/" target="_blank">What is a packet?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.techtarget.com/searchunifiedcommunications/definition/Internet-Protocol" target="_blank">Internet Protocol (IP)</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.fortinet.com/resources/cyberglossary/what-is-dns" target="_blank">What is DNS (Domain Name System)?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.hostwinds.com/blog/ipv4-classes-what-are-they-and-how-are-they-used" target="_blank">IPv4 Classes: What are They &amp; How are They used</a></li>
+<li><a class="inline_disabled" title="Link" href="https://vasexperts.com/resources/glossary/ipv6/" target="_blank">IPv6</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<p class="card-text"><strong>Cisco Packet tracer</strong><strong></strong></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p style="text-align: left;"><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.2%20Data%20Transfer.pptx?d=wc64134565f7b4f829340efe37cdcc7ae&amp;csf=1&amp;web=1&amp;e=e6t6mz">2.2 Data Transfer.pptx</a></p>
+<p style="text-align: center;">&nbsp;</p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-2-data-transfer" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={c6413456-5f7b-4f82-9340-efe37cdcc7ae}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333&amp;amp;wdEaaCheck=0</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">2.3 Web Protocols</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate and describe the function of web protocols and their ports, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>HTTP, HTTPS</li>
+<li>TCP/IP</li>
+<li>DNS</li>
+<li>FTP, SFTP</li>
+<li>SSL, TLS</li>
+<li>SMTP, POP 3, IMAP</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Investigate and describe the function of web protocols and their ports.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Define HTTP, HTTPS, TCP/IP, DNS, FTP, SFTP, SSL, TLS, SMTP, POP3, and IMAP.</span></li>
+<li><span style="font-size: 10pt;">Identify the ports used by each protocol.</span></li>
+<li><span style="font-size: 10pt;">Explain the purpose and function of each protocol.</span></li>
+<li><span style="font-size: 10pt;">Distinguish between secure and non-secure protocols.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Web protocols are rules and conventions that allow computers and other devices to communicate with each other across the internet. These protocols enable everything from browsing the web to sending and receiving emails securely. Each protocol operates over a specific port, which is a virtual point through which network connections are made. Understanding these protocols and their associated ports is essential for efficient and secure network communication.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">HTTP/HTTPS</h3>
+<div class="dp-panel-content ">
+<p><span style="font-size: 14pt;"><strong>HTTP</strong></span></p>
+<ul>
+<li>
+<p><strong>Port</strong>: 80</p>
+</li>
+<li>
+<p><strong>Function</strong>: HTTP is the protocol responsible for transmitting web pages and other resources across the web. It facilitates communication between a client (usually a web browser) and a server. Each request sent by the client is independent and <span class="dp-tooltip-container"><a id="dpPopup0" class="dp-tooltip-trigger dp-popup-trigger" role="button" href="https://canvas.kings.edu.au/courses/12951/modules#dpPopup0tooltip" class="ext" target="_blank" rel="noopener" aria-describedby="" data-bs-toggle="tooltip">stateless</a> <span id="dpPopup0tooltip" class="dp-tooltip-content dp-popup-content" style="background-color: #545454; color: #ffffff; padding: 2px 5px; border-radius: 3px;" role="tooltip">Stateless: A system where each request is handled independently, without retaining any information from previous requests. Each interaction must provide all necessary details.</span></span>, meaning the server does not retain information about previous requests. This simplicity makes HTTP fast but not secure, as data is transmitted in plain text, leaving it vulnerable to interception.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Loading web pages</li>
+<li>Submitting forms on websites</li>
+<li>Retrieving static and dynamic content like images, videos, and text</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Stateless, meaning each request is treated independently.</li>
+<li>Flexible, as it can transport various types of media (text, images, video, etc.).</li>
+<li>Widely used for non-sensitive data transfers.</li>
+</ul>
+</li>
+</ul>
+<p><span style="font-size: 14pt;"><strong>HTTPS</strong></span></p>
+<ul>
+<li>
+<p><strong>Port</strong>: 443</p>
+</li>
+<li>
+<p><strong>Function</strong>: HTTPS is the secure version of HTTP. It uses encryption methods such as SSL (Secure Sockets Layer) or TLS (Transport Layer Security) to provide confidentiality, integrity, and authentication between the client and server. With HTTPS, all data transmitted between the client and server is encrypted, which helps prevent man-in-the-middle attacks and eavesdropping. HTTPS is now a standard for securing websites, especially those dealing with sensitive data like login credentials, personal information, and payment details.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Secure web browsing</li>
+<li>Online banking and e-commerce</li>
+<li>Securing login forms and payment portals</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Encrypted communication ensures that sensitive data is protected.</li>
+<li>Provides authentication via SSL/TLS <span class="dp-tooltip-container"><a id="dpPopup1" class="dp-tooltip-trigger dp-popup-trigger" role="button" href="https://canvas.kings.edu.au/courses/12951/modules#dpPopup1tooltip" class="ext" target="_blank" rel="noopener" aria-describedby="" data-bs-toggle="tooltip">certificates</a> <span id="dpPopup1tooltip" class="dp-tooltip-content dp-popup-content" style="background-color: #545454; color: #ffffff; padding: 2px 5px; border-radius: 3px;" role="tooltip">A digital document used to verify the identity of a website or server. It ensures secure communication by encrypting data and is issued by trusted authorities (CA).</span></span>, ensuring the legitimacy of the website.</li>
+<li>Protects data integrity, ensuring it is not tampered with during transmission.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">TCP/IP</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Ports</strong>: TCP commonly uses ports in the range of 0–65535, depending on the application. IP is protocol-based, not port-based.</li>
+<li><strong>Function</strong>: TCP/IP is the foundational protocol suite for all internet communications. <strong>TCP</strong> ensures reliable and ordered data delivery between applications, while <strong>IP</strong> handles addressing and routing packets to their correct destination.</li>
+</ul>
+<p><strong>TCP (Transmission Control Protocol)</strong> is a connection-oriented protocol that establishes a connection between the client and the server before data is transferred. It breaks data into packets, ensures all packets are received, and reassembles them in the correct order. TCP also handles error-checking and retransmission of lost packets.</p>
+<p><strong>IP (Internet Protocol)</strong> is responsible for addressing packets and routing them across different networks. Each packet includes a source and destination IP address, which enables routers to forward them correctly.</p>
+<ul>
+<li>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Web browsing</li>
+<li>File transfers (via FTP)</li>
+<li>Sending and receiving emails (SMTP)</li>
+<li>Streaming services (video/audio)</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Reliable, ensuring data is delivered correctly and in order.</li>
+<li>Connection-oriented, meaning a session is established before transmission begins.</li>
+<li>Supports flow control and error correction.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-tip">
+<div class="card-body">
+<p class="card-text">Find out more about how IP and IPv4 addresses are used for data transfer here: <a title="2.2 Data Transfer" href="../lessons/12951-042.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/2-dot-2-data-transfer" data-api-returntype="Page">2.2 Data Transfer</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">DNS</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Port</strong>: 53</li>
+<li><strong>Function</strong>: DNS translates domain names (e.g., <em><a href="http://www.example.com/" target="_new">www.example.com</a></em>) into IP addresses (e.g., <em>192.168.1.1</em>) that computers use to identify each other on a network. It functions like a phonebook for the internet. Without DNS, users would have to memorise numerical IP addresses to visit websites.</li>
+</ul>
+<p>The DNS system works by querying several servers in a hierarchy to resolve the domain name. The query starts at the DNS resolver, which then contacts the root server, the Top-Level Domain (TLD) server, and finally, the authoritative server to retrieve the IP address.</p>
+<ul>
+<li>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Browsing the web</li>
+<li>Accessing services by domain names</li>
+<li>Email routing</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Hierarchical structure for resolving queries.</li>
+<li>Caching improves efficiency and reduces lookup times.</li>
+<li>Essential for linking human-readable names to machine-readable IP addresses.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-tip">
+<div class="card-body">
+<p class="card-text">Find out more about how DNS is used for data transfer here: <a title="2.2 Data Transfer" href="../lessons/12951-042.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/2-dot-2-data-transfer" data-api-returntype="Page">2.2 Data Transfer</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">FTP &amp; SFTP</h3>
+<div class="dp-panel-content">
+<p><strong>FTP (File Transfer Protocol)</strong></p>
+<ul>
+<li>
+<p><strong>Port</strong>: 21</p>
+</li>
+<li>
+<p><strong>Function</strong>: FTP is a protocol used to transfer files between computers over a network. It operates in two modes: active and passive. FTP is not secure, as data, including credentials, is transferred in plain text. However, it's efficient for moving large files or directories between systems, especially when security is not a primary concern.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Uploading files to a website</li>
+<li>Downloading large datasets</li>
+<li>Managing files on a remote server</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Simple to use for transferring files.</li>
+<li>Lacks encryption, meaning it’s vulnerable to eavesdropping.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>SFTP (Secure File Transfer Protocol)</strong></p>
+<ul>
+<li>
+<p><strong>Port</strong>: 22</p>
+</li>
+<li>
+<p><strong>Function</strong>: SFTP is an extension of SSH (Secure Shell) and provides secure file transfer by encrypting both the commands and the data. This makes it a preferred choice for transferring sensitive information over an unsecured network. Unlike FTP, which requires multiple ports, SFTP operates over a single port (port 22), simplifying firewall configurations.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Securely transferring confidential files (e.g., financial records).</li>
+<li>Synchronising files between local and remote systems.</li>
+<li>Backup and storage of sensitive data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Encrypted data transfer via SSH.</li>
+<li>Supports file manipulation commands (e.g., renaming, deleting).</li>
+<li>Operates over a single, secure port.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">SSL &amp; TLS</h3>
+<div class="dp-panel-content">
+<p><strong>SSL (Secure Sockets Layer)</strong></p>
+<ul>
+<li>
+<p><strong>Port</strong>: Primarily used on port 443 (HTTPS).</p>
+</li>
+<li>
+<p><strong>Function</strong>: SSL is a cryptographic protocol designed to secure communications between a web server and a client. It encrypts the data transmitted, protecting it from unauthorised access or tampering. While SSL is largely deprecated in favour of TLS, it still serves as a foundational protocol for many secure communications.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Secure websites (e.g., HTTPS)</li>
+<li>Protecting data in transit for online transactions</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Provides data encryption and authentication.</li>
+<li>Uses certificates to verify server identity.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>TLS (Transport Layer Security)</strong></p>
+<ul>
+<li>
+<p><strong>Port</strong>: Primarily used on port 443 (HTTPS).</p>
+</li>
+<li>
+<p><strong>Function</strong>: TLS is the successor to SSL and provides improved encryption, security, and performance. TLS ensures that data transmitted between a web browser and a web server remains private and unaltered. It uses cryptographic algorithms to secure the communication channel.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Secure web browsing (HTTPS)</li>
+<li>Secure email (with SMTP, IMAP, POP3)</li>
+<li>Securing VoIP (Voice over IP) communication</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Enhanced security over SSL.</li>
+<li>Utilises stronger encryption algorithms.</li>
+<li>Provides forward secrecy, preventing past communications from being decrypted if the private key is compromised.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">SMTP, POP3, IMAP</h3>
+<div class="dp-panel-content">
+<p><strong>SMTP (Simple Mail Transfer Protocol)</strong></p>
+<ul>
+<li>
+<p><strong>Ports</strong>: 25 (unencrypted), 465/587 (with SSL/TLS)</p>
+</li>
+<li>
+<p><strong>Function</strong>: SMTP is the protocol used to send emails between servers or from a client to a server. SMTP pushes messages from the sender’s mail server to the recipient's mail server and works in conjunction with email retrieval protocols like POP3 or IMAP.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Sending email from client to server.</li>
+<li>Transmitting email between mail servers.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Pushes outgoing emails to the server.</li>
+<li>Requires email retrieval protocols (e.g., IMAP/POP3) for receiving emails.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>POP3 (Post Office Protocol v3)</strong></p>
+<ul>
+<li>
+<p><strong>Ports</strong>: 110 (unencrypted), 995 (with SSL/TLS)</p>
+</li>
+<li>
+<p><strong>Function</strong>: POP3 is used to retrieve emails from a mail server to a local device. Once emails are downloaded, they are often deleted from the server, making this protocol suitable for users who access their email from a single device.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Accessing email offline.</li>
+<li>Downloading emails to a single device.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Simple, one-way communication (download only).</li>
+<li>Emails are typically deleted from the server after download.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>IMAP (Internet Message Access Protocol)</strong></p>
+<ul>
+<li>
+<p><strong>Ports</strong>: 143 (unencrypted), 993 (with SSL/TLS)</p>
+</li>
+<li>
+<p><strong>Function</strong>: IMAP allows users to access their email from multiple devices, as messages are stored on the server until explicitly deleted. It synchronizes email across devices, enabling users to read, organise, and delete emails from any device.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Accessing email from multiple devices.</li>
+<li>Synchronising email across devices.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Two-way communication (synchronisation).</li>
+<li>Emails remain on the server unless deleted.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.geeksforgeeks.org/types-of-internet-protocols/" target="_blank">Types of Internet Protocols</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.techtarget.com/searchnetworking/feature/12-common-network-protocols-and-their-functions-explained" target="_blank">12 Common Network Protocols and their Functions Explained</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity<br></strong></p>
+<ul class="card-text">
+<li><a title="2.3 Web Protocols" href="https://canvas.kings.edu.au/courses/12951/assignments/204830" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204830" data-api-returntype="Assignment">2.3 Web Protocols</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoints</h3>
+<div class="dp-panel-content ">
+<p style="text-align: left;"><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.3%20Web%20Protocols.pptx?d=w9de142eb7de24dd89d537fadcd3755b5&amp;csf=1&amp;web=1&amp;e=x8ZPFZ">2.3 Web Protocols.pptx</a></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-3-web-protocols" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={9de142eb-7de2-4dd8-9d53-7fadcd3755b5}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">2.4 Securing the Web</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Explain the processes for securing the web, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>Secure Sockets Layer (SSL) certificates</li>
+<li>encryption algorithms</li>
+<li>encryption keys</li>
+<li>plain text and cipher text</li>
+<li>authentication and authorisation</li>
+<li>hash values</li>
+<li>digital signatures</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explain the various processes and technologies used to secure web communications and data, including SSL certificates, encryption algorithms, keys, and methods of authentication and authorisation.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Describe the role of Secure Sockets Layer (SSL) certificates in establishing secure connections and ensuring data privacy on the web.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Explain how encryption algorithms and encryption keys transform plain text into cipher text to protect sensitive information.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Explain the use of hash values and digital signatures in verifying data integrity and ensuring secure communication.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4>SSL Certificates</h4>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">Definition</h5>
+<p class="card-text">SSL certificates are digital certificates used to establish a secure, encrypted connection between a web server and a client (typically a web browser). They are part of the broader category of Transport Layer Security (TLS) certificates.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Components:</strong></p>
+<ul>
+<li><strong>Certificate Authority (CA):</strong> A trusted organisation that issues SSL certificates after verifying the identity of the entity requesting the certificate.</li>
+<li><strong>Public and Private Keys:</strong> The certificate includes a public key, which is paired with a private key held by the server. These keys are used to encrypt and decrypt data.</li>
+<li><strong>Digital Certificate:</strong> This file contains the public key and information about the server and the CA.</li>
+</ul>
+<p><strong>Process:</strong></p>
+<ol>
+<li><strong>Handshake:</strong> When a browser connects to a server, the server sends its SSL certificate.</li>
+<li><strong>Certificate Verification:</strong> The browser verifies the certificate’s authenticity by checking it against a list of trusted CAs.</li>
+<li><strong>Session Key Generation:</strong> If the certificate is trusted, the browser generates a session key and encrypts it using the server’s public key.</li>
+<li><strong>Secure Communication:</strong> The server decrypts the session key with its private key, establishing an encrypted communication channel using the session key.</li>
+</ol>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-4-securing-the-web" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://joyful-meringue-655510.netlify.app/</span></div></div>
+<p>&nbsp;</p>
+<h4>Encryption Algorithms</h4>
+<p><strong>Symmetric Encryption:</strong></p>
+<ul>
+<li><strong>AES (Advanced Encryption Standard):</strong> A widely used symmetric encryption algorithm known for its speed and security. It uses keys of 128, 192, or 256 bits.</li>
+<li><strong>DES (Data Encryption Standard) &amp; 3DES:</strong> Older symmetric algorithms. DES uses a 56-bit key and is considered insecure today, while 3DES applies DES three times for improved security.</li>
+<li><strong>How It Works:</strong> A single key is used to both encrypt and decrypt the data. Both parties must securely share and keep this key confidential.</li>
+</ul>
+<p><strong>Asymmetric Encryption:</strong></p>
+<ul>
+<li><strong>RSA (Rivest-Shamir-Adleman):</strong> A common asymmetric encryption method used for secure data transmission. It relies on the difficulty of factoring large numbers.</li>
+<li><strong>ECC (Elliptic Curve Cryptography):</strong> Provides similar security to RSA but with smaller keys, making it faster and more efficient.</li>
+<li><strong>How It Works:</strong> Two keys are used—one public and one private. Data encrypted with the public key can only be decrypted by the corresponding private key and vice versa.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Encryption Keys</h4>
+<p><strong>Key Generation:</strong> Keys are generated using mathematical algorithms. For symmetric encryption, a random number generator is often used. For asymmetric encryption, key pairs are generated mathematically.</p>
+<p><strong>Key Management:</strong> Secure storage and exchange of keys are critical. Methods like Public Key Infrastructure (PKI) are used to manage keys in a structured manner.</p>
+<p><strong>Key Length:</strong> The security of an encryption key is determined by its length (measured in bits). Longer keys are harder to break. For example, a 2048-bit RSA key is more secure than a 1024-bit key.</p>
+<p>&nbsp;</p>
+<h4>Plain Text and Cipher Text</h4>
+<p><strong>Plain Text:</strong></p>
+<ul>
+<li>Refers to readable data before encryption. Examples include emails, passwords, and financial information.</li>
+</ul>
+<p><strong>Cipher Text:</strong></p>
+<ul>
+<li>This is the scrambled, unreadable version of plain text after encryption. It appears as a random string of characters and can only be converted back to plain text with the appropriate key.</li>
+</ul>
+<div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dark">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Solving Ciphers</h3>
+<div class="dp-panel-content ">
+<p>Test your skills by decoding the messages using different ciphers. It’s a good way to practice and understand how ciphers work. Give it a try.</p>
+<p>&nbsp;</p>
+<p>Look for Patterns: Pay attention to letter frequencies and patterns in the text. Common letters in English (like E, T, A, O) can give you clues.</p>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-4-securing-the-web" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.subsolver.com/casual/</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Authentication and Authorisation</h4>
+<p><strong>Authentication:</strong></p>
+<ul>
+<li><strong>Process:</strong> Confirms the identity of a user or system. Common methods include:
+<ul>
+<li><strong>Passwords/PINs:</strong> A secret known to the user.</li>
+<li><strong>Biometrics:</strong> Fingerprints, facial recognition, or retinal scans.</li>
+<li><strong>Tokens:</strong> One-time passwords (OTP) or security tokens.</li>
+<li><strong>Multi-Factor Authentication (MFA):</strong> Combines multiple methods, such as a password and a biometric scan, to enhance security.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Authorisation:</strong></p>
+<ul>
+<li><strong>Process:</strong> Determines what resources or actions an authenticated user is allowed to access. Often implemented using Role-Based Access Control (RBAC) or Attribute-Based Access Control (ABAC).</li>
+<li><strong>Example:</strong> An authenticated user may have access to view documents but not to modify or delete them.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/a0dbcf4401a49439.png" alt="image.png" width="506" height="362" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527355" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Hash Values</h4>
+<p><strong>Hash Functions:</strong></p>
+<ul>
+<li><strong>Purpose:</strong> Convert input data of any size into a fixed-size string. Common algorithms include SHA-256 and MD5.</li>
+<li><strong>Properties:</strong>
+<ul>
+<li><strong>Deterministic:</strong> The same input will always produce the same hash.</li>
+<li><strong>Collision-Resistant:</strong> It’s computationally infeasible to find two different inputs that produce the same hash.</li>
+<li><strong>Non-Reversible:</strong> It’s practically impossible to reverse the hash to obtain the original input.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li><strong>Password Hashing:</strong> Instead of storing passwords, systems store hashed versions. During login, the user’s input is hashed and compared to the stored hash.</li>
+<li><strong>Data Integrity:</strong> Verifies that files or messages have not been altered. For example, software downloads often provide a hash value for the user to verify against the downloaded file.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Digital Signatures</h4>
+<p><strong>Components:</strong></p>
+<ul>
+<li><strong>Hashing:</strong> The document or message is first hashed.</li>
+<li><strong>Signing:</strong> The hash is then encrypted with the sender’s private key, creating the digital signature.</li>
+</ul>
+<p><strong>Process:</strong></p>
+<ol>
+<li>The sender creates a hash of the message.</li>
+<li>The hash is encrypted with the sender’s private key, forming the digital signature.</li>
+<li>The signature is sent along with the original message.</li>
+<li>The recipient decrypts the signature using the sender’s public key to obtain the hash.</li>
+<li>The recipient generates a hash of the received message and compares it to the decrypted hash.</li>
+<li>If the hashes match, it confirms that the message is authentic and unaltered.</li>
+</ol>
+<p><strong>Applications:</strong></p>
+<ul>
+<li><strong>Email Security:</strong> Confirms the sender’s identity and the integrity of the email content.</li>
+<li><strong>Software Distribution:</strong> Verifies that software has not been tampered with since it was signed by the developer.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/92e05c8d8931f8b9.png" alt="image.png" width="730" height="411" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527354" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.fortinet.com/resources/cyberglossary/digital-certificates" target="_blank">What are Digital Certificates?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.4 Securing the Web" href="https://canvas.kings.edu.au/courses/12951/assignments/204831" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204831" data-api-returntype="Assignment">2.4 Securing the Web</a><strong><a title="2.4 Securing the Web" href="https://canvas.kings.edu.au/courses/12951/assignments/204831" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204831" data-api-returntype="Assignment"></a></strong></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.4%20Securing%20the%20Web.pptx?d=w309e60b0bf184a4cb1a18fb20c396335&amp;csf=1&amp;web=1&amp;e=v9jvIu">2.4 Securing the Web.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-4-securing-the-web" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={309e60b0-bf18-4a4c-b1a1-8fb20c396335}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+&nbsp;</div>
+</div>
+<h3 class="readles">2.5 Big Data</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate the effect of big data on web architecture, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>data mining</li>
+<li>metadata</li>
+<li>streaming service management</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Investigate and analyse the impact of big data on web architecture, focusing on data mining, metadata, and streaming service management.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Define data mining, metadata, and streaming service management in the context of big data.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Explain how big data technologies influence web architecture, particularly in processing and storing large datasets.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Describe the role of data mining in extracting useful information from large datasets and how it affects decision-making in web services.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Identify how metadata is used to organise, manage, and retrieve data effectively in web systems.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Discuss the architecture and technology requirements for managing streaming services, including real-time data processing and content delivery.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Analyse real-world examples of how big data impacts companies like Netflix, particularly in content recommendations and user experience optimization.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+</div>
+<div class="dp-content-block kl_custom_block_1">Big Data is transforming the architecture of the web in profound ways, driving new structures and technologies to handle the vast influx of data. By examining <strong>data mining</strong>, <strong>metadata</strong>, and <strong>streaming service management</strong>, we can understand how modern web systems evolve to meet the demands of an increasingly data-driven world.
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">What is Big Data?</h5>
+<p class="card-text">Big Data refers to extremely large and complex datasets that cannot be managed or processed using traditional data processing tools.</p>
+<p class="card-text">The concept of Big Data has evolved over time, leading to various definitions, but the most widely accepted characterisation is based on the <strong>"V's" framework</strong>, which outlines the key attributes of Big Data. Originally, Big Data was defined by three Vs—<strong>Volume, Velocity, and Variety</strong>—but over time, other V's have been added to describe its growing complexity and importance.</p>
+</div>
+</div>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/577aebf99880549f.png" alt="image.png" width="653" height="392" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527421" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Data Mining</h4>
+<p><strong>Data mining</strong> refers to the process of discovering patterns, correlations, and insights from large datasets. By analysing massive amounts of data, organisations can extract valuable information that can be used to make informed decisions, optimise processes, and predict future trends. Data mining is essential in industries such as e-commerce, healthcare, finance, and marketing.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">How it works?</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Data is collected from various sources (such as social media, IoT devices, and transaction records).</li>
+<li>Advanced algorithms analyse the data to uncover hidden patterns and relationships.</li>
+<li>These insights are used to guide decision-making, enhance user experiences, and improve business operations.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Common Data Mining Techniques</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Classification</strong>: Assigning data into predefined categories (e.g., classifying customers based on purchase behaviours).</li>
+<li><strong>Clustering</strong>: Grouping similar data points together (e.g., segmenting users based on browsing patterns).</li>
+<li><strong>Association</strong>: Discovering relationships between variables (e.g., identifying which products are frequently bought together).</li>
+<li><strong>Regression</strong>: Predicting a continuous value based on other variables (e.g., forecasting sales based on past trends).</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Examples</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Retail and E-commerce</strong>: Amazon uses data mining to recommend products based on user history.</li>
+<li><strong>Healthcare</strong>: Hospitals analyse patient data to predict the likelihood of diseases and personalise treatments.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>The rise of Big Data has significantly impacted web architecture, leading to the development of new technologies and approaches to manage, store, and process enormous volumes of data. Traditional data processing methods are insufficient, and modern web architecture has adapted to meet the challenges posed by Big Data.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Scalability and Distributed Systems</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Challenge</strong>: Big Data systems must handle vast volumes of data that are continuously generated from various sources. Centralised systems cannot manage this level of data efficiently.</li>
+<li><strong>Solution</strong>: Modern web architecture incorporates <strong>distributed systems</strong>, where data is processed and stored across multiple servers. Technologies such as <strong>Hadoop</strong> and <strong>Apache Spark</strong> enable parallel data processing, allowing systems to scale horizontally by adding more servers as data volume grows.</li>
+</ul>
+<p><strong>Example</strong>: Companies like Google and Facebook use distributed systems to manage data generated by billions of users in real-time.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Real-Time Data Processing</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Challenge</strong>: The speed (velocity) at which data is generated, especially from IoT devices and social media, requires web systems that can process and respond to data instantly.</li>
+<li><strong>Solution</strong>: Web architectures now integrate <strong>real-time data processing</strong> frameworks such as <strong>Apache Kafka</strong> and <strong>Apache Flink</strong>, which handle streaming data. These systems allow businesses to analyse data as it arrives, enabling real-time decision-making.</li>
+</ul>
+<p><strong>Example</strong>: Streaming platforms like <strong>Twitch</strong> and <strong>Netflix</strong> analyse user data in real-time to optimise streaming quality and recommend content.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Data Storage and Management</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Challenge</strong>: The volume and variety of Big Data demand storage solutions that can handle structured, unstructured, and semi-structured data.</li>
+<li><strong>Solution</strong>: Web architectures have shifted towards <strong>cloud-based storage</strong> solutions like <strong>Amazon S3</strong> and <strong>Google Cloud Storage</strong>, which offer flexibility, scalability, and cost-effectiveness. These solutions allow organisations to store data in its raw form and process it as needed, reducing the need for pre-defined schemas.</li>
+</ul>
+<p><strong>Example</strong>: E-commerce platforms store massive amounts of customer interaction data in cloud databases, which are analysed for marketing, inventory management, and customer service.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Metadata</h4>
+<p>Metadata is a set of data that describes and gives information about other data. Think of it as a label or tag that provides details about a file or piece of information. For example, when you take a photo with your phone, metadata can include the date and time the photo was taken, the location, the camera settings, and more. This extra information helps organise, categorise, and make sense of data.</p>
+<p>&nbsp;</p>
+<p>In the world of Big Data, metadata is like a roadmap or a guide that helps us navigate through the massive and complex landscape of information. Imagine trying to find a specific book in a gigantic library without a catalogue or labels on the shelves. It would be nearly impossible! Metadata serves as that catalogue, providing essential details about the data so that we can understand, find, and use it effectively.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Organisation</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Categorising Data: Metadata helps categorise data by providing information about its content. For example, in a huge collection of social media posts, metadata can include tags like the type of content (text, image, video), the topic discussed, the language used, and even user demographics. This makes it easier to group similar data together.</li>
+<li>Data Models and Schemas: Metadata defines the structure of data in databases, such as tables, columns, and relationships. This structure is essential for storing and retrieving information efficiently, especially when dealing with large datasets.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Discovery</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Enhanced Search Capabilities: When we search for something on the internet or in a database, metadata helps narrow down the results. For example, if you’re looking for movies from the 1990s on a streaming service, metadata tags like the release year, genre, and director make this search possible and efficient.</li>
+<li>Facilitating Advanced Queries: In complex datasets, metadata enables advanced search queries. For example, a company might use metadata to filter customer data based on purchase history, geographic location, or engagement with marketing campaigns.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Improving Search and Analysis</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Connecting Different Data Sources: In Big Data, information often comes from various sources, like social media, e-commerce, and sensor data. Metadata standardises these diverse sources by providing common reference points, such as time stamps or geographic coordinates, making it easier to combine and compare them.</li>
+<li>APIs and Data Sharing: Metadata facilitates data sharing between systems and applications through APIs (Application Programming Interfaces). It provides the necessary details, such as data format and access protocols, to ensure that different systems can communicate and share data effectively.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Quality and Accuracy</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Ensuring Data Accuracy: Metadata includes information about data provenance, or the origin of the data, which helps verify its accuracy and reliability. For example, knowing who created the data and when it was last updated can be crucial for research and decision-making.</li>
+<li>Data Lifespan and Usage Policies: Metadata can include rules about how long data should be stored (data retention policies) and who is allowed to access or modify it. This is especially important in sectors like healthcare or finance, where data privacy and security are critical.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Streaming Service Management</h4>
+<p>Streaming service management involves organising, storing, and delivering digital content like movies, music, and videos over the internet. Companies like Netflix, Spotify, and YouTube are examples of streaming services that manage vast libraries of content and deliver it to users on demand.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<p>Managing a streaming service involves several key tasks:</p>
+<ol style="list-style-type: decimal;">
+<li>Content Storage: Storing massive amounts of data, including videos, audio files, and metadata.</li>
+<li>Content Delivery: Making sure content is delivered quickly and efficiently to users around the world. This often uses Content Delivery Networks (CDNs) that cache content close to users.</li>
+<li>User Experience: Providing features like content recommendations, fast loading times, and high-quality streaming without buffering.</li>
+<li>Analytics and Personalisation: Analysing user behaviour to recommend new content based on their preferences.</li>
+</ol>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Content Recommendations</h3>
+<div class="dp-panel-content ">
+<p>Big Data’s Role:</p>
+<ul>
+<li>Streaming platforms like Netflix and Spotify gather data on what content users interact with, including what they watch or listen to, the time spent on each piece of content, and their browsing habits.</li>
+<li>This data is used to create personalised recommendations, improving user engagement and satisfaction. For instance, Netflix’s recommendation engine suggests movies and shows based on viewing history, ratings, and even how long a user watched a particular type of content.</li>
+</ul>
+<p>Effect on Architecture:</p>
+<ul>
+<li>To process and analyse this enormous amount of data, streaming services use big data technologies like Hadoop, which stores and processes large datasets, and Apache Spark, which performs real-time data processing.</li>
+<li>The backend infrastructure is designed to be scalable and capable of handling real-time analytics. This often involves using distributed databases such as Cassandra or MongoDB, which can efficiently manage and query large datasets across multiple servers.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Real-Time Streaming and Adaptive Bitrate</h3>
+<div class="dp-panel-content ">
+<p>Big Data’s Role:</p>
+<ul>
+<li>Streaming services monitor the quality of the user’s internet connection and the specifications of their device (like screen resolution) to dynamically adjust the quality of the video or audio being streamed. This is called adaptive bitrate streaming.</li>
+<li>By analysing network conditions in real-time, services can switch between different quality streams to prevent buffering, thus ensuring a smooth viewing experience.</li>
+</ul>
+<p>Effect on Architecture:</p>
+<ul>
+<li>The architecture for real-time streaming involves microservices that handle different tasks like encoding, caching, and distribution of content. These microservices work together to adjust the stream quality based on real-time data.</li>
+<li>Tools like Kafka or RabbitMQ are used for real-time data streaming and processing. These tools help in the continuous monitoring of network conditions and user interactions, ensuring the stream quality is adjusted on the fly.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Predictive Maintenance</h3>
+<div class="dp-panel-content">
+<p>Big Data’s Role:</p>
+<ul>
+<li>Predictive maintenance involves using big data analytics to foresee and prevent potential technical issues that could disrupt the service. For example, by analysing server logs, network traffic, and user error reports, streaming platforms can identify patterns that may indicate an impending system failure.</li>
+<li>This helps in proactive troubleshooting, reducing downtime, and maintaining a seamless user experience.</li>
+</ul>
+<p>Effect on Architecture:</p>
+<ul>
+<li>The architecture must support the ingestion and analysis of large volumes of real-time data. Technologies like Apache Kafka or Amazon Kinesis are often used for data streaming, while machine learning models are deployed to detect anomalies in the data.</li>
+<li>The system also needs to be highly available and fault-tolerant, as it is crucial to react quickly to potential issues. This often involves using cloud-based solutions that provide auto-scaling and automated recovery features.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Scalability and Flexibility</h3>
+<div class="dp-panel-content">
+<p>Big Data’s Role:</p>
+<ul>
+<li>As the number of users and the amount of content grow, streaming services need to scale their infrastructure to handle increased traffic and data loads. Big data analytics helps predict when these spikes will occur, such as during the release of a popular show or live event.</li>
+<li>By analysing historical data, services can allocate resources dynamically to meet demand, ensuring that users experience no delays or interruptions.</li>
+</ul>
+<p>Effect on Architecture:</p>
+<ul>
+<li>The architecture is typically cloud-based, utilising platforms like AWS, Google Cloud, or Microsoft Azure. These platforms offer scalable storage and computing resources that can be adjusted based on demand.</li>
+<li>Containerisation tools like Docker and orchestration platforms like Kubernetes are often used to deploy and manage applications in a scalable and flexible manner. This allows streaming services to add or remove resources easily, maintaining performance during peak times.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Enhanced Security and Fraud Detection</h3>
+<div class="dp-panel-content">
+<p>Big Data’s Role:</p>
+<ul>
+<li>Streaming platforms collect data to monitor for unusual activity, such as multiple logins from different locations, which could indicate account sharing or hacking attempts. Analysing this data helps in detecting and preventing fraud and security breaches.</li>
+<li>For example, services like Netflix use machine learning models trained on user behaviour data to identify suspicious activity patterns.</li>
+</ul>
+<p>Effect on Architecture:</p>
+<ul>
+<li>The architecture for security and fraud detection needs to support real-time data analysis and rapid response. Tools like Elasticsearch are used to search and analyse security logs, while machine learning models deployed in the cloud can process large volumes of data and detect anomalies.</li>
+<li>Data security measures, including encryption and secure APIs, are integrated into the architecture to protect user data and ensure compliance with regulations like GDPR.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Use of Big Data: Netflix</h3>
+<div class="dp-panel-content ">
+<p>Netflix is an example where big data and web architecture come together, learn how Netflix utilises big data to provide personalised content recommendations, improve streaming quality, and make informed decisions about new shows and movies. Read more about this <a class="inline_disabled" title="Link" href="https://seleritysas.com/2019/04/05/how-netflix-used-big-data-and-analytics-to-generate-billions/" target="_blank">here</a>.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.techtarget.com/searchdatamanagement/definition/big-data" target="_blank">Big Data</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.oracle.com/au/big-data/what-is-big-data/" target="_blank">What is Big Data?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.5 Big Data" href="https://canvas.kings.edu.au/courses/12951/assignments/204832" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204832" data-api-returntype="Assignment">2.5 Big Data</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/s/CanvasSharepoint/IQCes6bijcEtR4feshXE-H7WAQGDV9Oehgmh0jVlBcBkb2U?e=2XpPSl">2.5 Big Data on Web.pptx</a></p>
+<p><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-5-big-data" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/CanvasSharepoint/_layouts/15/Doc.aspx?sourcedoc={e2a6b39e-c18d-472d-87de-b215c4f87ed6}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></p>
+</div>
+</div>
+</div>
+</div>
+</div><h3 class="sub">Designing Web Applications</h3>
+<h3 class="readles">2.6 World Wide Web Consortium</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate and explain the role of the World Wide Web Consortium (W3C) in the development of applications for the web, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>Web Accessibility Initiative (WAI)</li>
+<li>internationalisation</li>
+<li>web security</li>
+<li>privacy</li>
+<li>machine-readable data</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Investigate and explain the role of the World Wide Web Consortium (W3C) in setting standards for web development, including initiatives related to web accessibility, internationalisation, web security, privacy, and machine-readable data.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Describe the purpose and impact of the Web Accessibility Initiative (WAI) in making web content accessible to people with disabilities.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Explain how W3C standards support internationalisation, allowing web applications to be used by a global audience in multiple languages and cultures.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Identify W3C guidelines that enhance web security and protect user privacy in web applications.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Understand the importance of W3C standards for machine-readable data, such as RDF and Linked Data, in enabling the semantic web and data interoperability.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>The World Wide Web Consortium (W3C) is the main international standards organisation for the web, founded by Tim Berners-Lee in 1994. It develops open standards to ensure the long-term growth of the Web. Below are key initiatives and areas where the W3C has a significant impact on web development.</p>
+<p>&nbsp;</p>
+<h4>Web Accessibility Initiative (WAI)</h4>
+<p>The Web Accessibility Initiative (WAI) is a core program of the W3C that develops strategies, guidelines, and resources to make the web accessible to people with disabilities.</p>
+<ul>
+<li>Accessible Rich Internet Applications (WAI-ARIA): WAI-ARIA is a set of specifications that provide ways to make web applications accessible, especially dynamic content and advanced user interface controls.</li>
+<li>Authoring Tool Accessibility Guidelines (ATAG) and User Agent Accessibility Guidelines (UAAG): These guidelines focus on ensuring that tools used to create and consume web content are accessible. ATAG addresses accessibility in content creation tools, while UAAG focuses on browsers and media players.</li>
+</ul>
+<ul>
+<li>Web Content Accessibility Guidelines (WCAG): WCAG provides a framework for making web content more accessible. It is structured around four principles: Perceivable, Operable, Understandable, and Robust (POUR). The guidelines are divided into three levels of conformance: A, AA, and AAA, with AAA being the highest standard.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/048235659721702f.png" alt="image.png" width="299" height="268" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527351" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Internationalisation</h4>
+<p>W3C’s internationalisation activities ensure that web applications and content can be used by people around the world, regardless of language, region, or cultural background.</p>
+<ul>
+<li>Character Encoding and Text Direction: Standards such as UTF-8 and guidelines on bidirectional (BiDi) text support ensure that web content is correctly displayed in multiple languages, including those with complex scripts and right-to-left writing directions.</li>
+<li>Language and Locale Identification: The use of attributes like lang in HTML and standards such as BCP 47 for language tags enable accurate language identification and proper rendering of localised content.</li>
+<li>Cultural Adaptation: W3C provides best practices for handling region-specific date formats, currency, numbering systems, and other cultural nuances. This is crucial for creating user-friendly, localised web applications.</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ffeb3b; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-discussion icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Discussion</strong></p>
+<p>Compare differences between <a class="inline_disabled" href="https://www.microsoft.com/en-au/" target="_blank">Microsoft Australia</a> and <a class="inline_disabled" href="https://www.microsoft.com/ar-sa/" target="_blank">Microsoft Saudi Arabia's</a> websites. What do you notice?</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;How does the language or text direction change the layout and navigation of the page?</p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-6-world-wide-web-consortium" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/12951/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fdiscussions.atomicjoltappsau.com%2Flti_launches%2FkLPYGVaDNgG3NRQDaV4AcHay</span></div></div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Web Security</h4>
+<p>Web security is a critical area where W3C standards aim to protect both users and web applications from various threats.</p>
+<ul>
+<li>&nbsp;Content Security Policy (CSP): CSP helps prevent cross-site scripting (XSS) attacks by allowing developers to specify which sources of content are trusted and can be safely loaded by the browser.</li>
+<li>Secure Contexts: Many W3C APIs, such as Geolocation and WebRTC, require a secure context (HTTPS) to function, ensuring that sensitive data is transmitted securely.</li>
+<li>WebAuthn: This standard provides a secure way to authenticate users through the browser, leveraging public-key cryptography instead of passwords. It is part of the FIDO2 project and aims to enhance security by reducing reliance on traditional passwords.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Privacy</h4>
+<p>W3C’s privacy standards aim to provide users with greater control over their personal information and ensure that web applications handle data responsibly.</p>
+<ul>
+<li>Do Not Track (DNT): This was a proposal to enable users to express their preference not to be tracked across websites. While it is not widely adopted, it represents an important early effort in giving users control over their privacy.</li>
+<li>Tracking Protection and Privacy Interest Group (PING): These groups focus on developing standards and best practices to minimise privacy risks and enhance transparency in data handling.</li>
+<li>Privacy Sandbox: Recent initiatives are focused on developing a more privacy-friendly web environment, particularly in the context of advertising and tracking.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Machine-Readable Data</h4>
+<p>W3C promotes the use of structured, machine-readable data to enhance the interoperability and functionality of web applications.</p>
+<ul>
+<li>Resource Description Framework (RDF): RDF is a framework for representing information about resources in the web. It is used in the Semantic Web to link related data.</li>
+<li>Web Ontology Language (OWL): OWL builds on RDF and provides a richer vocabulary for describing properties and classes, enabling more complex relationships and reasoning about data.</li>
+<li>SPARQL Protocol and RDF Query Language (SPARQL): SPARQL is used to query and manipulate RDF data. It allows for complex queries across diverse data sources.</li>
+<li>JSON-LD (JavaScript Object Notation for Linked Data): JSON-LD is a lightweight format for structuring linked data using JSON, making it easier to integrate with existing web technologies and enabling more powerful data interoperability.</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">W3C Link Checker</h5>
+<p class="card-text">The World Wide Web Consortium provides a series of tools to help maintain high-quality web standards. One of these is the <a class="inline_disabled" href="https://validator.w3.org/checklink" target="_blank">W3C Link Checker</a>, which scans your web pages for broken or outdated links. Try it out on some websites, see if you can find broken links.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://crucible.io/insights/design/web-design/wcag-2-2-what-does-it-mean/" target="_blank">WCAG 2.2: What's in the Latest Website Accessibility Standard?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.6 World Wide Web Consortium" href="https://canvas.kings.edu.au/courses/12951/assignments/204833" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204833" data-api-returntype="Assignment">2.6 World Wide Web Consortium</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.6%20World%20Wide%20Web%20(WWW).pptx?d=w5d554af016a34446a8e3cd20772087d9&amp;csf=1&amp;web=1&amp;e=ZuYPYg">2.6 World Wide Web (WWW).pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-6-world-wide-web-consortium" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={5d554af0-16a3-4446-a8e3-cd20772087d9}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+&nbsp;</div>
+</div>
+<h3 class="readles">2.7 Web Elements</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Model elements that form a web development system, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>client-side (front-end) web programming</li>
+<li>server-side (back-end) web programming</li>
+<li>interfacing with databases that are based on Structured Query Language (SQL) or non-SQL</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">understand the components and architecture of a web development system, including the roles of client-side and server-side programming.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explain the difference between client-side and server-side web programming.</span></li>
+<li><span style="font-size: 10pt;">Identify and describe the roles of different elements in a web development system.</span></li>
+<li><span style="font-size: 10pt;">Create basic web pages using client-side technologies (e.g., HTML, CSS, JavaScript).</span></li>
+<li><span style="font-size: 10pt;">Develop server-side scripts to handle requests and responses.</span></li>
+<li><span style="font-size: 10pt;">Connect and interact with both SQL and non-SQL databases from a web application.</span></li>
+<li><span style="font-size: 10pt;">Demonstrate how data flows between the client, server, and database in a web development system.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4>Client-Side (Front-End)</h4>
+<p><strong>Definition:</strong> This refers to the development of the user interface and experience in a web application. It involves creating the visual elements and interactive aspects of a website that users see and interact with directly in their web browser.</p>
+<p><strong>Technologies:</strong></p>
+<ul>
+<li><strong>HTML (HyperText Markup Language):</strong> Defines the structure and content of a web page.</li>
+<li><strong>CSS (Cascading Style Sheets):</strong> Styles and layouts the web page, controlling the presentation and visual design.</li>
+<li><strong>JavaScript:</strong> Adds interactivity, dynamic content, and client-side logic to web pages. It can interact with HTML and CSS to manipulate the document object model (DOM).</li>
+</ul>
+<p><strong>Frameworks/Libraries:</strong></p>
+<ul>
+<li><strong>React, Angular, Vue.js:</strong> Popular JavaScript frameworks/libraries that simplify complex UI development and state management.</li>
+<li><strong>Bootstrap, Tailwind CSS:</strong> CSS frameworks that provide pre-designed components and styles.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/ace8f20fc3243d84.png" alt="image.png" width="591" height="369" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527471" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Server-Side (Back-End)</h4>
+<p><strong>Definition:</strong> This refers to the server-side logic and operations that support the client-side of a web application. It handles data processing, server communication, and database interactions.</p>
+<p><strong>Technologies:</strong></p>
+<ul>
+<li><strong>Languages:</strong>
+<ul>
+<li>Python (Django, Flask)</li>
+<li>JavaScript (Node.js)</li>
+<li>PHP</li>
+<li>Ruby (Ruby on Rails)</li>
+<li>Java (Spring Boot)</li>
+<li>C# (ASP.NET)</li>
+</ul>
+</li>
+<li><strong>Operations:</strong>
+<ul>
+<li><strong>Request handling:</strong> Receiving and responding to HTTP requests from clients.</li>
+<li><strong>Business logic:</strong> Processing data, applying rules, and controlling application flow.</li>
+<li><strong>Authentication and Authorisation:</strong> Managing user identities and permissions.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Frameworks:</strong></p>
+<ul>
+<li>Express.js (for Node.js)</li>
+<li>Django and Flask (for Python)</li>
+<li>Spring Boot (for Java)</li>
+<li>Ruby on Rails (for Ruby)</li>
+<li>Laravel (for PHP)</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Interfacing with Databases</h4>
+<p><strong>Definition:</strong> This involves connecting the back-end of the web application to databases where data is stored, retrieved, and manipulated. It includes understanding both SQL and NoSQL databases.</p>
+<p><strong>SQL (Structured Query Language):</strong></p>
+<ul>
+<li><strong>Definition:</strong> SQL databases use structured tables with predefined schemas. They are relational and enforce data integrity through relationships between tables.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li><strong>MySQL, PostgreSQL, SQLite, Microsoft SQL Server</strong></li>
+</ul>
+</li>
+<li><strong>Operations:</strong>
+<ul>
+<li>CRUD operations (Create, Read, Update, Delete)</li>
+<li>Joins, transactions, and complex queries</li>
+</ul>
+</li>
+</ul>
+<p><strong>NoSQL (Non-SQL):</strong></p>
+<ul>
+<li><strong>Definition:</strong> NoSQL databases are designed for unstructured or semi-structured data. They are more flexible and can handle large volumes of data with varying structures.</li>
+<li><strong>Types:</strong>
+<ul>
+<li>Document-based (e.g., MongoDB)</li>
+<li>Key-Value Stores (e.g., Redis)</li>
+<li>Column-based (e.g., Cassandra)</li>
+<li>Graph-based (e.g., Neo4j)</li>
+</ul>
+</li>
+<li><strong>Operations:</strong>
+<ul>
+<li>Flexible schemas, horizontal scaling, optimised for read/write performance, suited for big data and real-time applications.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/e32fdbafd0fd9c60.png" alt="image.png" width="459" height="405" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527469" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://html-online.com/articles/html-tags-periodic-table-infographics/" target="_blank">Periodic Table of HTML Tags Infographics</a></li>
+<li><a class="inline_disabled" title="Link" href="https://expeed.com/when-to-use-sql-databases-vs-nosql-databases-making-the-right-decision/" target="_blank">When to Use SQL Databases vs. NoSQL Databases: Making the Right Decision</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.7 Web Elements" href="https://canvas.kings.edu.au/courses/12951/assignments/204834" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204834" data-api-returntype="Assignment">2.7 Web Elements</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.7%20Web%20Elements.pptx?d=w8b1aac17929d4aa0be25dea0656a245d&amp;csf=1&amp;web=1&amp;e=HxPDdT">2.7 Web Elements.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-7-web-elements" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={8b1aac17-929d-4aa0-be25-dea0656a245d}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div><h3 class="sub">After</h3>
+<div class="readnav"><a href="12951-m5.html">← previous module</a><a href="../course-12951.html">all modules</a><a href="12951-m7.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

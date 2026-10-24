@@ -1,0 +1,10 @@
+BEGIN AddNumbers
+    FOR i = 1 to 5
+        Add (i, i + 1, sum)
+        Display sum
+    NEXT i
+END AddNumbers
+
+BEGIN Add (x, y, total)
+    total = x + y
+END Add (x, y, total)

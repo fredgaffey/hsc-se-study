@@ -1,0 +1,312 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.10 Version Control — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 8 (Term 1: Weeks 7-8) Programming for the Web</div>
+<h1 style="margin-top:.2rem">2.10 Version Control</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-10-version-control" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Investigate the reasons for version control and apply it when developing web application</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Investigate the importance of version control in web application development and apply version control practices to manage and track changes in their projects.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explain the benefits of version control, including collaboration, change tracking, and project history management.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Use version control tools like Git to create, update, and manage repositories for web development projects.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Demonstrate how to branch, merge, and resolve conflicts within a version control system.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Apply version control workflows to manage the development of features, bug fixes, and releases in a web application project.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. It enables multiple developers to collaborate on a project, track changes, and revert to previous versions if needed. This is essential for managing code and content in web development, ensuring that every change is documented and reversible.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">Why Use Version Control?</h5>
+&nbsp; &nbsp; • &nbsp; &nbsp;Collaboration: Multiple team members can work on the same project simultaneously without overwriting each other’s changes.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Change Tracking: Every modification is tracked with a timestamp and the identity of the person who made it. This allows developers to see the history of the project and understand why changes were made.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Backup and Recovery: Version control provides a complete history of changes, enabling developers to restore previous versions if something goes wrong.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Branching and Merging: Developers can create separate branches to work on new features or bug fixes independently, then merge them into the main project when ready.</div>
+</div>
+<p>&nbsp;</p>
+<h4>What is Git?</h4>
+<p>Git is a distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Created by Linus Torvalds in 2005, Git allows multiple developers to work on the same project simultaneously, tracking every change made to the codebase. It is the most popular version control system used by developers worldwide.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Repository</h3>
+<div class="dp-panel-content ">
+<p>A repository in Git is a directory that contains your project files along with a hidden .git folder, where Git stores the history and metadata of the project.</p>
+<pre># Create a new repository<br>git init my-project<br><br># Navigate to the project directory<br>cd my-project<br><br># Check the repository status<br>git status</pre>
+<p>This command initialises a new Git repository in the my-project directory, allowing you to start tracking changes to files within that directory.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Staging Area</h3>
+<div class="dp-panel-content ">
+<p>The staging area (or index) in Git is an intermediary space where changes are prepared before they are committed to the repository. It allows you to review and modify the changes before finalising them.</p>
+<pre># Create a new file<br>echo "Hello, World!" &gt; hello.txt<br><br># Add the file to the staging area<br>git add hello.txt<br><br># Check the status to see staged changes<br>git status</pre>
+<p>This command sequence creates a new file hello.txt and stages it, preparing it to be committed. The git status command shows that the file is ready to be committed.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Committing Changes</h3>
+<div class="dp-panel-content">
+<p>A commit is a snapshot of the project at a specific point in time. Each commit has a unique identifier (hash) and a message describing the changes.</p>
+<pre># Commit staged changes with a descriptive message<br>git commit -m "Initial commit with hello.txt file"<br><br># View the commit history<br>git log</pre>
+<p>This command sequence commits the changes from the staging area to the repository and then shows the commit history, including the commit message and hash.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Branches</h3>
+<div class="dp-panel-content">
+<p>Branches in Git allow you to create separate lines of development within a repository. This is useful for working on new features or fixing bugs without affecting the main codebase.</p>
+<pre># Create a new branch for a feature<br>git branch feature-new-greeting<br><br># Switch to the new branch<br>git checkout feature-new-greeting<br><br># Alternatively, create and switch in one step<br>git checkout -b feature-new-greeting<br><br># View all branches<br>git branch</pre>
+<p>This creates and switches to a new branch called feature-new-greeting, isolating your changes from the main branch (main or master). The git branch command lists all branches.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Merging Branches</h3>
+<div class="dp-panel-content">
+<p>Merging combines the changes from one branch into another. This is typically done after completing a feature or fixing a bug in a separate branch.</p>
+<pre># Switch back to the main branch<br>git checkout main<br><br># Merge the feature branch into the main branch<br>git merge feature-new-greeting<br><br># View the updated commit history<br>git log --oneline</pre>
+<p>This sequence merges the changes from feature-new-greeting into the main branch. If there are conflicts, Git will notify you, and you’ll need to resolve them before completing the merge.&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Conflict Resolution</h3>
+<div class="dp-panel-content">
+<p>Conflicts occur when changes in two branches affect the same part of a file in incompatible ways. Git requires manual intervention to resolve these conflicts.</p>
+<pre># Attempt to merge a conflicting branch<br>git merge feature-new-greeting<br><br># If there is a conflict, Git will mark the conflicting lines in the file<br># Edit the file to resolve the conflict, then add the resolved file<br>git add hello.txt<br><br># Complete the merge with a commit<br>git commit -m "Resolved conflict in hello.txt"</pre>
+<p>This process shows how to handle conflicts during a merge. Git will highlight conflicts in the affected file(s), which you need to edit manually before completing the merge.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Viewing History and Revisions</h3>
+<div class="dp-panel-content">
+<p>Git allows you to view the history of changes and inspect previous versions of the code.</p>
+<pre># View the detailed commit history<br>git log<br><br># View a concise history of commits<br>git log --oneline<br><br># View changes between commits<br>git diff HEAD~1 HEAD<br><br># View changes to a specific file<br>git diff HEAD~1 HEAD hello.txt</pre>
+<p>These commands display the commit history in different formats and show the differences between commits. This is useful for tracking changes and understanding the evolution of the project.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Source Code Management</h4>
+<p>There are many platforms available for source code management and collaboration, such as GitHub, GitLab, and Bitbucket. These tools build on the capabilities of Git, a powerful version control system, to provide enhanced features for tracking changes, managing projects, and facilitating teamwork in software development. They enable developers to work together efficiently, maintain code integrity, and streamline workflows through automated processes like continuous integration and deployment. Understanding how these platforms operate and their unique benefits is essential for modern software development practices.</p>
+<div class="dp-panels-wrapper dp-expander-default">
+<div class="dp-panel-group">
+<h2 class="dp-panel-heading dp-has-icon"><i class="dp-icon fab fa-github " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp;GitHub</h2>
+<div class="dp-panel-content ">
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>GitHub is a cloud-based platform that provides a web interface for Git repositories. It extends Git’s functionality by offering additional tools for collaboration, project management, and hosting.</li>
+</ul>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Remote Repositories: Allows you to store your Git repositories in the cloud, making them accessible from anywhere.</li>
+<li>Collaboration Tools: Features like pull requests, code reviews, and issues help teams collaborate on code effectively.</li>
+<li>GitHub Actions: Automates workflows such as continuous integration and deployment (CI/CD).</li>
+<li>Project Management: Offers project boards, milestones, and issue tracking to manage projects and tasks</li>
+</ul>
+<p><strong>Common Use Cases:</strong></p>
+<ul>
+<li>Collaboration: Teams use GitHub to collaborate on code by sharing repositories, reviewing changes, and managing issues.</li>
+<li>Open Source: GitHub is a popular platform for open-source projects, enabling developers from around the world to contribute to shared codebases.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h2 class="dp-panel-heading dp-has-icon"><i class="dp-icon fab fa-gitlab " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp;GitLab</h2>
+<div class="dp-panel-content ">
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>GitLab is another Git-based platform similar to GitHub, but it offers a more integrated approach to DevOps.</li>
+</ul>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Integrated CI/CD: GitLab provides built-in continuous integration and deployment pipelines.</li>
+<li>Project Management: Advanced tools for project planning, issue tracking, and managing project lifecycles.</li>
+<li>Self-Hosting: Offers a self-managed version that can be hosted on your own servers, providing more control over your data.</li>
+</ul>
+<p><strong>Common Use Cases:</strong></p>
+<ul>
+<li>End-to-End DevOps: GitLab is preferred by organisations looking for an all-in-one DevOps platform that integrates version control, CI/CD, and project management.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h2 class="dp-panel-heading dp-has-icon"><i class="dp-icon fab fa-bitbucket " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp;BitBucket</h2>
+<div class="dp-panel-content">
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>Bitbucket is a Git-based platform from Atlassian, designed for teams using Git for version control. It integrates well with other Atlassian products like Jira and Confluence.</li>
+</ul>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Integration with Jira: Provides seamless integration with Jira for project management and issue tracking.</li>
+<li>Bitbucket Pipelines: Offers CI/CD features directly within Bitbucket for automated testing and deployment.</li>
+<li>Support for Mercurial: Although deprecated in recent updates, Bitbucket historically supported Mercurial repositories in addition to Git.</li>
+</ul>
+<p><strong>Common Use Cases:</strong></p>
+<ul>
+<li>Team Collaboration: Used by development teams to manage source code with a focus on integration with Atlassian’s suite of tools.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Version Control in Web Application Development</h4>
+<p>Version control is a critical component in the development of web applications, providing a structured way to manage changes, collaborate with team members, and ensure code quality throughout the development lifecycle.&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Project Initialisation</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Set up a version control system at the start of a web application project. This ensures that all team members can contribute to the codebase from the beginning.</li>
+<li>Create a Git repository and establish a branching strategy (e.g., main for production, develop for ongoing development, feature branches for new features).</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Collaboration and Code Reviews</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Use platforms like GitHub or GitLab to collaborate with team members. Developers can create branches for new features, push their changes, and submit pull requests for code reviews.</li>
+<li>Code reviews help maintain code quality and ensure that all team members are aware of changes.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Continuous Integration and Deployment (CI/CD)</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Integrate CI/CD tools like GitHub Actions, Jenkins, or GitLab CI to automate testing and deployment of web applications.</li>
+<li>Version control systems enable seamless integration with these tools, allowing automated testing and deployment whenever new changes are pushed to the repository.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Managing Releases</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Use version control to manage different versions of a web application. Create tags or releases in Git to mark specific points in the project’s history, such as beta releases, major updates, or bug fixes.</li>
+<li>This helps track the evolution of the application and makes it easier to roll back to a stable version if issues arise.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ffeb3b; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-discussion icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Discussion</strong></p>
+<p class="card-text">A team of developers is tasked with building a multi-page e-commerce web application. The application includes a user-facing front-end, a back-end for managing products and orders, and various integrations such as payment gateways and shipping APIs. The team consists of front-end developers, back-end developers, designers, and QA testers. They decide to use Git for version control and GitHub for collaboration and CI/CD workflows.<strong><br></strong></p>
+<p class="card-text"><strong>Consider how specific Version Control features will be used in this example.</strong></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-10-version-control" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/12951/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fdiscussions.atomicjoltappsau.com%2Flti_launches%2FfDMMcgzhhcrw5nLvbwyemXFW</span></div></div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.atlassian.com/git/tutorials/what-is-version-control" target="_blank">What is Version Control?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://github.com/resources/articles/devops/ci-cd" target="_blank">CI/CD: The what, why, and how</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.10 Version Control" href="https://canvas.kings.edu.au/courses/12951/assignments/204817" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204817" data-api-returntype="Assignment">2.10 Version Control</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p>Insert PPT</p>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-050.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-052.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

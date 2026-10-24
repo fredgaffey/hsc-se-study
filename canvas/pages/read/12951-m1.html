@@ -1,0 +1,1093 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 1 (Term 4: Weeks 1-2) Secure Software Architecture — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">12SENX2 Software Engineering 2026 · module 2 of 15</p>
+<h1>Cycle 1 (Term 4: Weeks 1-2) Secure Software Architecture</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="12951-all.html">Whole course</a><span class="cur">By module</span><a href="../course-12951.html">By lesson</a></div>
+<h3 class="readles">Introduction to Cycle 1</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-hand-sparkles" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Introduction</h3>
+<p>This module will focus on the importance of developing secure software, and how following structured software development steps can ensure the security, reliability, and performance of your programs. In addition to learning about secure development practices, you’ll explore how software design concepts such as confidentiality, integrity, and availability play a crucial role in creating secure systems. The topics in this module will guide you through the software development process, from initial requirements to deployment and maintenance, with a strong emphasis on security. By the end, you’ll also understand how the end user’s capabilities influence secure design features.</p>
+</div>
+<div class="dp-content-block kl_custom_block_3">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Syllabus</h3>
+<p>Designing Software</p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div>
+<div class="mt-3 space-y-4">
+<div>
+<ul class="list-disc mt-0 space-y-0 pl-[1.1875rem]">
+<li data-kontent-item-id="6091139e-fc5e-44c3-93e3-f4f4261eeaf1">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Describe the benefits of developing secure software</p>
+</div>
+<div class="bold mb-1 mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>data protection</li>
+<li>minimising cyber attacks and vulnerabilities</li>
+</ul>
+</div>
+</li>
+<li data-kontent-item-id="1e00bfe3-5c4a-4145-ba09-b2b36d697cfd">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Interpret and apply fundamental software development steps to develop secure code</p>
+</div>
+<div class="bold mb-1 mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>requirements definition</li>
+<li>determining specifications</li>
+<li>design</li>
+<li>development</li>
+<li>integration</li>
+<li>testing and debugging</li>
+<li>installation</li>
+<li>maintenance</li>
+</ul>
+</div>
+</li>
+<li data-kontent-item-id="02d4227d-308a-48fb-9305-c457dbb05a39">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Describe how the capabilities and experience of end users influence the secure design features of software</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div id="cg-099b1e72-8fbe-4ed2-842d-787c5fb18bd7" class="group nsw-h4 mui-style-1wu1b59" data-kontent-item-id="099b1e72-8fbe-4ed2-842d-787c5fb18bd7" data-kontent-element-codename="title"><span class="align-middle mr-2 [&amp;&gt;*]:inline [&amp;&gt;*]:scroll-mt-4">Developing secure code</span></div>
+</div>
+<div>
+<ul class="list-disc mt-0 space-y-0 pl-[1.1875rem]">
+<li data-kontent-item-id="298572d3-f0d4-46f0-b257-834fc16f843f">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Explore fundamental software design security concepts when developing programming code</p>
+</div>
+<div class="bold mb-1 mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>confidentiality</li>
+<li>integrity</li>
+<li>availability</li>
+<li>authentication</li>
+<li>authorisation</li>
+<li>accountability</li>
+</ul>
+</div>
+</li>
+<li data-kontent-item-id="bee469f9-42fd-4b32-8b67-6c5c3772af3b">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Apply security features incorporated into software including data protection, security, privacy and regulatory compliance</p>
+</div>
+</li>
+</ul>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_2">
+<h3 class="dp-has-icon"><i class="fas fa-comments" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Discussion</h3>
+<p><strong>Before diving into this module, reflect on your understanding of secure software development. Share in the comment box below any experience you have with developing secure code or your thoughts on the importance of security in software development. How do you think secure practices affect the overall software development process?</strong></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default w-100 dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h3 class="card-title dp-has-icon"><i class="dp-icon icon-discussion icon-Solid" aria-hidden="true"> </i>&nbsp;Discussion</h3>
+<div class="dp-action-item dp-action-item-block dp-action-item-instructions" style="display: none;" aria-hidden="false">A snippet for embedding an Atomic Discussion onto a page. Provide instructions/stimulus/questions and then insert an Atomic Journals using the Plug-ins icon in the toolbar above.</div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/introduction-to-cycle-1" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/12951/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fdiscussions.atomicjoltappsau.com%2Flti_launches%2FiAjr2nHAr9F4pKD3NqGHkdTH</span></div></div>
+<div class="dp-action-item dp-action-item-block dp-action-item-note" style="display: none;" aria-hidden="true">End Discussion Block</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div><h3 class="sub">During</h3>
+<h3 class="readles">1.1 Secure Code Benefits</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Describe the benefits of developing secure software, including:<br class="card-text">- data protection<br class="card-text">- minimising cyber attacks and vulnerabilities</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand the importance of developing secure software.</li>
+<li>Identify the key benefits of secure software development, including data protection and minimising cyber attacks and vulnerabilities.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to describe the key benefits of secure software development.</li>
+<li>Students will be able to explain how secure software protects data and reduces the risk of cyber-attacks and vulnerabilities.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3><strong>Content</strong></h3>
+<h4><strong>Benefits of Developing Secure Software</strong></h4>
+<p>Developing secure software is crucial in today's digital landscape, where threats to data and systems are constantly evolving. Secure software development focuses on building applications that protect sensitive information and are resilient against malicious activities. This approach safeguards users and organisations and enhances the overall trustworthiness and reliability of software products.</p>
+<p>&nbsp;</p>
+<h4><strong>Data Protection</strong></h4>
+<p>Data protection is one of the most significant benefits of secure software development. In an era where data breaches are increasingly common, protecting sensitive information has become paramount. Secure software ensures that data is handled and stored to prevent unauthorised access, manipulation, or loss. Key aspects of data protection in secure software include:</p>
+<div class="dp-panels-wrapper dp-tabs dp-content-block">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Encryption</h3>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Encryption is the process of converting data into a code to prevent unauthorised access. It ensures that information is only accessible to those with the correct decryption key and unreadable to anyone without that key.</p>
+</div>
+</div>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Example:</strong><br>A financial application encrypts user data, such as credit card numbers and bank account details, using AES-256 encryption. This ensures that the encrypted data remains unreadable and secure even if the data is intercepted during transmission or if someone gains unauthorised access to the storage systems.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Access Controls</h3>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Access controls are security measures that regulate who can view or modify data within a system. These controls enforce rules based on user roles or permissions, ensuring that sensitive information is only accessible to authorised individuals.</p>
+</div>
+</div>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Example:</strong><br>A healthcare system uses role-based access control (RBAC) to restrict access to patient records. Only authorised personnel, such as doctors and nurses, can view or update a patient's medical information. Administrative staff may have limited access to certain data, such as billing information, without being able to see sensitive medical details.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Integrity</h3>
+<div class="dp-panel-content">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp;<strong>&nbsp;Definition</strong></p>
+<p>Data integrity refers to the accuracy and consistency of data over its lifecycle. It involves protecting data from being altered or corrupted and ensuring that it remains reliable and trustworthy from its creation to its final use.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Example:</strong><br>An e-commerce platform uses hash functions, such as SHA-256, to verify the integrity of transactions. Each transaction is hashed, and the resulting hash is compared before and after the data is transmitted. If the hashes match, it confirms that the transaction data has not been altered during transmission. If they don't match, it indicates potential tampering, and the transaction can be flagged for further investigation.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4><strong>Minimising Cyber Attacks and Vulnerabilities&nbsp;</strong></h4>
+<p>Minimising cyber attacks and vulnerabilities is a critical aspect of secure software development. Cyber attacks can devastate individuals and organisations, leading to data breaches, financial loss, and damage to reputation. Developers can create more secure and resilient applications by proactively addressing vulnerabilities during software development. Some ways in which developers/companies can minimise cyber attacks and vulnerabilities are:</p>
+<div class="dp-panels-wrapper dp-tabs dp-content-block">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Regular Security Audits</h3>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p class="card-text"><span style="color: var(--bs-card-color); background-color: var(--bs-card-bg); font-family: inherit; font-size: 1rem;">Security audits involve a comprehensive review of the software's code, architecture, and processes to identify potential security weaknesses. Regular audits help ensure that vulnerabilities are detected and addressed before being exploited.</span></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Example:</strong><br>A large e-commerce company conducts quarterly security audits of its platform. During these audits, security experts review the codebase for potential vulnerabilities, such as outdated libraries or improper user input handling. These audits have helped the company identify and fix several security issues before attackers could exploit them.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Secure Coding Practices</h3>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p class="card-text">Secure coding practices are a set of guidelines and techniques developers follow to write code resistant to common vulnerabilities. These practices are designed to prevent issues like SQL injection, cross-site scripting (XSS), and buffer overflows.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Example:</strong><br>A web application development team follows secure coding practices by validating all user inputs before processing them. For instance, they use prepared statements for database queries to prevent SQL injection attacks. This practice ensures that malicious inputs cannot be used to manipulate the database.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Patch Management</h3>
+<div class="dp-panel-content">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p class="card-text">Patch management is the process of regularly updating software to fix known vulnerabilities. It involves applying patches provided by software vendors to address security flaws that attackers could exploit.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Example:</strong><br>An organisation uses an automated patch management system to keep all its software current. When a new security patch is released, the system automatically applies the patch to all relevant systems. This approach helps the organisation minimise the risk of cyber attacks that exploit known vulnerabilities.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default dp-content-block" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity<br></strong></p>
+<ul class="card-text">
+<li><a title="1.1 Secure Code Benefits" href="https://canvas.kings.edu.au/courses/12951/assignments/204802" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204802" data-api-returntype="Assignment">1.1 Secure Code Benefits</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default dp-content-block">
+<div class="dp-panel-group">
+<h2 class="dp-panel-heading ">PowerPoint</h2>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.1%20Secure%20Code%20Benefits%20copy.pptx?d=w0b2cb1ac91424c46ba6bf15a00d14242&amp;csf=1&amp;web=1&amp;e=uy2WKC">1.1 Secure Code Benefits copy.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-1-secure-code-benefits" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={0b2cb1ac-9142-4c46-ba6b-f15a00d14242}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info dp-content-block card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a href="https://www.contentful.com/blog/software-security-to-deliver-digital-experiences-fast/">What is software security, and why is it important?</a></li>
+</ul>
+</div>
+</div>
+</div>
+<h3 class="readles">1.2 Software Development Steps</h3>
+<div class="dp-wrapper dp-bookmark variation-2" id="dp-wrapper"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2">
+
+<header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid"><div class="card-body"><p class="card-text" data-mce-style=""><strong class="card-text">Syllabus<br></strong>Interpret and apply fundamental software development steps to develop secure code:&nbsp;<br class="card-text">- requirements definition<br class="card-text">- determining specifications&nbsp;<br class="card-text">- design<br class="card-text">- development<br class="card-text">- integration<br class="card-text">- testing and debugging<br class="card-text">- installation<br class="card-text">- maintenance&nbsp;</p></div></div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;"><div class="card-body">
+<p style="margin-bottom: 0px;" class="card-text"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand the fundamental steps of software development necessary for creating secure code.</li>
+<li>Apply these steps in alignment with the NSW Year 12 Software Engineering syllabus to ensure secure software development.</li>
+</ul>
+</div></div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;"><div class="card-body">
+<p style="margin-bottom: 0px;" class="card-text"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to describe each step in the software development lifecycle (SDLC) and its associated documentation.</li>
+<li>Students will be able to explain how each step contributes to developing secure code.</li>
+<li>Students will be able to apply these steps in practical scenarios, ensuring software security and compliance with the syllabus.</li>
+</ul>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>  Content</h3>
+<p>Developing secure software occurs in each major step of the software development life cycle, preventing vulnerabilities from being introduced. By addressing security during planning, design, development, testing, and maintenance, developers can create robust, resilient software that protects against threats and maintains user trust.</p>
+<p><img src="../../assets/46db7a3141fd0f65.png" alt="SDLC Diagram-1.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527311" data-api-returntype="File" loading="lazy"></p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Requirements Definition</h3>
+<div class="dp-panel-content ">
+<p><strong>Definition:</strong><br>The definition of requirements involves gathering and documenting the software's functional and non-functional requirements, with a strong focus on security needs.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Client Scenario:</strong><br>Understanding the client's needs and expectations regarding security features. This involves meeting with the client to discuss their requirements and the potential security threats relevant to their specific context.</p>
+</li>
+<li>
+<p><strong>Environment Specifications:</strong><br>Defining the operational environment, including hardware, software, and network considerations, to ensure security compatibility. This step involves assessing the current environment to identify any security gaps that must be addressed.</p>
+</li>
+<li>
+<p><strong>List of Objectives:</strong><br>Creating a comprehensive list of security objectives that the software must achieve. This includes setting specific, measurable goals such as data encryption, access controls, and compliance with regulatory standards.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Determining Specifications</h3>
+<div class="dp-panel-content ">
+<p><strong>Definition:</strong><br>Determining specifications involves creating a detailed description of the software's functionality and technical requirements, focusing on how it will meet the defined security needs.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Technical Requirements:</strong><br>Defining specific technical details, such as encryption standards, authentication methods, and data handling protocols. These requirements form the technical backbone of the software, ensuring that security measures are robust and effective.</p>
+</li>
+<li>
+<p><strong>Performance Criteria:</strong><br>Establishing security-related performance benchmarks, such as response times for security features and the capacity to handle security events, ensures that the software performs efficiently while maintaining a high level of security.</p>
+</li>
+<li>
+<p><strong>Compliance Standards:</strong><br>Identifying and incorporating relevant security compliance standards that the software must adhere to. This involves ensuring the software meets industry-specific regulations and standards, such as GDPR or PCI DSS.</p>
+</li>
+<li>
+<p><strong>IPO Model:</strong><br>Defining the Input-Process-Output (IPO) model clearly articulates how data inputs will be processed and what secure outputs will be generated. This model helps understand how data flows through the system and where security controls need to be applied.</p>
+</li>
+<li>
+<p><strong>Gantt Charts:</strong><br>Developing a Gantt chart to plan and schedule the various tasks involved in developing secure code. The Gantt chart provides a visual timeline of the project, helping to ensure that each task is completed on time and security milestones are met.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Design</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>The design phase involves creating a blueprint for the software, including architecture, data flow, and user interfaces, while embedding security principles.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>System Architecture:</strong><br>Designing a secure architecture that incorporates layers of security, such as firewalls, encryption, and secure access points. This step ensures that the software's overall structure is designed to protect against potential security threats.</p>
+</li>
+<li>
+<p><strong>Modelling Tools:</strong></p>
+<ul>
+<li>
+<p><strong>Structure Chart:</strong><br>Used to represent the hierarchy and relationships between modules in the software, ensuring that secure data flow and control mechanisms are clearly defined.</p>
+</li>
+<li>
+<p><strong>Class Diagram:</strong><br>Represents the system's classes, attributes, methods, and relationships, with attention to secure data handling and encapsulation of sensitive information.</p>
+</li>
+<li>
+<p><strong>Data Flow Diagram (DFD):</strong><br>Maps out how data moves through the system, identifying where data must be protected during transmission and processing.</p>
+</li>
+<li>
+<p><strong>User Interface Design:</strong><br>Ensuring the user interface supports secure interactions, including secure login processes and protection against unauthorised access.</p>
+</li>
+<li>
+<p><strong>Storyboards:</strong><br>Creating visual storyboards to represent how users interact with the software, focusing on secure navigation and user experience. Storyboards help design intuitive, secure interfaces by visualising user flows.</p>
+</li>
+<li>
+<p><strong>Data Dictionaries:</strong><br>Developing a data dictionary to document all the data elements used in the software, including their definitions, formats, and relationships. The data dictionary ensures that data is consistently and securely handled throughout the system.</p>
+</li>
+<li>
+<p><strong>Pseudocode:</strong><br>Writing pseudocode to outline the logic and flow of the program in a human-readable format. Pseudocode helps ensure that security measures, such as input validation and error handling, are planned and implemented correctly.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Logbooks:</strong><br>Maintaining a logbook to document decisions, design changes, and security considerations throughout the design phase. The logbook records the design process, helping to track security-related decisions and ensuring that all security aspects are thoroughly documented.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Development</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>The development phase is where the software is coded, with an emphasis on secure coding practices to prevent vulnerabilities.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Secure Coding Standards:</strong><br>Implementing coding practices that protect against vulnerabilities such as SQL injection, cross-site scripting (XSS), and buffer overflows. This ensures that the code is inherently secure and resistant to attacks.</p>
+</li>
+<li>
+<p><strong>Version Control:</strong><br>Using version control systems to track changes and ensure that secure coding practices are consistently applied. Version control allows developers to manage code changes effectively, ensuring that security is maintained throughout development.</p>
+</li>
+<li>
+<p><strong>Code Review:</strong><br>Conducting peer reviews of code to identify and address potential security issues before they are integrated into the main codebase. Code reviews help catch security flaws early, reducing the risk of vulnerabilities in the final product.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Integration</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>Integration involves combining individual components into a fully functioning system and ensuring that security controls work across the system.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Component Compatibility:</strong><br>Ensuring that all components interact securely and that security measures are effective across the entire system. This step verifies that security features are not compromised when components are combined.</p>
+</li>
+<li>
+<p><strong>Integration Testing:</strong><br>Performing tests to verify that security features function correctly when different components are combined. Integration testing ensures that the system is secure and that no vulnerabilities are introduced during integration.</p>
+</li>
+<li>
+<p><strong>Security Verification:</strong><br>Conducting a final check to ensure that all integrated components meet the security objectives defined in the requirements stage. This verification step confirms the software is secure before moving on to the next phase.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Testing and Debugging</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>Testing and debugging involve identifying and resolving issues, focusing on uncovering security vulnerabilities.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Security Testing:</strong><br>Implementing various testing methods to identify and exploit potential vulnerabilities, including:</p>
+<ul>
+<li>
+<p><strong>Static Application Security Testing (SAST):</strong><br>SAST analyses the source code for security vulnerabilities without executing the code. It helps identify coding errors that could lead to security flaws.</p>
+</li>
+<li>
+<p><strong>Dynamic Application Security Testing (DAST):</strong><br>Testing the running application for security vulnerabilities in a live environment. DAST helps detect vulnerabilities that are not visible in the source code alone.</p>
+</li>
+<li>
+<p><strong>Vulnerability Scanning:</strong><br>Scanning the application and environment for known vulnerabilities. This step identifies potential weaknesses that attackers could exploit.</p>
+</li>
+<li>
+<p><strong>Penetration Testing:</strong><br>Simulating attacks to discover potential vulnerabilities in the system. Penetration testing helps assess the system's ability to withstand real-world attack scenarios.</p>
+</li>
+<li>
+<p><strong>Regression Testing:</strong><br>Ensuring that new updates or changes have not introduced new vulnerabilities. Regression testing verifies that the software remains secure after modifications.</p>
+</li>
+<li>
+<p><strong>User Acceptance Testing (UAT):</strong><br>Verifying that the software meets security requirements and is ready for deployment. UAT ensures that the final product is secure and functional according to user expectations.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Debugging:</strong><br>Address any identified security issues and ensure that all vulnerabilities are resolved before deployment. Debugging is essential for fixing security flaws that could compromise the system.</p>
+</li>
+<li>
+<p><strong>Final Security Assessment:</strong><br>Conduct a comprehensive review to confirm the software is secure and ready for release. This assessment provides the final check before the software is deployed to production.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Installation</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>The installation phase involves deploying the software in a production environment, ensuring it is securely configured.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Secure Configuration:</strong><br>Applying secure settings during installation, such as setting strong passwords, disabling unnecessary services, and configuring firewalls. Secure configuration helps prevent unauthorised access and ensures the system is protected from the start.</p>
+</li>
+<li>
+<p><strong>Deployment Procedures:</strong><br>Follow best practices for secure deployment, including ensuring that all data is encrypted during the installation process. Proper deployment procedures help maintain the software's integrity and confidentiality.</p>
+</li>
+<li>
+<p><strong>Post-Installation Testing:</strong><br>Tests will be performed after installation to verify that the software is functioning securely in its new environment. This step ensures that the system remains secure after deployment and that no new vulnerabilities have been introduced.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Maintenance</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>Maintenance involves ongoing updates and software monitoring to address new security threats.</p>
+<p><strong>Relevant Steps in This Stage:</strong></p>
+<ul>
+<li>
+<p><strong>Security Patching:</strong><br>Apply updates and patches regularly to fix any newly discovered vulnerabilities. Security patching is critical for keeping the software protected against emerging threats.</p>
+</li>
+<li>
+<p><strong>Monitoring:</strong><br>Continuously monitoring the software for security breaches or unusual activity. Monitoring helps detect potential security incidents early, allowing for a quick response.</p>
+</li>
+<li>
+<p><strong>Incident Response:</strong><br>Having a plan to respond to security incidents promptly minimises the impact of any breaches. An effective incident response plan ensures that security incidents are managed efficiently and the system can recover quickly.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity <br></strong></p>
+<ul class="card-text">
+<li><a title="1.2 Software Development Steps" href="https://canvas.kings.edu.au/courses/12951/assignments/204808" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204808" data-api-returntype="Assignment">1.2 Software Development Steps</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;"><div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a href="https://www.atlassian.com/software-development">Learn the essentials of software development | Atlassian</a></li>
+<li><a href="https://www.paloaltonetworks.com.au/cyberpedia/what-is-secure-software-development-lifecycle">What Is Secure Software Development Lifecycle (Secure SDLC)?</a></li>
+</ul>
+</div></div>
+&nbsp;</div>
+
+</div></div>
+<h3 class="readles">1.3 End Users</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>De<span class="card-text">scribe how the capabilities and experience of end users influence the secure design features of software.</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand how the capabilities and experience of end users influence the design of secure software.</li>
+<li>Identify key considerations in designing secure and user-friendly software for different end users.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to describe how end users' abilities and experience levels impact the security features integrated into software design.</li>
+<li>Students will be able to explain the balance between usability and security in software design.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<h4><strong>How End Users Influence Secure Design Features of Software</strong></h4>
+<p>The design of secure software is significantly influenced by the capabilities and experience of its end users. Developers must consider how users interact with the software and ensure that security features are appropriately tailored to suit their needs and abilities. Understanding the user base is crucial to creating software that is both secure and accessible.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">User Capabilities</h3>
+<div class="dp-panel-content ">
+<p><strong>Definition:</strong><br>User capabilities refer to the technical skills and knowledge that end users possess. These capabilities vary widely, from novice users with minimal technical experience to expert users with advanced knowledge.</p>
+<p><strong>Impact on Secure Design Features:</strong></p>
+<ul>
+<li>
+<p><strong>Simplified Security Controls:</strong><br>Security features must be straightforward to use for users with limited technical skills. This might involve automating complex security tasks, providing clear instructions, and designing intuitive interfaces.</p>
+</li>
+<li>
+<p><strong>Guided Processes:</strong><br>Software should guide users through security-related processes, such as setting up two-factor authentication or managing permissions, to ensure they do not inadvertently compromise security.</p>
+</li>
+<li>
+<p><strong>Role-Based Access:</strong><br>Implementing role-based access controls can help tailor security features to the user's level of expertise, granting more power to experienced users while limiting potential risks for less experienced users.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">User Experience Levels</h3>
+<div class="dp-panel-content ">
+<p><strong>Definition:</strong><br>User experience levels refer to users' familiarity and comfort with similar software or security practices. Users with varying experience levels may require different approaches to secure design.</p>
+<p><strong>Impact on Secure Design Features:</strong></p>
+<ul>
+<li>
+<p><strong>Customisable Security Settings:</strong><br>Users may prefer customisable security settings to tailor the software to their specific needs, such as adjusting privacy settings or selecting encryption methods.</p>
+</li>
+<li>
+<p><strong>Default Security Settings:</strong><br>For less experienced users, it is essential to provide secure default settings that protect the user without requiring extensive configuration. These settings should be robust enough to prevent common security issues while remaining easy to use.</p>
+</li>
+<li>
+<p><strong>Training and Support:</strong><br>Providing training materials and support options helps users of all experience levels understand and utilise the software's security features. This might include tutorials, help guides, or customer support services.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Usability vs. Security</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>Balancing usability with security is a key challenge in software design. While security is paramount, the software must also be usable by its intended audience.</p>
+<p><strong>Impact on Secure Design Features:</strong></p>
+<ul>
+<li>
+<p><strong>Minimising User Friction:</strong><br>Security Minimising Should be integrated to minimise disruption to the user experience. This includes streamlining authentication processes, reducing the steps required to access secure areas, and ensuring that security does not hinder productivity.</p>
+</li>
+<li>
+<p><strong>Transparency of Security Features:</strong><br>Users should be aware of the security features, but these features should not be overly intrusive. Providing straightforward but non-intrusive notifications about security events or updates helps keep users informed without overwhelming them.</p>
+</li>
+<li>
+<p><strong>Adaptive Security:</strong><br>Adaptive security measures can be adjusted based on user behaviour and risk levels. For example, the software might prompt additional verification if unusual activity is detected, balancing ease of use with heightened security when necessary.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity<br></strong></p>
+<ul class="card-text">
+<li><a title="1.3 End Users" href="https://canvas.kings.edu.au/courses/12951/assignments/204809" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204809" data-api-returntype="Assignment">1.3 End Users</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.3%20End%20Users.pptx?d=wf91f1d38775a4662a33482fdf717a284&amp;csf=1&amp;web=1&amp;e=tTwsmT">1.3 End Users.pptx</a></p>
+<div class="dp-embed-wrapper" data-ratio-w="32.88" data-ratio-h="0.03"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-3-end-users" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={f91f1d38-775a-4662-a334-82fdf717a284}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+&nbsp;</div>
+</div><h3 class="sub">Designing Software</h3>
+<h3 class="readles">1.4 Design Security Concepts</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Explore fundamental software design security concepts when developing programming code</span><br class="card-text">- confidentiality&nbsp;<br class="card-text">- integrity<br class="card-text">- availability&nbsp;<br class="card-text">- authentication<br class="card-text">- authorisation&nbsp;<br class="card-text">- accountability</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand fundamental security concepts in software design, including confidentiality, integrity, availability, authentication, authorisation, and accountability.</li>
+<li>Apply these concepts when developing secure programming code using Python and Flask.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to explain key security concepts and how they relate to software development.</li>
+<li>Students will be able to implement these concepts in a Python (Flask) web application.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Several fundamental concepts are crucial in secure software design for ensuring that applications are safe, reliable, and resilient against threats. Below, we explore these concepts and demonstrate how to implement them in a Flask web application.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Confidentiality</h3>
+<div class="dp-panel-content ">
+<p><strong>Definition:</strong><br>Confidentiality ensures that sensitive information is accessible only to those authorised to view it. In web applications, this often involves encrypting data and securing communications.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/206dc1bfc1e05e10.png" alt="image.png" width="625" height="569" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527590" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Explanation:</strong><br>This example demonstrates ensuring confidentiality by encrypting data before storing or transmitting it. Flask handles the request and the <code>cryptography</code> library is used to encrypt and decrypt data.</p>
+<p>Below is an example of an API request to encrypt and decrypt data.&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/eb16497a53f9a5b0.png" alt="image.png" width="611" height="519" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527592" data-api-returntype="File" loading="lazy"></p>
+<pre>$ python3 encryption_test.py<br>Original Data: Ianni's extremely safe password<br>Encrypted Data: gAAAAABnFxc7HahGOnsH1tHh2_Od2Gxql2M3kf9v2hGv19PiJ4yLC8ROcdy2jIzT1QY1lWHiaMgwOOUKE899WmGskPiG6LlVKrxUpnbIiynAI5nAqsE281c=<br><br>Decrypting your encrypted data is: Ianni's extremely safe password</pre>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Integrity</h3>
+<div class="dp-panel-content ">
+<p><strong>Definition:</strong><br>Integrity ensures that data is accurate and has not been tampered with. Flask applications can be implemented using hashing algorithms to verify data integrity.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/148533b0eeb94460.png" alt="image.png" width="621" height="587" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527595" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Explanation:</strong><br>This example ensures data integrity by hashing data and verifying that the hash matches the original data. If the data is altered, the hash will not match, indicating a potential breach of integrity.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/7e4da43c707f807d.png" alt="image.png" width="654" height="668" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527593" data-api-returntype="File" loading="lazy"></p>
+<p>This example code sends a string to the <code>/hash</code> API endpoint, which generates a SHA-256 hash of the data. Then, it sends the original string and the hash (generated from the original string) to the <code>/verify</code> endpoint to check if the hash matches, confirming whether the data is intact or altered.</p>
+<pre>$ python3 integrity_test.py<br>Original Data: Ianni's extremely safe password<br>Hashed Data: 025a003603dd8d67442725058507fa5b859ec7d1d911fcfac291c2988fb71a59<br>Verification Result: Data is intact</pre>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Availability</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>Availability ensures that systems and data are accessible to authorised users when needed. Flask can address this by implementing rate limiting to prevent denial-of-service (DoS) attacks.</p>
+<p style="text-align: center;"><img src="../../assets/697ba5790a10240a.png" alt="image.png" width="583" height="552" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527600" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Explanation:</strong><br>Rate limiting in this Flask application helps ensure availability by restricting the number of requests a user can make, protecting the application from being overwhelmed by excessive traffic.</p>
+<p>The <code>@app.errorhandler(429)</code> decorator defines a custom error handler in Flask that specifies how to handle requests that trigger a 429 'Too Many Requests' error.&nbsp;</p>
+<p>The code below makes 11 attempts to access the <code>/resource</code> route. The first 10 requests succeed, but the 11th fails because the API call limit is set to 10 per minute.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/b3a5786dbb727a02.png" alt="image.png" width="622" height="358" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527601" data-api-returntype="File" loading="lazy"></p>
+<pre>$ python3 availability_test.py<br>Request 1: Resource accessed successfully<br>Request 2: Resource accessed successfully<br>Request 3: Resource accessed successfully<br>Request 4: Resource accessed successfully<br>Request 5: Resource accessed successfully<br>Request 6: Resource accessed successfully<br>Request 7: Resource accessed successfully<br>Request 8: Resource accessed successfully<br>Request 9: Resource accessed successfully<br>Request 10: Resource accessed successfully<br>Request 11: Failed with status code 429 - Too many requests. Please wait and try again later.</pre>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Authentication</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>Authentication is the process of verifying a user's identity. Flask can implement this using a simple username and password system.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/3a17187721e4e0b7.png" alt="image.png" width="626" height="607" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527597" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Explanation:</strong><br>This example demonstrates user authentication using hashed passwords. The user's password is hashed for storage, and the login process checks the entered password against the stored hash.</p>
+<p>The code below sends a login for a valid user (inside the <code>user</code> dictionary) as defined in <code>authentication.py</code>. The login API will authenticate the user if the password entered matches the one stored inside the dictionary. Otherwise, authentication is rejected, as seen in the 2nd API request for the <code>invalid_login_body</code>.&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/ccd4240a9ca1e203.png" alt="image.png" width="641" height="769" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527341" data-api-returntype="File" loading="lazy"></p>
+<pre>$ python3 authentication_test.py<br>Valid Login Response: Login successful<br>Valid login: Logged out successfully<br>Invalid login with username 'MIenna' and password 'wrongpassword' returned response: Invalid credentials</pre>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Authorisation</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>Authorisation determines what an authenticated user is allowed to do. In Flask, this can be managed by defining roles and permissions.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/63c61633d6b61a39.png" alt="image.png" width="617" height="682" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527598" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Explanation:</strong><br>This example demonstrates authorisation by checking a user's role before allowing access to certain resources. Only users with the "admin" role can access the admin page.</p>
+<p>Below is a code snippet that authenticates users based on their roles and authorizes access accordingly. Both users <code>admin</code> and <code>user1</code> is successfully authenticated, but the <code>/admin</code> API checks for admin permissions and denies access to user1, as they do not have the required permissions.&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/cf2e69da80b91bbf.png" alt="image.png" width="626" height="987" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527342" data-api-returntype="File" loading="lazy"></p>
+<pre>$ python3 authorisation_test.py<br>Admin Login Response: Login successful<br>Admin Access to admin page: Welcome to the admin page<br>--------------------------------------------------<br>User1 Login Response: Login successful<br>User1 Access to admin page: Access denied</pre>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Accountability</h3>
+<div class="dp-panel-content">
+<p><strong>Definition:</strong><br>Accountability ensures that actions can be traced back to the responsible user. This is often implemented through logging user actions.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/4cfa9320facb130b.png" alt="image.png" width="595" height="533" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527603" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Explanation:</strong><br>This example demonstrates accountability by logging user actions. Each action performed by a user is recorded in a log file, which can be reviewed to track user behaviour and ensure accountability.</p>
+<div class="flex max-w-full flex-col flex-grow">
+<div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5" data-message-author-role="assistant" data-message-id="1686dec6-21ea-4a3c-a777-8d0c1d959b30" data-message-model-slug="gpt-4o">
+<div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
+<div class="markdown prose w-full break-words dark:prose-invert dark">
+<p>The code below tests whether user actions are logged when a request is made to the <code>/action</code> API. The actions are recorded in the <code>app.log</code> file, as shown below.</p>
+</div>
+</div>
+</div>
+</div>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/aa0b436a2ace25bd.png" alt="image.png" width="630" height="536" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527344" data-api-returntype="File" loading="lazy"></p>
+<pre>WARNING:werkzeug: * Debugger is active!<br>INFO:werkzeug: * Debugger PIN: 579-674-550<br><strong>INFO:root:User anonymous performed action: anonymous action</strong><br>INFO:werkzeug:127.0.0.1 - - [22/Oct/2024 15:51:45] "POST /action HTTP/1.1" 200 -<br><strong>INFO:root:User anonymous performed action: logged-in action</strong><br>INFO:werkzeug:127.0.0.1 - - [22/Oct/2024 15:51:45] "POST /action HTTP/1.1" 200 -</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity<br></strong></p>
+<ul class="card-text">
+<li><a title="1.4 Design Security Concepts" href="https://canvas.kings.edu.au/courses/12951/assignments/204810" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204810" data-api-returntype="Assignment">1.4 Design Security Concepts</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled dp-ext-ignore" title="Link" href="https://edstem.org/au/courses/19403/lessons" target="_blank">Secure Authentication</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.4%20Design%20Security%20Concepts.pptx?d=w299b89ef29744b179cd3f23566a262e3&amp;csf=1&amp;web=1&amp;e=MByOZz">1.4 Design Security Concepts.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-4-design-security-concepts" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={299b89ef-2974-4b17-9cd3-f23566a262e3}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">1.5 Security Features</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Apply security features incorporated into software, including data protection, security, privacy and regulatory compliance.<br></span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand how to apply security features in software to ensure data protection, privacy, and regulatory compliance.</li>
+<li>Learn to implement security features in software applications using best practices.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to explain the importance of data protection, security, privacy, and regulatory compliance in software development.</li>
+<li>Students will be able to implement these security features in a software application.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Incorporating security features into software development is essential for safeguarding data, ensuring privacy, and adhering to regulatory requirements. These features are critical for preventing vulnerabilities, defending against attacks, and maintaining user trust. Below is an explanation of key aspects of data protection:</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Protection</h3>
+<div class="dp-panel-content ">
+<p><span style="font-family: PT Sans, Helvetica, Arial, sans-serif;"><span style="font-size: 18px;"><strong>Data Protection</strong></span></span></p>
+<p><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">Data protection is a comprehensive approach to safeguarding data from vulnerabilities and unauthorised access while ensuring its confidentiality, integrity, and availability. It involves implementing various security measures to protect data throughout its lifecycle, whether stored, processed, or transmitted.</span></p>
+<ul>
+<li>
+<p><strong>Encryption:</strong><br>Encrypt sensitive data at rest and in transit to prevent unauthorised access. Use strong encryption standards like AES (Advanced Encryption Standard) for stored data and TLS (Transport Layer Security) for data in transit.</p>
+</li>
+<li>
+<p><strong>Access Controls:</strong><br>Implement strict access controls to ensure only authorised users can access sensitive data. This may include role-based access control (RBAC), where users are granted access based on their organisational</p>
+</li>
+<li>
+<p><strong>Backups:</strong><br>Regularly back up data to secure locations to prevent data loss due to accidental deletion, corruption, or attacks like ransomware.</p>
+</li>
+</ul>
+<h4><strong>Example:</strong></h4>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/edb46f1bfe15c164.png" alt="image.png" width="640" height="535" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527426" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Explanation</strong></p>
+<ul class="card-text">
+<li style="list-style-type: none;">
+<ul>
+<li><strong>Encryption Process:</strong> The <code>Fernet</code> class from the <code>cryptography</code> Library is used to handle encryption and decryption. A key is generated when the application starts, which is then used to encrypt any data submitted to the <code>/store_data</code> endpoint.</li>
+<li><strong>Storing Data:</strong> When a user sends data to be stored, it is first encrypted using this key. This means that if someone were to gain unauthorised access to the stored data, it would appear as unreadable ciphertext.</li>
+<li><strong>Retrieving Data:</strong> The <code>/retrieve_data</code> endpoint allows you to decrypt the previously stored data. Only someone with access to the encryption key can decrypt the data, ensuring that sensitive information remains secure.</li>
+</ul>
+<p>This setup demonstrates how to protect data at rest by ensuring it is encrypted before being stored, thus preventing unauthorised.</p>
+</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Security</h3>
+<div class="dp-panel-content ">
+<p><span style="font-family: PT Sans, Helvetica, Arial, sans-serif;"><span style="font-size: 18px;"><strong>Security</strong></span></span></p>
+<p>Software security is designed to protect users from threats from unauthorised parties, ensuring their data and interactions with the software remain safe and secure. This involves implementing various security measures, such as authentication, encryption, access controls, and regular security assessments,<span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">&nbsp;to safeguard against potential threats.</span></p>
+<p><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;"><img style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;" src="../../assets/afb903ef250afa06.png" alt="image.png" width="576" height="324" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527305" data-api-returntype="File" loading="lazy"></span></p>
+<ul>
+<li><strong>Authentication and&nbsp;</strong><span style="margin: 0px; padding: 0px;"><strong>Authorisation</strong></span><strong>:</strong> Verifying the user's identity when attempting to access a system. Strong authentication includes:
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Multi-factor authentication (MFA) requires providing two or more verification factors (or tokens) to gain access to a resource.</li>
+<li>Strong Passwords - enforcing character restrictions or number requirements on passwords during registration.&nbsp;</li>
+<li><span>&nbsp;Authorisation or authorisation to access <em>specific&nbsp;</em>resources.&nbsp;</span></li>
+<li>Roles-Based (RBAC) - assigning permissions to users based on roles within an organisation as teacher and student)</li>
+<li>Access Control List - specifying which users or systems are granted permissions. For example, a file might have an ACL that specifies read, write, and execute permissions.&nbsp;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span><strong>Input Validation:&nbsp;</strong>Validating user-provided data is correct, safe and secure before processing, helping protect software from attacks (SQL injections, cross-site scripting and buffer overflows. To prevent this:</span>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Sanitisation input must be provided on both the client and server sides.</li>
+<li>Define acceptable input formats (allowing numbers only in a phone number field)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span><strong>Security Audits:&nbsp;</strong>Systematically review the software, its environment, and its processes to ensure compliance with security policies, identify potential vulnerabilities, and verify the effectiveness of security measures. Audits can be performed internally by an organisation or by third-party auditors.&nbsp;</span></li>
+</ul>
+<h4><strong>Example:</strong></h4>
+<p><strong><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/9512ffd74b402137.png" alt="image.png" width="640" height="598" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527434" data-api-returntype="File" loading="lazy"></strong></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Explanation:</strong></p>
+<ul>
+<li><strong>Password Hashing:</strong> When storing passwords, they are hashed using <code>generate_password_hash</code>, which ensures that even if someone gains access to the password database, they cannot retrieve the original passwords.</li>
+<li><strong>Authentication:</strong> When a user attempts to log in, the entered password is hashed and compared to the stored hash. If they match, the user is authenticated, and a session is created to maintain their login state.</li>
+<li><strong>Role-Based Access:</strong> The application checks the user's role status in the session to determine if they have permission to access certain resources. For example, only users with the "admin" role can"access" the <code>/admin_resource</code> endpoint.</li>
+</ul>
+<p>This setup ensures that only authorised users can access sensitive areas of the application, protecting against unauthorised users.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Privacy</h3>
+<div class="dp-panel-content">
+<p><span style="font-family: PT Sans, Helvetica, Arial, sans-serif;"><span style="font-size: 18px;"><strong>Privacy</strong></span></span></p>
+<p>Privacy in secure software protects an individual's personal data and information.&nbsp;</p>
+<ul>
+<li><strong>Data&nbsp;</strong><strong>minimisation</strong>&nbsp;is a concise database that stores only what is necessary to prevent privacy breaches.&nbsp;</li>
+<li><strong>User Consent</strong>: Obtaining a user from the user client of obtaining permissions before collecting or processing data. Creating UI that has buttons or checkboxes for a consent form.&nbsp;</li>
+<li><strong>Data Access Controls:</strong><span>&nbsp;</span>Ensure that only authorised personnel can access private information—authorisation only for specific roles will access private data using a roles-based authorisation system.&nbsp;&nbsp;</li>
+</ul>
+<h4>Example:</h4>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/8be00e3041908b9c.png" alt="image.png" width="609" height="640" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527313" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;</strong><strong>Explanation:</strong></p>
+<ul>
+<li><strong>Data Minimisation:</strong> The application only stores essential information, such as the user's email, to the user's risk of storing unnecessary personal data.</li>
+<li><strong>User Control:</strong> Users can delete their data from the system, allowing them to exercise control over their personal information, a core principle of privacy.</li>
+</ul>
+<p>This setup exemplifies respecting user privacy by minimising data stored and giving users the power to manage their information.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Regulatory Compliance</h3>
+<div class="dp-panel-content">
+<p><span style="font-family: PT Sans, Helvetica, Arial, sans-serif;"><span style="font-size: 18px;"><strong>Regulatory Compliance</strong></span></span></p>
+<p>Achieving regulatory compliance means aligning with legal and regulatory guidelines applicable to the region. Software developers must ensure that the software meets legal obligations and protects user data.&nbsp;</p>
+<ul>
+<li>
+<p><strong>Compliance Audits:</strong><br>Regularly conduct audits to ensure that the software complies with relevant regulations. This may include reviewing data handling practices, security measures, and user consent mechanisms.</p>
+</li>
+<li>
+<p><strong>Data Retention Policies:</strong><br>Implement data retention policies that comply with regulations, specifying how long data is stored and when it should be deleted.</p>
+</li>
+<li>
+<p><strong>User Consent:</strong><br>Ensure users consent before their data is collected, processed, or shared. This is especially important for sensitive personal data.</p>
+</li>
+</ul>
+<h4>Example:</h4>
+<p><img class="" style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/8be00e3041908b9c.png" alt="" width="609" height="640" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527314" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;</strong><strong>Explanation:</strong></p>
+<ul>
+<li><strong>User Consent:</strong> The application ensures that users have explicit consent before processing data. If a user does not consent, the action is denied.</li>
+<li><strong>Compliance Audits:</strong> The application includes a basic compliance audit that checks whether all users have provided the necessary consent. This is important for adhering to regulatory requirements such as GDPR, which mandates explicit user consent for data processing.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://edstem.org/au/courses/19403/lessons" target="_blank">Input Sanitisation and Validation</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity<br></strong></p>
+<ul class="card-text">
+<li><a title="1.5 Security Features" href="https://canvas.kings.edu.au/courses/12951/assignments/204811" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204811" data-api-returntype="Assignment">1.5 Security Features</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-5-security-features" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={38747af3-3bbe-48d3-8025-4dbfda85978d}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">After</h3>
+<div class="readnav"><a href="12951-m0.html">← previous module</a><a href="../course-12951.html">all modules</a><a href="12951-m2.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

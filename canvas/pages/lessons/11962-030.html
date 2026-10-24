@@ -1,0 +1,529 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.18 Test and evaluate — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 4 (Term 1: Weeks 7-8) Programming Fundamentals</div>
+<h1 style="margin-top:.2rem">1.18 Test and evaluate</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-18-test-and-evaluate" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2">
+    <header class="dp-header dp-bookmark variation-2 ">
+        
+    </header>
+    <div class="dp-content-block kl_custom_block_0">
+        <div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+            <div class="card-body">
+                <p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Test and evaluate solutions, considering key aspects including functionality, performance, readability of code, quality of documentation</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_content_block_1">
+        <h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4" style="padding: 0px 5px 0px 0px;">
+                    <div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 10pt;">Be able to test and evaluate solutions, considering key aspects, including functionality, performance, code readability, and documentation quality.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8" style="padding: 0px 0px 0px 5px;">
+                    <div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 13.3333px;">Create test cases to evaluate the functionality of their code.</span></li>
+                                <li><span style="font-size: 13.3333px;">Measure and analyse the performance of their code.</span></li>
+                                <li><span style="font-size: 13.3333px;">Write readable code that is easy to understand and maintain.</span></li>
+                                <li><span style="font-size: 13.3333px;">Produce high-quality documentation that describes their code and how to use it effectively.</span></li>
+                                <li><span style="font-size: 13.3333px;">Apply their evaluation skills to identify and resolve problems in their code.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_custom_block_1">
+        <h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+        <p>Testing and evaluation ensure that the software <strong>meets all specified requirements</strong>, both functional and non-functional, and adheres to an acceptable standard of <strong>quality, reliability, and security.</strong> The client must confirm that the original objectives have been <strong>tested for compliance.</strong> By identifying and rectifying defects early, testing helps optimise performance and enhance user satisfaction. Testing also evaluates<strong> the software's performance against industry standards</strong> or benchmarks like FurMark and Geekbench.</p>
+        <p>&nbsp;</p>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Levels of Testing</h3>
+                <div class="dp-panel-content">
+                    <ul>
+                        <li>
+                            <p><strong>Unit (Module) Level Testing:</strong> At this stage, each module or component of the software is tested independently. The focus is ensuring each module functions as expected and meets its specified requirements. Testing at this level involves examining the inputs and outputs of each module, as well as verifying the internal logic and functionality. Various techniques, such as unit testing, integration testing, and regression testing, may be employed to validate the behaviour of the modules. By testing at the module level, developers can identify and rectify defects early in the development process, minimising the risk of issues propagating to higher levels.</p>
+                        </li>
+                        <li>
+                            <p><strong>Sub-System (Program) Level Testing:</strong> Once the individual modules have been tested and verified, the focus shifts to testing the integration and interaction between these modules within a more extensive program context. Program-level testing ensures the modules and subroutines work together seamlessly to achieve the desired functionality. This involves testing different paths of execution, error-handling mechanisms, and data flow between modules. Integration testing plays a crucial role at this stage, as it verifies the interfaces and interactions between modules, identifying any compatibility issues or inconsistencies. The goal is to ensure the program behaves as expected and produces the correct results under various scenarios.</p>
+                        </li>
+                        <li>
+                            <p><strong>System Level Testing:</strong> System level testing encompasses the comprehensive evaluation of the entire software system, including its hardware, software, data, procedures, and personnel. This stage aims to validate the system's behaviour in a real-world environment and ensure it meets the specified requirements and objectives. Testing at this level involves executing end-to-end scenarios, simulating user interactions, and assessing system performance under normal and stressful conditions. Various types of testing, such as functional, performance, security, and usability, may be conducted to evaluate different aspects of the system. System-level testing not only verifies the correctness of the software but also assesses its reliability, scalability, and maintainability, providing confidence in its deployment and operation.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Hardware and Software Testing</h3>
+                <div class="dp-panel-content">
+                    <p>Testing software on different combinations of hardware and ensuring compatibility with various operating systems, drivers, and other software applications is crucial to guarantee its functionality and performance across diverse environments. Here's an expansion on this:</p>
+                    <p><strong>Hardware Compatibility Testing:</strong><br>&nbsp; &nbsp;Software solutions should be tested on various hardware configurations to ensure compatibility and optimal performance. This includes testing different types of processors, memory capacities, storage devices, graphics cards, and other peripherals. By testing various hardware configurations, developers can identify and address hardware dependencies, resource utilisation, and performance optimisation issues. Additionally, compatibility testing should consider hardware limitations, driver support, and compatibility with legacy systems to ensure seamless operation across a broad spectrum of hardware environments.</p>
+                    <p><strong>Operating System Compatibility Testing:</strong><br>&nbsp; &nbsp;Compatibility with various operating systems is essential to ensure the software functions correctly on different platforms. Testing should encompass popular operating systems such as Windows, macOS, Linux, iOS, Android, and other versions and editions. This involves verifying that the software installs and runs smoothly on each operating system and that all features and functionalities are fully supported. Compatibility testing should also consider platform-specific requirements, user interface conventions, and performance characteristics to ensure a consistent user experience across different operating environments.</p>
+                    <p><strong>Driver Compatibility Testing:</strong><br>&nbsp; &nbsp;Software solutions often rely on device drivers to communicate with hardware components and peripherals. Therefore, testing for compatibility with various device drivers, including those provided by hardware manufacturers and third-party vendors, is crucial. This involves verifying that the software can interface correctly with various drivers, support different driver versions, and handle driver-related errors gracefully. Driver compatibility testing helps ensure the software can effectively utilise hardware resources and maintain stability and reliability across different configurations.</p>
+                    <p><strong>Compatibility with Other Software Applications:</strong><br>&nbsp; &nbsp;Many software solutions interact with or depend on other third-party applications and libraries. Therefore, testing for compatibility with these dependencies is essential to avoid conflicts or interoperability issues. Compatibility testing should include integration testing with commonly used software applications, middleware, databases, and web services. This involves verifying that the software can coexist with other applications, exchange data seamlessly, and maintain interoperability without compromising performance or functionality. Thorough testing of integration points helps ensure a smooth and cohesive user experience, particularly in environments where multiple software solutions are used concurrently.</p>
+                    <p><strong>&nbsp;Thorough Testing of Interactions:</strong><br>&nbsp; &nbsp;When deploying the software alongside other applications, thorough testing should be conducted to assess how they interact. This includes testing for potential conflicts, compatibility issues, or unexpected behaviour that may arise when multiple applications are running simultaneously. Additionally, testing should cover scenarios where the software interacts with peripherals, network devices, and external systems to ensure seamless integration and interoperability. By thoroughly testing interactions with hardware, operating systems, drivers, and other software applications, developers can identify and resolve compatibility issues early in the development process, ensuring a smoother deployment and a more positive user experience.</p>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Test Data</h3>
+                <div class="dp-panel-content">
+                    <p>Testing software with a diverse range and large quantity of test data is essential to ensure its reliability and performance under real-world conditions. Here's an elaboration on the specific conditions that should be tested and their significance:</p>
+                    <p><strong>Large File Sizes:</strong> <br>Testing with large files helps uncover potential issues related to data access and processing efficiency. It identifies whether the system can handle larger datasets' increased resource demands and processing time. Problems with slow response times or inefficient code may become more apparent when dealing with large volumes of data.</p>
+                    <p><strong>A mix of Transaction Types:<br></strong> Testing with a mix of transaction types simulates real-world scenarios where multiple operations coincide. It ensures the system can handle concurrent transactions without data integrity issues or conflicts. It also helps identify and address potential race conditions, deadlocks, or inconsistencies that may arise when transactions interact unpredictably.</p>
+                    <p><strong>Response Times: <br></strong>Evaluating response times measures the efficiency and performance of the system under different workloads. It assesses the time taken for processes to complete and the system's responsiveness to user interactions. It also identifies bottlenecks, performance degradation, or resource constraints that may impact user experience or system reliability.</p>
+                    <p><strong>Volume Data (Load Testing):</strong> <br>Load testing involves subjecting the system to stress conditions with large amounts of data or concurrent users. It evaluates the system's scalability and ability to handle increased loads without degradation in performance or stability. It helps identify performance thresholds, capacity limits, and potential points of failure under heavy usage scenarios. Multi-user applications need to ensure smooth operation and responsiveness even during peak usage.</p>
+                    <p>By testing software under these conditions, developers can uncover potential issues early in development, allowing for timely adjustments and optimisations. This proactive approach helps ensure the software meets performance expectations, delivers a positive user experience, and maintains reliability under live conditions.</p>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Acceptance testing</h3>
+                <div class="dp-panel-content">
+                    <div class="flex-1 overflow-hidden">
+                        <div class="react-scroll-to-bottom--css-vfydk-79elbk h-full">
+                            <div class="react-scroll-to-bottom--css-vfydk-1n7m0yu">
+                                <div class="flex flex-col text-sm pb-9">
+                                    <div class="w-full text-token-text-primary" data-testid="conversation-turn-5">
+                                        <div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
+                                            <div class="flex flex-1 text-base mx-auto gap-3 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] group final-completion">
+                                                <div class="relative flex w-full flex-col agent-turn">
+                                                    <div class="flex-col gap-1 md:gap-3">
+                                                        <div class="flex flex-grow flex-col max-w-full">
+                                                            <div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="e3cdb09c-eb2f-46cf-a2da-8325dac2ac85">
+                                                                <div class="markdown prose w-full break-words dark:prose-invert light">
+                                                                    <p>Acceptance testing is a critical phase in the software development lifecycle where the focus shifts from technical validation to ensure that the product meets the client's or end-users expectations and requirements. Here's an elaboration on this:</p>
+                                                                    <ol>
+                                                                        <li>
+                                                                            <p><strong>Client's Requirements Validation:</strong> Acceptance testing aims to validate that the software product aligns with the specified requirements provided by the client or stakeholders. These requirements could encompass functional features, performance expectations, usability standards, security measures, and other criteria defined during the project's initiation and planning phases. The testing process involves comparing the actual behaviour of the software against these predefined requirements to assess compliance.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><strong>User and Management Involvement:</strong> Unlike earlier stages of testing, which were primarily conducted by developers and quality assurance teams, acceptance testing involves active participation from end-users and management representatives. Users are typically involved in executing test cases and providing feedback on the software's usability, functionality, and overall satisfaction with the product. Management stakeholders oversee the testing process, ensuring it aligns with business objectives and addresses key concerns.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><strong>Transfer of Ownership:</strong> Successful completion of acceptance testing often signifies the software's readiness for deployment and operational use. Upon passing acceptance tests, the ownership of the software product is typically transferred from the development team to the client or end-users. This transition marks the official handover of responsibility for maintaining, supporting, and utilising the software.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><strong>Legal Implications of Failure:</strong> If the software fails to meet the acceptance criteria or does not satisfy the client's requirements, it may have significant consequences, including legal ramifications. Clients may take legal action against the development company for breach of contract or failure to deliver the promised product. Common issues that may lead to such disputes include inadequate performance, incorrect functionality, security vulnerabilities, or failure to meet agreed-upon deadlines.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><strong>Mitigating Risks and Ensuring Compliance:</strong> To reduce the risks associated with acceptance testing, development teams must maintain clear communication with clients throughout the development process, accurately document requirements, and actively involve stakeholders in the testing process. Additionally, incorporating ongoing feedback and iteration mechanisms can help address any discrepancies or shortcomings identified during acceptance testing, ultimately ensuring client satisfaction and compliance with contractual obligations.</p>
+                                                                        </li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Benchmarking</h3>
+                <div class="dp-panel-content">
+                    <p><span>Benchmarking systematically evaluates a product's performance using standardised tests to compare it against industry standards. It involves selecting relevant tests, executing them rigorously, measuring performance metrics, comparing results with established benchmarks, and making informed decisions for improvement. Benchmarking helps assess competitiveness, identify strengths and weaknesses, and drive continuous improvement efforts.</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Quality Assurance</h3>
+                <div class="dp-panel-content">
+                    <p>Quality Assurance (QA) is a crucial aspect of the software development process, ensuring that the final product meets or exceeds users' expectations regarding quality and reliability. Here's a deeper explanation:</p>
+                    <p>Quality Assurance involves systematic activities and processes to verify and validate that the software product conforms to specified requirements and standards. It encompasses various practices, methodologies, and tools designed to prevent defects, identify deviations from requirements, and ensure that the product meets established quality criteria.</p>
+                    <p>The primary goal of QA is to instil confidence in the quality and reliability of the software by addressing potential issues early in the development lifecycle and throughout the entire software development process. By adhering to QA principles, organisations can minimise risks, enhance customer satisfaction, and maintain competitiveness in the market.</p>
+                    <p>Critical aspects of Quality Assurance include:</p>
+                    <ol>
+                        <li>
+                            <p><strong>Standards and Guidelines:</strong> QA relies on established national and international standards, guidelines, and best practices to define quality criteria and ensure compliance. These standards provide frameworks for quality management systems, processes, and methodologies that help organisations achieve consistent and reliable results.</p>
+                        </li>
+                        <li>
+                            <p><strong>Quality Planning:</strong> QA begins with quality planning, where project stakeholders define quality objectives, requirements, and acceptance criteria. This involves identifying quality attributes relevant to the software product, such as functionality, usability, reliability, performance, and security, and establishing metrics to measure them.</p>
+                        </li>
+                        <li>
+                            <p><strong>Quality Control:</strong> QA activities include quality control processes to monitor and evaluate the quality of the software throughout its development lifecycle. This involves conducting reviews, inspections, and testing to detect defects, identify deviations from requirements, and ensure adherence to quality standards.</p>
+                        </li>
+                        <li>
+                            <p><strong>Testing and Validation:</strong> Testing is a fundamental component of QA. It involves the systematic execution of test cases to verify that the software functions correctly and meets specified requirements. This includes various types of testing, such as functional, usability, performance, security, and regression, to validate different aspects of the software's quality.</p>
+                        </li>
+                        <li>
+                            <p><strong>Continuous Improvement:</strong> QA promotes a culture of constant improvement, where organisations strive to identify areas for enhancement and implement corrective and preventive actions to address quality issues. This involves analysing stakeholder feedback, reviewing process performance, and implementing lessons learned to optimise quality management practices.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Purpose of Testing and Evaluation</h3>
+                <div class="dp-panel-content">
+                    <p>Software testing and evaluation play a critical role in ensuring software products' quality, reliability, and performance. Here's a deeper look at the purposes and objectives of software testing and evaluation:</p>
+                    <ol>
+                        <li>
+                            <p><strong>Ensuring Requirement Compliance:</strong></p>
+                            <ul>
+                                <li>One of the primary purposes of software testing and evaluation is to ensure that the software meets its specified requirements during the development phase. This involves verifying that the software's functionality, features, and behaviour align with the intended specifications outlined by stakeholders, including clients, end-users, and regulatory authorities.</li>
+                                <li>Testing ensures that all functional and non-functional requirements, such as usability, scalability, and compatibility, are adequately addressed and implemented in the software product. By validating requirement compliance, testing helps mitigate the risk of delivering software that fails to meet user expectations or regulatory standards.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Identifying and Fixing Bugs:</strong></p>
+                            <ul>
+                                <li>Another key objective of software testing and evaluation is identifying and rectifying software defects, errors, or inconsistencies before deploying to production environments. Testing helps uncover bugs in the code, logic errors, usability issues, and other discrepancies that could impact the software's functionality or performance.</li>
+                                <li>By detecting and addressing bugs early in the development lifecycle, testing minimises the likelihood of costly rework, system failures, or customer dissatisfaction post-deployment. It enables developers to troubleshoot and resolve issues promptly, improving the overall quality and reliability of the software.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Ensuring Reliability, Performance, and Security:</strong></p>
+                            <ul>
+                                <li>Software testing is instrumental in validating the software product's reliability, performance, and security. Reliability testing assesses the software's ability to perform consistently and predictably under various conditions, ensuring that it meets uptime requirements and delivers consistent results.</li>
+                                <li>Performance testing evaluates the software's responsiveness, scalability, and resource utilisation under different workloads and stress conditions. It helps identify performance bottlenecks, latency issues, and capacity limits, enabling optimisation for optimal performance.</li>
+                                <li>Security testing aims to identify software vulnerabilities, weaknesses, and security risks that malicious actors could exploit. It includes penetration testing, vulnerability scanning, and code analysis to assess the software's resilience against cyber threats and ensure data confidentiality, integrity, and availability.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Functionality testing</h3>
+                <div class="dp-panel-content">
+                    <p><strong>Definition of Functionality Testing:</strong></p>
+                    <p>Functionality testing is software testing that aims to validate the functional behaviour of the software application or system. It involves testing all the software's features, functionalities, and capabilities to ensure that they meet the specified requirements and perform as expected by end-users.</p>
+                    <p><strong>Key Objectives of Functionality Testing:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Testing All Features:</strong></p>
+                            <ul>
+                                <li>The primary objective of functionality testing is to verify that all software features and functionalities are working correctly. This includes testing both basic and advanced features and any specialised functionalities unique to the software.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Handling Various Data Types:</strong></p>
+                            <ul>
+                                <li>Functionality testing involves putting various types of data into the software to ensure that it can effectively handle different input scenarios. This includes testing with different data formats, data structures, and data sources to validate data processing and manipulation functionalities.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Verification of Integration:</strong></p>
+                            <ul>
+                                <li>Functionality testing includes verifying the software's integration points with external systems, such as databases, APIs, or third-party applications. This ensures that data exchange, communication, and interoperability with external systems are seamless and error-free.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p><strong>Key Activities in Functionality Testing:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Test Case Design:</strong></p>
+                            <ul>
+                                <li>Functionality testing begins with the design of test cases that cover all the software's functional requirements and features. Test cases are designed to validate each function or feature independently and in combination with other functions.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Test Execution:</strong></p>
+                            <ul>
+                                <li>Test cases are executed systematically to verify the software's behaviour under different conditions and scenarios. This involves inputting test data, interacting with the user interface, and validating the expected outcomes against the actual results.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Defect Reporting and Tracking:</strong></p>
+                            <ul>
+                                <li>During test execution, any defects or issues identified are documented, reported, and tracked using a defect tracking system. This includes providing detailed information about the defect, such as steps to reproduce, severity, and priority, to facilitate resolution by the development team.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Regression Testing:</strong></p>
+                            <ul>
+                                <li>As new features are added or existing features are modified, functionality testing may include regression testing to ensure that the changes do not introduce regressions or unintended side effects. This involves retesting previously validated functionalities to confirm they still work as expected.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p><strong>Techniques of Functionality Testing:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Black Box Testing:</strong></p>
+                            <ul>
+                                <li><span>Black box testing is a testing method where the tester does not have any knowledge of the internal workings or code structure of the module(s) being tested. The tester focuses on the inputs and outputs without being concerned with how the software achieves its functionality.</span></li>
+                                <li><span>The aim is not to identify the specific source of the problem, only to identify that a problem exists in the software's functionality when the outputs are not as expected. When a black box test fails, the developer uses white box testing to find the exact problem.</span></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>White Box Testing:</strong></p>
+                            <ul>
+                                <li><span>White box testing involves examining the internal logic, code, and structure of the module being tested. Testers have knowledge of the internal workings of the code and use this information to design test cases and find the problem identified in the black box test.</span></li>
+                                <li><span>The aim is to ensure the correctness of the internal logic and code structure of the software and that all code paths are tested to uncover any errors in logic.</span></li>
+                            </ul>
+                        </li>
+                        <li><strong>Grey Box Testing:</strong>
+                            <ul>
+                                <li><span>Grey box testing is a software testing method that combines elements of both black box and white box testing methodologies to test a program.</span></li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p><strong>Benefits of Functionality Testing:</strong></p>
+                    <ul>
+                        <li>Ensures that the software meets user expectations and requirements.</li>
+                        <li>Identifies defects, errors, or inconsistencies in the functional behaviour of the software.</li>
+                        <li>Validates the completeness and correctness of all features and functionalities.</li>
+                        <li>It helps improve software quality, reliability, and user satisfaction.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Performance</h3>
+                <div class="dp-panel-content">
+                    <p><strong>Understanding Performance Testing:</strong></p>
+                    <p>Performance testing evaluates how well a software application performs under various conditions, such as average and peak loads, to ensure it meets performance expectations and requirements. It measures critical performance metrics, including response time, throughput, resource utilisation, and scalability, to identify bottlenecks, performance limitations, and areas for optimisation.</p>
+                    <p><strong>Types of Performance Testing:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Load Testing:</strong></p>
+                            <ul>
+                                <li>Load testing evaluates the application's performance under anticipated load conditions by simulating a specific number of users or data volume.</li>
+                                <li>The goal is to determine how the application handles the expected workload without degradation in performance or stability.</li>
+                                <li>Load testing helps identify performance bottlenecks, capacity limits, and scalability issues under typical usage scenarios.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Stress Testing:</strong></p>
+                            <ul>
+                                <li>Stress testing assesses the application's behaviour under extreme conditions beyond standard operating capacity.</li>
+                                <li>It involves subjecting the application to high loads, data volumes, or user concurrency levels to determine its breaking point.</li>
+                                <li>The objective is to identify the point at which the software becomes unresponsive, crashes or exhibits unexpected behaviour under stress.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Scalability Testing:</strong></p>
+                            <ul>
+                                <li>Scalability testing evaluates the application's ability to scale up or down based on changing workload demands.</li>
+                                <li>It tests how well the software adapts to increased or decreased user loads, data volumes, or system resources without compromising performance or stability.</li>
+                                <li>Scalability testing helps assess the application's ability to handle growth and accommodate future expansion or contraction.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Readability of code</h3>
+                <div class="dp-panel-content">
+                    <p><strong>Why Readability Matters:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Ease of Understanding and Maintenance:</strong></p>
+                            <ul>
+                                <li>Readable code is more accessible for other developers to comprehend, allowing them to quickly grasp the code's purpose, logic, and functionality.</li>
+                                <li>When code is easy to understand, it facilitates collaboration among team members and simplifies reviewing, modifying, and maintaining the codebase over time.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Efficiency of Debugging and Updating:</strong></p>
+                            <ul>
+                                <li>Readable code reduces the time and effort required for debugging and troubleshooting issues because developers can more easily identify and isolate problematic areas.</li>
+                                <li>Readability ensures that developers can confidently make changes without introducing unintended side effects or errors when updating or extending existing code.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p><strong>Tips for Improving Readability:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Use Meaningful Variable and Method Names:</strong></p>
+                            <ul>
+                                <li>Choose descriptive and meaningful names for variables, methods, classes, and other code elements to convey their purpose and functionality.</li>
+                                <li>Avoid cryptic or ambiguous abbreviations, opting for names that accurately reflect each component's role or behaviour.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Follow Consistent Coding Style and Conventions:</strong></p>
+                            <ul>
+                                <li>Adhere to a consistent coding style and formatting conventions throughout the codebase to promote uniformity and clarity.</li>
+                                <li>Consistency in coding style makes it easier for developers to navigate and understand the code, regardless of who originally wrote it.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Comment Your Code Where Necessary:</strong></p>
+                            <ul>
+                                <li>Use comments strategically to document complex logic, algorithms, or business rules that may not be immediately obvious from the code itself.</li>
+                                <li>Comments should provide valuable insights into the rationale behind particular design or implementation choices, aiding comprehension and maintenance.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Break Down Complex Logic into Readable Chunks:</strong></p>
+                            <ul>
+                                <li>Divide complex tasks or algorithms into smaller, more manageable functions or methods with clear and concise responsibilities.</li>
+                                <li>Breaking down code into smaller units improves readability and enhances modularity, reusability, and testability.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Ensure Adequate White Space and Formatting:</strong></p>
+                            <ul>
+                                <li>Use consistent indentation, spacing, and formatting to enhance code readability and organisation.</li>
+                                <li>Adequately formatted code improves visual clarity and makes it easier to identify the structure and flow of the code.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Quality of Documentation</h3>
+                <div class="dp-panel-content">
+                    <p><strong>Importance of Documentation:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>Guide for Users:</strong></p>
+                            <ul>
+                                <li>Documentation is a vital guide for users, providing instructions and information on utilising the software effectively.</li>
+                                <li>It outlines the software's features, functionalities, and workflows, helping users navigate the application and perform tasks efficiently.</li>
+                                <li>Well-crafted documentation reduces users' learning curve, enhances their understanding of the software, and empowers them to maximise its capabilities.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Reference for Developers:</strong></p>
+                            <ul>
+                                <li>Documentation is a valuable reference for developers, offering insights into the codebase, functionality, and overall architecture.</li>
+                                <li>It provides developers with essential information about the system's design decisions, module interactions, data structures, and algorithms, aiding in code comprehension and troubleshooting.</li>
+                                <li>By documenting the codebase comprehensively, developers can quickly locate relevant sections, understand their purpose, and make informed decisions when modifying or extending the software.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p><strong>Effective Documentation Practices:</strong></p>
+                    <ol>
+                        <li>
+                            <p><strong>User Documentation:</strong></p>
+                            <ul>
+                                <li>User documentation is intended for end-users and typically includes manuals, user guides, tutorials, and frequently asked questions (FAQs).</li>
+                                <li>It should be written in clear, understandable language, avoiding technical jargon and complexities that might confuse users.</li>
+                                <li>User documentation should cover basic tasks, advanced features, troubleshooting steps, and best practices, ensuring users have the necessary information to utilise the software effectively.</li>
+                                <li>Incorporating examples, screenshots, and step-by-step instructions enhances the clarity and usability of user documentation.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Technical Documentation:</strong></p>
+                            <ul>
+                                <li>Technical documentation focuses on providing detailed insights into the software's architecture, codebase, and internal workings, and it is primarily targeted at developers.</li>
+                                <li>It should include information about the software's architecture, design patterns, coding conventions, and API references.</li>
+                                <li>Technical documentation should offer a comprehensive codebase overview, including class hierarchies, module dependencies, and data flow diagrams, facilitating code understanding and maintenance.</li>
+                                <li>Including code comments, inline documentation, and high-level overviews of key components enhances the comprehensibility and maintainability of technical documentation.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong>Clarity and Conciseness:</strong></p>
+                            <ul>
+                                <li>Regardless of the type of documentation, clarity and conciseness are paramount. Documentation should be easy to understand and navigate.</li>
+                                <li>Use clear, straightforward language and organise content logically to facilitate quick comprehension and reference.</li>
+                                <li>Incorporate examples, illustrations, and diagrams where applicable to illustrate concepts and clarify complex topics, enhancing the overall readability of the documentation.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+      <div class="dp-panels-wrapper dp-accordion-default">
+        <div class="dp-panel-group">
+            <h3 class="dp-panel-heading ">Presentation</h3>
+            <div class="dp-panel-content ">
+                <p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EYXNtMLtlJ5FgLRBlag3mTABuByvt3M_NJCxZThq0Atc7g?e=a6un5a" target="_blank">1.18 Test and Evaluate</a></p>
+                <div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-18-test-and-evaluate" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={c2b4cd85-94ed-459e-80b4-4195a8379930}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+            </div>
+        </div>
+    </div>
+        <div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-18-test-and-evaluate" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/TmGYRAQ8s0I?si=WkjYLZ-BDe3J7tAU</span></div></div>
+        <div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+                <ul class="card-text">
+                    <li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+                <ul class="card-text">
+                    <li><a title="1.18 Test and evaluate" href="https://canvas.kings.edu.au/courses/11962/assignments/179143" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179143" data-api-returntype="Assignment">1.18 Test and evaluate</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+    </div>
+    
+    <p>&nbsp;</p>
+</div></main>
+<div class="pnrow"><a class="pn" href="11962-029.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-031.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

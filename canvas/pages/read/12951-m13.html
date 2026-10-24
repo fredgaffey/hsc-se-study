@@ -1,0 +1,1042 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 12 (Term 2: Weeks 5-6) Software Automation — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">12SENX2 Software Engineering 2026 · module 14 of 15</p>
+<h1>Cycle 12 (Term 2: Weeks 5-6) Software Automation</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="12951-all.html">Whole course</a><span class="cur">By module</span><a href="../course-12951.html">By lesson</a></div>
+<h3 class="readles">3.7 Regression Models</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Design, develop and apply ML regression models using an OOP to predict numeric values, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>linear regression</li>
+<li>polynomial regression</li>
+<li>logistic regression</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Design, develop, and implement machine learning regression models using an object-oriented programming (OOP) approach to predict numeric values, including linear regression, polynomial regression, and logistic regression.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explain the differences between linear, polynomial, and logistic regression.</span></li>
+<li><span style="font-size: 10pt;">Design classes in Python to represent regression models, using inheritance and encapsulation effectively.</span></li>
+<li><span style="font-size: 10pt;">Implement OOP-based regression models to solve prediction tasks and assess their performance using appropriate metrics.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Regression models are essential tools in machine learning for predicting numerical values based on input data. In this lesson, we explore the development and application of three key regression models—linear regression, polynomial regression, and logistic regression—using an object-oriented programming (OOP) approach. By adopting OOP principles, we can design flexible and reusable models that efficiently handle different types of prediction tasks.</p>
+<p>Linear regression helps in modelling relationships between variables through a straight line, while polynomial regression extends this to capture more complex, non-linear relationships. Logistic regression, though commonly associated with classification, is included here to highlight its use in predicting probabilities for binary outcomes. Through these models, you will gain a deeper understanding of how to apply regression techniques to solve real-world problems in a structured, scalable manner.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h3 class="card-title">Why use OOP to design models?</h3>
+<p class="card-text">Traditionally, regression models can be written in procedural or declarative. However, using OOP, developers can <strong>create scalable </strong>regression models! This means we can leverage powerful OOP features, including:</p>
+<ul>
+<li><strong>Scalability</strong> – Easily extend models with <strong>inheritance</strong>.</li>
+<li><strong>Modularity</strong> – Keep data and logic together with <strong>encapsulation</strong>.</li>
+<li><strong>Maintainability</strong> – Enforce structured models with <strong>abstraction</strong>.</li>
+<li><strong>Flexibility</strong> – Swap different regression models dynamically using <strong>polymorphism</strong>.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Linear Regression</h3>
+<div class="dp-panel-content ">
+<p>Linear regression is a supervised learning algorithm that models the relationship between a dependent variable (target) and one or more independent variables (features) by fitting a linear equation to observed data.</p>
+<p><strong>Key Equation:</strong></p>
+<p><strong><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>y</mi><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>β</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><mo>⋯</mo><mo>+</mo><msub><mi>β</mi><mi>n</mi></msub><msub><mi>x</mi><mi>n</mi></msub><mo>+</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_n x_n + \epsilon</annotation></semantics></math></span></span></span></strong></p>
+<p>Where:</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span></span> is the predicted output (dependent variable).</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">x_1, x_2, \dots, x_n</annotation></semantics></math></span></span> are the input features (independent variables).</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\beta_0</annotation></semantics></math></span> </span>is the intercept, and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>β</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">\beta_1, \dots, \beta_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span> are the coefficients (slopes) of the model.</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span> </span>represents the error term (residuals).</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Basic</strong> <strong>Structure for Defining a </strong><code>LinearRegression</code><strong> Class:<br></strong></p>
+<ul>
+<li><strong>Attributes</strong>: Coefficients, intercept, learning rate, number of iterations.</li>
+<li><strong>Methods</strong>:
+<ul>
+<li><code>fit()</code>: Trains the model by calculating optimal coefficients using gradient descent.</li>
+<li><code>predict()</code>: Uses the fitted model to predict values for new data.</li>
+<li><code>evaluate()</code>: Calculates performance metrics such as Mean Squared Error (MSE).</li>
+</ul>
+</li>
+</ul>
+<p style="text-align: left;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/babb8b464757e7fd.png" alt="image.png" width="579" height="477" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527579" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Predicting housing prices based on features like square footage, number of bedrooms, etc.</li>
+<li>Forecasting sales figures based on past data.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Polynomial Regression</h3>
+<div class="dp-panel-content ">
+<p>Polynomial regression is an extension of linear regression where the relationship between the input variables and output is modelled as an nth-degree polynomial.</p>
+<p><strong>Key Equation:</strong></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>y</mi><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><mi>x</mi><mo>+</mo><msub><mi>β</mi><mn>2</mn></msub><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mo>⋯</mo><mo>+</mo><msub><mi>β</mi><mi>n</mi></msub><msup><mi>x</mi><mi>n</mi></msup><mo>+</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">y = \beta_0 + \beta_1 x + \beta_2 x^2 + \dots + \beta_n x^n + \epsilon</annotation></semantics></math></span></span></span></p>
+<ul>
+<li>
+<p>The model is still linear in terms of the coefficients, but the features are transformed into polynomial terms.</p>
+</li>
+</ul>
+<p><strong>Basic Structure to Implement Polynomial Regression in OOP:</strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Inherit from <code>LinearRegression</code> to reuse logic for fitting and prediction.</li>
+<li><strong>Additional Attribute</strong>: Degree of the polynomial.</li>
+<li><strong>Method</strong>: <code>transform()</code> that converts input features into polynomial terms.</li>
+</ul>
+</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/b1ac68c82bf7bf6b.png" alt="image.png" width="566" height="381" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527299" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Modelling non-linear relationships, such as growth curves or natural phenomena like temperature variation.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Logistic Regression</h3>
+<div class="dp-panel-content">
+<p>Although its name includes "regression," logistic regression is used for binary classification tasks. It predicts the probability of a binary outcome (e.g., yes/no, 0/1).</p>
+<p><strong>Key Equation:</strong></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mo stretchy="false">(</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mo>⋯</mo><mo>+</mo><msub><mi>β</mi><mi>n</mi></msub><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">p(x) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \dots + \beta_n x_n)</annotation></semantics></math></span></span></span></p>
+<p>Where:</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p(x</annotation></semantics></math></span></span> is the predicted probability.</li>
+<li>The model uses the sigmoid function to map predictions to a range between 0 and 1.</li>
+</ul>
+<p><strong>Basic Structure to Implement Logistic Regression in OOP:</strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Inherit from <code>LinearRegression</code>.</li>
+<li><strong>Methods</strong>: Implement the sigmoid activation and adjust the gradient descent to minimise the cross-entropy loss instead of MSE.</li>
+</ul>
+</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/7f41a3aa8c564a2b.png" alt="image.png" width="584" height="377" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527580" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Applications:</strong></p>
+<ul>
+<li>Classifying whether a customer will purchase a product (yes/no).</li>
+<li>Predicting whether a patient has a disease (0/1).</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="relative overflow-hidden shadow-md rounded-lg" title="embedded content">
+<table class="table-auto w-full text-left" style="width: 100%; height: 299px;">
+<thead class="uppercase bg-[#c64224] text-[#ffffff]" style="background-color: #c64224; color: #ffffff;">
+<tr style="height: 33px;">
+<td class="py-1 border text-center font-bold p-4" style="width: 19.6561%; height: 10px;"><strong>MODEL TYPE</strong></td>
+<td class="py-1 border text-center font-bold p-4" style="width: 32.347%; height: 10px;"><strong>TASK TYPE<br></strong></td>
+<td class="py-1 border text-center font-bold p-4" style="width: 19.6652%; height: 10px;"><strong>EQUATION TYPE</strong></td>
+<td class="py-1 border text-center font-bold p-4" style="width: 28.2409%; height: 10px;"><strong>USE CASES</strong></td>
+</tr>
+</thead>
+<tbody class="bg-white text-gray-500 bg-[#FFFFFF] text-[#000000]" style="background-color: #ffffff; color: #000000;">
+<tr class="py-7" style="height: 97px;">
+<td class="py-7 border text-center  p-4" style="width: 19.6561%; height: 97px;"><strong>Linear Regression</strong></td>
+<td class="py-7 border text-center  p-4" style="width: 32.347%; height: 97px;">Predicting continuous values</td>
+<td class="py-7 border text-center  p-4" style="width: 19.6652%; height: 97px;">Linear equation</td>
+<td class="py-7 border text-center  p-4" style="width: 28.2409%; height: 97px;">Housing prices, stock predictions</td>
+</tr>
+<tr class="py-7" style="height: 97px;">
+<td class="py-7 border text-center  p-4" style="width: 19.6561%; height: 97px;"><strong>Polynomial Regression<br></strong></td>
+<td class="py-7 border text-center  p-4" style="width: 32.347%; height: 97px;">Predicting continuous values</td>
+<td class="py-7 border text-center  p-4" style="width: 19.6652%; height: 97px;">Polynomial equation</td>
+<td class="py-7 border text-center  p-4" style="width: 28.2409%; height: 97px;">Growth modelling, complex non-linear phenomena</td>
+</tr>
+<tr class="py-7" style="height: 97px;">
+<td class="py-7 border text-center  p-4" style="width: 19.6561%; height: 95px;"><strong>Logistic Regression<br></strong></td>
+<td class="py-7 border text-center  p-4" style="width: 32.347%; height: 95px;">Binary classification</td>
+<td class="py-7 border text-center  p-4" style="width: 19.6652%; height: 95px;">Sigmoid</td>
+<td class="py-7 border text-center  p-4" style="width: 28.2409%; height: 95px;">Binary outcomes like spam detection, diagnosis</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.7 Regression Models" href="https://canvas.kings.edu.au/courses/12951/assignments/204845" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204845" data-api-returntype="Assignment">3.7 Regression Models</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://medium.com/@hardik.prabhu/object-oriented-programming-and-ml-model-development-in-python-ada4bf76529b" target="_blank">Object Oriented Programming and ML Model development in Python</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p>Insert PPT</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">3.8 Predictions with Neural Network Models</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Apply neural network models using an OOP to make predictions</p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Apply neural network models using an object-oriented programming (OOP) approach to make predictions by building and training simple feedforward neural networks.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explain the structure and functioning of a neural network.</span></li>
+<li><span style="font-size: 10pt;">Design a neural network model class using OOP principles.</span></li>
+<li><span style="font-size: 10pt;">Implement a basic neural network to perform prediction tasks and assess its performance.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Neural networks are powerful machine learning algorithms inspired by the structure of the human brain, designed to recognise complex patterns in data. By using an <strong>object-oriented programming (OOP)</strong> approach, we can create flexible and reusable neural network models to solve prediction tasks effectively.</p>
+<p>Neural networks, particularly <strong>feedforward neural networks</strong>, consist of layers of interconnected nodes (neurons). These models are especially useful when dealing with large datasets with complex relationships that traditional regression models might struggle to capture.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<h3 class="card-title">Recall: Key Concepts of Neural Networks</h3>
+<ul>
+<li>
+<p><strong>Neurons and Layers</strong>:</p>
+<ul>
+<li>A neural network consists of an input layer, one or more hidden layers, and an output layer. Each neuron in a layer receives inputs, applies weights and biases, and passes the result through an activation function to produce an output.</li>
+</ul>
+</li>
+<li>
+<p><strong>Feedforward Process</strong>:</p>
+<ul>
+<li>In a <strong>feedforward neural network</strong>, data flows in one direction—from the input layer, through hidden layers, and to the output layer—without loops or cycles.</li>
+</ul>
+</li>
+<li>
+<p><strong>Activation Function</strong>:</p>
+<ul>
+<li>The activation function introduces non-linearity to the model, enabling the network to learn and model complex relationships. Common activation functions include <strong>ReLU</strong> (Rectified Linear Unit) and <strong>sigmoid</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Backpropagation and Gradient Descent</strong>:</p>
+<ul>
+<li>Neural networks are trained using <strong>backpropagation</strong>, a method that calculates the gradient of the loss function with respect to each weight in the network. This information is used to update the weights through <strong>gradient descent</strong>.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Implementing a Neural Network Using OOP</strong></h4>
+<p>To build a neural network, we'll use OOP principles, creating a class-based design that encapsulates the functionality of a neural network and its training process. The structure of the class will allow for flexibility in modifying the network's architecture and training process.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Class Structure</h3>
+<div class="dp-panel-content ">
+<p>A key benefit of OOP is the ability to encapsulate the functionality of the neural network into a single class. This class can manage the network's architecture (layers, neurons, weights, and biases), the forward and backward passes, and the training loop. Think of the class as the "blueprint" for how the neural network behaves.</p>
+<p><strong>Attributes</strong>:</p>
+<p>In the neural network class, the attributes will store the essential information about the network:</p>
+<ul>
+<li><strong>Layers</strong>: Define the architecture of the neural network (e.g., input layer, hidden layers, output layer).</li>
+<li><strong>Weights and Biases</strong>: Initialise random weights and biases for the connections between neurons in different layers.</li>
+<li><strong>Learning Rate</strong>: Controls how much the model's weights are updated with respect to the error gradient during training.</li>
+</ul>
+<p>Example class initialisation:</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/c7569bb8b815ca90.png" alt="image.png" width="870" height="341" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527300" data-api-returntype="File" loading="lazy"><strong></strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Weight Initialisation</strong>:</p>
+<p>Neural networks rely on weights and biases to adjust their predictions during training. These are initialised randomly at first.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/2c11a04b87933c07.png" alt="image.png" width="682" height="360" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527302" data-api-returntype="File" loading="lazy"></p>
+<p>Each connection between neurons in different layers gets a corresponding weight and bias.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Feedforward Process</h3>
+<div class="dp-panel-content ">
+<p>The feedforward process computes the output of the neural network by passing the input data through each layer, applying weights, biases, and an <strong>activation function</strong>. This process is central to how neural networks make predictions.</p>
+<p>How it Works:</p>
+<ul>
+<li>Multiply the input by the weights, add the bias, and apply an activation function to introduce non-linearity. Popular activation functions include <strong>ReLU (Rectified Linear Unit)</strong> and <strong>sigmoid</strong>.</li>
+</ul>
+<p>In code, the forward pass might look like this:</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/a95a9588e384be55.png" alt="image.png" width="614" height="486" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527582" data-api-returntype="File" loading="lazy"></p>
+<p>The <code>a_values</code> variable stores the activations at each layer, which are passed through the network.</p>
+<p>&nbsp;</p>
+<p>As neural networks involve multiple layers and complex transformations, the forward pass can be thought of like a journey: the input data gets progressively transformed through each layer until it reaches the output.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Activation Function</h3>
+<div class="dp-panel-content">
+<p>An <strong>activation function</strong> is essential in neural networks to introduce non-linearity, allowing the network to learn complex patterns. Without it, the model would simply perform linear transformations and wouldn't be able to solve complex tasks.</p>
+<p>Popular choices:</p>
+<ul>
+<li><strong>ReLU</strong>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>=</mo><mi>max</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(z) = \max(0, z)</annotation></semantics></math></span></span></li>
+<li><strong>Sigmoid</strong>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>z</mi></mrow></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">f(z) = \frac{1}{1 + e^{-z}}</annotation></semantics></math></span></span></li>
+</ul>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/05e95a6783ca9901.png" alt="image.png" width="660" height="257" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527301" data-api-returntype="File" loading="lazy"></span></span></span></span></span></span></span></span></p>
+<p>Think of the activation function like a "filter" that lets the network make more nuanced decisions, much like how our brain processes subtle details. The activation function, by allowing non-linearity, gives the machine a form of intelligence to handle complex problems.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Backpropagation</h3>
+<div class="dp-panel-content">
+<p>Backpropagation is the heart of neural network training. It calculates the gradient of the loss function with respect to each weight using the <strong>chain rule</strong> of calculus, allowing the network to update its weights to <strong>minimise</strong> the prediction error.</p>
+<p><strong>How it Works:</strong></p>
+<ul>
+<li>During backpropagation, the network compares its output to the actual target (label) and computes the error (using a loss function like <strong>mean squared error</strong> for regression or <strong>cross-entropy</strong> for classification).</li>
+<li>The network then "propagates" this error backward through the layers, calculating how much each weight contributed to the error.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/ca041f1a6f62cfbe.png" alt="image.png" width="692" height="587" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527583" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>The <code>backward()</code> method adjusts the weights and biases according to the gradients to minimise the error. Just as in life, where we <em>learn from our mistakes</em>, the network adjusts its internal parameters based on the errors it encounters.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Training</h3>
+<div class="dp-panel-content">
+<p>The <code>train()</code> method loops through the data, performs forward and backward passes, and updates the weights. This is where the network actually learns.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/69d6d5bbaf13e1d2.png" alt="image.png" width="625" height="428" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527584" data-api-returntype="File" loading="lazy"></p>
+<p>Training involves multiple iterations (epochs) over the dataset. With each iteration, the model’s predictions improve as the weights are refined.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Complete Network</h3>
+<div class="dp-panel-content">
+<p>Here is the completed code for the network, it includes some other helper functions that where skipped in the previous steps for brevity (i.e. <code>softmax()</code>).</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/dacc1e67b76adad4.png" alt="image.png" width="873" height="2552" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527585" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-text"><i class="dp-icon fas fa-download " aria-hidden="true"> </i>&nbsp;Model Download: <a class="instructure_file_link instructure_scribd_file inline_disabled" title="Model.py" href="../../assets/c97c26b4294f4142.py" target="_blank" data-canvas-previewable="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527586" data-api-returntype="File" download="Model.py">Model.py</a> <span class="tag">saved offline · 6 KB</span></p>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.8 Predictions with Neural Network Models" href="https://canvas.kings.edu.au/courses/12951/assignments/204846" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204846" data-api-returntype="Assignment">3.8 Predictions with Neural Network Models</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+</div><h3 class="sub">Significance and impact of ML and AI</h3>
+<h3 class="readles">3.9 Impact of Automation</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Assess the impact of automation on the individual, society and the environment, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>safety of workers</li>
+<li>people with disability</li>
+<li>the nature and skills required for employment</li>
+<li>production efficiency, waste and the environment</li>
+<li>the economy and distribution of wealth</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Assess the impact of automation on individuals, society, and the environment, particularly in terms of worker safety, inclusivity for people with disabilities, employment skills, production efficiency, and economic disparities.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explain how automation affects worker safety and people with disabilities.</span></li>
+<li><span style="font-size: 10pt;">Evaluate how automation changes the nature of work and the skills required for employment.</span></li>
+<li><span style="font-size: 10pt;">Assess the effects of automation on production efficiency, waste, and environmental sustainability.</span></li>
+<li><span style="font-size: 10pt;">Analyse the impact of automation on the economy and the distribution of wealth.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Automation has revolutionised industries worldwide, driving significant changes in how we live and work. It involves the use of machines, robots, and artificial intelligence (AI) to perform tasks traditionally carried out by humans. This technological advancement has led to increased efficiency and productivity across sectors, but it has also raised concerns about its broader impacts on individuals, society, and the environment. Understanding these effects is crucial to navigate the benefits and challenges posed by automation.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Safety of Workers</h3>
+<div class="dp-panel-content ">
+<p>Automation has transformed industries where hazardous conditions are a daily concern. By replacing humans in dangerous tasks, automation significantly reduces the risk of injury or fatality. <strong>Robotics and AI-driven systems</strong> are used in industries such as mining, manufacturing, and construction, where high risks were once unavoidable.</p>
+<ul>
+<li>
+<p><strong>Case Study: Mining Industry</strong><br>In the mining sector, companies like <strong>Rio Tinto</strong> have integrated autonomous haulage systems (AHS) in Australian mines. These driverless trucks reduce the risks miners face from equipment accidents, toxic environments, and cave-ins. Workers are removed from the hazardous environment and instead operate the trucks remotely. This has led to a <strong>50% reduction in safety incidents</strong> at some sites. However, it requires workers to have new skills in technology and system management.</p>
+</li>
+<li>
+<p><strong>Risks of Automation</strong>: While automation improves safety, it introduces new risks related to <strong>technical malfunctions</strong>. For example, in industries using robotic arms or automated machinery, a system failure could lead to accidents if proper safety protocols aren’t in place. Furthermore, automation’s increasing complexity requires skilled human oversight to maintain and operate these systems safely.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-text">Read about the Rio Tinto Autonomous Train Collision Incident <a class="inline_disabled" href="https://meu.org.au/catastrophic-failure-of-safety-systems/" target="_blank">here</a></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/a1c28df2131ca21a.png" alt="image.png" width="551" height="310" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527576" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">People with Disability</h3>
+<div class="dp-panel-content ">
+<p>Automation offers significant opportunities to improve the lives and employment prospects of people with disabilities through <strong>assistive technologies</strong>. These systems range from robotic prosthetics to AI-powered software that assists with communication, mobility, and task performance.</p>
+<ul>
+<li>
+<p><strong>Case Study: Assistive Robotics</strong><br><strong>Ekso Bionics</strong>, a company that develops robotic exoskeletons, enables people with mobility impairments to walk again. This innovation allows individuals who previously would have been excluded from physically demanding jobs to participate in the workforce. <strong>Voice-activated systems</strong> like Amazon's Alexa or Apple's Siri allow people with disabilities to control workspaces with minimal physical interaction, boosting independence and productivity in office settings.</p>
+</li>
+<li>
+<p><strong>Challenges</strong>: Despite these benefits, the rise of automation also risks excluding people with disabilities in jobs heavily reliant on routine tasks. For instance, <strong>call centres</strong> or <strong>manufacturing</strong> roles, which often employ individuals with cognitive disabilities, are increasingly automated. This raises the concern that these workers could be displaced unless retraining initiatives are prioritised to help them transition to new roles.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/834cfcfe88adb9fc.png" alt="image.png" width="446" height="334" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527577" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Skills Required for Development</h3>
+<div class="dp-panel-content">
+<p>Automation is reshaping the job market by displacing roles that involve repetitive or predictable tasks, while creating demand for workers skilled in new technologies such as AI, data science, and robotics. As traditional jobs disappear, workers must adapt to new roles that emphasise <strong>creative problem-solving</strong>, <strong>collaboration with machines</strong>, and <strong>technical expertise</strong>.</p>
+<ul>
+<li>
+<p><strong>Case Study: Manufacturing Industry</strong><br><strong>Foxconn</strong>, a leading electronics manufacturer for companies like Apple, replaced <strong>over 60,000 workers with robots</strong> at one of its plants in China in 2016. The robots performed repetitive tasks more efficiently than humans, reducing labour costs and increasing production speed. However, the company also announced that workers would be retrained for more technical jobs, such as maintaining and overseeing the robots.</p>
+</li>
+<li>
+<p><strong>New Skill Demands</strong>: In Australia, the agriculture industry is experiencing a similar shift. Automated harvesting machines, such as <strong>robotic fruit pickers</strong>, are being introduced to address labour shortages and improve efficiency. Farmers now need to understand how to program, operate, and repair these machines, moving away from traditional manual labour to roles requiring technical and IT skills.</p>
+</li>
+<li>
+<p><strong>Lifelong Learning</strong>: The shift towards automation emphasises the need for continuous <strong>reskilling and upskilling</strong>. Workers must frequently update their skill sets to stay competitive in an automated job market. This has led to an increase in training programs focused on digital literacy, robotics, and data analytics, often supported by governments or private industries.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Efficiency, Waste and Environment</h3>
+<div class="dp-panel-content">
+<p>Automation has brought dramatic improvements to production efficiency, leading to cost savings and higher output while reducing waste. However, it also raises environmental concerns, particularly around energy use and the ecological impact of producing automated technologies.</p>
+<ul>
+<li>
+<p><strong>Case Study: Tesla Gigafactory</strong><br><strong>Tesla’s Gigafactory</strong> is an excellent example of how automation can optimise production while striving for sustainability. The factory uses a combination of robotics, AI, and renewable energy to produce electric vehicle batteries at an unprecedented scale. By integrating automated systems, Tesla has drastically reduced production time and costs. The factory also aims to be powered entirely by renewable energy, minimising its environmental impact. Additionally, automation in the factory has led to significant reductions in waste, as precision manufacturing ensures minimal material loss.</p>
+</li>
+<li>
+<p><strong>Environmental Concerns</strong>: Despite these advances, automation can contribute to increased energy consumption, particularly when automated systems are reliant on non-renewable energy. For example, the widespread use of <strong>data centres</strong> to support automation and AI processes leads to significant energy demands. According to the <strong>International Energy Agency (IEA)</strong>, data centres consumed about 1% of the world’s electricity in 2021. Companies must invest in green technologies to ensure automation is environmentally sustainable.</p>
+</li>
+<li>
+<p><strong>Waste Reduction</strong>: Automation also reduces waste through <strong>precision agriculture</strong>. In Australian agriculture, <strong>automated irrigation systems</strong> and drones equipped with AI can monitor crop health and deliver water or pesticides precisely where needed, reducing water waste and the overuse of chemicals. This technology enhances both productivity and environmental sustainability.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Economy and Wealth</h3>
+<div class="dp-panel-content">
+<p>The economic impact of automation is profound, with both positive and negative consequences. While it drives <strong>economic growth</strong> and <strong>increases productivity</strong>, it also poses significant challenges to the fair distribution of wealth. Automation tends to disproportionately benefit capital owners and highly skilled workers, potentially widening the gap between the rich and poor.</p>
+<ul>
+<li>
+<p><strong>Case Study: Amazon's Automated Warehouses</strong><br><strong>Amazon</strong> uses automated systems in its warehouses to sort and ship products efficiently. Robots, such as <strong>Kiva Systems</strong>, transport goods within warehouses, reducing reliance on human labour. While this has allowed Amazon to scale rapidly, it has led to concerns over job losses and poor working conditions for the remaining human workers. <strong>Low-skilled workers</strong> are often at risk of displacement, while the wealth generated by these automated systems primarily benefits Amazon's shareholders and executives.</p>
+</li>
+<li>
+<p><strong>Wealth Inequality</strong>: Automation has a tendency to concentrate wealth in the hands of those who own the technology. <strong>AI and robotics companies</strong>, for example, see increased profits while workers, particularly in low-skilled jobs, are often displaced without a clear path to new employment. A <strong>2020 study by MIT</strong> found that automation in the U.S. has contributed to wage stagnation for middle-class workers, while increasing profits for firms that deploy these technologies.</p>
+</li>
+<li>
+<p><strong>Policy Responses</strong>: In response, some governments are exploring policies like <strong>universal basic income (UBI)</strong> to mitigate the economic displacement caused by automation. This policy is being trialled in several countries, including Finland and Spain, as a means of providing financial security to those affected by job losses due to automation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.9 Impact of Automation" href="https://canvas.kings.edu.au/courses/12951/assignments/204847" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204847" data-api-returntype="Assignment">3.9 Impact of Automation</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%203.%20Software%20Automation/PPTs/3.9%20Impact%20of%20Automation.pptx.pptx?d=w9a1b055a75194c9584209bd40e991745&amp;csf=1&amp;web=1&amp;e=OgXqFA">3.9 Impact of Automation.pptx.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-9-impact-of-automation" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={9a1b055a-7519-4c95-8420-9bd40e991745}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">3.10 Human Behaviour Influences</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Explore by implementation how patterns in human behaviour influence ML and AI software development, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>psychological responses</li>
+<li>patterns related to acute stress response</li>
+<li>cultural protocols</li>
+<li>belief systems</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explore how patterns in human behaviour, including psychological responses, acute stress reactions, cultural protocols, and belief systems, influence the development of machine learning (ML) and artificial intelligence (AI) software.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Understand how psychological responses and stress-related patterns shape ML and AI system design.</span></li>
+<li><span style="font-size: 10pt;">Analyse how cultural and belief systems impact AI development.</span></li>
+<li><span style="font-size: 10pt;">Explore how these behavioural factors are incorporated into AI algorithms and systems through case studies and practical examples.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Human behaviour plays a significant role in shaping the development of machine learning (ML) and artificial intelligence (AI) systems. AI developers and researchers aim to create algorithms that not only analyse data but also interact effectively with users and reflect human behavioural patterns. Understanding how people respond psychologically, how stress affects decision-making, and how culture and belief systems influence behaviour is critical in designing AI systems that are ethical, user-friendly, and contextually appropriate.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Psychological Responses</h3>
+<div class="dp-panel-content ">
+<p>Humans react emotionally and psychologically to technology, and these responses shape how AI systems are designed to interact with users. Factors like <strong>trust</strong>, <strong>fear</strong>, and <strong>cognitive biases</strong> are crucial considerations when building AI systems that users rely on.</p>
+<p><strong>Key Concepts:</strong></p>
+<ul>
+<li>
+<p><strong>Trust and User Adoption</strong>:</p>
+<ul>
+<li>Users are more likely to adopt AI systems if they trust the recommendations or decisions made by the system. Trust is built through transparency (e.g., explainable AI) and reliability.</li>
+</ul>
+</li>
+<li>
+<p><strong>Fear and Resistance</strong>:</p>
+<ul>
+<li>Psychological fear of AI, often referred to as <strong>"automation anxiety"</strong>, can affect how users interact with AI systems. Developers need to create systems that feel intuitive and friendly to reduce resistance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cognitive Bias</strong>:</p>
+<ul>
+<li>AI systems must be designed to account for human cognitive biases. For example, users may experience <strong>confirmation bias</strong>, where they favor AI outputs that confirm their pre-existing beliefs.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example in Implementation:</strong></p>
+<p>In healthcare AI, systems are designed to provide transparency in their decision-making processes to build <strong>trust</strong> with medical professionals. When suggesting a diagnosis, AI systems often provide explanations for their recommendations, easing concerns that doctors may have about handing over too much control to a machine.</p>
+<p>&nbsp;</p>
+<div class="post-feature-image">
+<p><img class="img-fluid img-thumbnail wp-post-image" style="display: block; margin-left: auto; margin-right: auto;" src="https://www.healthcareitleaders.com/uploads/2023/09/AI-Jobs-in-Healthcare.jpg" alt="AI Jobs in Healthcare [online-only image]" width="768" height="388" loading="lazy"></p>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Acute Stress Response</h3>
+<div class="dp-panel-content ">
+<p><strong>Acute stress</strong> can significantly influence how humans interact with AI systems, especially in high-pressure environments such as emergency services or military operations. People under stress may have impaired decision-making abilities, rely more on heuristics, and exhibit <strong>fight-or-flight</strong> responses, which must be considered when designing AI that operates in these contexts.</p>
+<p><strong>Key Concepts:</strong></p>
+<ul>
+<li><strong>Fight-or-Flight Response</strong>:
+<ul>
+<li>In stressful situations, users may need quick, simple solutions rather than complex, data-heavy recommendations. AI systems should be designed to offer straightforward, easily digestible information during critical moments.</li>
+</ul>
+</li>
+<li><strong>Cognitive Load</strong>:
+<ul>
+<li>High-stress environments increase <strong>cognitive load</strong>—the amount of mental effort required to process information. AI systems must minimize the cognitive load on users by providing clear and concise outputs, avoiding overwhelming amounts of data.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example in Implementation:</strong></p>
+<p>In AI-driven emergency response systems, like those used in disaster management, stress patterns are considered by presenting critical information in a simplified format. Visual alerts, concise instructions, and real-time updates are prioritised to help first responders make quick, informed decisions under pressure.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Cultural Protocols</h3>
+<div class="dp-panel-content">
+<p>Cultural diversity influences how people perceive and interact with AI systems. Developers need to consider <strong>cultural norms</strong> and practices when designing AI systems for different regions or communities to ensure the technology is respectful, acceptable, and useful across various cultural contexts.</p>
+<p><strong>Key Concepts:</strong></p>
+<ul>
+<li>
+<p><strong>Cultural Sensitivity</strong>:</p>
+<ul>
+<li>AI systems should be tailored to align with the cultural practices and expectations of the target users. This can include language preferences, gender roles, or traditional values that differ across cultures.</li>
+</ul>
+</li>
+<li>
+<p><strong>Localisation</strong>:</p>
+<ul>
+<li><strong>Localisation</strong> of AI refers to adapting the system to meet the specific cultural, linguistic, and social needs of different populations. This includes language translation, cultural references, and contextually appropriate interactions.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example in Implementation:</strong></p>
+<p>Voice assistants like Amazon Alexa or Google Assistant often undergo significant cultural adaptation when being deployed in different countries. For instance, these systems are programmed to recognise local dialects, respect local customs (e.g., addressing people more formally in certain cultures), and follow region-specific social norms.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/dafb9563227e3473.png" alt="image.png" width="567" height="436" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527587" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Belief Systems</h3>
+<div class="dp-panel-content">
+<p>Belief systems, including religion, moral philosophies, and ethical frameworks, shape how AI systems are perceived and accepted in various societies. Developers must account for these belief systems to avoid ethical conflicts and ensure that AI systems operate within acceptable moral boundaries.</p>
+<p><strong>Key Concepts:</strong></p>
+<ul>
+<li>
+<p><strong>Ethical AI</strong>:</p>
+<ul>
+<li>Developers must ensure that AI systems do not conflict with the ethical and moral standards of their users. For instance, certain communities may oppose AI in areas like surveillance or genetic modification based on religious beliefs.</li>
+</ul>
+</li>
+<li>
+<p><strong>Bias and Fairness</strong>:</p>
+<ul>
+<li>AI systems must be designed to avoid bias, especially in culturally diverse societies. Developers should incorporate fairness and inclusivity into AI algorithms, ensuring that systems do not discriminate based on gender, race, religion, or other belief systems.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example in Implementation:</strong></p>
+<p>In facial recognition technology, ethical AI development considers potential biases against specific racial or ethnic groups. Developers implement fairness techniques to ensure that the system works equally well across different demographics, reducing the risk of unfair treatment.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.10 Human Behaviour Influences" href="https://canvas.kings.edu.au/courses/12951/assignments/204838" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204838" data-api-returntype="Assignment">3.10 Human Behaviour Influences</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%203.%20Software%20Automation/PPTs/3.10%20Human%20Behaviour%20Influences.pptx.pptx?d=w13c6000820ed408f973ea3ce485a5c08&amp;csf=1&amp;web=1&amp;e=pSKQsW">3.10 Human Behaviour Influences.pptx</a></p>
+<div class="dp-embed-wrapper" data-ratio-w="32.88" data-ratio-h="0.03"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-10-human-behaviour-influences" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={13c60008-20ed-408f-973e-a3ce485a5c08}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">3.11 Investigating Bias</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate the effect of human and dataset source bias in the development of ML and AI solutions</p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand how human and dataset biases can impact the development and outcomes of machine learning (ML) and artificial intelligence (AI) models.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explain the role of human bias in AI development.</span></li>
+<li><span style="font-size: 10pt;">Describe how biases in datasets are introduced and propagated in ML models.</span></li>
+<li><span style="font-size: 10pt;">Evaluate the potential consequences of biases on AI decision-making.</span></li>
+<li><span style="font-size: 10pt;">Suggest methods to mitigate bias in AI systems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Bias in machine learning and artificial intelligence arises when the models, data, or decisions made by developers unintentionally favour certain outcomes, groups, or perspectives over others. This can occur due to two primary factors:</p>
+<ol>
+<li><strong>Human Bias</strong> – The biases held by the developers, data scientists, or organisations.</li>
+<li><strong>Dataset Source Bias</strong> – The biases present within the data that is used to train AI models.</li>
+</ol>
+<p>These biases can have profound effects on the fairness, accuracy, and inclusivity of AI systems, leading to ethical concerns and practical challenges in real-world applications.</p>
+<p>&nbsp;</p>
+<h4><strong>Human Bias</strong></h4>
+<p>Human bias refers to the implicit and explicit preferences, beliefs, or assumptions that developers may hold, which can influence the design and decision-making processes involved in creating AI systems. Examples include:</p>
+<ul>
+<li><strong>Feature Selection</strong>: The choice of variables or features for a model can reflect the developer's priorities or preconceived notions about what is important. For instance, if socio-economic status is <strong>prioritised</strong> as a feature in predictive models for employment, the model may perpetuate existing inequalities.</li>
+<li><strong>Algorithm Design</strong>: Developers might unintentionally favour certain algorithmic structures or processes that reflect their own experiences or goals, even if those structures introduce bias.</li>
+<li><strong>Labelling Bias</strong>: During the creation of datasets, humans often label data (e.g., tagging images or categorising information). Their labels may reflect personal biases, reinforcing stereotypes or errors.</li>
+</ul>
+<p>&nbsp;</p>
+<h4><strong>Dataset Source Bias</strong></h4>
+<p>&nbsp;Dataset bias occurs when the data used to train machine learning models is not representative of the broader population or task. There are several ways dataset bias can be introduced:</p>
+<ul>
+<li><strong>Historical Bias</strong>: This occurs when the dataset reflects past inequalities or discriminations. For instance, if a hiring algorithm is trained on historical data from an industry with low gender diversity, it may learn to favour male candidates over female candidates.</li>
+<li><strong>Sampling Bias</strong>: If certain groups are overrepresented or under-represented in the dataset, the model will generalise poorly to the under-represented groups. For example, medical AI systems trained on data from one demographic may fail to accurately diagnose or recommend treatments for another.</li>
+<li><strong>Label Bias</strong>: The way data is classified or labelled can introduce biases, particularly in cases where human judgement is required, such as labelling hate speech or offensive content in social media posts. Label bias can reflect cultural or individual bias, making certain words or behaviours disproportionately flagged as problematic.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/98c1b7dfc060ffb9.png" alt="image.png" width="715" height="362" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527578" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Consequences of Bias in AI Systems</h3>
+<div class="dp-panel-content ">
+<p>The effects of human and dataset bias in AI systems can be significant, leading to:</p>
+<ul>
+<li><strong>Discrimination</strong>: Biased AI systems may discriminate against certain groups based on race, gender, or socio-economic status. For example, biased recruitment algorithms can perpetuate gender inequality in hiring.</li>
+<li><strong>Reduced Trust</strong>: Users and society may lose trust in AI systems if they consistently produce unfair or biased outcomes.</li>
+<li><strong>Poor Decision-Making</strong>: Bias in models can lead to inaccurate or inappropriate decisions. For example, a biased healthcare algorithm could result in misdiagnoses for under-represented populations.</li>
+<li><strong>Legal and Ethical Implications</strong>: Many countries have anti-discrimination laws, and biased AI systems could lead to legal challenges. Furthermore, there are growing concerns about the ethical responsibility of organisations deploying AI systems.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Mitigating Bias in AI Development</h3>
+<div class="dp-panel-content ">
+<p>Several strategies can be employed to reduce bias in AI models:</p>
+<ol>
+<li><strong>Diverse Teams</strong>: Building teams with diverse perspectives can help mitigate bias by ensuring that different viewpoints are considered during AI development.</li>
+<li><strong>Bias Audits and Testing</strong>: Conducting audits and testing models for bias across different demographic groups can help identify and correct biased behaviour.</li>
+<li><strong>Inclusive Datasets</strong>: Curating and using datasets that are representative of the entire population can help prevent dataset bias. This might include collecting additional data for under-represented groups.</li>
+<li><strong>Algorithmic Fairness</strong>: Using fairness-aware algorithms that aim to equalise outcomes for different groups can be an effective mitigation strategy.</li>
+<li><strong>Transparency and Accountability</strong>: Making AI models and decisions more transparent, and holding developers accountable for biased outcomes, is essential for ensuring fair AI development.</li>
+</ol>
+<p><strong>Example: Mitigating Bias in Hiring Algorithms</strong></p>
+<p>To reduce gender bias in hiring algorithms, companies have implemented strategies like anonymising candidate resumes (removing names and genders) and training models on more inclusive datasets that do not reflect historical gender biases.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li><a title="3.11 Investigating Bias" href="https://canvas.kings.edu.au/courses/12951/assignments/204839" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204839" data-api-returntype="Assignment">3.11 Investigating Bias</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%203.%20Software%20Automation/PPTs/3.11%20Investigating%20Bias.pptx.pptx?d=w5673147f109d401c86734c8a40845534&amp;csf=1&amp;web=1&amp;e=iotfuB">3.11 Investigating Bias.pptx.pptx</a></p>
+<div class="dp-embed-wrapper" data-ratio-w="32.88" data-ratio-h="0.03"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/3-dot-11-investigating-bias" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={5673147f-109d-401c-8673-4c8a40845534}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">After</h3>
+<div class="readnav"><a href="12951-m12.html">← previous module</a><a href="../course-12951.html">all modules</a><a href="12951-m14.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

@@ -1,0 +1,269 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.5 Security Features — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 1 (Term 4: Weeks 1-2) Secure Software Architecture</div>
+<h1 style="margin-top:.2rem">1.5 Security Features</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-5-security-features" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Apply security features incorporated into software, including data protection, security, privacy and regulatory compliance.<br></span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand how to apply security features in software to ensure data protection, privacy, and regulatory compliance.</li>
+<li>Learn to implement security features in software applications using best practices.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to explain the importance of data protection, security, privacy, and regulatory compliance in software development.</li>
+<li>Students will be able to implement these security features in a software application.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Incorporating security features into software development is essential for safeguarding data, ensuring privacy, and adhering to regulatory requirements. These features are critical for preventing vulnerabilities, defending against attacks, and maintaining user trust. Below is an explanation of key aspects of data protection:</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Protection</h3>
+<div class="dp-panel-content ">
+<p><span style="font-family: PT Sans, Helvetica, Arial, sans-serif;"><span style="font-size: 18px;"><strong>Data Protection</strong></span></span></p>
+<p><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">Data protection is a comprehensive approach to safeguarding data from vulnerabilities and unauthorised access while ensuring its confidentiality, integrity, and availability. It involves implementing various security measures to protect data throughout its lifecycle, whether stored, processed, or transmitted.</span></p>
+<ul>
+<li>
+<p><strong>Encryption:</strong><br>Encrypt sensitive data at rest and in transit to prevent unauthorised access. Use strong encryption standards like AES (Advanced Encryption Standard) for stored data and TLS (Transport Layer Security) for data in transit.</p>
+</li>
+<li>
+<p><strong>Access Controls:</strong><br>Implement strict access controls to ensure only authorised users can access sensitive data. This may include role-based access control (RBAC), where users are granted access based on their organisational</p>
+</li>
+<li>
+<p><strong>Backups:</strong><br>Regularly back up data to secure locations to prevent data loss due to accidental deletion, corruption, or attacks like ransomware.</p>
+</li>
+</ul>
+<h4><strong>Example:</strong></h4>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/edb46f1bfe15c164.png" alt="image.png" width="640" height="535" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527426" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Explanation</strong></p>
+<ul class="card-text">
+<li style="list-style-type: none;">
+<ul>
+<li><strong>Encryption Process:</strong> The <code>Fernet</code> class from the <code>cryptography</code> Library is used to handle encryption and decryption. A key is generated when the application starts, which is then used to encrypt any data submitted to the <code>/store_data</code> endpoint.</li>
+<li><strong>Storing Data:</strong> When a user sends data to be stored, it is first encrypted using this key. This means that if someone were to gain unauthorised access to the stored data, it would appear as unreadable ciphertext.</li>
+<li><strong>Retrieving Data:</strong> The <code>/retrieve_data</code> endpoint allows you to decrypt the previously stored data. Only someone with access to the encryption key can decrypt the data, ensuring that sensitive information remains secure.</li>
+</ul>
+<p>This setup demonstrates how to protect data at rest by ensuring it is encrypted before being stored, thus preventing unauthorised.</p>
+</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Security</h3>
+<div class="dp-panel-content ">
+<p><span style="font-family: PT Sans, Helvetica, Arial, sans-serif;"><span style="font-size: 18px;"><strong>Security</strong></span></span></p>
+<p>Software security is designed to protect users from threats from unauthorised parties, ensuring their data and interactions with the software remain safe and secure. This involves implementing various security measures, such as authentication, encryption, access controls, and regular security assessments,<span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">&nbsp;to safeguard against potential threats.</span></p>
+<p><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;"><img style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;" src="../../assets/afb903ef250afa06.png" alt="image.png" width="576" height="324" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527305" data-api-returntype="File" loading="lazy"></span></p>
+<ul>
+<li><strong>Authentication and&nbsp;</strong><span style="margin: 0px; padding: 0px;"><strong>Authorisation</strong></span><strong>:</strong> Verifying the user's identity when attempting to access a system. Strong authentication includes:
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Multi-factor authentication (MFA) requires providing two or more verification factors (or tokens) to gain access to a resource.</li>
+<li>Strong Passwords - enforcing character restrictions or number requirements on passwords during registration.&nbsp;</li>
+<li><span>&nbsp;Authorisation or authorisation to access <em>specific&nbsp;</em>resources.&nbsp;</span></li>
+<li>Roles-Based (RBAC) - assigning permissions to users based on roles within an organisation as teacher and student)</li>
+<li>Access Control List - specifying which users or systems are granted permissions. For example, a file might have an ACL that specifies read, write, and execute permissions.&nbsp;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span><strong>Input Validation:&nbsp;</strong>Validating user-provided data is correct, safe and secure before processing, helping protect software from attacks (SQL injections, cross-site scripting and buffer overflows. To prevent this:</span>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Sanitisation input must be provided on both the client and server sides.</li>
+<li>Define acceptable input formats (allowing numbers only in a phone number field)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span><strong>Security Audits:&nbsp;</strong>Systematically review the software, its environment, and its processes to ensure compliance with security policies, identify potential vulnerabilities, and verify the effectiveness of security measures. Audits can be performed internally by an organisation or by third-party auditors.&nbsp;</span></li>
+</ul>
+<h4><strong>Example:</strong></h4>
+<p><strong><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/9512ffd74b402137.png" alt="image.png" width="640" height="598" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527434" data-api-returntype="File" loading="lazy"></strong></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Explanation:</strong></p>
+<ul>
+<li><strong>Password Hashing:</strong> When storing passwords, they are hashed using <code>generate_password_hash</code>, which ensures that even if someone gains access to the password database, they cannot retrieve the original passwords.</li>
+<li><strong>Authentication:</strong> When a user attempts to log in, the entered password is hashed and compared to the stored hash. If they match, the user is authenticated, and a session is created to maintain their login state.</li>
+<li><strong>Role-Based Access:</strong> The application checks the user's role status in the session to determine if they have permission to access certain resources. For example, only users with the "admin" role can"access" the <code>/admin_resource</code> endpoint.</li>
+</ul>
+<p>This setup ensures that only authorised users can access sensitive areas of the application, protecting against unauthorised users.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Privacy</h3>
+<div class="dp-panel-content">
+<p><span style="font-family: PT Sans, Helvetica, Arial, sans-serif;"><span style="font-size: 18px;"><strong>Privacy</strong></span></span></p>
+<p>Privacy in secure software protects an individual's personal data and information.&nbsp;</p>
+<ul>
+<li><strong>Data&nbsp;</strong><strong>minimisation</strong>&nbsp;is a concise database that stores only what is necessary to prevent privacy breaches.&nbsp;</li>
+<li><strong>User Consent</strong>: Obtaining a user from the user client of obtaining permissions before collecting or processing data. Creating UI that has buttons or checkboxes for a consent form.&nbsp;</li>
+<li><strong>Data Access Controls:</strong><span>&nbsp;</span>Ensure that only authorised personnel can access private information—authorisation only for specific roles will access private data using a roles-based authorisation system.&nbsp;&nbsp;</li>
+</ul>
+<h4>Example:</h4>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/8be00e3041908b9c.png" alt="image.png" width="609" height="640" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527313" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;</strong><strong>Explanation:</strong></p>
+<ul>
+<li><strong>Data Minimisation:</strong> The application only stores essential information, such as the user's email, to the user's risk of storing unnecessary personal data.</li>
+<li><strong>User Control:</strong> Users can delete their data from the system, allowing them to exercise control over their personal information, a core principle of privacy.</li>
+</ul>
+<p>This setup exemplifies respecting user privacy by minimising data stored and giving users the power to manage their information.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Regulatory Compliance</h3>
+<div class="dp-panel-content">
+<p><span style="font-family: PT Sans, Helvetica, Arial, sans-serif;"><span style="font-size: 18px;"><strong>Regulatory Compliance</strong></span></span></p>
+<p>Achieving regulatory compliance means aligning with legal and regulatory guidelines applicable to the region. Software developers must ensure that the software meets legal obligations and protects user data.&nbsp;</p>
+<ul>
+<li>
+<p><strong>Compliance Audits:</strong><br>Regularly conduct audits to ensure that the software complies with relevant regulations. This may include reviewing data handling practices, security measures, and user consent mechanisms.</p>
+</li>
+<li>
+<p><strong>Data Retention Policies:</strong><br>Implement data retention policies that comply with regulations, specifying how long data is stored and when it should be deleted.</p>
+</li>
+<li>
+<p><strong>User Consent:</strong><br>Ensure users consent before their data is collected, processed, or shared. This is especially important for sensitive personal data.</p>
+</li>
+</ul>
+<h4>Example:</h4>
+<p><img class="" style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/8be00e3041908b9c.png" alt="" width="609" height="640" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527314" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;</strong><strong>Explanation:</strong></p>
+<ul>
+<li><strong>User Consent:</strong> The application ensures that users have explicit consent before processing data. If a user does not consent, the action is denied.</li>
+<li><strong>Compliance Audits:</strong> The application includes a basic compliance audit that checks whether all users have provided the necessary consent. This is important for adhering to regulatory requirements such as GDPR, which mandates explicit user consent for data processing.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://edstem.org/au/courses/19403/lessons" target="_blank">Input Sanitisation and Validation</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity<br></strong></p>
+<ul class="card-text">
+<li><a title="1.5 Security Features" href="https://canvas.kings.edu.au/courses/12951/assignments/204811" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204811" data-api-returntype="Assignment">1.5 Security Features</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-5-security-features" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={38747af3-3bbe-48d3-8025-4dbfda85978d}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">After</h3></main>
+<div class="pnrow"><a class="pn" href="12951-009.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-011.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

@@ -1,0 +1,2032 @@
+{
+  "exam": "2026 Software Engineering AT2 Topic Test (Thursday May 7 Canberra)",
+  "syllabus": "Software Engineering",
+  "publisher": null,
+  "topics": [
+    "Secure Software Architecture",
+    "Programming for the Web",
+    "Software Engineering Project"
+  ],
+  "outcomes": [
+    "SE-12-01",
+    "SE-12-06",
+    "SE-12-07",
+    "SE-12-04",
+    "SE-12-05",
+    "SE-12-03",
+    "SE-12-09",
+    "SE-12-02",
+    "SE-12-08"
+  ],
+  "status": "COMPLETED",
+  "results_released": true,
+  "submitted": "2026-05-07T01:31:15.979Z",
+  "started": "2026-05-06T23:06:03.875Z",
+  "duration_minutes": 125,
+  "markers": [
+    "Jack Jurd",
+    "TKS CST"
+  ],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/f03141b2-2bab-4efb-a1de-679d689f11fd",
+  "marking_session_id": "f03141b2-2bab-4efb-a1de-679d689f11fd",
+  "exam_id": "be984d71-a96f-4c69-8f61-195fb375859f",
+  "session_id": "324b2fee-961f-4c00-a3d4-6546ed4ef664",
+  "total_mark": 39.5,
+  "parts_answered": 24,
+  "parts_marked": 24,
+  "parts_total": 24,
+  "total_available": 64,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "19d3bb04-65a8-48f9-a29b-d127d2433192",
+      "title": "Installation Method (Q1,MC,2026 Topic Test)",
+      "topic": "Installation Method",
+      "label": "Q1",
+      "kind": "MC",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": "![image](assets/3dce427c-b11c-4428-a220-1aad0a4ee4e8.png)",
+      "stimulus_images": [
+        "assets/3dce427c-b11c-4428-a220-1aad0a4ee4e8.png"
+      ],
+      "parts": [
+        {
+          "part_id": "019dd3b6-5397-74ec-9528-70217e74d0fa",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "What installation method is described in the image?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Direct",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Parallel",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Phased",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "Pilot",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": false
+          },
+          "result": {
+            "mark": 0,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "03b11f43-c0f6-43eb-8cc7-f26c1324a957",
+      "title": "Waterfall Approach (Q2,MC, 2026 Topic Test)",
+      "topic": "Waterfall Approach",
+      "label": "Q2",
+      "kind": "MC",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd3d2-ea5a-70bd-9cd0-56bccca3338d",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "What is the correct sequence of stages in the Waterfall model?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Specifications → Requirements → Design → Development → Integration → Testing → Installation → Maintenance",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Requirements → Specifications → Design → Development → Integration → Testing → Installation → Maintenance",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Requirements → Specifications → Design → Development → Testing → Integration → Installation → Maintenance",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "Requirements → Specifications → Development → Design → Integration → Testing → Maintenance → Installation",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": false
+          },
+          "result": {
+            "mark": 0,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "fd4e65e4-962f-4918-88c3-391191a11f14",
+      "title": "CSS (Q3, MC, 2026 Topic Test)",
+      "topic": "CSS",
+      "label": "Q3",
+      "kind": "MC",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd3d4-405a-749f-aa8c-f85f3d140208",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "What is one main benefit of using predesigned CSS classes in web development?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "They help keep designs consistent.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "They remove the need for custom styles.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "They let you write CSS inside HTML tags.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "They turn CSS into JavaScript automatically.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B"
+            ],
+            "correct": false
+          },
+          "result": {
+            "mark": 0,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question_id": "a73f0b4b-98e5-4f13-8d7a-d1f88142736a",
+      "title": "APIs (Q4, OR, 2026 Topic Test)",
+      "topic": "APIs",
+      "label": "Q4",
+      "kind": "OR",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd3d4-d5a7-7149-9671-f2adc097cfa9",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "For each situation below, select the most appropriate API security practice being used.  \nOnly one correct cell per row.",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "Authentication",
+              "Input Validation",
+              "Rate Limiting",
+              "Error Handling"
+            ],
+            "rows": [
+              {
+                "statement": "The API checks that a submitted value is an integer between 1 and 10",
+                "correct": [
+                  "Input Validation"
+                ],
+                "yours": [
+                  "Input Validation"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A user can only make 60 API calls per minute",
+                "correct": [
+                  "Rate Limiting"
+                ],
+                "yours": [
+                  "Rate Limiting"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A client sends a request with an API key to access user data",
+                "correct": [
+                  "Authentication"
+                ],
+                "yours": [
+                  "Authentication"
+                ],
+                "right": true
+              },
+              {
+                "statement": "The API returns “Request failed” instead of revealing backend file paths",
+                "correct": [
+                  "Error Handling"
+                ],
+                "yours": [
+                  "Error Handling"
+                ],
+                "right": true
+              }
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "rows": [
+              {
+                "statement": "The API checks that a submitted value is an integer between 1 and 10",
+                "yours": [
+                  "Input Validation"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A user can only make 60 API calls per minute",
+                "yours": [
+                  "Rate Limiting"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A client sends a request with an API key to access user data",
+                "yours": [
+                  "Authentication"
+                ],
+                "right": true
+              },
+              {
+                "statement": "The API returns “Request failed” instead of revealing backend file paths",
+                "yours": [
+                  "Error Handling"
+                ],
+                "right": true
+              }
+            ]
+          },
+          "result": {
+            "mark": 2,
+            "available": 2,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Correctly selects all options"
+            },
+            {
+              "marks": "1",
+              "criterion": "Partially correct selection"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question_id": "af5d319e-578f-4bb5-84ed-76cca41d6547",
+      "title": "Web Elements (Q5, OR, 2026 Topic Test)",
+      "topic": "Web Elements",
+      "label": "Q5",
+      "kind": "OR",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd3d6-2200-75b5-a7ed-50fafb20bd52",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "Match the following technologies to their roles within the context of front end web development.",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "HTML",
+              "CSS",
+              "JavaScript"
+            ],
+            "rows": [
+              {
+                "statement": "Defines styles and layout",
+                "correct": [
+                  "CSS"
+                ],
+                "yours": [
+                  "CSS"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Defines structure and content",
+                "correct": [
+                  "HTML"
+                ],
+                "yours": [
+                  "HTML"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Adds interactivity and dynamic content",
+                "correct": [
+                  "JavaScript"
+                ],
+                "yours": [
+                  "JavaScript"
+                ],
+                "right": true
+              }
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "rows": [
+              {
+                "statement": "Defines styles and layout",
+                "yours": [
+                  "CSS"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Defines structure and content",
+                "yours": [
+                  "HTML"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Adds interactivity and dynamic content",
+                "yours": [
+                  "JavaScript"
+                ],
+                "right": true
+              }
+            ]
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question_id": "834d3f5c-6f90-4d05-aa54-895a30183694",
+      "title": "File Security (Q6, MS, 2026 Topic Test)",
+      "topic": "File Security",
+      "label": "Q6",
+      "kind": "MS",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd3d9-36a0-711b-a10d-958e97bb7869",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following are effective techniques to mitigate file-based security vulnerabilities?  \nSelect exactly 2 options.",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Validate and normalise file paths",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "B",
+                "text": "Disable all file logging for performance",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Store all files in the system root directory",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Restrict file uploads to specific directories",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "A",
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "A",
+              "D"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 1,
+                "feedback": null,
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question_id": "20ae09bc-30bb-4fbc-8c47-95fa7cfefdcb",
+      "title": "Object-Relational Mapping (Q7, MC, 2026 Topic Test)",
+      "topic": "Object-Relational Mapping",
+      "label": "Q7",
+      "kind": "MC",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd3d9-f9d2-7521-aa76-a7f9be922ffb",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best describes the level of abstraction in ORM compared to SQL?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "SQL and ORM use the same abstraction model.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "SQL uses object-oriented structures to access data.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "ORM has lower abstraction and requires raw queries.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "ORM provides a higher level of abstraction than SQL.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "D"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question_id": "c6486c02-fd28-4407-b369-284432ae04b8",
+      "title": "Open-Source Software (Q8, MC, 2026 Topic Test)",
+      "topic": "Open-Source Software",
+      "label": "Q8",
+      "kind": "MC",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd3db-a0c6-778f-b69b-5c82d077f24b",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "How does community collaboration improve open-source web tools?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It guarantees all contributions are high quality.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It ensures the software stays small and simple.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "It allows more users to test, report bugs, and suggest improvements.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "It reduces the need for testing by spreading development across many people.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question_id": "bd24c7b3-4321-408e-9638-7b57e672fc2f",
+      "title": "Big Data (Q9, SA, Topic Test)",
+      "topic": "Big Data",
+      "label": "Q9",
+      "kind": "SA",
+      "source": "Topic Test",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd410-be59-7714-af5a-d1dc359bf7af",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain why metadata is essential for efficient web architectures that handle big data.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 60
+          },
+          "your_response": {
+            "answered": true,
+            "text": "Meta data is data about data. for example in a tcp pacat there is meta data in the headder that will give the pacet lenght this improve effincey. Eapiclay when handleing big data you need to store where who what it is as it is hard or somtise impoible to work out where it is. for espampel if i want to find all images take at a spot and i have 100 0000 of images looknig in the headder is far far cheaper then doing gelocaton on them. this is wahy meta data is importat.",
+            "images": [],
+            "word_count": 95
+          },
+          "result": {
+            "mark": 2,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "Would benefit from being clearer and more directly linked to web architectures that handle big data. You could strengthen your response by explaining how metadata enables faster searching, indexing, storage optimisation, and data management across distributed systems. Making these connections more explicit would give a clearer and more complete explanation of why metadata is essential in big‑data web environments.",
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Explains the importance of metadata for the efficiency of web architectures handling big data."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes the importance of metadata for the efficiency of web architectures handling big data."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Metadata is essential for efficient web architecture because it describes the content, structure, and context of data. This reduces the search space for any given query by grouping similar data together, improving response times and system performance. It helps web services store and access large volumes of data in a structured and scalable way."
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question_id": "7a8da216-de68-4c9c-ba5a-ea860743a4ef",
+      "title": "Content Management System (Q11,MC, 2026 Topic Test)",
+      "topic": "Content Management System",
+      "label": "Q11",
+      "kind": "MC",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019de12a-14a6-75ac-9213-9061cf4d6c4f",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which scenario best describes when a custom-built website might be preferred over a CMS?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "When the site only has static pages.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "When using pre-designed templates is important.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "When a lightweight solution with minimal overhead is needed.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "When quick content updates by non-technical users are needed.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question_id": "a452b038-7e37-4d06-8693-e648837a16a5",
+      "title": "Testing and Evaluating (Q10, MC, 2026 Topic Test)",
+      "topic": "Testing and Evaluating",
+      "label": "Q10",
+      "kind": "MC",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019de124-fe39-7712-b341-81a807a9cbcd",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "What is the primary purpose of load testing in software performance evaluation?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "To assess the software's security vulnerabilities",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "To identify the software's breaking point under extreme conditions",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "To determine how the software behaves under expected user loads",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "To ensure the software meets functional and operational requirements",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B"
+            ],
+            "correct": false
+          },
+          "result": {
+            "mark": 0,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question_id": "85146384-0acd-41f8-a2fa-3fbb19032c6a",
+      "title": "Algorithms - Pseudocode (Q11, Code, 2026 Topic Test)",
+      "topic": "Algorithms - Pseudocode",
+      "label": "Q11",
+      "kind": "Code",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": "A computer game based on cards numbered from 1 to 28 is to be developed. The 28 cards are stored randomly in an array called Cards. An example is shown.\n\n![](assets/6c5eb934-3d36-432b-88d8-3decec07b5ae.png)\n\nThere are four players and each player is dealt seven cards. An array is assigned to each player for storing their cards. The players are given cards from the array Cards one card at a time starting with Player 1, then Player 2, Player 3, Player 4, and then back to Player 1, Player 2, Player 3, Player 4 and so on.\n\nExamples of the players’ arrays are shown.\n\n![](assets/97a89a14-4585-47d8-bba6-f021ed491fc9.png)",
+      "stimulus_images": [
+        "assets/6c5eb934-3d36-432b-88d8-3decec07b5ae.png",
+        "assets/97a89a14-4585-47d8-bba6-f021ed491fc9.png"
+      ],
+      "parts": [
+        {
+          "part_id": "019dd414-6423-7159-9499-72c8ebb19309",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "Write a Pseudocode function called DealCards to distribute the cards from the array Cards to each of the four players. In your algorithm, include appropriate control and data structures.",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": "### USE THIS ARRAY TO TEST ###\nLET cards = (8, 1, 7, 5, 11, 4, 3, 6, 17, 9, 10, 2, 13, 20, 28, 18, 7, 21, 16, 15, 25, 12, 14, 5, 18, 23, 6, 24)\n\n"
+          },
+          "your_response": {
+            "answered": true,
+            "code": "### USE THIS ARRAY TO TEST ###\nLET cards = (8, 1, 7, 5, 11, 4, 3, 6, 17, 9, 10, 2, 13, 20, 28, 18, 7, 21, 16, 15, 25, 12, 14, 5, 18, 23, 6, 24)\n\nlET P1 = ()\nlET P2 = ()\nlET P3 = ()\nlET P4 = ()\n\nBEGIN DealCards:\n  FOR col = 1 TO 7\n    p1 += col*4\n    p2 += col*4 +1\n    p3 += col*+ 2\n    p4 += col*4 +3\n  NEXT col\nEND DealCards\n  \n"
+          },
+          "result": {
+            "mark": 1,
+            "available": 4,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "Jack Jurd",
+                "mark": 1,
+                "feedback": "understanding of loop, but player arrays not used as arrays.",
+                "marked": "2026-05-07T03:11:09.052Z"
+              },
+              {
+                "marker": "TKS CST",
+                "mark": 1,
+                "feedback": "understanding of loop, but player arrays not used as arrays.",
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Provides a substantially correct algorithm that uses appropriate control and data structures"
+            },
+            {
+              "marks": "3",
+              "criterion": "Provides an algorithm that addresses some aspects of the problem using appropriate control and data structures"
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides an algorithm that shows some understanding of data structures AND/OR control structures"
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of the problem"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "BEGIN deal\\_cards(cards)  \n    GET player1()  \n    GET player2()  \n    GET player3()  \n    GET player4()  \n  \n    FOR i TO 7 STEP 1  \n        player1.append(cards(i \\* 4 + 0))  \n        player2.append(cards(i \\* 4 + 1))  \n        player3.append(cards(i \\* 4 + 2))  \n        player4.append(cards(i \\* 4 + 3))  \n    NEXT i  \n  \n    RETURN player1, player2, player3, player4  \nEND deal\\_cards"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question_id": "4357e12c-aa68-42b3-a6cb-fb63a95f816a",
+      "title": "Defensive Data (Q12,SA, 2026 Topic Test)",
+      "topic": "Defensive Data",
+      "label": "Q12",
+      "kind": "SA",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd415-4442-7149-ba77-86b6026520c1",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe one difference between client-side and server-side input validation, and explain why both are important in a secure application",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 80
+          },
+          "your_response": {
+            "answered": true,
+            "text": "Client side validatin is where you chek the users imput thith somting like JS to chek if it is in range for exaple password lenght validatin. It is more secure then doing server side validation of the passwor as you dont have to send it over the intnet. \n\nA atacer can get around things like that by using tools like posman\n\nwhere as sever side validatin is importa is to protect you infomatin on the server like validatin the session token before giving them infomatin. this cant be bypaset by tools like postman.",
+            "images": [],
+            "word_count": 93
+          },
+          "result": {
+            "mark": 2.5,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "Jack Jurd",
+                "mark": 3,
+                "feedback": null,
+                "marked": "2026-05-07T03:11:09.052Z"
+              },
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "Some parts of your explanation are unclear or incorrect. Client-side validation is useful for improving user experience by catching simple errors early, but it is not necessarily more secure than server-side validation, and sensitive checks such as passwords still need to be validated on the server. Your point about attackers bypassing client-side validation with tools like Postman is correct, but server-side validation can also be bypassed if not implemented properly, so both layers are essential.\n\nTo strengthen your response, you could more clearly explain why both types of validation are needed: client-side for usability and early error detection, and server-side for enforcing security and protecting data regardless of what the client sends.",
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes the difference and explains the importance of using both client- and server-side validation in a secure context"
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines the difference and gives a sound explanation of one reason why both are used."
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies a basic difference but explanation is unclear or incomplete."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Client-side validation is performed in the user’s browser before the data is sent to the server, while server-side validation happens after the data reaches the server. Client-side checks improve the user experience by providing quick feedback, but they can be bypassed by attackers. Server-side validation is more secure because it ensures all data is properly checked before it is processed or stored. Using both together ensures better usability and strong protection against invalid or malicious input"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question_id": "5ce72f46-b758-4d1a-b8e3-a4dc6ab90f65",
+      "title": "PWAs (Q13, SA, 2026 Topic Test)",
+      "topic": "PWAs",
+      "label": "Q13",
+      "kind": "SA",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd419-086c-71a4-8ecf-b95541f43272",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain the role of the web manifest in a Progressive Web App (PWA) and how it contributes to user experience.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 120
+          },
+          "your_response": {
+            "answered": true,
+            "text": "The web manifest allows the PWA to be \"downloaded\" installed natively. this is of great benifet to the use eperince as the app is not neceryliy fonund but by the usual SEO but then the app can have offline cashing for faster loading time usage witout a internet connection. in the web manifest there will be a sirvice workker this is will act as a intmedary and handle all webrequest in and out. this allows for it to query intenal databses. thes webmanfest also ontains images of the icon. \n\nUlimey a PWA will grealy enacne the useres experse. Ubua fonund a 20 % increce in sales this is likey due to the better UX that a pwa offers thrught faster and more resplncive. much better for scrooling and dyaminc content as the URL bar doese not anoyigny apper and get in the way.",
+            "images": [],
+            "word_count": 143
+          },
+          "result": {
+            "mark": 2,
+            "available": 4,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "Jack Jurd",
+                "mark": 2,
+                "feedback": "Good understanding of PWA and its functionality what you have described is more in line with a Service Worker with some references to the web manifest",
+                "marked": "2026-05-07T03:11:09.052Z"
+              },
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "Your answer would be stronger if you clearly separated the manifest’s role from the service worker’s role, and if you used more precise cause‑and‑effect examples (for example, how specifying display mode removes the URL bar, or how icons improve recognisability). Clarifying these points would make your explanation more accurate and easier to follow.",
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Explains the web manifest’s role and its impact on user experience, providing cause and effect language utilising examples."
+            },
+            {
+              "marks": "3",
+              "criterion": "Describes the web manifest’s role and its impact on user experience utilising examples."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines with some inaccuracies or missing key points."
+            },
+            {
+              "marks": "1",
+              "criterion": "Limited or vague understanding of the web manifest."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "The web manifest is a JSON file that provides metadata about a PWA, such as the app’s name, icons, theme colours, and how it should appear when launched. It defines whether the app opens in full-screen or standalone mode and specifies the start URL. By configuring these properties, the manifest enables the PWA to behave like a native app when installed on a user’s device, launching without the browser’s interface. This improves the user experience by creating a more immersive and consistent feel, making the app easier to find and use. The manifest also controls aspects like orientation and screen display, contributing to seamless interaction across devices."
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question_id": "b17beb7e-2974-465b-8769-7f99e4416eee",
+      "title": "Difficulties (Q14, SA, 2026 Topic Test)",
+      "topic": "Difficulties",
+      "label": "Q14",
+      "kind": "SA",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": "Many developers rely on online platforms such as Stack Overflow, GitHub Issues, or tutorials when encountering problems during software development.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd419-7372-7783-a7f0-9122c79e65b1",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe one advantage and one potential drawback of looking for solutions online when facing a software development challenge.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 90
+          },
+          "your_response": {
+            "answered": true,
+            "text": "One benifit is that you can find a solution from the comunity that is allready done for example like usein a libery or a pacage. On the outher hand it can be unsave. for example in Luinx redits peope oftne segest running sudo rm -rf / # this is often incoded. this will wipe you mechen this is why is is unfave to trust on line solutins.\n\nThe solutions may also not take in to account you piticulat confuraton so somtmes it can take longer than working it out ourself or reading the maule. The wide deceminaton of manusle and wikis is the bigest advantage of lookin online.",
+            "images": [],
+            "word_count": 108
+          },
+          "result": {
+            "mark": 2,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "Jack Jurd",
+                "mark": 2,
+                "feedback": "outline of advantage",
+                "marked": "2026-05-07T03:11:09.052Z"
+              },
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "Some sentences are difficult to follow due to spelling and grammar issues, which makes your ideas less clear than they could be. Streamlining your examples and ensuring they directly support your points would also strengthen your answer. For instance, focusing on general safety concerns rather than extreme examples would make the explanation more balanced.",
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Demonstrates clear understanding by describing a relevant advantage and a well-explained drawback"
+            },
+            {
+              "marks": "2",
+              "criterion": "Identifies an advantages and/or a drawback with limited explanation or clarity"
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies one relevant advantage or drawback with minimal explanation"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Outsourcing could allow the startup to quickly access mobile development expertise that their in-house team lacks, helping them stay on schedule and meet the client’s requirements. By hiring an external contractor or agency, they can offload the mobile component of the project and focus on areas where they are more competent. However, one challenge is maintaining quality control — the outsourced work must align with the company’s coding standards and integrate smoothly into the existing codebase. Another challenge is communication; if the outsourced team is located overseas, time zone differences and language barriers could delay progress or cause misunderstandings. Careful documentation, clear expectations, and regular updates would be essential to manage these risks effectively."
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question_id": "170ebf4c-de88-43be-9ea7-e28383fec54d",
+      "title": "Backend Engineering (Q15, SA, 2026 Topic Test)",
+      "topic": "Backend Engineering",
+      "label": "Q15",
+      "kind": "SA",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd419-af2f-73bb-9a61-3cd5448e2aa3",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain how back-end frameworks contribute to efficient software development. Include an example of a commonly used framework.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 90
+          },
+          "your_response": {
+            "answered": true,
+            "text": "The use of frame works like flask and sql achmey can make softhwer develpment faster and easer insted of having to use the request lib in python which is far to complex and low lsevle you can you flask this provids you wiht a decoratoe @get.route(\"/\") this allows you to degine the api endpoints inadtion to providng you with the some nece obgects. in addiont to the api lib there is also a framwork for ORM this lets you abstract the lowerlevle SQL commands there you can soimpley make obgevs this suies the OOP devlopment aproch well.",
+            "images": [],
+            "word_count": 97
+          },
+          "result": {
+            "mark": 2,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "Jack Jurd",
+                "mark": 2,
+                "feedback": null,
+                "marked": "2026-05-07T03:11:09.052Z"
+              },
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "strengthen your response by explaining more explicitly how these features improve efficiency, such as reducing boilerplate code and supporting cleaner application structure.",
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Demonstrates a clear understanding of how back-end frameworks support development, with a relevant example"
+            },
+            {
+              "marks": "2",
+              "criterion": "Shows some understanding of back-end frameworks with a general or partially accurate example."
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies a back-end framework or gives a vague idea of its purpose."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Back-end frameworks help developers build software efficiently by providing pre-built components and tools to handle common tasks such as routing, database management, and user authentication. These frameworks reduce the need to write repetitive code and promote best practices, improving code quality and security. For example, Django, a popular Python framework, includes an object-relational mapper (ORM) and a secure admin interface, allowing developers to build scalable and secure applications quickly while focusing on core features rather than low-level details."
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question_id": "0506dc2e-9829-4f46-9255-1ab1d8e43afb",
+      "title": "Security By Design (Q16 SA, 2026 Topic Test)",
+      "topic": "Security By Design",
+      "label": "Q16 SA",
+      "kind": "2026 Topic Test",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd41b-93c7-719c-ad14-a8cca3210e6b",
+          "part": "Part 1",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "A software company is testing a new chat application.\n\nExplain how sandboxing can help during the testing phase to improve security.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 90
+          },
+          "your_response": {
+            "answered": true,
+            "text": "given that the chat needs to handle abitry text there is dangers of misious code execution thes can leade to a RCE (remote code execution) this is dangroud and can lead to all you data being breached. but sandboxing can let you safly try and breach the security and expoit you app in a non distrutive way. If thay can run malioch code like drop tabels (this will deleat the would DB) in the sandbox it wont delete the databse for all the active useser. this means that testing is much safer.",
+            "images": [],
+            "word_count": 92
+          },
+          "result": {
+            "mark": 2,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "Jack Jurd",
+                "mark": 2,
+                "feedback": null,
+                "marked": "2026-05-07T03:11:09.052Z"
+              },
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "explain more clearly how sandboxing works as an isolated environment and why this isolation improves security during testing. At the moment, your explanation is somewhat unclear and focuses heavily on examples rather than the underlying concept of containment.",
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly explains how sandboxing helps improve security during testing, such as isolating code and preventing system-wide damage."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes how sandboxing helps improve security during testing, such as isolating code and preventing system-wide damage."
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of sandboxing in testing, but explanation is vague or incomplete."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Sandboxing helps by running the chat application’s new features in an isolated environment where any bugs or vulnerabilities can be detected without risking the main system. This containment prevents harmful code from affecting other parts of the software or the operating system. It allows developers to safely test untrusted or experimental code, reducing the risk of security breaches during development."
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question_id": "f4039fb7-38e5-48e9-a108-c6c447b81ceb",
+      "title": "Web Protocols (Q17, SA, TKS 2025)",
+      "topic": "Web Protocols",
+      "label": "Q17",
+      "kind": "SA",
+      "source": "TKS 2025",
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd41c-87d7-717e-8079-f735a7ddad12",
+          "part": "Part 1",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Compare HTTP and HTTPS in terms of security features and data transmission reliability, providing examples of scenarios where HTTPS is preferred.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 90
+          },
+          "your_response": {
+            "answered": true,
+            "text": "HTTP is the older unsecure transport protocal vs the more model one HTTPS the \"s\" stands for secure. These protocall use somting calles a SSL this is a sescut socet layer theis uses public and privet key encrytion to protect the socet. The use of HTTPS is preferd in almost all cases save on a sescure network as then it is slower. But it is espcaly necerery when tranfering auth tokens or anyting crypgrapic, passords, crieditcats but also when receving infmatin that shold not be modified like import email adress this can lead to you tusting people that you shoulden thus spearpshing atacks can be conducted.",
+            "images": [],
+            "word_count": 106
+          },
+          "result": {
+            "mark": 3,
+            "available": 4,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "Jack Jurd",
+                "mark": 3,
+                "feedback": "Differneces shown, but HTTP not explained in how it transfers data from server to client",
+                "marked": "2026-05-07T03:11:09.052Z"
+              },
+              {
+                "marker": "TKS CST",
+                "mark": 3,
+                "feedback": "the explanation needs much clearer wording, as the spelling and grammar issues make parts of your answer difficult to follow. You refer to SSL but don’t explain that modern HTTPS typically uses TLS, and your comparison doesn’t fully address data transmission reliability, which is part of the question. I’d encourage you to clearly describe how HTTPS prevents tampering and ensures data integrity, and to provide well‑structured examples of where it’s preferred, such as online banking, e‑commerce, or login forms.",
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Thorough comparison of HTTP and HTTPS security features and data transmission reliability, supported by relevant scenarios where HTTPS is preferred."
+            },
+            {
+              "marks": "3",
+              "criterion": "Sound comparison of HTTP and HTTPS, addressing security and transmission reliability with at least one relevant scenario."
+            },
+            {
+              "marks": "2",
+              "criterion": "Basic comparison identifying some differences between HTTP and HTTPS, with a limited example."
+            },
+            {
+              "marks": "1",
+              "criterion": "Limited or superficial information about HTTP and/or HTTPS."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "HTTP (Hypertext Transfer Protocol) does not provide a secure channel for data transmission as it transmits data in plain text, making it vulnerable to interception by attackers. HTTPS (Hypertext Transfer Protocol Secure), on the other hand, uses TLS (Transport Layer Security) or SSL (Secure Sockets Layer) to encrypt the data transmitted between a client and a server, ensuring confidentiality and integrity. The encryption also helps to verify the authenticity of the communicating parties. HTTPS is crucial for scenarios that require sensitive data transmission, such as online banking, e-commerce transactions, and login pages, as it mitigates risks like man-in-the-middle attacks and data breaches."
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question_id": "3ece6f3a-ed85-4fb6-8c9a-2d5d6ef89a50",
+      "title": " Programming - Python (Q18, Decision, 2026 Topic Test)",
+      "topic": "Programming - Python",
+      "label": "Q18",
+      "kind": "Decision",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": "An e-commerce site issues discount codes via email. The system checks that codes follow a strict format before accepting them at checkout.\n\nAn online store uses discount codes that must:\n\n-   Start with \"DISC\".\n    \n-   Be exactly 8 characters long.\n    \n-   Not contain any lowercase letters.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd41d-a2cc-754a-85c9-06b767b837be",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "Write a function that returns `True` if the code is valid.",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": null
+          },
+          "your_response": {
+            "answered": true,
+            "code": "# Start with \"DISC\".\n# Be exactly 8 characters long.\n# Not contain any lowercase letters\n\ntest = [\"DISCTTTT\",\"DISAAAAA\",\"DISCKKKKK\",\"DISCaaaa\"]\n\ndef is_valid_code(ipt):\n  if len(ipt) != 8:\n    return False\n  if not ipt[0:4] == \"DISC\":\n    return False\n  if ipt.upper() == ipt:\n    return True\n  return False\n  \nfor i in test:\n  print(is_valid_code(i))\n"
+          },
+          "result": {
+            "mark": 3,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "Jack Jurd",
+                "mark": 3,
+                "feedback": null,
+                "marked": "2026-05-07T03:11:09.052Z"
+              },
+              {
+                "marker": "TKS CST",
+                "mark": 3,
+                "feedback": null,
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Provides a correct function that checks whether a discount code is valid."
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides a partially correct function in Python that attempts to check whether a discount code is valid."
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of the problem and Python programming."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "def is\\_valid\\_code(code):  \n if not code.startswith(\"DISC\"):  \n  return False  \n if len(code) != 8:  \n  return False  \n if not code.isupper():  \n  return False  \n return True"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question_id": "148800ba-5eca-4010-a073-a12022dbe02f",
+      "title": "Programming - Python (Q19, Code, 2026 Topic Test)",
+      "topic": "Programming - Python",
+      "label": "Q19",
+      "kind": "Code",
+      "source": "2026 Topic Test",
+      "copyright": null,
+      "stimulus": "A program for a puzzle is to be developed. The puzzle uses a 4-by-4 grid. A two- dimensional array, cell(row, column), is used to store the number in each square of the grid. For example, cell(2,4) = 3 in the grid provided.\n\n![](assets/dfef0bee-679c-4313-9e45-37755f82fd03.png)\n\nFor the puzzle to be completed correctly, the numbers in each row must add up to 10. \n\nThe following code calculates the total of the numbers in the first row.\n\nrowtotal = 0  \nFOR column = 1 TO 4  \n    rowtotal = rowtotal + cell(1, column)  \nNEXT column",
+      "stimulus_images": [
+        "assets/dfef0bee-679c-4313-9e45-37755f82fd03.png"
+      ],
+      "parts": [
+        {
+          "part_id": "019dd6c9-6fc5-74ee-a57a-0af4adaf492f",
+          "part": "Part A",
+          "marks_available": 6,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "Write a Python algorithm that checks whether a puzzle has been completed correctly and then displays an appropriate message",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": "# This is a sample 4x4 puzzle grid use for testing\ncell = [\n    [1, 2, 4, 2],\n    [4, 2, 1, 3],\n    [2, 4, 4, 1],\n    [1, 2, 2, 4]\n]\n\n## YOUR CODE BELOW"
+          },
+          "your_response": {
+            "answered": true,
+            "code": "# This is a sample 4x4 puzzle grid use for testing\n\ncell = [\n    [1, 2, 4, 2],\n    [4, 2, 1, 3],\n    [2, 4, 4, 1],\n    [1, 2, 2, 4]\n]\ndef win(cell):\n  for row in cell:\n    if sum(row) == 10:\n      print(\"you have won\")\n      return True\n  return False\nwin(cell)\n## YOUR CODE BELOW"
+          },
+          "result": {
+            "mark": 3,
+            "available": 6,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "Jack Jurd",
+                "mark": 3,
+                "feedback": "Only checks first row if first row is true",
+                "marked": "2026-05-07T03:11:09.052Z"
+              },
+              {
+                "marker": "TKS CST",
+                "mark": 3,
+                "feedback": "Your solution shows some understanding of the problem, but it does not meet the task requirements. The function 'win' currently checks whether any single row adds to 10, but the task requires checking that *all* rows add to 10 before declaring the puzzle complete. Because you return immediately when the first row sums to 10, the rest of the puzzle is never validated. Additionally, the algorithm should output a success message only when every row is correct, and a different message if the puzzle is incomplete or incorrect. You may also want to avoid hard‑coding messages inside the loop, and ensure the function only prints a result after all checks are complete.",
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Provides a substantially correct algorithm that incorporates the following features:\n– Correctly referencing elements of the array\n– Checking whether each individual row adds to 10 4\n– Checking whether all rows add to 10\n– Outputting an appropriate message"
+            },
+            {
+              "marks": "3",
+              "criterion": "Provides an algorithm that attempts to address the main features of the problem"
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides an algorithm that attempts to solve some features of the problem"
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of the problem"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "def check\\_puzzle(grid):  \n    completed\\_correctly = True\n\n    for row in grid:  \n        row\\_total = sum(row)  \n        if row\\_total != 10:  \n            completed\\_correctly = False\n\n    if completed\\_correctly:  \n        print(\"Puzzle completed correctly\")  \n    else:  \n        print(\"Puzzle not completed correctly\")\n\n\\# Run the function with the sample puzzle  \ncheck\\_puzzle(cell)"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question_id": "fa884fbd-6a80-4e18-9ae4-1f60763a40fb",
+      "title": "SQL Query (Q20, SQL, 2026 Topic Test NEW)",
+      "topic": "SQL Query",
+      "label": "Q20",
+      "kind": "SQL",
+      "source": "2026 Topic Test NEW",
+      "copyright": null,
+      "stimulus": "A bookstore database contains the following table:\n\n**Books:**\n\n| **BookID** | **Title** | **Author** | **Price** | **StockQuantity   ** | **PublishedYear   ** |\n|---|---|---|---|---|---|\n| B001 | The Ocean World | Smith | 35.00 | 12 | 2018 |\n| B002 | Coding Made Essay | Smith | 42.50 | 5 | 2017 |\n| B003 | Journey to the Stars | Smith | 29.99 | 20 | 2019 |\n| B004 | Database Essentials | Clark | 50.00 | 3 | 2022 |\n| B005 | Machine Learning Basics | Lee | 48.00 | 8 | 2023 |\n| B006 | Advanced Algorithms | Clark | 65.00 | 0 | 2022 |\n| B007 | Web Development Guide | Lee | 39.95 | 15 | 2020 |\n\nAfter running a SQL query, the following results were obtained:\n\n| **Author** | **Total\\_Stock** | **Average\\_Price** |\n|---|---|---|\n| Lee | 23 | 43.975 |\n| Clark | 3 | 57.50 |",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019de1c3-61aa-75da-8288-624227242fd4",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SQL",
+          "prompt": "Write the correct SQL algorithm to replicate the result shown.",
+          "prompt_images": [],
+          "question": {
+            "dataset_setup_sql": "-- Drop existing table if it exists (optional, for clean setup)\nDROP TABLE IF EXISTS Books;\n\n-- Create the Books table with additional columns\nCREATE TABLE Books (\n    BookID VARCHAR(10) PRIMARY KEY,\n    Title VARCHAR(100) NOT NULL,\n    Author VARCHAR(50) NOT NULL,\n    Price DECIMAL(10, 2) NOT NULL,\n    StockQuantity INT NOT NULL,\n    PublishedYear INT NOT NULL\n);\n\n-- Insert the data\nINSERT INTO Books (BookID, Title, Author, Price, StockQuantity, PublishedYear) VALUES\n('B001', 'The Ocean World',          'Smith', 35.00, 12, 2018),\n('B002', 'Coding Made Easy',         'Smith', 42.50,  5, 2017),\n('B003', 'Journey to the Stars',     'Smith', 29.99, 20, 2019),\n('B004', 'Database Essentials',      'Clark', 50.00,  3, 2022),\n('B005', 'Machine Learning Basics',  'Lee',   48.00,  8, 2023),\n('B006', 'Advanced Algorithms',      'Clark', 65.00,  0, 2022),\n('B007', 'Web Development Guide',    'Lee',   39.95, 15, 2020);",
+            "starter_query": null
+          },
+          "your_response": {
+            "answered": true,
+            "sql": " \n\nSELECT\n  Author = 'Lee' as 'Author',\n  sum(StockQuantity) as Total_Stock,\n  sum(Price)/count(Price) as Average_Price\nFROM Books \n  \n"
+          },
+          "result": {
+            "mark": 2,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "Jack Jurd",
+                "mark": 2,
+                "feedback": "Needed to output both results",
+                "marked": "2026-05-07T03:11:09.052Z"
+              },
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "Your query diverges significantly from the required logic shown in the reference solution. Instead of selecting the actual Author field, your query hard‑codes Author = 'Lee', which prevents grouping by real authors and breaks the intent of aggregating data per author. You have also omitted essential components such as the WHERE clause filtering PublishedYear >= 2020, the GROUP BY Author clause, and the ORDER BY on the calculated Average_Price. Additionally, calculating the average price using sum(Price)/count(Price) is unnecessarily manual when AVG(Price) is clearer and more maintainable. Overall, the query will run, but it will not replicate the expected result and does not follow best practices for readability or correctness.",
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "**SELECT Author, SUM(StockQuantity) AS Total\\_Stock, AVG(Price) AS Average\\_Price**  \n**FROM Books**  \n**WHERE PublishedYear >= 2020**  \n**GROUP BY Author**  \n**ORDER BY Average\\_Price ASC**"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question_id": "172cce8b-484d-4076-ac12-3ef96952ff5b",
+      "title": "DFD Level 1 - (Q21, Draw, Topic Test 2026)",
+      "topic": "DFD Level 1 -",
+      "label": "Q21",
+      "kind": "Draw",
+      "source": "Topic Test 2026",
+      "copyright": null,
+      "stimulus": "A new mark book is being developed for use across schools. The markbook is specifically designed to minimise the amount of data entry required, so it automatically pulls data from the school's student information system (a separate system) to populate the markbook with current assessments and students undertaking each assessment. The markbook then allows teachers to enter student marks. The markbook calculates metrics on student performance, such as assessment rank and performance bands, which it can then provide back to the student information system for other uses.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd6cb-9a48-752a-b71d-584b86307d4b",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "DRAWING_V2",
+          "prompt": "Draw a level 1 data flow diagram (DFD) for the markbook system.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "drawing_png": "drawings/q22_Part_A.png",
+            "drawing_scene": "drawings/q22_Part_A.excalidraw.json",
+            "drawing_text": {
+              "element_counts": {
+                "line": 3,
+                "text": 8,
+                "ellipse": 2,
+                "arrow": 4
+              },
+              "texts": [
+                {
+                  "text": "student infomatn system",
+                  "inside": null
+                },
+                {
+                  "text": "teacher",
+                  "inside": null
+                },
+                {
+                  "text": "student",
+                  "inside": null
+                },
+                {
+                  "text": "pull infomatin",
+                  "inside": "arrow"
+                },
+                {
+                  "text": "assment infmatin ",
+                  "inside": null
+                },
+                {
+                  "text": "calulate\nmetics",
+                  "inside": "ellipse"
+                },
+                {
+                  "text": "all infoamaint",
+                  "inside": "arrow"
+                },
+                {
+                  "text": "I HAD TECNICAL DIFICLYES SEE \nTHE PAPER COPY FOR THIS ",
+                  "inside": null
+                }
+              ],
+              "shapes": [
+                {
+                  "shape": "ellipse",
+                  "label": "[ellipse]"
+                },
+                {
+                  "shape": "ellipse",
+                  "label": "calulate\nmetics"
+                }
+              ],
+              "connectors": [
+                {
+                  "type": "line",
+                  "from": "student infomatn system (nearest)",
+                  "to": "student infomatn system (nearest)",
+                  "label": null
+                },
+                {
+                  "type": "line",
+                  "from": "teacher (nearest)",
+                  "to": "assment infmatin  (nearest)",
+                  "label": null
+                },
+                {
+                  "type": "line",
+                  "from": "student (nearest)",
+                  "to": "student (nearest)",
+                  "label": null
+                },
+                {
+                  "type": "arrow",
+                  "from": "student infomatn system (nearest)",
+                  "to": "[ellipse]",
+                  "label": "pull infomatin"
+                },
+                {
+                  "type": "arrow",
+                  "from": "assment infmatin  (nearest)",
+                  "to": "[ellipse]",
+                  "label": null
+                },
+                {
+                  "type": "arrow",
+                  "from": "student infomatn system (nearest)",
+                  "to": "calulate\nmetics",
+                  "label": "all infoamaint"
+                },
+                {
+                  "type": "arrow",
+                  "from": "[ellipse]",
+                  "to": "student infomatn system (nearest)",
+                  "label": null
+                }
+              ]
+            }
+          },
+          "result": {
+            "mark": 3,
+            "available": 4,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 3,
+                "feedback": "hand drawing used",
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": null,
+          "marking_rubric": "| **Criteria** | **Marks** |\n|---|---|\n| Constructs a substantially correct data flow diagram that includes at least the processes of importing assessments/users, generating metrics, returning data, and mark input; relevant data flows, storage, and two external entities | 4 |\n| Constructs a data flow diagram that is relevant to the mark book system and includes external entities, most of the processes, and data flows | 3 |\n| Constructs a data flow diagram with some elements relevant to the parking app | 2 |\n| Shows a basic understanding of data flow diagrams | 1 |",
+          "marking_guidance": "There are many different possible interpretations of this question and many correct diagrams.\n\nDataflow/Processes: The dataflows may be labelled differently, but as long as they indicate that each of the relevant processes is happening and all relevant inputs/outputs are provided for each process, the processes can be considered correct. If you missed a few of the processes or some of the dataflows were not correct or missing, you may loose a mark or two depending on how many you left out.\n\nExternal Entities: The stimulus made it very clear that _teacher_ would be an external entity, however, slightly more subtly is that the \"School Student Information System\" is also considered an external entity since it is a separate system that the mark book interfaces with. This scenario is far less common, but important to be aware of and practice for. To get full marks, you need both external entities. If you only had one, you can get a maximum of 3 marks.\n\nDatastore: We only need one datastore for this diagram and it makes sense to name it \"markbook DB\" since it's the datastore for the markbook app.",
+          "sample_answer": "![](assets/1a7d7937-7231-4ff0-b1bc-6e838e5ef6df.png)",
+          "sample_answer_images": [
+            "assets/1a7d7937-7231-4ff0-b1bc-6e838e5ef6df.png"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question_id": "e1465cb3-e470-4e9b-8a0c-7f2dbd4fcbcb",
+      "title": "Social and Ethical (Q22, SA, Topic Test 2026)",
+      "topic": "Social and Ethical",
+      "label": "Q22",
+      "kind": "SA",
+      "source": "Topic Test 2026",
+      "copyright": null,
+      "stimulus": "A development team is creating a budgeting app for a not-for-profit organisation. Midway through the project, a major stakeholder demands that the app include targeted ads to generate extra income. The team is concerned that including ads may distract users, especially since the app is intended to help vulnerable users manage limited finances.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd6cb-ed20-74cc-847d-e5f252d9ff3b",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Discuss the social and ethical considerations for developers when deciding whether to adopt stakeholder feedback suggested in the scenario above.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 150
+          },
+          "your_response": {
+            "answered": true,
+            "text": "Often the stakeholder intrests are for fincal gain but this is not allways the most ethical or socialy aproprit thing. In the simule a typical situarin is aoring the stakhoders want to explot the users for mony but this is not the right thing as the usese can be vunrable. such as minors using social miea and getting fed adds that degrade body image to sell buty products. of in the case funicaly vunrable peple geting fed adds will increas spending therefe making them of poor. \n\nThis is the challange that develpwer need to face when taking on stakhoders advice becase there goal is to make mony not help pople but given that they work for a NFP this make is easer for devloper to push back. But wheb pushing back they cna risk jow securey as thay can get fired of made redudent.",
+            "images": [],
+            "word_count": 144
+          },
+          "result": {
+            "mark": 2,
+            "available": 4,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "Jack Jurd",
+                "mark": 2,
+                "feedback": "Described financial issues of stakeholders and issues with uncontrolled targeted ads",
+                "marked": "2026-05-07T03:11:09.052Z"
+              },
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "At times the explanation is brief or unclear, and several points need further development. For instance, you could expand on how different stakeholder groups may be impacted, how developers weigh competing responsibilities, and why ethical decision‑making is crucial in a broader social context. S",
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Discusses social AND ethical considerations thoroughly. Clearly addresses the tensions and impacts between various stakeholders."
+            },
+            {
+              "marks": "3",
+              "criterion": "Explains social AND ethical considerations. Addresses some relevant issues and implications"
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes social AND ethical considerations but with minimal detail or depth.\nOR\nDiscusses only ONE social OR ONE ethical consideration thoroughly."
+            },
+            {
+              "marks": "1",
+              "criterion": "Outlines social or ethical considerations with limited explanation."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Ethically, while ads can increase revenue and support further feature development, this conflicts with the purpose of the app. As a not-for-profit tool, it should focus on supporting users with limited financial literacy or stability. Relying on user engagement for income risks shifting the app’s purpose from social benefit to profit-making.\n\nSocially, displaying targeted ads raises concerns about content appropriateness and user trust. The development team must consider how ads will be selected and moderated, especially if the users are financially at risk. Even if stakeholders support the decision, poorly regulated ads could damage the app’s credibility and alienate its user base, particularly if they promote harmful or manipulative content (e.g. political bias, hate speech).\n\nOverall, developers must navigate complex social and ethical considerations whilst balancing the demands of different societal stakeholders. These demands can both benefit and potentially harm the app’s future development."
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question_id": "14d28f10-be0d-4400-8f57-adb5980ad0de",
+      "title": "UI & UX (Q23, ER, Topic Test 2026)",
+      "topic": "UI & UX",
+      "label": "Q23",
+      "kind": "ER",
+      "source": "Topic Test 2026",
+      "copyright": null,
+      "stimulus": "Below is a video going through the Transport for NSW (TfNSW) Customer Satisfaction Index Interactive Dashboard. Its primary goal is to provide transparent, accessible insights into customer satisfaction and inform service improvements.\n\n[▶ VIDEO (open this file)](assets/0cf456aa-588c-4224-b140-78e0fe0f3599.mov)\n\nSource: TfNSW",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019dd6dc-4771-722a-ba23-1fc26f4314bb",
+          "part": "Part A",
+          "marks_available": 6,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Evaluate the efficacy of the above dashboard in achieving its goal. Consider the UX and UI in your response.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 400
+          },
+          "your_response": {
+            "answered": true,
+            "text": "this app is medocer at efectivley acheving its goal it displast all the infomatin that it needs to do but it is not very easy to navigat it is confusing and not consitante also it uses nested header and dupicate infomaton. \n\nthis website does diplay the infoamtno that i needs to but it is not unified or accable transparant insights.\n\nThe app has the coustomer satifaction index report dupicated 3-4 times acrss the nested nav bars. the nested nav bar is hard to navigat with \"tab\" for peopel with moter imparments. also the dupicated infomation makes things confusing. \n\nThere is no unfed coulor seheem see the graphs at 0:09 the are diffrent couler his makes it clutterd but is not that much of a magor iuse. \n\ndispite this there is clear filetering of data that is much more manageable for the usre to process this ehnances the UX. as it is faster to find what you are loking for. \n\nUltimetly the this app convays the infoamton but it would be quite hard to havigate for but once those intal dificalys were over came it would provide the infoman neede. But the app is not accable as it has the imfomant neede to be found the user needs to navidate a unfiler and conplex double header bar this is bad UX design and this is the main thing limity the app.",
+            "images": [],
+            "word_count": 230
+          },
+          "result": {
+            "mark": 3,
+            "available": 6,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "Jack Jurd",
+                "mark": 3,
+                "feedback": "Very knowledgable about UI elements",
+                "marked": "2026-05-07T03:11:09.052Z"
+              },
+              {
+                "marker": "TKS CST",
+                "mark": 3,
+                "feedback": "Strengthening your writing would help your ideas come across more clearly and professionally.\n\nYour answer does comment on whether the dashboard achieves its goal, but the explanation could be more structured and specific. For example, you could more clearly relate each UI or UX issue to how it impacts the dashboard’s ability to provide customer satisfaction insights. You mention filtering as a positive aspect, which is useful, but expanding on how this supports the user’s goal would strengthen your evaluation.",
+                "marked": "2026-05-01T05:38:51.652Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "6",
+              "criterion": "Clearly evaluates the efficacy of the TfNSW Customer Satisfaction Index Dashboard in achieving its goal with reference to UI and UX."
+            },
+            {
+              "marks": "4-5",
+              "criterion": "Describes the efficacy of the TfNSW Customer Satisfaction Index Dashboard in achieving its goal with reference to UI and UX."
+            },
+            {
+              "marks": "3",
+              "criterion": "Outlines major features of the dashboard particularly in reference to UI and UX."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines some features of the dashboard and how it achieves its goal."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "The Transport for NSW (TfNSW) Customer Satisfaction Index Interactive Dashboard is a digital tool designed to present public feedback across various transport modes in New South Wales. Its primary goal is to provide transparent, accessible insights into customer satisfaction and inform service improvements. The dashboard is largely effective in achieving this goal, though some limitations in user experience (UX) and user interface (UI) design affect its overall impact.\n\nFrom a UX perspective, the dashboard demonstrates strong accessibility and responsiveness. It is publicly available and regularly updated, incorporating feedback from over 23,000 participants across transport modes such as public transport, road use, and point-to-point services. This inclusivity ensures that diverse user experiences are represented. The dashboard allows users to explore satisfaction trends across key dimensions like safety, timeliness, and accessibility, which supports TfNSW’s commitment to continuous improvement. However, users may experience browser incompatability issues as it is embedded, which can hinder access unless cookies are enabled. Additionally, the volume of data presented may overwhelm casual users, suggesting a need for more intuitive data summarisation.\n\nIn terms of UI, the dashboard employs interactive charts and filters that enhance visual clarity and allow users to navigate data efficiently. The integration within TfNSW’s Open Data Hub provides a structured environment that supports user engagement. Nevertheless, the interface could benefit from improvements in mobile optimisation and greater customisation options. For instance, users might find value in downloadable summaries tailored to specific transport modes or regions. In addition, the dashboard may benefit from a chance of font and improvement of navigation such as by replacing texts with icons. Users might also appreciate visual aesthetics to be implemented into the design such as introducing increasing whitespace and introducing a more visually appealing colour scheme. \n\nOverall, the TfNSW Customer Satisfaction Index Dashboard is an effective tool for promoting transparency and guiding transport service improvements. Its strengths lie in its comprehensive data coverage and interactive design, which align with its intended purpose. However, addressing technical limitations and enhancing personalisation would further improve its efficacy. By refining both UX and UI elements, TfNSW can ensure that the dashboard not only informs policy but also empowers users to engage meaningfully with transport data.\n\n**Students can also talk about:**\n\n-   Accessibility: Publicly available and easy to access via TfNSW’s Open Data Hub.\n-   Inclusivity: Covers feedback from a wide range of transport users—public transport, road users, cyclists, pedestrians.\n-   Responsiveness to Feedback: Data shows improvements in areas like safety and timeliness, indicating TfNSW is acting on feedback.\n-   Data Comprehensiveness: Over 23,000 participants contribute to the index, offering a robust sample size.\n-   Navigation Experience: Users can filter and explore data by transport mode, region, and satisfaction category.\n-   Visual Design: Uses interactive charts and graphs that are visually engaging and easy to interpret."
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "Installation Method": {
+      "mark": 0,
+      "available": 1
+    },
+    "Waterfall Approach": {
+      "mark": 0,
+      "available": 1
+    },
+    "CSS": {
+      "mark": 0,
+      "available": 1
+    },
+    "APIs": {
+      "mark": 2,
+      "available": 2
+    },
+    "Web Elements": {
+      "mark": 1,
+      "available": 1
+    },
+    "File Security": {
+      "mark": 1,
+      "available": 1
+    },
+    "Object-Relational Mapping": {
+      "mark": 1,
+      "available": 1
+    },
+    "Open-Source Software": {
+      "mark": 1,
+      "available": 1
+    },
+    "Big Data": {
+      "mark": 2,
+      "available": 3
+    },
+    "Content Management System": {
+      "mark": 1,
+      "available": 1
+    },
+    "Testing and Evaluating": {
+      "mark": 0,
+      "available": 1
+    },
+    "Algorithms - Pseudocode": {
+      "mark": 1,
+      "available": 4
+    },
+    "Defensive Data": {
+      "mark": 2.5,
+      "available": 3
+    },
+    "PWAs": {
+      "mark": 2,
+      "available": 4
+    },
+    "Difficulties": {
+      "mark": 2,
+      "available": 3
+    },
+    "Backend Engineering": {
+      "mark": 2,
+      "available": 3
+    },
+    "Security By Design": {
+      "mark": 2,
+      "available": 3
+    },
+    "Web Protocols": {
+      "mark": 3,
+      "available": 4
+    },
+    "Programming - Python": {
+      "mark": 6,
+      "available": 9
+    },
+    "SQL Query": {
+      "mark": 2,
+      "available": 3
+    },
+    "DFD Level 1 -": {
+      "mark": 3,
+      "available": 4
+    },
+    "Social and Ethical": {
+      "mark": 2,
+      "available": 4
+    },
+    "UI & UX": {
+      "mark": 3,
+      "available": 6
+    }
+  }
+}

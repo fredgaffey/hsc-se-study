@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sign in — SEN Offline</title>
+<style>
+:root{--bg:#f4f6fa;--card:#fff;--fg:#16181d;--mut:#5a6472;--bd:#dde2ea;--ac:#2b6cb0;--no:#c53030}
+@media(prefers-color-scheme:dark){:root{--bg:#101319;--card:#1a1d24;--fg:#e6e8ec;--mut:#9aa4b2;--bd:#2d3340}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--fg);
+ font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;padding:1.25rem}
+.box{width:100%;max-width:400px;background:var(--card);border:1px solid var(--bd);
+ border-radius:14px;padding:1.6rem;box-shadow:0 10px 30px rgba(20,25,45,.08)}
+h1{font-size:1.35rem;margin:0 0 .2rem}
+.sub{color:var(--mut);font-size:.9rem;margin:0 0 1.2rem}
+label{display:block;font-size:.82rem;font-weight:600;margin:.75rem 0 .25rem}
+input{width:100%;padding:.6rem .75rem;border-radius:9px;border:1px solid var(--bd);
+ background:var(--bg);color:var(--fg);font:inherit}
+input:focus{outline:2px solid rgba(43,108,176,.4);border-color:var(--ac)}
+button{width:100%;margin-top:1.1rem;padding:.65rem;border-radius:9px;border:0;background:var(--ac);
+ color:#fff;font:inherit;font-weight:600;cursor:pointer}
+button:disabled{opacity:.6;cursor:not-allowed}
+.tabs{display:flex;gap:.4rem;margin-bottom:1rem}
+.tabs button{flex:1;margin:0;padding:.45rem;font-size:.88rem;background:transparent;color:var(--mut);
+ border:1px solid var(--bd)}
+.tabs button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.msg{margin-top:.9rem;font-size:.88rem;padding:.55rem .7rem;border-radius:8px;display:none}
+.msg.err{display:block;background:rgba(197,48,48,.12);color:var(--no)}
+.msg.ok{display:block;background:rgba(47,133,90,.12);color:#2f855a}
+.note{margin-top:1.1rem;font-size:.78rem;color:var(--mut);line-height:1.5}
+</style></head><body>
+<div class="box">
+  <h1>SEN Offline</h1>
+  <p class="sub">Software Engineering course material — sign in to continue.</p>
+
+  <div class="tabs">
+    <button id="tab-in" class="on" type="button">Sign in</button>
+    <button id="tab-up" type="button">Create account</button>
+  </div>
+
+  <form id="form" autocomplete="on">
+    <label for="u">Username</label>
+    <input id="u" name="username" autocomplete="username" required autocapitalize="none" spellcheck="false">
+
+    <label for="p">Password</label>
+    <input id="p" name="password" type="password" autocomplete="current-password" required>
+
+    <div id="inviteWrap" style="display:none">
+      <label for="c">Access code</label>
+      <p style="font-size:.76rem;color:var(--mut);margin:.15rem 0 0">Required to create an account.</p>
+      <input id="c" name="invite" autocomplete="off" placeholder="access code">
+    </div>
+
+    <button id="go" type="submit">Sign in</button>
+  </form>
+
+  <div class="msg" id="msg"></div>
+  <p class="note">This site hosts King's School course material. Access is restricted —
+    creating an account requires the access code set by the site owner.</p>
+</div>
+
+<script>
+var mode='login';
+function $(i){return document.getElementById(i)}
+function setMode(m){
+  mode=m;
+  $('tab-in').classList.toggle('on',m==='login');
+  $('tab-up').classList.toggle('on',m==='register');
+  $('inviteWrap').style.display = m==='register' ? 'block' : 'none';
+  $('c').required = m==='register';
+  $('p').autocomplete = m==='register' ? 'new-password' : 'current-password';
+  $('go').textContent = m==='register' ? 'Create account' : 'Sign in';
+  $('msg').className='msg';
+}
+$('tab-in').onclick=function(){setMode('login')};
+$('tab-up').onclick=function(){setMode('register')};
+
+$('form').onsubmit=async function(e){
+  e.preventDefault();
+  var msg=$('msg'); msg.className='msg'; $('go').disabled=true;
+  var payload={username:$('u').value,password:$('p').value};
+  if(mode==='register') payload.invite=$('c').value;
+  try{
+    var r=await fetch('/api/auth/'+mode,{method:'POST',
+      headers:{'content-type':'application/json'},body:JSON.stringify(payload)});
+    var d=await r.json();
+    if(!r.ok){ msg.className='msg err'; msg.textContent=d.error||('failed ('+r.status+')');
+      $('go').disabled=false; return; }
+    msg.className='msg ok'; msg.textContent='Signed in — loading…';
+    // a new account starts blank; an existing one keeps whatever is on the server
+    try{ localStorage.removeItem('sen_synckey'); }catch(_){}
+    location.href='/index.html';
+  }catch(err){
+    msg.className='msg err'; msg.textContent='Network error — '+err.message;
+    $('go').disabled=false;
+  }
+};
+</script></body></html>

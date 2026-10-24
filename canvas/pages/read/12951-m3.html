@@ -1,0 +1,970 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 3 (Term 4: Weeks 5-6) Secure Software Architecture — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">12SENX2 Software Engineering 2026 · module 4 of 15</p>
+<h1>Cycle 3 (Term 4: Weeks 5-6) Secure Software Architecture</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="12951-all.html">Whole course</a><span class="cur">By module</span><a href="../course-12951.html">By lesson</a></div>
+<h3 class="readles">Introduction to Cycle 3</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div id="" class="dp-banner-image"><img class="dp-full-width" style="width: 100%; height: auto; max-width: 100%;" role="presentation" src="https://kingsnet.kings.edu.au/images/UserUploadedImages/1754/banner2.jpg" alt=" [online-only image]" loading="lazy"></div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-read-time-wrapper"><i class="fas fa-clock cp-txt-dp-primary" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> 2 min read&nbsp; |&nbsp; no activities&nbsp; |&nbsp;&nbsp;<i class="dp-icon fas fa-brain cp-txt-primary" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp; (easy)&nbsp;&nbsp;</div>
+<h4>Timing</h4>
+<p>Weeks 5 and 6</p>
+<p>&nbsp;</p>
+<h4>Content</h4>
+<p><strong>Developing Secure Code: Advanced Implementation</strong></p>
+<p>In this cycle, we transition from the conceptual foundations of security to the practical implementation of secure code. We will examine the intricate details of application vulnerabilities and how to construct robust defences against sophisticated attacks.</p>
+<p>This cycle focuses on the following crucial areas of software engineering:</p>
+<ul>
+<li>Designing, developing, and implementing safe Application Programming Interfaces (APIs).</li>
+<li>Optimising code for efficient execution through proper memory, session, and exception management.</li>
+<li>Identifying and mitigating critical vulnerabilities in user action controls, including XSS, CSRF, and race conditions.</li>
+<li>Protecting systems against file-based attacks and hardware vulnerabilities like side-channel attacks.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Deliverables</h4>
+<p>By the end of this cycle, you need to complete:</p>
+<ul>
+<li>Quiz — 1.14 File Security</li>
+<li>EdStem — 1.11 Secure APIs</li>
+<li>EdStem — 1.12 Secure Sessions</li>
+<li>EdStem — 1.13 Race Conditions</li>
+<li>Gradeo — Cycle 3</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Lessons</h4>
+<div class="dp-table-scroll">
+<table style="border-collapse: collapse; width: 100%;" border="1" data-active-table="true">
+<tbody>
+<tr>
+<td style="width: 26.8426%;"><strong>Title</strong></td>
+<td style="width: 34.4899%;"><strong>Syllabus</strong></td>
+<td style="width: 38.6675%;"><strong>Page Focus</strong></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.11 APIs" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.11 APIs</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p>Design, develop and implement a safe application programming interface (API) to minimise software vulnerabilities.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>APIs are the backbone of modern software interaction. This page explores how APIs function, the difference between HTTP and HTTPS, and the essential techniques developers use to secure them against vulnerabilities.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.12 Efficient Execution" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.12 Efficient Execution</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Design, develop and implement code considering efficient execution for the user, including:</p>
+<ul>
+<li>memory management</li>
+<li>session management</li>
+<li>exception management</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Designing efficient code is essential for performance and scalability. This page covers the three pillars of efficient execution: managing memory usage, handling user sessions securely, and managing exceptions to prevent crashes.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.13 Minimise Vulnerabilities" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.13 Minimise Vulnerabilities</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Design, develop and implement secure code to minimise vulnerabilities in user action controls, including:</p>
+<ul>
+<li>broken authentication and session management</li>
+<li>cross-site scripting (XSS) and cross-site request forgery (CSRF)</li>
+<li>invalid forwarding and redirecting</li>
+<li>race conditions</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Modern applications are constantly under threat. This page explores critical vulnerabilities in user action controls—including Broken Authentication, XSS, CSRF, and Race Conditions—and details the specific coding practices required to secure them.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.14 File Security" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.14 File Security</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Design, develop and implement secure code to protect user file and hardware vulnerabilities from file attacks and side channel attacks.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Designing secure software is critical in preventing unauthorised access to user data and protecting system hardware. This page explores common vulnerabilities like File Attacks and Side-Channel Attacks, and how to implement secure code to mitigate them.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">During</h3><h3 class="sub">Designing Software</h3>
+<h3 class="readles">1.11 APIs</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Design, develop and implement a safe application programming interface (API) to minimise software vulnerabilities.</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the concept of safe API design and the importance of reducing software vulnerabilities.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Identify common security vulnerabilities in APIs.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Implement techniques to secure an API in Python.</span></li>
+<li class="card-text"><span style="font-size: 12pt;"><span style="font-size: 10pt;">Develop a safe API that handles requests and responses securely.</span><br></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4>What is an API?</h4>
+<p>An application programming interface (API) is the intermediary that allows two software applications to interact with each other. An API specifies how two machines—usually a client/user and a server—should interact. These include a set of rules, protocols and definitions that determine how API requests/responses should be formatted.</p>
+<p>APIs are generally designed using a client-server model <span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">through API requests and responses between the client and a server. The client submits an API request, and the server responds to that specific request.&nbsp;</span></p>
+<p><br><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/49287fe18dde6353.png" alt="image.png" width="433" height="266" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527453" data-api-returntype="File" loading="lazy"><br><br></p>
+<p>In an API, the "interface" is generally not directly visible and abstracted away from the end-user side. Instead, the API includes endpoints and specific URLs that clients can request. For example, an endpoint might be <code>/api/v1/users</code> to retrieve a list of users.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">REST APIs</h3>
+<div class="dp-panel-content ">
+<p>REST APIs (Representational State Transfer APIs) are client-server APIs that transfer state resources from the server to the client user.&nbsp;State transfer means that when the client user interacts with a server, transferred data represents the current state of that specific resource. Hence, it allows the client to "know" and "work with" the resource's current state without maintaining a continuous connection with the server.</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-danger">
+<div class="card-body">
+<p class="card-text"><strong>The practical implementation of REST APIs uses web-based protocols like HTTP/HTTPS </strong>(i.e. the framework you use in your Python Flask server)</p>
+</div>
+</div>
+<p>For example, if a client-user wishes to access weather data from the server, the data transferred from the API would be the current state of the current available forecast.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/23e316dbac046985.png" alt="image.png" width="425" height="241" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527287" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Dynamic API Calls</h3>
+<div class="dp-panel-content">
+<div class="flex max-w-full flex-col flex-grow">
+<div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5" data-message-author-role="assistant" data-message-id="0604b751-14c1-4505-9703-d53749d5e6d3" data-message-model-slug="gpt-4o">
+<div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
+<div class="markdown prose w-full break-words dark:prose-invert dark">
+<p>The next topic, <em>Programming for the Web</em>, delves deeper into web pages. Before that, we’ll conceptually explore secure software APIs, focusing on how API calls are made between the server and the client browser to update the web page.&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+<p>A web page updates content dynamically through API requests to the server backend or database. You would typically make API calls using the <code>request</code> function in the <code>Flask</code> library in Python. However, web browsers (Google Chrome, Safari, Firefox, etc) can only execute JavaScript (JS) - a high-level scripting language. Hence, your browser can execute JavaScript (similar to <code>python3 server.py</code>) while you are on your browser.&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary rounded-0">
+<div class="card-body">
+<p class="card-text">You are not expected to write JavaScript in the HSC. However, you are expected to <strong>interpret</strong> JavaScript code.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Let's say a user clicks on a submit button. Your frontend framework will be configured to make an API call after pressing this button. Below is an example of JavaScript code (and its Python equivalent) that creates an API request.</p>
+<p><img src="../../assets/efe4515856283e2b.png" alt="image.png" width="510" height="308" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527312" data-api-returntype="File" loading="lazy"><img style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;" src="../../assets/98933e30272dd399.png" alt="image.png" width="537" height="310" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527304" data-api-returntype="File" loading="lazy"></p>
+<p class=""><em>Example of API request in JavaScript and Python</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<p>&nbsp;</p>
+<h4>Secure APIs Structure</h4>
+<div class="flex max-w-full flex-col flex-grow">
+<div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5" data-message-author-role="assistant" data-message-id="406fc74b-ee84-4fde-9dbf-fb12ce95a3ec" data-message-model-slug="gpt-4o">
+<div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
+<div class="markdown prose w-full break-words dark:prose-invert dark">
+<p>There are various APIs, but the most widely recognised—and the one we will focus on—is <strong>HTTP</strong>, the application protocol commonly used in web development. There are two primary ways of sending data via an API: through the <strong>body</strong> or the <strong>header:&nbsp;</strong></p>
+<ul>
+<li><strong>Header:</strong> Contains metadata about the request, such as authentication tokens, cookies, and content types. This information helps the server understand how to process the request.</li>
+<li><strong>Body: </strong>Carries the main data payload, such as form inputs, JSON objects, or file uploads, that the client wants to send to the server for processing.&nbsp;</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-info">
+<div class="card-body">
+<p class="card-text">In deployment, your application protocol <strong>should be HTTPS over HTTP </strong>as it enables <strong>encryption</strong> of API data.</p>
+</div>
+</div>
+<h4>Techniques for Securing APIs</h4>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Authentication and Authorisation</h3>
+<div class="dp-panel-content ">
+<p><strong>Authentication and Authorisation</strong></p>
+<p>To protect an API, it is essential to ensure that only authorized users can access specific endpoints. <strong>Authentication</strong> verifies the identity of a user, while <strong>authorization</strong> controls what the user is allowed to do.</p>
+<p>Common techniques include:</p>
+<ul>
+<li>API Keys: Simple, unique identifiers sent with each request to verify the client.</li>
+<li>OAuth2: A more secure and flexible token-based authorization mechanism.</li>
+</ul>
+<p><br><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/f2b7c63ee7aac127.png" alt="image.png" width="600" height="323" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527449" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><em>Example of Authorization in Python (using Flask)</em><em></em></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Input Validation and Sanitation</h3>
+<div class="dp-panel-content ">
+<p><strong>Input Validation and Sanitation</strong></p>
+<p>Input validation is crucial to prevent malicious inputs from entering the API. It ensures that data received by the API conforms to expected types, formats, and values.&nbsp;&nbsp;<br><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/29d71c8a5e3860c3.png" alt="image.png" width="517" height="230" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527447" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><em>Input Validation: Checks that the input is in the correct format <br>(e.g., checking that an email is valid).</em></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><em><img src="../../assets/c3144baad09f6da2.png" alt="image.png" width="527" height="193" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527427" data-api-returntype="File" loading="lazy"><br></em></p>
+<p style="text-align: center;"><em>Input Sanitation: Removes or escapes potentially harmful characters from user input <br>to prevent attacks like SQL injection or command injection.</em></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Rate Limiting</h3>
+<div class="dp-panel-content">
+<p><strong>Rate Limiting</strong></p>
+<p>Rate limiting restricts how often users can make requests to your API, helping to mitigate abuse and prevent Denial of Service (DoS) attacks. It is a good practice to set thresholds for how many requests a client can make within a certain time frame.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/67a54bcd6d227ee8.png" alt="image.png" width="566" height="280" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527448" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><em>Example in Python (using Flask-Limiter)</em></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Secure Data Transmission (HTTPS)</h3>
+<div class="dp-panel-content">
+<p><strong>Secure Data Transmission (HTTPS)</strong></p>
+<p>To protect sensitive data during transmission, always use <strong>HTTPS</strong> rather than HTTP. HTTPS encrypts data to prevent man-in-the-middle (MITM) attacks, ensuring that data remains confidential and secure as it moves between client and server.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/4bb6c67c23454e1e.png" alt="image.png" width="573" height="304" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527324" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><em>Flask app with HTTPS ('adhoc' </em><em>used for development purposes)</em></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Error Handling in Secure APIs</h3>
+<div class="dp-panel-content">
+<p><strong>Error Handling in Secure APIs</strong></p>
+<p>A secure API should handle errors gracefully without exposing sensitive information about the system. Error messages should be informative enough to guide the user but not detailed enough to reveal potential vulnerabilities.</p>
+<p>For example, avoid returning stack traces or internal server errors directly to users. Instead, return general error messages with appropriate HTTP status codes.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/c9ab465878324e85.png" alt="image.png" width="622" height="271" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527325" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><em>Example of error handling with HTTP status codes</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://www.ibm.com/topics/api" target="_blank">What is an API (application programming interface)?</a></li>
+<li><a class="inline_disabled" href="https://blog.postman.com/rest-api-examples/" target="_blank">What Is a REST API? Examples, Uses, and Challenges</a></li>
+<li><a class="inline_disabled" title="Link" href="https://blog.miguelgrinberg.com/post/running-your-flask-application-over-https" target="_blank">Running your flask application over HTTPS</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul>
+<li class="card-text"><a class="inline_disabled" title="Link" href="https://edstem.org/au/courses/19403/lessons" target="_blank">Secure APIs</a></li>
+</ul>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.11%20APIs.pptx?d=w045ff8682a174cf19738e1f78833574d&amp;csf=1&amp;web=1&amp;e=DFYdjF">1.11 APIs.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-11-apis" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={045ff868-2a17-4cf1-9738-e1f78833574d}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">1.12 Efficient Execution</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Design, develop and implement code considering efficient execution for the user, </span>including:<br class="card-text"><span class="card-text" style="font-size: 18pt;"><span style="font-size: 10pt;">•</span> <span style="font-size: 12pt;">memory management<br><span style="font-size: 18pt;"><span style="font-size: 10pt;">•</span> <span style="font-size: 12pt;">session management</span></span><br><span style="font-size: 18pt;"><span style="font-size: 10pt;">•</span> <span style="font-size: 12pt;">exception management</span></span></span></span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand how efficient code design impacts application performance.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Implement key strategies like memory management, session handling, and error handling.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Students will be able to describe efficient code execution techniques.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Students can implement Python code with proper memory, session, and exception management.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<p>Designing and implementing efficient code is essential for performance and user experience, resource conservation, and ensuring your application can scale. Whether you’re writing a small script or a large web app, keeping memory use in check, managing user sessions well, and handling errors effectively is crucial.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Memory Management</h3>
+<div class="dp-panel-content ">
+<p>Efficient memory management ensures that system resources are optimally utilised, preventing memory overconsumption and potential system crashes. In Python, memory is managed automatically, but developers must be mindful of practices that can improve efficiency, particularly when working with large data sets.</p>
+<p>&nbsp;</p>
+<p><strong>Best Practices for Managing Memory</strong></p>
+<ul>
+<li>Avoid Unnecessary Object Creation: Reusing objects where possible minimises allocation.</li>
+<li>Use Generators for Large Data Sets: Generators process items one at a time rather than loading entire data sets into memory, making them ideal for handling large data collections.</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<p class="card-text">We can use the <code>yield</code>&nbsp;<span style="margin: 0px; padding: 0px;"><em>generator keyword</em></span> in Python to <strong>yield</strong> one item at a time. This is unlike the <code>return</code> keyword, which would be used to return all items at once.</p>
+<p class="card-text">&nbsp;Think of a <code>return</code> like a delivery person bringing you every item you ordered in one massive delivery. You need to make space for it all right away. But with this, it’s more like the delivery person bringing you one item at a time, only when you need it. No need for extra storage space!</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img class="" style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/ed131131805acf86.png" alt="Example of the use of a generator to same memory (yield pauses the function processing each item one by one)" width="491" height="205" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527326" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><em>Example of the use of a generator for the same memory<br>(<code>yield</code> "pauses" the function processing each item one by one)</em></p>
+<p style="text-align: center;">&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Session Management</h3>
+<div class="dp-panel-content ">
+<p>Session management is essential in web applications to maintain user state across multiple requests. Efficient session management ensures that resources are not overused and that user data is handled securely.</p>
+<p>&nbsp;</p>
+<p><strong>Techniques for Efficient Session Management:</strong></p>
+<ul>
+<li>Use Session Expiry: Implementing session timeouts reduces memory consumption by closing inactive sessions.</li>
+<li>Store Minimal Data: Only essential information should be stored in sessions to minimise the head.</li>
+</ul>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/3e1b0998c38f20a4.png" alt="image.png" width="515" height="341" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527327" data-api-returntype="File" loading="lazy"><em>Example of Session Handling in Flask<br>(User session is created upon login, and session data is managed securely)<br></em><em></em></p>
+<p style="text-align: left;">&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Expectation Management</h3>
+<div class="dp-panel-content">
+<p>Proper exception management ensures that an application can gracefully handle errors without crashing or exposing sensitive information to users. Effective error handling also contributes to the application's overall reliability.</p>
+<p>&nbsp;</p>
+<p><strong>Best Practices for Exception Handling:</strong></p>
+<ul>
+<li>Catch Specific Exceptions: Avoid catching broad exceptions. Instead, handle only those exceptions that are expected.</li>
+<li>Log Errors for Debugging: Logging captures detailed error information, which can help in debugging and improving the system without revealing sensitive system details to the user.</li>
+</ul>
+<p style="text-align: left;">&nbsp;</p>
+</div>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Secure Exception Management in a Login System</h3>
+<div class="dp-panel-content ">
+<p>This example demonstrates how to handle exceptions securely when validating user credentials in a login system. If an error occurs (such as a failed database query or invalid input), the error is logged for developers, but only a generic error message is shown to the user.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/bf2df2ff560fd90c.png" alt="image.png" width="557" height="369" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527329" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Generic Error Handling: Only “Invalid credentials” are shown to the user.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Logging for Security: Detailed error messages are logged for developers.</p>
+</div>
+</div>
+</div>
+<p style="text-align: left;">&nbsp;</p>
+<h4 style="text-align: left;">Further Examples</h4>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Memory Management Techniques</h3>
+<div class="dp-panel-content ">
+<p>Efficient memory management is critical for writing scalable and high-performance applications. In Python, memory is automatically managed through garbage collection, but developers can still optimise code to reduce memory usage. Strategies such as using generators, which yield items one by one instead of holding entire datasets in memory, help to minimise memory consumption.</p>
+<p>Profiling tools allow developers to track memory usage during execution, helping them identify and eliminate memory bottlenecks. Understanding memory management ensures that applications perform smoothly, even when handling large amounts of data or running in resource-constrained environments.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/0e27ed38e5e6f10a.png" alt="image.png" width="562" height="316" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527330" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Session Expiry and Security</h3>
+<div class="dp-panel-content ">
+<p>Effective session management is essential for maintaining user state and ensuring security in web applications. Session expiration policies prevent inactive sessions from consuming server resources indefinitely while enhancing security by logging inactive users out after a specified period.</p>
+<p>Storing minimal data in sessions reduces the risk of exposing sensitive information and keeps resource usage low. Additionally, securing sessions through encryption of session cookies and implementing HTTPS for communication prevents session hijacking and other attacks. Proper session management balances security, performance, and resource efficiency.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/8e685dedb7d038c7.png" alt="image.png" width="456" height="337" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527331" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Error Logging and Debugging</h3>
+<div class="dp-panel-content">
+<p>A cornerstone of robust application design is handling errors in a way that provides useful feedback to developers without exposing sensitive system information to users. Exception management ensures that when an error occurs, it is gracefully handled without crashing the application or causing a poor user experience.</p>
+<p>Logging errors in detail allows developers to trace and fix issues while debugging tools help identify problems at runtime. Effective error management improves software reliability and maintainability, ensuring issues can be addressed quickly without impacting user satisfaction or system security.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/9e4adcb61281eeeb.png" alt="image.png" width="539" height="303" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527332" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p style="text-align: left;">&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://realpython.com/python-profiling/" target="_blank">Profiling in Python</a></li>
+<li><a class="inline_disabled" title="Link" href="https://realpython.com/python-debugging-pdb/" target="_blank">Python Debugging With Pdb</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul>
+<li class="card-text"><a class="inline_disabled" title="Link" href="https://edstem.org/au/courses/19403/lessons" target="_blank">Secure Sessions</a></li>
+</ul>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.12%20Efficient%20Execution.pptx?d=w20983694a90846e28ca1feb60dbd6db0&amp;csf=1&amp;web=1&amp;e=2kY1F7">1.12 Efficient Execution.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-12-efficient-execution" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={20983694-a908-46e2-8ca1-feb60dbd6db0}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">1.13 Minimise Vulnerabilities</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Design, develop and implement secure code to minimise vulnerabilities in user action controls, including:<br class="card-text"><span class="card-text" style="font-size: 18pt;"><span style="font-size: 10pt;">•</span></span> broken authentication and session management<br class="card-text"><span class="card-text" style="font-size: 18pt;"><span style="font-size: 10pt;">•</span></span> cross-site scripting (XSS) and cross-site request forgery (CSRF)<br class="card-text"><span class="card-text" style="font-size: 18pt;"><span style="font-size: 10pt;">•</span></span> invalid forwarding and redirecting<br class="card-text"><span class="card-text" style="font-size: 18pt;"><span style="font-size: 10pt;">•</span></span> race conditions</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:<br></span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand common vulnerabilities related to user action controls in software applications.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Implement secure coding practices to minimize the risks of attacks that exploit these vulnerabilities.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 12pt;"><span style="font-size: 10pt;">Students can identify vulnerabilities such as broken authentication, XSS, CSRF, and race conditions.</span></span></li>
+<li class="card-text"><span style="font-size: 12pt;"><span style="font-size: 10pt;">Students are able to write secure code to mitigate these vulnerabilities.</span></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<p>In modern software development, applications are frequently exposed to numerous threats, particularly in handling user interactions. Vulnerabilities in user action controls, such as broken authentication, cross-site scripting (XSS), and race conditions, can leave applications susceptible to attacks that compromise data integrity, security, and user privacy.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>Broken Authentication</strong></h3>
+<div class="dp-panel-content ">
+<p>Broken authentication and session management could allow attackers to bypass authentication mechanisms, hijack user sessions to impersonate users and gain unauthorised access to server resources.&nbsp;</p>
+<p>Broken authentication occurs when authentication mechanisms are not implemented securely.&nbsp;</p>
+<ul>
+<li>Weak passwords: Lack of input validation where client users are allowed to set short, easily guessable passwords.</li>
+<li>Password storage: Passwords are stored as plaintext in the database. If the database is stolen, users' passwords are exposed.&nbsp;</li>
+<li>Password reuse: Allowing users to reuse old passwords weakens security over time.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/4760469505ed28f9.png" alt="image.png" width="491" height="158" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527333" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Mitigation Strategies:</strong></p>
+<ul>
+<li>Enforce strong password policies: Require complex passwords and encourage multi-factor authentication (MFA) for critical operations. Regex expressions and validation for expected passwords.&nbsp;</li>
+<li>Communication channels: Ensure that all authentication-related requests use HTTPS to encrypt data transmitted between the client and the server.</li>
+<li>Account lockout mechanisms: Implement a mechanism that temporarily locks the account after multiple failed login attempts to prevent brute force attacks.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>Broken Session Management</strong></h3>
+<div class="dp-panel-content">
+<p>Session management controls how sessions are created, maintained, and destroyed. Insecure session management can lead to session hijacking and fixation attacks.</p>
+<ul>
+<li>Session Hijacking: Attackers can steal active session tokens and impersonate users.</li>
+<li>Session Fixation: Attackers provide a session ID to a victim before logging in and then hijack their session using the same ID.</li>
+</ul>
+<p><br><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/11e4720b1f39bee2.png" alt="image.png" width="516" height="387" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527451" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Mitigation Strategies:</strong></p>
+<ul>
+<li>Random Generated Tokens: &nbsp;Each user session is associated with a unique session token.</li>
+<li>Hashed Storage: Session tokens are cryptographically hashed to ensure attackers cannot deduce the token generation algorithm.</li>
+<li>Session Expiration: Implement session timeouts and expiration of tokens&nbsp;</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>XSS</strong></h3>
+<div class="dp-panel-content ">
+<p>Cross-Site Scripting (XSS) is a client-side vulnerability where an attacker injects malicious JavaScript into a website's backend storage or directly into its content. When this malicious script is executed in the victim's browser, the attacker can gain unauthorised access to sensitive information or perform actions as the victim.&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/e6fde7d8d455c75d.png" alt="image.png" width="477" height="366" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527334" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Mitigation Strategies:</strong></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Input validation and sanitization: Always validate and sanitize user inputs before processing them. Ensure that special characters like &lt;, &gt;, and " are properly escaped.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Output encoding: Encode any user-generated data before displaying it on a webpage. Use functions that escape HTML, JavaScript, and CSS elements in the output.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Content Security Policy (CSP): Implement a strict Content Security Policy to restrict the execution of inline scripts and reduce the risk of script-based attacks.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>CSRF</strong></h3>
+<div class="dp-panel-content">
+<p>Cross-site request forgery occurs<span> when an attacker tricks a user into performing unwanted actions where they are already authenticated. An attacker <em>forges</em> a request by exploiting the fact that the user is already authenticated, with session tokens stored in the browser.</span></p>
+<p><span>If the attacker can trick the user into interacting with a malicious website (hence, "cross-site"), the browser automatically includes the stored session tokens when making the request. The server cannot distinguish between a legitimate user-initiated request and the forged one (as the session token is passed in), and assumes the authenticated user initiated it and grants authorisation.&nbsp;&nbsp;</span></p>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/9bd03b08eb66ce42.png" alt="image.png" width="660" height="372" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527335" data-api-returntype="File" loading="lazy"></span></p>
+<p><strong>Mitigation Strategies:</strong></p>
+<p><a class="inline_disabled" href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" target="_blank">CSRF Cheat Sheat</a></p>
+<ul>
+<li>CSRF Token: Create CSRF tokens to verify where a request is coming from. Each CSRF token is linked to a specific user session, making it unique for every user. Allow access to server resources only if both the CSRF token and session token match the user's session.</li>
+<li>Brower Storage: Configure HTTP-only cookies with the SameSite attribute to ensure cookies are only sent with requests from the same front-end URL, preventing them from being shared with other sites.</li>
+</ul>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<p class="card-text">IMPORTANT: Cross-Site Scripting (XSS) can defeat most CSRF mitigation techniques!&nbsp;<br><span style="color: var(--bs-card-color); background-color: var(--bs-card-bg); font-family: inherit; font-size: 1rem;">If a </span><code>&lt;script&gt;</code><span style="color: var(--bs-card-color); background-color: var(--bs-card-bg); font-family: inherit; font-size: 1rem;"> tag executes a API request within it, even with HTTP-only cookies, all credentials can be sent with the cookies, making them vulnerable.</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>Invalid Forwarding and Redirecting</strong></h3>
+<div class="dp-panel-content">
+<p>Invalid forwarding and redirecting occur when attackers manipulate URL parameters to redirect users to unintended locations or bypass authentication and authorization checks.&nbsp;</p>
+<p><strong>Risks:</strong></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Open Redirect Vulnerabilities: Attackers can manipulate redirect parameters to send users to malicious websites, leading to phishing attacks or malware distribution.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Unintended Access to Restricted Pages: An attacker could exploit forwarding mechanisms to bypass access controls and access sensitive pages without proper authorization.</p>
+<p><strong>Mitigation Strategies:</strong></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Whitelist redirect destinations: Instead of allowing freeform redirects, restrict redirects to a predefined list of trusted URLs.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Implement proper access controls: Ensure that redirects and forwards check the user’s authentication status and permissions before granting access to the destination.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Parameter validation: Validate and sanitize any user-controlled input, such as URLs and parameters, before redirecting users.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/9ca79b7619ffcca5.png" alt="7-1.png" width="731" height="227" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527336" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>Race Conditions</strong></h3>
+<div class="dp-panel-content">
+<p>Race conditions occur when multiple processes or threads access and manipulate shared resources in an unsynchronised manner, leading to data corruption or unintended behaviour. These vulnerabilities are particularly prevalent in multi-threaded applications or systems that handle concurrent requests.</p>
+<p>By default, Flask servers run synchronously (each request is processed sequentially). However, there are ways to run the server asynchronously, such as via an ASGI server like Hypercorn or Uvicorn.&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-danger">
+<div class="card-body">
+<p class="card-text"><span style="color: var(--bs-card-color); background-color: var(--bs-card-bg); font-family: inherit; font-size: 1rem;"><strong>You are not expected to have a Flask server run asynchronously,</strong> but your code should be designed to <strong>easily adapt to an asynchronous platform</strong> using existing <code>async</code> and <code>await</code> features.</span></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Risks:</strong></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Data Integrity Issues: When multiple users or processes attempt to modify the same data simultaneously, it can lead to inconsistent or incorrect data being saved or processed.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Exploitation of Time Gaps: Attackers can exploit the time gap between checking a condition and performing an operation. For example, in a banking application, an attacker might be able to transfer money multiple times by exploiting race conditions between balance checks and transaction approvals.</p>
+<p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/923e9633638aaccc.png" alt="image.png" width="805" height="260" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527454" data-api-returntype="File" loading="lazy"><em>Example of a simple race condition where the order of threads changes the result</em></p>
+<p><strong>Mitigation Strategies:</strong></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Locking mechanisms: Use locking mechanisms (e.g., mutexes or semaphores) to ensure that only one process can access a critical section of code or resource at a time.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Atomic operations: Where possible, use atomic operations to ensure that critical tasks are completed in one step, avoiding interruptions by other processes.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Queue management: Implement queue systems that control the order of operations and prevent concurrent access to sensitive data or resources.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Why User Action Control Security is Critical</strong></h4>
+<p>Ensuring security in user action controls is a vital aspect of secure software development. These vulnerabilities directly impact the user experience and can lead to severe breaches, including unauthorised access, data theft, or manipulation of system processes. Understanding these threats and implementing strong defences helps to build trust between users and the application, while also safeguarding sensitive information.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-primary">
+<div class="card-body">
+<h3 class="card-title">GuidedCTF</h3>
+<p class="card-text">Explore a hands-on exercise in SQL injection vulnerability exploitation by following this <a class="inline_disabled" href="https://guidedctf.sec.edu.au/sqli1/login" target="_blank">link</a>.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Emerging Threats and Solutions</strong></h4>
+<p>With the rise of more sophisticated attack techniques, traditional defences against vulnerabilities like XSS and CSRF are no longer sufficient. Emerging solutions include:</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Web Application Firewalls (WAFs): Automatically filter and monitor HTTP requests to block attacks such as XSS, SQL Injection, and CSRF before they reach the application.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Zero Trust Architecture: Every user action must be verified and authenticated, regardless of their previous authentication state, ensuring that every interaction is treated as potentially harmful unless proven otherwise.</p>
+<p>&nbsp;</p>
+<h4><strong>Practical Implementation Tips</strong></h4>
+<p>To ensure a secure development lifecycle:</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Security Audits and Code Reviews: Regularly perform audits and peer code reviews with a focus on identifying potential vulnerabilities in user action controls.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Integrating Security Tools: Leverage tools such as static analysis scanners and automated vulnerability testing platforms (e.g., OWASP ZAP) in your CI/CD pipeline.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Security Training: Developers should receive regular training on secure coding practices to stay current with the latest vulnerabilities and mitigation techniques.</p>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-13-minimise-vulnerabilities" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube-nocookie.com/embed/2RmUMmUj3u8?si=YoAKv9AckcfU4qC5</span></div></div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" target="_blank">Cross-Site Request Forgery Prevention Cheat Sheet</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul>
+<li class="card-text"><a class="inline_disabled" title="Link" href="https://edstem.org/au/courses/19403/lessons" target="_blank">Race Conditions</a></li>
+</ul>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.13%20Minimise%20Vulnerabilities.pptx?d=wffc2915d727a40a68be625a672b7242d&amp;csf=1&amp;web=1&amp;e=wqcuAH">1.13 Minimise Vulnerabilities.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-13-minimise-vulnerabilities" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={ffc2915d-727a-40a6-8be6-25a672b7242d}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">1.14 File Security</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Design, develop and implement secure code to protect user file and hardware vulnerabilities from file attacks and side channel attacks</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Students will learn how to design, develop, and implement secure Python code to protect user files and hardware from file attacks and side-channel attacks.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">design secure code that addresses file and hardware vulnerabilities.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">develop Python code that protects user files from file attacks.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">implement techniques to defend against side-channel attacks.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">understand how to prevent unauthorised access to sensitive user data.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">apply security best practices to safeguard against file and hardware-based threats.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Designing secure software is critical in preventing unauthorised access to user data and protecting system hardware from malicious exploitation.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;File Attacks: How to prevent vulnerabilities related to file access and manipulation.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Side-Channel Attacks: How to mitigate hardware vulnerabilities that leak sensitive information indirectly.</p>
+<p>&nbsp;</p>
+<h4>&nbsp;What Are File Attacks?</h4>
+<p>File attacks exploit weaknesses in how a program accesses or handles files. Attackers often use methods like file inclusion, directory traversal, and buffer overflow to gain unauthorised access, alter, or corrupt files.</p>
+<p>Examples of File Attacks:</p>
+<ul>
+<li>Path Traversal Attack: Manipulating file paths to access directories outside the intended location (e.g., ../../../etc/passwd).</li>
+<li>Insecure File Upload: When a web application improperly handles file uploads, allowing attackers to upload malicious files (e.g., .php files).</li>
+<li>Buffer Overflow: Writing more data into a buffer than it can hold, causing memory corruption, which may lead to arbitrary code execution.</li>
+</ul>
+<p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/b102633397713845.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527337" data-api-returntype="File" loading="lazy"><em>Visualisation of a software buffer overflow. <br>Data is written into A, but is too large to fit within A, so it overflows into B.</em></p>
+<p>&nbsp;</p>
+<h4>What Are Side-Channel Attacks?</h4>
+<p>Side-channel attacks exploit indirect information leakage such as timing, electromagnetic emissions, or power consumption to infer sensitive data.</p>
+<p>Examples of Side-Channel Attacks:</p>
+<ul>
+<li>Timing Attacks: By measuring the time it takes to process different inputs, an attacker can deduce private data (e.g., cryptographic keys).</li>
+<li>Power Analysis: Observing power consumption during cryptographic operations to derive keys.</li>
+<li>Electromagnetic Emanation: Analysing electromagnetic emissions to recover sensitive information processed by hardware.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>The Role of Secure Code</h4>
+<p>Secure coding involves writing software that minimises the risk of exploitation. It ensures that both user files and hardware components are safeguarded from malicious actors.</p>
+<p>Core Security Objectives: Ensure Confidentiality (keeping data private), Integrity (data can’t be altered maliciously), and Availability (systems remain operational and accessible).</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Secure Code Design Principles</h3>
+<div class="dp-panel-content ">
+<p><strong>Principle of Least Privilege (POLP)</strong></p>
+<ul>
+<li>Each process, user, or system component should operate with the minimum level of access necessary to perform its function. This limits the damage that could be done if a vulnerability is exploited.</li>
+<li>Example: A file handler should only have permission to access files it is required to process, rather than full directory access.<br><strong></strong></li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/937a06b4aa3f2591.png" alt="image.png" width="361" height="361" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527339" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Input Validation</strong></p>
+<ul>
+<li>One of the most critical steps to secure file handling. All inputs from users should be treated as untrusted and validated/sanitized before further processing.</li>
+<li>Example: Reject file names with unexpected characters (e.g., ../ to prevent path traversal attacks).</li>
+</ul>
+<p><strong>Fail-Safe Defaults</strong></p>
+<ul>
+<li>When a program fails, it should do so in a way that maintains system security. Deny access by default unless explicitly allowed.</li>
+<li>Example: If a file access check fails, default to denying the operation rather than allowing access.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Preventing File Attacks</h3>
+<div class="dp-panel-content ">
+<p><strong>File Permissions and Access Control</strong></p>
+<ul>
+<li>Assign appropriate file permissions (read, write, execute) to limit unauthorised access. Set files to read-only where necessary.</li>
+<li>Example: Avoid running web applications with elevated permissions like root/admin.<br><strong></strong></li>
+</ul>
+<p><strong>File Path Sanitisation</strong></p>
+<ul>
+<li>Validate and normalise file paths to avoid directory traversal vulnerabilities.</li>
+<li>Example: Instead of allowing users to provide relative file paths, resolve all paths to absolute ones and check if they are within the allowed directory structure.</li>
+</ul>
+<p><strong>Secure File I/O Operations</strong></p>
+<ul>
+<li>Ensure that file operations (e.g., opening, reading, writing files) are done securely.</li>
+<li>Techniques:
+<ul>
+<li>Use secure libraries for handling file I/O.</li>
+<li>Ensure file locks to avoid race conditions where two processes might access the same file simultaneously.</li>
+<li>Restrict file uploads to specific directories and file types.</li>
+</ul>
+</li>
+</ul>
+<p><strong>File Encryption</strong></p>
+<ul>
+<li>Encrypt sensitive files at rest using modern encryption standards (e.g., AES-256) to protect against unauthorised access if a file system is compromised.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Mitigating Side-Channel Attacks</h3>
+<div class="dp-panel-content">
+<p><strong>Constant-Time Algorithms</strong></p>
+<ul>
+<li>Many cryptographic algorithms and operations vary their execution time depending on input, allowing attackers to infer sensitive information. Using constant-time algorithms prevents timing discrepancies.</li>
+<li>Example: Implement constant-time comparison for password validation to avoid timing attacks.</li>
+</ul>
+<p><strong>Blinding and Masking</strong></p>
+<ul>
+<li>Mask sensitive data during computations to prevent attackers from correlating external observations (such as power consumption or timing) with the actual data.</li>
+<li>Example: Apply blinding techniques during cryptographic operations, where the input is randomised before being processed and then corrected afterward.</li>
+</ul>
+<p><strong>Reducing Information Leakage</strong></p>
+<ul>
+<li>Limit external signals like power usage or electromagnetic emissions from hardware that could be analysed by attackers.</li>
+<li>Example: Use shielding to prevent electromagnetic emissions from leaking sensitive information processed by hardware.</li>
+</ul>
+<p><strong>Defensive Coding Techniques</strong></p>
+<ul>
+<li>Be mindful of operations that may unintentionally reveal sensitive data.</li>
+<li>Example: Insert artificial delays or noise into program execution to obscure timing information.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Secure Code Development Best Practises</h3>
+<div class="dp-panel-content">
+<p><strong>Regular Code Review and Testing</strong></p>
+<ul>
+<li>Always conduct manual code reviews with a focus on security. During code reviews, look for:
+<ul>
+<li>Improper input validation.</li>
+<li>Unsafe file handling or insecure defaults.</li>
+<li>Hard coded credentials or secrets.</li>
+</ul>
+</li>
+<li>Ensure that reviewers pay special attention to critical security areas like user authentication, file access, and data encryption.</li>
+<li>Create automated test cases to ensure your application behaves securely under various conditions, including edge cases and malicious inputs.</li>
+<li>Ensure that test cases check for:
+<ul>
+<li>Injection vulnerabilities (e.g., SQL, command injection).</li>
+<li>Unexpected file or input handling behaviours.</li>
+<li>Secure handling of sensitive data like passwords.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Dependency Management</strong></p>
+<ul>
+<li>Regularly update your dependencies to ensure you’re using the latest versions that contain security patches.</li>
+<li>Before updating, review change logs and test your application to confirm the updates don’t introduce breaking changes.</li>
+</ul>
+<p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/cd457ac9825e8c6b.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527338" data-api-returntype="File" loading="lazy"><em>Checking outdated dependencies with </em><code>pip list --outdated</code></p>
+<p><strong>Memory Management</strong></p>
+<ul>
+<li>Properly handle memory allocation and de-allocation to prevent buffer overflows and memory leaks.</li>
+<li>Avoid Exposing Sensitive Data:
+<ul>
+<li>Do not store sensitive information, like passwords or private keys, in memory longer than necessary.</li>
+<li>Be cautious about logging or printing sensitive information, even during development.</li>
+</ul>
+</li>
+<li>Techniques:
+<ul>
+<li>Use safer functions like <code>strncpy</code> instead of <code>strcpy</code> when programming in C.</li>
+<li>Perform boundary checks to avoid writing outside of allocated buffers.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Logging and Monitoring</strong></p>
+<ul>
+<li>Log suspicious file access or unusual program behaviour, but avoid logging sensitive information like user passwords or encryption keys.</li>
+<li>Example: Use monitoring tools to detect unusual file access patterns, like a large number of read/write operations on sensitive files.</li>
+</ul>
+</div>
+</div>
+</div>
+<p style="text-align: center;">&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-14-file-security" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube-nocookie.com/embed/QINoB1_OXUk?si=s4vvv-cHGLB-COwW</span></div></div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.strongdm.com/blog/principle-of-least-privilege" target="_blank">Principle of Least Privilege</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="1.14 File Security" href="https://canvas.kings.edu.au/courses/12951/assignments/204804" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204804" data-api-returntype="Assignment">1.14 File Security</a></li>
+</ul>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.14%20File%20Security.pptx?d=wb478bcc6283247a2b424bfb9d998546f&amp;csf=1&amp;web=1&amp;e=R0GdS0">1.14 File Security.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-14-file-security" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={b478bcc6-2832-47a2-b424-bfb9d998546f}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div><h3 class="sub">After</h3>
+<div class="readnav"><a href="12951-m2.html">← previous module</a><a href="../course-12951.html">all modules</a><a href="12951-m4.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

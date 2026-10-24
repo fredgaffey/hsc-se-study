@@ -1,0 +1,2541 @@
+{
+  "exam": "SEN Holiday Practise 2026",
+  "syllabus": "Software Engineering",
+  "publisher": null,
+  "topics": [
+    "Secure Software Architecture",
+    "Programming for the Web",
+    "Software Automation",
+    "Software Engineering Project"
+  ],
+  "outcomes": [
+    "SE-12-06",
+    "SE-12-01",
+    "SE-12-02",
+    "SE-12-03",
+    "SE-12-08",
+    "SE-12-09",
+    "SE-12-07",
+    "SE-12-05"
+  ],
+  "status": "LIVE",
+  "results_released": true,
+  "submitted": null,
+  "started": null,
+  "duration_minutes": 145,
+  "markers": [
+    "TKS CST"
+  ],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/c4111b57-c021-44e4-8602-eb596b4e641a",
+  "marking_session_id": "c4111b57-c021-44e4-8602-eb596b4e641a",
+  "exam_id": "68123df9-6c12-4207-8d81-3ebcc266170a",
+  "session_id": "494059b2-436d-4b15-8d28-ac1f8797f6aa",
+  "total_mark": null,
+  "parts_answered": 0,
+  "parts_marked": 0,
+  "parts_total": 36,
+  "total_available": 81,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "824ac08d-7d98-4bb8-b2a6-eaec0b9bc14c",
+      "title": "SQL (SEN Holiday Practise 2026 Q1)",
+      "topic": "SQL",
+      "label": "SEN Holiday Practise 2026 Q1",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eb9d3-66c9-7069-8084-f2377fed4857",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "What is the primary purpose of SQL?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Creating objects in programming languages",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Designing user interfaces",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Mapping classes to tables",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Querying and managing relational databases",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "f6d141fa-adca-45ac-b6f5-8e13dd67b81e",
+      "title": "Implementation Method (SEN Holiday Practise 2026 Q2)",
+      "topic": "Implementation Method",
+      "label": "SEN Holiday Practise 2026 Q2",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eb9dc-f40e-72e5-8f75-82398a8c0d1e",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "An organization is upgrading its payroll system and wants to minimize risk during the transition. They decide to run the new system alongside the old system for a period, comparing outputs before fully switching over.\n\nWhich system implementation method are they using?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Direct Installation",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Parallel Installation",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Phased Installation",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Pilot Installation",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "807ae9b6-56c2-4eef-9b83-183059faecbf",
+      "title": "Machine Learning (SEN Holiday Practise 2026 Q3)",
+      "topic": "Machine Learning",
+      "label": "SEN Holiday Practise 2026 Q3",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eb9e4-cb1b-7410-9998-bdf470454b75",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "A telecom company wants to predict whether a customer will leave the service based on features like monthly charges, contract type, and customer tenure.\n\nWhich machine learning algorithm is most suitable for this task?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Linear Regression",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Logistic Regression",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Decision Tree",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "K-Means Clustering",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question_id": "75e079aa-eb2f-4653-a120-a6b5e8d50918",
+      "title": "Back-end Web Development (SEN Holiday Practise 2026 Q4)",
+      "topic": "Back-end Web Development",
+      "label": "SEN Holiday Practise 2026 Q4",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eb9e7-4833-7687-a990-0de7bc0031b8",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "What is a key contribution of back-end web development to a web application?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Creating page layouts",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Designing logos and graphics",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Managing data and server-side functionality",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Styling buttons and fonts",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question_id": "f53a54ed-49e7-49cc-abd3-3eb9c5180411",
+      "title": "Programming for Web - DNS (SEN Holiday Practise 2026 Q5)",
+      "topic": "Programming for Web - DNS",
+      "label": "SEN Holiday Practise 2026 Q5",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eb9ee-600e-7515-ab6c-cc3e69387f0f",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best describes the primary purpose of the Domain Name System (DNS)?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Creating page layouts",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Designing logos and graphics",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Managing data and server-side functionality",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Styling buttons and fonts",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question_id": "b03fadc1-ea94-4c02-8a91-382daa20ca39",
+      "title": "Software Project - Stakeholder (SEN Holiday Practise 2026 Q6)",
+      "topic": "Software Project - Stakeholder",
+      "label": "SEN Holiday Practise 2026 Q6",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eb9f3-eaed-77dd-9d61-badb78e64005",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Why is stakeholder feedback essential when evaluating software effectiveness?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It removes the need for testing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It ensures documentation accuracy",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "It helps compare actual system behaviour with user expectations",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "It reduces development costs directly",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question_id": "d3c64ec5-10be-42a0-99d1-c8e2aa07bde0",
+      "title": "Testing (SEN Holiday Practise 2026 Q7)",
+      "topic": "Testing",
+      "label": "SEN Holiday Practise 2026 Q7",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eb9f5-711a-7538-9541-e455b671ba5c",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which testing type MOST effectively detects defects within individual functions before integration?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "System testing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Integration testing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Unit testing",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Acceptance testing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question_id": "fa4e9f7c-3799-4095-a9eb-ad4f8669a793",
+      "title": "ORM (SEN Holiday Practise 2026 Q8)",
+      "topic": "ORM",
+      "label": "SEN Holiday Practise 2026 Q8",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eb9f8-2708-7421-9668-d4727932a6c5",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "What is ORM mainly used for?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Writing raw SQL queries",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Managing file system",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Interacting with databases using objects in code",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Designing website layouts",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question_id": "23d8efe8-9399-47cf-aa11-83f92fb97e74",
+      "title": "Software Development Approach (SEN Holiday Practise 2026 Q9)",
+      "topic": "Software Development Approach",
+      "label": "SEN Holiday Practise 2026 Q9",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eb9fa-6f4a-7179-a2ed-bce7cd523524",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "A mid-sized software company needs to develop a new mobile application quickly, but its internal team lacks expertise in mobile development and is already overloaded with other projects. The company wants to reduce development time and cost.\n\nWhich software development approach should the company choose?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "In-house Development",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Outsourcing",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Prototyping",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Parallel Installation",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question_id": "9d63931d-99f8-4620-8e4d-1de2a1fcd454",
+      "title": "SQL (SEN Holiday Practise 2026 Q10)",
+      "topic": "SQL",
+      "label": "SEN Holiday Practise 2026 Q10",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba02-6587-7040-accb-f9f825abf044",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which SQL statement is used to retrieve all columns from the Customers table where the Country is 'Australia'?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "SELECT * FROM Customers WHERE Country = 'Australia';",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "GET * FROM Customers WHERE Country = 'Australia';",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "FETCH ALL FROM Customers WHERE Country = 'Australia';",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "SELECT ALL Customers WHERE Country = 'Australia';",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question_id": "07c228c8-e379-43fb-bfd2-e47b11602777",
+      "title": "Reinforcement Learning (SEN Holiday Practise 2026 Q11)",
+      "topic": "Reinforcement Learning",
+      "label": "SEN Holiday Practise 2026 Q11",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba08-c8aa-74d9-9782-9d4ec38114ba",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Why might reinforcement learning outperform supervised learning in autonomous driving systems?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It requires no data",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It learns optimal decisions through continuous interaction with the environment.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "It guarantees perfect accuracy",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "It eliminates ethical concerns",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question_id": "08c9efee-1b3d-48cd-994b-e9d51691f24f",
+      "title": "Requirements (SEN Holiday Practise 2026 Q12)",
+      "topic": "Requirements",
+      "label": "SEN Holiday Practise 2026 Q12",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba0b-6239-7708-87b1-7cb086656981",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "A project team decides to delay implementing several features due to time constraints.\n\nWhich type of requirement would MOST appropriately be postponed?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Authentication system",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Database connectivity",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Error handling",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Optional user personalisation features",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question_id": "50c6bebd-7c81-4c40-aef0-0f480ca4ed63",
+      "title": "Big Data (SEN Holiday Practise 2026 Q13)",
+      "topic": "Big Data",
+      "label": "SEN Holiday Practise 2026 Q13",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba0d-953e-76b9-b18b-578ecf234dac",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which Big Data “V” MOST directly drives the need for real‑time processing architectures?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Variety",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Veracity",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Velocity",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Volume",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question_id": "0a896d84-eb89-411e-b57a-31b18c4fa498",
+      "title": "Protocol (SEN Holiday Practise 2026 Q14)",
+      "topic": "Protocol",
+      "label": "SEN Holiday Practise 2026 Q14",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba0f-a569-739b-a7de-56a6de549b0f",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "If packets arrive out of order at the destination, which protocol ensures they are rearranged correctly?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "DNS",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "HTTP",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "IP",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "TCP",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question_id": "909e3e59-53e7-4c08-a265-9c9405d580d7",
+      "title": "Web Protocol (SEN Holiday Practise 2026 Q15)",
+      "topic": "Web Protocol",
+      "label": "SEN Holiday Practise 2026 Q15",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba16-3d9b-7057-a57e-4f62696b6f59",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "If packets arrive out of order at the destination, which protocol ensures they are rearranged correctly?",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "FTP",
+              "HTTP"
+            ],
+            "rows": [
+              {
+                "statement": "Used to transfer web pages between a browser and a server",
+                "correct": [
+                  "HTTP"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Commonly used for uploading and downloading files",
+                "correct": [
+                  "FTP"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Uses port 80 by default",
+                "correct": [
+                  "HTTP"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Transfers data in plain text by default",
+                "correct": [
+                  "FTP"
+                ],
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "rows": [
+              {
+                "statement": "Used to transfer web pages between a browser and a server",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Commonly used for uploading and downloading files",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Uses port 80 by default",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Transfers data in plain text by default",
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question_id": "31e6bd35-424c-43e8-8af6-0f714702523a",
+      "title": "Automation Systems (SEN Holiday Practise 2026 Q16)",
+      "topic": "Automation Systems",
+      "label": "SEN Holiday Practise 2026 Q16",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba1c-d0b7-76c4-863e-b45151dd7af9",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following statements correctly describe how machine learning supports automation in modern software systems?\n\nSelect all that apply.",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Machine learning systems can improve performance over time by learning from new data",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Machine learning replaces the need for human oversight in all automated systems",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Machine learning can help optimise decision-making in areas such as fraud detection and recommendations",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Machine learning automation always guarantees unbiased and accurate outcomes",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "E",
+                "text": "Machine learning enables automation systems to adapt to changing patterns rather than relying only on fixed rules",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "F",
+                "text": "Machine learning can function effectively without access to data",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A",
+              "C",
+              "E"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question_id": "1bb53dc1-822f-414e-be64-4c483d7cc7dc",
+      "title": "AI vs ML (SEN Holiday Practise 2026 Q17)",
+      "topic": "AI vs ML",
+      "label": "SEN Holiday Practise 2026 Q17",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba23-3557-733c-ac34-840e8103c3ea",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Outline one difference between AI and ML",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Clearly outlines a valid difference between AI and ML using correct terminology"
+            },
+            {
+              "marks": null,
+              "criterion": "Identifies a difference but lacks clarity or accuracy"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Artificial Intelligence is a broad field focused on creating systems that perform tasks requiring human intelligence, while machine learning is a subset of AI that allows systems to learn patterns from data and improve performance without being explicitly programmed."
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question_id": "0b69e257-c3da-429a-b62b-a005ba74de33",
+      "title": "Data Protection (SEN Holiday Practise 2026 Q18)",
+      "topic": "Data Protection",
+      "label": "SEN Holiday Practise 2026 Q18",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba30-dafa-7767-a734-3a4820872eb4",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Outline one benefit of data protection",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Identifies and explains a valid benefit of data protection"
+            },
+            {
+              "marks": null,
+              "criterion": "Identifies a benefit with limited explanation"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Data protection prevents unauthorised access to sensitive information, reducing the risk of data breaches and protecting user privacy."
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question_id": "ffe5a3df-293c-48da-9e04-6464cd6ea959",
+      "title": "Project Management (SEN Holiday Practise 2026 Q19)",
+      "topic": "Project Management",
+      "label": "SEN Holiday Practise 2026 Q19",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba33-53f3-706a-a5e6-5ecd2c807735",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Discuss any ONE issue related to communication in Project Management",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Explains a communication issue and clearly discusses its impact on a project"
+            },
+            {
+              "marks": null,
+              "criterion": "Identifies a relevant issue with some explanation"
+            },
+            {
+              "marks": null,
+              "criterion": "Identifies an issue with minimal explanation"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Poor communication can cause misunderstandings about project requirements. If stakeholders are not regularly consulted, the final product may fail to meet user expectations, leading to rework and increased costs."
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question_id": "11d66cac-22aa-4b76-b4bf-c431a5b3c128",
+      "title": "PWA (SEN Holiday Practise 2026 Q20)",
+      "topic": "PWA",
+      "label": "SEN Holiday Practise 2026 Q20",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": "A small food delivery business operating in a semi‑urban area wants to offer customers a convenient way to view restaurant offerings, submit orders, and monitor delivery progress. A large portion of its customer base experiences inconsistent internet access and uses devices with limited storage capacity. The business is working with a restricted budget and limited technical resources, making the development and long‑term maintenance of multiple platform‑specific applications impractical.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba35-540f-77b7-8af1-8207d65b2520",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Justify the use of a PWA for the above scenario by clearly outlining at least three benefits of using a PWA.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Clearly justifies PWA use with three relevant benefits linked to the scenario"
+            },
+            {
+              "marks": null,
+              "criterion": "Provides two relevant benefits linked to the scenario"
+            },
+            {
+              "marks": null,
+              "criterion": "Provides one relevant benefit"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "A PWA is suitable because it works offline, reducing issues caused by unreliable internet. It requires less storage than native apps and works across multiple platforms, making it cost-effective for a business with limited resources."
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question_id": "45663906-99ea-4094-b626-8ccf35f7444d",
+      "title": "SAST & DAST (SEN Holiday Practise 2026 Q21)",
+      "topic": "SAST & DAST",
+      "label": "SEN Holiday Practise 2026 Q21",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba38-c20e-758d-bd1a-8567707d9999",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Compare and contrast SAST and DAST.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Accurately compares both SAST and DAST, clearly identifying differences"
+            },
+            {
+              "marks": null,
+              "criterion": "Describes both techniques with limited comparison"
+            },
+            {
+              "marks": null,
+              "criterion": "Describes one technique or provides minimal comparison"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "SAST tests the source code without running the application and identifies vulnerabilities early in development. DAST tests an application while running and identifies security vulnerabilities at runtime."
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question_id": "40a307a6-d917-4682-aeaf-1194d85b106d",
+      "title": "Ethical Issue (SEN Holiday Practise 2026 Q22)",
+      "topic": "Ethical Issue",
+      "label": "SEN Holiday Practise 2026 Q22",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba3a-ae0c-760d-b00a-2e7782f7f0d8",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Discuss ONE ethical issue associated with automated systems using machine learning.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Clearly explains an ethical issue and its implications"
+            },
+            {
+              "marks": null,
+              "criterion": "Identifies an ethical issue with some explanation"
+            },
+            {
+              "marks": null,
+              "criterion": "Identifies an ethical issue with minimal explanation"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Bias in training data can result in unfair decisions by automated systems. If historical data contains discrimination, the model may reinforce inequality, reducing trust and fairness."
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question_id": "9306e58f-e737-4a3a-adb2-5729669439cf",
+      "title": "Ethical Issue (SEN Holiday Practise 2026 Q23)",
+      "topic": "Ethical Issue",
+      "label": "SEN Holiday Practise 2026 Q23",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba3e-59b2-77cb-8d20-73cce99b5f71",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "A large online retail company is experiencing rapid growth. As the number of customers increases, the company is struggling to keep up with frequent software updates, high support workloads, and complex internal business processes such as order processing, inventory management, and customer service requests.\n\nTo address these challenges, the company decides to automate some of these process. DevOps, RPA and BPA are some of the strategies considered by the company.\n\nDescribe how machine learning supports automation within any ONE of these automation processes.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Clearly describes how ML supports automation and explains its benefits"
+            },
+            {
+              "marks": null,
+              "criterion": "Identifies ML use with some explanation"
+            },
+            {
+              "marks": null,
+              "criterion": "Identifies ML use with minimal explanation"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "(DevOps example)\n\nML supports DevOps by predicting system failures through monitoring data. This allows issues to be fixed proactively, improving reliability and reducing downtime."
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question_id": "cf6807f3-eeb1-4aef-8593-3b92359f7640",
+      "title": "Privacy by Design (SEN Holiday Practise 2026 Q24)",
+      "topic": "Privacy by Design",
+      "label": "SEN Holiday Practise 2026 Q24",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba43-f03a-70d8-b918-9f10359e23db",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain the key features of privacy by design that would assist in securing any software solution.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Explains multiple key features of Privacy by Design relevant to software security"
+            },
+            {
+              "marks": null,
+              "criterion": "Explains one or two features with limited detail"
+            },
+            {
+              "marks": null,
+              "criterion": "Identifies Privacy by Design with minimal explanation"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Privacy by Design ensures data protection is built into systems from the start. Key features include data minimisation, secure defaults, and encryption, reducing privacy risks."
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question_id": "4813176d-1f81-4fe9-be36-d4d0935ce3f6",
+      "title": "Machine Learning (SEN Holiday Practise 2026 Q25)",
+      "topic": "Machine Learning",
+      "label": "SEN Holiday Practise 2026 Q25",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba47-f708-7089-a8aa-943dcb3f94b2",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Compare supervised learning and unsupervised learning in software automation, providing one scenario/example of where each of them could be used.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Accurately compares both learning types and provides relevant examples"
+            },
+            {
+              "marks": null,
+              "criterion": "Compares learning types with limited explanation or examples"
+            },
+            {
+              "marks": null,
+              "criterion": "Identifies a difference without clear examples"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Supervised learning uses labelled data, such as spam detection. Unsupervised learning finds patterns in unlabelled data, such as customer segmentation."
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question_id": "4ad94ded-f865-4d59-9517-9059ce7f82c2",
+      "title": "Session Management (SEN Holiday Practise 2026 Q26)",
+      "topic": "Session Management",
+      "label": "SEN Holiday Practise 2026 Q26",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba46-1532-76ff-afd8-2e2d3e4dfdfd",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain the purpose of session management in web applications.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Clearly explains the purpose of session management with reference to security and user state"
+            },
+            {
+              "marks": null,
+              "criterion": "Explains session management with limited detail"
+            },
+            {
+              "marks": null,
+              "criterion": "Minimal understanding demonstrated"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Session management maintains user state across requests, improves security by authenticating users, and prevents unauthorised access."
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question_id": "a9f973f1-4f85-4e10-87e2-14d8277a3ee6",
+      "title": "Software Development Approach (SEN Holiday Practise 2026 Q27)",
+      "topic": "Software Development Approach",
+      "label": "SEN Holiday Practise 2026 Q27",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": "A community organisation is developing a digital platform to help members register for events, receive updates, and access resources. While the initial goals of the platform are clear, the organisation expects its needs to change over time as member feedback is collected and new services are introduced. Stakeholders would like to see usable features early, even if the system is not fully complete, so they can evaluate how well the platform meets user expectations. Regular input from users is important, as many members have differing accessibility needs and preferences that may not be fully understood at the start of the project.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba4a-879d-763a-b1ab-558daadb1240",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Which software development approach is most suitable for this scenario?",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Correctly identifies Agile (or appropriate iterative approach)"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Agile Development"
+        },
+        {
+          "part_id": "019eba4b-1728-773f-a198-8129cf989030",
+          "part": "Part B",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Justify your choice, referring to the scenario in your answer.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Justifies approach using clear references to scenario requirements"
+            },
+            {
+              "marks": null,
+              "criterion": "Provides general justification with limited scenario link"
+            },
+            {
+              "marks": null,
+              "criterion": "Minimal justification provided"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Agile allows features to be delivered early and refined based on feedback, which suits a project with evolving requirements and user needs."
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question_id": "3c9e8a5a-17e5-4e7b-aa99-aba8d546763d",
+      "title": "Sandboxing (SEN Holiday Practise 2026 Q28)",
+      "topic": "Sandboxing",
+      "label": "SEN Holiday Practise 2026 Q28",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019eba4e-cb6d-71cf-9c49-7daed5e2c4f6",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe ‘Sandboxing’ concept in Secure Software Architecture.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Accurately describes sandboxing in secure software architecture"
+            },
+            {
+              "marks": null,
+              "criterion": "Describes sandboxing with limited accuracy"
+            },
+            {
+              "marks": null,
+              "criterion": "Minimal description"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Sandboxing isolates code execution in a controlled environment to prevent access to critical system resources. It is used to safely run untrusted code, such as user-uploaded scripts, reducing security risks."
+        },
+        {
+          "part_id": "019eba4f-d3fc-710c-a524-8b64e888b528",
+          "part": "Part B",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Provide an example where sandboxing can be used to avoid security issues.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": null
+            },
+            {
+              "marks": null,
+              "criterion": null
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question_id": "45ab7be0-3eda-479f-b5b1-bfdab8829ccb",
+      "title": "Testing (SEN Holiday Practise 2026 Q29)",
+      "topic": "Testing",
+      "label": "SEN Holiday Practise 2026 Q29",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019ec051-f603-74f9-9a9a-3832b30f00e6",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe the role of testing in ensuring software quality.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Clearly explains testing’s role in quality, reliability, and defect detection"
+            },
+            {
+              "marks": null,
+              "criterion": "Explains testing with limited detail"
+            },
+            {
+              "marks": null,
+              "criterion": "Minimal understanding demonstrated"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Testing identifies defects early, ensures requirements are met, and improves reliability by preventing failures in production."
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "question_id": "fec854c6-6c54-4b30-bfee-23c82a37636f",
+      "title": "Data Dictionary (SEN Holiday Practise 2026 Q30)",
+      "topic": "Data Dictionary",
+      "label": "SEN Holiday Practise 2026 Q30",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019ec852-a37b-76c8-b09f-6e293bd27702",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "RICH_TABLE",
+          "prompt": "Complete the data dictionary below for a food delivery system. Variable names should be relevant to the food delivery system.",
+          "prompt_images": [],
+          "question": {
+            "table": [
+              [
+                {
+                  "type": "text",
+                  "text": "Variable Name"
+                },
+                {
+                  "type": "text",
+                  "text": "Data Type"
+                },
+                {
+                  "type": "text",
+                  "text": "Size / Format"
+                },
+                {
+                  "type": "text",
+                  "text": "Description"
+                },
+                {
+                  "type": "text",
+                  "text": "Example Value"
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "user_id"
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "text",
+                  "text": "50 chars"
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "text",
+                  "text": "1045"
+                }
+              ],
+              [
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "text",
+                  "text": "str"
+                },
+                {
+                  "type": "text",
+                  "text": "50 chars"
+                },
+                {
+                  "type": "text",
+                  "text": "Customer's full name"
+                },
+                {
+                  "type": "text",
+                  "text": "Alex Morgan"
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "email"
+                },
+                {
+                  "type": "text",
+                  "text": "str"
+                },
+                {
+                  "type": "text",
+                  "text": "100 chars"
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "text",
+                  "text": "alex@email.com"
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "restaurant_id"
+                },
+                {
+                  "type": "text",
+                  "text": "int"
+                },
+                {
+                  "type": "text",
+                  "text": "50 chars"
+                },
+                {
+                  "type": "text",
+                  "text": "Unique identifier for each restaurant"
+                },
+                {
+                  "type": "text",
+                  "text": "22"
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "product_name"
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "text",
+                  "text": "80 chars"
+                },
+                {
+                  "type": "text",
+                  "text": "Name of the food item"
+                },
+                {
+                  "type": "text",
+                  "text": "Chicken Burger"
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "price"
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "text",
+                  "text": "decimal"
+                },
+                {
+                  "type": "text",
+                  "text": "Cost of the menu item"
+                },
+                {
+                  "type": "text",
+                  "text": "14.50"
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "order_id"
+                },
+                {
+                  "type": "text",
+                  "text": "int"
+                },
+                {
+                  "type": "text",
+                  "text": "50 chars"
+                },
+                {
+                  "type": "text",
+                  "text": "Unique identifier for each order"
+                },
+                {
+                  "type": "text",
+                  "text": "9008"
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": "order_status"
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": null
+                },
+                {
+                  "type": "text",
+                  "text": "20 chars"
+                },
+                {
+                  "type": "text",
+                  "text": "Current delivery status of the order"
+                },
+                {
+                  "type": "text",
+                  "text": "Delivered"
+                }
+              ]
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "filled_cells": 0
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": null
+            },
+            {
+              "marks": null,
+              "criterion": null
+            },
+            {
+              "marks": null,
+              "criterion": null
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "| Variable Name | Data Type | Size / Format | Description | Example Value |\n|---|---|---|---|---|\n| user\\_id | int | 50 chars | Customer identifier number | 1045 |\n| customer\\_fullname | str | 50 chars | Customer’s full name | Alex Morgan |\n| email | str | 100 chars | User's email | alex@email.com |\n| restaurant\\_id | int | 50 chars | Unique identifier for each restaurant | 22 |\n| product\\_name | str | 80 chars | Name of the food item | Chicken Burger |\n| price | int | decimal | Cost of the menu item | 14.50 |\n| order\\_id | int | 50 chars | Unique identifier for each order | 9008 |\n| order\\_status | boolean | 20 chars | Current delivery status of the order | Delivered |"
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "question_id": "e80da73f-d6f5-4e6c-a7c5-6425a57a87bc",
+      "title": "Machine Learning (SEN Holiday Practise 2026 Q31)",
+      "topic": "Machine Learning",
+      "label": "SEN Holiday Practise 2026 Q31",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019ec85b-a844-762a-a1b4-e6883d0af988",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Discuss “overfitting” in Machine Learning, citing one example.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Clearly explains overfitting and provides a relevant example"
+            },
+            {
+              "marks": null,
+              "criterion": "Explains overfitting but example is weak or unclear"
+            },
+            {
+              "marks": null,
+              "criterion": "Minimal explanation or example"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Overfitting occurs when a model learns training data too well and performs poorly on new data, such as a fraud model trained on outdated patterns."
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "question_id": "72870a38-b95b-420d-b287-d6aa7877d5d6",
+      "title": "Python (SEN Holiday Practise 2026 Q32)",
+      "topic": "Python",
+      "label": "SEN Holiday Practise 2026 Q32",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": "A local food delivery business operates in a busy suburban area and partners with several independent restaurants. Customers place orders through the business’s website, selecting multiple food items from a menu. Each item has a fixed price, and the system calculates the total cost of the order before payment.\n\nTo encourage larger orders, the business offers a 10% discount when the total order value exceeds $30.\n\nThe system must calculate the total, apply the discount where appropriate, and display a clear summary for both customers and staff.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019ec85e-76e9-713a-ae2e-21446b53b6cf",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "A customer places an order containing several food items. The prices of the items are stored in the list below: prices = \\[12.50, 8.00, 5.75\\]\n\nWrite a Python program that calculates and prints the total cost of the order.",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": null
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Correct Python statement producing correct output"
+            },
+            {
+              "marks": null,
+              "criterion": "Minor syntax or logic error"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "print(sum(prices))"
+        },
+        {
+          "part_id": "019ec85e-f334-75bb-88fe-59ba7c13f48a",
+          "part": "Part B",
+          "marks_available": 6,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "The business wants to automate order processing.\n\nWrite a Python function called process\\_order() that calculates the total cost of the order, applying a 10% discount if the total is greater than $30.\n\nThe function should take the following parameters: customer\\_name, and prices. It should return the final amount payable.\n\nOther requirements:\n\n• Use meaningful variable names\n\n• Apply the discount only when the condition is met\n\n• Round the final cost to 2 decimal places\n\nOutput should be printed in the format below:\n\nCustomer: Alex  \nFinal cost: $27.45",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": null
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 6,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Provides a complete and correct Python solution that:\n• defines the function correctly with appropriate parameters\n• correctly calculates the total cost\n• correctly applies the discount condition\n• formats and displays the output correctly\n• uses readable code that meets all question requirements"
+            },
+            {
+              "marks": null,
+              "criterion": "Provides a mostly correct Python solution with one minor error or omission, such as a small formatting issue or minor syntax issue."
+            },
+            {
+              "marks": null,
+              "criterion": "Provides a generally correct solution that calculates the total and attempts the discount condition, but contains an error in logic, output, or structure."
+            },
+            {
+              "marks": null,
+              "criterion": "Provides a partial solution that shows some understanding of the required calculation, but the function, discount condition, or output is incomplete."
+            },
+            {
+              "marks": null,
+              "criterion": "Provides limited Python code that includes one or two relevant elements, but does not meet most of the question requirements."
+            },
+            {
+              "marks": null,
+              "criterion": "Provides a minimal attempt with little relevant Python code or limited understanding of the task."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "def process\\_order(customer\\_name, prices):\n\n    total = sum(prices)\n\n    if total > 30:\n\n        total \\*= 0.9\n\n    total = round(total, 2)\n\n    print(f\"Customer: {customer\\_name}\")\n\n    print(f\"Final cost: ${total}\")\n\n    return total"
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "question_id": "943e462d-81cf-4433-8f09-9dde47c56bcc",
+      "title": "Automation (SEN Holiday Practise 2026 Q33)",
+      "topic": "Automation",
+      "label": "SEN Holiday Practise 2026 Q33",
+      "kind": null,
+      "source": null,
+      "copyright": null,
+      "stimulus": "A large logistics company uses machine learning to automate several parts of its operations. ML systems are used to predict delivery times, detect fraudulent transactions, and optimise warehouse workflows. As the system improves through learning from data, fewer manual checks are required by employees.\n\nSome workers are concerned that continued automation will reduce job opportunities, while others believe machine learning will create new roles that focus on managing, maintaining, and improving these intelligent systems.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "019ec867-9129-73be-b1d8-8f55f07f834c",
+          "part": "Part A",
+          "marks_available": 6,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Discuss how the increasing use of machine learning in automation may impact the future of work.\n\nIn your answer, refer to the scenario and discuss both potential benefits and challenges for individuals and society. You may include your own informed opinion.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 6,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": null,
+              "criterion": "Sustained, well-reasoned discussion addressing benefits and challenges, linked to scenario"
+            },
+            {
+              "marks": null,
+              "criterion": "Clear discussion with some analysis"
+            },
+            {
+              "marks": null,
+              "criterion": "Basic description with limited evaluation"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "SQL": {
+      "mark": 0,
+      "available": 2
+    },
+    "Implementation Method": {
+      "mark": 0,
+      "available": 1
+    },
+    "Machine Learning": {
+      "mark": 0,
+      "available": 7
+    },
+    "Back-end Web Development": {
+      "mark": 0,
+      "available": 1
+    },
+    "Programming for Web - DNS": {
+      "mark": 0,
+      "available": 1
+    },
+    "Software Project - Stakeholder": {
+      "mark": 0,
+      "available": 1
+    },
+    "Testing": {
+      "mark": 0,
+      "available": 4
+    },
+    "ORM": {
+      "mark": 0,
+      "available": 1
+    },
+    "Software Development Approach": {
+      "mark": 0,
+      "available": 5
+    },
+    "Reinforcement Learning": {
+      "mark": 0,
+      "available": 1
+    },
+    "Requirements": {
+      "mark": 0,
+      "available": 1
+    },
+    "Big Data": {
+      "mark": 0,
+      "available": 1
+    },
+    "Protocol": {
+      "mark": 0,
+      "available": 1
+    },
+    "Web Protocol": {
+      "mark": 0,
+      "available": 3
+    },
+    "Automation Systems": {
+      "mark": 0,
+      "available": 3
+    },
+    "AI vs ML": {
+      "mark": 0,
+      "available": 2
+    },
+    "Data Protection": {
+      "mark": 0,
+      "available": 2
+    },
+    "Project Management": {
+      "mark": 0,
+      "available": 3
+    },
+    "PWA": {
+      "mark": 0,
+      "available": 3
+    },
+    "SAST & DAST": {
+      "mark": 0,
+      "available": 3
+    },
+    "Ethical Issue": {
+      "mark": 0,
+      "available": 6
+    },
+    "Privacy by Design": {
+      "mark": 0,
+      "available": 3
+    },
+    "Session Management": {
+      "mark": 0,
+      "available": 3
+    },
+    "Sandboxing": {
+      "mark": 0,
+      "available": 6
+    },
+    "Data Dictionary": {
+      "mark": 0,
+      "available": 3
+    },
+    "Python": {
+      "mark": 0,
+      "available": 8
+    },
+    "Automation": {
+      "mark": 0,
+      "available": 6
+    }
+  }
+}

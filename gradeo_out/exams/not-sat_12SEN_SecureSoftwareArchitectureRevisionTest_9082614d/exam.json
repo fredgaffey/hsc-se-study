@@ -1,0 +1,1154 @@
+{
+  "exam": "12SEN_SecureSoftwareArchitectureRevisionTest",
+  "syllabus": "Software Engineering",
+  "publisher": null,
+  "topics": [
+    "Secure Software Architecture"
+  ],
+  "outcomes": [
+    "SE-12-02",
+    "SE-12-07",
+    "SE-12-04",
+    "SE-12-06",
+    "SE-12-05",
+    "SE-12-03",
+    "SE-12-01"
+  ],
+  "status": "LIVE",
+  "results_released": true,
+  "submitted": null,
+  "started": null,
+  "duration_minutes": null,
+  "markers": [
+    "TKS CST"
+  ],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/9082614d-59df-4fc3-915f-a70b3420e0d5",
+  "marking_session_id": "9082614d-59df-4fc3-915f-a70b3420e0d5",
+  "exam_id": "d2b0ec1c-0201-4d40-a6f4-f2adbfa9e801",
+  "session_id": "ee77deb0-bfe3-4ea0-a3d2-cc30efff8123",
+  "total_mark": null,
+  "parts_answered": 0,
+  "parts_marked": 0,
+  "parts_total": 17,
+  "total_available": 50,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "debb09ce-e22b-4ffc-ac28-307658dbc389",
+      "title": "Security Strategies & Tools (MC, TKS 2025) ",
+      "topic": "Security Strategies & Tools",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "02dbe9e2-dc60-407b-9dd9-94b9ecdaec70",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "In what stage of development can SAST tools be applied?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Only during integration testing.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Only during initial design phases.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Only after the code is completed.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "At any stage after Requirements definition.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "a6816f63-9b2d-453b-8967-dd7d80c71192",
+      "title": "Social/Ethical/Legal Issues (MC, TKS 2025)",
+      "topic": "Social/Ethical/Legal Issues",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "An online retailer updates its platform to include privacy controls that let users manage how their personal data is collected and used.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "eb66e4c2-65c2-43c8-9b21-9a45edec5e80",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "This change is most closely related to which concept?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "User control and compliance with privacy laws",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Providing open-source licensing options for developers",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Introducing new automation tools to reduce staff workload",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Preventing the reuse of copyrighted media assets in advertisements",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "0f0a17df-fa9c-4cf4-b244-854d70fac3ed",
+      "title": "Defensive Data (MC, TKS 2025)",
+      "topic": "Defensive Data",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A web application checks user input both in the browser and on the server before processing it. The client-side checks improve user experience by catching errors early, but the server-side checks are essential for security.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "88d544d0-e64d-4e37-96b3-b04f43d13ecd",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Why is it important to perform both client-side and server-side validation?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Both are equally secure and redundant",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Client-side validation is more secure; server-side validation prevents UI errors",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Server-side validation is more secure; client-side validation enhances usability",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Client-side validation protects against hackers, server-side validation is for speed",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question_id": "d907a988-7e76-47b6-93e9-9817f3c637e6",
+      "title": "Security and Resilience of Software (MC, TKS 2025)",
+      "topic": "Security and Resilience of Software",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "e40ef3e3-e38a-40b1-99c4-c647815298e3",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which combination of practices best helps determine vulnerabilities in a software system?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Software deployment and version control checks",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Updating software licenses and permissions",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Load testing and memory usage analysis",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Penetration testing and user feedback",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question_id": "ca4f4eed-56ce-4012-bbd7-001e4341a0d2",
+      "title": "Fundamental Security Concepts (MC, TKS 2025)",
+      "topic": "Fundamental Security Concepts",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "An online shopping platform implements a logging system that tracks which users accessed which orders and when. This feature is intended to help identify misuse or fraud",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "47036835-fc9a-485f-8e53-c68f325a670e",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which security concept does this feature best support?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Integrity",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Availability",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Authorisation",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Accountability",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question_id": "3793ea66-3591-4d14-9bef-39d2e09cafd7",
+      "title": "File Security (OR, TKS 2025)",
+      "topic": "File Security",
+      "label": "OR",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "cfbd4a92-81fa-4db4-b86f-9c9c770608da",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "For each situation below, select the most appropriate secure coding technique used to prevent the vulnerability",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "Input Validation",
+              "File Path Sanitisation",
+              "Blinding Technique",
+              "Least Privilege"
+            ],
+            "rows": [
+              {
+                "statement": "A web application allows file uploads and needs to prevent directory traversal.",
+                "correct": [
+                  "File Path Sanitisation"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "A developer is writing cryptographic operations and wants to prevent timing attacks.",
+                "correct": [
+                  "Blinding Technique"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "A script is logging into multiple services and only needs read access to user files.",
+                "correct": [
+                  "Least Privilege"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "User input is being used in file names, leading to execution of untrusted commands.",
+                "correct": [
+                  "Input Validation"
+                ],
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "rows": [
+              {
+                "statement": "A web application allows file uploads and needs to prevent directory traversal.",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "A developer is writing cryptographic operations and wants to prevent timing attacks.",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "A script is logging into multiple services and only needs read access to user files.",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "User input is being used in file names, leading to execution of untrusted commands.",
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Correctly selects all options"
+            },
+            {
+              "marks": "1",
+              "criterion": "Partially correct selection"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question_id": "b2fa6865-8c28-4d5a-9455-1a9c6ab94793",
+      "title": "Security Strategy & Tools (SA, TKS 2025)",
+      "topic": "Security Strategy & Tools",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "28065336-ee29-4832-93e8-cce294407a3e",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain the purpose of penetration testing in system security.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 150
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Clearly explains the purpose of penetration testing in system security."
+            },
+            {
+              "marks": "3",
+              "criterion": "Describes the purpose of penetration testing in system security."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines a reason why penetration testing may be used in system security."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Penetration testing, or \"pen testing,\" is a security practice that involves simulating cyberattacks to evaluate a system’s defences. Its purpose is to identify vulnerabilities that could be exploited by malicious actors, allowing organisations to strengthen their security before real threats occur. One technique used is simulated attacks, where ethical hackers attempt to bypass authentication, access sensitive data, or escalate privileges. This helps uncover flaws in access controls and data protection mechanisms. Another technique involves using manual and automated tools, such as Metasploit or Kali Linux, to replicate realistic attack scenarios. These tools can scan for known vulnerabilities and test system responses. By combining these approaches, penetration testing provides a comprehensive view of an application’s security posture. It not only reveals technical weaknesses but also highlights gaps in security policies and procedures, enabling targeted remediation and improved resilience against future attacks."
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question_id": "fefda179-86d0-4f2b-bc37-5aed375fc1cd",
+      "title": "Social/Ethical/Legal Issues (SA, TKS 2025)",
+      "topic": "Social/Ethical/Legal Issues",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "f6446fb7-67e7-47db-baa3-7534a10227db",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe the concept of digital disruption and how the development of secure software can both cause and respond to it.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes digital disruption and how secure software relates to it, with examples."
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides a general description of digital disruption with some link to secure software"
+            },
+            {
+              "marks": "1",
+              "criterion": "Makes a vague or minimal connection between digital disruption and security."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Digital disruption refers to how new technologies change or replace traditional business models. Secure software development can cause digital disruption by enabling innovative services, like blockchain-secured transactions, that make older methods obsolete. It also helps enterprises respond to disruption by protecting data and systems from cyber threats, allowing them to adopt new digital tools safely. For example, a financial company using secure blockchain tech disrupts traditional banking with faster, safer services. At the same time, secure software helps businesses protect themselves and adapt to these technological changes."
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question_id": "12a372a0-5024-4e2d-b1f2-5d61bcfd67d3",
+      "title": "File Security (SA, TKS 2025)",
+      "topic": "File Security",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A web application allows users to upload profile images. A developer implements file upload functionality but does not restrict the file type or directory in which files are stored.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "2d453f4d-c955-4148-ae2b-a3ae8ff7201e",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain two security risks associated with this implementation and suggest one strategy for mitigating each.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Identifies two valid risks and clearly explains a mitigation strategy for each."
+            },
+            {
+              "marks": "2",
+              "criterion": "Identifies one valid risk with a relevant mitigation, or two risks with limited or unclear strategies."
+            },
+            {
+              "marks": "1",
+              "criterion": "Mentions one risk or a mitigation without clear connection or explanation."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "One risk is insecure file upload, where an attacker could upload a malicious script (e.g., `.php`) and execute it on the server. This can lead to remote code execution. To mitigate this, restrict uploads to specific file types such as `.jpg` or `.png` and store files outside the web root.\n\nAnother risk is directory traversal, where attackers manipulate file paths to access sensitive system files. This can be prevented by sanitising file paths, resolving them to absolute paths, and verifying they stay within the intended upload directory. Input validation should also block any relative path indicators like `../`."
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question_id": "1ef9acaa-946d-43ec-b4f0-15882b9c55de",
+      "title": "Minimise Vulnerabilities (SA, TKS 2025)",
+      "topic": "Minimise Vulnerabilities",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "dd4bdb35-8fa0-4282-91cb-b0013f71cab6",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain what Cross-Site Scripting (XSS) attacks are and describe two ways developers can protect their applications against them.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Thorough explanation of XSS and two clear, accurate mitigation methods with reasoning."
+            },
+            {
+              "marks": "3",
+              "criterion": "Thorough explanation of XSS and two clear, accurate mitigation methods with reasoning."
+            },
+            {
+              "marks": "2",
+              "criterion": "Basic understanding of XSS and at least one mitigation method explained."
+            },
+            {
+              "marks": "1",
+              "criterion": "Vague or limited explanation of XSS or mitigation methods."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Cross-Site Scripting (XSS) is a security vulnerability where attackers inject malicious scripts into web pages viewed by other users. These scripts execute in the victim’s browser, allowing attackers to steal sensitive data or perform actions on behalf of the user. To protect against XSS, developers should validate and sanitize all user inputs to remove harmful code or characters. Additionally, encoding output before rendering it in web pages prevents injected scripts from executing by treating them as text rather than code. Implementing a Content Security Policy (CSP) is also effective in restricting the execution of untrusted scripts. Together, these measures reduce the risk of XSS attacks and improve application security."
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question_id": "81e9b8ed-eaad-4616-afee-e9fbf22e7545",
+      "title": "APIs (SA, TKS 2025)",
+      "topic": "APIs",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "3e6a55ee-9207-4cbb-b05e-fdc31a7e9a50",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe the role of HTTPS in securing API communications and explain why it is preferred over HTTP.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Provides a thorough explanation of HTTPS&rsquo;s role in encryption and security, clearly contrasts HTTPS with HTTP, and explains why HTTPS is preferred to protect data integrity and confidentiality"
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides a sound explanation of HTTPS encryption and its benefits, with some contrast to HTTP."
+            },
+            {
+              "marks": "1",
+              "criterion": "Gives a basic explanation mentioning encryption or security but lacks detail or comparison with HTTP."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "HTTPS secures API communication by encrypting data sent between the client and server, preventing eavesdropping or man-in-the-middle attacks. Unlike HTTP, which sends data in plain text, HTTPS uses SSL/TLS protocols to protect data integrity and confidentiality. This ensures sensitive information, such as authentication tokens or personal data, cannot be intercepted or tampered with during transmission, making HTTPS the preferred choice for secure APIs."
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question_id": "a884290e-b222-480f-b814-b8019e70de2a",
+      "title": "Defensive Data (SA, TKS 2025)",
+      "topic": "Defensive Data",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "3e4b8ee7-7b55-4c77-b1af-bb952cdd4241",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe one difference between client-side and server-side input validation, and explain why both are important in a secure application",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes the difference and explains the importance of using both client- and server-side validation in a secure context"
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes the difference and gives a sound explanation of one reason why both are used."
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies a basic difference but explanation is unclear or incomplete."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Client-side validation is performed in the user’s browser before the data is sent to the server, while server-side validation happens after the data reaches the server. Client-side checks improve the user experience by providing quick feedback, but they can be bypassed by attackers. Server-side validation is more secure because it ensures all data is properly checked before it is processed or stored. Using both together ensures better usability and strong protection against invalid or malicious input"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question_id": "1fc90651-ad83-4c0a-8647-23732102acff",
+      "title": "Privacy By Design (SA, TKS 2025)",
+      "topic": "Privacy By Design",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "An e-commerce platform is being developed. During planning, the team performs a privacy impact assessment and decides to minimise customer data collection, avoid storing payment details, and enable encrypted guest checkout.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "5c2852b8-d30a-45e4-bfc5-990bc0a114d6",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain how the team’s actions demonstrate the _Privacy by Design_ approach",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Demonstrates a thorough understanding of the Privacy by Design approach; clearly connects scenario elements to key principles"
+            },
+            {
+              "marks": "2",
+              "criterion": "Shows sound understanding; identifies at least two principles with relevant explanation."
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies one relevant principle with some basic explanation."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "The team’s actions reflect several key principles of Privacy by Design. Conducting a privacy impact assessment early shows a _proactive_ approach by identifying potential risks before launch. Choosing not to store payment details and enabling encrypted guest checkout are examples of _embedding privacy into the design_, ensuring secure and minimal data handling from the outset. Limiting the amount of data collected respects users' privacy by reducing exposure risk and enhancing user trust. Together, these practices show a comprehensive application of the Privacy by Design framework."
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question_id": "f65a2d76-d2b8-4795-ab60-98f9ce11acbe",
+      "title": "Security of Programming Code (SA, TKS 2025)",
+      "topic": "Security of Programming Code",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "514a047f-5d18-424c-8ead-68ca1b7bfe8a",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Discuss ONE strength and ONE limitation of using only static application security testing (SAST) to secure application code.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": null
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Clearly explains 1 strength and 1 limitation of using only SAST."
+            },
+            {
+              "marks": "3",
+              "criterion": "Explains 1 strength OR 1 limitation of using only SAST."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines a strength and limitation."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Static testing, such as SAST, is useful for detecting common coding vulnerabilities early in development without running the code. It’s fast, repeatable, and integrates easily into the development workflow. However, it has limitations, it can’t find runtime issues or logic flaws that only appear when the application is running, meaning some serious vulnerabilities may be missed if dynamic testing isn’t also used."
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question_id": "62994838-1ff4-4d76-816b-db6151964f71",
+      "title": "Security By Design (SA, TKS 2025)",
+      "topic": "Security By Design",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "290a0f3d-f137-441c-a933-76af96710fad",
+          "part": "Part 1",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "A software company is testing a new chat application. How can sandboxing help during the testing phase to improve security?",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly explains how sandboxing helps improve security during testing, such as isolating code and preventing system-wide damage."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes how sandboxing helps improve security during testing, such as isolating code and preventing system-wide damage."
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of sandboxing in testing, but explanation is vague or incomplete."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Sandboxing helps by running the chat application’s new features in an isolated environment where any bugs or vulnerabilities can be detected without risking the main system. This containment prevents harmful code from affecting other parts of the software or the operating system. It allows developers to safely test untrusted or experimental code, reducing the risk of security breaches during development."
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question_id": "15d19f60-4002-48bc-8033-ba3c370759e0",
+      "title": "Security Features (SA, TKS 2025)",
+      "topic": "Security Features",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "c88e06bc-0a2f-446f-9f5d-ad9d465ac2d3",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "A company wants to protect sensitive customer information both when stored and during transmission.\n\nExplain how encryption achieves this and why it is important for data protection",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly explains how encryption secures data at rest and in transit\n\nExplains why encryption is important for protecting sensitive information"
+            },
+            {
+              "marks": "2",
+              "criterion": "Explains one aspect of encryption (either storage or transmission)\n\nProvides some understanding of its importance"
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows basic understanding of encryption or data protection"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Encryption transforms data into a coded format that can only be read by someone with the correct decryption key. When data is stored (at rest), encryption protects it from unauthorised access if the storage device is compromised. For data in transit (sent over networks), encryption prevents attackers from intercepting and reading sensitive information. This dual use of encryption is crucial because it maintains the confidentiality and integrity of customer data, ensuring it cannot be easily stolen or altered."
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question_id": "66a8c3af-fbd6-48c3-b69b-8f6d0f525e5b",
+      "title": "Developing Secure Code (ER, TKS 2025)",
+      "topic": "Developing Secure Code",
+      "label": "ER",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "_\"Secure software design plays a vital role in protecting users from malicious activity and ensuring optimal application performance\"_",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "480844db-0dbd-4b56-a0cc-1ddac9d3d6cd",
+          "part": "Part A",
+          "marks_available": 10,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Discuss how a software developer can design and implement secure and efficient code by considering:\n\n-   User action controls such as broken authentication and XSS\n    \n-   Defensive input handling\n    \n-   File and side-channel attack mitigation\n    \n-   Efficient execution (memory, session, and exception management)\n    \n-   API security principles\n    \n\nIn your response, include relevant examples and refer to key principles such as _least privilege_, _input validation_, and _secure session management_",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 10,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "9-10",
+              "criterion": "Demonstrates a comprehensive understanding of secure and efficient coding practices across multiple areas (user input, APIs, file safety, memory, etc.). Effectively integrates principles such as least privilege, input validation, and session security. Provides relevant, technically accurate examples and justifies strategies clearly. Shows deep insight into why and how these practices prevent vulnerabilities"
+            },
+            {
+              "marks": "7-8",
+              "criterion": "Demonstrates a well-developed understanding of most secure coding areas. Discusses a range of mitigation strategies and principles with generally accurate examples. Explanation shows clarity and depth, though some minor technical inaccuracies or omissions may be present."
+            },
+            {
+              "marks": "5-6",
+              "criterion": "Demonstrates a sound understanding of some security and efficiency concepts. Response includes basic examples or principles, but may lack depth or integration across topics. Some discussion of mitigation is present, though may be partially underdeveloped or simplistic."
+            },
+            {
+              "marks": "3-4",
+              "criterion": "Demonstrates limited understanding of secure coding. Identifies one or two basic ideas, but lacks clarity or technical accuracy. May include irrelevant or vague references to examples or principles."
+            },
+            {
+              "marks": "1-2",
+              "criterion": "Demonstrates minimal understanding of security concepts. Provides isolated statements or keywords with little explanation. Does not address most aspects of the question."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Designing secure and efficient software is crucial for protecting systems from vulnerabilities while maintaining performance and reliability. A well-designed application must safeguard against threats such as broken authentication, file and side-channel attacks, and input-based vulnerabilities, while also ensuring efficient memory use, robust session management, and secure API integration.\n\nOne of the most common and damaging vulnerabilities is broken authentication, where poor session and credential handling allows attackers to impersonate legitimate users. To mitigate this, developers should implement strong password policies (e.g., minimum length, character diversity), hash passwords using secure algorithms (e.g., bcrypt or Argon2), and avoid storing passwords in plaintext. Furthermore, session tokens should be uniquely generated, stored using secure HTTP-only cookies, and tied to session expiration policies. Implementing multi-factor authentication (MFA) can provide an additional security layer against account compromise.\n\nCross-Site Scripting (XSS) is another significant threat, occurring when attackers inject malicious scripts into websites that are then executed in users’ browsers. Developers should employ input validation and output encoding to neutralise untrusted input. For example, escaping special characters like <, > and \" prevents injected scripts from being executed. A Content Security Policy (CSP) further limits the sources from which scripts can be run, mitigating risks even if sanitisation fails.\n\nAlongside secure user interaction, defensive input handling is fundamental. Developers should apply input validation to ensure data adheres to expected formats (e.g., type, length, and range checks) and sanitisation to remove harmful characters. This prevents attacks like SQL injection or command injection. For instance, using a whitelist to accept only alphanumeric characters for usernames can block script injection attempts.\n\nSecurity vulnerabilities also arise in how applications handle file operations and system-level interactions. File attacks, such as path traversal or insecure file uploads, exploit weaknesses in how files are accessed or stored. To prevent this, developers should use file path sanitisation, ensuring all file paths are resolved as absolute and constrained to safe directories. Additionally, uploaded files should be restricted by type (e.g., blocking .exe or .php files) and stored with unique randomised names in non-executable directories.\n\nSide-channel attacks exploit hardware signals—like timing, power, or electromagnetic emissions—to leak sensitive data such as cryptographic keys. To mitigate this, developers can use constant-time algorithms for comparisons and cryptographic operations, preventing attackers from inferring information based on execution time. Blinding and masking techniques can randomise inputs and computations, making power or timing patterns meaningless. Sensitive data should also be encrypted and never left in memory longer than necessary.\n\nIn terms of efficiency, secure software must also be optimised for performance. Memory management is essential—developers should avoid unnecessary object creation and use generators for large data processing to reduce memory load. Tools like memory profilers can help identify leaks or excessive allocation. Session management should limit stored session data and implement timeouts to release server resources for inactive users.\n\nException management plays a dual role in both security and user experience. Programs must avoid crashing or exposing sensitive details when errors occur. Instead, developers should catch specific exceptions, log technical errors securely (e.g., without exposing stack traces to the user), and return general error messages like “Invalid input” or “Something went wrong” to the user interface.\n\nFinally, when building Application Programming Interfaces (APIs), developers must ensure they’re protected from abuse. Use of HTTPS ensures secure transmission, while authentication methods like API keys or OAuth2 prevent unauthorised access. Rate limiting can stop denial-of-service attacks by restricting how frequently clients can make requests. Input validation and CSRF tokens further harden APIs against request forgery.\n\nIn conclusion, secure and efficient coding requires a layered approach, combining validation, encryption, access control, session handling, and secure defaults. By adhering to principles such as least privilege, defensive programming, and fail-safe defaults, developers can significantly reduce the attack surface while maintaining high system performance and a positive user experience."
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "Security Strategies & Tools": {
+      "mark": 0,
+      "available": 1
+    },
+    "Social/Ethical/Legal Issues": {
+      "mark": 0,
+      "available": 4
+    },
+    "Defensive Data": {
+      "mark": 0,
+      "available": 4
+    },
+    "Security and Resilience of Software": {
+      "mark": 0,
+      "available": 1
+    },
+    "Fundamental Security Concepts": {
+      "mark": 0,
+      "available": 1
+    },
+    "File Security": {
+      "mark": 0,
+      "available": 5
+    },
+    "Security Strategy & Tools": {
+      "mark": 0,
+      "available": 4
+    },
+    "Minimise Vulnerabilities": {
+      "mark": 0,
+      "available": 4
+    },
+    "APIs": {
+      "mark": 0,
+      "available": 3
+    },
+    "Privacy By Design": {
+      "mark": 0,
+      "available": 3
+    },
+    "Security of Programming Code": {
+      "mark": 0,
+      "available": 4
+    },
+    "Security By Design": {
+      "mark": 0,
+      "available": 3
+    },
+    "Security Features": {
+      "mark": 0,
+      "available": 3
+    },
+    "Developing Secure Code": {
+      "mark": 0,
+      "available": 10
+    }
+  }
+}

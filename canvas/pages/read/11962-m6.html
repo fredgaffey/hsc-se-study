@@ -1,0 +1,671 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 6 (Term 2: Weeks 1-2) OOP — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">11SENX Software Engineering 2025 · module 7 of 17</p>
+<h1>Cycle 6 (Term 2: Weeks 1-2) OOP</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="11962-all.html">Whole course</a><span class="cur">By module</span><a href="../course-11962.html">By lesson</a></div>
+<h3 class="readles">Introduction to Cycle 6</h3>
+<div id="kl_wrapper_3" class="kl_bookmark variation_2 kl_wrapper">
+<div id="kl_banner" class="">
+
+</div>
+<div id="kl_custom_block_1" class="">
+<h3 class=""><i class="fas fa-hand-sparkles" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Introduction</h3>
+<p>Cycle 6 begins the next phase of your syllabus. This fortnight you begin looking at 'Developing solutions with Code'. We will take a look at developing, testing and debugging software using programming concepts, data structures, project management tools as well as evaluation techniques.</p>
+</div>
+<div id="kl_custom_block_3" class="">
+<h3><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Syllabus</h3>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div>
+<div class="nsw-h4" data-kontent-item-id="52f6232c-eb44-4666-a699-339ef7d978f1" data-kontent-element-codename="title">
+<div id="cg-ecd41d10-0c87-471a-b2de-1454076094d9" class="group nsw-h4 mui-style-1qtqq7p" data-kontent-item-id="ecd41d10-0c87-471a-b2de-1454076094d9" data-kontent-element-codename="title"><span class="align-middle mr-2 [&amp;&gt;*]:inline [&amp;&gt;*]:scroll-mt-4">Developing solutions with code</span></div>
+<div class="mt-3 space-y-8">
+<div>
+<ul class="list-disc mt-0 space-y-0 pl-[1.1875rem]">
+<li data-kontent-item-id="c4cad8bd-158d-4f3f-8ed8-4afff87e8bf8">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Apply skills in computational thinking and programming to develop a software solution</p>
+</div>
+<div class="bold mb-1 mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>converting an algorithm into code</li>
+<li>using control structures</li>
+<li>using data structures</li>
+<li>using standard modules</li>
+<li>creating relevant subprograms that incorporate parameter passing</li>
+</ul>
+</div>
+</li>
+<li data-kontent-item-id="5ae74299-e0b4-485c-aec0-4fc0f735b7fe">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Implement data structures that support data storage</p>
+</div>
+<div class="bold mb-1 mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>single and multidimensional arrays</li>
+<li>lists</li>
+<li>trees</li>
+<li>stacks</li>
+<li>hash tables</li>
+</ul>
+</div>
+</li>
+<li data-kontent-item-id="4a28b772-f21a-4f6b-953c-ac7e370b1dd8">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Compare the execution of the Waterfall and Agile project management models as applied to software development</p>
+</div>
+</li>
+<li data-kontent-item-id="cca72bee-2ea8-4e03-bdff-caad5e3a679c">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Test and evaluate solutions, considering key aspects including functionality, performance, readability of code, quality of documentation</p>
+</div>
+</li>
+<li data-kontent-item-id="606f84a4-d06d-4d3f-9ded-2935b5444f83">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Use debugging tools</p>
+</div>
+<div class="bold mb-1 mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>breakpoints</li>
+<li>single line stepping</li>
+<li>watches</li>
+<li>interfaces between functions</li>
+<li>debugging output statements</li>
+<li>debugging software available in an integrated development environment (IDE)</li>
+</ul>
+</div>
+</li>
+<li data-kontent-item-id="f2b6ff71-f822-4c32-866b-ea3e7fbd682f">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Determine sets of suitable test data</p>
+</div>
+<div class="bold mb-1 mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>boundary values</li>
+<li>path coverage</li>
+<li>faulty and abnormal data</li>
+</ul>
+</div>
+</li>
+<li data-kontent-item-id="c67de485-d8ea-40ff-a0b9-1deee62014dd">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Determine typical errors experienced when developing code, including syntax, logic and runtime, and explain their likely causes</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/introduction-to-cycle-6" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/fn2IO3TUanw?si=hCexJrIxfC9NHRrn</span></div></p>
+<p>&nbsp;</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="kl_custom_block_2" class="">
+<h3 class=""><i class="fas fa-comments" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>Activity</h3>
+<p>Through the activities in this cycle, you will complete the following EdStem activities:</p>
+<ul>
+<li>Hash Tables</li>
+<li>Debugging Tools</li>
+<li>Test Data</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p><h3 class="sub">During</h3><h3 class="sub">Understanding and Programming in OOP</h3>
+<h3 class="readles">2.1 The Object Oriented Paradigm</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Compare procedural programming with OOP</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Explore and comprehend the fundamental principles of the object-oriented programming paradigm, including classes, objects, inheritance, polymorphism, abstraction and encapsulation</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Define key OOP concepts</span></li>
+<li><span style="font-size: 13.3333px;">Explain the advantages of using OOP</span></li>
+<li><span style="font-size: 13.3333px;">Demonstrate an understanding of classes and objects</span></li>
+<li><span style="font-size: 13.3333px;">Apply OOP principles to create simple applications</span></li>
+<li><span style="font-size: 13.3333px;">Identify practical applications of OOP principles</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<hr>
+<h4>&nbsp;<strong>The Object-Oriented Paradigm</strong></h4>
+<p><strong>Object-oriented programming (OOP)</strong> is a programming paradigm that structures computer code using the <strong>concept of objects</strong>, making the code easier to understand and manage. <span>Instead of just writing lines of instructions one after the other (procedural programming), we organise our code into special groups called <strong>classes</strong>. Think of classes as templates or blueprints for creating specific types of <strong>objects</strong>.</span></p>
+<hr>
+<p>An object is a bit like a <strong>playable character in a multiplayer video game.</strong></p>
+<p>All players have data (<strong>attributes</strong>) that are associated with them:</p>
+<ul>
+<li>Gamertag</li>
+<li>Position</li>
+<li>Health Stats</li>
+<li>Attack Stats</li>
+<li>Defence Stats</li>
+</ul>
+<p>Players also have actions (<strong>methods</strong>) to handle specific tasks that affect their own attributes or the attributes of other players:</p>
+<ul>
+<li>Move up/down/left/right</li>
+<li>Heal</li>
+<li>Deal damage</li>
+<li>Block attack</li>
+</ul>
+<p>Players can also spawn (<strong>instantiation</strong>) multiple times depending on how many users join the game, all with the same set of methods and attributes.</p>
+<p>The game programmer can also stop people from cheating in the game by seeing the current coordinate position of all players. The programmer achieves this by keeping the position attribute private to the player themselves (<strong>encapsulation</strong>), so that players can't access another player's position.</p>
+<p>We may also want different subtypes of players (inheritance), like heroes, villains, healers, and demons.</p>
+<hr>
+<p>Overall, OOP helps us keep things organised and makes it easier to reuse and fix our code. It's a bit like building with Lego blocks – you have different pieces that fit together to create something bigger (your program).</p>
+<p>A note on <strong>terminology</strong> between Procedural Programming and Object Oriented Programming. In <strong>classes</strong>,</p>
+<ul>
+<li><strong>Variables</strong> are called <strong>Attributes</strong></li>
+<li><strong>Functions/Procedures</strong> are called <strong>Methods</strong></li>
+</ul>
+<p>&nbsp;</p>
+<h4>&nbsp;<strong>Procedural Programming vs Object-Oriented Programming</strong></h4>
+<p>The main difference between <strong>procedural programming</strong> and <strong>object-oriented programming</strong> is in their fundamental approach to <strong>organising code and data.</strong></p>
+<p>In procedural programming, the code is organised around procedures or functions, with a focus on the sequential execution of these procedures to achieve a task. Data is often global and can be accessed from anywhere in the program, leading to potential issues with data integrity and code maintenance.</p>
+<p>On the other hand, <strong>object-oriented programming</strong> (OOP) organises code around objects, which encapsulate both data and behaviour. Objects are instances of classes, which serve as blueprints defining the structure and behaviour of objects. OOP emphasises modularity, encapsulation, inheritance, and polymorphism, allowing for more organised, reusable, and easier-to-maintain code compared to procedural programming.</p>
+<p>In summary, procedural programming revolves around <strong>functions or procedures</strong>, while object-oriented programming revolves around <strong>objects and classes</strong>.</p>
+<table style="border-collapse: collapse; width: 100%; height: 347px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 49.9528%; height: 29px;"><strong>Procedural-Oriented Programming (POP)</strong></td>
+<td style="width: 49.9528%; height: 29px;"><strong>Object-Oriented Programming (OOP)</strong></td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 49.9528%; height: 53px;">
+<p>It is a top-down approach</p>
+</td>
+<td style="width: 49.9528%; height: 53px;">It is a bottom-up approach</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 49.9528%; height: 53px;">
+<p>The program is divided into functions</p>
+</td>
+<td style="width: 49.9528%; height: 53px;">The program is divided into objects</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 49.9528%; height: 53px;">
+<p>Doesn't use <em>Access Modifiers</em><em></em></p>
+</td>
+<td style="width: 49.9528%; height: 53px;">
+<p>Makes use of&nbsp;<em>Access Modifiers</em> 'public', 'private', 'protected'</p>
+</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 49.9528%; height: 53px;">
+<p>It is less secure</p>
+</td>
+<td style="width: 49.9528%; height: 53px;">It is more secure</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 49.9528%; height: 53px;">
+<p>Data can move freely from function to function within programs</p>
+</td>
+<td style="width: 49.9528%; height: 53px;">The object can move freely within member functions</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 49.9528%; height: 53px;">
+<p>It does not support inheritance</p>
+</td>
+<td style="width: 49.9528%; height: 53px;">It supports inheritance</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="dp-content-block kl_activities2">
+<div id="kl_activities2">
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="Python OOP Quiz" href="https://canvas.kings.edu.au/courses/11962/assignments/179194" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179194" data-api-returntype="Assignment"><i>Python OOP Quiz</i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%202.%20The%20Object-Oriented%20Paradigm/PPs/2.1%20The%20Object%20Oriented%20Paradigm.pptx?d=w18d0db4e6b87481eaff60d3a3cb3492b&amp;csf=1&amp;web=1&amp;e=bvxXod">2.1 The Object-Oriented Paradigm.pptx</a></p>
+<div class="dp-embed-wrapper" data-ratio-w="32.88" data-ratio-h="0.03"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-1-the-object-oriented-paradigm" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={18d0db4e-6b87-481e-aff6-0d3a3cb3492b}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">2.2.1 OOP Features: Objects, Classes &amp; Encapsulation</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Apply the key features of an object-oriented programming (OOP) language Including:<br class="card-text">- classes<br class="card-text">- objects<br class="card-text">- encapsulation</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Gain a deep understanding of object classes and encapsulation, two foundational principles of object-oriented programming, and learn how to effectively apply these concepts in software development</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Define objects, classes and encapsulation</span></li>
+<li><span style="font-size: 13.3333px;">Explain the characteristics of objects and classes</span></li>
+<li><span style="font-size: 13.3333px;">Implement classes in a programming environment</span></li>
+<li><span style="font-size: 13.3333px;">Demonstrate the use of encapsulation</span></li>
+<li><span style="font-size: 13.3333px;">Apply encapsulation to ensure data integrity</span></li>
+<li><span style="font-size: 13.3333px;">Identify practical applications of object classes and encapsulation</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<hr>In <strong>2.1, The Object-Oriented Paradigm, we provided a high-level overview of the main concepts of object-oriented programming. In module 2.2, we will discuss these concepts in more detail</strong>.<br><hr>
+<h4><strong>Classes</strong></h4>
+<p><span><strong>A class is like a blueprint or template for creating objects.</strong> It defines the properties (<strong>attributes</strong>) and behaviours (<strong>methods</strong>) that objects of that class will have. Think of a class as a <strong>recipe for creating objects.</strong> It encapsulates data (see encapsulation heading below) for the object and provides methods to operate on that data.</span></p>
+Here's how we construct a generic <code>Person</code> class in Python:<br>
+<p><strong>Class Name</strong></p>
+<p><span>In Python, a class is defined using the </span><code>class</code><span> Keyword followed by the class name.</span> It is a standard programming convention to capitalise the first letter of a class name (e.g. Person, Animal, Vehicle).</p>
+<p><img src="../../assets/eaa77f32de33e2b6.png" alt="image.png" width="500" height="188" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197377" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Attributes</strong></p>
+<p>After defining a class, we need to list the attributes that a <code>Person</code> should have. Since the value of these attributes varies from person to person, we will initially set each of these to <code>None</code>.</p>
+<p><strong><img src="../../assets/8515ba09c66ee5d4.png" alt="image.png" width="500" height="350" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197380" data-api-returntype="File" loading="lazy"></strong></p>
+<p><strong>Constructor Method</strong></p>
+<p>We now need to add a constructor method that builds an object out of the <code>Person</code> class.</p>
+<p><span>A constructor in Python is a special method that gets called automatically when a new object of a class is created. It is used to initialise the object's state, using the arguments to pass values specific to the person being created into our previously empty attributes. In Python, the constructor method is named </span><code>__init__</code><span>. It allows you to perform any necessary setup operations when creating a new instance of a class.</span></p>
+<p><span><strong>Note:</strong> In Python, <code>self</code> is a reference to the current instance of a class. It's used inside methods to access the attributes and other methods of the containing class. For example, <code>self.firstName</code> refers to the <code>firstName</code> attribute defined above the constructor method whereas <code>firstName</code> inside the constructor refers to the method's parameter.</span></p>
+<p><strong><img src="../../assets/7d63ec4186d9c538.png" alt="image.png" width="700" height="492" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197383" data-api-returntype="File" loading="lazy"></strong></p>
+<p><strong>Methods</strong></p>
+<p>Finally, we can add in the methods that perform actions based on the attributes.</p>
+<p><span>Methods in Python are functions defined within a class. They are used to define the behavior of objects created from that class. Methods can access and modify the attributes (data) of an object and perform actions related to that object.</span></p>
+<p><img src="../../assets/82caf53f8f7fa4e7.png" alt="image.png" width="700" height="766" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197386" data-api-returntype="File" loading="lazy"></p>
+<h4><strong>Objects</strong></h4>
+<p>An object is an instance of a class. It is created using the blueprint provided by the class (this is called <strong>instantiation</strong>). Each object has its own set of properties and can perform actions defined by the class.</p>
+<p><span>In Python, you instantiate an object by calling the class name followed by parentheses containing any arguments required by the class's constructor (the </span><code>__init__</code><span> method). This process creates a new instance of the class, which is an object with its own set of attributes and methods.</span></p>
+<p>In the context of our <code>Person</code> class, we can create multiple <code>Person</code> objects, each representing a different person with unique attributes. We can also access the components of our instantiated class (i.e. accessing the object's attributes and using the object's methods).</p>
+<p><img src="../../assets/ec5413c6e97ead9f.png" alt="image.png" width="900" height="506" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197026" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>John Smith<br>Phone No: 0432783491<br>Email: johnsmith@email.com<br>Is not an adult<br>Is an adult</pre>
+<p>&nbsp;</p>
+<h4><strong>Encapsulation</strong></h4>
+<p>Encapsulation is one of the fundamental principles of object-oriented programming (OOP).</p>
+<p>Encapsulation allows us to hide the attributes (data) within a class and makes them available <strong>only</strong> through well-defined interface methods (getter and setter methods). The only way to access and modify hidden attributes are through these interface methods. This helps in maintaining consistency and security for the data in an object.</p>
+<p>We can also hide certain methods which are only used from within the class itself and don't need to be accessed by other objects or the rest of the program.</p>
+<p>Attributes and methods can be set to three different <strong>visibility modifiers</strong>:</p>
+<ul>
+<li><strong>Public</strong> (default) -&nbsp;<i>Accessible inside or outside the class.</i></li>
+<li><strong>Protected <code>_</code></strong> - <em>Accessible within the class or its sub-classes</em></li>
+<li><strong>Private <code>__</code></strong> - <em>Accessible only within the class.</em><em></em></li>
+</ul>
+<p>&nbsp;</p>
+<p>The key ideas behind the use of encapsulation are:</p>
+<ol>
+<li>
+<p><strong>Data Hiding</strong>: Encapsulation allows you to hide the internal state of an object from outside interference. This means that the implementation details of the class are hidden as private and cannot be accessed directly from outside the class.</p>
+</li>
+<li>
+<p><strong>Access Control</strong>: Encapsulation enables you to control access to the attributes of a class. By defining access modifiers like public, private, and protected, you can specify which parts of the class are accessible from outside and which are not.</p>
+</li>
+<li>
+<p><strong>Abstraction</strong>: Encapsulation provides a way to abstract the implementation details of a class. It allows you to focus on what an object does rather than how it does it, promoting a clear separation between the interface and implementation.</p>
+</li>
+</ol>
+<p>Encapsulation helps in achieving modularity, reusability, and maintainability of code by reducing dependencies and preventing unintended modifications to the internal state of objects.</p>
+<p>&nbsp;</p>
+<p>In Python, encapsulation can be achieved by using private attributes and methods, indicated by prefixing them with a <strong>double underscore</strong> <code>__</code>.</p>
+<p>Consider our example class <code>Person</code>. Using encapsulation, we can ensure that the <code>age</code> attribute is never set to a value less than or equal to 0 by first making it private using a two underscore (<code>__</code>) prefix.</p>
+<p><img src="../../assets/43ffbd85078bdc0a.png" alt="image.png" width="500" height="343" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197393" data-api-returntype="File" loading="lazy"></p>
+<p>Since the <code>__age</code>&nbsp;attribute is now hidden from everything outside the Person class in our program, we must write a <strong>getter method</strong> (<code>getAge()</code>) and <strong>setter method</strong> (<code>setAge()</code>) for the <code>__age</code>&nbsp;attribute.</p>
+<p><span>Getter and setter methods are like guards for the information inside an object. They control how you can see and change that information (i.e. other objects cannot directly access the <code>__age</code> attribute, they can <strong>only use the getter and setter methods that the programmer provides</strong>).</span></p>
+<p><strong>Getter Method: getAge()</strong></p>
+<ul>
+<li>Getter methods are used to access the value of a private attribute from outside the class. In this program, <code>getAge()</code> is a getter method that allows retrieving the value of the private attribute <code>__age</code>.</li>
+<li>It returns the value of <code>__age</code>.</li>
+</ul>
+<p><strong>Setter Method: setAge()</strong></p>
+<ul>
+<li>Setter methods are used to modify the value of a private attribute from outside the class, usually with some validation.</li>
+<li>In this program, <code>setAge(age)</code> is a setter method that sets the value of the private attribute <code>__age</code>.</li>
+<li>Before setting the age, it checks whether the input <code>age</code> is non-negative (greater than 0). If it's not, it prints a message indicating that the age cannot be less than or equal to 0 (the attribute remains as <code>None</code>).</li>
+<li>If the input age is valid, it sets the value of <code>__age</code> to the input value.</li>
+</ul>
+<p><strong>Constructor:</strong></p>
+<ul>
+<li>Since we now have a setter method (<code>setAge()</code>) that guards the <code>__age</code> attribute against unwanted inputs, we can replace the variable assignment <code>self.__age = age</code> in the constructor with <code>self.setAge()</code>.</li>
+</ul>
+<p><img src="../../assets/e212cdbb9c2dcbbc.png" alt="image.png" width="700" height="784" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197062" data-api-returntype="File" loading="lazy"></p>
+<p>Below, we instantiate the Person class but the <code>__age</code> attribute is now <strong>private</strong> instead of <strong>public</strong>.</p>
+<p>When accessing and printing the values of the <code>firstName</code> and <code>address</code> attributes, we are not given any errors because they are <strong>public</strong> and easily accessible to everything in our program.</p>
+<p>However, if try to access and print the value of the <strong>private</strong> <code>__age</code> attribute, we are given an error which says that <strong>the program cannot find the attribute</strong> <code>__age</code>&nbsp;(which is what we want since we've hidden that attribute from everything outside the Person object).</p>
+<p><img src="../../assets/b3becf0b2e676ff0.png" alt="image.png" width="900" height="356" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197066" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>John<br>5 Pennant Hills Road<br><br>Traceback (most recent call last):<br>&nbsp; File "/Users/martin/Desktop/Python OOP/Person.py", line 60, in &lt;module&gt;<br>&nbsp; &nbsp; print(person1.__age)<br>AttributeError: 'Person' object has no attribute '__age'</pre>
+<p>&nbsp;</p>
+<p>Since the <code>__age</code> attribute is private, we must use <code>getAge()</code> to access its value. We don't get an error unlike before.</p>
+<p><img src="../../assets/9cfceeb32d12f919.png" alt="image.png" width="900" height="356" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197078" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>John<br>5 Pennant Hills Road<br>17</pre>
+<p>&nbsp;</p>
+<p>If we want to change the value of the <code>__age</code> attribute, we must use <code>setAge()</code> method instead of directly accessing the attribute.</p>
+<p><img src="../../assets/7910cf6a50810e9e.png" alt="image.png" width="900" height="506" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197109" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>Is not an adult<br>Is an adult</pre>
+<p>&nbsp;</p>
+<p>If we try to enter an invalid age, the <code>__age</code> attribute will not change its value because it is guarded by the checks in the <code>setAge()</code> method.</p>
+<p><img src="../../assets/8a6121575b80c259.png" alt="image.png" width="900" height="319" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196982" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>Can't have an age &lt;= 0!<br>17</pre>
+<p>&nbsp;</p>
+<p><strong>Full Code Example (so far):</strong></p>
+<p>In the EdStem activity: <em>Objects, Classes &amp; Encapsulation,&nbsp;</em>you will be tasked to turn ALL public attributes into private attributes (including creating a getter and setter method for each private attribute). <strong>When writing OOP code, it is best practice to keep all attributes as private.</strong></p>
+<p><img src="../../assets/0f47ecabfc11a9f7.png" alt="image.png" width="900" height="1163" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197031" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<hr></div>
+<div class="dp-content-block kl_activities2">
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank"><em>Edstem Activity: Objects, Classes &amp; Encapsulation</em></a></li>
+<li><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank"><em>Edstem Activity: Multi-files</em></a><em></em></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%202.%20The%20Object-Oriented%20Paradigm/PPs/2.2.1%20Objects%20classes%20and%20encapsulation%20.pptx?d=w39c4a908ecb845129a8267956bc6db1c&amp;csf=1&amp;web=1&amp;e=cLJLb9">2.2.1 Objects classes and encapsulation.pptx</a></p>
+<div class="dp-embed-wrapper" data-ratio-w="32.88" data-ratio-h="0.03"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-2-dot-1-oop-features-objects-classes-and-encapsulation" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={39c4a908-ecb8-4512-9a82-67956bc6db1c}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">2.2.2 OOP Features: Inheritance</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Apply the key features of an object-oriented programming (OOP) language Including:<br class="card-text">- inheritance</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Learn and apply the concept of inheritance in object-oriented programming to effectively reuse and extend existing code</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Define inheritance</span></li>
+<li><span style="font-size: 13.3333px;">Explain the benefits of using inheritance</span></li>
+<li><span style="font-size: 13.3333px;">Implement single inheritance in a programming environment</span></li>
+<li><span style="font-size: 13.3333px;">Use inherited methods</span></li>
+<li><span style="font-size: 13.3333px;">Demonstrate the use of the <code>super()</code> function</span></li>
+<li><span style="font-size: 13.3333px;">Identify real-world applications of inheritance</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<hr>Please complete the EdStem Activities: <span><em>Objects, Classes &amp; Encapsulation, and </em><strong>then</strong> <em>Multi-file Programs</em>&nbsp;<strong>BEFORE</strong> continuing further. If you do not complete these, <strong>you will be lost</strong> following the walkthrough below.</span></div>
+<div class="dp-content-block kl_custom_block_4"><hr></div>
+<div class="dp-content-block kl_custom_block_3">
+<h4><strong>Inheritance</strong></h4>
+<p><span>Inheritance is a key concept in object-oriented programming (OOP) that allows classes to <strong>inherit attributes and methods</strong> from other classes.&nbsp;This enables the creation of a <strong>hierarchical structure of classes</strong>, where <strong>child classes</strong> can reuse and extend the functionality of their <strong>parent class</strong>.</span></p>
+<p><span>When a class inherits from another class, it automatically <strong>gains access to all the attributes and methods</strong> that are defined in the parent class. This means that the child class can use and manipulate the data and behaviours defined in the parent class <strong>without redefining them.</strong></span></p>
+<p>Inheritance in OOP can be understood as an <strong>"is-a"</strong> relationship, which represents a form of classification or categorisation. In this context, <strong>the child class is said to be a more specialised version of the parent class.<br><br></strong></p>
+<p><strong>Person Class</strong></p>
+<p>Recall the <code>Person</code> class in <code>Person.py</code> from the end of the EdStem Activity: <span><em>Multi-file Programs</em></span>.</p>
+<p>Please take a look at the finished <code>Person.py</code> code as a reference <strong>only after</strong> attempting the EdStem Activities!</p>
+<div class="dp-panels-wrapper">
+<div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary dp-panel-outside-panel">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Sample Answer for Person.py</h3>
+<div class="dp-panel-content">
+<p><img src="../../assets/85bbfb1e0264fe81.png" alt="image.png" width="700" height="1842" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197191" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Student Class</strong></p>
+<p>We can create a new <code>Student</code> class as a <strong>child class</strong> of <code>Person</code> (since <strong>Student is a type of Person</strong>).</p>
+<p>We will do this in a <strong>new file</strong> called <code>Student.py</code>.</p>
+<p>Your folder structure should now look like this:</p>
+<p><img src="../../assets/e835f4e6f9c63d56.png" alt="image.png" width="297" height="171" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197170" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>In <code>Student.py</code>, we will need to <strong>import the Person class</strong>&nbsp;from <code>Person.py</code> at the top of the file.</p>
+<p><img src="../../assets/998c775b3b270553.png" alt="image.png" width="450" height="189" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197172" data-api-returntype="File" loading="lazy"></p>
+<p>The <code>Student</code> class then defines its parent class <code>Person</code> in brackets <code>()</code> next to the class name.</p>
+<p><img src="../../assets/18a745abe4288bc3.png" alt="image.png" width="800" height="248" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197176" data-api-returntype="File" loading="lazy"></p>
+<p>The <code>Student</code> class <strong>inherits everything</strong> (attributes and methods) that the <code>Person</code> class has, plus a few extra things specific to a student:</p>
+<ul>
+<li><code>studentId</code> (specific identifier for a student in a school)</li>
+<li><code>subjects</code> (a list of HSC subjects that a student takes)</li>
+</ul>
+<p><img src="../../assets/1a094618a1996773.png" alt="image.png" width="800" height="324" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197182" data-api-returntype="File" loading="lazy"></p>
+<p>We now need a <strong>constructor method</strong> <code>__init__()</code> so that we can instantiate the <code>Student</code> class into objects.</p>
+<p>This constructor method's parameters should have the <strong>same parameters as the <code>Person</code> class's constructor method.</strong></p>
+<ul>
+<li><code>firstName</code>, <code>lastName</code>, <code>age</code>, <code>address</code>, <code>phoneNo</code>, <code>email</code></li>
+</ul>
+<p>The constructor method's parameters should also have the <strong>additional attributes that were introduced in the <code>Person</code> class.</strong></p>
+<ul>
+<li><code>studentId</code></li>
+</ul>
+<p>The reason why we don't handle <code>subjects</code> in the constructor method because we want to initially <strong>leave it as an empty list.</strong> We can use setter methods later to add/remove subjects <strong>after</strong> being instantiated as an object.</p>
+<p><img src="../../assets/f0133fbf2ae0efdf.png" alt="image.png" width="800" height="374" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197399" data-api-returntype="File" loading="lazy"></p>
+<p>In Python, we can use <code>super()</code> to access the public/protected methods and attributes <strong>from the parent class.</strong></p>
+<p>In the <code>Student</code> class's constructor, we don't want to call each setter method again for the attributes that are inherited from the <code>Person</code> class.</p>
+<p>Using <code>super()</code>, any attributes that are directly inherited from the Person class (<code>firstName</code>, <code>lastName</code>, <code>age</code>, <code>address</code>, <code>phoneNo</code>, <code>email</code>) can set their values by <strong>simply re-using the</strong> <code>Person</code><strong> class's constructor.</strong></p>
+<ul style="list-style-type: disc;">
+<li><code>super().__init__(firstName, lastName, age, address, phoneNo, email)</code></li>
+</ul>
+<p><strong>Any new attributes are then set</strong> after calling the <code>Person</code> class's constructor.</p>
+<ul>
+<li><code>self.setStudentId(studentId)</code></li>
+</ul>
+<p><img src="../../assets/0f36f63b6d808aec.png" alt="image.png" width="800" height="449" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197199" data-api-returntype="File" loading="lazy"></p>
+<p>We then <strong>implement the getter and setter methods</strong> (just as we did for the Person class's attributes).</p>
+<ul>
+<li><code>getStudentId</code></li>
+<li><code>getSubjects</code></li>
+<li><code>setStudentId</code></li>
+<li><code>addSubject</code> - Adds the string name of a subject in the <code>subjects</code> list</li>
+<li><code>removeSubject</code> - Removes the string name of a subject in the <code>subjects</code> list</li>
+</ul>
+<p>Plus <strong>any other methods that define the behaviours</strong> of the <code>Student</code> class.</p>
+<ul>
+<li><code>numberOfUnits</code></li>
+</ul>
+<p><img src="../../assets/f79f47b0fd78025c.png" alt="image.png" width="800" height="1029" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197205" data-api-returntype="File" loading="lazy"></p>
+<p>In <code>main.py</code>, to use the <code>Student</code> class we need to import it using</p>
+<ul>
+<li><code>from classes.Student import Student</code></li>
+</ul>
+<p>We can then instantiate a <code>Student</code> object before adding each subject that the student does (<code>addSubject()</code>).</p>
+<p>Like any other object, we can access its public methods (<code>getStudentId()</code>, <code>getSubjects()</code>, <code>numberOfUnits()</code>).</p>
+<p><img src="../../assets/ff580a4a1b9ad712.png" alt="image.png" width="900" height="425" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197522" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>ID: 39473<br>Subjects: ['Maths', 'English', 'Biology', 'Physics', 'Chemistry', 'Modern History', 'Legal Studies']<br>Units: 14</pre>
+<p>&nbsp;</p>
+<p>The benefit of inheritance is that we can also access the parent class's methods (in this case, the <code>Student</code> class can access the public methods in the <code>Person</code> class).</p>
+<p><img src="../../assets/8247c191f3c7bffb.png" alt="image.png" width="700" height="295" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197525" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>May Smith<br>Phone No: 0432123456<br>Email: msmith@email.com<br>Is not an adult</pre>
+<p>&nbsp;</p>
+<p>In the EdStem activity: <em>Inheritance</em>, you will be tasked to create another child class of the <code>Person</code> class called <code>Teacher</code>.</p>
+<hr></div>
+<div class="dp-content-block kl_activities2">
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank"><em>Edstem Activity: Inheritance</em></a></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Powerpoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%202.%20The%20Object-Oriented%20Paradigm/PPs/2.2.2%20OOP%20inheritance.pptx?d=wa7c31733aac24cccaa3d6c62818bc1f6&amp;csf=1&amp;web=1&amp;e=13TdvC">2.2.2 OOP inheritance.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-2-dot-2-oop-features-inheritance" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={a7c31733-aac2-4ccc-aa3d-6c62818bc1f6}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">After</h3>
+<h3 class="readles">Assignment — Cycle 6 space repetition</h3>
+<p><em>[no description]</em></p><p><strong>Points:</strong> 15</p>
+<div class="readnav"><a href="11962-m5.html">← previous module</a><a href="../course-11962.html">all modules</a><a href="11962-m7.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

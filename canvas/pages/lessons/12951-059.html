@@ -1,0 +1,241 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.17 Scripting Languages — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 9 (Term 1: Weeks 9-10) Programming for the Web</div>
+<h1 style="margin-top:.2rem">2.17 Scripting Languages</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-17-scripting-languages" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Develop a web application using an appropriate scripting language with shell scripts to make files and directories, and searching for text in a text file</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Learn how to develop a basic web application using an appropriate scripting language<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li>
+<p><span style="font-size: 10pt;">Identify and use a suitable scripting language to develop a functional web application with both front-end and back-end components.</span></p>
+</li>
+<li>
+<p><span style="font-size: 10pt;">Construct shell scripts that automate tasks such as creating files, directories, and searching for text in files</span></p>
+</li>
+<li>
+<p><span style="font-size: 10pt;">Implement </span><span style="font-size: 10pt;">shell scripts within the context of their web application, demonstrating how shell scripts can automate backend tasks like file management and data processing.</span></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Shell scripts are powerful tools used to automate tasks on the command line, offering efficiency and control over system processes. In the context of web development, they allow developers to manage files and directories, run repetitive tasks, and manipulate text files directly from the terminal. By integrating shell scripts into web applications, server-side operations can be streamlined, making development and maintenance more efficient.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<h3 class="card-title">What is a Shell Script?</h3>
+<p>A <strong>shell script</strong> is a program written for a command-line interface (CLI) that allows you to automate tasks by executing a series of commands. These scripts are interpreted by the shell (such as Bash on Linux or macOS) and can perform tasks like file manipulation, system monitoring, or even web server management.</p>
+<p>In a web development environment, shell scripts are often used for:</p>
+<ul>
+<li>Automating server setup and configuration.</li>
+<li>Managing files and directories for data storage.</li>
+<li>Running maintenance tasks like log file cleanup.</li>
+<li>Searching and manipulating text files, such as configuration files or logs.</li>
+</ul>
+<p>Shell scripting plays an essential role in the backend operations of a web application, especially when it comes to automating repetitive tasks, which increases efficiency and reduces the potential for human error.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Basic Bash Script Commands</h4>
+<p>Here are some fundamental Bash commands that you can use within shell scripts. These commands will help you manipulate files, directories, and text, which are essential operations in web development.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Creating and Managing Directories</h3>
+<div class="dp-panel-content ">
+<p><code>mkdir</code>: Creates a new directory.</p>
+<pre><span class="hljs-built_in">mkdir</span> my_directory</pre>
+<p>This creates a directory named <code>my_directory</code>.</p>
+<p>&nbsp;</p>
+<p><code>rmdir</code>: Removes an empty directory.</p>
+<pre><span class="hljs-built_in">rmdir</span> my_directory</pre>
+<p>&nbsp;</p>
+<p><code>cd</code>: Changes the current directory.</p>
+<pre><span class="hljs-built_in">cd</span> my_directory</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Creating and Managing Files</h3>
+<div class="dp-panel-content ">
+<p><code>touch</code>: Creates an empty file.</p>
+<pre>touch myfile.txt  </pre>
+<p>This command creates a new file named myfile.txt.</p>
+<p>&nbsp;</p>
+<p><code>rm</code>: Removes a file.</p>
+<pre><span class="hljs-built_in">rm</span> myfile.txt</pre>
+<p>&nbsp;</p>
+<p><code>cp</code>: Copies a file or directory.</p>
+<pre><span class="hljs-built_in">cp</span> source.txt destination.txt</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Searching for Text in Files</h3>
+<div class="dp-panel-content">
+<p><code>grep</code>: Searches for specific patterns or text in files.</p>
+<pre>grep "search_term" file.txt</pre>
+<p>This command searches for "search_term" in the <code>file.txt</code> and returns the lines where the term appears.</p>
+<p>&nbsp;</p>
+<p><code>cat</code>: Outputs the content of a file.</p>
+<pre>cat file.txt</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Automating Tasks</h3>
+<div class="dp-panel-content">
+<p>You can combine these commands into a script to automate tasks. For example, to create a directory, a file inside it, and then search for specific text:</p>
+<pre>#!/bin/bash<br><br># Create a directory<br>mkdir project_directory<br><br># Navigate into the directory<br>cd project_directory<br><br># Create a file<br>touch notes.txt<br><br># Add text to the file<br>echo "This is a sample project. TODO: Finish the setup." &gt; notes.txt<br><br># Search for the word "TODO" in the file<br>grep "TODO" notes.txt</pre>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-text">The <strong>hash bang</strong> at the beginning of a script is a special sequence of characters (<code>#!/</code>) followed by the path to the interpreter that should be used to execute the script.&nbsp;</p>
+<pre class="card-text">#!/bin/bash</pre>
+<p class="card-text">&nbsp;</p>
+<p>The purpose of it is to ensure that the correct interpreter is used, even if the user runs the script from a different shell or terminal that may not default to Bash. By specifying <code>#!/bin/bash</code>, the script will always run using the Bash interpreter, regardless of the environment in which it's executed.</p>
+<p>If you were to leave it out, the script would still work if executed explicitly with Bash (like running <code>bash script.sh</code>), but it wouldn’t run correctly if executed without specifying Bash, since the system might try to run it with a different shell (e.g., <code>sh</code> or <code>zsh</code>) or treat it as a regular file.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Shell Scripts in Web Development</h4>
+<ol style="list-style-type: decimal;">
+<li>
+<p><strong>Automating Server Management:</strong></p>
+<p>Shell scripts play a critical role in automating server-side tasks like file management, backups, and configurations. Automating these tasks increases the efficiency and reliability of web applications.</p>
+</li>
+<li>
+<p><strong>Handling Log Files and Data:</strong></p>
+<p>Web servers generate extensive logs, which require regular monitoring and maintenance. Shell scripts can be used to search, filter, and process logs to ensure smooth operation or identify potential issues.</p>
+</li>
+<li>
+<p><strong>Efficient File and Directory Management:</strong></p>
+<p>Managing the file system is central to web development. Tasks like creating directories for user uploads, setting permissions, or organising static assets can be automated using shell scripts to save time and ensure consistency.</p>
+</li>
+<li>
+<p><strong>Streamlining Development Processes:</strong></p>
+<p>Repetitive tasks such as server restarts, running tests, or performing database backups are ideal candidates for automation with shell scripts. This results in faster development cycles and fewer errors.</p>
+</li>
+<li>
+<p><strong>Customising Web Application Behaviour:</strong></p>
+<p>Background tasks such as scheduled data backups or log rotations can be automated through shell scripts, ensuring that the application performs key maintenance operations without requiring manual intervention.</p>
+</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/" target="_blank">Bash Scripting Tutorial</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.geeksforgeeks.org/introduction-to-scripting-languages/" target="_blank">Introduction to Scripting Languages</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.17 Scripting Languages" href="https://canvas.kings.edu.au/courses/12951/assignments/204824" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204824" data-api-returntype="Assignment">2.17 Scripting Languages</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.17%20Scripting%20Languages.pptx?d=w6347804fa28e41e98e5c1f83ab72ee67&amp;csf=1&amp;web=1&amp;e=WLXViz">2.17 Scripting Languages.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-17-scripting-languages" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={6347804f-a28e-41e9-8e5c-1f83ab72ee67}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-058.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-060.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

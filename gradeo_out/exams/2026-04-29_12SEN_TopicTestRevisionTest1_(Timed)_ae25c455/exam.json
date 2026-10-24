@@ -1,0 +1,1989 @@
+{
+  "exam": "12SEN_TopicTestRevisionTest1 (Timed)",
+  "syllabus": "Software Engineering",
+  "publisher": null,
+  "topics": [
+    "Secure Software Architecture",
+    "Programming for the Web",
+    "Software Engineering Project"
+  ],
+  "outcomes": [
+    "SE-12-02",
+    "SE-12-06",
+    "SE-12-03",
+    "SE-12-07",
+    "SE-12-04",
+    "SE-12-01",
+    "SE-12-08",
+    "SE-12-05",
+    "SE-12-09"
+  ],
+  "status": "COMPLETED",
+  "results_released": true,
+  "submitted": "2026-04-29T09:11:41.352Z",
+  "started": "2026-04-29T07:28:58.307Z",
+  "duration_minutes": 120,
+  "markers": [
+    "TKS CST"
+  ],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/ae25c455-7274-4eea-be5c-387d459a61a4",
+  "marking_session_id": "ae25c455-7274-4eea-be5c-387d459a61a4",
+  "exam_id": "08cd8813-f3fa-41c9-b222-9874d065cfac",
+  "session_id": "f15ab8cf-3783-4737-8b78-03a19e4c9e80",
+  "total_mark": 10,
+  "parts_answered": 26,
+  "parts_marked": 12,
+  "parts_total": 27,
+  "total_available": 60,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "a22c2ac1-921a-4dc1-9a89-dfc331d9b330",
+      "title": "Fundamental Development Steps (MS, TKS 2025)",
+      "topic": "Fundamental Development Steps",
+      "label": "MS",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A development team is preparing for the integration phase of a secure health records system. The system handles sensitive patient data and will interact with external hospital databases.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "cd74635a-aed0-41d0-b6e5-0e8a25604988",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which THREE of the following practices are most appropriate to ensure secure integration of system components?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Refactoring code to improve readability and modularity",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Testing components in isolation before combining them",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "Writing pseudocode to document component interactions",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Conducting integration tests focused on access control and data flow",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "E",
+                "text": "Verifying that data is encrypted during inter-component communication",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "B",
+              "D",
+              "E"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B",
+              "D",
+              "E"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "98a03d0b-9eec-418e-98f2-966d992141ae",
+      "title": "Security Features (MC, TKS 2025)",
+      "topic": "Security Features",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "3bf6e636-8098-49fe-9ac6-9e3dfd6235f8",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "A company performs regular security audits on their software. What is the primary reason for these audits?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "To optimise the software package.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "To find and fix vulnerabilities before they are exploited",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "To redesign the user interface with a new colour scheme for better appeal",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "To negotiate with hosting providers to reduce monthly server costs over time",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "d1345efd-95e1-4e35-99b7-462413afb24a",
+      "title": "Social Issues (Q5, 2022 HSC Exam SDD)",
+      "topic": "Social Issues",
+      "label": "Q5",
+      "kind": "2022 HSC Exam SDD",
+      "source": null,
+      "copyright": "HSC 2022",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "113b94f2-9155-4da9-bb35-e1fe2875b8f2",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following requires inclusivity to be considered when designing interfaces for a proposed system?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Incomplete testing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "A culturally diverse user base",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "The use of images created by others",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "The storage of sensitive customer data",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question_id": "34458f8f-7791-435d-9f18-dbd501b3511e",
+      "title": "Agile Approach (MC, TKS2025)",
+      "topic": "Agile Approach",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "77bdb8b8-f44a-4283-bfe7-c9b1a0166863",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "How does method tailoring benefit an Agile team?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It forces teams to follow a strict process.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It allows teams to adjust Agile practices to suit their project.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "It ensures all documentation is completed before coding begins.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "It removes the need for communication between team members.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": false
+          },
+          "result": {
+            "mark": 0,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question_id": "a30d8cb1-a9f0-4078-b467-e571f14140bc",
+      "title": "Backend Engineering (MC, TKS 2025)",
+      "topic": "Backend Engineering",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "2f61c45d-1544-4049-918f-ed1b9e0ddcba",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best prevents unauthorised access to sensitive user data in a back-end system?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Using JWTs to verify user identity",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "B",
+                "text": "Writing front-end code in HTML and CSS",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Hosting the website on a secure cloud server like AWS",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Allowing users to access the database directly via URL",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "A"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question_id": "7b27a655-a062-41d1-b7b5-209e4fb695c7",
+      "title": "Difficulties (MC, TKS 2025)",
+      "topic": "Difficulties",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A development team is working on a new web application but encounters a persistent authentication bug that is delaying the release. One of the junior developers suggests searching online for solutions.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "6a098e7c-e6f4-47ea-9877-1e68571ee8fc",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best describes a risk associated with relying on this strategy?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Looking online discourages collaboration, which is a core Agile principle",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Searching online wastes time and is discouraged in professional environments",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Solutions found online may not always apply directly to the team&rsquo;s specific context",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "Online forums like Stack Overflow are usually monitored by software companies for bugs",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question_id": "677a718c-f258-44bd-b398-2c3c699f3707",
+      "title": "Big Data (MC, TKS2025)",
+      "topic": "Big Data",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "4a4ee298-4af0-4a4e-b3d0-54f6760cf7b8",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "What is data mining in big data?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Encrypting data for privacy.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Storing large amounts of data securely.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "Scraping the web to create large datasets.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "Finding useful patterns and insights in big datasets.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B",
+              "C"
+            ],
+            "correct": false
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question_id": "1d21b7f2-260d-4e27-bb33-2d71915e8750",
+      "title": "Web Browsers (MC, TKS2025)",
+      "topic": "Web Browsers",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "5db67cfd-20b5-4c87-b308-20ab276a2f22",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "How can developer tools in web browsers help optimize website performance?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Profile scripts and monitor requests.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "B",
+                "text": "Create backups of server files and databases regularly.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Automatically compress and resize images for faster loading.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Disable JavaScript to test website functionality without scripts.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "A"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question_id": "813637eb-9b58-44dc-9e6c-4908900be134",
+      "title": "Open-Source Software (MC, TKS2025)",
+      "topic": "Open-Source Software",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "8543e28a-e688-42cf-8ef2-8268148d2669",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "How does community collaboration improve open-source web tools?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It guarantees all contributions are high quality.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It ensures the software stays small and simple.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "It allows more users to test, report bugs, and suggest improvements.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "It reduces the need for testing by spreading development across many people.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question_id": "6bf8d3bc-b976-4578-b15d-c97e4f81002c",
+      "title": "Web Shell Scripting (MS, TKS2025)",
+      "topic": "Web Shell Scripting",
+      "label": "MS",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS2025, North Parramatta",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "5cf68c11-f7c5-4c60-9283-9bb332c71f64",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best describes a shell script?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "A file that contains only images and sound clips",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "A programming language used to develop modern mobile apps",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "A set of CSS rules to style a web page",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "A series of instructions to run on the command line",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "D"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question_id": "783ba658-ecbb-48a2-9cd6-64005537a0e0",
+      "title": "SQL Query Results (Yr12, CT, TKS2025)",
+      "topic": "SQL Query Results",
+      "label": "Yr12",
+      "kind": "CT",
+      "source": "TKS2025",
+      "copyright": "TKS 2025",
+      "stimulus": "The following table represents a database at a book store:\n\n| **BookID** | **Title** | **Author** | **Year** |\n|---|---|---|---|\n| 201 | The Hobbit | J.R.R. Tolkien | 1937 |\n| 202 | 1984 | George Orwell | 1949 |\n| 203 | Brave New World | Aldous Huxley | 1932 |\n| 204 | Dune | Frank Herbert | 1965 |\n| 205 | Animal Farm | Geroge Orwell | 1945 |",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "2baaaf54-29c9-49a8-9a4c-1e35b52b0356",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "RICH_TABLE",
+          "prompt": "The following SQL query is run to test the database.\n\n**SELECT Title, Year**  \n**FROM Books**   \n**WHERE Author <> 'Geroge Orwell'**  \n**ORDER BY Year ASC**\n\nFill in the table below with the result of running the SQL query. You may not need to use all the rows or columns.",
+          "prompt_images": [],
+          "question": {
+            "table": [
+              [
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                }
+              ]
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "filled_cells": 0
+          },
+          "result": {
+            "mark": 0,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 0,
+                "feedback": null,
+                "marked": "2026-03-06T02:07:39.818Z"
+              }
+            ]
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "| **Title** | **Year** |\n|---|---|\n| Brave New World | 1932 |\n| The Hobbit | 1937 |\n| Dune | 1965 |"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question_id": "af0b3091-1ace-4b18-b912-858ffd29b69a",
+      "title": "Additional Solutions (SA + MC, TKS 2025)",
+      "topic": "Additional Solutions",
+      "label": "SA + MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025\n",
+      "stimulus": "A development team is creating a mobile app to help users track their daily water intake. While the app prototype functions correctly, user feedback reveals that the interface is cluttered and confusing. Users struggle to locate key features like the daily goal tracker and hydration reminders.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "d1a15afd-a899-44d6-bc77-75c2e9744b0b",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe how the principle of consistency could be applied to improve the user interface of the app.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 125
+          },
+          "your_response": {
+            "answered": true,
+            "text": "The princiole of concistance could be aplied so that the app is concistnt with outher simlar app this means that the app would be more intuitve. for example using a simler layout \n\nTHIS IS A GUESS NEED TO LEARN",
+            "images": [],
+            "word_count": 39
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes how the principle of consistency could be applied to improve the user interface of the app."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines how the principle of consistency could be applied to improve the user interface of the app."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Consistency in UI design means using uniform visual elements (such as colours, fonts, and icons) and predictable interaction patterns across the app. By applying consistency, the team could ensure that similar features look and behave the same way throughout the app. For example, placing all tracking tools in a similar layout or using the same icon style for reminders would help users recognise and navigate features more easily, reducing confusion."
+        },
+        {
+          "part_id": "911b17d2-0ab3-4c5a-98d2-37dacaa4daf6",
+          "part": "Part B",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best demonstrates the principle of consistency in UI design?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Changing the interface design regularly to keep users engaged with new visuals",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Placing navigation menus in different locations depending on the feature being used",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Applying the same font, colour scheme, and layout structure across all screens in the app",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "Using different button styles and colours for each screen to make the app visually dynamic",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question_id": "2d491780-dead-4aaf-b042-dd29421d7c50",
+      "title": "Testing and Evaluating (OR, TKS 2025)",
+      "topic": "Testing and Evaluating",
+      "label": "OR",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "272ccbb7-7511-484d-8f26-d2cb9addd3e1",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "Match the appropriate testing methodology to its definition.",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "Unit Testing",
+              "System Testing",
+              "Acceptance Testing",
+              "Integration Testing"
+            ],
+            "rows": [
+              {
+                "statement": "Confirming that the software meets the business requirements and is ready for deployment.",
+                "correct": [
+                  "Acceptance Testing"
+                ],
+                "yours": [
+                  "Acceptance Testing"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Testing individual components or functions of the code in isolation.",
+                "correct": [
+                  "Unit Testing"
+                ],
+                "yours": [
+                  "Unit Testing"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Verifying that the entire application functions as expected in its environment.",
+                "correct": [
+                  "System Testing"
+                ],
+                "yours": [
+                  "Integration Testing"
+                ],
+                "right": false
+              },
+              {
+                "statement": "Ensuring that different modules work together correctly.",
+                "correct": [
+                  "Integration Testing"
+                ],
+                "yours": [
+                  "System Testing"
+                ],
+                "right": false
+              }
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "rows": [
+              {
+                "statement": "Confirming that the software meets the business requirements and is ready for deployment.",
+                "yours": [
+                  "Acceptance Testing"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Testing individual components or functions of the code in isolation.",
+                "yours": [
+                  "Unit Testing"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Verifying that the entire application functions as expected in its environment.",
+                "yours": [
+                  "Integration Testing"
+                ],
+                "right": false
+              },
+              {
+                "statement": "Ensuring that different modules work together correctly.",
+                "yours": [
+                  "System Testing"
+                ],
+                "right": false
+              }
+            ]
+          },
+          "result": {
+            "mark": 1,
+            "available": 2,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question_id": "79e4f26c-80f2-46b0-b64a-f12a11d2bef6",
+      "title": "Feedback (SA, TKS 2025)",
+      "topic": "Feedback",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "adc312cd-2800-4e43-9af8-7ca8f89d7a34",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe two steps involved in analysing feedback during software development.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 120
+          },
+          "your_response": {
+            "answered": true,
+            "text": "1.  catorgrisination you need goupe in to cahprgray like UI impovments, bugs, authication isues \n2.  adressing the isute based on sevrity \n\nIRK",
+            "images": [],
+            "word_count": 20
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes two steps involved in analysing feedback during software development."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines AT LEAST ONE step involved in analysing feedback during software development."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "One step in analysing feedback is categorisation, where feedback is sorted based on its source such as user, stakeholder, peer, or automated. This helps developers prioritise feedback appropriately, ensuring that critical issues like user-reported bugs are addressed before less urgent suggestions. Another step is impact analysis, which involves evaluating how implementing the feedback will affect the software’s architecture, performance, or user experience. This helps developers avoid introducing new problems and ensures that changes lead to meaningful improvements."
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question_id": "f102bd07-0c9f-4fc3-8566-28740df2fd86",
+      "title": "Language Dependent Optimsation (MC + SA, TKS 2025)",
+      "topic": "Language Dependent Optimsation",
+      "label": "MC + SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A developer is improving the performance of a program by replacing a slow sorting algorithm with a more efficient one. Later, they also rewrite parts of the code using Python specific features like list comprehensions and built-in functions.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "a3977760-c187-4255-bbae-bdf8b894df90",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which statement best describes the types of optimisation being used?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Both techniques are language independent because they improve performance.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Both techniques are language dependent because they involve changes to the code.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "The sorting algorithm change is language independent, while the use of Python pecific features is language dependent.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "The use of Python specific features is language independent, while the sorting algorithm changes are language dependent.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        },
+        {
+          "part_id": "47d05562-638d-4762-bd98-f9d8f0cc5179",
+          "part": "Part B",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain the difference between language independent and language dependent optimisation techniques.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 140
+          },
+          "your_response": {
+            "answered": true,
+            "text": "A langage spicific optimisaion is where you take advantage of a feure of a the langage like list comprhensin in python this will use the copiled c utils that file that will run this is where you use the langae better. \n\nA langage indepedint optimsatin is where the programmer uses better programitcal tools to make there program pform better like for examl useing a linked list vs a itrating over a array of {key:value,...} is faster then \\[\\[key,value\\],...\\] as it is got a lower time complexity. or ueing a faster alrthom.",
+            "images": [],
+            "word_count": 91
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Explain the difference between language independent and language dependent optimisation techniques."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines a difference between language independent and language dependent optimisation techniques."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Language-independent optimisation refers to techniques that can be applied across most programming languages. These include improving algorithm efficiency, reducing redundant code, and using better data structures. For example, replacing a slow sorting algorithm with a faster one improves performance regardless of the language used. Language-dependent optimisation involves using features specific to a particular language to enhance performance. In Python, this could include using list comprehensions, built-in functions like map() or sum(), or leveraging libraries like NumPy for faster numerical operations. By combining both approaches, a developer can write code that is both efficient in general and tailored to the strengths of the language being used."
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question_id": "0f3c66e4-aa78-4d67-aa52-8bd4abb56c5f",
+      "title": "Generating Solutions (SA, TKS 2025)",
+      "topic": "Generating Solutions",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "0697d65c-c98a-430e-9076-2255028f5b7e",
+          "part": "Part 1",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Which type of testing focuses on verifying that individual components or functions of a program work as expected?",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 150
+          },
+          "your_response": {
+            "answered": true,
+            "text": "If a algrytim is effint to run it will use less cpu and or memory this means that it cost less to run. \n\nif the agrythem i scaleabel this means that the it can me scaled horozontaly this is cheaper and also can run on mulabel screens \n\nthe binfets of this is a sofwhere engenring progect is that the profitmargins will be bigger and also that the user can grow and not incorr the large cost for the users",
+            "images": [],
+            "word_count": 79
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Clearly explains how the concepts of algorithm efficiency and scalability impact the success of a software engineering project."
+            },
+            {
+              "marks": "3",
+              "criterion": "Describes how the concepts of algorithm efficiency and scalability impact the success of a software engineering project."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines how algorithm efficiency and scalability can affect the outcome of a software engineering project."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Algorithm efficiency and scalability are critical factors that greatly impact the success of a software engineering project. Efficiency ensures that the program runs quickly and responds in a timely manner, which is crucial for user satisfaction and system performance. Scalability ensures that the program can handle growth, whether it is an increase in data size, user load, or complexity, without degradation in performance. Ignoring efficiency can lead to software that is slow or resource-intensive, making it frustrating for users and potentially leading to system crashes. For example, an inefficient algorithm in a real-time application, such as stock trading software, could result in delayed transaction processing, causing financial losses. Similarly, neglecting scalability can result in software that cannot cope with increasing demand, such as an e-commerce platform that crashes during peak shopping times. This not only results in lost sales but also damages the company's reputation. By prioritising these concepts during the design phase, software engineers can create robust, reliable, and user-friendly software solutions."
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question_id": "520538f4-21b5-4929-94a9-92677d0f6c60",
+      "title": "Programming - ASCII Encode (Sequence, 2025 TKS)",
+      "topic": "Programming - ASCII Encode",
+      "label": "Sequence",
+      "kind": "2025 TKS",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "1e62ef21-bb1f-42e8-9bc8-be11debe4193",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "Write a Python program that takes a string entered by the user and then encodes it by shifting it one letter forward. Your answer must be **all letters.** \n\nYou only need to consider **lowercase** characters. \n\nNote that the ASCII number for 'a' is 97.",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": null
+          },
+          "your_response": {
+            "answered": true,
+            "code": "sr = input(\"> \")\nout = \"\"\nfor i in sr: \n  out += chr(ord(i)+1)\nprint(out)\n  "
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Provides a substantially correct algorithms that includes the following features:\n\nUses input to obtain a lowercase string from the user\nUses ord() to convert characters to ASCII values\nIncrements the ASCII value of each character by 1 (accounting for 'z' to 'a')\nUses chr() to convert back to characters and constructs the new encoded string.\nCorrectly outputs the encoded string"
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides an algorithm that includes most key features, but has minor logic or syntax errors that do not significantly impact the outcome"
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides an algorithm that addresses some key aspects of the task (e.g. correctly converts or encodes some characters, loop may be flawed)"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "text = input(\"Enter a lowercase word: \")  \nencoded = \"\"  \n  \nfor char in text:  \n    ascii\\_val = ord(char)  \n    if ascii\\_val == (97 + 25):  # Check if it's 'z'  \n        new\\_char = chr(97)     # Wrap around to 'a'  \n    else:  \n        new\\_char = chr(ascii\\_val + 1)  \n    encoded += new\\_char  \n  \nprint(\"Original string:\", text)  \nprint(\"Encoded string:\", encoded)"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question_id": "348813d1-bf7f-4a59-8e57-683e52bb50a6",
+      "title": "Web elements (SA, TKS 2025)",
+      "topic": "Web elements",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "e1eea625-5e1d-4f0f-b00e-85e06e163c76",
+          "part": "Part 1",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain the role of server-side technologies in web application development.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 130
+          },
+          "your_response": {
+            "answered": true,
+            "text": "the role is to help the with the running hard calulatins on the server as this is faster for the user vs client side",
+            "images": [],
+            "word_count": 24
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly explains the role of server-side technologies in web application development."
+            },
+            {
+              "marks": "2",
+              "criterion": "Somewhat explains the role of server-side technologies in web application development."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides a limited explination of some concepts relating to server-side technologies."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Server-side technologies play a critical role in web application development by handling the back-end operations such as data processing, server communication, and database interactions that support the client-side components of an application. One such technology is Django, a high-level Python framework that encourages rapid development and a clean, pragmatic design. It specialises in providing robust request handling capabilities with its middleware and view dispatcher system. Django also excels in authentication through its built-in User model and comprehensive authentication system that handles user registration, login, logout, password management and permissions efficiently."
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question_id": "b0d0f0d8-7188-4816-ab48-5b90679ea508",
+      "title": "Development (SA, TKS 2025)",
+      "topic": "Development",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "cbe10db9-f754-4d77-8abc-018287fa6069",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "A small software company is developing a web app on a limited budget.\n\nExplain two ways the team can optimise their resource allocation to meet deadlines without overspending.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 90
+          },
+          "your_response": {
+            "answered": true,
+            "text": "they can use ajile developemt is better sutied to a small team also is more time efffint thus saving money \n\nthe use of git this allow for less emaling back and forthe zip files\n\nthey can use ai acellrated devlopem insed of each member of staff wriing each line of code they give ai a artecture paln and then revew its work",
+            "images": [],
+            "word_count": 62
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly explains two valid ways to optimise resource allocation with relevant examples."
+            },
+            {
+              "marks": "2",
+              "criterion": "Explains one optimisation method with detail or two methods with limited detail."
+            },
+            {
+              "marks": "1",
+              "criterion": "Mentions optimisation generally but lacks specific examples or clarity."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "The team can prioritise critical tasks by focusing resources on essential features first, delaying less important ones until later. This ensures key functions are delivered on time. They can also outsource specialised tasks, like UI design, to freelancers rather than hiring full-time staff, reducing salary costs. Additionally, overlapping activities such as testers preparing test cases during development saves time. Monitoring progress regularly allows adjustments to resource use, preventing bottlenecks or wasted effort. These strategies help balance limited financial and human resources while maintaining project deadlines."
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question_id": "2302dbe7-2659-49d4-b2c6-93ad0a6adf8a",
+      "title": "Algorithms / Testing (Q28, 2021 HSC Exam SDD)",
+      "topic": "Algorithms / Testing",
+      "label": "Q28",
+      "kind": "2021 HSC Exam SDD",
+      "source": null,
+      "copyright": "HSC 2021",
+      "stimulus": "A student, attempting to perform a binary search on an array called List with 7 elements, wrote the following algorithm.\n\nThe algorithm contains errors.\n\n![](assets/2a66f406-bce6-46d8-822d-8a76f42c3b9d.png)",
+      "stimulus_images": [
+        "assets/2a66f406-bce6-46d8-822d-8a76f42c3b9d.png"
+      ],
+      "parts": [
+        {
+          "part_id": "6a729a5b-f807-4c85-aacd-a11c59475a20",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "The contents of List are shown\n\n![](assets/7299c2a3-bb34-4c6d-abd2-ada9f33e4048.png)\n\nPerform a desk check of the algorithm using the value 42 for SearchItem",
+          "prompt_images": [
+            "assets/7299c2a3-bb34-4c6d-abd2-ada9f33e4048.png"
+          ],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "loop for ever",
+            "images": [],
+            "word_count": 3
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Provides a substantially correct desk check, indicating a never-ending loop"
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides a desk check, indicating a never-ending loop"
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of desk checking"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "![](assets/1bce1968-525e-48a6-ab10-82c3d82c6006.png)",
+          "sample_answer_images": [
+            "assets/1bce1968-525e-48a6-ab10-82c3d82c6006.png"
+          ]
+        },
+        {
+          "part_id": "23f13fd2-d7cb-48de-b041-666449444a98",
+          "part": "Part B",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "The logic is not correct in lines 12 and 14 of the algorithm. \n\nModify these lines so that the logic is correct",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "low = index\n\nELSE\n\n   high = index",
+            "images": [],
+            "word_count": 7
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Proivdes the correct logic"
+            },
+            {
+              "marks": "1",
+              "criterion": "Demonstrates some understanding of the problem"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Line 12 high = index –1  \nLine 14 low = index +1"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question_id": "e65fa768-3b8f-4a3a-a5ce-0395d9f87d5e",
+      "title": "Frontend Code Libraries (SA, TKS2025)",
+      "topic": "Frontend Code Libraries",
+      "label": "SA",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "3aa5180a-a5df-444b-88d1-c96e006e83ef",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain how front-end frameworks improve development speed in building web applications.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 40
+          },
+          "your_response": {
+            "answered": true,
+            "text": "it reduse the amout to boiler plate code that the develper has to write. this redueses the LOC that they have to wrie. in aditon it will also provid nice fetues ionic for example has v-for this is a loop in the 'HTML' this makes it much faster",
+            "images": [],
+            "word_count": 48
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Correctly explains a way in which front-end frameworks improve development speed in building web applications."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Front-end frameworks improve development speed by offering ready-made components and structures that developers can reuse. This reduces the amount of manual coding needed and helps quickly assemble user interfaces, speeding up the overall build process."
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question_id": "4517f92d-8cb2-49f5-8573-8c8639f8f4a3",
+      "title": "PWAs (SA, TKS 2025)",
+      "topic": "PWAs",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "0160ffa3-476e-46ac-9e60-9feae7406135",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain how this automated car park barrier system demonstrates the integration of hardware and software components in mechatronics.\n\nIn your response, analyse how the different types of sensors work together to provide system inputs, describe how the actuators respond to create the desired physical outputs, and discuss the role of the programmable controller in coordinating all system components.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 90
+          },
+          "your_response": {
+            "answered": true,
+            "text": "the ui principle of consitancy this is where you keep your ui colur and font the same (or simlalr) over time \n\nthe ui priciple of BRB (big red button) you make the thing that you want the user to do clear big bright coulers in th middle of the screen \n\nusing these priciple it dictats that how the couler shoud be chosen",
+            "images": [],
+            "word_count": 62
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly explains two relevant UI/UX principles with accurate details."
+            },
+            {
+              "marks": "2",
+              "criterion": "Explains one principle well and another partially."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides limited or vague information about UI/UX principles."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "When designing the font for a PWA, readability is essential. Fonts should be clear and legible across different devices and screen sizes, avoiding overly decorative styles that may reduce clarity. Using web-safe fonts or Google Fonts ensures consistent display and performance. For colour, maintaining sufficient contrast between text and background improves visibility, especially for users with visual impairments. This also supports accessibility standards like WCAG. Colour schemes should align with branding and evoke the right emotions, while also avoiding reliance on colour alone to convey important information, ensuring inclusivity for colour-blind users."
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question_id": "131fd0d4-f36c-4991-825f-8a08088fdec5",
+      "title": "Security Strategy & Tools (SA, TKS 2025)",
+      "topic": "Security Strategy & Tools",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "94f348bb-4bd2-4430-ab95-00e79af421cf",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain the purpose of a vulnerability assessment in system security.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 150
+          },
+          "your_response": {
+            "answered": true,
+            "text": "the pourpos of a vunriblity assment is to clealy idintifi, quantifi, and prioritise. to lead to the reolution of fixing of vuriblitys.\n\nthis allows the developmet team to address the most impoant vuribileiy first so that there time is spent in the best possable way.",
+            "images": [],
+            "word_count": 45
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Clearly explains the purpose of a vulnerability assessment in system security."
+            },
+            {
+              "marks": "3",
+              "criterion": "Describes why vulnerability assessments are used in system security."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines a reason why vulnerability assessments are used in system security."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "A vulnerability assessment is a critical process in system security that aims to identify, evaluate, and prioritise weaknesses within a system. Its main purpose is to ensure that potential security flaws are detected early, allowing developers and security teams to take proactive measures before these vulnerabilities can be exploited. The process typically begins with identifying possible vulnerabilities through scans or manual checks. These findings are then analysed to understand the risks they pose, including the likelihood of exploitation and the potential impact on system operations. A risk assessment follows, helping prioritise which vulnerabilities require immediate attention. Finally, remediation strategies are implemented, such as patching software, changing configurations, or introducing preventive controls. By systematically addressing vulnerabilities, organisations can strengthen their security posture, reduce the risk of data breaches, and maintain the integrity and reliability of their systems."
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question_id": "c57a4fc1-1d28-4b14-b6a1-3ea4d270150a",
+      "title": "Social, Ethical & Legal (ER, TKS 2025)",
+      "topic": "Social, Ethical & Legal",
+      "label": "ER",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A video on data privacy shows how companies collect and use personal information from users online. This raises social, ethical, and legal concerns about consent, security, and misuse of data.\n\n[▶ VIDEO (open this file)](assets/e1aed016-9cf8-4b65-a25f-a79c6142bad6.mp4)\n\nVideo Credit: Netwrix.com",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "828c926a-754e-48af-8a9e-2ec3bc155124",
+          "part": "Part A",
+          "marks_available": 8,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Evaluate the impact of data privacy concerns on individuals and organisations, making reference to the social, ethical, and legal issues involved.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 500
+          },
+          "your_response": {
+            "answered": true
+          },
+          "result": {
+            "mark": null,
+            "available": 8,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "7-8",
+              "criterion": "Demonstrates a comprehensive understanding of data privacy\n\nEffectively links social, ethical, and legal issues to impacts on individuals and organisations\n\nIntegrates detailed and relevant examples, including legislation or case studies\n\nProvides sustained evaluation and well-structured analysis"
+            },
+            {
+              "marks": "5-6",
+              "criterion": "Demonstrates a sound understanding of data privacy\n\nExplains social, ethical, and legal issues in detail\n\nProvides relevant examples and considers impacts on individuals and organisations\n\nSome evaluation of issues is evident"
+            },
+            {
+              "marks": "3-4",
+              "criterion": "Demonstrates a basic understanding of data privacy\n\nDescribes some social, ethical, or legal issues, but unevenly\n\nUses simple or partially relevant examples"
+            },
+            {
+              "marks": "1-2",
+              "criterion": "Provides limited information about data privacy\n\nMay identify a social, ethical, or legal issue with little detail\n\nExamples, if present, are minimal or irrelevant"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Data privacy is one of the most significant challenges in the digital age, affecting both individuals and organisations. The collection of personal information by companies creates major social, ethical, and legal issues that influence how technology is developed and used.\n\nFrom a social perspective, privacy breaches can erode trust between users and organisations. If personal information such as location data or browsing habits is shared without consent, individuals may feel vulnerable and exploited. This can discourage people from engaging with online platforms and create anxiety about constant surveillance. At the same time, responsible data use can provide social benefits, such as personalised recommendations and improved services, highlighting the need for balance.\n\nEthical issues also emerge around consent and fairness. Many companies collect data through lengthy terms and conditions that most users do not read or fully understand. Ethically, this raises questions about whether consent is truly informed. Additionally, there is debate over the fairness of companies profiting from user data without providing clear benefits to the individuals whose information is being sold. Ethical responsibility requires organisations to be transparent and accountable in their handling of personal information.\n\nLegal issues are central to regulating data privacy. In Australia, the Privacy Act 1988 and the Notifiable Data Breaches scheme require organisations to handle personal data responsibly and report breaches. Internationally, regulations such as the European Union’s General Data Protection Regulation (GDPR) enforce stricter standards for consent and data storage. However, enforcement can be inconsistent, especially across global digital platforms.\n\nOverall, data privacy impacts society at multiple levels. Individuals risk harm when data is misused, while organisations face reputational and legal consequences if they fail to protect it. Evaluating these social, ethical, and legal issues highlights the importance of stronger regulation and ethical responsibility in safeguarding personal information."
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "Fundamental Development Steps": {
+      "mark": 0,
+      "available": 1
+    },
+    "Security Features": {
+      "mark": 1,
+      "available": 1
+    },
+    "Social Issues": {
+      "mark": 1,
+      "available": 1
+    },
+    "Agile Approach": {
+      "mark": 0,
+      "available": 1
+    },
+    "Backend Engineering": {
+      "mark": 1,
+      "available": 1
+    },
+    "Difficulties": {
+      "mark": 1,
+      "available": 1
+    },
+    "Big Data": {
+      "mark": 0,
+      "available": 1
+    },
+    "Web Browsers": {
+      "mark": 1,
+      "available": 1
+    },
+    "Open-Source Software": {
+      "mark": 1,
+      "available": 1
+    },
+    "Web Shell Scripting": {
+      "mark": 1,
+      "available": 1
+    },
+    "SQL Query Results": {
+      "mark": 0,
+      "available": 2
+    },
+    "Additional Solutions": {
+      "mark": 1,
+      "available": 4
+    },
+    "Testing and Evaluating": {
+      "mark": 1,
+      "available": 2
+    },
+    "Feedback": {
+      "mark": 0,
+      "available": 3
+    },
+    "Language Dependent Optimsation": {
+      "mark": 1,
+      "available": 4
+    },
+    "Generating Solutions": {
+      "mark": 0,
+      "available": 4
+    },
+    "Programming - ASCII Encode": {
+      "mark": 0,
+      "available": 3
+    },
+    "Web elements": {
+      "mark": 0,
+      "available": 3
+    },
+    "Development": {
+      "mark": 0,
+      "available": 3
+    },
+    "Algorithms / Testing": {
+      "mark": 0,
+      "available": 5
+    },
+    "Frontend Code Libraries": {
+      "mark": 0,
+      "available": 2
+    },
+    "PWAs": {
+      "mark": 0,
+      "available": 3
+    },
+    "Security Strategy & Tools": {
+      "mark": 0,
+      "available": 4
+    },
+    "Social, Ethical & Legal": {
+      "mark": 0,
+      "available": 8
+    }
+  }
+}

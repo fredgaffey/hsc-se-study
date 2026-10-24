@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quiz Generator — SEN Offline</title>
+<style>
+:root{--bg:#fff;--fg:#16181d;--mut:#5a6472;--card:#fff;--bd:#e2e8f0;--ac:#2b6cb0;--ok:#2f855a;--no:#2b6cb0}
+@media(prefers-color-scheme:dark){:root{--bg:#15171c;--fg:#e6e8ec;--mut:#9aa4b2;--card:#1c1f26;--bd:#2d3340}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+.appnav{position:sticky;top:0;z-index:99;display:flex;gap:.25rem;flex-wrap:wrap;background:#1a202c;padding:.5rem .75rem}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+main{max-width:820px;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+h1{font-size:1.5rem;margin:.2rem 0 1rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:1.1rem;margin-bottom:1rem}
+.mod{border-bottom:1px solid var(--bd)}.mod:last-of-type{border-bottom:0}
+.modrow{display:flex;align-items:center;gap:.6rem;padding:.5rem .4rem}
+.modrow .mname{flex:1;display:flex;align-items:center;gap:.45rem;cursor:pointer;font-weight:600}
+.modrow .caret{color:var(--mut);width:.9rem;display:inline-block}
+.modrow .n,.sub .n{margin-left:auto;font-size:.76rem;color:var(--mut);font-variant-numeric:tabular-nums}
+.subs{padding:.1rem 0 .5rem 2.1rem}
+.sub{display:flex;align-items:center;gap:.55rem;padding:.3rem .4rem;border-radius:7px;cursor:pointer;font-size:.92rem}
+.sub:hover{background:rgba(127,127,127,.09)}
+label.unit{display:flex;align-items:center;gap:.6rem;padding:.45rem .5rem;border-radius:8px;cursor:pointer}
+label.unit:hover{background:rgba(127,127,127,.09)}
+label.unit .n{margin-left:auto;font-size:.78rem;color:var(--mut);font-variant-numeric:tabular-nums}
+.row{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;margin-top:.75rem}
+select,input[type=number]{font:inherit;padding:.4rem .6rem;border-radius:8px;border:1px solid var(--bd);background:var(--card);color:var(--fg)}
+button{font:inherit;cursor:pointer;border-radius:8px;border:1px solid var(--ac);background:var(--ac);color:#fff;padding:.55rem 1.1rem}
+button.ghost{background:transparent;color:var(--ac)}
+button:disabled{opacity:.45;cursor:not-allowed}
+.bar{height:6px;background:var(--bd);border-radius:99px;overflow:hidden;margin:.5rem 0 1rem}
+.bar i{display:block;height:100%;background:var(--ac);transition:width .25s}
+.opt{display:block;width:100%;text-align:left;border:1px solid var(--bd);background:var(--card);color:var(--fg);
+ padding:.6rem .8rem;border-radius:9px;margin:.4rem 0}
+.opt:hover{border-color:var(--ac)}
+.opt.sel{border-color:#b7791f;background:rgba(183,121,31,.10);box-shadow:inset 3px 0 0 #b7791f}
+.opt.right{border-color:var(--ok);background:rgba(47,133,90,.14);box-shadow:inset 3px 0 0 var(--ok)}
+.opt.wrong{border-color:var(--no);background:rgba(43,108,176,.13);box-shadow:inset 3px 0 0 var(--no)}
+.tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+.big{font-size:2.6rem;font-weight:700;line-height:1}
+.muted{color:var(--mut);font-size:.85rem}
+.qtext{font-weight:600;margin:.5rem 0 .9rem}
+[x-cloak]{display:none!important}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+</style>
+<script src="../data/questions.js" defer></script>
+<script src="../vendor/sync.js" defer></script>
+<script src="../vendor/alpine.min.js" defer></script>
+<script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../index.html" class="brand">SEN Offline</a><a href="search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="course-12951.html">HSC Course</a><a href="course-11962.html">Yr 11 Course</a><a href="browse.html">Quizzes</a><a href="quiz.html">Quiz Generator</a><a href="sync.html">Sync</a></nav>
+
+<main x-data="quizApp()" x-cloak>
+ <!-- SETUP -->
+ <template x-if="stage==='setup'">
+  <div>
+   <h1>Generate a quiz</h1>
+   <div class="card">
+    <div class="tag">Modules — expand any module to pick individual topics</div>
+    <template x-for="u in tree" :key="u.unit">
+     <div class="mod">
+      <div class="modrow">
+       <input type="checkbox" :checked="allOn(u)" x-effect="$el.indeterminate=someOn(u)&&!allOn(u)"
+              @change="toggleUnit(u,$event.target.checked)">
+       <span class="mname" @click="u.open=!u.open">
+        <span class="caret" x-text="u.open?'▾':'▸'"></span>
+        <span x-text="u.unit"></span>
+       </span>
+       <span class="n" x-text="selCount(u)+' / '+u.n+' q'"></span>
+      </div>
+      <div class="subs" x-show="u.open">
+       <template x-for="qz in u.quizzes" :key="qz.name">
+        <label class="sub">
+         <input type="checkbox" :value="qz.name" x-model="picked">
+         <span x-text="qz.name"></span><span class="n" x-text="qz.n+' q'"></span>
+        </label>
+       </template>
+      </div>
+     </div>
+    </template>
+    <div class="row">
+     <button class="ghost" @click="picked=allQuizNames()">All</button>
+     <button class="ghost" @click="picked=[]">None</button>
+     <button class="ghost" @click="tree.forEach(u=>u.open=!expanded);expanded=!expanded"
+             x-text="expanded?'Collapse all':'Expand all'"></button>
+    </div>
+   </div>
+   <div class="card">
+    <div class="row">
+     <label>Questions
+      <select x-model.number="count">
+       <option :value="10">10</option><option :value="20">20</option>
+       <option :value="30">30</option><option :value="50">50</option>
+       <option :value="0">All</option>
+      </select></label>
+     <label>Type
+      <select x-model="typeFilter">
+       <option value="">Any</option>
+       <template x-for="t in types" :key="t"><option :value="t" x-text="t"></option></template>
+      </select></label>
+     <label><input type="checkbox" x-model="shuffleOpts"> Shuffle options</label>
+    </div>
+    <p class="muted" x-text="pool.length + ' questions available with answer keys'"></p>
+    <button :disabled="!pool.length" @click="start()">Start quiz</button>
+   </div>
+   <template x-if="last">
+    <p class="muted">Last attempt: <b x-text="last.score+'/'+last.total"></b>
+     (<span x-text="Math.round(last.score/last.total*100)+'%'"></span>) — <span x-text="last.when"></span></p>
+   </template>
+  </div>
+ </template>
+
+ <!-- RUNNING -->
+ <template x-if="stage==='run'">
+  <div>
+   <div class="row" style="justify-content:space-between">
+    <span class="tag" x-text="'Question '+(i+1)+' of '+quiz.length"></span>
+    <span class="tag" x-text="'Score '+score"></span>
+   </div>
+   <div class="bar"><i :style="'width:'+((i)/quiz.length*100)+'%'"></i></div>
+   <div class="card">
+    <div class="tag" x-text="q.unit+' · '+q.quiz+(q.type?' · '+q.type:'')"></div>
+    <div class="qtext" x-text="q.q"></div>
+    <template x-for="(o,oi) in q._opts" :key="oi">
+     <button class="opt"
+      :class="checked ? (o.c?'right':(sel.includes(oi)?'wrong':'')) : (sel.includes(oi)?'sel':'')"
+      @click="pick(oi)" x-text="o.t"></button>
+    </template>
+    <div class="row">
+     <button x-show="!checked" :disabled="!sel.length" @click="check()">Check</button>
+     <button x-show="checked" @click="next()" x-text="i+1<quiz.length?'Next':'Finish'"></button>
+     <span x-show="checked" class="muted" x-text="wasRight?'Correct':'Not quite — correct answer highlighted'"></span>
+    </div>
+   </div>
+   <button class="ghost" @click="stage='setup'">Quit</button>
+  </div>
+ </template>
+
+ <!-- RESULTS -->
+ <template x-if="stage==='done'">
+  <div>
+   <h1>Result</h1>
+   <div class="card">
+    <div class="big" x-text="Math.round(score/quiz.length*100)+'%'"></div>
+    <p class="muted" x-text="score+' of '+quiz.length+' correct'"></p>
+    <div class="row">
+     <button @click="stage='setup'">New quiz</button>
+     <button class="ghost" x-show="wrongOnes.length" @click="retryWrong()"
+      x-text="'Retry '+wrongOnes.length+' missed'"></button>
+    </div>
+   </div>
+   <template x-for="w in wrongOnes" :key="w.id">
+    <div class="card">
+     <div class="tag" x-text="w.unit+' · '+w.quiz"></div>
+     <div class="qtext" x-text="w.q"></div>
+     <template x-for="(o,oi) in w._opts" :key="oi">
+      <div class="opt" :class="o.c?'right':''" x-text="o.t"></div>
+     </template>
+    </div>
+   </template>
+  </div>
+ </template>
+</main>
+
+<script>
+function quizApp(){return{
+ stage:'setup', tree:[], expanded:false, picked:[], count:20, typeFilter:'', shuffleOpts:true,
+ quiz:[], i:0, sel:[], checked:false, score:0, wrongOnes:[], correctIds:[], last:null,
+ init(){
+  this.all=(window.QB||[]).filter(q=>q.key && q.opts.length);
+  const byU={};
+  for(const q of this.all){ (byU[q.unit]=byU[q.unit]||{})[q.quiz]=(byU[q.unit][q.quiz]||0)+1; }
+  this.tree=Object.keys(byU).sort().map(u=>{
+    const qz=Object.keys(byU[u]).sort((a,b)=>{
+      const ka=(a.match(/^(\d+)\.(\d+)/)||[]).slice(1).map(Number);
+      const kb=(b.match(/^(\d+)\.(\d+)/)||[]).slice(1).map(Number);
+      if(ka.length&&kb.length) return ka[0]-kb[0]||ka[1]-kb[1];
+      return a.localeCompare(b,undefined,{numeric:true});
+    }).map(n=>({name:n,n:byU[u][n]}));
+    return {unit:u, quizzes:qz, n:qz.reduce((a,x)=>a+x.n,0), open:false};
+  });
+  this.picked=this.allQuizNames();
+  var only=new URLSearchParams(location.search).get('quiz');
+  if(only && this.allQuizNames().indexOf(only)>-1){
+    this.picked=[only]; this.count=0;          // one topic, every question
+    this.tree.forEach(function(u){ u.open=u.quizzes.some(function(q){return q.name===only;}); });
+    setTimeout(function(){ this.start(); }.bind(this),0);
+  }
+  this.types=[...new Set(this.all.map(q=>q.type).filter(Boolean))].sort();
+  try{this.last=JSON.parse(localStorage.getItem('sen_last'))}catch(e){}
+ },
+ allQuizNames(){ return this.tree.flatMap(u=>u.quizzes.map(q=>q.name)); },
+ selCount(u){ return u.quizzes.filter(q=>this.picked.includes(q.name))
+                 .reduce((a,q)=>a+q.n,0); },
+ allOn(u){ return u.quizzes.every(q=>this.picked.includes(q.name)); },
+ someOn(u){ return u.quizzes.some(q=>this.picked.includes(q.name)); },
+ toggleUnit(u,on){
+   const names=u.quizzes.map(q=>q.name);
+   this.picked = on ? [...new Set([...this.picked,...names])]
+                    : this.picked.filter(n=>!names.includes(n));
+ },
+ get pool(){return (this.all||[]).filter(q=>this.picked.includes(q.quiz)
+   && (!this.typeFilter || q.type===this.typeFilter));},
+ get q(){return this.quiz[this.i]||{_opts:[]}},
+ shuf(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]];}return a},
+ prep(list){return list.map(q=>({...q,_opts:this.shuffleOpts?this.shuf(q.opts):q.opts}))},
+ start(){
+  let p=this.shuf(this.pool);
+  if(this.count>0) p=p.slice(0,this.count);
+  this.quiz=this.prep(p); this.i=0; this.sel=[]; this.checked=false;
+  this.score=0; this.wrongOnes=[]; this.correctIds=[]; this.stage='run';
+ },
+ pick(oi){
+  if(this.checked)return;
+  const multi=this.q._opts.filter(o=>o.c).length>1;
+  if(multi){ this.sel.includes(oi)?this.sel=this.sel.filter(x=>x!==oi):this.sel.push(oi); }
+  else this.sel=[oi];
+ },
+ check(){
+  this.checked=true;
+  const want=this.q._opts.map((o,k)=>o.c?k:-1).filter(k=>k>=0).sort().join(',');
+  const got=this.sel.slice().sort().join(',');
+  this.wasRight = want===got;
+  if(this.wasRight){ this.score++; this.correctIds.push(this.i); } else this.wrongOnes.push(this.q);
+ },
+ record(){
+  var by={};
+  this.quiz.forEach(function(q,k){
+    var b=(by[q.course+'|'+q.quiz]=by[q.course+'|'+q.quiz]||{n:0,c:0});
+    b.n++; if(this.correctIds.indexOf(k)>-1) b.c++;
+  }.bind(this));
+  var store={}; try{store=JSON.parse(localStorage.getItem('sen_scores'))||{}}catch(e){}
+  var now=new Date().toISOString();
+  for(var k in by){
+    var r=store[k]||{attempts:0,best:0,last:0,when:null,history:[]};
+    var pct=Math.round(by[k].c/by[k].n*100);
+    r.attempts++; r.last=pct; r.lastN=by[k].c; r.lastOf=by[k].n;
+    r.prev=r.best; r.best=Math.max(r.best,pct); r.when=now;
+    r.history=(r.history||[]).concat([{p:pct,at:now}]).slice(-20);
+    store[k]=r;
+  }
+  try{localStorage.setItem('sen_scores',JSON.stringify(store))}catch(e){}
+  if(window.SENSync) window.SENSync.sync({create:true});   // local first, then push
+ },
+ next(){
+  if(this.i+1<this.quiz.length){this.i++;this.sel=[];this.checked=false;}
+  else{ this.stage='done'; this.record();
+   try{localStorage.setItem('sen_last',JSON.stringify(
+     {score:this.score,total:this.quiz.length,when:new Date().toLocaleString()}))}catch(e){}
+  }
+ },
+ retryWrong(){ this.quiz=this.prep(this.wrongOnes); this.i=0; this.sel=[];
+   this.checked=false; this.score=0; this.wrongOnes=[]; this.correctIds=[]; this.stage='run'; }
+}}
+</script><link rel="stylesheet" href="../vendor/findbar.css?v=5800f209">
+<script src="../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

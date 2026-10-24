@@ -1,0 +1,297 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 9 (Term 2: Weeks 7-8) OOP — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">11SENX Software Engineering 2025 · module 10 of 17</p>
+<h1>Cycle 9 (Term 2: Weeks 7-8) OOP</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="11962-all.html">Whole course</a><span class="cur">By module</span><a href="../course-11962.html">By lesson</a></div>
+<h3 class="readles">2.8 Design and Implement OOP</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Design and implement computer programs involving branching, iteration and functions in an OOP language for an identified need or opportunity</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Design and implement software solutions using branching, iteration, and functions within an OOP framework to address specific needs or opportunities.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Demonstrate the use of branching (if-else, switch-case statements), iteration (loops like for, while), and functions in creating software.</span></li>
+<li><span style="font-size: 13.3333px;">Develop a small project or a component of a larger project that utilizes OOP concepts to solve a real-world problem, documenting the process and the code effectively.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<div class="flex flex-grow flex-col max-w-full">
+<div class="min-h-[20px] text-message flex flex-col items-start whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto gap-3" data-message-author-role="assistant" data-message-id="5874ed3b-d49f-4097-99c6-d90ec0497917">
+<div class="markdown prose w-full break-words dark:prose-invert light">
+<p>Together, branching, iteration, and functions (methods) enable developers to create more modular, reusable, and maintainable code in object-oriented systems. They help manage complexity by dividing tasks into smaller, manageable parts and defining clear interfaces for objects.</p>
+<p>&nbsp;</p>
+<p>These are all concepts that you have learnt already, to summarise:</p>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Branching</strong> involves making decisions within the program. It uses conditions to determine which blocks of code to execute. For example, <code>if</code>, <code>else</code>, and <code>elif</code> statements allow the program to execute different code based on different inputs or states. In OOP, branching can be used within methods to determine how an object should behave under different conditions. Refer to <a title="1.5 Structured algorithms" href="../lessons/11962-011.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/1-dot-5-structured-algorithms" data-api-returntype="Page">1.5 Structured algorithms</a> for more information.</li>
+<li><strong>Iteration</strong> refers to looping through data structures or repeating some action until a condition changes. Common iterators include <code>for</code> loops and <code>while</code> loops. In OOP, iteration might be used to perform actions on each item in a collection of objects, such as invoking a method on every object in a list. Refer to <a title="1.5 Structured algorithms" href="../lessons/11962-011.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/1-dot-5-structured-algorithms" data-api-returntype="Page">1.5 Structured algorithms</a> for more information.</li>
+<li><strong>Functions</strong> are blocks of code that perform specific tasks and can be called as needed. In OOP, these are often implemented as methods, which are functions that are associated with a specific class. Methods define behaviours for class instances and can access and modify the state of these instances. Refer to <a title="1.8 Procedures and functions" href="../lessons/11962-016.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/1-dot-8-procedures-and-functions" data-api-returntype="Page">1.8 Procedures and functions</a> for more information.<em></em></li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> </i>&nbsp; Activity<br></strong></p>
+<ul class="card-text">
+<li>OOP Assignment</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">2.9 Implement and Modify OOP</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Implement and modify OOP programming code including:<br class="card-text">- clear and uncluttered mainline<br class="card-text">- one logical task per subroutine<br class="card-text">- use of stubs<br class="card-text">- use of control structures and data structures<br class="card-text">- ease of maintenance<br class="card-text">- version control<br class="card-text">- regular backup</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Understand best practices in code structure, including maintaining a clear mainline, task-specific subroutines, and utilizing control and data structures effectively.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Develop a clear, uncluttered mainline and modular subroutines, each performing a single logical task, enhanced by the use of stubs for independent testing.</span></li>
+<li><span style="font-size: 13.3333px;">Utilise control and data structures effectively for optimal data management and decision-making.</span></li>
+<li><span style="font-size: 13.3333px;">Apply maintenance principles, version control, and regular backups to ensure the code is robust, easily updatable, and secure against data loss.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>When writing any program we aim to create robust, maintainable and scalable software, facilitating both initial development and any future modifications. This includes:</p>
+<ol>
+<li>
+<p><strong>Clear and Uncluttered Mainline:</strong> The mainline logic of the program should be straightforward and free from clutter, serving as a clear entry and exit point of the application.</p>
+</li>
+<li>
+<p><strong>One Logical Task per Subroutine:</strong> Each subroutine or method should handle a single logical task, enhancing readability and reusability.</p>
+</li>
+<li>
+<p><strong>Use of Stubs:</strong> Stubs are temporary, simplistic implementations of methods used during the early stages of development to help test sections of the code independently by simulating the behavior of complete methods.</p>
+</li>
+<li>
+<p><strong>Use of Control Structures and Data Structures:</strong> Effective use of control structures (like loops and conditionals) and data structures (like arrays, lists, and dictionaries) is crucial for managing data flow and organization within the program. <a title="1.5 Structured algorithms" href="../lessons/11962-011.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/1-dot-5-structured-algorithms" data-api-returntype="Page">1.5 Structured algorithms</a></p>
+</li>
+<li>
+<p><strong>Ease of Maintenance:</strong> The code should be written in a way that makes it easy to update and modify, with a clear structure and well-documented sections to assist future developers or for future reference.</p>
+</li>
+<li>
+<p><strong>Version Control:</strong> Utilizing version control systems (such as Git) is essential for managing changes to the codebase, allowing multiple versions and collaborative work. <a title="1.2 Online collaboration tools" href="../lessons/11962-008.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/1-dot-2-online-collaboration-tools" data-api-returntype="Page">1.2 Online collaboration tools</a></p>
+</li>
+<li>
+<p><strong>Regular Backup:</strong> Regularly backing up the code ensures safety against data loss and provides a means to revert to previous versions if necessary.</p>
+</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<div class="dp-content-block kl_activities2">
+<h3 class="dp-has-icon"><i class="far fa-edit" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Activities</h3>
+<p>EdStem activity 📋 Test Data 📋</p>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">2.10 Test and Evaluate</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Apply methodologies to test and evaluate code including:<br class="card-text">- unit, subsystem and system testing<br class="card-text">- black, white and grey box testing<br class="card-text">- quality assurance</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Understand and apply various testing methodologies, including unit, subsystem, and system testing, along with black, white, and grey box testing, to ensure software quality and reliability.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Use OOP principles to build, document, and debug a software project that addresses a real-world problem.</span></li>
+<li><span style="font-size: 13.3333px;">Execute comprehensive testing strategies across different stages of the software development process and apply quality assurance practices to meet software standards.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>To test and evaluate code effectively, we can apply the following methodologies:</p>
+<ol>
+<li>
+<p><strong>Unit, Subsystem, and System Testing</strong>:</p>
+<ul>
+<li><strong>Unit Testing</strong>: Tests individual components or functions of a software for correctness.</li>
+<li><strong>Subsystem Testing</strong>: Tests a complete module or subsystem for errors, typically involving multiple units.</li>
+<li><strong>System Testing</strong>: Evaluates the complete system's compliance with specified requirements.</li>
+</ul>
+</li>
+<li>
+<p><strong>Black, White, and Grey Box Testing</strong>:</p>
+<ul>
+<li><strong>Black Box Testing</strong>: Testing without knowledge of the internal workings of the application, focusing on outputs in response to certain inputs and execution conditions.</li>
+<li><strong>White Box Testing</strong>: Involves testing internal structures or workings of an application, as opposed to its functionality (i.e., testing internal code logic).</li>
+<li><strong>Grey Box Testing</strong>: A combination of both black and white box testing methods where some knowledge of the internal structure is used to design test cases.</li>
+</ul>
+</li>
+<li>
+<p><strong>Quality Assurance</strong>: Ensures that the software meets quality standards and satisfies the requirements through various practices and processes throughout the development lifecycle.</p>
+</li>
+</ol>
+<p>For more detailed information refer to: <a title="1.18 Test and evaluate" href="../lessons/11962-030.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/1-dot-18-test-and-evaluate" data-api-returntype="Page">1.18 Test and evaluate</a></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.18 Test and evaluate" href="https://canvas.kings.edu.au/courses/11962/assignments/179143" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179143" data-api-returntype="Assignment">1.18 Test and evaluate</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div><h3 class="sub">After</h3>
+<div class="readnav"><a href="11962-m8.html">← previous module</a><a href="../course-11962.html">all modules</a><a href="11962-m10.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

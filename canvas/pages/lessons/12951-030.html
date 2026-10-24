@@ -1,0 +1,242 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>4.4 Waterfall Approach — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 5 (Term 1: Weeks 1-2) Software Engineering Project</div>
+<h1 style="margin-top:.2rem">4.4 Waterfall Approach</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/4-dot-4-waterfall-approach" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Research and use the Waterfall software development approach, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>logical progression of steps used throughout the life cycle</li>
+<li>stages of ‘falling water’</li>
+<li>advantages and disadvantages</li>
+<li>scale and types of developments</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text">
+<p><span style="font-size: 10pt;">Understand the Waterfall software development approach, its stages, advantages, disadvantages, and the types of projects where it is best applied.</span></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Describe the logical progression of steps in the Waterfall approach.</span></li>
+<li><span style="font-size: 10pt;">Identify and explain the stages of the Waterfall model.</span></li>
+<li><span style="font-size: 10pt;">Explain the advantages and disadvantages of the Waterfall approach.</span></li>
+<li><span style="font-size: 10pt;">Recognise the scale and types of projects where the Waterfall approach is appropriate.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>The <strong>Waterfall</strong> approach to software development is a traditional, linear methodology where each phase of the project must be completed before moving on to the next. This structured approach is characterised by a logical progression of steps that follow one after the other, much like a series of "falling water." It is typically used for large-scale projects where stability, performance, and reliability are essential.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Progression of Steps</h3>
+<div class="dp-panel-content ">
+<p>The Waterfall approach is a structured, linear method for software development where each stage must be completed before moving to the next. It’s often visualised as a step-by-step "falling water" process, where each phase flows into the next. The 8-step version of the Waterfall model expands on the typical approach by adding more granularity in the early and later stages of development.</p>
+<p>1. <strong>Requirements Definition</strong></p>
+<ul>
+<li>
+<p>In this first phase, all the necessary requirements for the project are gathered and documented. This involves meeting with stakeholders and end-users to fully understand what the software must achieve. These requirements are used as the foundation for all future development.</p>
+</li>
+</ul>
+<p>2. <strong>Software Specifications</strong></p>
+<ul>
+<li>
+<p>Once the requirements are clearly defined, the next step involves turning these into technical specifications. This includes specifying the software architecture, defining data structures, and identifying system inputs and outputs. The specifications guide how the software will be built.</p>
+</li>
+</ul>
+<p>3. <strong>Design</strong></p>
+<ul>
+<li>
+<p>In the design phase, the overall structure of the system is created. This includes creating detailed design documents, such as system architecture diagrams, user interfaces, and data models. The design serves as a blueprint for the developers to follow when writing the code.</p>
+</li>
+</ul>
+<p>4. <strong>Development</strong></p>
+<ul>
+<li>
+<p>The actual coding and development of the software take place in this phase. Developers use the design documents and specifications to write the code. Each component of the software is built and then tested individually to ensure it functions as expected.</p>
+</li>
+</ul>
+<p>5. <strong>Integration</strong></p>
+<ul>
+<li>
+<p>After each component has been developed, they are integrated into a single system. This is where the different parts of the system come together and are tested to ensure they work as a cohesive whole.</p>
+</li>
+</ul>
+<p>6. <strong>Testing and Debugging</strong></p>
+<ul>
+<li>
+<p>During this phase, the integrated system is thoroughly tested to find and fix any bugs or issues. Testing can involve various methods, such as unit testing, system testing, and acceptance testing. This stage is crucial to ensure the software functions according to the requirements and performs reliably.</p>
+</li>
+</ul>
+<p>7. <strong>Installation</strong></p>
+<ul>
+<li>
+<p>Once testing is complete and the software is validated, it is installed in the user environment. This involves setting up the software on production servers and ensuring that all configurations are correct. In some cases, this may also involve data migration from older systems.</p>
+</li>
+</ul>
+<p>8. <strong>Maintenance</strong></p>
+<ul>
+<li>
+<p>After deployment, the software enters the maintenance phase, where ongoing support is provided to fix any issues that arise, implement updates, and make improvements based on user feedback. Maintenance ensures the software remains functional and efficient over time.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p>The term "Waterfall" refers to how the development process flows downwards through these stages in a sequential manner, much like water cascading down a series of steps. Once one stage is complete, the project moves to the next without returning to the previous stage. This lack of overlap or flexibility is both a strength and a limitation of the Waterfall approach.</p>
+<ul>
+<li><strong>Falling Water</strong> stages are linear and follow a clear sequence, ensuring that there is no ambiguity in what comes next.</li>
+<li>There is little to no iteration in this model. If a problem is discovered in a later stage, fixing it requires revisiting earlier stages, which can be expensive and time-consuming.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/2830da7512630543.png" alt="image.png" width="1037" height="130" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527477" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Advantages</h3>
+<div class="dp-panel-content">
+<p>The Waterfall method offers several advantages, particularly for large, complex, or high-stakes projects:</p>
+<ul>
+<li><strong>Clear Structure</strong>: The rigid stage-by-stage process provides a clear roadmap from start to finish, which is easy to follow and manage.</li>
+<li><strong>Defined Requirements</strong>: Because the requirements are fully documented before the project begins, the development team and stakeholders have a shared understanding of the project's goals.</li>
+<li><strong>Easy to Manage</strong>: The linear nature of the Waterfall approach makes it easier to manage large teams with different skill sets, as each team knows precisely what is expected at each stage.</li>
+<li><strong>Good for Large-Scale Projects</strong>: The Waterfall approach is ideal for projects that have a large scope, long timelines, and extensive resources. Its structure ensures that every aspect of the project is meticulously planned and executed.</li>
+<li><strong>Well-Suited for Safety-Critical Applications</strong>: Projects where safety, performance, and reliability are crucial (e.g., in healthcare, aerospace, or financial systems) benefit from the thorough testing and validation processes within Waterfall.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/a8bc87f79cfaf78c.png" alt="image.png" width="184" height="306" loading="lazy" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527478" data-api-returntype="File"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Disadvantages</h3>
+<div class="dp-panel-content">
+<p>Despite its advantages, the Waterfall model also has several significant drawbacks:</p>
+<ul>
+<li><strong>Inflexibility</strong>: One of the main criticisms of the Waterfall approach is its lack of flexibility. Once a stage is completed, it is difficult to go back and make changes without causing delays and increasing costs.</li>
+<li><strong>Late Testing</strong>: Since testing only occurs after the development stage is completed, issues or defects may not be discovered until late in the process. Fixing these issues often requires revisiting earlier stages, which is inefficient.</li>
+<li><strong>Poor Adaptation to Change</strong>: In projects where requirements evolve over time, the Waterfall model is not well-suited. It assumes that all requirements can be fully known and fixed at the start of the project, which is often unrealistic in dynamic environments.</li>
+<li><strong>Longer Timeframes</strong>: The sequential nature of Waterfall can lead to longer development times, particularly for large-scale projects, as each stage must be completed before moving on to the next.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/1d572dbd10db2d42.png" alt="image.png" width="195" height="261" loading="lazy" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527549" data-api-returntype="File"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Developments</h3>
+<div class="dp-panel-content">
+<p>The Waterfall approach is typically used for <strong>large-scale</strong> and <strong>complex projects</strong> where the requirements are well understood from the outset and unlikely to change. These projects often involve significant investments of time, money, and resources, and they usually have strict performance, safety, or regulatory requirements.</p>
+<p>Common examples of projects that suit the Waterfall model include:</p>
+<ul>
+<li><strong>Government and Defence</strong>: Large government contracts or defence systems, which often require strict adherence to timelines, budgets, and regulatory standards.</li>
+<li><strong>Infrastructure and Construction</strong>: Like software, infrastructure projects benefit from Waterfall’s structured approach, as they often follow well-defined steps from planning through to execution.</li>
+<li><strong>Safety-Critical Systems</strong>: Projects such as medical devices, aviation software, or financial systems that require extensive testing and validation are well-suited to Waterfall due to its structured, rigorous testing phase.</li>
+</ul>
+<p>The Waterfall approach is best suited for projects where the scope is clearly defined and unlikely to change, where performance and reliability are critical, and where the consequences of errors or defects are significant.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Software Engineering, The Year 11 Course</li>
+</ul>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-029.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-031.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

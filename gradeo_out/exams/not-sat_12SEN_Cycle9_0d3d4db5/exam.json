@@ -1,0 +1,200 @@
+{
+  "exam": "12SEN_Cycle9",
+  "syllabus": "Software Engineering",
+  "publisher": null,
+  "topics": [
+    "Programming for the Web"
+  ],
+  "outcomes": [
+    "SE-12-01",
+    "SE-12-06"
+  ],
+  "status": "LIVE",
+  "results_released": true,
+  "submitted": null,
+  "started": null,
+  "duration_minutes": null,
+  "markers": [
+    "TKS CST"
+  ],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/0d3d4db5-fa38-4b1a-bcd1-bdd76506376d",
+  "marking_session_id": "0d3d4db5-fa38-4b1a-bcd1-bdd76506376d",
+  "exam_id": "71e55196-5385-4fd4-af89-2f9d47acf29a",
+  "session_id": "22bbc308-3a5c-42fb-923c-c93bb71ee21b",
+  "total_mark": null,
+  "parts_answered": 0,
+  "parts_marked": 0,
+  "parts_total": 3,
+  "total_available": 6,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "8a879573-e83c-48e4-9217-7baee616bd2e",
+      "title": "Collaborative Work  Practises (SA, TKS2025)",
+      "topic": "Collaborative Work  Practises",
+      "label": "SA",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "6ec9f2bc-fbe4-4709-9050-11cde67bd2ca",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain how agreeing on API data formats early in development enhances integration between frontend and backend teams.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 40
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly explains how agreeing on API data formats early in development enhances integration between frontend and backend teams."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes how agreeing on API data formats early in development enhances integration between frontend and backend teams."
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of how agreeing on API data formats early in development enhances integration between frontend and backend teams."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Agreeing on API data formats early ensures both frontend and backend teams build components that match. This avoids errors when sending and receiving data, reduces time spent fixing mismatches, and leads to smoother, faster integration during development."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "a0ae1dc9-83d0-4867-8235-f9a30d3637ed",
+      "title": "Web Shell Scripting (SA, TKS2025)",
+      "topic": "Web Shell Scripting",
+      "label": "SA",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "41733842-bc36-4946-af24-0eb74d9f45d7",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe how a shell script can be used to create files or directories in a web application.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 50
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Describes the use of shell scripts on web app development."
+            },
+            {
+              "marks": "1",
+              "criterion": "Outlines the use of shell scripts on web app development."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "A shell script can include commands (e.g. `mkdir` and `touch`) to create directories/folders and files for developing a web application. These scripts can automatically create folders and generate new files without requiring an IDE interface on the developer's command line, saving time and ensuring consistency."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "5edbf9a1-8511-4ce4-8415-a15140860289",
+      "title": "Object-Relational Mapping (SA, TKS2025)",
+      "topic": "Object-Relational Mapping",
+      "label": "SA",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "a75e7d95-2fad-423e-a0fa-ae8728534573",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Which of the following is an example of human bias influencing AI system design?",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 50
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Correctly explains why ORM improves developer productivity."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes one reason why ORM improves developer productivity."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "ORM improves developer productivity by handling multiple SQL queries behind the scenes to perform a single high level task. This means developers can use simple method calls instead of writing and managing several related SQL statements manually."
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "Collaborative Work  Practises": {
+      "mark": 0,
+      "available": 1
+    },
+    "Web Shell Scripting": {
+      "mark": 0,
+      "available": 2
+    },
+    "Object-Relational Mapping": {
+      "mark": 0,
+      "available": 3
+    }
+  }
+}

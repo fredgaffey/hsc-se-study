@@ -1,0 +1,613 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 4 (Term 4: Weeks 7-8) Secure Software Architecture — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">12SENX2 Software Engineering 2026 · module 5 of 15</p>
+<h1>Cycle 4 (Term 4: Weeks 7-8) Secure Software Architecture</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="12951-all.html">Whole course</a><span class="cur">By module</span><a href="../course-12951.html">By lesson</a></div>
+<h3 class="readles">Introduction to Cycle 4</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div id="" class="dp-banner-image"><img class="dp-full-width" style="width: 100%; height: auto; max-width: 100%;" role="presentation" src="https://kingsnet.kings.edu.au/images/UserUploadedImages/1754/banner2.jpg" alt=" [online-only image]" loading="lazy"></div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-read-time-wrapper"><i class="fas fa-clock cp-txt-dp-primary" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> 2 min read&nbsp; |&nbsp; no activities&nbsp; |&nbsp;&nbsp;<i class="dp-icon fas fa-brain cp-txt-primary" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp; (easy)&nbsp;&nbsp;</div>
+<h4>Timing</h4>
+<p>Weeks 7, 8, and 9</p>
+<p>&nbsp;</p>
+<h4>Content</h4>
+<p><strong>Impact of Safe and Secure Software Development</strong></p>
+<p>This cycle shifts the focus from the technical implementation of secure code to the broader impacts of secure software development. We will explore how development practices affect teams, entire enterprises, and society as a whole.</p>
+<p>Throughout this cycle, we will cover the following key areas:</p>
+<ul>
+<li>The vital role of collaboration in software development, including how diverse viewpoints and expert task delegation lead to higher quality, more secure solutions.</li>
+<li>The tangible benefits that enterprises experience when they prioritise secure development practices, such as improved products, enhanced productivity, and better business interactions.</li>
+<li>The complex social, ethical, and legal landscape surrounding software development, including critical issues like data privacy, copyright, intellectual property, and digital disruption.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Deliverables</h4>
+<p>By the end of this cycle, you need to complete:</p>
+<ul>
+<li>Quiz — 1.15 Collaboration Benefits</li>
+<li>Quiz — 1.16 Enterprise Benefits</li>
+<li>Quiz — 1.17 Social, Ethical, Legal Issues</li>
+<li>Gradeo — Cycle 4</li>
+<li>Unit 1 Evaluation</li>
+<li>Gradeo — Unit 1 Topic Test</li>
+<li>ToDo App — Calendar Module</li>
+</ul>
+<p><em>Note: AT1 is Due in Week 7</em><em></em></p>
+<h4>Lessons</h4>
+<div class="dp-table-scroll">
+<table style="border-collapse: collapse; width: 100%;" border="1" data-active-table="true">
+<tbody>
+<tr>
+<td style="width: 26.8426%;"><strong>Title</strong></td>
+<td style="width: 34.4899%;"><strong>Syllabus</strong></td>
+<td style="width: 38.6675%;"><strong>Page Focus</strong></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.15 Collaboration Benefits" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.15 Collaboration Benefits</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p>Apply and describe the benefits of collaboration to develop safe and secure software, including:</p>
+<ul>
+<li>considering various points of view</li>
+<li>delegating tasks based on expertise</li>
+<li>quality of the solution</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Developing safe and secure software is rarely a solo effort. This page explores how collaboration enhances security through diverse perspectives, effective task delegation, and rigorous peer review to improve the quality of the final solution.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.16 Enterprise Benefits" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.16 Enterprise Benefits</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Investigate and explain the benefits to an enterprise of the implementation of safe and secure development practices, including:</p>
+<ul>
+<li>improved products or services</li>
+<li>influence on future software development</li>
+<li>productivity</li>
+<li>business interactivity</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Enterprises implementing safe and secure development practices see benefits beyond just security. This page investigates how these practices improve products, influence future development, boost productivity, and enhance business relationships.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.17 Social, Ethical, Legal Issues" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.17 Social, Ethical, Legal Issues</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Evaluate the social, ethical and legal issues and ramifications that affect people and enterprises resulting from the development and implementation of safe and secure software, including:</p>
+<ul>
+<li>employment</li>
+<li>data security</li>
+<li>privacy</li>
+<li>copyright</li>
+<li>intellectual property</li>
+<li>digital disruption</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Software development extends beyond technical code; it impacts society, laws, and ethics. This page evaluates how secure software affects employment, data privacy, intellectual property rights, and digital disruption in the modern world.</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>&nbsp;</p>
+</div><h3 class="sub">During </h3><h3 class="sub">Impact of safe and secure software development</h3>
+<h3 class="readles">1.15 Collaboration Benefits</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Apply and describe the benefits of collaboration to develop safe and secure software, including:<br>&nbsp; •&nbsp;&nbsp; considering various points of view<br>&nbsp; • &nbsp; delegating tasks based on expertise<br>&nbsp; •</span><span class="card-text"> &nbsp; quality of the solution <br></span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">To understand and apply the benefits of collaboration in developing safe and secure software, focusing on how considering diverse perspectives, delegating tasks based on expertise, and working together can improve the quality of the final solution.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explain how incorporating multiple viewpoints enhances security and reduces blind spots in software development.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Demonstrate the ability to delegate tasks effectively based on team members’ expertise to ensure efficient and secure software development.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Evaluate and describe how collaboration improves the overall quality of the software solution, making it more secure and reliable.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Collaboration plays a critical role in developing safe and secure software. We will explore the benefits of working together in software development teams, especially when the goal is to build secure systems. The key aspects of collaboration—considering various viewpoints, delegating tasks based on expertise, and focusing on solution quality—lead to better, more secure outcomes.</p>
+<p>&nbsp;</p>
+<h4>Why Collaboration Matters in Software Security</h4>
+<p>No one person can anticipate all potential security threats. Collaboration among team members brings diverse skill sets and viewpoints, leading to more robust, comprehensive solutions. Teams can delegate specific tasks to those best equipped to handle them, ensuring efficient work and higher quality. The overall result? A more secure and reliable software product.</p>
+<p>By working together, teams can build upon each other’s strengths, correct each other’s mistakes, and ensure that security concerns are addressed from multiple angles. The collaborative process strengthens the final product, making it more resilient against security vulnerabilities.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Considering Various Points of View</h3>
+<div class="dp-panel-content ">
+<p>In software development, especially when security is a top priority, it’s essential to involve a range of perspectives. Every developer on the team has a unique viewpoint based on their background, experiences, and areas of expertise. These different perspectives can lead to a more thorough understanding of potential risks and vulnerabilities.</p>
+<p>For example, one team member might be focused on ensuring secure data transmission, while another is more concerned with access control and authentication. Each perspective adds value and highlights areas that others might not have considered. The team can create a more comprehensive security strategy by incorporating these viewpoints into the development process.</p>
+<p><strong>Key Benefits:</strong></p>
+<ul>
+<li>Holistic Approach: Different perspectives lead to a more well-rounded understanding of potential security threats.</li>
+<li>Diverse ExpertiseSpecialiseded knowledge of network security, data privacy, cryptography, or user behaviour brings diverse solutions to the table.</li>
+<li>Identifying Blind Spots: Collaboration reduces the risk of missing critical security gaps that a single developer might overlook.</li>
+</ul>
+<p><strong>Example Scenario:</strong></p>
+<p>Imagine a team working on a banking app. A developer focused on front-end security might suggest adding multi-factor authentication for users, while another developer with expertise in encryption advocates for securing sensitive data during transmission. Together, they create a more secure system than either could have designed alone.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Delegating Tasks Based on Expertise</h3>
+<div class="dp-panel-content ">
+<p>Not every team member is an expert in every area of software development, especially in security-related projects. Effective collaboration involves knowing each team member’s strengths and delegating tasks accordingly. By assigning specific security tasks to those most qualified, you ensure that the work is done efficiently and with a higher skill level.</p>
+<p>For instance, a team member with deep knowledge of encryption can handle tasks related to data protection. At the same time, another with experience in network security can focus on securing the API endpoints. Proper delegation allows the team to maximise its resources, ensuring that each security aspect of the project is developed by someone who understands it best.</p>
+<p><strong>Key Benefits:</strong></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Efficiency: Work is completed faster when team members are assigned tasks that match their expertise.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Higher Quality: Expertise leads to better solutions, particularly when addressing complex security issues.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Reduced Errors: Delegating to experts minimises the challenges leading to vulnerabilities.</p>
+<p><strong>Example Scenario:</strong></p>
+<p>In a project to secure a web application, the team assigns different tasks: the developer with experience in cryptography implements data encryption, the one familiar with secure authentication designs the login flow, and another expert in database security sets up secure database access policies. Each task is handled by the person with the most relevant skills, leading to a stronger overall solution.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Quality of the Solution</h3>
+<div class="dp-panel-content">
+<p>Collaboration improves the process and elevates the quality of the final product. When multiple team members collaborate, they can review each other’s code, provide feedback, and identify vulnerabilities that might otherwise go unnoticed. Collaboration leads to higher-quality, more secure software.</p>
+<p>A key part of this is peer reviews. When multiple developers review the same piece of code, they are more likely to catch mistakes or suggest improvements, leading to more resilient software. Additionally, collaborative testing ensures that security features are properly tested from multiple angles, reducing the risk of leaving potential attack vectors open.</p>
+<p><strong>Key Benefits:</strong></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Thorough Code Reviews: Multiple reviewers can spot errors and potential vulnerabilities more effectively than one person.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Comprehensive Testing: Collaborative testing ensures the software is rigorously tested for security flaws.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Enhanced Reliability: A product built with multiple layers of scrutiny and feedback is more likely to be secure and stable.</p>
+<p><strong>Example Scenario:</strong></p>
+<p>A team is developing a secure messaging app. After implementing end-to-end encryption, they collaborate on testing the encryption mechanism. One team member suggests testing for potential timing attacks, while another focuses on testing message integrity in case of data corruption. Together, they ensure the messaging app is functional and highly secure.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="1.15 Collaboration Benefits" href="https://canvas.kings.edu.au/courses/12951/assignments/204805" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204805" data-api-returntype="Assignment">1.15 Collaboration Benefits</a></li>
+</ul>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.15%20Collaboration%20Benefits.pptx?d=w03640d16d269418db9a80bef9497226a&amp;csf=1&amp;web=1&amp;e=wZBgLH">1.15 Collaboration Benefits.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-15-collaboration-benefits" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={03640d16-d269-418d-b9a8-0bef9497226a}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">1.16 Enterprise Benefits</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Investigate and explain the benefits to an enterprise of the implementation of safe and secure development practices, including:</span><br class="card-text">&nbsp;&nbsp;&nbsp; •&nbsp; &nbsp;&nbsp; improved products or services<br class="card-text">&nbsp; &nbsp; •&nbsp; &nbsp;&nbsp; influence on future software development<br class="card-text">&nbsp; &nbsp; •&nbsp; &nbsp;&nbsp; productivity<br class="card-text">&nbsp; &nbsp; • &nbsp; &nbsp; business interactivity</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Investigate and explain how implementing safe and secure development practices benefits an enterprise in terms of product quality, future development, productivity, and business interactions.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand and explain how secure development practices lead to improved products or services.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Identify how these practices influence the direction and planning of future software development.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Recognise the impact of secure development practices on team productivity and efficiency.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Explain how secure development enhances business interactivity with clients, partners, and stakeholders.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>In today’s digital landscape, security is not just a technical consideration—it’s a business imperative. Enterprises implementing safe and secure development practices see wide-ranging benefits, from improving their products and services to influencing future development decisions, boosting productivity, and enhancing interactions with clients, partners, and stakeholders.</p>
+<p>&nbsp;</p>
+<h4>Development Practises for Enterprises</h4>
+<p>In an increasingly digital world, security is not just a technical challenge—it’s a key part of business strategy. Companies implementing secure development practices throughout the software life cycle benefit in multiple ways. These benefits include improved products and services, streamlined future software development, greater productivity, and stronger relationships with clients and partners.</p>
+<p>Secure development practices reduce risks, such as data breaches and compliance issues, while fostering trust and reliability. By making security a core component of software development, enterprises protect their assets and position themselves as leaders in their industries.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Improved Products or Services</h3>
+<div class="dp-panel-content ">
+<p>Implementing secure development practices results in higher-quality products and services that are more secure, reliable, and trusted by customers. When security is integrated from the beginning of the software development life cycle (SDLC), the product is less vulnerable to cyber-attacks and data breaches. This proactive approach results in fewer bugs and security flaws, translating into a more resilient product.</p>
+<p>The main benefit for customers is trust. Users are more likely to choose products from companies they believe will protect their data. A secure product also means fewer interruptions or failures, enhancing user experience. For the business, this results in reduced costs associated with fixing vulnerabilities after the product launch and avoiding the financial damage that can come from security incidents.</p>
+<p><strong>Key Benefits:</strong></p>
+<ul>
+<li>Increased Customer Trust: Secure products increase customer confidence, strengthening brand loyalty and market reputation.</li>
+<li>Fewer Security Vulnerabilities: Addressing security throughout the development process reduces the number of vulnerabilities that require post-release patches, reducing maintenance costs.</li>
+<li>Compliance with Legal Requirements: Many industries have strict security regulations. Secure products ensure compliance with laws like GDPR, HIPAA, and PCI-DSS.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>A cloud storage company prioritises secure development by implementing data encryption at rest and in transit. As a result, their platform not only gains clients' trust but also meets stringent compliance requirements. This provides a competitive advantage, attracting more businesses seeking secure data storage solutions.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Influence on Future Software Development</h3>
+<div class="dp-panel-content ">
+<p>Secure development practices improve current projects and shape how future software is built. Once an organisation establishes a security-first mindset, it creates a culture that values and prioritises security at every stage of development. Over time, this proactive approach results in more efficient development processes, as lessons learned and secure components from one project can be applied to future projects.</p>
+<p>Secure development practices also promote standardisation. Enterprises can develop secure libraries, frameworks, and coding standards that are reused across multiple teams and projects. This reduces the chances of introducing new security flaws and accelerates development because teams work from a proven secure foundation.</p>
+<p><strong>Key Benefits:</strong></p>
+<ul>
+<li>Foundation of Secure Practices: Establishing secure development as part of the company’s culture ensures that security is a priority in all future projects, reducing the risk of security incidents over time.</li>
+<li>Re-usability of Secure Components: Secure components (like authentication libraries, encryption protocols, etc.) can be reused across projects, saving development time while maintaining a high level of security.</li>
+<li>Proactive Security Approach: As security becomes integrated into development practices, teams can anticipate and address potential security risks before they become issues.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>A fintech company adopts secure development practices across its product line. By developing secure authentication libraries and encryption protocols, the company ensures that these components are used consistently across all future projects, improving security and reducing development time. This proactive approach also influences project planning, with security considerations built into the initial design phase.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Productivity</h3>
+<div class="dp-panel-content">
+<p>Secure development practices can increase productivity in the long run. Although integrating security into the development lifecycle may take extra time initially, it ultimately saves time and resources by reducing the number of vulnerabilities, bugs, and other security issues that typically arise after software release.</p>
+<p>When teams prioritise security during development, they avoid costly post-release patches, security audits, and emergency fixes. Additionally, incorporating automated security tools into the development process helps teams identify and fix potential security issues early, allowing them to focus more on delivering features and innovations rather than responding to security crises.</p>
+<p>Reduced downtime caused by security incidents also increases productivity. Systems compromised due to security flaws can lead to expensive downtime, loss of productivity, and damage to reputation. Secure development practices help prevent these issues, keeping systems running smoothly and allowing teams to maintain focus on their primary objectives.</p>
+<p><strong>Key Benefits:</strong></p>
+<ul>
+<li>Fewer Post-Release Fixes: Security issues caught early in development save time and reduce the need for urgent patches.</li>
+<li>Efficient Development: By integrating security tools into the workflow, teams can quickly identify and resolve security issues, improving overall efficiency.</li>
+<li>Increased Focus on Innovation: With security built-in, teams can focus on delivering features and improvements rather than constantly reacting to security problems.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>A SaaS company integrates security testing into its continuous integration (CI) pipeline, catching vulnerabilities in the development process. As a result, the team avoids the frequent last-minute patches that had previously disrupted their release schedule, allowing them to meet deadlines and improve their overall productivity.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Business Interactivity</h3>
+<div class="dp-panel-content">
+<p>Secure development practices improve an enterprise's interaction with clients, partners, and stakeholders. In industries where data security is critical, businesses must demonstrate that their systems are designed with security in mind. Companies committed to secure development are seen as trustworthy and reliable, which can strengthen existing relationships and open the door to new business opportunities.</p>
+<p>Moreover, secure software helps reduce legal and compliance risks, which can be significant when negotiating contracts or forming partnerships. Clients and partners are more likely to engage with businesses with a proven security track record, knowing their data will be protected. This leads to stronger, more collaborative relationships and a competitive edge in the marketplace.</p>
+<p><strong>Key Benefits:</strong></p>
+<ul>
+<li>Strengthened Trust with Clients: Secure software builds trust, leading to stronger, longer-lasting business relationships.</li>
+<li>Competitive Advantage: Enterprises known for secure development practices can differentiate themselves as safe and reliable partners in the marketplace.</li>
+<li>Legal and Compliance Protection: Secure development reduces the risk of non-compliance with regulations, protecting the enterprise from legal consequences.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>A healthcare technology company demonstrates compliance with strict data privacy regulations by implementing secure development practices across its product line. As a result, it secured a major partnership with a hospital chain that requires HIPAA-compliant software, setting it apart from competitors that cannot offer the same level of security.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title=" 1.16 Enterprise Benefits" href="https://canvas.kings.edu.au/courses/12951/assignments/204806" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204806" data-api-returntype="Assignment"> 1.16 Enterprise Benefits</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.16%20Enterprise%20Benefits.pptx?d=w45dd8e6dde874ea08f03093a1fcc1722&amp;csf=1&amp;web=1&amp;e=MTIBk3">1.16 Enterprise Benefits.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-16-enterprise-benefits" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={45dd8e6d-de87-4ea0-8f03-093a1fcc1722}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+&nbsp;</div>
+</div>
+<h3 class="readles">1.17 Social/Ethical/Legal Issues</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">E</span>valuate the social, ethical and legal issues and ramifications that affect people and enterprises resulting from the development and implementation of safe and secure software, including:<br class="card-text">&nbsp;&nbsp;&nbsp;&nbsp; •&nbsp; &nbsp;&nbsp; employment<br class="card-text">&nbsp;&nbsp;&nbsp;&nbsp; •&nbsp;&nbsp;&nbsp;&nbsp; data security<br class="card-text">&nbsp; &nbsp; &nbsp;•&nbsp; &nbsp;&nbsp; privacy<br class="card-text">&nbsp; &nbsp;&nbsp; •&nbsp; &nbsp;&nbsp; copyright<br class="card-text">&nbsp; &nbsp; &nbsp;•&nbsp; &nbsp;&nbsp; intellectual property<br class="card-text">&nbsp; &nbsp; &nbsp;•&nbsp;&nbsp;&nbsp;&nbsp; digital disruption</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">To understand and evaluate the social, ethical, and legal issues arising from developing and implementing safe and secure software and how these issues impact individuals, businesses, and society.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Assess the implications of secure software development on employment within the tech industry.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Understand the relationship between secure software, data security, privacy, and legal regulations.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Analyse and intellectual property laws intersect with software development.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Explain the role of digital disruption and its impact on enterprises due to advancements in secure software.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>As software becomes increasingly central to how businesses operate and people interact with technology, developing and implementing secure software brings various social, ethical, and legal challenges. These challenges extend far beyond technical concerns, influencing employment trends, data security, privacy rights, and even how we think about ownership in the digital age.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Employment</h3>
+<div class="dp-panel-content ">
+<p>Secure software development has created new jobs and transformed existing roles. As businesses prioritise security, demand has surged for professionals specialising in security, software development, and risk management. However, automation and security tools have also disrupted specific roles, potentially reducing demand for low-level IT jobs that more advanced security solutions could replace.</p>
+<p>This shift in employment patterns raises ethical concerns around workforce displacement, as some workers may need retraining to stay relevant in the evolving job market. At the same time, it opens up opportunities for those with the right skills to enter a growing field.</p>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li>New Jobs: Roles like security engineers, ethical hackers, and data protection officers have emerged as critical to secure software development.</li>
+<li>Workforce Displacement: Some roles may be automated or outsourced as security tools become more advanced.</li>
+<li>Reskilling: Enterprises need to invest in reskilling programs to help employees adapt to the demands of secure software development.</li>
+</ul>
+<p><strong>Example:</strong><br>A company that shifts to cloud-based systems with integrated security tools sees reduced demand for on-site IT staff but increases its hiring of cloud security experts and cyber-security analysts to protect the new system.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Security</h3>
+<div class="dp-panel-content ">
+<p>Data security is one of the most critical issues in developing safe and secure software. With more sensitive data being stored digitally, secure software is essential to protecting this data from breaches, and unauthorised security ensures that personal, financial, and proprietary information is safeguarded, and it is a key factor in building trust with customers and partners.</p>
+<p>From an ethical perspective, enterprises are responsible for protecting the data they handle. Failures in data security can result in severe consequences, such as identity theft, financial fraud, and loss of customer trust. Businesses are also subject to data protection regulations like the General Data Protection Regulation (GDPR), which mandates how organisations organise personal data.</p>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li>Protecting Sensitive Data: Secure software minimises breaches and unauthorised access. Responsibility: Businesses must protect the data they handle to avoid harm to individuals and maintain trust.</li>
+<li>Legal Implications: Companies are bound by laws and regulations such as GDPR, HIPAA, and others, which enforce strict standards for data handling.</li>
+</ul>
+<p><strong>Example Scenario:</strong></p>
+<p>A healthcare provider develops secure software to manage patient data, ensuring that all sensitive information is encrypted and only accessible by authorised personnel, meeting HIPAA compliance standards, and protecting patient privacy.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Privacy</h3>
+<div class="dp-panel-content">
+<p>Privacy is a fundamental right that is closely tied to secure software development. As digital systems collect vast amounts of personal information, developing software that respects and protects individuals’ privacy is challenging. Secure software must prevent unauthorised personal data and give users control over how their information is collected and used.</p>
+<p>Ethically, developers must implement privacy features, such as data anonymity and encryption, to prevent abuse. Legally, privacy is protected under regulations like the GDPR, which gives individuals rights over their data and imposes penalties for violations.</p>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li>User Control: Secure software should give users control over their data, including how it is collected and used.</li>
+<li>Anonymity and Encryption: These are critical privacy-preserving technologies to prevent data misuse.</li>
+<li>Compliance: Enterprises must comply with privacy laws that regulate how personal data is handled and stored.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>An online retailer implements secure software that allows customers to manage their privacy settings, including opting out of data tracking and reviewing what personal data is stored. This complies with GDPR and enhances user trust.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Copyright</h3>
+<div class="dp-panel-content">
+<p>The issue of copyright in software development is complex, as software is both a creative and functional product. Developers have legal rights to protect their code under copyright law, specifically under the <strong>Copyright Act 1968 (Cth)</strong> in Australia, ensuring that their intellectual property (IP) is not copied or used without permission. However, the rise of open-source software has introduced new dynamics, where developers may freely share their work while still retaining some control over its use.</p>
+<p>Copyright protection is essential for fostering innovation, ensuring developers and enterprises are rewarded for their efforts. However, it raises ethical questions about access, especially in contexts where secure software is critical for public welfare.</p>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li><strong>Protection of Code:</strong> Developers use copyright to protect their software from unauthorised corruption under the Australian <strong>Copyright Act 1968 (Cth)</strong>.</li>
+<li><strong>Open-Source Licensing:</strong> Open-source software allows for more collaborative development while offering varying levels of copyright control.</li>
+<li><strong>Ethical Considerations:</strong> Copyright protection must balance innovation and access, especially in cases where secure software is essential for public safety.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>A Software developer protects their code with a copyright license but releases it under an open-source license for non-commercial use, allowing others to use and improve the code for educational or personal projects.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Intellectual Property</h3>
+<div class="dp-panel-content">
+<p>Intellectual property (IP) laws are critical in software development, ensuring that innovations are protected. Patents, trademarks, and trade secrets allow developers and enterprises to control the use of their ideas and inventions, fostering innovation while protecting against theft or unauthorised <span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">secure software development, which raises unique challenges. As security threats evolve, developers must constantly innovate, making it difficult to establish fixed intellectual property protections for developing software. Additionally, the legal frameworks for software IP are not always clear-cut, leading to disputes and challenges around ownership.</span></p>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li>Protection of Innovations: Patents and trade secrets help protect new software innovations from competitors.</li>
+<li>Challenges of Security Innovation: As secure software constantly evolves, IP protection must be flexible to adapt to new threats and innovations.</li>
+<li>Disputes Over Ownership: Legal battles often arise over the ownership of code and algorithms, particularly in cases where multiple parties have contributed to the development process.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>A cyber security start-up patents a unique encryption algorithm, protecting its intellectual property from being copied by competitors while allowing it to license the technology to partners.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Digital Disruption</h3>
+<div class="dp-panel-content">
+<p>Developing and implementing secure software often leads to digital disruption, transforming industries by enabling new ways of working and interacting with technology. Digital disruption can be an opportunity or a challenge for enterprises, as it reshapes the market and forces businesses to adapt to new technologies.</p>
+<p>While secure software helps enterprises protect themselves against cyber threats, it can also disrupt by making certain technologies or business models obsolete. Companies that fail to adopt safe practices may find themselves at a competitive disadvantage, unable to keep up with more secure, efficient digital solutions.</p>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li>Transformation of Industries: Secure software can disrupt traditional industries by introducing safer, more efficient business methods.</li>
+<li>Adoption of New Technologies: Enterprises must adapt to secure technologies or risk falling behind competitors.</li>
+<li>Competitive Advantage: Businesses prioritise securing a competitive edge by offering safer products and services.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>A financial services company uses blockchain technology to secure transactions, disrupting traditional banking models by offering faster, more secure transactions at lower costs. Competitors that fail to implement similar technology struggle to keep up.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-17-social-slash-ethical-slash-legal-issues" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube-nocookie.com/embed/8GhFmQPZAlo?si=mUsXuGSTGZmotSek</span></div></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="1.17 Social/Ethical/Legal Issues" href="https://canvas.kings.edu.au/courses/12951/assignments/204807" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204807" data-api-returntype="Assignment">1.17 Social/Ethical/Legal Issues</a></li>
+</ul>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.7%20Privacy%20by%20Design.pptx?d=wbcd6c974605849d9a8e79f9105b43324&amp;csf=1&amp;web=1&amp;e=OBmqIW">1.7 Privacy by Design.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-17-social-slash-ethical-slash-legal-issues" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={29a5307a-94d4-4ab6-96c1-997cb409a861}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div><h3 class="sub">After</h3>
+<h3 class="readles">TODO app Calendar Module</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/todo-app-calendar-module" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/12951/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3Df730aa2c-170f-4980-a189-fde740da4285-8134%26custom_arc_start_at%3D0</span></div></div>
+</div>
+</div>
+<div class="readnav"><a href="12951-m3.html">← previous module</a><a href="../course-12951.html">all modules</a><a href="12951-m5.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

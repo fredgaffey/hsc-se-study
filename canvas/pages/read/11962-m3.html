@@ -1,0 +1,922 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 3 (Term 1: Weeks 5-6) Programming Fundamentals — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">11SENX Software Engineering 2025 · module 4 of 17</p>
+<h1>Cycle 3 (Term 1: Weeks 5-6) Programming Fundamentals</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="11962-all.html">Whole course</a><span class="cur">By module</span><a href="../course-11962.html">By lesson</a></div>
+<h3 class="readles">Introduction to Cycle 3</h3>
+<div id="kl_wrapper_3" class="kl_bookmark variation_2 kl_wrapper">
+<div id="kl_banner" class="">
+
+</div>
+<div id="kl_custom_block_1" class="">
+<h3 class=""><i class="fas fa-hand-sparkles" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Introduction</h3>
+<p>Cycle 3 begins the next phase of your syllabus. This fortnight you begin looking at 'Data for Software Engineering'. We will look at the number systems used in computing along with data types and structures required for programming.</p>
+</div>
+<div id="kl_custom_block_3" class="">
+<h3><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Syllabus</h3>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div>
+<div class="nsw-h4" data-kontent-item-id="52f6232c-eb44-4666-a699-339ef7d978f1" data-kontent-element-codename="title">Data for Software Engineering</div>
+<ul class="list-disc mt-3 space-y-0 pl-[1.1875rem]">
+<li data-kontent-item-id="7baa041d-0a66-43bc-a0b8-75c59c3971ac">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate the use of number systems for computing purposes, including binary, decimal and hexadecimal</p>
+</div>
+</li>
+<li data-kontent-item-id="781360ca-6515-4ddb-ba60-912938d859c2">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Represent integers using two’s complement</p>
+</div>
+</li>
+</ul>
+</div>
+<div>
+<ul class="list-disc mt-3 space-y-0 pl-[1.1875rem]">
+<li data-kontent-item-id="5faa050c-9ddd-4afe-8472-14c78e70ce40">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate standard data types<br>- char (character) and string<br>- Boolean<br>- real<br>- single precision floating point<br>- integer<br>- date and time</p>
+</div>
+</li>
+<li data-kontent-item-id="27cc6dd3-fac5-45f4-bdc2-4da6f3701372">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Create data dictionaries as a tool to describe data and data types, structure data, and record relationships- char (character) and string</p>
+</div>
+</li>
+<li data-kontent-item-id="a2f870ae-8102-492d-8d1a-82b3e65b96d4">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Use data structures of arrays, records, trees and sequential files</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="kl_custom_block_2" class="">
+<h3 class=""><i class="fas fa-comments" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>Activity</h3>
+<p>Starting this fortnight we HIGHLY recommend that you begin to look at the next section of the Python programming language and spend some time during the week working on your programming skills. Whilst you work through the modules it would be beneficial for you to complete the '<a class="inline_disabled" href="https://groklearning.com/a/resources/intro-python-2/" target="_blank">Introduction to Programming 2 - Python</a>' Grok learning activity in this cycle. The completion of these two activities will be a tremendous advantage for the final month of the term.</p>
+</div>
+</div>
+<p>&nbsp;</p><h3 class="sub">During</h3><h3 class="sub">Data for Software Engineering</h3>
+<h3 class="readles">1.11 Number systems</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Investigate the use of number systems for computing purposes, including binary, decimal and hexadecimal</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Develop an understanding of number systems used in computing, specifically binary, decimal, and hexadecimal, and investigate their applications and importance in the field.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Accurately convert between binary, decimal, and hexadecimal number systems.</span></li>
+<li><span style="font-size: 13.3333px;">Understand the significance of each number system in computing contexts.</span></li>
+<li><span style="font-size: 13.3333px;">Identify real-world scenarios where each number system is commonly used.</span></li>
+<li><span style="font-size: 13.3333px;">Explain the advantages and disadvantages of each number system in computing applications.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p class="amber-el amber-paragraph amber-content">In mathematics, we as humans arbitrarily chose to use a <strong class="amber-el amber-bold">base 10</strong> number system.</p>
+<p class="amber-el amber-paragraph amber-content">For example, when we write the number 2743, we actually interpret it as:</p>
+<p class="amber-el amber-paragraph amber-content"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> <semantics> <mrow> <mn>2</mn> <mo>⋅</mo> <mn>1</mn> <msup> <mn>0</mn> <mn>3</mn> </msup> <mo>+</mo> <mn>7</mn> <mo>⋅</mo> <mn>1</mn> <msup> <mn>0</mn> <mn>2</mn> </msup> <mo>+</mo> <mn>4</mn> <mo>⋅</mo> <mn>1</mn> <msup> <mn>0</mn> <mn>1</mn> </msup> <mo>+</mo> <mn>3</mn> <mo>⋅</mo> <mn>1</mn> <msup> <mn>0</mn> <mn>0</mn> </msup> <mo>=</mo> <mn>2743</mn></mrow></semantics></math></span></span></span><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn></mn> </mrow> </semantics> </math></span></span></span></p>
+<div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; You may remember learning about <strong class="amber-el amber-bold">'place values'</strong> from primary school. This is the way we were taught to use the base 10 number system.</span></p>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">&nbsp;</p>
+<p class="amber-el amber-paragraph amber-content">In reality, we can make our own number systems <strong class="amber-el amber-bold">using any base</strong>. To denote which base is being used, we use subscript:</p>
+<p class="amber-el amber-paragraph amber-content"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> <semantics> <mrow> <mn>274</mn> <msub> <mn>3</mn> <mn>10</mn> </msub> </mrow> </semantics> </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span></span></p>
+<p class="amber-el amber-paragraph amber-content">In this course, you will be learning about the number systems used to represent numbers modern computing:</p>
+<ul class="amber-el amber-list">
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Decimal</p>
+</li>
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Binary</p>
+</li>
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Hexadecimal</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h4><strong>Decimal</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Decimal is a <strong class="amber-el amber-bold">base 10 number system</strong>, which we use in our daily lives because it is the standard number system in mathematics. It is the easiest number system for a human to read and manipulate.</p>
+<p class="amber-el amber-paragraph amber-content">Decimal is denoted using the digits '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' in each place value:</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">2836</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">Each digit (reading from right to left) increases by a factor of 10:</p>
+<p class="amber-el amber-paragraph amber-content"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> <semantics> <mrow> <mn>2000</mn> <mo>+</mo> <mn>800</mn> <mo>+</mo> <mn>30</mn> <mo>+</mo> <mn>6</mn> <mtext>&nbsp;</mtext> <mo>=</mo> <mtext>&nbsp;</mtext> <mn>2836</mn> </mrow> </semantics> </math></span></span></span></p>
+<div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; However, computers at their lowest level cannot comprehend a base 10 number system. This is why modern computing uses <strong class="amber-el amber-bold">binary.</strong></span></p>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">&nbsp;</p>
+<p class="amber-el amber-paragraph amber-content">This limits modern computers to using binary, which is a <strong class="amber-el amber-bold">base 2 number system</strong>. It is the easiest number system for a computer to read and manipulate, but not for a human.</p>
+<h4><strong>Binary</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Transistors (the main building block of modern computing) can only exist in either an 'on' state or an 'off' state (i.e. true/false or 0/1).</p>
+<p class="amber-el amber-paragraph amber-content">This limits modern computers to using binary, which is a <strong class="amber-el amber-bold">base 2 number system</strong>. It is the easiest number system for a computer to read and manipulate, but not for a human.</p>
+<p class="amber-el amber-paragraph amber-content">Binary is denoted using the digits '0' and '1' in each place value:</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">10011011</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">Each digit (reading from right to left) increases by a factor of 2:</p>
+<p class="amber-el amber-paragraph amber-content"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> <semantics> <mrow> <mn>1</mn> <mo>⋅</mo> <mn>128</mn> <mo>+</mo> <mn>0</mn> <mo>⋅</mo> <mn>64</mn> <mo>+</mo> <mn>0</mn> <mo>⋅</mo> <mn>32</mn> <mo>+</mo> <mn>1</mn> <mo>⋅</mo> <mn>16</mn> <mo>+</mo> <mn>1</mn> <mo>⋅</mo> <mn>8</mn> <mo>+</mo> <mn>0</mn> <mo>⋅</mo> <mn>4</mn> <mo>+</mo> <mn>1</mn> <mo>⋅</mo> <mn>2</mn> <mo>+</mo> <mn>1</mn> <mo>⋅</mo> <mn>1</mn> <mo>=</mo> <mn>155</mn> </mrow> </semantics> </math></span></span></span></p>
+<div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Decimal to Binary</h3>
+<div class="dp-panel-content">
+<p><img src="../../assets/1380a3851ad97dfd.png" alt="Binary Activity_Page_1.png" width="655" height="1256" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197627" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Binary to Decimal</h3>
+<div class="dp-panel-content">
+<p><img src="../../assets/c8da599829cdc405.png" alt="Binary Activity_Page_2.png" width="665" height="210" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197630" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">&nbsp;</p>
+<h4><strong>Hexadecimal</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Hexadecimal is a <strong class="amber-el amber-bold">base 16 number system</strong>, an alternative representation of the base 2 number system. It is difficult for a human programmer to read Binary 0's and 1's, thus Hexadecimal representation is used to make Binary a bit more readable.</p>
+<p class="amber-el amber-paragraph amber-content">Hexadecimal is denoted using a '0x' followed by the digits '0' to '9' and/or the characters 'A' to 'F':</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">0x9:B</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">Each digit/character represents 4 bits (i.e. four 0's and 1's).</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.11 Number Systems" href="https://canvas.kings.edu.au/courses/11962/assignments/179133" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179133" data-api-returntype="Assignment">1.11 Number systems</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://edstem.org/au/courses/14919/lessons" target="_blank">Number Systems in Computing</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/ETisMOzGvLxGnZhN_dbP_rcByVfstQrWKWvUlRK8hZ886g?e=d3WKxp" target="_blank">1.11 Number Systems</a></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-11-number-systems" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={ec30ac38-bcc6-46bc-9d98-4dfdd6cffeb7}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">1.12 Two&#x27;s complement</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Represent integers using two’s complement</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+</div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Develop an understanding of two's complement representation and apply it to represent integers in binary.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Understand the concept of two's complement representation.</span></li>
+<li><span style="font-size: 13.3333px;">Explain the process of converting positive and negative integers to their two's complement form.</span></li>
+<li><span style="font-size: 13.3333px;">Accurately convert integers between decimal and two's complement binary representations.</span></li>
+<li><span style="font-size: 13.3333px;">Demonstrate the ability to perform arithmetic operations using two's complement binary numbers.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p class="amber-el amber-paragraph amber-content">Two's Compliment is the way in which computers represent positive and negative integers.</p>
+<p class="amber-el amber-paragraph amber-content"><strong class="amber-el amber-bold">Unsigned integers</strong> (without Two's Compliment) <strong class="amber-el amber-bold">only represents positive values</strong>. This is how you've been introduced to reading Binary in the previous lesson. For example:</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">01101010 = 106</pre>
+</div>
+</div>
+<div class="amdiscb-slot">
+<div class="amber-el amber-pre">11101010 = 234</div>
+</div>
+<p class="amber-el amber-paragraph amber-content"><strong class="amber-el amber-bold">Signed integers</strong> (Two's Compliment) represents both <strong class="amber-el amber-bold">positive and negative values</strong> where the left-most binary digit (underlined) indicates if the number is positive ('0') or negative ('1'). For example:</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre"><u class="amber-el amber-underline"><strong class="amber-el amber-bold">0</strong></u>1101010 = 106</pre>
+</div>
+</div>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre"><u class="amber-el amber-underline"><strong class="amber-el amber-bold">1</strong></u>1101010 = -22</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn></mn> </mrow> </semantics> </math></span></span></span></p>
+<div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp;<strong class="amber-el amber-bold">Notice that by only changing the left-most binary digit means that the entire number has changed</strong> (i.e. 106 did not become -106). You will learn to calculate Signed Integers later in the lesson.</span></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Number Circle</strong></h4>
+<p>&nbsp;Number Circles are used to visually represent how Two's Complement is able to represent negative numbers in Binary. Think about it like a number line where the <strong class="amber-el amber-bold">numbers to the right of the 0 is positive and the numbers to the left of the 0 is negative</strong>.</p>
+<p class="amber-el amber-paragraph amber-content"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn></mn> </mrow> </semantics> </math></span></span></span></p>
+<div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp;The number of bits that are used to represent a Decimal number in Binary will have an impact on the largest and smallest numbers that it can represent. Thus, the reason why number circles are used instead of number lines where the values extend to infinity.</span></p>
+</div>
+</div>
+<p class="amber-el amber-callout amber-content amber-callout-info">&nbsp;</p>
+<p class="amber-el amber-paragraph amber-content">For example, a hypothetical 3-bit number system shown as a number circle. The Two's Complement system (signed) is represented on the right.</p>
+<p>&nbsp;<img src="../../assets/1a5e9f4d7f35e905.png" alt="Twos Compliment-01.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197640" data-api-returntype="File" loading="lazy"></p>
+<p class="amber-el amber-paragraph amber-content">&nbsp;</p>
+<div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Note how the Two's Complement system will <strong class="amber-el amber-bold">always create one more negative number than positive numbers.</strong> You'll never find a computer using a 3-bit system in real life, but it makes for a nice example.</span></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Converting between Decimal and Signed Binary (Two's Complement)</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Converting between Decimal and Signed Binary using Two's Complement is very similar to the process of converting using unsigned numbers. The only difference being the last place value which is now negative instead of positive (i.e. the place value 128 is now -128).</p>
+<p class="amber-el amber-paragraph amber-content">&nbsp;</p>
+<div class="dp-callout dp-callout-color-lg-warning  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #fdf5e8; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><strong><i class="fas fa-exclamation-triangle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> </strong><strong class="amber-el amber-bold">Make sure to read the working in the top box very carefully</strong> to understand the nature of Two's Complement in how it represents negative numbers.<br></span></p>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">&nbsp;<strong class="amber-el amber-bold"></strong></p>
+<div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Decimal to Signed Binary</h3>
+<div class="dp-panel-content">
+<p><img src="../../assets/cce8be1a67fa4133.png" alt="Twos Compliment Activity_Page_1.png" width="744" height="1598" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197643" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Signed Binary to Decimal</h3>
+<div class="dp-panel-content">
+<p><img src="../../assets/3abf849db5077125.png" alt="Twos Compliment Activity_Page_2.png" width="687" height="213" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197648" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.12 Two's complement" href="https://canvas.kings.edu.au/courses/11962/assignments/179136" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179136" data-api-returntype="Assignment">1.12 Two's complement</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank">Two's complement</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EeEH29FHhs5MpWVZ__yT_jgBO2cGsOIhpIdD9NBMppkIUQ?e=rWcXI4" target="_blank">1.12 Two's Compliment</a></p>
+<p><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-12-twos-complement" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={d1db07e1-8647-4cce-a565-59fffc93fe38}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">1.13 Data types</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Investigate standard data types<br class="card-text">- <span class="card-text">char (character) and string</span><br class="card-text">- <span class="card-text">Boolean</span><br class="card-text">- <span class="card-text">real</span><br class="card-text">- <span class="card-text">single precision floating point</span><br class="card-text">- <span class="card-text">integer</span><br class="card-text">- <span class="card-text">date and time</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Explore and understand standard data types, including char (character), string, Boolean, real, single precision floating point, integer, and date and time, and their applications in programming.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Identify and define each standard data type.</span></li>
+<li><span style="font-size: 13.3333px;">Understand the purpose and use of each data type in programming.</span></li>
+<li><span style="font-size: 13.3333px;">Provide examples of how each data type can be used in a programming context.</span></li>
+<li><span style="font-size: 13.3333px;">Recognise the differences and similarities between various data types.</span></li>
+<li><span style="font-size: 13.3333px;">Determine appropriate data types for specific scenarios or problems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content<strong></strong></h3>
+<p class="amber-el amber-paragraph amber-content">When variables are declared, they are <strong class="amber-el amber-bold">assigned a specific Data Type</strong> which tell the computer <strong class="amber-el amber-bold">how much memory is required to store a value.</strong></p>
+<p class="amber-el amber-paragraph amber-content">The most common Data Types used in programming are:</p>
+<ul class="amber-el amber-list">
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Integer (Int)</p>
+</li>
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Floating Point (Float)</p>
+</li>
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Character (Char)</p>
+</li>
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">String (Str)</p>
+</li>
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Boolean (Bool)</p>
+</li>
+</ul>
+<p class="amber-el amber-paragraph amber-content">Variables can <strong class="amber-el amber-bold">only store values that are of its own Data Type</strong> unless converted using <strong class="amber-el amber-bold">Type Casting.</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning">Depending on the Data Type being converted, there may be a <strong class="amber-el amber-bold">loss of data</strong> (i.e. Type Casting from a Floating Point to Integer will lose the fraction component).</p>
+<p>&nbsp;</p>
+<h4><strong>Integers</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Like in Mathematics, Integers are <strong class="amber-el amber-bold">whole numbers with no fractions or decimals.</strong> They are commonly stored as <strong class="amber-el amber-bold">4 bytes (32 bits)</strong> which allow for the <strong class="amber-el amber-bold">accurate</strong> representation of all whole numbers between <strong class="amber-el amber-bold">-2,147,483,648 to 2,147,483,647.</strong></p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">-27, -5, 0, 4, 15, 207</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content"><strong class="amber-el amber-bold">Note:</strong> The value of the integer itself <strong class="amber-el amber-bold">does not affect the amount of memory used to store it</strong> (i.e. the integers -5, 1 and 500,000 are all 4 bytes in size).</p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Example</strong></p>
+<div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp;Note that in Python the function <strong>type() </strong>will return the type of a variable. It is being used here for demonstration purposes.<br></span></p>
+</div>
+</div>
+<p><img src="../../assets/1e36b0f1373dac49.png" alt="Screenshot 2024-02-22 at 4.16.14 pm.png" width="265" height="60" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197782" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Output</strong></p>
+<p><img src="../../assets/26ba86e2771748a5.png" alt="Screenshot 2024-02-22 at 4.16.26 pm.png" width="149" height="41" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197783" data-api-returntype="File" loading="lazy"></p>
+<h4><strong>Floating Point Numbers </strong></h4>
+<p class="amber-el amber-paragraph amber-content">Floating Point Numbers can represent decimal point values and can thus represent real numbers (not just whole numbers but also fractions). They are commonly stored as 4 bytes (32 bits) which allow for the <strong class="amber-el amber-bold">approximate</strong> representation of decimal values.</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">-15.67, -6.5, 0, 7.08, 72.57</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content"><strong class="amber-el amber-bold">Note:</strong> The value of the floating point number itself <strong class="amber-el amber-bold">does not affect the amount of memory used to store it</strong> (i.e. the integers -5.8, 0 and 708.91 are all 4 bytes in size).</p>
+<p class="amber-el amber-callout amber-content amber-callout-warning">Floating Point Numbers are only approximate representations of a given number, so it will <strong class="amber-el amber-bold">pose a risk to applications that require a great deal of accuracy.</strong> Thus, there are other data types that use more memory to <strong class="amber-el amber-bold">store more accurate representations of numbers</strong> such as <strong class="amber-el amber-bold">Double</strong> which uses 8 bytes instead of 4.</p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Example</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong><img src="../../assets/30ee830398de6213.png" alt="Screenshot 2024-02-22 at 4.21.00 pm.png" width="338" height="58" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197784" data-api-returntype="File" loading="lazy"></strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Output</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong><img src="../../assets/fde446cfd5bd3844.png" alt="Screenshot 2024-02-22 at 4.21.21 pm.png" width="200" height="48" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196919" data-api-returntype="File" loading="lazy"></strong></p>
+<h4 class="amber-el amber-callout amber-content amber-callout-warning"><strong>Characters</strong></h4>
+<p>Characters are <strong class="amber-el amber-bold">single letters and symbols</strong> that are <strong class="amber-el amber-bold">defined and encoded within the ASCII table</strong> by being assigned a <strong class="amber-el amber-bold">unique numerical value.</strong> They are commonly stored as <strong class="amber-el amber-bold">1 byte (8 bits)</strong> per character and thus <strong class="amber-el amber-bold">limits the range of letters and symbols that can be represented</strong> using this data type.</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">'a', 'b', 'c', 'A', 'B', 'C', '$', '@', '%', ' ', '\n', '\t'</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content"><strong class="amber-el amber-bold">Note:</strong> '\n' means to create a new line of text and '\t' means to print a tab space</p>
+<p class="amber-el amber-callout amber-content amber-callout-info">The most popular character encoding method on the web is UTF-8 as it allows for the representation of other languages and emojis.</p>
+<div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp;Note that Python does not have a specific data type for characters. Instead, they are simply represented as strings with a length of one.<br></span></p>
+</div>
+</div>
+<h4><strong>Strings</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Strings are <strong class="amber-el amber-bold">an array of characters</strong>. Since each character is stored as 1 byte each, a string's size depends on the number of characters in the string.</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre"># These two strings are the same <br>string_1 = "Hello World"<br>string_2 = ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd']</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">Hence, we can interact with a string like an array (see 1.15 for more information about arrays).</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">string = "Hello World"<br><br># Output: 'o'<br>print(string[4])</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">Combining multiple strings together is called <strong class="amber-el amber-bold">Concatenation.</strong></p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">string_1 = "Hello" <br>string_2 = "World" <br>full_string = string_1 + ' ' + string_2<br><br># Output: "Hello World"<br>print(full_string)</pre>
+<p><strong class="amber-el amber-bold" style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">Note:</strong><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;"> ' ' is a </span><i class="amber-el amber-italic" style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">space</i> <span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;"> character</span></p>
+</div>
+</div>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Example</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><img src="../../assets/cd4f5e6ba6057099.png" alt="Screenshot 2024-02-22 at 4.24.16 pm.png" width="549" height="109" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197785" data-api-returntype="File" loading="lazy"></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Output</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><img src="../../assets/7acdd241a68514e9.png" alt="Screenshot 2024-02-22 at 4.24.27 pm.png" width="277" height="76" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196924" data-api-returntype="File" loading="lazy"></p>
+<h4 class="amber-el amber-callout amber-content amber-callout-warning"><strong>Boolean</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Booleans are a <strong class="amber-el amber-bold">two-state data type</strong> because they <strong class="amber-el amber-bold">only have two possible values, either TRUE or FALSE.</strong> They are mainly associated with conditional statements (in loops, if statements, etc) that change the flow of logic in a program. They are commonly stored as <strong class="amber-el amber-bold">1 bit</strong> and thus <strong class="amber-el amber-bold">limits the data type as either a literal 1 or 0.</strong></p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">flag = false <br><br>IF flag = true THEN<br>    Display "Flag is set to TRUE" <br>ELSE <br>    Display "Flag is set to FALSE" <br>ENDIF</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">In the example above, the program would print "Flag is set to FALSE" because <strong class="amber-el amber-bold">if the boolean is not TRUE, then it must be FALSE.</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Example</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><img src="../../assets/e3678a232cd8e424.png" alt="Screenshot 2024-02-22 at 4.25.43 pm.png" width="318" height="116" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196927" data-api-returntype="File" loading="lazy"></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Output</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><img src="../../assets/6612c9cc3a9185ec.png" alt="Screenshot 2024-02-22 at 4.25.57 pm.png" width="213" height="77" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196929" data-api-returntype="File" loading="lazy"></p>
+<h4 class="amber-el amber-callout amber-content amber-callout-warning"><strong>Date and Time</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Date and time is not a standard data type in Python, however we can use a module called <code>datetime</code> to work with dates and times. Here's an example of getting the current date and time.</p>
+<pre class="amber-el amber-paragraph amber-content"><span class="pythonkeywordcolor">import</span><span>&nbsp;datetime</span><br><br><span>current_time = datetime.datetime.now()</span><br><br><span># Output: 2024-02-23 16:16:05.864977</span><br><span class="pythonkeywordcolor">print</span><span>(current_time)</span></pre>
+<p class="amber-el amber-callout amber-content amber-callout-warning">We can also specify our own date and time.</p>
+<pre class="amber-el amber-callout amber-content amber-callout-warning"><span class="pythonkeywordcolor">import</span>&nbsp;datetime<br><br>birthday = datetime.datetime(2024, 8, 3)<br><br># Output: 2024-02-23 16:16:05.864977<br><span class="pythonkeywordcolor">print</span>(birthday)</pre>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Note:</strong> The datetime function <strong>requires</strong> at least 3 parameters <code>(year, month, day)</code>. The function can also take in further optional parameters <code>(year, month, day, hour, minute, second, microsecond, timezone)</code>. Any optional parameters that are left out are set to a default value of 0.</p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>E</strong><strong>xample</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong><img src="../../assets/0b5f0e9ee30fa357.png" alt="Screenshot 2024-02-22 at 4.27.24 pm.png" width="433" height="101" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196932" data-api-returntype="File" loading="lazy"></strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><strong>Output</strong></p>
+<p class="amber-el amber-callout amber-content amber-callout-warning"><img src="../../assets/b6d9894eea783746.png" alt="Screenshot 2024-02-22 at 4.27.42 pm.png" width="293" height="41" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196935" data-api-returntype="File" loading="lazy"></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-13-data-types" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/bgxbwcWzi2w?si=RQ3xwaU8LDf9tTn3</span></div></div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank">Standard Data Types</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EQUB7GYanTZGqxHKqmgu9wsB6n4Q7UfcKggh4gpE_igRXw?e=MUveuv" target="_blank">1.13 Data Types</a></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-13-data-types" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={66ec0105-9d1a-4636-ab11-caaa682ef70b}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank"></a></p>
+</div>
+</div>
+<h3 class="readles">1.14 Data dictionaries</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Create data dictionaries as a tool to describe data and data types, structure data, and record relationships</span>- <span class="card-text">char (character) and string</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Develop the ability to create data dictionaries as a tool to describe data and data types, understand data structure, and record relationships, focusing on char (character) and string data types.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Demonstrate understanding of data dictionaries and their purpose.</span></li>
+<li><span style="font-size: 13.3333px;">Identify and describe char (character) and string data types.</span></li>
+<li><span style="font-size: 13.3333px;">Create a data dictionary that accurately represents a given dataset or data structure.</span></li>
+<li><span style="font-size: 13.3333px;">Effectively describe data and data types within the data dictionary.</span></li>
+<li><span style="font-size: 13.3333px;">Utilise the data dictionary to understand and record relationships between different data elements.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<div class="amber-display am-theme-light amber-display-blockalign-center">
+<div class="amber-display-document">
+<h4 class="amber-el amber-paragraph amber-content"><strong>Data Dictionary</strong></h4>
+<p class="amber-el amber-paragraph amber-content">A Data Dictionary is a form of documentation that <strong class="amber-el amber-bold">keeps track of the variables (data items) that are used in the development of a software program.</strong> This ensures that the programmer can effectively recall and communicate to others about the purpose of the variables used in a section of code.</p>
+<p class="amber-el amber-paragraph amber-content">In this course, <strong class="amber-el amber-bold">the following metadata is required</strong> in the columns of a data dictionary:</p>
+<p class="amber-el amber-paragraph amber-content"><img src="../../assets/cd768571ebb47a74.png" alt="Screen Shot 2022-09-05 at 1.10.59 am.png" width="647" height="93" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197635" data-api-returntype="File" loading="lazy"></p>
+<p class="amber-el amber-paragraph amber-content"><u class="amber-el amber-underline">Data Item</u></p>
+<ul class="amber-el amber-list">
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">The name of the variable</p>
+</li>
+</ul>
+<p class="amber-el amber-paragraph amber-content"><u class="amber-el amber-underline">Data Type</u></p>
+<ul class="amber-el amber-list">
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">The data type of the variable (i.e. integer, string, boolean, float)</p>
+</li>
+</ul>
+<p class="amber-el amber-paragraph amber-content"><u class="amber-el amber-underline">Format</u></p>
+<ul class="amber-el amber-list">
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">The general input/output mask of the variable (i.e. XXXXXX for a 6 character string)</p>
+</li>
+</ul>
+<p class="amber-el amber-paragraph amber-content"><u class="amber-el amber-underline">Number of Bytes for Storage</u></p>
+<ul class="amber-el amber-list">
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Number of bytes required to store data the variable (i.e. 4 bytes for an integer)</p>
+</li>
+</ul>
+<p class="amber-el amber-paragraph amber-content"><u class="amber-el amber-underline">Size for Display</u></p>
+<ul class="amber-el amber-list">
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Number of characters required to display the variable when printed (i.e. 10 for the date 01/05/2021)</p>
+</li>
+</ul>
+<p class="amber-el amber-paragraph amber-content"><u class="amber-el amber-underline">Description</u></p>
+<ul class="amber-el amber-list">
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Describes the purpose and use of the variable</p>
+</li>
+</ul>
+<p class="amber-el amber-paragraph amber-content"><u class="amber-el amber-underline">Example</u></p>
+<ul class="amber-el amber-list">
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">An example of data that can be stored in the variable</p>
+</li>
+</ul>
+<p class="amber-el amber-paragraph amber-content"><u class="amber-el amber-underline">Validation</u></p>
+<ul class="amber-el amber-list">
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Checks that have been put in place (i.e. IF statements) that are used to ensure data integrity (i.e. there are only 12 months in a year)</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h4 class="amber-el amber-paragraph amber-content"><strong>Video Walkthrough</strong></h4>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-14-data-dictionaries" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/embed.aspx?UniqueId=fe212545-82a6-4371-9cc6-f61f649a5edb&amp;amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;amp;referrer=StreamWebApp&amp;amp;referrerScenario=EmbedDialog.Create</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://edstem.org/au/courses/14919/lessons" target="_blank">Data Dictionaries</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">1.15 Data structures</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2">
+    <header class="dp-header dp-bookmark variation-2 ">
+        
+    </header>
+    <div class="dp-content-block kl_custom_block_0">
+        <div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+            <div class="card-body">
+                <p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Use data structures of arrays, records, trees and sequential files</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_content_block_1">
+        <h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4" style="padding: 0px 5px 0px 0px;">
+                    <div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 10pt;">Understand and apply various data structures such as arrays, records, trees, and sequential files in problem-solving and programming.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8" style="padding: 0px 0px 0px 5px;">
+                    <div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+                            <ul class="card-text">
+                                <li><span style="font-size: 13.3333px;">Identify and explain the purpose of each data structure: arrays, records, trees, and sequential files.</span></li>
+                                <li><span style="font-size: 13.3333px;">Demonstrate the ability to create and manipulate arrays and records in a programming language.</span></li>
+                                <li><span style="font-size: 13.3333px;">Understand the concept of trees and their application in organising data hierarchically.</span></li>
+                                <li><span style="font-size: 13.3333px;">Implement sequential files for storing and retrieving data in a programming language.</span></li>
+                                <li><span style="font-size: 13.3333px;">Apply appropriate data structures to solve real-world problems.</span></li>
+                                <li><span style="font-size: 13.3333px;">Evaluate the efficiency and suitability of different data structures for specific tasks.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dp-content-block kl_custom_block_1">
+        <h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+        <h4><strong>Arrays</strong></h4>
+        <p>An array is used to <strong>store multiple values of the same data type.&nbsp;</strong></p>
+        <p>To create a list in Python, you use square brackets <code>[]</code> and include the elements (values) that you want separated by commas <code>,</code>. <strong>Each element must be of the same type,</strong> otherwise it becomes a list instead of an array (see in the next section for the definition of a list).</p>
+        <p>Here is an example of creating an array of integer values:</p>
+        <p><img src="../../assets/0a5959962556ca48.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197787" data-api-returntype="File" loading="lazy"></p>
+        <p>To access specific elements in an array, we must use indexing. Python uses <strong>zero-based indexing</strong>, meaning the <strong>first element of the array is at index 0</strong>, the second element is at index 1, and so on.</p>
+        <p>So if we need to print out the third number in the array, then <strong>we need to specify index 2 (not 3)</strong> in square brackets <code>[ ]</code> after the name of the array (<code>array_name[index]</code>).</p>
+        <p>Here is a continued example of accessing the elements of an array:</p>
+        <p><img src="../../assets/182bf5fce9a43f52.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196965" data-api-returntype="File" loading="lazy"></p>
+        <p>&nbsp;To modify the value of an element in an array, we can simply assign a new value to <strong><span><code>array_name[index]</code></span></strong> like a variable.</p>
+        <p>Here is a continued example of modifying the elements of an array:</p>
+        <p><img src="../../assets/9a4522cd640783b6.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197799" data-api-returntype="File" loading="lazy"></p>
+        <p>We can also add a new element <em>x</em> or remove an existing element <em>x</em> from an array, using the <em>array_name.append(x)</em> and <em>array_name.remove(x)</em> functions.</p>
+        <p>Here is a continued example of adding and removing elements in an array:</p>
+        <p><img src="../../assets/f35fbb449919382a.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197800" data-api-returntype="File" loading="lazy"></p>
+        <p>So far, we have been looking at one-dimensional arrays. Arrays can also be two-dimensional where we require two indexes to access an element instead of one. The idea behind a 2D array is that we can have an array that stores arrays of the same length.</p>
+        <p>Here is an example of creating and accessing elements in a 2D array:</p>
+        <p><img src="../../assets/a062af8849dadbdb.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197786" data-api-returntype="File" loading="lazy"></p>
+        <p>&nbsp;</p>
+        <h4><strong>Records</strong></h4>
+        <p><span>A record is used to <strong>store multiple values of different data types to represent a single entity.</strong> For example, a record of a person can include their <code>name</code> (string), <code>age</code> (integer), <code>city</code> (string). These attributes are called <strong>Keys</strong>, and the values that the store are called <strong>Values</strong>. In each record, <strong>the name of the Key must be&nbsp;</strong><strong>unique</strong>.</span></p>
+        <p><span>In Python, we use dictionaries to implement records.</span></p>
+        <p><span>Dictionaries in Python are lists of </span><code><span>Key:Value</span></code><span>&nbsp;pairs. This is a very powerful datatype to hold a lot of related information that can be associated through keys. The main operation of a dictionary is to extract a value based on the key name. Unlike lists, where index numbers are used, dictionaries allow the use of a key to access its members. Dictionaries can also be used to sort, iterate and compare data.</span></p>
+        <p><span>Dictionaries are created by using braces </span><span>(<code>{}</code>)</span><span> with pairs separated by a comma </span><span>(<code>,</code>)</span><span> and the key values associated with a colon </span><span>(<code>:</code>)</span><span>.</span></p>
+        <p><span>Here is a quick example on how dictionaries might be used to represent a person:</span></p>
+        <p><span><img src="../../assets/10a8fda9764bde49.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196937" data-api-returntype="File" loading="lazy"></span></p>
+        <p>&nbsp;</p>
+        <h4><strong>Sequential Files</strong></h4>
+        <p><span>A sequential file is a type of file that stores data in a <strong>linear, sequential order</strong>. A program uses a file by <strong>opening</strong> the file (with the intention of either reading or writing content) and <strong>closing</strong> the file when it is done. A plain <code>.txt</code> file is commonly used to store sequential data like so:</span></p>
+        <p><em>temperature_logs.txt</em></p>
+        <pre><span>24<br>27<br>23<br>21<br>18<br>15<br>23<br>29<br>35<br></span></pre>
+        <p><span>In Python, you can work with sequential files using the built-in </span><code>open()</code><span> function to open a file in various modes, such as read (</span><code>'r'</code><span>), write (</span><code>'w'</code><span>), or append (</span><code>'a'</code><span>).</span></p>
+        <p><span>Note that in the examples below, we don't have to explicitly use the close() function to close an open file. In Python, when you use the <code>with open(...) as ...</code> statement to open a file, it automatically takes care of closing the file when the block is exited.</span></p>
+        <p><span>Here's a basic overview of reading from and writing to a sequential file in Python:</span></p>
+        <p><strong>Writing to a file:</strong></p>
+        <p><strong><img src="../../assets/fdcde2387629c203.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197143" data-api-returntype="File" loading="lazy"></strong></p>
+        <p><strong>Output file:</strong></p>
+        <p><strong><img src="../../assets/7fcb1bc9fc4289b6.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197046" data-api-returntype="File" loading="lazy"></strong></p>
+        <p><strong>Reading the file <em>temperature_logs.txt</em>:</strong></p>
+        <p><strong><img src="../../assets/85072e86a4df5783.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197150" data-api-returntype="File" loading="lazy"></strong></p>
+        <p>&nbsp;</p>
+        <h4><strong>Trees</strong></h4>
+        <p><span>Trees are a type of</span><strong class="amber-el amber-bold">&nbsp;graph data structure</strong><span> which consists of </span><strong class="amber-el amber-bold">edges (lines)</strong><span> and one or more </span><strong class="amber-el amber-bold">nodes (circles)</strong><span>. They begin with a </span><strong class="amber-el amber-bold">single 'root' node expanding downwards into 'children' nodes</strong><span> before ending at the </span><strong class="amber-el amber-bold">bottom-most 'leaf' nodes</strong><span>. Groups of connected nodes within a tree can be considered as a sub-tree. <strong>Like arrays, trees are only store one data type.</strong></span></p>
+        <div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+            <div class="card-body" style="padding: 5px;">
+                <p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp;<span>Best way to imagine this data structure is to picture an upside down tree with the root at the top and leaves at the bottom.</span><br></span></p>
+            </div>
+        </div>
+        <p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/d429840ffa2ad4e5.png" alt="image.png" width="284" height="226" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197801" data-api-returntype="File" loading="lazy"><span>Each node has its own particular data value(s) that it stores. Depending on the type of tree, the </span><strong class="amber-el amber-bold">data will either always be ordered or unordered.</strong></p>
+        <p>&nbsp;</p>
+        <p><span class="amber-el amber-bold"><strong>The folder structure used to organise the files on your computer uses a tree-like structure</strong> starting from the root node <strong>'Macintosh HD'</strong> before splitting into <strong>'Applications'</strong>, <strong>'Library'</strong>, <strong>'System'</strong> and <strong>'Users'</strong>. <strong>'Users'</strong> has only one node <strong>'martinmadrid'</strong> which has its own subtree that splits into <strong>'Desktop',</strong> <strong>'Documents'</strong>, <strong>'Downloads'</strong>, <strong>'Movies'</strong>, <strong>'Music'</strong>, <strong>'Pictures'</strong> and <strong>'Public'</strong>.</span></p>
+        <p><span class="amber-el amber-bold"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/c409978441852e63.png" alt="image.png" width="248" height="357" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197802" data-api-returntype="File" loading="lazy"></span></p>
+    </div>
+    <div class="dp-content-block">
+        <h4><strong>An Application of Trees: Binary Search Trees</strong></h4>
+        <p class="amber-el amber-paragraph amber-content"><strong>Binary Search:</strong></p>
+        <p class="amber-el amber-paragraph amber-content"><span>A Binary Search is a </span><strong class="amber-el amber-bold">standard algorithm</strong><span> that is used to </span><strong class="amber-el amber-bold">find a number in a sorted set of numbers.</strong><span> This approach to searching uses a </span><strong class="amber-el amber-bold">'divide and conquer'</strong><span> algorithm where it </span><strong class="amber-el amber-bold">repeatedly divides the range of numbers in half</strong><span> until it finds the number or there are no numbers left.</span></p>
+        <p class="amber-el amber-paragraph amber-content">A Binary Search Tree is a type of <strong class="amber-el amber-bold">ordered tree</strong> where:</p>
+        <ul class="amber-el amber-list">
+            <li class="amber-el amber-listItem">
+                <p class="amber-el amber-paragraph amber-content">Each parent node has <strong class="amber-el amber-bold">2 children (left and right)</strong></p>
+                <ul class="amber-el amber-list">
+                    <li class="amber-el amber-listItem">
+                        <p class="amber-el amber-paragraph amber-content">All values on the <strong class="amber-el amber-bold">left</strong> are <strong class="amber-el amber-bold">less than the parent</strong></p>
+                    </li>
+                    <li class="amber-el amber-listItem">
+                        <p class="amber-el amber-paragraph amber-content">All values on the <strong class="amber-el amber-bold">right</strong> are <strong class="amber-el amber-bold">greater than the parent</strong></p>
+                    </li>
+                </ul>
+            </li>
+            <li class="amber-el amber-listItem">
+                <p class="amber-el amber-paragraph amber-content">These rules apply for all nodes in the tree</p>
+                <ul class="amber-el amber-list">
+                    <li class="amber-el amber-listItem">
+                        <p class="amber-el amber-paragraph amber-content">Leaf nodes at the bottom have <strong class="amber-el amber-bold">null children</strong> where a node doesn't exist</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/92b0df0dd74007b8.png" alt="image.png" width="760" height="344" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197803" data-api-returntype="File" loading="lazy"></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      <div class="dp-panels-wrapper dp-accordion-default">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading ">Presentation</h3>
+                <div class="dp-panel-content ">
+                    <p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EXkfWR4MUsVAu8JqUXFdB4UBzFMZZEF01-gOCOS_LAD2Iw?e=UNnKUw" target="_blank">1.15 Data Structures</a></p>
+                    <div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-15-data-structures" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={1e591f79-520c-40c5-bbc2-6a51715d0785}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+                <ul class="card-text">
+                    <li>List sources here</li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+            <div class="card-body">
+                <p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+                <ul class="card-text">
+                    <li>
+                        <p><a class="inline_disabled" title="Link" href="https://edstem.org/au/courses/14919/lessons" target="_blank">EdStem Activities: Arrays, Files, Trees</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+    </div>
+</div><h3 class="sub">After</h3>
+<h3 class="readles">Assignment — Cycle 3 spaced repetition</h3>
+<p><em>[no description]</em></p><p><strong>Points:</strong> 20</p>
+<div class="readnav"><a href="11962-m2.html">← previous module</a><a href="../course-11962.html">all modules</a><a href="11962-m4.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

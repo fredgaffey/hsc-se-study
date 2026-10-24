@@ -1,0 +1,332 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.10 Programming paradigms — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 2 (Term 1: Weeks 3-4) Programming Fundamentals</div>
+<h1 style="margin-top:.2rem">1.10 Programming paradigms</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-10-programming-paradigms" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Experiment with object-oriented programming, imperative, logic and functional programming paradigms</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Explore different programming paradigms - object-oriented, imperative, logic, and functional - to understand their unique approaches and apply them in various programming situations.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Understand the key concepts and principles of each programming paradigm: object-oriented, imperative, logic, and functional.</span></li>
+<li><span style="font-size: 13.3333px;">Recognise and explain the differences and advantages of each paradigm.</span></li>
+<li><span style="font-size: 13.3333px;">Implement simple examples using each programming paradigm.</span></li>
+<li><span style="font-size: 13.3333px;">Demonstrate the ability to choose an appropriate paradigm for a given programming task.</span></li>
+<li><span style="font-size: 13.3333px;">Apply knowledge of different paradigms to analyse and compare existing code examples.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p class="dp-has-icon">A <strong>paradigm </strong>refers to a way of <strong>programming thinking.</strong> It can be described as a model or philosophical/theoretical framework. A different approach under which laws, theories and generalisations are produced. We will be looking at the four major programming paradigms:</p>
+<ul>
+<li>
+<p>Imperative</p>
+</li>
+<li>
+<p>Object Oriented</p>
+</li>
+<li>
+<p>Logic</p>
+</li>
+<li>
+<p>Functional</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">Von Neumann Architecture</h5>
+<p>The <strong>Von Neumann Architecture</strong> is the most common hardware architecture. This architecture stores a program in memory as a sequence of low-level instructions and executes them sequentially in a predetermined sequence inside the Central Processing Unit (CPU).</p>
+<p>The architecture has led to the development of <strong>imperative </strong>programming languages. So far in this course, you have been programming using the <strong>imperative paradigm.</strong></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Imperative</h3>
+<div class="dp-panel-content ">
+<p><strong>Imperative programming </strong>focuses on the use of variables, assignment statements, control structures, data structures and algorithms.</p>
+<p>An imperative language uses variables and data structures to model memory locations. The movement of this data is achieved through assignment statements and control structures. They are combined together into an algorithm to organise the procedures.</p>
+<p>It is good at solving <strong>logical and mathematical problems</strong> using inputs, processing and outputs as distinct individual components. However, our brains work differently as they combine these components to solve more complex problems. <strong>Other paradigms can have a more natural method of solving problems.</strong></p>
+<p>&nbsp;</p>
+<p><strong>Difficulty Solving Certain Types of Problems</strong></p>
+<ul>
+<li>Computers were initially used to solve mathematical problems. Imperative programs are not good at providing multiple answers to problems but are good at mathematical and arithmetic solutions.</li>
+<li>However, real life problems cannot be solved using imperative languages (i.e. AI, Voice Recognition/Communication, Medical Diagnosis, Predictions, etc). Other paradigms are needed for solutions with a variety of outcomes and making judgements based on experience and intuition.</li>
+</ul>
+<p><strong>Need to Specify Code for Every Individual Process</strong></p>
+<ul>
+<li>Imperative programs require every part of the program to be written before the final product will operate correctly. Whereas other paradigms can infer a solution, run even when incomplete and react to changing needs without modification.</li>
+</ul>
+<p><strong>Difficulty of Coding for Variability</strong></p>
+<ul>
+<li>Imperative programs have modules that can be reused but are not an integral part of the paradigm. Imperative programs could be difficult to adapt to changing requirements.</li>
+<li>Other paradigms can encourage the re-use of modules to solve similar problems and can contain a processing component that works on different sets and types of data.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Object-Oriented</h3>
+<div class="dp-panel-content ">
+<p><strong>Object-Oriented programming</strong> focuses on the use of objects, classes, attributes, methods, variables, control structures, instantiation, encapsulation, inheritance, polymorphism (overloading or creating variation) and abstraction.</p>
+<p><span>Object Oriented languages work with objects that communicate with each other using methods. Each object is a separate entity that is part of a class of objects. Subclasses can be created using inheritance. Objects also use encapsulation which is hiding the data from other objects.</span></p>
+<p><span>Object oriented languages are excellent for <strong>creating encapsulated code</strong> that is very easily reused in other applications, and is easily tested for bugs.</span></p>
+<p><strong>Classes</strong></p>
+<ul>
+<li>A Class outlines a template from which Objects are created, like a technical blueprint from which different types of chairs are created. A Class defines how similar objects are created and an Object is the entity of which is an instance of the Class.</li>
+</ul>
+<p><strong>Attribute</strong></p>
+<ul>
+<li>An Attribute is a variable in a Class that describes the features of that Class.</li>
+</ul>
+<p><strong>Method</strong></p>
+<ul>
+<li>A method is a function that can be called to help describe the functionality of an Object (i.e. string.upper())</li>
+</ul>
+<p><strong>Class vs Object</strong></p>
+<ul>
+<li>A class is a template for creating an object whereas an object is an instance of a class. A class can be described as a logical entity as it contains attributes that describe the features of the object whereas objects are physical entities that are the result of a class' attributes. A class is declared once from where multiple objects can be created.</li>
+</ul>
+<p><strong>Constructor</strong></p>
+<ul>
+<li>A constructor is a subroutine in object oriented programming that is used to create an object from a class. It ensures that the new object is valid by giving the object initial values in its variables.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Logic</h3>
+<div class="dp-panel-content">
+<p>Logic programming involves making decisions based on the rules and facts that it is given. It focuses on the use of variables, facts, rules, goals, inference engine (infers using previous knowledge), forward chaining, backward chaining, heuristics.</p>
+<p>A logic language has a database of facts and rules, making decisions based on the facts and rules that it is given. Solutions can be arrived at by using forward or backward chaining that uses these rules and facts. Logic languages try to <strong>simulate the operations of the brain</strong> where it makes decisions based on the rules.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Functional</h3>
+<div class="dp-panel-content">
+<p><strong>Functional programming</strong> focuses on the use of functions to create programs. By writing programs that <strong>rely on functions instead of individual statements</strong>, <span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">we can build software in a way that emphasises clarity, reusability, and predictability. In the functional programming paradigm, the emphasis is on expressing computations as the <strong>evaluation of functions</strong>, treating them as <strong>fundamental building blocks.</strong></span></p>
+<p>This approach encourages a style of coding where functions are designed to take inputs and produce outputs without altering any external state or relying on variables outside their scope. This makes it easier to understand and reason about the behaviour of functions, leading to more <strong>maintainable and bug-resistant code.</strong></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Emerging Technologies</strong></h4>
+<p>The increasing speed of technology has allowed programming languages to remove the programmer further away from machine code. Programming tools remove the need to interact with low-level CPU processes. Now, software development is more of an intuitive process.</p>
+<p>Mobile technology has increased the <strong>need to use different paradigms.</strong> Different paradigms are able to compartmentalise code and add new functionality easily. Different architectures (i.e. quantum computers) may work more efficiently with declarative paradigms compared to imperative. Paradigms may be suited to more logical human based processes.</p>
+<p>&nbsp;</p>
+<table style="border-collapse: collapse; width: 100%; height: 145px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 33.3024%; height: 29px;"><strong>Paradigm</strong></td>
+<td style="width: 33.3024%; height: 29px;"><strong>Strengths</strong></td>
+<td style="width: 33.3024%; height: 29px;"><strong>Weaknesses</strong></td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.3024%; height: 29px;">Imperative</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>Efficient</li>
+<li>Close to the machine hardware</li>
+<li>Popular</li>
+<li>Familiar</li>
+</ul>
+</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>Makes debugging harder</li>
+<li>Abstraction is more limited</li>
+<li>Order is crucial, which doesn't always suit itself to problems</li>
+<li>Code is not ideal for re-use</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.3024%; height: 29px;">Object-Oriented</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>Very easy to re-use code and extend it</li>
+<li>High degree of modularity (easier to understand and maintain)</li>
+<li>Inheritance saves the re-rewriting of intermitted attributes that are already defined in classes and subclasses</li>
+</ul>
+</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>It only benefits problems with the need for re-usable code and those that are not sequentially driven</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.3024%; height: 29px;">Logic</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>The system solves the problem, so the programming steps themselves are kept to a minimum</li>
+<li>Proving the validity of a given program is simple</li>
+</ul>
+</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>Difficult to code complex programs</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.3024%; height: 29px;">Functional</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>Focus on high-level design</li>
+<li>Flexible and reusable</li>
+<li>Easier to test and debug</li>
+<li>Easily understood by a human as the code is clear and concise</li>
+</ul>
+</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>Used less than other paradigms (usually in combination with other paradigms)</li>
+<li>More memory usage</li>
+<li>Less expertise and tools that support this paradigm</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h4><strong>OOP in Python</strong></h4>
+<p><span>We will explore some of the fundamental concepts of OOP, demonstrating how to create a class in Python</span> and use that class as an object.</p>
+<p><strong>Classes</strong></p>
+<p>A class is a user-defined blueprint that defines a set of attributes and methods.</p>
+<p><strong> Attributes and Methods</strong></p>
+<p>Attributes are variables that store data, while methods are functions that perform actions on the data. These are defined within the blueprint of a class.&nbsp;</p>
+<p><strong>Objects</strong></p>
+<p>An object is a self-contained unit that consists of attributes and methods from a class that can be used in the program. These objects are instances of classes (i.e. objects are created from classes).</p>
+<p>&nbsp;</p>
+<p><strong>Creating a Class</strong></p>
+<p><span>In Python, a class is defined using the </span><code>class</code><span> keyword. The class body contains attributes and methods. For example:</span></p>
+<p><span><img src="../../assets/55fea7152786e3f0.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197075" data-api-returntype="File" loading="lazy"></span></p>
+<p>&nbsp;<span>The </span><code>__init__</code><span> method initialises the object's attributes when the object is created.</span></p>
+<p>&nbsp;</p>
+<p><strong>Instantiating (Creating) Objects</strong></p>
+<p><span>Objects are created by instantiating a class. For example:</span></p>
+<p><span><img src="../../assets/3d001531e021fae1.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197091" data-api-returntype="File" loading="lazy"></span></p>
+<p>Notice how the function arguments <code>"Buddy"</code> and <code>3</code> both follow the order of the function parameters of the <code>__init__</code> method.</p>
+<p>&nbsp;</p>
+<p><strong>Accessing Attributes and Methods</strong></p>
+<p>Attributes and methods are accessed using the dot <code>.</code> notation. For example:</p>
+<p><img src="../../assets/9caf52d552fd961a.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196978" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Full Code</strong></p>
+<p><img src="../../assets/ba2e8d78eae3f3d0.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196985" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-10-programming-paradigms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/_4wvIZnKUvY?si=aGgpNfI8AFZR08Cf</span></div></div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.10 Programming paradigms" href="https://canvas.kings.edu.au/courses/11962/assignments/179130" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179130" data-api-returntype="Assignment">1.10 Programming paradigms</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Complete <a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank">intro to Python 2</a> on EdStem</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EY66ayfNs7hChqng_a10YBcBeYkP7mco4Mzz7zIgVmyQNQ?e=9Nc1w9" target="_blank">1.10 Programming paradigms</a></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-10-programming-paradigms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={276bba8e-b3cd-42b8-86a9-e0fdad746017}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div><h3 class="sub">After</h3></main>
+<div class="pnrow"><a class="pn" href="11962-017.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-019.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

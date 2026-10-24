@@ -1,0 +1,214 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Multi-Select — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Exam Revision</div>
+<h1 style="margin-top:.2rem">Multi-Select</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/multi-select" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 "><header class="dp-header dp-bookmark variation-2 "><header class="dp-header dp-bookmark variation-2 "><header class="dp-header dp-bookmark variation-2 "><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">learn to answer multi-choice questions</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">apply their knowledge to answer multi-choice questions</span></li>
+<li><span style="font-size: 13.3333px;">Apply the process of elimination to reduce options</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<h4>How to Answer Multi-Select Questions</h4>
+<p><strong>Procedure:</strong></p>
+<ol id="" class="">
+<li class=""><strong><span style="color: #236fa1;">Read</span></strong> the question <span style="color: #236fa1;"><strong>carefully </strong><span style="color: #000000;">and determine the</span><strong> criteria </strong><span style="color: #000000;">for an option to be correct.</span></span></li>
+<li class=""><strong><span style="color: #236fa1;">Analyse </span></strong>any provided stimulus.</li>
+<li class=""><span style="color: #236fa1;"><strong>Read and select</strong></span> options that look like they could be an answer.</li>
+<li class=""><span style="color: #236fa1;"><strong>Re-read the question again</strong></span> and ensure the options you've selected are correct and that you haven't missed any correct answers.</li>
+</ol>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<p class="card-title"><span style="color: #34495e;"><strong>ACTIVITY: Practice HSC Style Question</strong></span></p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-pen-fancy " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Answer the Question:</strong></span> Using the question procedure above, <span style="background-color: #fbeeb8;"><strong>expand</strong></span> <strong>Multi-Select Example Question (without annotations)</strong> below and complete it on a piece of paper.</p>
+<p class="card-text"><span style="color: #34495e;"><strong><i class="dp-icon fas fa-graduation-cap " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learn from the Question: </strong></span></p>
+<ol>
+<li class="card-text"><strong>Compare</strong> your answer with the <strong>sample answer</strong> in the<strong> second expander below.</strong></li>
+<li class="card-text"><strong>Read</strong> the <strong>question walkthrough</strong> to see how to improve and for tips on how to maximise your marks in this type of HSC question.</li>
+<li class="card-text">Formally <strong>mark your response</strong> from the eyes of a marker <strong>using the provided marking criteria.</strong></li>
+</ol>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Examples</h4>
+<div class="dp-panels-wrapper dp-expander-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Multi-Select Example Question (without annotations)</h3>
+<div class="dp-panel-content ">
+<p><img class="mx-auto d-block" src="../../assets/d67a7a0a118c9c55.png" alt="SE— multi-select example 1.png" width="600" height="345" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3387379" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Multi-Select Example Question (annotated answer with though process)</h3>
+<div class="dp-panel-content ">
+<p><span style="font-size: 14pt;"><strong>Sample Answer</strong></span></p>
+<p><img class="mx-auto d-block" src="../../assets/205e127547a0d25a.png" alt="SE— multi-select example 1 answer.png" width="600" height="345" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3387381" data-api-returntype="File" loading="lazy"></p>
+<p><span style="font-size: 14pt;"><strong>Question Breakdown &amp; Tips and Tricks</strong></span></p>
+<p><span><strong>Question: What are key characteristics of <span style="color: #169179;">supervised learning</span> <span style="color: #169179;">models in machine learning?</span> (2 marks)<br></strong></span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 1. Read the question and determine criteria for option to be correct</strong></p>
+<p class="card-text">To determine the criteria which we will use to asses if an option is correct, ask the following questions:</p>
+<ol id="" class="">
+<li><strong>What is the topic/content area?</strong> In this case, the topic area is<span style="color: #169179;"> <span style="color: #236fa1;"><strong><span style="color: #169179;">models in machine learning, specifically supervised learning models. </span></strong><span style="color: #169179;"><span style="color: #000000;">Revise <a class="dp-course-link" title="3.3 ML Training Models" href="https://canvas.kings.edu.au/courses/11962/pages/g11d86e71977271d519d8e62603c15ad2" class="ext" target="_blank" rel="noopener" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/g11d86e71977271d519d8e62603c15ad2" data-api-returntype="Page">3.3 ML Training Models</a></span></span><span style="color: #000000;">, if needed.</span></span></span></li>
+<li class=""><strong>What are we required to do? </strong>Since this is a multi-select question, we need to select one or more checkboxes. Specifically, any option that is a key characteristic of supervised learning models need to be checked. You need to recall everything you know about machine learning models to figure out what is and isn't a feature of supervised learning.</li>
+</ol>
+</div>
+</div>
+<p>This question doesn't have any provided stimulus, so we skip step 2</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 3. Select options that satisfy the criteria in the question</strong></p>
+<p class="card-title">We need to read each question and decide if it's a key features of supervise machine learning.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;1) <span>Used for spam detection.</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-success">
+<div class="card-body">
+<p class="card-title"><strong>Step 3.1 — Assess Option 1 (Correct)</strong></p>
+<p class="card-title">Supervised machine learning is used for models that detect spam.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>2) <span>Requires labeled datasets for training.</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-success">
+<div class="card-body">
+<p class="card-title"><span style="color: #000000;"><strong>Step 3.2 — Assess Option 2 (Correct)</strong></span></p>
+<p class="card-title"><span style="color: #000000;">Supervised learning specifically requires data to be labeled before starting, so this is definitely an option to tick.</span></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;3) <span>Uses a trial and error learning approach.</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<p class="card-title"><strong>Step 3.3 — Assess Option 3 (Incorrect)</strong></p>
+<p class="card-title">This option is not correct since the trial and error learning approach is used in reinforcement learning, not supervised learning.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;4) &nbsp;<span>Can use linear regression as an algorithm.</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-success">
+<div class="card-body">
+<p class="card-title"><strong>Step 3.4 — Assess Option 4 (Correct)</strong></p>
+<p class="card-title">There are a range of algorithms that supervised learning uses, and linear regression is one of them so this option is correct.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;5) <span>Can use hierarchical clustering as an algorithm.</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<p class="card-title"><strong>Step 3.5 — Assess Option 5 (Incorrect)</strong></p>
+<p class="card-title">Hierarchical clustering is not an algorithm supervised learning uses. It's more used in unsupervised learning.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;6) <span>Used for customer segmentation and anomaly detection.</span></p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<p class="card-title"><strong>Step 3.6 — Assess Option 6 (Incorrect)</strong></p>
+<p class="card-title">Supervised learning is not used for customer segmentation and anomaly detection. That's more unsupervised learning.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-title"><strong>Step 4 — Read the questions again to confirm your answers are correct.</strong></p>
+<p class="card-title">Just glance over the options one last time and make sure you haven't misread any.</p>
+</div>
+</div>
+<p><span style="font-size: 14pt;"><strong>Marking Criteria (from the perspective of a marker)</strong></span></p>
+<p>&nbsp;<img class="mx-auto d-block" src="../../assets/44ef56854f7dfb64.png" alt="Frame 93 (1).png" width="550" height="183" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3387383" data-api-returntype="File" loading="lazy"></p>
+<p><strong>How do I get full marks?</strong></p>
+<ul id="" class="">
+<li class="">These questions are normally auto-marked meaning the only way to get full marks is by selecting all the correct checkboxes. If you struggle with this question, you should revise <span style="color: #169179;"><span style="color: #236fa1;"><span style="color: #169179;"><span style="color: #000000;"><a class="dp-course-link" title="3.3 ML Training Models" href="https://canvas.kings.edu.au/courses/11962/pages/g11d86e71977271d519d8e62603c15ad2" class="ext" target="_blank" rel="noopener" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/pages/g11d86e71977271d519d8e62603c15ad2" data-api-returntype="Page">3.3 ML Training Models</a>.</span></span></span></span></li>
+</ul>
+<p><strong>I'm completely stuck. How do I maximise my marks?&nbsp;</strong></p>
+<ul id="" class="">
+<li><strong>Don't leave the question blank. </strong>Try and select some boxes to see if you can get <strong>at least five correct </strong>which will give you one mark which is better than 0. After this,<span>&nbsp;</span><strong>flag the question</strong><span>&nbsp;</span>so you can come back to it after you finish the rest of the exam, hopefully with a a fresh pair of eyes to retry the question.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-card card">
+<div class="card-body">
+<p class="card-title dp-ignore-theme"><strong>Disclaimer</strong></p>
+<p class="card-text">Please note that these are not official HSC questions from NESA — You will not be able to find them on the internet. They have been designed to look very similar to what you can expect in the exam, so you can complete them like any official NESA exam question. Marking criteria that reflect the HSC have also been provided where applicable.</p>
+</div>
+</div>
+</div>
+</header></header></header></header></div></main>
+<div class="pnrow"><a class="pn" href="11962-081.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-083.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

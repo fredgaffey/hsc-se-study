@@ -1,0 +1,218 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.2.1 OOP Features: Objects, Classes &amp; Encapsulation — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 6 (Term 2: Weeks 1-2) OOP</div>
+<h1 style="margin-top:.2rem">2.2.1 OOP Features: Objects, Classes &amp; Encapsulation</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-2-dot-1-oop-features-objects-classes-and-encapsulation" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Apply the key features of an object-oriented programming (OOP) language Including:<br class="card-text">- classes<br class="card-text">- objects<br class="card-text">- encapsulation</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Gain a deep understanding of object classes and encapsulation, two foundational principles of object-oriented programming, and learn how to effectively apply these concepts in software development</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Define objects, classes and encapsulation</span></li>
+<li><span style="font-size: 13.3333px;">Explain the characteristics of objects and classes</span></li>
+<li><span style="font-size: 13.3333px;">Implement classes in a programming environment</span></li>
+<li><span style="font-size: 13.3333px;">Demonstrate the use of encapsulation</span></li>
+<li><span style="font-size: 13.3333px;">Apply encapsulation to ensure data integrity</span></li>
+<li><span style="font-size: 13.3333px;">Identify practical applications of object classes and encapsulation</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<hr>In <strong>2.1, The Object-Oriented Paradigm, we provided a high-level overview of the main concepts of object-oriented programming. In module 2.2, we will discuss these concepts in more detail</strong>.<br><hr>
+<h4><strong>Classes</strong></h4>
+<p><span><strong>A class is like a blueprint or template for creating objects.</strong> It defines the properties (<strong>attributes</strong>) and behaviours (<strong>methods</strong>) that objects of that class will have. Think of a class as a <strong>recipe for creating objects.</strong> It encapsulates data (see encapsulation heading below) for the object and provides methods to operate on that data.</span></p>
+Here's how we construct a generic <code>Person</code> class in Python:<br>
+<p><strong>Class Name</strong></p>
+<p><span>In Python, a class is defined using the </span><code>class</code><span> Keyword followed by the class name.</span> It is a standard programming convention to capitalise the first letter of a class name (e.g. Person, Animal, Vehicle).</p>
+<p><img src="../../assets/eaa77f32de33e2b6.png" alt="image.png" width="500" height="188" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197377" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Attributes</strong></p>
+<p>After defining a class, we need to list the attributes that a <code>Person</code> should have. Since the value of these attributes varies from person to person, we will initially set each of these to <code>None</code>.</p>
+<p><strong><img src="../../assets/8515ba09c66ee5d4.png" alt="image.png" width="500" height="350" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197380" data-api-returntype="File" loading="lazy"></strong></p>
+<p><strong>Constructor Method</strong></p>
+<p>We now need to add a constructor method that builds an object out of the <code>Person</code> class.</p>
+<p><span>A constructor in Python is a special method that gets called automatically when a new object of a class is created. It is used to initialise the object's state, using the arguments to pass values specific to the person being created into our previously empty attributes. In Python, the constructor method is named </span><code>__init__</code><span>. It allows you to perform any necessary setup operations when creating a new instance of a class.</span></p>
+<p><span><strong>Note:</strong> In Python, <code>self</code> is a reference to the current instance of a class. It's used inside methods to access the attributes and other methods of the containing class. For example, <code>self.firstName</code> refers to the <code>firstName</code> attribute defined above the constructor method whereas <code>firstName</code> inside the constructor refers to the method's parameter.</span></p>
+<p><strong><img src="../../assets/7d63ec4186d9c538.png" alt="image.png" width="700" height="492" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197383" data-api-returntype="File" loading="lazy"></strong></p>
+<p><strong>Methods</strong></p>
+<p>Finally, we can add in the methods that perform actions based on the attributes.</p>
+<p><span>Methods in Python are functions defined within a class. They are used to define the behavior of objects created from that class. Methods can access and modify the attributes (data) of an object and perform actions related to that object.</span></p>
+<p><img src="../../assets/82caf53f8f7fa4e7.png" alt="image.png" width="700" height="766" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197386" data-api-returntype="File" loading="lazy"></p>
+<h4><strong>Objects</strong></h4>
+<p>An object is an instance of a class. It is created using the blueprint provided by the class (this is called <strong>instantiation</strong>). Each object has its own set of properties and can perform actions defined by the class.</p>
+<p><span>In Python, you instantiate an object by calling the class name followed by parentheses containing any arguments required by the class's constructor (the </span><code>__init__</code><span> method). This process creates a new instance of the class, which is an object with its own set of attributes and methods.</span></p>
+<p>In the context of our <code>Person</code> class, we can create multiple <code>Person</code> objects, each representing a different person with unique attributes. We can also access the components of our instantiated class (i.e. accessing the object's attributes and using the object's methods).</p>
+<p><img src="../../assets/ec5413c6e97ead9f.png" alt="image.png" width="900" height="506" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197026" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>John Smith<br>Phone No: 0432783491<br>Email: johnsmith@email.com<br>Is not an adult<br>Is an adult</pre>
+<p>&nbsp;</p>
+<h4><strong>Encapsulation</strong></h4>
+<p>Encapsulation is one of the fundamental principles of object-oriented programming (OOP).</p>
+<p>Encapsulation allows us to hide the attributes (data) within a class and makes them available <strong>only</strong> through well-defined interface methods (getter and setter methods). The only way to access and modify hidden attributes are through these interface methods. This helps in maintaining consistency and security for the data in an object.</p>
+<p>We can also hide certain methods which are only used from within the class itself and don't need to be accessed by other objects or the rest of the program.</p>
+<p>Attributes and methods can be set to three different <strong>visibility modifiers</strong>:</p>
+<ul>
+<li><strong>Public</strong> (default) -&nbsp;<i>Accessible inside or outside the class.</i></li>
+<li><strong>Protected <code>_</code></strong> - <em>Accessible within the class or its sub-classes</em></li>
+<li><strong>Private <code>__</code></strong> - <em>Accessible only within the class.</em><em></em></li>
+</ul>
+<p>&nbsp;</p>
+<p>The key ideas behind the use of encapsulation are:</p>
+<ol>
+<li>
+<p><strong>Data Hiding</strong>: Encapsulation allows you to hide the internal state of an object from outside interference. This means that the implementation details of the class are hidden as private and cannot be accessed directly from outside the class.</p>
+</li>
+<li>
+<p><strong>Access Control</strong>: Encapsulation enables you to control access to the attributes of a class. By defining access modifiers like public, private, and protected, you can specify which parts of the class are accessible from outside and which are not.</p>
+</li>
+<li>
+<p><strong>Abstraction</strong>: Encapsulation provides a way to abstract the implementation details of a class. It allows you to focus on what an object does rather than how it does it, promoting a clear separation between the interface and implementation.</p>
+</li>
+</ol>
+<p>Encapsulation helps in achieving modularity, reusability, and maintainability of code by reducing dependencies and preventing unintended modifications to the internal state of objects.</p>
+<p>&nbsp;</p>
+<p>In Python, encapsulation can be achieved by using private attributes and methods, indicated by prefixing them with a <strong>double underscore</strong> <code>__</code>.</p>
+<p>Consider our example class <code>Person</code>. Using encapsulation, we can ensure that the <code>age</code> attribute is never set to a value less than or equal to 0 by first making it private using a two underscore (<code>__</code>) prefix.</p>
+<p><img src="../../assets/43ffbd85078bdc0a.png" alt="image.png" width="500" height="343" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197393" data-api-returntype="File" loading="lazy"></p>
+<p>Since the <code>__age</code>&nbsp;attribute is now hidden from everything outside the Person class in our program, we must write a <strong>getter method</strong> (<code>getAge()</code>) and <strong>setter method</strong> (<code>setAge()</code>) for the <code>__age</code>&nbsp;attribute.</p>
+<p><span>Getter and setter methods are like guards for the information inside an object. They control how you can see and change that information (i.e. other objects cannot directly access the <code>__age</code> attribute, they can <strong>only use the getter and setter methods that the programmer provides</strong>).</span></p>
+<p><strong>Getter Method: getAge()</strong></p>
+<ul>
+<li>Getter methods are used to access the value of a private attribute from outside the class. In this program, <code>getAge()</code> is a getter method that allows retrieving the value of the private attribute <code>__age</code>.</li>
+<li>It returns the value of <code>__age</code>.</li>
+</ul>
+<p><strong>Setter Method: setAge()</strong></p>
+<ul>
+<li>Setter methods are used to modify the value of a private attribute from outside the class, usually with some validation.</li>
+<li>In this program, <code>setAge(age)</code> is a setter method that sets the value of the private attribute <code>__age</code>.</li>
+<li>Before setting the age, it checks whether the input <code>age</code> is non-negative (greater than 0). If it's not, it prints a message indicating that the age cannot be less than or equal to 0 (the attribute remains as <code>None</code>).</li>
+<li>If the input age is valid, it sets the value of <code>__age</code> to the input value.</li>
+</ul>
+<p><strong>Constructor:</strong></p>
+<ul>
+<li>Since we now have a setter method (<code>setAge()</code>) that guards the <code>__age</code> attribute against unwanted inputs, we can replace the variable assignment <code>self.__age = age</code> in the constructor with <code>self.setAge()</code>.</li>
+</ul>
+<p><img src="../../assets/e212cdbb9c2dcbbc.png" alt="image.png" width="700" height="784" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197062" data-api-returntype="File" loading="lazy"></p>
+<p>Below, we instantiate the Person class but the <code>__age</code> attribute is now <strong>private</strong> instead of <strong>public</strong>.</p>
+<p>When accessing and printing the values of the <code>firstName</code> and <code>address</code> attributes, we are not given any errors because they are <strong>public</strong> and easily accessible to everything in our program.</p>
+<p>However, if try to access and print the value of the <strong>private</strong> <code>__age</code> attribute, we are given an error which says that <strong>the program cannot find the attribute</strong> <code>__age</code>&nbsp;(which is what we want since we've hidden that attribute from everything outside the Person object).</p>
+<p><img src="../../assets/b3becf0b2e676ff0.png" alt="image.png" width="900" height="356" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197066" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>John<br>5 Pennant Hills Road<br><br>Traceback (most recent call last):<br>&nbsp; File "/Users/martin/Desktop/Python OOP/Person.py", line 60, in &lt;module&gt;<br>&nbsp; &nbsp; print(person1.__age)<br>AttributeError: 'Person' object has no attribute '__age'</pre>
+<p>&nbsp;</p>
+<p>Since the <code>__age</code> attribute is private, we must use <code>getAge()</code> to access its value. We don't get an error unlike before.</p>
+<p><img src="../../assets/9cfceeb32d12f919.png" alt="image.png" width="900" height="356" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197078" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>John<br>5 Pennant Hills Road<br>17</pre>
+<p>&nbsp;</p>
+<p>If we want to change the value of the <code>__age</code> attribute, we must use <code>setAge()</code> method instead of directly accessing the attribute.</p>
+<p><img src="../../assets/7910cf6a50810e9e.png" alt="image.png" width="900" height="506" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197109" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>Is not an adult<br>Is an adult</pre>
+<p>&nbsp;</p>
+<p>If we try to enter an invalid age, the <code>__age</code> attribute will not change its value because it is guarded by the checks in the <code>setAge()</code> method.</p>
+<p><img src="../../assets/8a6121575b80c259.png" alt="image.png" width="900" height="319" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196982" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>Can't have an age &lt;= 0!<br>17</pre>
+<p>&nbsp;</p>
+<p><strong>Full Code Example (so far):</strong></p>
+<p>In the EdStem activity: <em>Objects, Classes &amp; Encapsulation,&nbsp;</em>you will be tasked to turn ALL public attributes into private attributes (including creating a getter and setter method for each private attribute). <strong>When writing OOP code, it is best practice to keep all attributes as private.</strong></p>
+<p><img src="../../assets/0f47ecabfc11a9f7.png" alt="image.png" width="900" height="1163" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197031" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<hr></div>
+<div class="dp-content-block kl_activities2">
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank"><em>Edstem Activity: Objects, Classes &amp; Encapsulation</em></a></li>
+<li><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank"><em>Edstem Activity: Multi-files</em></a><em></em></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%202.%20The%20Object-Oriented%20Paradigm/PPs/2.2.1%20Objects%20classes%20and%20encapsulation%20.pptx?d=w39c4a908ecb845129a8267956bc6db1c&amp;csf=1&amp;web=1&amp;e=cLJLb9">2.2.1 Objects classes and encapsulation.pptx</a></p>
+<div class="dp-embed-wrapper" data-ratio-w="32.88" data-ratio-h="0.03"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-2-dot-1-oop-features-objects-classes-and-encapsulation" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={39c4a908-ecb8-4512-9a82-67956bc6db1c}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="11962-038.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-040.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

@@ -1,0 +1,1711 @@
+{
+  "exam": "12SEN_TopicTestRevisionTest4 (Timed)",
+  "syllabus": "Software Engineering",
+  "publisher": null,
+  "topics": [
+    "Secure Software Architecture",
+    "Programming for the Web",
+    "Software Engineering Project"
+  ],
+  "outcomes": [
+    "SE-12-06",
+    "SE-12-05",
+    "SE-12-04",
+    "SE-12-01",
+    "SE-12-02",
+    "SE-12-07",
+    "SE-12-09",
+    "SE-12-08",
+    "SE-12-03"
+  ],
+  "status": "COMPLETED",
+  "results_released": true,
+  "submitted": "2026-05-05T11:07:37.427Z",
+  "started": "2026-05-05T11:00:50.762Z",
+  "duration_minutes": 120,
+  "markers": [
+    "TKS CST"
+  ],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/1706ed25-445c-4dc5-a830-198e71dba603",
+  "marking_session_id": "1706ed25-445c-4dc5-a830-198e71dba603",
+  "exam_id": "14aaaf56-1ef9-4584-a28d-4e377203eb8b",
+  "session_id": "7a0bb899-87a7-46d6-be0c-896c1e8b26a0",
+  "total_mark": null,
+  "parts_answered": 0,
+  "parts_marked": 0,
+  "parts_total": 26,
+  "total_available": 60,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "f3d22867-02d8-489e-abb8-8da0f8518ae8",
+      "title": "Software Dev Steps (Q11, 2018 HSC Exam SDD)",
+      "topic": "Software Dev Steps",
+      "label": "Q11",
+      "kind": "2018 HSC Exam SDD",
+      "source": null,
+      "copyright": "HSC 2018",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "ea2d9b4e-69f6-4f0c-b720-b839238ae510",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "During which stages of the software development cycle is benchmarking relevant?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Implementing, testing and evaluating",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Planning and designing, testing and evaluating",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Defining and understanding the problem, implementing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Defining and understanding the problem, planning and designing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "5ae7ce3d-24bf-4f10-89bf-ecc4410f3f39",
+      "title": "Testing & Debugging (Q7, 2017 HSC Exam SDD)",
+      "topic": "Testing & Debugging",
+      "label": "Q7",
+      "kind": "2017 HSC Exam SDD",
+      "source": null,
+      "copyright": "HSC 2017",
+      "stimulus": "During the execution of a program, an incorrect value is displayed on screen. That value is much higher than expected.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "ec3a638a-8df3-440c-9463-13f5e4eed8ef",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "What type of error caused this?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Logic",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Overflow",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Runtime",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Syntax",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "7d2e1eef-1723-42b7-9a19-085a5d321762",
+      "title": "Designing Secure Software (OR, TKS 2025)",
+      "topic": "Designing Secure Software",
+      "label": "OR",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "08c0e71a-304c-4455-b709-7bb0280c5eb9",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "Select the technique that best matches each data security objective.",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "Hashing",
+              "Role-Based Access Controls",
+              "Encryption"
+            ],
+            "rows": [
+              {
+                "statement": "Ensures data has not been altered",
+                "correct": [
+                  "Hashing"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Prevents unauthorised users from accessing data",
+                "correct": [
+                  "Encryption"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Protects data confidentiality during transmission",
+                "correct": [
+                  "Encryption"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Grants different access levels to users",
+                "correct": [
+                  "Role-Based Access Controls"
+                ],
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "rows": [
+              {
+                "statement": "Ensures data has not been altered",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Prevents unauthorised users from accessing data",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Protects data confidentiality during transmission",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Grants different access levels to users",
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question_id": "8a93fbf1-6f22-47bb-a7e5-df7e108b690d",
+      "title": "Designing Web Apps (Q15, 2023 HSC Exam SDD)",
+      "topic": "Designing Web Apps",
+      "label": "Q15",
+      "kind": "2023 HSC Exam SDD",
+      "source": null,
+      "copyright": "HSC 2023",
+      "stimulus": "A software developer decides to include a call to a library routine.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "698094b6-1cb9-41d3-8355-3a27ef911ef3",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following must the developer consider?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "The logic of the library routine",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "The space required to store the library routine",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "The language used to produce the library routine",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "The order of parameters to be passed to the library routine",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question_id": "797d777f-d2a2-458d-9477-d6544979d3ef",
+      "title": "Applications of Web Programming (MC, TKS 2025)",
+      "topic": "Applications of Web Programming",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A small clothing business wants to build a platform where customers can browse products, add items to a cart, make payments securely, and track orders online.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "2eff2a53-09f1-4515-9c78-3c7bb7343c0c",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which type of web application is most suitable for this purpose?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Static website",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Interactive website",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "E-commerce website",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Progressive Web App (PWA)",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question_id": "9a12fe0f-e070-464a-bb01-4ab6187c23cf",
+      "title": "Web Data Transfer (MC, TKS2025)",
+      "topic": "Web Data Transfer",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "09a5003d-c82c-4b7d-a0e1-c6528492c92d",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the below statements best describes a data packet?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "A device that routes internet traffic",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "A virus that infects network systems",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "A small unit of data sent across a network",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "A set of protocols used for email communication",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question_id": "ad7370dd-a6c7-49f8-8990-648628c9ab95",
+      "title": "Effectiveness (MS, TKS 2025)",
+      "topic": "Effectiveness",
+      "label": "MS",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "2e6cb9c6-d1de-4e15-906a-8d04efff8cc7",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "A test engineer is designing an evaluation strategy for a large-scale enterprise system. They want to ensure the software can handle real-world conditions under peak usage.\n\nSelect two testing techniques that would be most appropriate in this scenario.",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Load testing",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Stress testing",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Usability testing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Boundary testing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "E",
+                "text": "Compatibility testing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A",
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question_id": "5049e9f2-0bcc-484b-8648-45e5f0ae510f",
+      "title": "Requirements (MC, TKS 2025)",
+      "topic": "Requirements",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "The development team agrees the app will handle user login, profile management, and order placement but will not include social media features.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "fa90b9bc-eb17-4d9e-8317-851b82e6b85f",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which section of the requirements definition does the stimulus describe?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Defining data types",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Defining boundaries",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Generating requirements",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Assessing scheduling feasibility",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question_id": "c13c5e9b-1607-4452-a26f-bdff50ef1e33",
+      "title": "Backup (MC, TKS 2025)",
+      "topic": "Backup",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "af773360-420f-409d-826b-d3e9d4588da7",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best explains the primary advantage of programmed data backup for businesses?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It eliminates all risks associated with cybersecurity threats",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It reduces the need for skilled IT staff to manage data security manually",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "It allows businesses to avoid purchasing expensive hardware for data storage",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "It ensures that critical data is regularly saved and can be quickly restored after data loss",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question_id": "c79c0ceb-f133-4147-946d-1b44dfda4528",
+      "title": "Generating Solutions (MC, TKS 2025)",
+      "topic": "Generating Solutions",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "68aa0196-871b-434d-8c53-e19350189b30",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best describes the purpose of brainstorming in the context of software engineering project development?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "To strictly critique each idea presented",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "To generate as many unique ideas as possible",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "To create detailed plans and final solutions immediately",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "To organise and visualise ideas in a structured format",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question_id": "cca6d338-45d9-465d-ac8d-6a18ca37dc30",
+      "title": "File Security (SA, TKS 2025)",
+      "topic": "File Security",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "c66190ae-cc25-4e30-ab51-87a0574b9d6f",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Outline two mitigation strategies a developer can implement to protect against insecure file uploads in a web application",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly outlines two effective and relevant mitigation strategies with brief explanations"
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines two strategies with limited explanation, or one strategy with clear explanation"
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies one strategy with limited detail or vague description."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "To protect against insecure file uploads, developers should restrict uploaded file types to safe formats using whitelisting (e.g., only allowing .jpg or .pdf). This prevents execution of malicious scripts like .php or .exe files. Additionally, files should be stored in a non-executable directory, separate from the application logic, to avoid accidental execution. These measures reduce the risk of attackers uploading and executing harmful files on the server."
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question_id": "c6dd4e4d-d471-4604-a2f9-531e97e78b1a",
+      "title": "Minimise Vulnerabilities (SA, TKS 2025)",
+      "topic": "Minimise Vulnerabilities",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "2354046c-f3d3-4ff4-a974-504d592624f5",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain how race conditions can create security vulnerabilities in a software system and outline one technique a developer could use to mitigate this issue.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Demonstrates a thorough understanding of race conditions and mitigation; provides a clear and accurate technique with explanation."
+            },
+            {
+              "marks": "2",
+              "criterion": "Demonstrates a sound understanding with some detail; may lack clarity or specificity in mitigation"
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies the concept of a race condition but gives limited or unclear explanation."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "A race condition occurs when two or more operations execute concurrently and access shared resources in an unsynchronised way. This can lead to unpredictable behaviour, such as duplicated transactions or data corruption. For example, if two users attempt to withdraw money from the same bank account at the same time, both could pass the balance check before either transaction completes, resulting in an overdraft. To mitigate this, developers can use locking mechanisms like mutexes to ensure only one process accesses a critical section at a time. This ensures that once a process starts modifying a shared resource, others must wait their turn, thus maintaining data integrity."
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question_id": "5d1d8e1e-af53-4ed4-9b38-287d162cabc0",
+      "title": "Software Dev Steps - Security Requirements (SA, TKS 2025)",
+      "topic": "Software Dev Steps - Security Requirements",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025, North Parramatta",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "dd137f0e-84c1-4427-af28-2141365c27c2",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": null,
+          "prompt": "Explain how the “requirements definition” stage contributes to secure software development.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Explains how the requirements definition stage contributes to secure software development."
+            },
+            {
+              "marks": "2",
+              "criterion": "Demonstrates some understanding of the requirements definition stage and its contribution to secure software development."
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies the requirements definition stage"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "The _requirements definition_ stage helps secure software development by clearly identifying what the software aims to achieve. During this step, it outlines security features (data protection, user access control and compliance requirements) to be implemented.   \n  \nDefining these features early enables developers to plan security features according to the _\"Security by Design\"_ principle, thereby preventing vulnerabilities from being introduced later in the development stage."
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question_id": "273a0af3-1361-41b2-b480-6784a305af85",
+      "title": "End User Influence (SA, TKS 2025)",
+      "topic": "End User Influence",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "b3887495-74a7-43b7-a1ba-4ae7bc788e23",
+          "part": "Part 1",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain the challenges of balancing usability with security in software design, and suggest ways developers can address these challenges.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Explains key challenges in balancing usability and security in software design\n\nSuggests relevant and practical ways developers can address these challenges"
+            },
+            {
+              "marks": "3",
+              "criterion": "Outlines challenges with some explanation\n\nSuggests one or more ways developers can respond, with some relevance"
+            },
+            {
+              "marks": "2",
+              "criterion": "Identifies basic challenges or general conflict between usability and security\n\nSuggests a vague solution"
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of usability or security in the context of software design"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Balancing usability with security is a challenge as enhancing one often compromises the other. An overly secure software might be cumbersome and difficult to use, which could deter users from adopting it. Conversely, enhancing usability might lead to vulnerabilities in security. Solutions include minimising user friction by streamlining authentication processes, implementing adaptive security measures that adjust based on user behaviour, and ensuring the security features are transparent but not overly intrusive. For example, developers can use straightforward notifications for security alerts to keep users informed without disrupting their experience. Additionally, providing secure defaults and ensuring that critical security settings are enabled by default can maintain a baseline of security."
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question_id": "2365749c-6732-4b20-ae02-fb3eaa3c3aa5",
+      "title": "Logic Paradigm / SQL (Q34b, 2021 HSC Exam SDD)",
+      "topic": "Logic Paradigm / SQL",
+      "label": "Q34b",
+      "kind": "2021 HSC Exam SDD",
+      "source": null,
+      "copyright": "HSC 2021",
+      "stimulus": "The following fragment of code is written using the logic paradigm\n\n![](assets/c64af6b8-beba-4225-a6e5-ffd09bbafd85.png)\n\nThe query ?eats(A, plants) produces the result\n\n![](assets/b2283a1d-2cc0-4f13-bcca-e08905626ff8.png)",
+      "stimulus_images": [
+        "assets/c64af6b8-beba-4225-a6e5-ffd09bbafd85.png",
+        "assets/b2283a1d-2cc0-4f13-bcca-e08905626ff8.png"
+      ],
+      "parts": [
+        {
+          "part_id": "415b674e-ea5d-468f-af17-08de4c2767c6",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Write a query that will produce the result\n\nsheep  \ncow  \nplants",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Provides a correct query"
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of a relevant query"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "?eats(human, A)"
+        },
+        {
+          "part_id": "cdd34562-d3ed-4250-acfc-b086a43792ab",
+          "part": "Part B",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "A self\\_eater is any animal that eats other animals of its own kind\n\nProvide a new rule that defines self\\_eater",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Provides a correct rule"
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides a partially correct rule"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "self\\_eater(A) :- eats(A, A)"
+        },
+        {
+          "part_id": "c373a2a7-68e4-47a9-a408-1a14f530602c",
+          "part": "Part C",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Contrast the use of forward chaining and backward chaining when evaluating the query ?omnivore(human).",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Demonstrates an understanding of the difference between forward and backward chaining for this query"
+            },
+            {
+              "marks": "2",
+              "criterion": "Demonstrates an understanding of forward and backward chaining for this query"
+            },
+            {
+              "marks": "1",
+              "criterion": "Demonstrates a basic understanding of how a query is evaluated"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Forward chaining starts from the first fact and locates all the facts that include human, identifying the last three facts. From there it will evaluate if the facts make the rules herbivore and carnivore true. Which are both true for a human. \n\nBackward chaining assumes the query is true. Then it uses the omnivore rule to check if herbivore and carnivore are both true. They are both true for humans so the assumption was correct."
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question_id": "27a23f88-54a1-4eb3-968a-0a71a253d7a0",
+      "title": "Managing Load Times (SA, TKS2025)",
+      "topic": "Managing Load Times",
+      "label": "SA",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "380fda29-1c52-4314-a568-c0b2d3f8c90c",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain how compression methods improve web performance.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": null
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Clearly explains how compression methods improve web performance."
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies that compression reduces file sizes OR that compression speeds up loading."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Compression methods improve web performance by reducing the size of files sent from the server to the browser. Smaller files mean mean less data to transfer and hence quicker page loading."
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question_id": "dbd0e7b1-c7d3-4c1f-9a1f-65f3a5edebb4",
+      "title": "Applications of Web Programming (SA, TKS 2025)",
+      "topic": "Applications of Web Programming",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A startup wants to develop an interactive website that adapts to user preferences and provides real-time updates.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "c3c9e715-3eaf-4b56-9038-cb6616c48a53",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain two benefits of using interactive websites for businesses aiming to improve customer engagement.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Explains two benefits of interactive websites and links them to customer engagement."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes two benefits with limited detail or partial connection to customer engagement."
+            },
+            {
+              "marks": "1",
+              "criterion": "Mentions one benefit or provides vague/incomplete explanations."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Interactive websites improve customer engagement by offering personalised content based on user preferences, which makes users feel valued and increases their time on the site. They also provide real-time updates, such as live chats or dynamic product recommendations, which keep users informed and encourage immediate action. Together, these features create a more engaging and responsive experience that can boost customer satisfaction and loyalty."
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question_id": "5ff0b835-ca90-43d9-a0ba-ae28032ea125",
+      "title": "Version Control (MC, TKS 2025)",
+      "topic": "Version Control",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A team of developers is collaborating on a web application using Git and GitHub. During a sprint, a developer accidentally pushes a commit to the main branch that breaks the layout of the homepage. The team wants to fix the issue while preserving the project history and avoiding disruption to other contributors who are working on feature branches.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "d129eeca-81b8-4818-83fc-850b8588c7c9",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following would be the most appropriate way to resolve the issue using Git?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Delete the main branch and recreate it from a stable feature branch, then notify all contributors to rebase their work.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Force push an older version of the project to the main branch using \"git push -- force\" removing the faulty commit from history.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Use \"git revert\" to create a new commit that undoes the changes from the faulty commit, then push the revert to the main branch.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Pause all development, clone the repository locally, manually fix the layout, and upload the corrected files without using Git commands.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question_id": "f8acd1cd-7870-41be-b8f2-424b0d59c5ca",
+      "title": "DFD Level 1 - (Draw, TKS 2025)",
+      "topic": "DFD Level 1 -",
+      "label": "Draw",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A new online catalogue system for plants is being developed.\n\n-   It consists of a website that is connected to a database of plants.\n-   Experts will enter the different types of plants into the database, along with a range of corresponding images.\n-    Users will be able to search and filter plants by name or their properties such as average height, and temperature ranges.\n-   Users can also search by an image, where a machine learning model will find the closest-looking plants.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "ba5b6626-26ac-4855-be17-675e80be2fc2",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "DRAWING_V2",
+          "prompt": "Draw a level 1 data flow diagram (DFD) to represent this system.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": "| **Criteria** | **Marks** |\n|---|---|\n| Constructs a substantially correct data flow diagram that includes at least the processes of adding plants, searching plants and sorting plants; relevant data flows, storage, and external entities | 4 |\n| Constructs a data flow diagram that is relevant to the plant catalogue app and includes two external entities, most of the processes, and data flows | 3 |\n| Constructs a data flow diagram with some elements relevant to the parking app | 2 |\n| Shows a basic understanding of data flow diagrams | 1 |",
+          "marking_guidance": null,
+          "sample_answer": "![](assets/bf236951-ae3b-4460-aae5-335ddfb3ed18.png)",
+          "sample_answer_images": [
+            "assets/bf236951-ae3b-4460-aae5-335ddfb3ed18.png"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question_id": "4d43cd32-aaf3-470e-ab8d-aead6f5078f5",
+      "title": "Interactive Web Apps (SA, TKS 2025)",
+      "topic": "Interactive Web Apps",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS North Parramatta, 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "9e1f9419-e62a-4b4d-b654-06774fe844bf",
+          "part": "Part 1",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain the role of HTML, CSS, and JavaScript in creating interactive web pages.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "HTML, CSS, and JavaScript each play a distinct role in the development of interactive web pages. HTML is the foundational markup language used to structure content on the World Wide Web. It enables developers to define elements such as headings, paragraphs, lists, links, and images. CSS is used to style the HTML content, providing the ability to control layout, colours, fonts, and overall visual appearance of the web pages, thus separating content from design. JavaScript (JS), the primary web scripting language, enables dynamic content updates for iterative user interfaces through API requests (including single-page applications). Together, HTML, CSS, and JavaScript form the core building blocks of modern web applications."
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question_id": "441a5392-e6f1-4860-94a7-c2630bca0347",
+      "title": "Structure Charts (Draw, TKS 2025)",
+      "topic": "Structure Charts",
+      "label": "Draw",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": null,
+      "stimulus": "A program is needed to allow users to book movie tickets. The system displays available movies, allows users to select a movie, choose the number of tickets, and proceed with payment. The developer has drafted the following algorithm to outline the program's behavior: \n\nBEGIN Main  \n    MovieTotal = 0  \n    TicketCount = 0  \n    DisplayMovieList  \n    SelectMovie (MovieTotal)  \n  \n    GetTicketCount (TicketCount)  \n    CalculateTotal (MovieTotal, TicketCount, FinalCost)  \n  \n    ShowBookingSummary (MovieTotal, TicketCount, FinalCost)  \nEND Main  \n  \nBEGIN SelectMovie (MovieTotal)  \n    Display “Select a movie”  \n    MovieTotal = 15  \nEND  \n  \nBEGIN GetTicketCount (TicketCount)  \n    Input number of tickets  \n    TicketCount = user input  \nEND  \n  \nBEGIN CalculateTotal (MovieTotal, TicketCount, FinalCost)  \n    FinalCost = MovieTotal \\* TicketCount  \nEND  \n  \nBEGIN ShowBookingSummary (MovieTotal, TicketCount, FinalCost)  \n    Display MovieTotal, TicketCount, FinalCost  \n    GetConfirmation  \n  \n    IF Confirmation = True THEN  \n        ProcessPayment (FinalCost)  \n    ELSE  \n        CancelBooking  \n    ENDIF  \nEND  \n  \nBEGIN ProcessPayment (FinalCost)  \n    Display “Payment received”  \n    Display FinalCost  \nEND  \n  \nBEGIN CancelBooking  \n    Display “Booking cancelled”  \nEND",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "93a4f00e-d3d1-48b0-8171-74993e170792",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "DRAWING_V2",
+          "prompt": "Using the provided pseudocode, create a structure chart.",
+          "prompt_images": [],
+          "question": {
+            "background_images": [
+              "assets/5a296c74-a193-4a9b-8b72-0d27559ae220.png",
+              "assets/b627599d-dcee-4e52-9625-8b80bcd46c52.png"
+            ]
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Constructs a substantially correct structure chart that includes all essential elements."
+            },
+            {
+              "marks": "3",
+              "criterion": "Constructs a structure chart that is mostly correct with at most 2 major errors."
+            },
+            {
+              "marks": "2",
+              "criterion": "Constructs a structure chart that has 4 or more major errors."
+            },
+            {
+              "marks": "1",
+              "criterion": "Attempts to create a structure chart relevant to the stimulus."
+            }
+          ],
+          "marking_rubric": "Note that there may be variations in the students' solution. The sample answer is only a guide, and the validity of the students' solution is up to the marker's discretion.",
+          "marking_guidance": null,
+          "sample_answer": "![](assets/f37ece41-2d6b-4df1-8719-0522ab309270.png)",
+          "sample_answer_images": [
+            "assets/f37ece41-2d6b-4df1-8719-0522ab309270.png"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question_id": "3d6b973b-7bb0-4363-9601-14452bc515a1",
+      "title": "Additional Solutions (SA + MC, TKS 2025)",
+      "topic": "Additional Solutions",
+      "label": "SA + MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A team is developing a prototype for a mobile app that helps users track their daily water intake. While the prototype successfully records and stores data, user feedback indicates that the interface is confusing and visually cluttered. Users struggle to find key features like the daily goal tracker and hydration reminders.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "5f519501-a9d3-4e0d-a386-e255cf0fadd9",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Based on UI design principles, suggest two improvements the team could make to enhance the user experience.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 140
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly suggests two improvements."
+            },
+            {
+              "marks": "2",
+              "criterion": "Suggests one improvement."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "One improvement the team could make is to apply the clarity principle by simplifying the layout and using clear labels for key features like the daily goal tracker and hydration reminders. This would help users quickly identify and understand the purpose of each element, reducing confusion. Another improvement is to enhance efficiency by reorganising the interface so that frequently used features are easily accessible, possibly through a dashboard or quick-access menu. This would streamline user interactions and make the app more intuitive, improving the overall experience."
+        },
+        {
+          "part_id": "1dd8fb07-520f-4aee-a869-6376a68c1936",
+          "part": "Part B",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following UI design principles would be most effective in addressing the users’ concerns?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Clarity: Simplify the layout and use clear labels to make key features easier to locate and understand.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Complexity: Remove all visual elements to make the app faster, even if it becomes harder to navigate.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Consistency: Add more features to the interface to give users more control over their hydration tracking.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Efficiency: Use identical colours and fonts throughout the app, even if they don&rsquo;t match the function of each screen.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question_id": "0b70abc1-7aae-4800-86aa-925329252ea1",
+      "title": "SQL (ER, TKS 2025)",
+      "topic": "SQL",
+      "label": "ER",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "As part of a class project, a student has created a video explaining how SQL is used in enterprise environments to manage large-scale databases.\n\n[▶ VIDEO (open this file)](assets/0d7ecf5f-cfef-42c2-986e-f4d3a7038b66.mp4)",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "ea8c8963-904a-42aa-98d7-ba6f72d54ca3",
+          "part": "Part A",
+          "marks_available": 8,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Evaluate the effectiveness of SQL in supporting enterprise-level data management and security, using examples and insights from the video to support your response.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 400
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 8,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "8",
+              "criterion": "Clearly evaluates SQL’s effectiveness in enterprise data management and security whilst referencing both strengths and limitations. Integrates relevant and specific examples from the video to support the response."
+            },
+            {
+              "marks": "6-7",
+              "criterion": "Makes a judgement about SQL&rsquo;s effectiveness in enterprise data management and security that has some flaws. Integrates relevant and specific examples from the video to support the response."
+            },
+            {
+              "marks": "4-5",
+              "criterion": "Describes SQL&rsquo;s effectiveness in enterprise data management and security whilst referencing both strengths and limitations."
+            },
+            {
+              "marks": "2-3",
+              "criterion": "Outlines SQL&rsquo;s effectiveness in enterprise data management and security."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": "Note that answers could include numerous points:\n\n-   Explanation of SQL as a language used to manage relational databases in enterprise environments.\n-   Description of how SQL supports data management through commands such as `SELECT`, `UPDATE`, `DELETE`, and `JOIN`.\n-   Reference to SQL’s ability to handle large volumes of structured data efficiently.\n-   Discussion of data integrity features in SQL, including the use of constraints like `PRIMARY KEY`, `FOREIGN KEY`, and `CHECK`.\n-   Explanation of transaction control (`BEGIN`, `COMMIT`, `ROLLBACK`) and its importance in maintaining reliable operations.\n-   Description of SQL’s role in enterprise security through access control mechanisms (`GRANT`, `REVOKE`) and role-based permissions.\n-   Reference to examples from the video, such as restricting access to financial records or updating customer data securely.\n-   Mention of SQL’s widespread use and compatibility across enterprise platforms.\n-   Evaluation of SQL’s limitations, such as vulnerability to SQL injection if input is not properly validated.\n-   Discussion of the need for secure coding practices and skilled developers to implement SQL effectively.\n-   Consideration of SQL’s complexity and potential performance issues in large-scale systems.\n-   A balanced judgement on SQL’s overall effectiveness, acknowledging both its strengths and areas that require careful implementation.",
+          "sample_answer": "SQL (Structured Query Language) is a widely used tool in enterprise computing for managing and securing data. Its effectiveness lies in its ability to handle large volumes of structured data efficiently, while also offering features that support data integrity and security. However, its success depends on how well it is implemented and maintained.\n\nIn terms of data management, SQL allows enterprises to perform complex operations such as querying, updating, and reporting. These capabilities are essential for businesses that rely on real-time access to accurate information. For example, the video demonstrates how SQL commands like `SELECT`, `UPDATE`, and `JOIN` are used to retrieve and manipulate data across multiple tables. This shows how SQL enables businesses to generate insights and make informed decisions quickly.\n\nSQL also supports data integrity through the use of constraints such as `PRIMARY KEY`, `FOREIGN KEY`, and `CHECK`. These ensure that data entered into the database follows specific rules, reducing the risk of errors and inconsistencies. Transactions, managed through commands like `BEGIN`, `COMMIT`, and `ROLLBACK`, allow multiple operations to be treated as a single unit. This is particularly useful in enterprise systems where data accuracy is critical, such as in financial or healthcare databases.\n\nFrom a security perspective, SQL provides access control features that help protect sensitive data. The video highlights how commands like `GRANT` and `REVOKE` are used to assign or remove user permissions. This allows organisations to implement role-based access control, ensuring that only authorised users can view or modify certain data.\n\nDespite these strengths, SQL does have limitations. One of the main concerns is its vulnerability to SQL injection attacks, which occur when malicious input is used to manipulate queries. The video explains that without proper input validation and secure coding practices, attackers can gain unauthorised access to data. Additionally, SQL can become complex to manage in large systems and often requires skilled developers to maintain performance and security.\n\nIn conclusion, SQL is a highly effective tool for enterprise data management and security. Its strengths in scalability, precision, and control make it a valuable asset. However, its effectiveness depends on secure implementation, regular maintenance, and the expertise of those managing the system.\n\n**Note that answers could include numerous points:**\n\n-   Explanation of SQL as a language used to manage relational databases in enterprise environments.\n-   Description of how SQL supports data management through commands such as `SELECT`, `UPDATE`, `DELETE`, and `JOIN`.\n-   Reference to SQL’s ability to handle large volumes of structured data efficiently.\n-   Discussion of data integrity features in SQL, including the use of constraints like `PRIMARY KEY`, `FOREIGN KEY`, and `CHECK`.\n-   Explanation of transaction control (`BEGIN`, `COMMIT`, `ROLLBACK`) and its importance in maintaining reliable operations.\n-   Description of SQL’s role in enterprise security through access control mechanisms (`GRANT`, `REVOKE`) and role-based permissions.\n-   Reference to examples from the video, such as restricting access to financial records or updating customer data securely.\n-   Mention of SQL’s widespread use and compatibility across enterprise platforms.\n-   Evaluation of SQL’s limitations, such as vulnerability to SQL injection if input is not properly validated.\n-   Discussion of the need for secure coding practices and skilled developers to implement SQL effectively.\n-   Consideration of SQL’s complexity and potential performance issues in large-scale systems.\n-   A balanced judgement on SQL’s overall effectiveness, acknowledging both its strengths and areas that require careful implementation."
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "Software Dev Steps": {
+      "mark": 0,
+      "available": 1
+    },
+    "Testing & Debugging": {
+      "mark": 0,
+      "available": 1
+    },
+    "Designing Secure Software": {
+      "mark": 0,
+      "available": 2
+    },
+    "Designing Web Apps": {
+      "mark": 0,
+      "available": 1
+    },
+    "Applications of Web Programming": {
+      "mark": 0,
+      "available": 4
+    },
+    "Web Data Transfer": {
+      "mark": 0,
+      "available": 1
+    },
+    "Effectiveness": {
+      "mark": 0,
+      "available": 1
+    },
+    "Requirements": {
+      "mark": 0,
+      "available": 1
+    },
+    "Backup": {
+      "mark": 0,
+      "available": 1
+    },
+    "Generating Solutions": {
+      "mark": 0,
+      "available": 1
+    },
+    "File Security": {
+      "mark": 0,
+      "available": 3
+    },
+    "Minimise Vulnerabilities": {
+      "mark": 0,
+      "available": 3
+    },
+    "Software Dev Steps - Security Requirements": {
+      "mark": 0,
+      "available": 3
+    },
+    "End User Influence": {
+      "mark": 0,
+      "available": 4
+    },
+    "Logic Paradigm / SQL": {
+      "mark": 0,
+      "available": 7
+    },
+    "Managing Load Times": {
+      "mark": 0,
+      "available": 2
+    },
+    "Version Control": {
+      "mark": 0,
+      "available": 1
+    },
+    "DFD Level 1 -": {
+      "mark": 0,
+      "available": 4
+    },
+    "Interactive Web Apps": {
+      "mark": 0,
+      "available": 3
+    },
+    "Structure Charts": {
+      "mark": 0,
+      "available": 4
+    },
+    "Additional Solutions": {
+      "mark": 0,
+      "available": 4
+    },
+    "SQL": {
+      "mark": 0,
+      "available": 8
+    }
+  }
+}

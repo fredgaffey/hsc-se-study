@@ -1,0 +1,1669 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 8 (Term 1: Weeks 7-8) Programming for the Web — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">12SENX2 Software Engineering 2026 · module 8 of 15</p>
+<h1>Cycle 8 (Term 1: Weeks 7-8) Programming for the Web</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="12951-all.html">Whole course</a><span class="cur">By module</span><a href="../course-12951.html">By lesson</a></div>
+<h3 class="readles">Introduction to Cycle 8</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div id="" class="dp-banner-image"><img class="dp-full-width" style="width: 100%; height: auto; max-width: 100%;" role="presentation" src="https://kingsnet.kings.edu.au/images/UserUploadedImages/1754/banner2.jpg" alt=" [online-only image]" loading="lazy"></div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-read-time-wrapper"><i class="fas fa-clock cp-txt-dp-primary" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> 2 min read&nbsp; |&nbsp; no activities&nbsp; |&nbsp;&nbsp;<i class="dp-icon fas fa-brain cp-txt-primary" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp; (easy)&nbsp;&nbsp;</div>
+<h4>Timing</h4>
+<p>Weeks 7 and 8</p>
+<p>&nbsp;</p>
+<h4>Content</h4>
+<p><strong>Programming for the Web: Designing Web Applications</strong></p>
+<p>This cycle dives deep into the architecture, tools, and best practices required to design modern, efficient, and scalable web applications. You will move beyond basic HTML to understand the ecosystem that supports professional web development.</p>
+<p>Throughout this cycle, we will cover the following key areas:</p>
+<ul>
+<li>The influence and inner workings of <strong>Web Browsers</strong> and how to leverage developer tools.</li>
+<li>The critical role of <strong>Cascading Style Sheets (CSS)</strong> in ensuring design consistency and responsive flexibility.</li>
+<li>How to collaborate and track changes effectively using <strong>Version Control</strong> systems like Git.</li>
+<li>The significance of <strong>Frontend Code Libraries</strong>, including frameworks, template engines, and predesigned CSS.</li>
+<li>The impact and use of <strong>Open-Source Software</strong> in the web development community.</li>
+<li>Strategies and techniques for <strong>Managing Load Times</strong> to ensure optimal user experiences.</li>
+<li>The prevalence, evaluation, and use of <strong>Content Management Systems (CMS)</strong> in modern web publishing.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Deliverables</h4>
+<p>By the end of this cycle, you need to complete:</p>
+<ul>
+<li>Quiz — 2.8 Web Browsers</li>
+<li>Quiz — 2.9 Cascading Style Sheets</li>
+<li>Quiz — 2.10 Version Control</li>
+<li>Quiz — 2.11 Code Libraries</li>
+<li>Quiz — 2.12 Open-Source Software</li>
+<li>Quiz — 2.13 Managing Load Times</li>
+<li>Quiz — 2.14 Content Management System</li>
+<li>Gradeo — Cycle 8</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Lessons</h4>
+<div class="dp-table-scroll">
+<table style="border-collapse: collapse; width: 100%;" border="1" data-active-table="true">
+<tbody>
+<tr>
+<td style="width: 26.8426%;"><strong>Title</strong></td>
+<td style="width: 34.4899%;"><strong>Syllabus</strong></td>
+<td style="width: 38.6675%;"><strong>Page Focus</strong></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.8 Web Browsers" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.8 Web Browsers</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p>Explore and explain the influence of a web browser on web development, including the use of developer (dev) tools.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>A web browser is more than just a window to the internet; it is a complex tool that developers must understand to build effective websites. This page explores how rendering engines work, how to use developer tools for debugging, and the importance of cross-browser compatibility.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.9 Cascading Style Sheets" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.9 Cascading Style Sheets</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Investigate cascading style sheets (CSS) and its impact on the design of a web application, including:</p>
+<ul>
+<li>consistency of appearance</li>
+<li>flexibility with browsers or display devices</li>
+<li>CSS maintenance tools</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Cascading Style Sheets (CSS) are the backbone of modern web design. This page explores how CSS ensures a consistent look across applications, adapts to different devices through flexible design, and the tools developers use to maintain complex stylesheets.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.10 Version Control" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.10 Version Control</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Investigate the reasons for version control and apply it when developing web application</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>This page explores the essential role of version control in modern web development. You will learn about Git, the industry-standard tool for tracking changes, how to manage code repositories, and the collaborative benefits of platforms like GitHub and GitLab.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.11 Code Libraries" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.11 Code Libraries</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Explore the types and significance of code libraries for front-end web development, including:</p>
+<ul>
+<li>frameworks that control complex web applications</li>
+<li>template engines</li>
+<li>predesigned CSS classes</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Modern web development relies heavily on code libraries to manage complexity and speed up production. This page explores the three main types of front-end libraries: frameworks, template engines, and predesigned CSS classes.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.12 Open-Source Software" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.12 Open-Source Software</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Explain the use and development of open-source software in relation to web development</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Open-source software accelerates innovation by providing accessible tools and code for the global community. This page explores how open-source software is used in web development, the benefits it offers, and how developers contribute to its evolution.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.13 Managing Load Times" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.13 Managing Load Times</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Investigate methods to support and manage the load times of web pages/applications</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Web page and application load times are crucial for user experience and SEO. This guide explores various techniques to optimise load times, breaking them down into front-end strategies (browser-side) and back-end strategies (server-side).</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.14 Content Management Systems" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.14 Content Management Systems</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Research, experiment with and evaluate the prevalence and use of web content management systems (CMS)</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Web Content Management Systems (CMS) have revolutionised web development by allowing users to create and manage digital content with minimal technical expertise. This page explores the definition, key features, advantages, disadvantages, and widespread adoption of CMS platforms.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>&nbsp;</p>
+</div><h3 class="sub">During</h3>
+<h3 class="readles">2.8 Web Browsers</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Explore and explain the influence of a web browser on web development, including the use of developer (dev) tools</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explore and explain how web browsers impact web development, including the use of developer tools for debugging, testing, and optimising web applications.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Describe the role of different web browsers (e.g., Chrome, Firefox, Safari) in rendering web content and their influence on the development process.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Use browser developer tools to inspect HTML and CSS, debug JavaScript, and monitor network activity.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Explain how browser-specific features and inconsistencies can affect the appearance and functionality of web applications.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Utilise developer tools to identify and resolve performance issues, accessibility concerns, and cross-browser compatibility problems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>A web browser is a software application that retrieves, presents, and navigates web pages. Browsers like Chrome, Firefox, Safari, and Edge each have unique features and engines that influence how web content is rendered. Understanding these differences is essential for developing and maintaining cross-browser compatible websites.</p>
+<p>&nbsp;</p>
+<h4>Browser Rendering Engines</h4>
+<p>Each browser has a unique rendering engine responsible for interpreting HTML, CSS, and JavaScript code and displaying it as a web page:</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Google Chrome: Uses the Blink engine.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Mozilla Firefox: Uses the Gecko engine.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Safari: Uses the WebKit engine.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Microsoft Edge: Uses the Blink engine (previously used EdgeHTML).</p>
+<p>These engines may interpret the same code slightly differently, which can lead to inconsistencies in how web pages appear and function across different browsers.</p>
+<p>&nbsp;</p>
+<h4>Developer Tools</h4>
+<p>&nbsp;Developer tools are built-in browser tools that help developers test, debug, and optimise their code directly within the browser. Key features include:</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Elements Panel</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Displays the DOM structure of the current webpage.</li>
+<li>Allows developers to inspect and modify HTML and CSS in real-time.</li>
+<li>Useful for identifying and fixing layout and styling issues, testing different CSS properties, and editing content on-the-fly.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/9f74e269346e16ee.png" alt="image.png" width="614" height="357" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527346" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Console Panel</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>An interactive shell to run JavaScript code directly within the browser.</li>
+<li>Useful for debugging JavaScript errors, executing scripts for testing purposes, and logging outputs.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/7839895646444919.png" alt="image.png" width="616" height="357" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527347" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Network Panel</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Tracks all network requests made by the browser.</li>
+<li>Useful for monitoring performance and size of assets, identifying slow or failed requests, and debugging AJAX requests.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/1c0b89575fc9e785.png" alt="image.png" width="592" height="343" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527456" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Performance Panel</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Provides insights into the runtime performance of a website.</li>
+<li>Useful for profiling execution time of JavaScript code, analysing render and layout events, and capturing screenshots for performance issues.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/b4b31f5e0d4b5835.png" alt="image.png" width="596" height="345" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527348" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Application Panel</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Tools to inspect and manage resources such as local storage, cookies, and service workers.</li>
+<li>Useful for managing client-side data, testing Progressive Web Apps (PWAs), and inspecting cache storage.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/7df53acc7ddc6fca.png" alt="image.png" width="587" height="340" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527349" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Cross-Browser Compatibility</h4>
+<p>Ensuring that a website works consistently across all major browsers is a critical aspect of web development. Browser compatibility issues arise when web standards are interpreted differently by each browser’s rendering engine.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">CSS Layout Differences</h3>
+<div class="dp-panel-content ">
+<p>1. Flexbox and Grid Layouts:</p>
+<ul>
+<li>Flexbox: While most modern browsers support Flexbox, there are differences in how they handle certain properties. For example:
+<ul>
+<li><code>flex-basis</code> and <code>min-width</code>: In some browsers, <code>flex-basis</code> behaves differently depending on the presence of <code>min-width</code> or <code>max-width</code> properties.</li>
+<li>Alignment Issues: The alignment properties (<code>align-items</code>, <code>justify-content</code>, etc.) may produce slightly different visual results across browsers, especially when combined with nested flex containers.</li>
+</ul>
+</li>
+<li>Grid Layout: Similar to Flexbox, Grid is widely supported, but certain features like <code>subgrid</code> (supported in Firefox but not Chrome or Safari) or automatic minimum sizing for grid items can behave inconsistently.
+<ul>
+<li>Implicit Grid Tracks: Browsers can differ in how they handle the creation of implicit grid tracks, especially when using auto-placement properties.</li>
+<li>Gap Property: Earlier versions of Edge do not support the gap property for Flexbox (only for Grid), causing spacing inconsistencies.</li>
+</ul>
+</li>
+</ul>
+<p>2. Vendor Prefixes and Legacy Support:</p>
+<ul>
+<li>Older browsers may require vendor prefixes like <code>-webkit-</code>, <code>-moz-</code>, and <code>-ms-</code> to support certain CSS properties. This can lead to unexpected layouts if these prefixes are not included.</li>
+<li>For example, properties like transform, animation, and grid may require vendor prefixes in older versions of Safari, Firefox, and Internet Explorer.</li>
+</ul>
+<p>3. Media Queries:</p>
+<ul>
+<li>Some browsers have different interpretations of media queries, especially for high-resolution displays or certain breakpoints. This can cause unexpected layout changes on different devices.</li>
+</ul>
+<p>4. Browser-Specific Bugs:</p>
+<ul>
+<li>Browsers may have specific bugs or quirks that affect layout rendering. For example:</li>
+<li>Safari: Known for issues with flexbox where child elements may overflow their container, or negative margins cause unexpected behaviour.</li>
+<li>Chrome: Issues with stacking contexts and z-index when combined with flex or grid containers.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">JavaScript API Support</h3>
+<div class="dp-panel-content ">
+<p>1. ES6+ (ECMAScript 2015 and Beyond):</p>
+<ul>
+<li>Not all browsers support newer JavaScript features such as async/await, let and const declarations, or arrow functions. For example:
+<ul>
+<li>Internet Explorer 11: Does not support ES6 features like Promise, Map, Set, or arrow functions.</li>
+<li>Polyfills: Libraries like Babel and core-js can be used to add support for these features in older browsers.</li>
+</ul>
+</li>
+</ul>
+<p>2. Web APIs:</p>
+<ul>
+<li>Newer APIs such as the Fetch API, Service Workers, and Intersection Observer are not universally supported across all browsers.
+<ul>
+<li>Fetch API: Replaces XMLHttpRequest for network requests but is not supported in Internet Explorer.</li>
+<li>Service Workers: Provides the backbone for Progressive Web Apps (PWAs) by allowing offline caching and background sync. Not supported in all versions of Safari.</li>
+<li>Intersection Observer: Used for lazy-loading images and infinite scroll implementations. Limited support in older versions of Safari and Internet Explorer.</li>
+</ul>
+</li>
+</ul>
+<p>3. Polyfills and Shims:</p>
+<ul>
+<li>Polyfills are scripts that add support for features that are not natively available in certain browsers. They allow developers to use modern JavaScript features while maintaining compatibility with older browsers.
+<ul>
+<li>Example: The core-js library provides polyfills for many ES6+ features.</li>
+<li>Shims modify or extend native methods to provide a consistent API. They are used when a browser partially supports a feature but implements it differently.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">HTML Element Rendering</h3>
+<div class="dp-panel-content">
+<p>1. Default Styles and Behaviors:</p>
+<ul>
+<li>Different browsers apply default styles to HTML elements using their built-in user agent stylesheets. This can result in inconsistencies in how elements like <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, and <code>&lt;select&gt;</code> are rendered.
+<ul>
+<li>Form Elements: Browsers often have different default styles for form controls. For example, the appearance of checkboxes, radio buttons, and file inputs can vary significantly between Chrome, Firefox, Safari, and Edge.</li>
+<li>Buttons: The default padding, border-radius, and font styles for <code>&lt;button&gt;</code> elements can differ across browsers, leading to inconsistencies in appearance.</li>
+</ul>
+</li>
+</ul>
+<p>2. CSS Resets and Normalisation:</p>
+<ul>
+<li>To address these inconsistencies, developers use CSS resets (like Eric Meyer’s Reset) or normalisation libraries (like Normalize.css) that standardise default styles across all browsers.</li>
+<li>CSS Reset: Removes all default styles applied by browsers.</li>
+<li>Normalize.css: Preserves useful defaults while correcting browser-specific quirks.</li>
+</ul>
+<p>3. Pseudo-Elements and Pseudo-Classes:</p>
+<ul>
+<li>Browsers may render pseudo-elements (<code>::before</code>, <code>::after</code>) and pseudo-classes (<code>:hover</code>, <code>:focus</code>) differently. For example:
+<ul>
+<li>The visual behaviour of <code>:focus</code> may differ across browsers, particularly with elements like links and form controls.</li>
+<li>The positioning and content of <code>::before</code> and <code>::after</code> pseudo-elements can sometimes render inconsistently when combined with complex layout models.</li>
+</ul>
+</li>
+</ul>
+<p>4. Accessibility and ARIA:</p>
+<ul>
+<li>Differences in how browsers interpret ARIA (Accessible Rich Internet Applications) attributes can affect the accessibility of custom components. For example:
+<ul>
+<li>Custom-styled elements like sliders or accordions may have inconsistent keyboard navigation and screen reader support across browsers.</li>
+</ul>
+</li>
+</ul>
+<p>5. Rendering Performance:</p>
+<ul>
+<li>Different browsers may have varying performance characteristics when rendering complex elements or animations. For example:
+<ul>
+<li>Hardware Acceleration: Browsers like Chrome and Firefox may use GPU acceleration for rendering, while others may not, affecting the performance of animations and transitions.</li>
+<li>Repaints and Reflows: The way browsers handle repaints and reflows (layout changes) can impact rendering performance, especially for complex or interactive UIs.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Performance Optimisation</h4>
+<p>Performance optimisation focuses on improving the speed, responsiveness, and overall user experience of a website. By minimising load times, reducing the size of resources, and ensuring efficient rendering of web pages, developers can enhance site performance and user satisfaction.&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<p>Tools like Google Lighthouse provide in-depth performance audits that help measure critical metrics such as page load time, Largest Contentful Paint (LCP), and Time to First Byte (TTFB). These metrics give developers insights into various aspects of website performance:</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Page Load Time measures the overall time it takes for a web page to be fully loaded and rendered, impacting user experience and search engine rankings.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Largest Contentful Paint (LCP) indicates the time it takes for the largest visible content element (like an image or text block) to appear on the screen. This metric is crucial for assessing perceived loading speed, as it reflects how quickly users can see and interact with the main content.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Time to First Byte (TTFB) measures the time between a user’s request for a resource and when the first byte is received by their browser. It is an indicator of server responsiveness and can be influenced by factors like server configuration, database queries, and content delivery networks (CDNs).</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p style="text-align: center;"><em><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/83d7f401c60dbf97.png" alt="image.png" width="611" height="352" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527350" data-api-returntype="File" loading="lazy">Google Lighthouse Report for King's Website</em></p>
+<p style="text-align: left;">&nbsp;</p>
+<h4>Security Features in Modern Browsers</h4>
+<p>Modern browsers include several security features designed to protect users and data:</p>
+<ul>
+<li>Same-Origin Policy: Restricts how scripts on different pages interact, preventing malicious websites from accessing sensitive data on other sites.</li>
+<li>Content Security Policy (CSP): Allows developers to define policies that restrict where content can be loaded from, mitigating risks like Cross-Site Scripting (XSS).</li>
+<li>HTTPS: Browsers enforce secure connections for websites, displaying warnings for non-secure HTTP pages.</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://developer.chrome.com/docs/lighthouse/overview" target="_blank">Google Lighthouse</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.8 Web Browsers" href="https://canvas.kings.edu.au/courses/12951/assignments/204835" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204835" data-api-returntype="Assignment">2.8 Web Browsers</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.8%20Web%20Browsers.pptx?d=wcc17dd5837ba4edc8b1755c34651cd74&amp;csf=1&amp;web=1&amp;e=LSSSNr">2.8 Web Browsers.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-8-web-browsers" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={cc17dd58-37ba-4edc-8b17-55c34651cd74}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">2.9 Cascading Style Sheets</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate cascading style sheets (CSS) and its impact on the design of a web application, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>consistency of appearance</li>
+<li>flexibility with browsers or display devices</li>
+<li>CSS maintenance tools</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explore how Cascading Style Sheets (CSS) influence the design and user experience of a web application, focusing on consistency, flexibility, and maintainability.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explain how CSS ensures consistent appearance across different web pages.</span></li>
+<li><span style="font-size: 10pt;">Describe how CSS provides flexibility in adapting to various browsers and display devices.</span></li>
+<li><span style="font-size: 10pt;">Identify tools and methods for maintaining and managing CSS effectively in web projects.</span></li>
+<li><span style="font-size: 10pt;">Demonstrate the use of CSS in creating responsive and adaptive designs.</span></li>
+<li><span style="font-size: 10pt;">Evaluate the role of pre-processors (e.g., SASS, LESS) and post-processors in improving CSS maintainability.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4>Consistency of Appearance</h4>
+<p>CSS is essential for maintaining a consistent look and feel across a web application.</p>
+<ul>
+<li>
+<p><strong>Uniform Styling Across Pages:</strong> CSS allows developers to define styles in one place, ensuring that all elements such as fonts, colours, and layouts are consistent across the entire application. This reduces discrepancies between different pages and enhances user experience.</p>
+</li>
+<li>
+<p><strong>Separation of Concerns:</strong> By separating content (HTML) from design (CSS), developers can make changes to the appearance of an entire site by modifying a single CSS file, rather than updating styles individually on each page.</p>
+</li>
+<li>
+<p><strong>Reusable Components:</strong> CSS frameworks like Bootstrap or Tailwind CSS promote consistency by providing pre-designed components that can be used uniformly across different parts of the application.</p>
+</li>
+<li>
+<p><strong>Custom Variables:</strong> Modern CSS features like custom properties (CSS variables) enable developers to define and reuse values such as colours and spacing, ensuring a consistent design language throughout the application.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Flexibility</h4>
+<p>CSS is designed to be adaptable across various devices and browsers, enhancing the flexibility of web applications:</p>
+<ul>
+<li>
+<p><strong>Responsive Design:</strong> CSS media queries allow developers to create responsive designs that adjust layout and styling based on the screen size, orientation, and resolution of the device. This ensures that a web application looks and functions well on desktops, tablets, and mobile devices.</p>
+</li>
+<li>
+<p><strong>Cross-Browser Compatibility:</strong> While different browsers may have slight variations in rendering CSS, modern standards and frameworks have significantly minimized these differences. Tools like Autoprefixer can automatically add vendor prefixes, ensuring styles work consistently across different browsers.</p>
+</li>
+<li>
+<p><strong>Viewport Units &amp; Flexbox/Grid Layouts:</strong> Advanced layout techniques using CSS Grid and Flexbox provide flexibility in creating complex layouts that adapt to different screen sizes and devices without the need for JavaScript-based adjustments.</p>
+</li>
+<li>
+<p><strong>Progressive Enhancement &amp; Graceful Degradation:</strong> CSS allows developers to implement progressive enhancement strategies, providing basic functionality and design for older or less capable browsers while enabling advanced features for newer ones. This ensures a usable experience across a wide range of devices.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Maintenance Tools</h4>
+<p>Maintaining and managing CSS in a large-scale application can be challenging. Several tools and methodologies help streamline this process:</p>
+<ul>
+<li>
+<p><strong>Preprocessors (Sass, LESS):</strong> CSS preprocessors add functionality like variables, nesting, and mixins, making it easier to write and maintain complex stylesheets. They also allow for modular structuring, reducing redundancy and improving readability.</p>
+</li>
+<li>
+<p><strong>PostCSS:</strong> A tool for transforming CSS with JavaScript plugins, it can be used for a variety of tasks such as optimising CSS for production, adding vendor prefixes, and enabling future CSS features before they are widely supported.</p>
+</li>
+<li>
+<p><strong>CSS-in-JS Libraries (Styled Components, Emotion):</strong> These libraries allow developers to write CSS directly within JavaScript files, often in a componentised way. This method promotes scoped styles, reduces global namespace conflicts, and makes it easier to manage styles for individual components in frameworks like React.</p>
+</li>
+<li>
+<p><strong>Stylelint:</strong> A popular CSS linter that helps enforce coding standards, prevents common errors, and ensures consistency across the codebase.</p>
+</li>
+<li>
+<p><strong>Atomic CSS and Utility-First Frameworks:</strong> Approaches like Atomic CSS (or Utility-First CSS) and frameworks like Tailwind CSS focus on small, reusable utility classes. This reduces the need for custom styles and simplifies maintenance.</p>
+</li>
+<li>
+<p><strong>CSS Architecture Methodologies (BEM, SMACSS, OOCSS):</strong> These methodologies provide guidelines for organizing and structuring CSS, making it easier to maintain and scale. They promote clear naming conventions and modular structures, reducing complexity in large projects.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h3 class="card-title">CSS Practise</h3>
+<p class="card-text">Looking to practice CSS? Try <a class="inline_disabled" href="https://flukeout.github.io/" target="_blank"><strong>CSS Diner</strong></a> for selectors and <a class="inline_disabled" href="https://cssgridgarden.com/" target="_blank"><strong>Grid Garden</strong></a> for layout techniques. These tools offer a straightforward way to get hands-on experience with CSS concepts.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/b44aa586c4176811.png" alt="image.png" width="595" height="335" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527428" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://realpython.com/html-css-python/" target="_blank">HTML and CSS for Python</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.9 Cascading Style Sheets" href="https://canvas.kings.edu.au/courses/12951/assignments/204836" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204836" data-api-returntype="Assignment">2.9 Cascading Style Sheets</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.9%20CSS.pptx?d=wdf13194404544abd93c66c03c47ee1b4&amp;csf=1&amp;web=1&amp;e=lrku6B">2.9 CSS.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-9-cascading-style-sheets" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={df131944-0454-4abd-93c6-6c03c47ee1b4}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">2.10 Version Control</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Investigate the reasons for version control and apply it when developing web application</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Investigate the importance of version control in web application development and apply version control practices to manage and track changes in their projects.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explain the benefits of version control, including collaboration, change tracking, and project history management.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Use version control tools like Git to create, update, and manage repositories for web development projects.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Demonstrate how to branch, merge, and resolve conflicts within a version control system.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Apply version control workflows to manage the development of features, bug fixes, and releases in a web application project.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. It enables multiple developers to collaborate on a project, track changes, and revert to previous versions if needed. This is essential for managing code and content in web development, ensuring that every change is documented and reversible.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">Why Use Version Control?</h5>
+&nbsp; &nbsp; • &nbsp; &nbsp;Collaboration: Multiple team members can work on the same project simultaneously without overwriting each other’s changes.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Change Tracking: Every modification is tracked with a timestamp and the identity of the person who made it. This allows developers to see the history of the project and understand why changes were made.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Backup and Recovery: Version control provides a complete history of changes, enabling developers to restore previous versions if something goes wrong.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Branching and Merging: Developers can create separate branches to work on new features or bug fixes independently, then merge them into the main project when ready.</div>
+</div>
+<p>&nbsp;</p>
+<h4>What is Git?</h4>
+<p>Git is a distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Created by Linus Torvalds in 2005, Git allows multiple developers to work on the same project simultaneously, tracking every change made to the codebase. It is the most popular version control system used by developers worldwide.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Repository</h3>
+<div class="dp-panel-content ">
+<p>A repository in Git is a directory that contains your project files along with a hidden .git folder, where Git stores the history and metadata of the project.</p>
+<pre># Create a new repository<br>git init my-project<br><br># Navigate to the project directory<br>cd my-project<br><br># Check the repository status<br>git status</pre>
+<p>This command initialises a new Git repository in the my-project directory, allowing you to start tracking changes to files within that directory.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Staging Area</h3>
+<div class="dp-panel-content ">
+<p>The staging area (or index) in Git is an intermediary space where changes are prepared before they are committed to the repository. It allows you to review and modify the changes before finalising them.</p>
+<pre># Create a new file<br>echo "Hello, World!" &gt; hello.txt<br><br># Add the file to the staging area<br>git add hello.txt<br><br># Check the status to see staged changes<br>git status</pre>
+<p>This command sequence creates a new file hello.txt and stages it, preparing it to be committed. The git status command shows that the file is ready to be committed.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Committing Changes</h3>
+<div class="dp-panel-content">
+<p>A commit is a snapshot of the project at a specific point in time. Each commit has a unique identifier (hash) and a message describing the changes.</p>
+<pre># Commit staged changes with a descriptive message<br>git commit -m "Initial commit with hello.txt file"<br><br># View the commit history<br>git log</pre>
+<p>This command sequence commits the changes from the staging area to the repository and then shows the commit history, including the commit message and hash.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Branches</h3>
+<div class="dp-panel-content">
+<p>Branches in Git allow you to create separate lines of development within a repository. This is useful for working on new features or fixing bugs without affecting the main codebase.</p>
+<pre># Create a new branch for a feature<br>git branch feature-new-greeting<br><br># Switch to the new branch<br>git checkout feature-new-greeting<br><br># Alternatively, create and switch in one step<br>git checkout -b feature-new-greeting<br><br># View all branches<br>git branch</pre>
+<p>This creates and switches to a new branch called feature-new-greeting, isolating your changes from the main branch (main or master). The git branch command lists all branches.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Merging Branches</h3>
+<div class="dp-panel-content">
+<p>Merging combines the changes from one branch into another. This is typically done after completing a feature or fixing a bug in a separate branch.</p>
+<pre># Switch back to the main branch<br>git checkout main<br><br># Merge the feature branch into the main branch<br>git merge feature-new-greeting<br><br># View the updated commit history<br>git log --oneline</pre>
+<p>This sequence merges the changes from feature-new-greeting into the main branch. If there are conflicts, Git will notify you, and you’ll need to resolve them before completing the merge.&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Conflict Resolution</h3>
+<div class="dp-panel-content">
+<p>Conflicts occur when changes in two branches affect the same part of a file in incompatible ways. Git requires manual intervention to resolve these conflicts.</p>
+<pre># Attempt to merge a conflicting branch<br>git merge feature-new-greeting<br><br># If there is a conflict, Git will mark the conflicting lines in the file<br># Edit the file to resolve the conflict, then add the resolved file<br>git add hello.txt<br><br># Complete the merge with a commit<br>git commit -m "Resolved conflict in hello.txt"</pre>
+<p>This process shows how to handle conflicts during a merge. Git will highlight conflicts in the affected file(s), which you need to edit manually before completing the merge.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Viewing History and Revisions</h3>
+<div class="dp-panel-content">
+<p>Git allows you to view the history of changes and inspect previous versions of the code.</p>
+<pre># View the detailed commit history<br>git log<br><br># View a concise history of commits<br>git log --oneline<br><br># View changes between commits<br>git diff HEAD~1 HEAD<br><br># View changes to a specific file<br>git diff HEAD~1 HEAD hello.txt</pre>
+<p>These commands display the commit history in different formats and show the differences between commits. This is useful for tracking changes and understanding the evolution of the project.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Source Code Management</h4>
+<p>There are many platforms available for source code management and collaboration, such as GitHub, GitLab, and Bitbucket. These tools build on the capabilities of Git, a powerful version control system, to provide enhanced features for tracking changes, managing projects, and facilitating teamwork in software development. They enable developers to work together efficiently, maintain code integrity, and streamline workflows through automated processes like continuous integration and deployment. Understanding how these platforms operate and their unique benefits is essential for modern software development practices.</p>
+<div class="dp-panels-wrapper dp-expander-default">
+<div class="dp-panel-group">
+<h2 class="dp-panel-heading dp-has-icon"><i class="dp-icon fab fa-github " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp;GitHub</h2>
+<div class="dp-panel-content ">
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>GitHub is a cloud-based platform that provides a web interface for Git repositories. It extends Git’s functionality by offering additional tools for collaboration, project management, and hosting.</li>
+</ul>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Remote Repositories: Allows you to store your Git repositories in the cloud, making them accessible from anywhere.</li>
+<li>Collaboration Tools: Features like pull requests, code reviews, and issues help teams collaborate on code effectively.</li>
+<li>GitHub Actions: Automates workflows such as continuous integration and deployment (CI/CD).</li>
+<li>Project Management: Offers project boards, milestones, and issue tracking to manage projects and tasks</li>
+</ul>
+<p><strong>Common Use Cases:</strong></p>
+<ul>
+<li>Collaboration: Teams use GitHub to collaborate on code by sharing repositories, reviewing changes, and managing issues.</li>
+<li>Open Source: GitHub is a popular platform for open-source projects, enabling developers from around the world to contribute to shared codebases.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h2 class="dp-panel-heading dp-has-icon"><i class="dp-icon fab fa-gitlab " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp;GitLab</h2>
+<div class="dp-panel-content ">
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>GitLab is another Git-based platform similar to GitHub, but it offers a more integrated approach to DevOps.</li>
+</ul>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Integrated CI/CD: GitLab provides built-in continuous integration and deployment pipelines.</li>
+<li>Project Management: Advanced tools for project planning, issue tracking, and managing project lifecycles.</li>
+<li>Self-Hosting: Offers a self-managed version that can be hosted on your own servers, providing more control over your data.</li>
+</ul>
+<p><strong>Common Use Cases:</strong></p>
+<ul>
+<li>End-to-End DevOps: GitLab is preferred by organisations looking for an all-in-one DevOps platform that integrates version control, CI/CD, and project management.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h2 class="dp-panel-heading dp-has-icon"><i class="dp-icon fab fa-bitbucket " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp;BitBucket</h2>
+<div class="dp-panel-content">
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>Bitbucket is a Git-based platform from Atlassian, designed for teams using Git for version control. It integrates well with other Atlassian products like Jira and Confluence.</li>
+</ul>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Integration with Jira: Provides seamless integration with Jira for project management and issue tracking.</li>
+<li>Bitbucket Pipelines: Offers CI/CD features directly within Bitbucket for automated testing and deployment.</li>
+<li>Support for Mercurial: Although deprecated in recent updates, Bitbucket historically supported Mercurial repositories in addition to Git.</li>
+</ul>
+<p><strong>Common Use Cases:</strong></p>
+<ul>
+<li>Team Collaboration: Used by development teams to manage source code with a focus on integration with Atlassian’s suite of tools.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Version Control in Web Application Development</h4>
+<p>Version control is a critical component in the development of web applications, providing a structured way to manage changes, collaborate with team members, and ensure code quality throughout the development lifecycle.&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Project Initialisation</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Set up a version control system at the start of a web application project. This ensures that all team members can contribute to the codebase from the beginning.</li>
+<li>Create a Git repository and establish a branching strategy (e.g., main for production, develop for ongoing development, feature branches for new features).</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Collaboration and Code Reviews</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Use platforms like GitHub or GitLab to collaborate with team members. Developers can create branches for new features, push their changes, and submit pull requests for code reviews.</li>
+<li>Code reviews help maintain code quality and ensure that all team members are aware of changes.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Continuous Integration and Deployment (CI/CD)</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Integrate CI/CD tools like GitHub Actions, Jenkins, or GitLab CI to automate testing and deployment of web applications.</li>
+<li>Version control systems enable seamless integration with these tools, allowing automated testing and deployment whenever new changes are pushed to the repository.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Managing Releases</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Use version control to manage different versions of a web application. Create tags or releases in Git to mark specific points in the project’s history, such as beta releases, major updates, or bug fixes.</li>
+<li>This helps track the evolution of the application and makes it easier to roll back to a stable version if issues arise.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ffeb3b; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-discussion icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Discussion</strong></p>
+<p class="card-text">A team of developers is tasked with building a multi-page e-commerce web application. The application includes a user-facing front-end, a back-end for managing products and orders, and various integrations such as payment gateways and shipping APIs. The team consists of front-end developers, back-end developers, designers, and QA testers. They decide to use Git for version control and GitHub for collaboration and CI/CD workflows.<strong><br></strong></p>
+<p class="card-text"><strong>Consider how specific Version Control features will be used in this example.</strong></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-10-version-control" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/12951/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fdiscussions.atomicjoltappsau.com%2Flti_launches%2FfDMMcgzhhcrw5nLvbwyemXFW</span></div></div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.atlassian.com/git/tutorials/what-is-version-control" target="_blank">What is Version Control?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://github.com/resources/articles/devops/ci-cd" target="_blank">CI/CD: The what, why, and how</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.10 Version Control" href="https://canvas.kings.edu.au/courses/12951/assignments/204817" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204817" data-api-returntype="Assignment">2.10 Version Control</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p>Insert PPT</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">2.11 Frontend Code Libraries</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+<h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">Unit</span><span class="dp-header-pre-2" style="font-size: 14pt;">2</span> </span> <span class="dp-header-title">2.11 Code Libraries<br></span></h2>
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Explore the types and significance of code libraries for front-end web development, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>frameworks that control complex web applications</li>
+<li>template engines</li>
+<li>predesigned CSS classes</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the types and importance of code libraries in front-end web development.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Identify different libraries for frameworks, template engines, and CSS classes</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Describe the use of different libraries in web development<br></span></li>
+<li class="card-text"><span style="font-size: 10pt;">Discuss the significance of code libraries for front-end web development</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4>Web Frameworks</h4>
+<p data-start="59" data-end="344">In the early 2000s, making web pages interactive required <strong data-start="117" data-end="148">manually writing JavaScript</strong> for animations, form validation, and AJAX requests. Developers had to handle <strong data-start="238" data-end="258">DOM manipulation</strong> with raw JavaScript or jQuery, which made complex applications difficult to maintain!</p>
+<p data-start="59" data-end="344">As web applications grew in complexity, <strong data-start="426" data-end="451">JavaScript frameworks</strong> like <strong data-start="457" data-end="475">Angular (2010)</strong> and <strong data-start="480" data-end="496">React (2013)</strong> emerged. These frameworks introduced <strong data-start="534" data-end="566">component-based architecture</strong>, <strong data-start="568" data-end="588">state management</strong>, and <strong data-start="594" data-end="616">reusable functions</strong>, reducing the need for manual scripting.<strong></strong></p>
+<ul>
+<li><strong>JavaScript Frameworks</strong>: Reusable UI components, state management, and hooks to build web applications.&nbsp;<br>e.g. React.js, Vue.js, Svelete<br><br></li>
+<li><strong>Full-Stack Frontend:</strong> Includes UI rendering, but extends this by including file-based routing and server-side rendering.<br>e.g. Next.js, Angular<br><br></li>
+<li><strong>Static Site Generators: </strong>Generates pre-rendered HTML pages for fasting loading and optimisation<br>e.g. Gatsby, Hugo, Flask<br><br></li>
+</ul>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-info dp-callout-color-info">
+<div class="card-body">
+<h3 class="card-title"><strong>Significance</strong>: How Web Frameworks Changed Development</h3>
+<ul>
+<li class="card-text"><strong>Prebuilt Functions &amp; Components: <br></strong>Instead of writing custom JS for everything, developers can now use pre-built libraries and community-driven components.</li>
+<li class="card-text"><strong>Faster Development:</strong> <br>Features like data binding (Angular) and virtual DOM (React) automate updates, reducing manual DOM manipulation.</li>
+<li class="card-text"><strong>Scalability &amp; Maintainability: <br></strong>Component-based design ensures that code is modular and easier to maintain in large applications.</li>
+<li class="card-text"><strong>Huge Community Support:</strong> <br>Open-source contributions allow developers to reuse and extend functionality, speeding up development.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Template Engines</h4>
+<p data-start="112" data-end="304">Initially, websites were <strong data-start="137" data-end="154">purely static</strong>, with each page being a separate HTML file. If a site had 100 pages, developers had to <strong data-start="242" data-end="261">manually update</strong> each file, making maintenance difficult!</p>
+<p>To solve redundancy, template engines (e.g., PHP, EJS, Jinja2) emerged in the early 2000s, allowing developers to reuse <strong>HTML components </strong>(headers, footers, nav bars) across pages, <strong>avoiding duplication </strong>of HTML and scale projects without the files growing too large. Languages like Python (Flask, Django) and Node.js (Express + EJS/Pug) allowed pages to be rendered dynamically on each request.</p>
+<ul>
+<li><strong>Server-Side Template Engines:</strong> Server-side rendering (SSR) generates <strong data-start="71" data-end="93">HTML on the server</strong> before sending it to the browser for display. Hence, the server manages both the front end and back end.&nbsp;<br>e.g. Jinja2, EJS<br><br></li>
+<li><strong>Client-Side Template Engines:</strong> Libraries like Mustache and Handlebars can also be used on the client side, allowing developers to dynamically generate and update HTML without server interaction.</li>
+</ul>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-danger">
+<div class="card-body">
+<h3 class="card-title"><strong>Significance</strong>: Template Engines Changed Development</h3>
+<ul style="list-style-type: disc;">
+<li class="card-text"><strong>Reusable Components: <br></strong>Instead of duplicating HTML, developers can use partials and includes to manage layouts efficiently.</li>
+<li class="card-text"><strong>Separation of Concerns: <br></strong>HTML is kept clean and structured, while logic and styling are managed separately.</li>
+<li class="card-text"><strong>Scalability &amp; Maintainability</strong>: <br>Modular templates prevent large, unmanageable files, making updates easier.</li>
+<li class="card-text"><strong>Server-Side Rendering (SSR) Support:</strong> <br>Engines like Jinja2 (Flask) and EJS (Node.js) enable faster initial page loads and better SEO.</li>
+</ul>
+</div>
+</div>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/5917ad907988d3d7.png" alt="image.png" width="550" height="244" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527537" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Predesigned CSS Classes</h4>
+<p>Predesigned CSS libraries offer sets of pre-styled components and utility classes that can be used to quickly build responsive and visually appealing user interfaces.</p>
+<ul>
+<li><strong>UI Frameworks:</strong> Libraries like Bootstrap, Foundation, and Bulma provide a comprehensive set of components (buttons, forms, modals, etc.) that are pre-styled and responsive, making it easier to create consistent UIs.</li>
+<li><strong>Utility-First CSS Frameworks:</strong> Frameworks like Tailwind CSS focus on providing utility classes for common styling needs (e.g., margins, padding, colours), allowing for more customised designs without writing extensive CSS.<br><strong></strong></li>
+</ul>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-success">
+<div class="card-body">
+<h3 class="card-title"><strong>Signifance</strong>: Impact of CSS Classes</h3>
+<ul>
+<li><strong>Speeds Up Development:</strong> Using predesigned CSS classes allows developers to quickly style elements without starting from scratch, saving time and effort.</li>
+<li><strong>Ensures Consistent Design:</strong> Predesigned classes follow a consistent design language, helping to maintain visual consistency throughout the application.</li>
+<li><strong>Responsive Design:</strong> Most modern CSS libraries are built with responsive design in mind, making it easier to create layouts that work across different screen sizes and devices.</li>
+<li><strong>Customisability:</strong> While these libraries provide pre-styled components, they are often flexible enough to be customised, allowing developers to adapt the design to specific project requirements.</li>
+</ul>
+</div>
+</div>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/e2c22d332aa12950.png" alt="image.png" width="596" height="441" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527538" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://careerfoundry.com/en/blog/web-development/programming-library-guide/" target="_blank">What is a Programming Library? A Beginner’s Guide</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.educative.io/answers/what-are-template-engines" target="_blank">What are template engines?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://css-tricks.com/should-you-use-a-template/" target="_blank">Should you use a template?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.11 Code Libraries" href="https://canvas.kings.edu.au/courses/12951/assignments/204818" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204818" data-api-returntype="Assignment">2.11 Code Libraries</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.11%20Front-End%20Libraries.pptx?d=w4a483ef646d04a21ba99fe2a87f56f33&amp;csf=1&amp;web=1&amp;e=yLYfPI">2.11 Front-End Libraries.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-11-frontend-code-libraries" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={4a483ef6-46d0-4a21-ba99-fe2a87f56f33}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">2.12 Open-Source Software</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Explain the use and development of open-source software in relation to web development</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explain the role and significance of open-source software in web development, including how it is used, developed, and contributed to by the developer community.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Describe how open-source software supports the development of web applications by providing accessible tools and libraries.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Explain the benefits of using open-source frameworks and platforms in building and maintaining web projects.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Identify ways in which developers can contribute to open-source projects, including reporting issues, writing code, and creating documentation.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Discuss the impact of community collaboration on the evolution and improvement of open-source software in web development.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Open-source software plays a pivotal role in the web development ecosystem, providing developers with accessible, modifiable, and distributable code that accelerates innovation and collaboration. Understanding the use and development of open-source software in web development helps explain how these projects contribute to the rapid evolution of technologies and standards on the web.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">What is Open-Source Software?</h5>
+<p class="card-text">Open-source software refers to software that is freely available to the public, with its source code open for anyone to view, use, modify, and distribute. It is typically governed by open-source licenses, such as the MIT License, GNU General Public License (GPL), and Apache License, which define how the software can be used and shared.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Open-Source in Web Development&nbsp;</h4>
+<p>Open-source software is fundamental to the web development community, providing developers with free, modifiable, and distributable code. It fosters innovation and collaboration, allowing developers to build and improve applications while benefiting from community-driven support and resources.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Accessibility and Community Support</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Free Access: Open-source software is often free to use, lowering the barriers to entry for developers and organisations. This accessibility allows a wide range of users, from individual developers to large enterprises, to leverage powerful tools without licensing costs.</li>
+<li>Community-Driven Development: Open-source projects are often maintained by a global community of developers who contribute code, report bugs, and suggest features. This collaborative environment fosters innovation and ensures that the software evolves rapidly to meet user needs.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Flexibility and Customisation</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Modifiable Code: Developers can modify the source code of open-source projects to suit their specific requirements, whether it’s customising a user interface, adding new features, or integrating with other systems.</li>
+<li>Transparency: Because the code is publicly available, developers can review and audit the software for security vulnerabilities, performance issues, and compliance with standards, ensuring a higher level of trust and reliability.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Accelerated Development and Innovation</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Reusable Components: Open-source libraries and frameworks provide pre-built components and functionalities, allowing developers to focus on building unique features rather than reinventing the wheel.</li>
+<li>Rapid Prototyping: Open-source tools enable developers to quickly prototype and test new ideas, reducing development time and facilitating innovation.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Key Areas</h4>
+<p>Open-source plays a crucial role across various aspects of web development, including frameworks, content management systems, development tools, and servers. These tools enable developers to build efficient, scalable, and modern web applications with greater flexibility and reduced costs.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Frameworks and Libraries</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>React, Angular, and Vue.js: These open-source JavaScript frameworks and libraries are widely used for building interactive and dynamic user interfaces. They are supported by large communities and extensive documentation, making them accessible to both beginners and experienced developers.</li>
+<li>Node.js and Express: Node.js is an open-source runtime environment that allows developers to build scalable server-side applications using JavaScript. Express is a minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Content Management Systems</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>WordPress: An open-source CMS that powers over 40% of the web, WordPress allows users to create and manage websites without needing to write code. It is supported by a vast ecosystem of themes, plugins, and a dedicated community.</li>
+<li>Drupal and Joomla: Other popular open-source CMS platforms that offer powerful features for building complex websites and applications, with extensive customisation options and community support.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Development Tools</h3>
+<div class="dp-panel-content">
+<ul>
+<li>VS Code: An open-source code editor from Microsoft, Visual Studio Code is highly customisable and extensible, supporting a wide range of programming languages and frameworks through plugins.</li>
+<li>Git: A distributed version control system that is open-source and widely used in web development to track changes, manage code, and collaborate on projects. Platforms like GitHub and GitLab provide additional features for managing open-source projects.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Web Servers and Databases</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Apache and Nginx: Open-source web servers that power a significant portion of the internet, providing flexible, high-performance solutions for serving web content.</li>
+<li>MySQL and PostgreSQL: Open-source relational database management systems that offer robust, scalable, and feature-rich solutions for managing data in web applications.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Development and Contribution<strong></strong></h4>
+<p>Contributing to open-source projects not only helps improve software quality but also allows developers to gain valuable experience, enhance their skills, and connect with a global community. Whether through reporting bugs, adding features, or writing documentation, contributions to open-source projects are essential for the growth and evolution of the web development ecosystem.</p>
+<p>&nbsp;</p>
+<p><strong>Contributing to Open-Source:</strong></p>
+<ul>
+<li>Reporting and Fixing Bugs: Developers can contribute by identifying issues, reporting bugs, or submitting patches to fix problems. This helps improve the software for everyone.</li>
+<li>Adding New Features: Experienced developers can contribute new features or enhancements to existing projects, helping the software evolve and meet new use cases.</li>
+<li>Documentation and Support: Writing documentation, creating tutorials, and helping other users in forums or discussion groups are valuable ways to contribute to open-source projects.</li>
+</ul>
+<p><strong>Benefits of Contributing:</strong></p>
+<ul>
+<li>Skill Development: Contributing to open-source projects provides hands-on experience with real-world codebases, improving technical skills and understanding of software development practices.</li>
+<li>Professional Recognition: Developers can build a portfolio of contributions, showcasing their skills and expertise to potential employers or collaborators.</li>
+<li>Networking Opportunities: Engaging with the open-source community allows developers to connect with like-minded professionals, opening doors to collaborations, mentorship, and career opportunities.</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading dp-has-icon active"><i class="dp-icon fas fa-search " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp;Open Source Initiative</h3>
+<div class="dp-panel-content active">
+<p>The <a class="inline_disabled" href="https://opensource.org/" target="_blank">Open Source Initiative</a> (OSI) is a non-profit organisation founded in 1998 that promotes and protects open-source software. It is best known for maintaining the Open Source Definition, which outlines the criteria software must meet to be considered open source, such as free distribution, access to source code, and the ability to modify and share the software.</p>
+<p>The OSI also approves open-source licenses, ensuring they comply with these principles, and advocates for the adoption of open-source software in both the public and private sectors. Through its efforts, the OSI helps foster a collaborative community, encourages transparency in software development, and supports the ethical use of technology.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/9b6419581ec53bbd.png" alt="image.png" width="299" height="107" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527431" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">Impact of Open-Source on Web Development</h5>
+<p><strong>Standardisation and Best Practices: </strong></p>
+<ul>
+<li>Open-source projects often set standards and best practices in the industry. For example, tools like ESLint for JavaScript code linting and Prettier for code formatting have become standard in web development workflows.</li>
+</ul>
+<p><strong>Democratisation of Technology:</strong></p>
+<ul>
+<li>Open-source software empowers developers from all backgrounds to build, innovate, and contribute to technology, reducing the digital divide and fostering a more inclusive and collaborative tech community.</li>
+</ul>
+<p><strong>Driving Innovation and New Technologies:</strong></p>
+<ul>
+<li>Many ground breaking technologies, such as blockchain, machine learning frameworks (like TensorFlow), and modern web development tools (like Webpack and Babel), originated from open-source projects. This collaborative model accelerates the adoption of new technologies and drives innovation across the industry.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://opensource.org/" target="_blank">Open Source Initiative</a></li>
+<li><a class="inline_disabled" title="Link" href="https://opensource.com/resources/what-open-source" target="_blank">What is open source?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://opensource.google/documentation/reference/why" target="_blank">Why Open Source?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.12 Open-Source Software" href="https://canvas.kings.edu.au/courses/12951/assignments/204819" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204819" data-api-returntype="Assignment">2.12 Open-Source Software</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.12%20Open-Source%20Software.pptx?d=we3f356b7958147caa44d5c1690720ca8&amp;csf=1&amp;web=1&amp;e=rIoyB9">2.12 Open-Source Software.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-12-open-source-software" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={e3f356b7-9581-47ca-a44d-5c1690720ca8}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">2.13 Managing Load Times</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Investigate methods to support and manage the load times of web pages/applications</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Investigate strategies to improve and manage web page/application load times.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Identify common factors that impact load times.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Explain methods to optimise load performance.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Apply tools to monitor and reduce load times effectively.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Web page and application load times are crucial for user experience and SEO. Faster load times enhance user engagement, decrease bounce rates, and improve overall satisfaction. This guide explores various techniques to optimise load times, including front-end and back-end strategies.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">Understanding the Impact of Load Times</h5>
+<p class="card-text">Load times are more than just numbers; they directly influence user behaviour. Slow loading can lead to higher bounce rates and decreased user satisfaction. For e-commerce, a delay of just one second can result in a significant drop in conversions. Therefore, optimising load times is crucial for both user retention and business success.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Front-End Optimisation</h4>
+<p>Front-end optimisation focuses on everything that happens in the browser. This involves managing the way assets like HTML, CSS, JavaScript, and images are loaded and rendered.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Minification and Compression</h3>
+<div class="dp-panel-content ">
+<p><strong>Minification:</strong></p>
+<ul>
+<li>What It Is: Minification involves stripping out unnecessary characters such as spaces, comments, and line breaks from CSS, JavaScript, and HTML files.</li>
+<li>Why It Matters: These characters, while useful for development, are not needed for the browser to execute the code. Removing them reduces file sizes significantly, which in turn decreases download times.</li>
+<li>How to Implement: Use tools like UglifyJS for JavaScript, CSSNano for CSS, and HTMLMinifier for HTML. Most build tools and task runners like Webpack, Gulp, and Grunt can automate this process.</li>
+</ul>
+<p><strong>Compression:</strong></p>
+<ul>
+<li>What It Is: Compression algorithms like Gzip and Brotli compress files into a smaller size before they are sent from the server to the browser.</li>
+<li>Why It Matters: Compressed files reduce the amount of data that needs to be transferred, speeding up load times, especially on slower networks.</li>
+<li>How to Implement: Enable Gzip or Brotli compression on your server. Most web servers like Apache, Nginx, and IIS support these natively.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Image Optimisation</h3>
+<div class="dp-panel-content ">
+<p><strong>Choosing the Right Format:</strong></p>
+<ul>
+<li>Modern Formats: Use modern formats like WebP or AVIF, which offer better compression than traditional formats like JPEG and PNG without compromising quality.</li>
+<li>Use Cases: WebP works well for a wide range of image types, while AVIF provides superior compression but may not be supported on all browsers yet. Use a fallback strategy with multiple formats.</li>
+</ul>
+<p><strong>Responsive Images:</strong></p>
+<ul>
+<li>What It Is: Using the <code>srcset</code> attribute in the <code>&lt;img&gt;</code> tag allows you to specify different images for different screen sizes and resolutions.</li>
+<li>Why It Matters: This ensures that the browser only downloads the most appropriate image size, reducing unnecessary data transfer for smaller screens.</li>
+<li>How to Implement: Define a set of image sizes and use <code>srcset</code> and <code>sizes</code> attributes to provide various options to the browser.</li>
+</ul>
+<p><strong>Lazy Loading:</strong></p>
+<ul>
+<li>What It Is: Lazy loading defers the loading of non-critical images (images below the fold) until they are about to enter the viewport.</li>
+<li>Why It Matters: This technique reduces initial load time and saves bandwidth, especially for users who do not scroll down.</li>
+<li>How to Implement: Use the <code>loading="lazy"</code> attribute in image tags or implement a JavaScript-based solution for finer control.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">JavaScript and CSS Optimisation</h3>
+<div class="dp-panel-content">
+<p><strong>Defer and Async Loading of JavaScript:</strong></p>
+<ul>
+<li>What It Is: Scripts can be loaded in different ways. <code>defer</code> ensures scripts are executed in order but only after the HTML is fully parsed. <code>async</code> allows scripts to load independently, potentially in any order.</li>
+<li>Why It Matters: Blocking scripts delay page rendering. By using <code>defer</code> or <code>async</code>, scripts do not block the page, reducing perceived load times.</li>
+<li>How to Implement: Add <code>defer</code> or <code>async</code> attributes to your <code>&lt;script&gt;</code> tags. Prioritise critical scripts by including them in the head with defer and move non-critical scripts to the end of the body with <code>async</code>.</li>
+</ul>
+<p><strong>Critical CSS:</strong></p>
+<ul>
+<li>What It Is: Critical CSS refers to the minimum CSS required to render the visible part of the page. Inlining this CSS in the <code>&lt;head&gt;</code> can speed up the initial paint.</li>
+<li>Why It Matters: By reducing the number of CSS files the browser has to download before rendering, you improve the time to first paint and reduce perceived load time.</li>
+<li>How to Implement: Tools like Critical and Penthouse can extract critical CSS. Integrate this step into your build process to automatically inline the necessary styles.</li>
+</ul>
+<p><strong>Reducing CSS and JavaScript File Sizes:</strong></p>
+<ul>
+<li>Modular CSS and JavaScript: Avoid loading entire libraries or stylesheets if only a small part is needed. Use tree-shaking for JavaScript and modular CSS approaches (e.g., CSS modules or utility-first frameworks like TailwindCSS).</li>
+<li>Remove Unused Code: Tools like PurifyCSS and UnCSS can analyze your HTML and remove unused CSS. For JavaScript, Webpack’s tree-shaking feature removes unused exports, reducing the bundle size.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Reducing HTTP Requests</h3>
+<div class="dp-panel-content">
+<p><strong>Combining Files:</strong></p>
+<ul>
+<li>What It Is: Instead of loading multiple CSS or JavaScript files, combine them into a single file to reduce the number of HTTP requests.</li>
+<li>Why It Matters: Each request introduces latency. Fewer requests mean less overhead and faster load times.</li>
+<li>How to Implement: Use build tools like Webpack to bundle assets together. Be cautious of creating bundles that are too large, which can have the opposite effect.</li>
+</ul>
+<p><strong>Using HTTP/2:</strong></p>
+<ul>
+<li>What It Is: HTTP/2 allows multiple resources to be sent over a single connection. This can reduce the need for concatenation of files, as requests are multiplexed.</li>
+<li>Why It Matters: HTTP/2 minimises the need for workarounds like file concatenation and makes it easier to manage asset loading.</li>
+<li>How to Implement: Ensure your server supports HTTP/2. Most modern browsers support it, and it’s enabled by default on many hosting providers.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Caching Strategies</h3>
+<div class="dp-panel-content">
+<p><strong>Browser Caching:</strong></p>
+<ul>
+<li>What It Is: Browser caching stores copies of resources locally in the user’s browser. On subsequent visits, the browser can use these cached files instead of requesting them again from the server.</li>
+<li>Why It Matters: Reducing the need for repeated downloads speeds up page loads for returning visitors.</li>
+<li>How to Implement: Set caching headers like Cache-Control and Expires for static resources. Consider using unique file names (cache-busting) when resources change, to ensure users always get the latest versions.</li>
+</ul>
+<p><strong>Service Workers:</strong></p>
+<ul>
+<li>What It Is: Service workers are scripts that run in the background and can intercept network requests, caching resources and providing offline functionality.</li>
+<li>Why It Matters: They offer advanced caching strategies that go beyond what browser caching can achieve, improving load times for both initial and repeat visits.</li>
+<li>How to Implement: Register a service worker with a caching strategy such as Cache-First or Network-First, depending on the resource type and usage patterns.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Back-End Optimisation</h4>
+<p>Back-end optimisation is fundamental to ensuring that web pages and applications load quickly and efficiently. It focuses on server-side strategies to reduce processing time, manage data effectively, and optimise resource delivery. This section explores the various methods and technologies used to enhance back-end performance, enabling a smoother and faster user experience.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Database Optimisation</h3>
+<div class="dp-panel-content ">
+<p>Databases are often the backbone of web applications, handling everything from user information to content delivery. Inefficient database queries or poorly designed schemas can significantly slow down response times.&nbsp;</p>
+<p><strong>Query Optimisation:</strong></p>
+<ul>
+<li><strong>Indexing</strong>: Create indexes on frequently queried columns to speed up data retrieval. While primary keys and unique constraints are indexed by default, adding additional indexes on foreign keys or commonly filtered columns can reduce query execution time.</li>
+<li>Avoid <code>SELECT</code> : Specify only the required columns instead of using <code>SELECT *</code> to reduce the amount of data retrieved and processed.<strong></strong></li>
+<li><strong>Batch Queries</strong>: Instead of making multiple single-row queries, use batch queries to fetch or update multiple rows at once. This reduces the overhead of multiple database connections.</li>
+</ul>
+<p><strong>Caching Strategies</strong></p>
+<ul>
+<li><strong>Query Caching</strong>: Store the results of frequent, expensive queries in a cache, such as Memcached or Redis, to quickly serve the results without re-executing the query.</li>
+<li><strong> Object Caching</strong>: Cache entire objects or data structures in memory to avoid repeated database queries. This is particularly useful for static or semi-static content like navigation menus or user profiles.</li>
+<li><strong>Fragment Caching</strong>: Cache specific parts of a database-driven page (e.g., a news feed or a user’s dashboard) while allowing other dynamic elements to be updated in real-time.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Server-Side Caching</h3>
+<div class="dp-panel-content ">
+<p>Server-side caching reduces the time required to generate and deliver content to the user. By storing pre-computed or pre-rendered content, servers can handle more traffic with less strain.</p>
+<p><strong>Page Caching</strong></p>
+<ul>
+<li><strong>Static Page Caching</strong>: Store the fully rendered HTML of a page. When a user requests this page, the server can serve the cached HTML instead of generating it from scratch. This is effective for pages that change infrequently, such as blog posts.</li>
+<li><strong>Fragment Caching</strong>: Cache specific parts of a page, such as a sidebar or header, and dynamically generate the remaining parts. This reduces load without sacrificing real-time updates.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Load Balancing</h3>
+<div class="dp-panel-content">
+<p>Load balancing ensures that traffic is evenly distributed across multiple servers, preventing any single server from becoming a bottleneck.</p>
+<p><strong>Types of Load Balancing</strong></p>
+<ul>
+<li><strong>Round Robin</strong>: Requests are distributed sequentially across a pool of servers. Simple and effective for uniform resource loads.</li>
+<li><strong>Least Connections</strong>: Directs new requests to the server with the fewest active connections, ideal for handling varying loads.</li>
+<li><strong>IP Hash</strong>: Routes requests based on the client’s IP address, ensuring consistent routing for each client. Useful for stateful applications.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">API Optimisation</h3>
+<div class="dp-panel-content">
+<p>APIs are the communication channels between the client and the server. Optimising API performance can drastically reduce server load and improve response times.</p>
+<p><strong>Reducing Payload Size</strong></p>
+<ul>
+<li>Use Compression: Compress API responses using Gzip or Brotli to reduce payload size.</li>
+<li>Minimise Data: Send only necessary fields in the response. For example, instead of sending a full user profile, provide only the fields required by the client.</li>
+<li>Use Efficient Formats: JSON is widely used but can be verbose. Consider using more compact formats like Protocol Buffers (protobuf) or MessagePack for performance-critical applications.</li>
+</ul>
+<p><strong>Pagination and Lazy Loading</strong></p>
+<ul>
+<li>What It Is: Instead of sending large datasets in a single response, split data into pages or load it incrementally as needed.</li>
+<li>Implementation: Use parameters like limit and offset in API requests to control the amount of data returned, or implement cursor-based pagination for more efficient data retrieval.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-13-managing-load-times" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/fBotXyqkf28</span></div></div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.debugbear.com/docs/page-load-time" target="_blank">How To Measure And Optimize Page Load Time</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.13 Managing Load Times" href="https://canvas.kings.edu.au/courses/12951/assignments/204820" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204820" data-api-returntype="Assignment">2.13 Managing Load Times</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;</div>
+</div>
+<h3 class="readles">2.14 Content Management Systems</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Research, experiment with and evaluate the prevalence and use of web content management systems (CMS)</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Research, explore, and assess the use and popularity of web content management systems (CMS).</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Identify popular CMS platforms and their key features.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Compare the advantages and limitations of different CMS tools.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Evaluate the effectiveness of a CMS for different web development needs.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Web Content Management Systems (CMS) have become an integral part of modern web development, enabling users to create, manage, and modify digital content with minimal technical expertise. This section delves into the role and significance of CMS platforms, their widespread adoption, and evaluates their impact on the web development landscape through research and practical experimentation.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">What is a Web Content Management System (CMS)?</h5>
+<p class="card-text">A Web Content Management System (CMS) is a software application or set of related programs that help users manage digital content. It provides an interface for creating, editing, and publishing content, typically through a web-based platform. CMS platforms are designed to simplify the process of web development by allowing users to manage content without the need for extensive coding knowledge.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/60a14267c17ba361.png" alt="image.png" width="403" height="308" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527540" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Key Features of a CMS</h4>
+<p>&nbsp;</p>
+<table style="border-collapse: collapse; width: 100%; height: 270px; border-style: inset;" border="1">
+<tbody>
+<tr style="height: 53px;">
+<td style="width: 28.7608%; height: 53px;"><strong>Content Creation and Editing</strong></td>
+<td style="width: 71.0556%; height: 53px;">Provides tools like WYSIWYG editors, drag-and-drop interfaces, and media management to create and edit text, images, videos, and more.</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 28.7608%; height: 29px;"><strong>Content Organisation</strong></td>
+<td style="width: 71.0556%; height: 29px;">Includes features such as categories, tags, and menus to structure and organise content effectively.</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 28.7608%; height: 29px;"><strong>Publishing and Scheduling</strong></td>
+<td style="width: 71.0556%; height: 29px;">Allows for content to be scheduled and published at specific times, supporting strategic content release.</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 28.7608%; height: 53px;"><strong>User Management</strong></td>
+<td style="width: 71.0556%; height: 53px;">Supports multiple user roles and permissions, enabling collaboration among content creators, editors, and administrators.</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 28.7608%; height: 53px;"><strong>Themes and Templates</strong></td>
+<td style="width: 71.0556%; height: 53px;">Offers pre-built templates and themes to define the visual appearance of the site, often customisable to suit specific branding requirements.</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 28.7608%; height: 53px;"><strong>Plugins and Extensions</strong></td>
+<td style="width: 71.0556%; height: 53px;">Provides additional functionality through plugins or modules, enabling features such as e-commerce, SEO optimisation, analytics, and more.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h4>Prevalence of CMS Platforms</h4>
+<p>The widespread adoption of CMS platforms is evident across various industries, from small businesses and personal blogs to large-scale enterprises and e-commerce giants. To understand their prevalence, it’s essential to look at statistical data and market trends.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Market Share</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>According to recent surveys, over 60% of websites on the internet use a CMS. WordPress, the most popular CMS, powers more than 40% of all websites globally.</li>
+<li>Other popular platforms include Joomla (2.5% of CMS market share), Drupal (1.7%), and emerging platforms like Ghost and Grav, which cater to specific niches.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Industry Adoption</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>E-commerce: Platforms like Shopify and Magento dominate the e-commerce space, providing specialised tools for product management, payment integration, and marketing.</li>
+<li>Corporate and Enterprise: Contentful, Sitecore, and Adobe Experience Manager are preferred by large enterprises for their robust scalability and advanced features like personalisation and headless CMS capabilities.</li>
+<li>Education and Non-profits: Platforms like WordPress and Joomla are popular due to their low cost and ease of use, enabling institutions and organisations to maintain a professional web presence.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Regional Variations</h3>
+<div class="dp-panel-content">
+<ul>
+<li>While WordPress dominates globally, regional preferences vary. For instance, TYPO3 has a strong presence in Europe, particularly in Germany, while platforms like Wix and Weebly are popular among small businesses in North America for their simplicity and ease of setup.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://kinsta.com/knowledgebase/content-management-system/" target="_blank">What is a content management system (CMS)?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.14 Content Management System" href="https://canvas.kings.edu.au/courses/12951/assignments/204821" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204821" data-api-returntype="Assignment">2.14 Content Management System</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.14%20CMS.pptx?d=w818dd6318be04551b8aaeaeaa129b57b&amp;csf=1&amp;web=1&amp;e=cMhel4">2.14 CMS.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-14-content-management-systems" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={818dd631-8be0-4551-b8aa-eaeaa129b57b}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div><h3 class="sub">After</h3>
+<div class="readnav"><a href="12951-m6.html">← previous module</a><a href="../course-12951.html">all modules</a><a href="12951-m8.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

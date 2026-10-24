@@ -1,0 +1,251 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.11 APIs — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 3 (Term 4: Weeks 5-6) Secure Software Architecture</div>
+<h1 style="margin-top:.2rem">1.11 APIs</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-11-apis" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Design, develop and implement a safe application programming interface (API) to minimise software vulnerabilities.</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the concept of safe API design and the importance of reducing software vulnerabilities.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Identify common security vulnerabilities in APIs.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Implement techniques to secure an API in Python.</span></li>
+<li class="card-text"><span style="font-size: 12pt;"><span style="font-size: 10pt;">Develop a safe API that handles requests and responses securely.</span><br></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4>What is an API?</h4>
+<p>An application programming interface (API) is the intermediary that allows two software applications to interact with each other. An API specifies how two machines—usually a client/user and a server—should interact. These include a set of rules, protocols and definitions that determine how API requests/responses should be formatted.</p>
+<p>APIs are generally designed using a client-server model <span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">through API requests and responses between the client and a server. The client submits an API request, and the server responds to that specific request.&nbsp;</span></p>
+<p><br><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/49287fe18dde6353.png" alt="image.png" width="433" height="266" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527453" data-api-returntype="File" loading="lazy"><br><br></p>
+<p>In an API, the "interface" is generally not directly visible and abstracted away from the end-user side. Instead, the API includes endpoints and specific URLs that clients can request. For example, an endpoint might be <code>/api/v1/users</code> to retrieve a list of users.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">REST APIs</h3>
+<div class="dp-panel-content ">
+<p>REST APIs (Representational State Transfer APIs) are client-server APIs that transfer state resources from the server to the client user.&nbsp;State transfer means that when the client user interacts with a server, transferred data represents the current state of that specific resource. Hence, it allows the client to "know" and "work with" the resource's current state without maintaining a continuous connection with the server.</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-danger">
+<div class="card-body">
+<p class="card-text"><strong>The practical implementation of REST APIs uses web-based protocols like HTTP/HTTPS </strong>(i.e. the framework you use in your Python Flask server)</p>
+</div>
+</div>
+<p>For example, if a client-user wishes to access weather data from the server, the data transferred from the API would be the current state of the current available forecast.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/23e316dbac046985.png" alt="image.png" width="425" height="241" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527287" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Dynamic API Calls</h3>
+<div class="dp-panel-content">
+<div class="flex max-w-full flex-col flex-grow">
+<div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5" data-message-author-role="assistant" data-message-id="0604b751-14c1-4505-9703-d53749d5e6d3" data-message-model-slug="gpt-4o">
+<div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
+<div class="markdown prose w-full break-words dark:prose-invert dark">
+<p>The next topic, <em>Programming for the Web</em>, delves deeper into web pages. Before that, we’ll conceptually explore secure software APIs, focusing on how API calls are made between the server and the client browser to update the web page.&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+<p>A web page updates content dynamically through API requests to the server backend or database. You would typically make API calls using the <code>request</code> function in the <code>Flask</code> library in Python. However, web browsers (Google Chrome, Safari, Firefox, etc) can only execute JavaScript (JS) - a high-level scripting language. Hence, your browser can execute JavaScript (similar to <code>python3 server.py</code>) while you are on your browser.&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary rounded-0">
+<div class="card-body">
+<p class="card-text">You are not expected to write JavaScript in the HSC. However, you are expected to <strong>interpret</strong> JavaScript code.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Let's say a user clicks on a submit button. Your frontend framework will be configured to make an API call after pressing this button. Below is an example of JavaScript code (and its Python equivalent) that creates an API request.</p>
+<p><img src="../../assets/efe4515856283e2b.png" alt="image.png" width="510" height="308" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527312" data-api-returntype="File" loading="lazy"><img style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;" src="../../assets/98933e30272dd399.png" alt="image.png" width="537" height="310" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527304" data-api-returntype="File" loading="lazy"></p>
+<p class=""><em>Example of API request in JavaScript and Python</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<p>&nbsp;</p>
+<h4>Secure APIs Structure</h4>
+<div class="flex max-w-full flex-col flex-grow">
+<div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5" data-message-author-role="assistant" data-message-id="406fc74b-ee84-4fde-9dbf-fb12ce95a3ec" data-message-model-slug="gpt-4o">
+<div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
+<div class="markdown prose w-full break-words dark:prose-invert dark">
+<p>There are various APIs, but the most widely recognised—and the one we will focus on—is <strong>HTTP</strong>, the application protocol commonly used in web development. There are two primary ways of sending data via an API: through the <strong>body</strong> or the <strong>header:&nbsp;</strong></p>
+<ul>
+<li><strong>Header:</strong> Contains metadata about the request, such as authentication tokens, cookies, and content types. This information helps the server understand how to process the request.</li>
+<li><strong>Body: </strong>Carries the main data payload, such as form inputs, JSON objects, or file uploads, that the client wants to send to the server for processing.&nbsp;</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-info">
+<div class="card-body">
+<p class="card-text">In deployment, your application protocol <strong>should be HTTPS over HTTP </strong>as it enables <strong>encryption</strong> of API data.</p>
+</div>
+</div>
+<h4>Techniques for Securing APIs</h4>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Authentication and Authorisation</h3>
+<div class="dp-panel-content ">
+<p><strong>Authentication and Authorisation</strong></p>
+<p>To protect an API, it is essential to ensure that only authorized users can access specific endpoints. <strong>Authentication</strong> verifies the identity of a user, while <strong>authorization</strong> controls what the user is allowed to do.</p>
+<p>Common techniques include:</p>
+<ul>
+<li>API Keys: Simple, unique identifiers sent with each request to verify the client.</li>
+<li>OAuth2: A more secure and flexible token-based authorization mechanism.</li>
+</ul>
+<p><br><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/f2b7c63ee7aac127.png" alt="image.png" width="600" height="323" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527449" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><em>Example of Authorization in Python (using Flask)</em><em></em></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Input Validation and Sanitation</h3>
+<div class="dp-panel-content ">
+<p><strong>Input Validation and Sanitation</strong></p>
+<p>Input validation is crucial to prevent malicious inputs from entering the API. It ensures that data received by the API conforms to expected types, formats, and values.&nbsp;&nbsp;<br><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/29d71c8a5e3860c3.png" alt="image.png" width="517" height="230" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527447" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><em>Input Validation: Checks that the input is in the correct format <br>(e.g., checking that an email is valid).</em></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><em><img src="../../assets/c3144baad09f6da2.png" alt="image.png" width="527" height="193" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527427" data-api-returntype="File" loading="lazy"><br></em></p>
+<p style="text-align: center;"><em>Input Sanitation: Removes or escapes potentially harmful characters from user input <br>to prevent attacks like SQL injection or command injection.</em></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Rate Limiting</h3>
+<div class="dp-panel-content">
+<p><strong>Rate Limiting</strong></p>
+<p>Rate limiting restricts how often users can make requests to your API, helping to mitigate abuse and prevent Denial of Service (DoS) attacks. It is a good practice to set thresholds for how many requests a client can make within a certain time frame.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/67a54bcd6d227ee8.png" alt="image.png" width="566" height="280" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527448" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><em>Example in Python (using Flask-Limiter)</em></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Secure Data Transmission (HTTPS)</h3>
+<div class="dp-panel-content">
+<p><strong>Secure Data Transmission (HTTPS)</strong></p>
+<p>To protect sensitive data during transmission, always use <strong>HTTPS</strong> rather than HTTP. HTTPS encrypts data to prevent man-in-the-middle (MITM) attacks, ensuring that data remains confidential and secure as it moves between client and server.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/4bb6c67c23454e1e.png" alt="image.png" width="573" height="304" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527324" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><em>Flask app with HTTPS ('adhoc' </em><em>used for development purposes)</em></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Error Handling in Secure APIs</h3>
+<div class="dp-panel-content">
+<p><strong>Error Handling in Secure APIs</strong></p>
+<p>A secure API should handle errors gracefully without exposing sensitive information about the system. Error messages should be informative enough to guide the user but not detailed enough to reveal potential vulnerabilities.</p>
+<p>For example, avoid returning stack traces or internal server errors directly to users. Instead, return general error messages with appropriate HTTP status codes.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/c9ab465878324e85.png" alt="image.png" width="622" height="271" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527325" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: center;"><em>Example of error handling with HTTP status codes</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://www.ibm.com/topics/api" target="_blank">What is an API (application programming interface)?</a></li>
+<li><a class="inline_disabled" href="https://blog.postman.com/rest-api-examples/" target="_blank">What Is a REST API? Examples, Uses, and Challenges</a></li>
+<li><a class="inline_disabled" title="Link" href="https://blog.miguelgrinberg.com/post/running-your-flask-application-over-https" target="_blank">Running your flask application over HTTPS</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul>
+<li class="card-text"><a class="inline_disabled" title="Link" href="https://edstem.org/au/courses/19403/lessons" target="_blank">Secure APIs</a></li>
+</ul>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.11%20APIs.pptx?d=w045ff8682a174cf19738e1f78833574d&amp;csf=1&amp;web=1&amp;e=DFYdjF">1.11 APIs.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-11-apis" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={045ff868-2a17-4cf1-9738-e1f78833574d}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-017.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-019.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

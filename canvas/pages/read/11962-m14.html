@@ -1,0 +1,781 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Face to Face Sessions — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">11SENX Software Engineering 2025 · module 15 of 17</p>
+<h1>Face to Face Sessions</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="11962-all.html">Whole course</a><span class="cur">By module</span><a href="../course-11962.html">By lesson</a></div>
+<h3 class="readles">Term 1 Holidays</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Unit 1 and 2</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Revise content and build team bonds.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Identify their classmates.</span></li>
+<li><span style="font-size: 13.3333px;">Recall and implement Unit 1 content and skills.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Ice Breaker</h3>
+<div class="dp-panel-content">
+<h2>Paper Airplane Flight Challenge<span>&nbsp;</span><sub>(sciencefriday.com)</sub></h2>
+<p style="text-align: center;"><img src="../../assets/5a00f504b66e9b4f.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197396" data-api-returntype="File" loading="lazy"></p>
+<p>Design and build a paper aeroplane. Adjust the design to maximise its flight distance. Record your flight distances.</p>
+<p>Move to groups with your mentor and return in 20 minutes.</p>
+<p style="text-align: left;">&nbsp;</p>
+<div class="dp-panels-wrapper">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Materials</h3>
+<div class="dp-panel-content">
+<ul>
+<li>recycled paper</li>
+<li>tape</li>
+<li>ruler</li>
+<li>paper plane data collection sheet</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Build a Design</h3>
+<div class="dp-panel-content">
+<p><span>Fold a "basic dart" paper airplane using recycled materials from around your home.</span></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/term-1-holidays" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/gZQI1Z_viNg?si=tLi32WSaNKvOJ4Ln</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Test Variations</h3>
+<div class="dp-panel-content">
+<p><span>Like all planes, paper aeroplanes experience four forces: gravity, thrust, lift, and drag. Simple changes, like wing size, body weight, and throw power, can significantly alter the forces your plane experiences.</span></p>
+<p><span><img src="https://canvas.kings.edu.au/courses/6527/files/1069089/preview" alt="basic-dart-airplane.webp [online-only image]" width="500" height="235" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/6527/files/1069089" data-api-returntype="File" loading="lazy"></span></p>
+<p>Get creative and adjust various aspects of your plane. Here are a few ideas to get you started:</p>
+<h4>#1: Increase Lift</h4>
+<p>As the plane travels, air moves quickly over the top of the wings. This creates lower pressure over the wings, allowing the high pressure under the wings to lift the plane. Try making wider wings or wings that curve up or down at the ends.</p>
+<h4>#2: Limit Drag</h4>
+<p>Air molecules push against the front of the plane as it travels, slowing it down. Ensure your plane's nose is pointed, and the body is lightweight.</p>
+<h4>#3: Change The Thrust</h4>
+<p>When you throw your plane, you provide thrust, which pushes the plane forward through the air. This forward movement causes air molecules to travel over the top and bottom of the wings. Does the strength or angle at which you throw your plan impact it?</p>
+<h4>#4: Try A New Material</h4>
+<p>The weight of the plane can pull it downward. How does a heavier or lighter paper change your plane?</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/term-1-holidays" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/Gg0TXNXgz-w?si=DbKF-I5WjVwRDKFu</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/term-1-holidays" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={f70a5a37-3a18-4a61-8a05-a93c73760115}&amp;amp;action=embedview&amp;amp;wdAr=1.7777777777777777</span></div></div>
+<p>&nbsp;</p>
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Computational Thinking Challenges</h3>
+<p>Please complete the Bebras quiz <a title="_Bebras Y11+12 Quiz" href="https://canvas.kings.edu.au/courses/11962/assignments/190639" class="ext" target="_blank" rel="noopener" data-course-type="assignments" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/190639" data-api-returntype="Assignment">linked here</a></p>
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Software Competition</h3>
+<div class="dp-panels-wrapper dp-tabs dp-panel-active-color-dp-white">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Python Challenge 1</h3>
+<div class="dp-panel-content">
+<p>Write a Python function called <code>count_word_frequency</code> that takes a string as input and returns the frequency of each word in the string. Words are case-insensitive and should be considered alphanumeric.</p>
+<p>For example:</p>
+<ul>
+<li><code>count_word_frequency("Hello world hello")</code> should return <code>{'hello': 2, 'world': 1}</code>.</li>
+<li><code>count_word_frequency("Python is fun, python is powerful")</code> should return <code>{'python': 2, 'is': 2, 'fun': 1, 'powerful': 1}</code>.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img src="../../assets/928c5bc8a3ead3d3.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197528" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Test Sample:</strong></p>
+<p><span>In the realm of software engineering, lines of code serve as the building code of innovation, weaving intricate pathways through the digital landscape. With each code written, developers breathe life into code, crafting solutions that navigate the complexities of modern technology. Bugs, like hidden adversaries, challenge the perseverance of programmers, who tirelessly code and optimise their code. Collaboration emerges as the code of progress, as teams unite to forge resilient systems that withstand the tests of time. Through iterative code of refinement, ideas blossom into fully realised software solutions. In this dynamic ecosystem, creativity and code harmonise, guiding the trajectory of technological advancement and shaping the future of digital realms.</span></p>
+<div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary dp-no-expander-controls">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Criteria</h3>
+<div class="dp-panel-content">
+<p><strong>Python Challenge 1:</strong></p>
+<table class=" table-borderless">
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Descriptions</th>
+<th>Outstanding</th>
+<th>Good</th>
+<th>Satisfactory</th>
+<th>Limited</th>
+<th>Marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Completeness</td>
+<td>Addresses all requirements of the challenge comprehensively.</td>
+<td>Demonstrates a thorough understanding of the problem and provides a comprehensive solution.</td>
+<td>Addresses most requirements of the challenge adequately.</td>
+<td>Addresses some of the challenges' requirements but with minor omissions.</td>
+<td>Fails to address several requirements of the challenge.</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Correctness</td>
+<td>Implements the Python function accurately with optimal efficiency.</td>
+<td>Implements the Python function accurately with optimal efficiency and minimal to no errors.</td>
+<td>Implements the Python function accurately with minor errors or inefficiencies.</td>
+<td>Implements the Python function with noticeable errors or inefficiencies.</td>
+<td>Fails to implement the Python function accurately.</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Clarity</td>
+<td>The code is exceptionally well-structured, easy to read, and comprehensively commented on for clarity.</td>
+<td>Code is exceptionally well-structured, easy to read, and comprehensively commented, enhancing understanding.</td>
+<td>The code is well-structured, easy to read, and adequately commented on for clarity.</td>
+<td>The code is somewhat organised and readable, with some comments for clarity.</td>
+<td>The code is poorly structured, difficult to read, and lacks sufficient comments for clarity.</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>5</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Python Challenge 2</h3>
+<div class="dp-panel-content">
+<p>Write a Python function called <code>largest_subarray_sum</code> that takes a list of integers as input and returns the largest sum of contiguous subarrays within the list.</p>
+<p>For example:</p>
+<ul>
+<li><code>largest_subarray_sum([-2, 1, -3, 4, -1, 2, 1, -5, 4])</code> should return <code>6</code>, as the largest sum is <code>[4, -1, 2, 1]</code>.</li>
+<li><code>largest_subarray_sum([1, -2, 3, 4, -1, 2, 1, -5, 4])</code> should return <code>9</code>, as the largest sum is <code>[3, 4, -1, 2, 1]</code>.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img src="../../assets/4f024e43b7bf0e34.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197532" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Test Sample:</strong></p>
+<p><img src="../../assets/193ce18b54d3a460.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197539" data-api-returntype="File" loading="lazy"></p>
+<div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary dp-no-expander-controls">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Criteria</h3>
+<div class="dp-panel-content">
+<p><strong>Python Challenge 2:</strong></p>
+<table class=" table-borderless">
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Descriptions</th>
+<th>Outstanding</th>
+<th>Good</th>
+<th>Satisfactory</th>
+<th>Limited</th>
+<th>Marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Completeness</td>
+<td>Addresses all requirements of the challenge comprehensively.</td>
+<td>Demonstrates a thorough understanding of the problem and provides a comprehensive solution.</td>
+<td>Addresses most requirements of the challenge adequately.</td>
+<td>Addresses some of the challenges' requirements but with minor omissions.</td>
+<td>Fails to address several requirements of the challenge.</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Correctness</td>
+<td>Implements the Python function accurately with optimal efficiency.</td>
+<td>Implements the Python function accurately with optimal efficiency and minimal to no errors.</td>
+<td>Implements the Python function accurately with minor errors or inefficiencies.</td>
+<td>Implements the Python function with noticeable errors or inefficiencies.</td>
+<td>Fails to implement the Python function accurately.</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Clarity</td>
+<td>The code is exceptionally well-structured, easy to read, and comprehensively commented on for clarity.</td>
+<td>Code is exceptionally well-structured, easy to read, and comprehensively commented, enhancing understanding.</td>
+<td>The code is well-structured, easy to read, and adequately commented on for clarity.</td>
+<td>The code is somewhat organised and readable, with some comments for clarity.</td>
+<td>The code is poorly structured, difficult to read, and lacks sufficient comments for clarity.</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>5</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Structure Chart</h3>
+<div class="dp-panel-content">
+<p><strong>Scenario:</strong></p>
+<p>You've been tasked with architecting the software backbone for a cutting-edge house security system. The system aims to ensure the safety of residents by monitoring various sensors deployed throughout the house and responding promptly to security events. It should detect intrusions, fire alarms, gas leaks, and other environmental hazards, provide real-time alerts, and enable quick emergency responses.</p>
+<p><strong>Question:</strong></p>
+<p>Develop a hierarchical structure chart outlining the main modules and their interactions for this house security system.</p>
+<p><strong>Structure Chart:</strong></p>
+<ol>
+<li>
+<p><strong>Sensor Monitoring Module:</strong></p>
+<ul>
+<li>Responsible for continuously monitoring sensors installed throughout the house, including motion sensors, door/window sensors, smoke detectors, carbon monoxide detectors, and temperature sensors.</li>
+</ul>
+</li>
+<li>
+<p><strong>Event Detection Module:</strong></p>
+<ul>
+<li>Analyses data received from the Sensor Monitoring Module to detect security events such as intrusions, fire alarms, gas leaks, and other environmental hazards.</li>
+<li>Passes detected events to the Alarm Management Module for further processing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Alarm Management Module:</strong></p>
+<ul>
+<li>Receives security events from the Event Detection Module and determines the appropriate response based on predefined rules and user configurations.</li>
+<li>Manages the activation and deactivation of alarms, including sirens, lights, and notifications to the user.</li>
+<li>Passes control signals to the Emergency Response Module for immediate action if necessary.</li>
+</ul>
+</li>
+<li>
+<p><strong>User Interface Module:</strong></p>
+<ul>
+<li>Provides a user-friendly interface for homeowners to interact with the security system.</li>
+<li>Allows users to view sensor statuses, configure system settings, and receive real-time alerts.</li>
+<li>Passes user commands and configurations to relevant modules for execution.</li>
+</ul>
+</li>
+<li>
+<p><strong>System Configuration Module:</strong></p>
+<ul>
+<li>Enables users to customise system settings, including sensor sensitivity, alarm thresholds, and emergency contact information.</li>
+<li>Stores and manages user preferences and configurations for the security system.</li>
+</ul>
+</li>
+<li>
+<p><strong>Emergency Response Module:</strong></p>
+<ul>
+<li>Activates emergency protocols and notifies authorities (police, fire department, medical services) in case of verified security events requiring immediate intervention.</li>
+<li>Receives signals from the Alarm Management Module to initiate emergency response procedures.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Interactions:</strong></p>
+<ul>
+<li>The Sensor Monitoring Module continuously collects data from sensors deployed throughout the house and passes it to the Event Detection Module.</li>
+<li>The Event Detection Module analyses sensor data to detect security events and forwards detected events to the Alarm Management Module.</li>
+<li>The Alarm Management Module determines the appropriate response to security events based on predefined rules and user configurations, activating alarms and notifying users as necessary.</li>
+<li>The User Interface Module provides a platform for users to interact with the system, allowing them to view sensor statuses, configure settings, and receive alerts.</li>
+<li>The System Configuration Module enables users to customise system settings and preferences, storing and managing user configurations.</li>
+<li>The Emergency Response Module initiates emergency protocols and notifies authorities if verified security events require immediate intervention.</li>
+</ul>
+<p>This structure chart outlines the main modules and their interactions within the house security system, facilitating efficient data flow and decision-making processes to ensure the safety and security of residents.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary dp-no-expander-controls">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Criteria</h3>
+<div class="dp-panel-content">
+<p><strong>Structure Chart:</strong></p>
+<table class=" table-borderless">
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Descriptions</th>
+<th>Outstanding</th>
+<th>Good</th>
+<th>Satisfactory</th>
+<th>Limited</th>
+<th>Marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Completeness</td>
+<td>Includes all essential modules and their interactions.</td>
+<td>The chart correctly identifies and depicts all essential modules and their interactions.</td>
+<td>The chart correctly identifies and depicts the most essential modules and their interactions.</td>
+<td>Some essential modules and their interactions are missing or inaccurately depicted in the chart.</td>
+<td>Many essential modules and their interactions are missing or inaccurately depicted in the chart.</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Correctness</td>
+<td>Modules are correctly identified, and their interactions are logically depicted.</td>
+<td>All modules are correctly identified, and their interactions are accurately and logically depicted.</td>
+<td>Most modules are correctly identified, and their interactions are accurately depicted, with minor errors.</td>
+<td>Some modules are incorrectly identified, or their interactions are inaccurately depicted.</td>
+<td>Many modules are incorrectly identified, or their interactions are inaccurately depicted.</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Clarity</td>
+<td>The structure chart is clear and well-organised and effectively communicates the system architecture.</td>
+<td>The structure chart is self-explanatory, well-organised, and effectively communicates the system architecture, enhancing understanding.</td>
+<td>The structure chart is clear and well-organised and effectively communicates the system architecture.</td>
+<td>The structure chart is somewhat clear and organised but may have minor issues in communication.</td>
+<td>The structure chart is unclear, disorganised, and fails to communicate the system architecture effectively.</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>5</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Pseudocode</h3>
+<div class="dp-panel-content">
+<p>Instantiate an array of 20 entries and prompt the user to enter numbers in it. Once the array is filled, you must run a subroutine that checks for duplicate numbers and removes them from the array. You must then prompt the user to enter new numbers until there are no duplicates in the array. Use syntactically and logically correct Pseudocode to write this algorithm.&nbsp;</p>
+<div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary dp-no-expander-controls">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Criteria</h3>
+<div class="dp-panel-content">
+<p><strong>Pseudocode:</strong></p>
+<table class=" table-borderless" style="width: 96.2894%;">
+<thead>
+<tr>
+<th style="width: 10.0463%;">Criteria</th>
+<th style="width: 16.4379%;">Descriptions</th>
+<th style="width: 19.456%;">Outstanding</th>
+<th style="width: 17.91%;">Good</th>
+<th style="width: 15.9216%;">Satisfactory</th>
+<th style="width: 15.5422%;">Limited</th>
+<th style="width: 4.58965%;">Marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 10.0463%;">Completeness</td>
+<td style="width: 16.4379%;">Provides a comprehensive algorithm for removing duplicate numbers.</td>
+<td style="width: 19.456%;">The algorithm is comprehensive, covering all necessary steps with clarity and precision.</td>
+<td style="width: 17.91%;">The algorithm covers the most necessary steps with clarity and precision.</td>
+<td style="width: 15.9216%;">The algorithm covers some necessary steps but may lack clarity or precision in certain areas.</td>
+<td style="width: 15.5422%;">The algorithm lacks several necessary steps or lacks clarity and precision in many areas.</td>
+<td style="width: 4.58965%;">2</td>
+</tr>
+<tr>
+<td style="width: 10.0463%;">Correctness</td>
+<td style="width: 16.4379%;">The algorithm logically removes duplicates and prompts user input until there are no duplicates.</td>
+<td style="width: 19.456%;">With optimal efficiency and accuracy, the algorithm logically removes duplicates and prompts user input until no duplicates remain.</td>
+<td style="width: 17.91%;">The algorithm logically removes duplicates and prompts user input until no duplicates remain, with minor errors or inefficiencies.</td>
+<td style="width: 15.9216%;">The algorithm removes duplicates and prompts user input but with noticeable errors or inefficiencies.</td>
+<td style="width: 15.5422%;">The algorithm fails to remove duplicates or prompts user input inaccurately or inefficiently.</td>
+<td style="width: 4.58965%;">2</td>
+</tr>
+<tr>
+<td style="width: 10.0463%;">Clarity</td>
+<td style="width: 16.4379%;">Pseudocode is clear, follows proper syntax, and effectively conveys the algorithm steps.</td>
+<td style="width: 19.456%;">Pseudocode is exceptionally clear, follows proper syntax, and effectively conveys the algorithm steps, enhancing understanding.</td>
+<td style="width: 17.91%;">Pseudocode is clear, follows proper syntax, and effectively conveys the algorithm steps.</td>
+<td style="width: 15.9216%;">Pseudocode is somewhat clear and follows proper syntax but may lack clarity in certain areas.</td>
+<td style="width: 15.5422%;">Pseudocode is unclear, does not follow proper syntax, or fails to convey the algorithm steps effectively.</td>
+<td style="width: 4.58965%;">1</td>
+</tr>
+<tr>
+<td style="width: 10.0463%;"><strong>Total</strong></td>
+<td style="width: 16.4379%;"></td>
+<td style="width: 19.456%;"></td>
+<td style="width: 17.91%;"></td>
+<td style="width: 15.9216%;"></td>
+<td style="width: 15.5422%;"></td>
+<td style="width: 4.58965%;"><strong>5</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Data Flow Diagram</h3>
+<div class="dp-panel-content">
+<p><strong>Scenario:</strong></p>
+<p>You've been tasked with designing a university's Student Enrollment System. The system must facilitate student enrollment, manage course registrations, track academic records, and provide faculty and administrative staff with relevant information.</p>
+<p><strong>Question:</strong></p>
+<p>Develop a Data Flow Diagram (DFD) for the Student Enrollment System, illustrating how data flows between students, faculty, and administrative staff for course registration, grading, and academic record maintenance.</p>
+<p><strong>Details:</strong></p>
+<ol>
+<li>
+<p><strong>Student Registration:</strong></p>
+<ul>
+<li>Students can submit course registration requests through the system, indicating their desired courses for the upcoming semester.</li>
+<li>The system validates the registration requests and updates the student's enrollment status accordingly.</li>
+</ul>
+</li>
+<li>
+<p><strong>Course Management:</strong></p>
+<ul>
+<li>Faculty members can access the system to view available courses, update course details, and set enrollment capacities.</li>
+<li>The system allows faculty to assign grades to students enrolled in their courses at the end of the semester.</li>
+</ul>
+</li>
+<li>
+<p><strong>Academic Records:</strong></p>
+<ul>
+<li>Administrative staff can view and update academic records, including student transcripts, GPA calculations, and graduation eligibility.</li>
+<li>The system tracks student progress, including completed courses, grades received, and overall academic standing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Communication:</strong></p>
+<ul>
+<li>The system facilitates communication between students, faculty, and administrative staff regarding enrollment issues, course availability, and academic advising.</li>
+<li>Students receive notifications regarding enrollment status, course changes, and academic deadlines.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Interactions:</strong></p>
+<ul>
+<li>Students submit course registration requests through the system, which are processed and updated in the student database.</li>
+<li>Faculty members access the system to view course offerings, update course details, and input grades for enrolled students.</li>
+<li>Administrative staff use the system to manage academic records, track student progress, and communicate with students and faculty.</li>
+<li>Data flows between students, faculty, and administrative staff to facilitate course registration, grading, and academic record maintenance processes.</li>
+</ul>
+<div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary dp-no-expander-controls">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Criteria</h3>
+<div class="dp-panel-content">
+<p><strong>Data Flow Diagram:</strong></p>
+<table class=" table-borderless">
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Descriptions</th>
+<th>Outstanding</th>
+<th>Good</th>
+<th>Satisfactory</th>
+<th>Limited</th>
+<th>Marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Completeness</td>
+<td>Includes all necessary components of the Student Enrollment System.</td>
+<td>The diagram correctly identifies and depicts all necessary components of the Student Enrollment System.</td>
+<td>Most necessary components of the Student Enrollment System are correctly identified and depicted in the diagram.</td>
+<td>Some necessary components of the Student Enrollment System are missing or inaccurately depicted in the diagram.</td>
+<td>Many necessary components of the Student Enrollment System are missing or inaccurately depicted in the diagram.</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Correctness</td>
+<td>Data flow is accurately depicted, showing interactions for course registration, grading, and academic record maintenance.</td>
+<td>Data flow accurately depicts all interactions for course registration, grading, and academic record maintenance with optimal clarity and precision.</td>
+<td>Data flow is accurately depicted, showing interactions for course registration, grading, and academic record maintenance, with minor inaccuracies or lack of clarity in certain areas.</td>
+<td>Data flow is mostly accurate but may have noticeable inaccuracies or lack clarity in several areas.</td>
+<td>Data flow inaccuracies significantly impact the understanding or completeness of the diagram.</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Clarity</td>
+<td>DFD is clear, well-labelled, and effectively communicates the system's data flow and interactions.</td>
+<td>DFD is exceptionally clear, well-labelled, and effectively communicates the system's data flow and interactions, enhancing understanding.</td>
+<td>DFD is clear, well-labelled, and effectively communicates the system's data flow and interactions.</td>
+<td>DFD is somewhat clear and labelled but may lack clarity in certain areas or have minor labelling issues.</td>
+<td>DFD is unclear, poorly labelled, or fails to effectively communicate the system's data flow and interactions.</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>5</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Flowchart</h3>
+<div class="dp-panel-content">
+<p>You must create a guessing game that takes a user-input number and checks it against a number you have chosen. In this interactive guessing game, you pick a random number between 1 and 100 as the target. The user is prompted to guess the correct number; they have five guesses to get the right number.</p>
+<p>If they do guess the correct number, you must prompt them with "YOU WIN"; otherwise, they should continue guessing until they have reached their guess limit. If they exceed their guess limit, prompt them with "YOU LOSE".</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary dp-no-expander-controls">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Panel Heading</h3>
+<div class="dp-panel-content">
+<p><strong>Flowchart:</strong></p>
+<table class=" table-borderless">
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Descriptions</th>
+<th>Outstanding</th>
+<th>Good</th>
+<th>Satisfactory</th>
+<th>Limited</th>
+<th>Marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Completeness</td>
+<td>Provides a comprehensive flowchart for the guessing game.</td>
+<td>The flowchart is comprehensive, covering all necessary steps of the guessing game logic with clarity and precision.</td>
+<td>Flowchart covers most necessary steps of the guessing game logic with clarity and precision.</td>
+<td>The flowchart covers some necessary steps but may lack clarity or precision in certain areas.</td>
+<td>Flowchart lacks several necessary steps or lacks clarity and precision in many areas.</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Correctness</td>
+<td>The flowchart accurately represents the steps of the guessing game and the conditions for winning or losing.</td>
+<td>The flowchart accurately represents all steps of the guessing game and the conditions for winning or losing, with optimal clarity and accuracy.</td>
+<td>Flowchart accurately represents steps of the guessing game and conditions for winning or losing, with minor inaccuracies or lack of clarity in certain areas.</td>
+<td>Flowcharts mostly represent steps of the guessing game but may have noticeable inaccuracies or lack clarity in several areas.</td>
+<td>Flowchart inaccuracies significantly impact the understanding or completeness of the game logic.</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Clarity</td>
+<td>The flowchart is clear and well-organised and effectively illustrates the flow of the guessing game logic.</td>
+<td>The flowchart is exceptionally clear and well-organised. It effectively illustrates the flow of the guessing game logic, enhancing understanding.</td>
+<td>The flowchart is clear and well-organised and effectively illustrates the flow of the guessing game logic.</td>
+<td>The flowchart is somewhat clear and organised but may have minor issues in communication or organisation.</td>
+<td>The flowchart is unclear, disorganised, or fails to illustrate the guessing game logic flow effectively.</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>5</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Extension Programming</h3>
+<div class="dp-panel-content">
+<h2 class="text-xl font-bold text-text-100 mt-1 -mb-0.5">Problem Statement</h2>
+<p class="whitespace-pre-wrap break-words">Detective Alex has discovered a series of numbers at a crime scene. Each number in the sequence has been encrypted using a special cipher. Your task is to write a program that can decrypt the sequence and reveal the hidden message.</p>
+<h2 class="text-xl font-bold text-text-100 mt-1 -mb-0.5">Input Format</h2>
+<ul class="[&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc space-y-1.5 pl-7">
+<li class="whitespace-normal break-words">The first line contains an integer <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">n</code> (1 ≤ n ≤ 100), representing the number of encrypted values.</li>
+<li class="whitespace-normal break-words">The second line contains <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">n</code> space-separated integers, each representing an encrypted value <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">x</code> (0 ≤ x ≤ 10^6).</li>
+<li class="whitespace-normal break-words">The third line contains a single integer <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">k</code> (1 ≤ k ≤ 100), representing the cipher key.</li>
+</ul>
+<h2 class="text-xl font-bold text-text-100 mt-1 -mb-0.5">Output Format</h2>
+<ul class="[&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc space-y-1.5 pl-7">
+<li class="whitespace-normal break-words">Output a single line containing <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">n</code> space-separated integers, representing the decrypted values.</li>
+</ul>
+<h2 class="text-xl font-bold text-text-100 mt-1 -mb-0.5">Cipher Rules</h2>
+<p class="whitespace-pre-wrap break-words">To decrypt each number <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">x</code> in the sequence:</p>
+<ol class="[&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-decimal space-y-1.5 pl-7">
+<li class="whitespace-normal break-words">Reverse the digits of <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">x</code> (e.g., 123 becomes 321)</li>
+<li class="whitespace-normal break-words">Multiply by the cipher key <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">k</code></li>
+<li class="whitespace-normal break-words">Calculate the sum of its digits</li>
+<li class="whitespace-normal break-words">Take the result modulo 26</li>
+<li class="whitespace-normal break-words">Convert to the corresponding letter (0→A, 1→B, ..., 25→Z)</li>
+</ol>
+<h2 class="text-xl font-bold text-text-100 mt-1 -mb-0.5">Example</h2>
+<h3 class="text-lg font-bold text-text-100 mt-1 -mb-1.5">Input:</h3>
+<div class="relative group/copy rounded-lg">
+<div class="">
+<pre class="code-block__code !my-0 !rounded-lg !text-sm !leading-relaxed"><code><span>5
+</span><span>123 45 67 89 1000
+</span><span>3</span></code></pre>
+</div>
+</div>
+<h3 class="text-lg font-bold text-text-100 mt-1 -mb-1.5">Output:</h3>
+<div class="relative group/copy rounded-lg">
+<div class="">
+<pre class="code-block__code !my-0 !rounded-lg !text-sm !leading-relaxed"><code><span>S J P K F</span></code></pre>
+</div>
+</div>
+<h3 class="text-lg font-bold text-text-100 mt-1 -mb-1.5">Explanation:</h3>
+<p class="whitespace-pre-wrap break-words">For x = 123:</p>
+<ol class="[&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-decimal space-y-1.5 pl-7">
+<li class="whitespace-normal break-words">Reverse: 321</li>
+<li class="whitespace-normal break-words">Multiply by k=3: 321 × 3 = 963</li>
+<li class="whitespace-normal break-words">Sum of digits: 9 + 6 + 3 = 18</li>
+<li class="whitespace-normal break-words">18 % 26 = 18</li>
+<li class="whitespace-normal break-words">18 corresponds to 'S'</li>
+</ol>
+<p class="whitespace-pre-wrap break-words">For x = 45:</p>
+<ol class="[&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-decimal space-y-1.5 pl-7">
+<li class="whitespace-normal break-words">Reverse: 54</li>
+<li class="whitespace-normal break-words">Multiply by k=3: 54 × 3 = 162</li>
+<li class="whitespace-normal break-words">Sum of digits: 1 + 6 + 2 = 9</li>
+<li class="whitespace-normal break-words">9 % 26 = 9</li>
+<li class="whitespace-normal break-words">9 corresponds to 'J'</li>
+</ol>
+<p class="whitespace-pre-wrap break-words">And so on...</p>
+<h2 class="text-xl font-bold text-text-100 mt-1 -mb-0.5">Constraints</h2>
+<ul class="[&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc space-y-1.5 pl-7">
+<li class="whitespace-normal break-words">Your solution should run within a time limit of 1 second.</li>
+<li class="whitespace-normal break-words">The program should use only standard Python libraries (no external libraries).</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Final Coding problem</h3>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Problem</h3>
+<div class="dp-panel-content ">
+<p>MATRIX TREASURE HUNTER</p>
+<p>Background:<br>-----------<br>You are a mathematician working for an archaeology department that has discovered an ancient<br>mathematical artifact: a square stone tablet with numbers arranged in a spiral pattern.&nbsp;<br>According to ancient texts, the tablet contains clues to hidden treasures along certain pathways.</p>
+<p>For example, a 5x5 tablet looks like this:<br>21 22 23 24 25<br>20 &nbsp;7 &nbsp;8 &nbsp;9 10<br>19 &nbsp;6 &nbsp;1 &nbsp;2 11<br>18 &nbsp;5 &nbsp;4 &nbsp;3 12<br>17 16 15 14 13</p>
+<p>Your Mission:<br>------------<br>The archaeology team needs you to analyze the tablet and identify potential treasure pathways.<br>Based on historical records, treasures are likely to be found along paths where the sum of numbers<br>divided by the path length results in the highest average.&nbsp;</p>
+<p>Specifically, you need to:<br>1. Generate a number spiral of size n×n (where n is an odd integer)<br>2. For each of the eight key lines passing through the center (horizontal, vertical,&nbsp;<br>&nbsp; &nbsp;both diagonals, and the four half-lines from center), calculate:<br>&nbsp; &nbsp;- The sum of all numbers on that line<br>&nbsp; &nbsp;- The average value along that line<br>3. Return the line with the highest average value, which likely points to the treasure</p>
+<p>Requirements:<br>------------<br>1. Create a function to generate the spiral matrix<br>2. Calculate the average value for each of the 8 lines through the center<br>3. Return the line with the highest average, its direction, and the average value</p>
+<p>Input:<br>-----<br>- size: An odd integer n representing the size of the spiral matrix (n×n)</p>
+<p>Output:<br>------<br>- A dictionary with three keys:<br>&nbsp; - 'direction': The direction of the line ("horizontal", "vertical", "diagonal_main",&nbsp;<br>&nbsp; &nbsp; "diagonal_secondary", "right", "left", "up", or "down")<br>&nbsp; - 'numbers': The list of numbers on that line<br>&nbsp; - 'average': The average value of that line (rounded to 2 decimal places)</p>
+<p>Example:<br>-------<br>For a 5×5 spiral:</p>
+<p>find_treasure_path(5) might return:<br>{<br>&nbsp; &nbsp; 'direction': 'right',<br>&nbsp; &nbsp; 'numbers': [1, 2, 11, 10, 25],<br>&nbsp; &nbsp; 'average': 9.8<br>}</p>
+<p>This means the path going right from the center (1, 2, 11, 10, 25) has an average&nbsp;<br>value of 9.8, which is the highest among all eight paths.</p>
+<p>Note:<br>-----<br>- The spiral starts with 1 at the center and proceeds outward in a clockwise direction<br>- The lines to check are: horizontal (left-to-right), vertical (top-to-bottom), main diagonal&nbsp;<br>&nbsp; (top-left to bottom-right), secondary diagonal (top-right to bottom-left), as well as the&nbsp;<br>&nbsp; half-lines right, left, up, and down from center<br>- This problem involves matrix generation, list manipulation, and simple statistics<br><br></p>
+<p>def generate_spiral(size):<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; Generates a spiral matrix of given size.<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; Args:<br>&nbsp; &nbsp; &nbsp; &nbsp; size (int): The size of the matrix (must be odd)<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; Returns:<br>&nbsp; &nbsp; &nbsp; &nbsp; list: A 2D list representing the spiral matrix<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; # Your spiral generation code here<br>&nbsp; &nbsp; pass</p>
+<p>def find_treasure_path(size):<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; Finds the line through the center of the spiral with the highest average value.<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; Args:<br>&nbsp; &nbsp; &nbsp; &nbsp; size (int): The size of the spiral matrix (must be odd)<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; Returns:<br>&nbsp; &nbsp; &nbsp; &nbsp; dict: Dictionary with keys 'direction', 'numbers', and 'average'<br>&nbsp; &nbsp; """<br>&nbsp; &nbsp; # Your solution code here<br>&nbsp; &nbsp; pass</p>
+<p><br># Test your solution<br>if __name__ == "__main__":<br>&nbsp; &nbsp; # Test with a 5x5 spiral<br>&nbsp; &nbsp; result = find_treasure_path(5)<br>&nbsp; &nbsp; print(f"Direction: {result['direction']}")<br>&nbsp; &nbsp; print(f"Numbers: {result['numbers']}")<br>&nbsp; &nbsp; print(f"Average value: {result['average']}")<br>&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; # Test with a 7x7 spiral<br>&nbsp; &nbsp; result = find_treasure_path(7)<br>&nbsp; &nbsp; print(f"\nDirection: {result['direction']}")<br>&nbsp; &nbsp; print(f"Numbers: {result['numbers']}")<br>&nbsp; &nbsp; print(f"Average value: {result['average']}")</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div id="kl_panel_block_1"></div>
+<div id="kl_panel_block_2"></div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div class="readnav"><a href="11962-m13.html">← previous module</a><a href="../course-11962.html">all modules</a><a href="11962-m15.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

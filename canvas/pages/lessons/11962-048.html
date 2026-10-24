@@ -1,0 +1,217 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.5 Code Design — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 8 (Term 2: Weeks 5-6) OOP</div>
+<h1 style="margin-top:.2rem">2.5 Code Design</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-5-code-design" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Describe the process of design used to develop code in an OOP language including:<br class="card-text">- task definition<br class="card-text">- top-down and bottom-up<br class="card-text">- facade pattern<br class="card-text">- agility</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Students will understand the process of designing code in an OOP language, including task definition, top-down and bottom-up approaches, the facade pattern, and agility in development.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Students can define coding tasks, apply design approaches, implement the facade pattern, and adapt their code to changing requirements efficiently.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>The process of designing software in an object-oriented programming (OOP) language is essential for creating systems that are clear, scalable, and easy to maintain. Effective design ensures that code meets user requirements while adhering to best practices. This process involves defining tasks, choosing appropriate design approaches such as top-down or bottom-up, implementing design patterns like the facade pattern, and adopting agile principles to accommodate change.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Code Design</h3>
+<div class="dp-panel-content ">
+<p><span>The main advantage of object-oriented programming over imperative programming is its unique ability to create <strong>elegant</strong> and <strong>beautiful</strong> software through a design that is centred around the use of objects; rather than functions used in procedural programming.</span></p>
+<p><span>Throughout the remainder of this unit, the aim is to emphasise good <strong>design</strong> practices of object-oriented code as we apply the principles you have learned to effectively create <strong>modular</strong> systems that are&nbsp;<strong>flexible</strong>, <strong>maintainable</strong> and <strong>reusable</strong>.</span></p>
+<p>When it comes to code design, there is no clear right or wrong answer. There are many shades of grey, where design decisions aren't clear cut. Good programming skill doesn't matter if you don't have good design. <strong>Designing elegant OOP software is an art.</strong></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Task Definition</h3>
+<div class="dp-panel-content ">
+<p>A <strong>task definition</strong> (or problem statement) is a concise and clear description of a specific issue or challenge. It acts as a foundational element in the problem-solving process by clearly articulating what needs to be addressed. A well-crafted task definition should be focused, precise, and actionable, enabling individuals or teams to remain aligned on the objective and work collaboratively toward a solution.</p>
+<p><strong>Key Characteristics of a Good Task Definition</strong></p>
+<ol>
+<li><strong>Clarity:</strong> The problem should be easy to understand and free from jargon.</li>
+<li><strong>Focus:</strong> It should highlight the core issue without unnecessary details.</li>
+<li><strong>Importance:</strong> The statement should explain why solving the problem matters, emphasizing its significance.</li>
+<li><strong>Impact:</strong> Identifies who or what is affected by the issue.</li>
+<li><strong>Stimulates Creativity:</strong> Inspires innovative and critical thinking to develop effective solutions.</li>
+</ol>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Top-Down and Bottom-Up</h3>
+<div class="dp-panel-content">
+<p><span>The Top-Down and Bottom-Up design methodologies represent two different approaches to system development.</span></p>
+<ul>
+<li><span><strong>Top-Down</strong> <strong>D</strong><strong>esign</strong> is an approach where the system is broken down into smaller components starting from the highest level.</span>
+<ul>
+<li><span>In OOP, we would start by creating high-level generalised classes before creating lower-level child classes that have more specific responsibilities.</span></li>
+<li><span>e.g. In a game, we may start by creating a generalised Character class before creating more specific child classes such as Knight and Witch.</span></li>
+</ul>
+</li>
+<li><span><strong>Bottom-Up Design</strong> is an approach where the system is built starting from the lowest level components.</span>
+<ul>
+<li><span>In OOP, we would start by creating low-level classes with specific responsibilities before generalising into higher-level parent classes.</span></li>
+<li><span>e.g. In a game, we may start by creating the Knight and Witch classes before creating more a generalised Character class.</span></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Façade Pattern</h3>
+<div class="dp-panel-content">
+<p><span>In software design, there are many established design approaches that are used as a template for handling common design problems. One such problem is having to deal with complexity of our object-oriented code. The solution is to create a simplified interface (facade) to hide the complexity of underlying classes in a way that allows people who are unfamiliar with the code (e.g. the client) to use the software.</span></p>
+<p>The <strong>Facade Pattern</strong> is a design approach that provides a <strong>simplified interface to a complex subsystem</strong>. It is particularly useful when you have a program with multiple interdependent classes, and you want to make it easier to use by providing a single interface to interact with that system.</p>
+<p><span>Imagine your computer as one of these complex systems. The facade in this scenario is your keyboard, mouse and screen which offer you a method to control and use your computer whilst hiding the complexity and millions of operations going on behind the screen to provide you with a user friendly method to interact with the systems.</span></p>
+<p><strong>Example:</strong></p>
+<p>Consider a home entertainment system with:</p>
+<ul>
+<li>A DVD Player</li>
+<li>A Projector</li>
+<li>Lights</li>
+<li>A Sound System</li>
+</ul>
+<table style="border-collapse: collapse; width: 100%; border-style: hidden; height: 610px;" border="1">
+<tbody>
+<tr style="height: 329px;">
+<td style="width: 49.9338%; height: 329px; vertical-align: top;"><img src="../../assets/af8596b880611205.png" alt="image.png" width="500" height="338" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197792" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 49.9338%; height: 329px; border-style: hidden; vertical-align: top;"><img src="../../assets/55892283d433f034.png" alt="image.png" width="500" height="301" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197793" data-api-returntype="File" loading="lazy"></td>
+</tr>
+<tr style="height: 281px;">
+<td style="width: 49.9338%; height: 281px; border-style: hidden; vertical-align: top;"><img src="../../assets/60a8a40684556b61.png" alt="image.png" width="500" height="212" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197794" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 49.9338%; height: 281px; vertical-align: top;"><img src="../../assets/f63ee9d7f1224305.png" alt="image.png" width="500" height="288" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197795" data-api-returntype="File" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p>To use the Facade Pattern in the design of this system, we can provide a simple interface class called <code>RemoteControlFacade</code> to interact with the components of the home theatre without knowing how to use each of those individual components.</p>
+<p>The attributes of the <code>RemoteControlFacade</code> class contains the objects that make up the home theatre.</p>
+<p>The methods of the <code>RemoteControlFacade</code> class then call the methods of those objects (<code>dim()</code>, <code>on()</code>, <code>set_input()</code>, <code>set_volume()</code>, etc).</p>
+<p><img src="../../assets/db21db3800d7a63e.png" alt="image.png" width="600" height="617" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197796" data-api-returntype="File" loading="lazy"></p>
+<p>We can then use the interface methods in the <code>RemoteControlFacade</code> to start and end a movie without needing to know how to use the <code>DVDPlayer</code>, <code>Projector</code>, <code>Lights</code> or <code>SoundSystem</code> classes. <strong>The client only needs to know how to use the facade interface.</strong></p>
+<p><img src="../../assets/073adf589caf839a.png" alt="image.png" width="700" height="381" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197797" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>Get ready to watch a movie...<br>Lights dimmed to 10%.<br>Projector is on.<br>Projector input set to DVD.<br>Sound system is on.<br>Sound system volume set to 5.<br>DVD Player is on.<br>Playing movie 'Imitation Game'.<br>Shutting movie theater down...<br>DVD Player is off.<br>Sound system is off.<br>Projector is off.<br>Lights dimmed to 100%.</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Agility</h3>
+<div class="dp-panel-content">
+<p>When designing object-oriented code, it is important to <strong>structure classes in a way that allows for easy and efficient modification. <br></strong></p>
+<p>The agility of a program is described as its ability to adapt to unspecified or changing needs of the client.</p>
+<p>This adaptability is crucial in modern software development, where requirements can evolve rapidly.</p>
+<p>If adding a feature <span style="text-decoration: underline;">requires a large number of classes to be modified</span>, then:</p>
+<ul>
+<li>the update will take a long amount of time</li>
+<li>the large number of modifications will likely cause existing features to fail</li>
+</ul>
+<p>This is a sign of <strong>poorly designed</strong> OOP code.</p>
+<p>However, if the same feature can be added by <span style="text-decoration: underline;">modifying a small number of classes</span>, then:</p>
+<ul>
+<li>the update will take a short amount of time</li>
+<li>the small number of modifications will not largely affect existing features</li>
+</ul>
+<p>This is a sign of <strong>effectively designed</strong> OOP code.</p>
+<p>Ideally, when we need to add new features into our object-oriented code, these <strong>changes should only be made in as few places as possible.</strong> If you need to make changes in many other places too, then program development will become much more complicated and expensive as a result because of poor agile design.</p>
+<p><strong>Example:</strong></p>
+<p>Consider a video game that has to be frequently updated to receive new characters. If we have a generalised character class that contains the common attributes and behaviours across all characters in the game (e.g. moving, attacking, defending), then any modifications that add any new characters into the game will mainly require the addition of a single new child class and its specialised behaviours. <strong>The more changes that are required outside of the new child class, the less agile the object-oriented code becomes.</strong></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%202.%20The%20Object-Oriented%20Paradigm/PPs/2.5%20Code%20Design.pptx?d=w30257978c757469f82cf7592900f869f&amp;csf=1&amp;web=1&amp;e=4R9lJx">2.5 Code Design.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-5-code-design" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={30257978-c757-469f-82cf-7592900f869f}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="11962-047.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-049.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

@@ -1,0 +1,201 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.14 Content Management Systems — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 8 (Term 1: Weeks 7-8) Programming for the Web</div>
+<h1 style="margin-top:.2rem">2.14 Content Management Systems</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-14-content-management-systems" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Research, experiment with and evaluate the prevalence and use of web content management systems (CMS)</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Research, explore, and assess the use and popularity of web content management systems (CMS).</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Identify popular CMS platforms and their key features.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Compare the advantages and limitations of different CMS tools.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Evaluate the effectiveness of a CMS for different web development needs.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Web Content Management Systems (CMS) have become an integral part of modern web development, enabling users to create, manage, and modify digital content with minimal technical expertise. This section delves into the role and significance of CMS platforms, their widespread adoption, and evaluates their impact on the web development landscape through research and practical experimentation.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">What is a Web Content Management System (CMS)?</h5>
+<p class="card-text">A Web Content Management System (CMS) is a software application or set of related programs that help users manage digital content. It provides an interface for creating, editing, and publishing content, typically through a web-based platform. CMS platforms are designed to simplify the process of web development by allowing users to manage content without the need for extensive coding knowledge.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/60a14267c17ba361.png" alt="image.png" width="403" height="308" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527540" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Key Features of a CMS</h4>
+<p>&nbsp;</p>
+<table style="border-collapse: collapse; width: 100%; height: 270px; border-style: inset;" border="1">
+<tbody>
+<tr style="height: 53px;">
+<td style="width: 28.7608%; height: 53px;"><strong>Content Creation and Editing</strong></td>
+<td style="width: 71.0556%; height: 53px;">Provides tools like WYSIWYG editors, drag-and-drop interfaces, and media management to create and edit text, images, videos, and more.</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 28.7608%; height: 29px;"><strong>Content Organisation</strong></td>
+<td style="width: 71.0556%; height: 29px;">Includes features such as categories, tags, and menus to structure and organise content effectively.</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 28.7608%; height: 29px;"><strong>Publishing and Scheduling</strong></td>
+<td style="width: 71.0556%; height: 29px;">Allows for content to be scheduled and published at specific times, supporting strategic content release.</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 28.7608%; height: 53px;"><strong>User Management</strong></td>
+<td style="width: 71.0556%; height: 53px;">Supports multiple user roles and permissions, enabling collaboration among content creators, editors, and administrators.</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 28.7608%; height: 53px;"><strong>Themes and Templates</strong></td>
+<td style="width: 71.0556%; height: 53px;">Offers pre-built templates and themes to define the visual appearance of the site, often customisable to suit specific branding requirements.</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 28.7608%; height: 53px;"><strong>Plugins and Extensions</strong></td>
+<td style="width: 71.0556%; height: 53px;">Provides additional functionality through plugins or modules, enabling features such as e-commerce, SEO optimisation, analytics, and more.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h4>Prevalence of CMS Platforms</h4>
+<p>The widespread adoption of CMS platforms is evident across various industries, from small businesses and personal blogs to large-scale enterprises and e-commerce giants. To understand their prevalence, it’s essential to look at statistical data and market trends.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Market Share</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>According to recent surveys, over 60% of websites on the internet use a CMS. WordPress, the most popular CMS, powers more than 40% of all websites globally.</li>
+<li>Other popular platforms include Joomla (2.5% of CMS market share), Drupal (1.7%), and emerging platforms like Ghost and Grav, which cater to specific niches.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Industry Adoption</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>E-commerce: Platforms like Shopify and Magento dominate the e-commerce space, providing specialised tools for product management, payment integration, and marketing.</li>
+<li>Corporate and Enterprise: Contentful, Sitecore, and Adobe Experience Manager are preferred by large enterprises for their robust scalability and advanced features like personalisation and headless CMS capabilities.</li>
+<li>Education and Non-profits: Platforms like WordPress and Joomla are popular due to their low cost and ease of use, enabling institutions and organisations to maintain a professional web presence.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Regional Variations</h3>
+<div class="dp-panel-content">
+<ul>
+<li>While WordPress dominates globally, regional preferences vary. For instance, TYPO3 has a strong presence in Europe, particularly in Germany, while platforms like Wix and Weebly are popular among small businesses in North America for their simplicity and ease of setup.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://kinsta.com/knowledgebase/content-management-system/" target="_blank">What is a content management system (CMS)?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.14 Content Management System" href="https://canvas.kings.edu.au/courses/12951/assignments/204821" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204821" data-api-returntype="Assignment">2.14 Content Management System</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.14%20CMS.pptx?d=w818dd6318be04551b8aaeaeaa129b57b&amp;csf=1&amp;web=1&amp;e=cMhel4">2.14 CMS.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-14-content-management-systems" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={818dd631-8be0-4551-b8aa-eaeaa129b57b}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div><h3 class="sub">After</h3></main>
+<div class="pnrow"><a class="pn" href="12951-054.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-056.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

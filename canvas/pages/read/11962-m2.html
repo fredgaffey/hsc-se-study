@@ -1,0 +1,1168 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 2 (Term 1: Weeks 3-4) Programming Fundamentals — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">11SENX Software Engineering 2025 · module 3 of 17</p>
+<h1>Cycle 2 (Term 1: Weeks 3-4) Programming Fundamentals</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="11962-all.html">Whole course</a><span class="cur">By module</span><a href="../course-11962.html">By lesson</a></div>
+<h3 class="readles">Introduction to Cycle 2</h3>
+<div id="kl_wrapper_3" class="kl_bookmark variation_2 kl_wrapper">
+<div id="kl_banner" class="">
+
+</div>
+<div id="kl_custom_block_1" class="">
+<h3 class=""><i class="fas fa-hand-sparkles" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Introduction</h3>
+<p>Cycle 2 continues the first stage of your syllabus on Software Development. In this fortnight you will look at further methods to help you design and develop algorithms.</p>
+</div>
+<div id="kl_custom_block_3" class="">
+<h3><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Syllabus</h3>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div>
+<div class="nsw-h4" data-kontent-item-id="52f6232c-eb44-4666-a699-339ef7d978f1" data-kontent-element-codename="title">Software development</div>
+<ul class="list-disc mt-3 space-y-0 pl-[1.1875rem]">
+<li data-kontent-item-id="7baa041d-0a66-43bc-a0b8-75c59c3971ac">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Use modelling tools including structure charts, abstraction and refinement diagrams to support top-down and bottom-up design</p>
+</div>
+</li>
+<li data-kontent-item-id="781360ca-6515-4ddb-ba60-912938d859c2">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p><span>Analyse the logic and structure of written algorithms including</span><br><span>-&nbsp;</span><span>determining inputs and outputs</span><br><span>-&nbsp;</span><span>determining the purpose of the algorithm</span><br><span>-&nbsp;</span><span>desk checking and peer checking<br></span><span>-&nbsp;</span><span>determining connections of written algorithms to other subroutines or functions</span></p>
+</div>
+</li>
+</ul>
+</div>
+<div>
+<ul class="list-disc mt-3 space-y-0 pl-[1.1875rem]">
+<li data-kontent-item-id="5faa050c-9ddd-4afe-8472-14c78e70ce40">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Identify procedures and functions in an algorithm</p>
+</div>
+</li>
+<li data-kontent-item-id="27cc6dd3-fac5-45f4-bdc2-4da6f3701372">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Determine typical errors experienced when developing code, including syntax, logic and runtime, and explain their likely causes</p>
+</div>
+</li>
+<li data-kontent-item-id="a2f870ae-8102-492d-8d1a-82b3e65b96d4">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Experiment with object-oriented programming, imperative, logic and functional programming paradigms</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="kl_custom_block_2" class="">
+<h3 class=""><i class="fas fa-comments" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>Activity</h3>
+<p>Starting this fortnight we HIGHLY recommend that you begin to look at the Python programming language and spend some time during the week working on your programming skills. Whilst you work through the modules it would be beneficial for you to complete the '<a class="inline_disabled" href="https://groklearning.com/a/resources/intro-python-1/" target="_blank">Introduction to Programming - Python</a>' Grok learning activity in this cycle.</p>
+</div>
+</div>
+<p>&nbsp;</p><h3 class="sub">During</h3>
+<h3 class="readles">1.6 Modelling tools</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Use modelling tools including structure charts, abstraction and refinement diagrams to support top-down and bottom-up design</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Understand the purpose and benefits of modelling tools in software design.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Explain the purpose of modelling tools in software design and provide examples of their use.</span></li>
+<li><span style="font-size: 13.3333px;">Create and interpret structure charts, abstraction diagrams, and refinement diagrams to represent software systems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Abstraction and refinement are two key concepts in software <strong>design</strong> that play complementary roles in modelling systems with <strong>complex requirements.</strong></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> <strong>&nbsp;Key Terminology</strong></p>
+<ul class="card-text">
+<li>
+<p><span><strong>Abstraction - </strong>The process of<strong> simplifying</strong> complex systems by <strong>only focusing on the essential aspects</strong> while <strong>ignoring irrelevant details.</strong> It involves creating a model that captures the essential characteristics of a system.</span></p>
+<p><span>Abstraction helps manage complexity by <strong>hiding unnecessary details</strong> and exposing only what is relevant to a <strong>particular level of design</strong> or understanding.</span></p>
+</li>
+<li>
+<p><span><strong>Refinement</strong> - The process of elaborating and <strong>adding details to a less detailed or abstract representation.</strong> It involves breaking down a high-level abstraction into more concrete and detailed components.</span></p>
+<p><span>Refinement is necessary for <strong>translating abstract designs into concrete implementations.</strong> It allows developers to gradually specify the details needed to implement and program a system.</span></p>
+</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Relationship between Abstraction and Refinement</strong></h4>
+<p><span>Abstraction and refinement are interconnected processes in the software development life cycle.</span></p>
+<p><span>Initially, you <strong>start with high-level abstractions</strong> to understand and conceptualise the system.</span></p>
+<p><span>As you progress, you <strong>refine these abstractions</strong>, adding details and specificity to move closer to an implementable and programmable solution.</span></p>
+<p><span>In summary, abstraction is about simplifying complexity by creating higher-level models, while refinement is about adding details to these models to make them implementable. Both are essential in designing and building robust, manageable&nbsp;and maintainable software systems.</span></p>
+<p><span>Abstraction helps stakeholders, including clients and programmers, to grasp the overall concept of the software without getting too bogged down in details. Refinement ensures that the abstract design can be translated into a practical, functional, and structurally sound software solution.</span></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<h3 class="card-title">Example</h3>
+<p><span>Imagine you are an architect tasked with designing a new office building.</span></p>
+<p><span>At the beginning of the project, you need to create a high-level abstract conceptual design that captures the essential features of the building, such as:</span></p>
+<ul>
+<li><span> its overall layout</span></li>
+<li><span>the number of floors</span></li>
+<li><span>the general purpose of each space (offices, meeting rooms, etc.).</span></li>
+</ul>
+<p><span>This high-level design represents an <strong>abstraction of the final building</strong>, ignoring specific construction materials, detailed interior design, and other intricate details.</span></p>
+<p><span>As the project progresses, the high-level design needs to be <strong>refined</strong> to provide more <strong>detailed specifications for construction</strong>. Refinement involves breaking down the abstract design into concrete details.</span></p>
+<p><span>For example, you would refine the design by specifying the types of materials to be used for the foundation, walls, and roof. You would also detail the interior design, specifying the layout of each office, the materials for flooring, and the colour scheme.</span></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Top-Down and Bottom-Up Design</strong></h4>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Top-Down</h3>
+<div class="dp-panel-content ">
+<p>Top-down design, starts with the high-level system overview and then progressively breaks it down into smaller, more detailed components.</p>
+<ol style="list-style-type: decimal;">
+<li>Begin with a broad understanding of the entire system</li>
+<li>Decompose the system into subprograms or modules</li>
+<li><span>Further break down each subprogram into smaller modules until reaching a level where the modules are manageable and can be easily implemented</span></li>
+</ol>
+<p><span>Advantages</span></p>
+<ul>
+<li>Provides a clear and structured view of the entire system from the beginning.</li>
+<li>Allows for a better understanding of the system's architecture and organisation.</li>
+<li>Supports early identification of major components and interactions.</li>
+</ul>
+<p>Challenges</p>
+<ul>
+<li>Requires a thorough understanding of the entire system upfront.</li>
+<li>May result in delays in getting started with actual implementation.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Bottom-Up</h3>
+<div class="dp-panel-content ">
+<p>Bottom-up design, starts with the implementation of small, individual components or modules and gradually combines them to create larger systems.</p>
+<ol>
+<li>Begin by implementing small, independent modules or subprograms.</li>
+<li>Combine these modules to create larger, more complex subprograms.</li>
+<li>Continue the process of combining subprograms until the entire system is constructed.</li>
+</ol>
+<p>Advantages</p>
+<ul>
+<li>Allows for early and incremental implementation, providing quicker results.</li>
+<li>Developers can focus on specific, isolated functionalities without needing a complete understanding of the entire system.</li>
+<li>Easier to adapt to changes as development progresses.</li>
+</ul>
+<p>Challenges</p>
+<ul>
+<li>May lead to a lack of a cohesive overall system view until later in the development process.</li>
+<li>Integration challenges may arise when combining independently developed components.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Structure Chart</strong></h4>
+<p>A structure chart is an <strong>abstracted</strong> <strong>graphical representation</strong> of a software system by showing the <strong>separate modules or subroutines that comprise the system</strong> and <strong>their relationship to each other.</strong></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<p class="card-text"><strong>Structure Charts</strong> can be seen as an extension of <strong>Abstraction and Refinement Diagrams</strong>. <strong>Abstraction and Refinement Diagrams</strong>, also called hierarchy charts, are a simple way to show the design of a program. They represent the program in smaller, manageable parts, either from top-down or bottom-up. Each part, or module, is usually numbered to show its position within the overall structure of the design.</p>
+</div>
+</div>
+<p><strong>&nbsp;</strong></p>
+<p>They are represented as a hierarchical diagram, where the top level represents the system as a whole, and each subsequent level represents increasingly detailed and <strong>refined</strong> components of the system. Each component in the structure chart is represented by a rectangular box, and the relationships between components are shown by lines connecting the boxes.</p>
+<p>Structure charts are particularly useful for breaking down a large and complex system into smaller, more manageable pieces, and for identifying the relationships and dependencies between those pieces.</p>
+<p>Further <strong>refinement</strong> for each of the lower-level subroutines can be shown in a separate structure chart, using the same name as the subroutine that you are refining in the main structure chart.</p>
+<p>The chart is read from <strong>top to bottom,</strong> with component modules or subroutines on successively lower levels, indicating these modules or subroutines are called by the module or subroutine above.</p>
+<p>For all modules or subroutines called by a single module or subroutine, the diagram is read from <strong>left to right</strong> to show the order of execution.</p>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3Dac879446-71d1-4ddd-8714-21ac4f87ca77-3047%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+<p style="text-align: center;">&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Structure Chart Example Videos</h3>
+<div class="dp-panel-content ">
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D93d33a7e-929b-41e9-a749-577c2a8f08a6-3043%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D49f655ef-64ca-4e63-9382-02ce1719a79f-3037%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+</div>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EWqDp6RX_9NGnP4pxt9PJbQBtF8vZWZdPtW7N7F_XsdtFw?e=y2aFo0" target="_blank">Structure Charts Intro</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={a4a7836a-ff57-46d3-9cfe-29c6df4f25b4}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Example Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EbIuMRa5ScpJuZ-RAi-2DR8B8A_dR7Z_u_44yTzgSozGlg?e=k5zlOZ" target="_blank">2018 HSC Question</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={16312eb2-49b9-49ca-b99f-91022fb60d1f}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p style="text-align: left;">&nbsp;</p>
+<h4><strong>Data Flow Diagram</strong></h4>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D3e16d1ca-0f03-4f78-a472-5db9fe89f495-3038%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+<p>&nbsp;</p>
+</div>
+<div class="dp-content-block kl_custom_block_2">
+<h4><strong>Data Flow Diagram Example</strong></h4>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/embed.aspx?UniqueId=2186cabb-59d4-4acc-91bc-1629062bbd86&amp;amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;amp;referrer=StreamWebApp&amp;amp;referrerScenario=EmbedDialog.Create</span></div></div>
+<p>&nbsp;</p>
+<h4><strong>Level 0 Data Flow Diagram (Formerly called Context Diagram)</strong></h4>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3Db8f2b2e7-9b17-4d3b-901d-9744e6da8fe8-3051%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation DFD0</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="http://&lt;iframe%20src=%22https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={0d580bbb-202d-40e1-a3fc-3ee6fe00001a}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333%22%20width=%22476px%22%20height=%22288px%22%20frameborder=%220%22&gt;This%20is%20an%20embedded%20&lt;a%20target=%22_blank%22%20href=%22https://office.com%22&gt;Microsoft%20Office&lt;/a&gt;%20presentation,%20powered%20by%20&lt;a%20target=%22_blank%22%20href=%22https://office.com/webapps%22&gt;Office&lt;/a&gt;.&lt;/iframe&gt;" target="_blank">DFD Level 0</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={36ce0561-55bd-432b-993d-5e564ff11b4b}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation DFD1</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EbsLWA0tIOFAo_w-5v4AABoBSzKF9lAPEBjsg5_MPGw1bw?e=bzJtyx" target="_blank">DFD Level 1</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={0d580bbb-202d-40e1-a3fc-3ee6fe00001a}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/kVV1TJ_VR0o?si=aS3oEYKHiz-RQjVJ</span></div></div>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/1OfQ9f9-G7E?si=pt0fpmrwEuksBG9z</span></div></div>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/rP9_MhQ6Z_U?si=stGgmYKkMu8n5DLU</span></div></div>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/xkNc3KD7XPI?si=hzEsK9SZ3RT6GU9Z</span></div></div>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-6-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/ywPu6damVkY?si=WWo4S1nP2eVCyDkS</span></div></div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+<li>MaximEducation</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.6 Modelling tools" href="https://canvas.kings.edu.au/courses/11962/assignments/179168" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179168" data-api-returntype="Assignment">1.6 Modelling tools</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">1.7 Logic and structure</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Analyse the logic and structure of written algorithms including<br class="card-text">- <span class="card-text">determining inputs and outputs</span><br class="card-text">- <span class="card-text">determining the purpose of the algorithm</span><br class="card-text">- <span class="card-text">desk checking and peer checking<br></span>- <span class="card-text">determining connections of written algorithms to other subroutines or functions</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Analyse the logic and structure of written algorithms by identifying inputs, outputs, and purposes, as well as to engage in desk checking and peer checking processes to ensure connections with other subroutines or functions are understood.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Accurately identify inputs and outputs in a given algorithm.</span></li>
+<li><span style="font-size: 10pt;">Clearly understand and articulate the purpose of the algorithm.</span></li>
+<li><span style="font-size: 10pt;">Effectively perform desk checking to verify the correctness of the algorithm.</span></li>
+<li><span style="font-size: 10pt;">Engage in peer checking to receive and provide feedback on algorithm logic and structure.</span></li>
+<li><span style="font-size: 10pt;">Demonstrate the ability to determine how the algorithm connects with other subroutines or functions within a program.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Analysing algorithms to understand their logic and structure is a fundamental skill in software engineering. It involves understanding how a set of instructions (the algorithm) solves a particular problem. A well-analysed algorithm ensures efficiency, clarity, and effectiveness in solving problems.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs-pills-vertical">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Inputs and Outputs</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Inputs</strong>: These are the data or variables that are fed into an algorithm. Understanding inputs is crucial as they directly affect how the algorithm operates.</li>
+<li><strong>Outputs</strong>: These are the results produced by the algorithm. Knowing the desired output helps in shaping the steps of the algorithm.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Algorithm Purpose</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>This involves understanding what the algorithm is designed to achieve. Is it sorting data, solving a mathematical problem, or processing user input?</li>
+<li>Understanding the purpose helps in evaluating the effectiveness of the algorithm and its suitability for a task.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Desk Checking &amp; Peer Checking</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Desk Checking</strong>: This is a manual process of tracing the execution of an algorithm using a sample set of inputs. It helps in understanding the flow and identifying any logical errors.</li>
+<li><strong>Peer Checking</strong>: Involves having another person (preferably a peer) review the algorithm. This collaborative approach can uncover issues that the original author might have missed.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Connections to Subroutines</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Algorithms often interact with other parts of the software, like subroutines or functions. Understanding these interactions is crucial for ensuring the algorithm integrates smoothly into the larger system.</li>
+<li>It’s important to analyse how data is passed between these components and how they affect the overall functionality.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Desk Check Examples (Pseudocode + Flowchart)</h3>
+<div class="dp-panel-content "><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-7-logic-and-structure" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/embed.aspx?UniqueId=0b9c1d73-5222-4f6d-9c8a-527becbb1d39&amp;amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;amp;referrer=StreamWebApp&amp;amp;referrerScenario=EmbedDialog.Create</span></div>
+<div class="dp-content-block kl_custom_block_2">
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-7-logic-and-structure" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/embed.aspx?UniqueId=6edf388c-c90d-48e3-b0de-bb64dfdc8a3d&amp;amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;amp;referrer=StreamWebApp&amp;amp;referrerScenario=EmbedDialog.Create</span></div></div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<div class="dp-content-block kl_custom_block_3"><br>
+<h4><strong>Examples</strong></h4>
+<div class="dp-panels-wrapper dp-tabs dp-panel-active-color-dp-white">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Number Guessing Game</h3>
+<div class="dp-panel-content">
+<p>Given below is psuedocode for a Number Guessing Game.</p>
+<table class="table" style="border-collapse: collapse; width: 98.1447%;" data-active-table="true">
+<tbody>
+<tr>
+<td style="width: 99.9055%;">
+<p><strong>BEGIN</strong> NumberGuessingGame</p>
+<p style="padding-left: 40px;">minNumber = 1</p>
+<p style="padding-left: 40px;">maxNumber = 100</p>
+<p style="padding-left: 40px;">attempts = 0</p>
+<p style="padding-left: 40px;">secretNumber = <span style="text-decoration: underline;">GenerateRandomNumber(minNumber, maxNumber)</span></p>
+<p style="padding-left: 40px;">Display "I have chosen a number between " + minNumber + " and " + maxNumber</p>
+<p style="padding-left: 40px;"><strong>REPEAT</strong></p>
+<p style="padding-left: 80px;">Display "Enter your guess:"</p>
+<p style="padding-left: 80px;">Get userGuess</p>
+<p style="padding-left: 80px;">attempts = attempts + 1</p>
+<p style="padding-left: 80px;"><strong>IF</strong> userGuess &lt; secretNumber <strong>THEN</strong></p>
+<p style="padding-left: 120px;">Display "Too low. Try again."</p>
+<p style="padding-left: 80px;"><strong>ELSEIF </strong>userGuess &gt; secretNumber <strong>THEN</strong></p>
+<p style="padding-left: 120px;">Display "Too high. Try again."</p>
+<p style="padding-left: 80px;"><strong>ELSE</strong></p>
+<p style="padding-left: 120px;">Display "Congratulations! You've guessed the number in " + attempts."</p>
+<p style="padding-left: 80px;"><strong>ENDIF</strong></p>
+<p style="padding-left: 40px;"><strong>UNTIL </strong>userGuess = secretNumber</p>
+<p><strong>END </strong>NumberGuessingGame</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>1. Desk Checking and Peer Checking</strong></p>
+<ul>
+<li><strong>Desk Checking:</strong> This involves manually going through the pseudocode line by line to simulate what would happen during its execution. It helps identify logical errors and ensures that the program's flow makes sense. For example, manually checking that the loop continues until the correct guess is made.</li>
+<li><strong>Peer Checking:</strong> Having another person review the pseudocode can uncover issues the original author might overlook. Peers can provide feedback on the clarity of the logic and suggest improvements or identify bugs, such as ensuring the random number generation is within the specified range.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>2. Inputs and Outputs</strong></p>
+<ul>
+<li><strong>Inputs:</strong> The inputs in this program include the user's guess (<code>userGuess</code>) of the secret number. These are obtained through the <code>Input</code> statement within the loop.</li>
+<li><strong>Outputs:</strong> Outputs consist of prompts and feedback to the user, such as asking for a guess, indicating whether the guess is too low or too high, or congratulating the user upon a correct guess. The output also includes the number of attempts made to guess the correct number.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>3. Determining Connections of Written Algorithms to Other Subroutines or Functions</strong></p>
+<ul>
+<li>The main program connects to the <code>RandomNumberGenerator</code> module through the <code>GenerateRandomNumber(min, max)</code> function. This function is essential for generating the secret number that the user tries to guess. It demonstrates how subroutines or modules can be utilised within a larger program to perform specific tasks, in this case, generating a random number within a defined range.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>4. Purpose of Algorithm</strong></p>
+<ul>
+<li>The primary purpose of this algorithm is to create an interactive number guessing game where the user attempts to guess a randomly generated number within a certain range.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Mystery Program</h3>
+<div class="dp-panel-content">
+<p>An algorithm is included below, however the names of the variables have been obfuscated. It is our job to analyse the algorithm to understand its logic and structure.</p>
+<table style="border-collapse: collapse; width: 98.1447%;" border="1">
+<tbody>
+<tr>
+<td style="width: 99.9055%;">
+<p><strong>BEGIN </strong>MysteryProgram</p>
+<p style="padding-left: 40px;">Display "Enter the first number: "</p>
+<p style="padding-left: 40px;">Get X</p>
+<p style="padding-left: 40px;">Display "Enter the second number: "</p>
+<p style="padding-left: 40px;">Get Y</p>
+<p style="padding-left: 40px;">Display X, Y</p>
+<p style="padding-left: 40px;">Z = X</p>
+<p style="padding-left: 40px;">X = Y</p>
+<p style="padding-left: 40px;">Y = Z</p>
+<p style="padding-left: 40px;">Display X, Y</p>
+<p><strong>END </strong>MysteryProgram</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h4>1. Desk Checking and Peer Checking</h4>
+<ul>
+<li><strong>Desk Checking:</strong> This involves going through the algorithm step-by-step to understand the changes happening to the variables.</li>
+<li><strong>Peer Checking:</strong> By discussing the steps and the effect of the operation with peers, students can share insights or confusions, which can lead to a deeper understanding of the process. This collaborative analysis can help uncover the algorithm's purpose through observation and reasoning.</li>
+</ul>
+<p>Desk Check with X = 1, Y = 2</p>
+<table style="border-collapse: collapse; width: 98.1447%; height: 116px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>Input</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>X</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>Y</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>Z</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>Output</strong></td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 19.9811%; text-align: center; height: 29px;">1</td>
+<td style="width: 19.9811%; text-align: center; height: 29px;">1<strong><br></strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>&nbsp;</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>&nbsp;</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>&nbsp;</strong></td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 19.9811%; text-align: center; height: 29px;">2</td>
+<td style="width: 19.9811%; text-align: center; height: 29px;">1</td>
+<td style="width: 19.9811%; text-align: center; height: 29px;">2<strong><br></strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>&nbsp;</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>&nbsp;</strong></td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 19.9811%; text-align: center; height: 29px;"></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;">1</td>
+<td style="width: 19.9811%; text-align: center; height: 29px;">2</td>
+<td style="width: 19.9811%; text-align: center; height: 29px;"><strong>&nbsp;</strong></td>
+<td style="width: 19.9811%; text-align: center; height: 29px;">1, 2<strong><br></strong></td>
+</tr>
+<tr>
+<td style="width: 19.9811%; text-align: center;"></td>
+<td style="width: 19.9811%; text-align: center;">1</td>
+<td style="width: 19.9811%; text-align: center;">2</td>
+<td style="width: 19.9811%; text-align: center;">1<strong><br></strong></td>
+<td style="width: 19.9811%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 19.9811%; text-align: center;"></td>
+<td style="width: 19.9811%; text-align: center;">2</td>
+<td style="width: 19.9811%; text-align: center;">2</td>
+<td style="width: 19.9811%; text-align: center;">1</td>
+<td style="width: 19.9811%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 19.9811%; text-align: center;"></td>
+<td style="width: 19.9811%; text-align: center;">2</td>
+<td style="width: 19.9811%; text-align: center;">1</td>
+<td style="width: 19.9811%; text-align: center;">1</td>
+<td style="width: 19.9811%; text-align: center;"></td>
+</tr>
+<tr>
+<td style="width: 19.9811%; text-align: center;"></td>
+<td style="width: 19.9811%; text-align: center;">2</td>
+<td style="width: 19.9811%; text-align: center;">1</td>
+<td style="width: 19.9811%; text-align: center;">1</td>
+<td style="width: 19.9811%; text-align: center;">2, 1</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h4>2. Inputs and Outputs</h4>
+<ul>
+<li><strong>Inputs:</strong> The algorithm starts by asking the user for two numbers, <code>X</code> and <code>Y</code>, establishing the initial state of the variables.</li>
+<li><strong>Outputs:</strong> It then presents the values of <code>X</code> and <code>Y</code> both before and after the operation, allowing the user to observe the effect of the algorithm on these variables.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>3. Determining Connections of Written Algorithms to Other Subroutines or Functions</h4>
+<ul>
+<li>The algorithm does not make use of other subroutines or functions</li>
+</ul>
+<p>&nbsp;</p>
+<h4>4. Purpose of Algorithm</h4>
+<ul>
+<li>The purpose of this algorithm is revealed through its execution: it swaps the values of two variables. This is a foundational technique in programming, enabling the handling and manipulation of data in a controlled manner. Understanding how to swap values is crucial in various applications, such as sorting algorithms, where the position of elements needs to be rearranged. The method of using a temporary storage (<code>Z</code>) to hold a value while the swap is performed is a classic solution to avoid data loss during the operation.</li>
+<li><strong>Notice how hard it is to read this algorithm?</strong> This is why it is important to use <strong>meaningful variable names</strong> when designing your algorithms so that another programmer can easily understand your code.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> </strong><strong>&nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.7 Logic and structure" href="https://canvas.kings.edu.au/courses/11962/assignments/179169" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179169" data-api-returntype="Assignment">1.7 Logic and Structure</a></li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">1.8 Procedures and functions</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Identify procedures and functions in an algorithm</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">recognise and understand the use of procedures and functions within an algorithm, including their roles and purposes.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Accurately identify procedures and functions in a given algorithm.</span></li>
+<li><span style="font-size: 13.3333px;">Differentiate between procedures and functions based on their roles and purposes.</span></li>
+<li><span style="font-size: 13.3333px;">Understand the parameters and return values associated with functions.</span></li>
+<li><span style="font-size: 13.3333px;">Recognise the importance of modularisation and code reusability achieved through procedures and functions.</span></li>
+<li><span style="font-size: 13.3333px;">Apply knowledge of procedures and functions to create or improve an algorithm.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p><strong>Procedures and functions are both types of subroutines</strong> and are important components of an algorithm, allowing for <strong>modularisation</strong> and <strong>code reusability</strong>. They help break down complex tasks into <strong>smaller, manageable units</strong>.</p>
+<p>Both procedures and functions help to break down and divide complex algorithms into <strong>smaller</strong> and <strong>more manageable</strong> units that are easier to understand and maintain. They are used to <strong>organise code</strong> into <strong>logical sections</strong> and can be <strong>called multiple times within a program&nbsp;</strong>to prevent code duplication (repeated lines code).</p>
+<p>&nbsp;</p>
+<p>Watch from <span style="text-decoration: underline;"><strong>1:36</strong></span></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-8-procedures-and-functions" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/embed.aspx?UniqueId=199bef54-cd1d-473d-818d-c861680dfea6&amp;amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;amp;referrer=StreamWebApp&amp;amp;referrerScenario=EmbedDialog.Create</span></div></div>
+<p>&nbsp;</p>
+<p>Although procedures and functions serve similar purposes, there are some <strong>key differences between the two.</strong></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> </i> <strong>&nbsp;Key Terminology</strong></p>
+<ul class="card-text">
+<li><strong>Functions</strong> - Blocks of code that take input(s), perform a specific task, and <strong>return a value. </strong>The primary purpose of a function is to <strong>produce a value based on the inputs provided</strong>, which can then be used in other parts of the program.</li>
+<li><strong>Procedures</strong> -Also known void functions, procedures are blocks of code that take input(s), perform a specific task <strong>but do not return a value. </strong>The primary purpose of a function is to <strong>only execute commands.</strong></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4><strong>Python Example</strong></h4>
+<p>Here's a simple Python algorithm that uses both procedures and functions.</p>
+<p><img src="../../assets/74bc18a7536a3611.png" alt="image.png" width="404" height="269" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197672" data-api-returntype="File" loading="lazy"></p>
+<p>In this example, we have two main components: a function and a procedure.</p>
+<ol>
+<li>
+<p><strong>Function - <code>greet(name)</code>:</strong></p>
+<ul>
+<li>A function is a block of code that takes input(s), performs a specific task, and returns a value.</li>
+<li>In this case, the <code>greet()</code> function takes a single input <code>name</code> and returns a formatted string with a greeting message.</li>
+<li>Functions are identified by the <code>def</code> keyword, followed by the function name, parameters in parentheses, and a colon.</li>
+<li>Functions have a <code>return</code> statement, which specifies the value to be returned to the caller.</li>
+</ul>
+</li>
+<li>
+<p><strong>Procedure - <code>display_greeting(greeting)</code>:</strong></p>
+<ul>
+<li>A procedure, also known as a subroutine or void function, is a block of code that performs a specific task but does not return a value.</li>
+<li>In this example, the <code>display_greeting()</code> procedure takes a single input <code>greeting</code> and prints the greeting message to the console.</li>
+<li>Like functions, procedures are identified by the <code>def</code> keyword, followed by the procedure name, parameters in parentheses, and a colon.</li>
+<li>Procedures <strong>do not</strong> have a <code>return</code> statement</li>
+</ul>
+</li>
+</ol>
+<p>You can identify procedures and functions in a Python algorithm by looking for the <code>def</code> keyword and checking for the presence or absence of a <code>return</code> statement. <strong>Functions return a value, while procedures do not.</strong></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Complete <a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank">Python Introduction 8</a> on EdStem</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div>
+<h3 class="readles">1.9 Error checking</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Determine typical errors experienced when developing code, including syntax, logic and runtime, and explain their likely causes</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Develop the ability to recognise and explain common errors encountered during code development, including syntax, logic, and runtime errors, as well as their likely causes.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">Correctly identify and categorise errors as syntax, logic, or runtime.</span></li>
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">Analyse and explain the cause of each type of error.</span></li>
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">Apply knowledge of common error causes to troubleshoot and resolve coding issues.</span></li>
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">Demonstrate improved code quality by avoiding or quickly addressing typical errors during development.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Developing software involves a range of challenges and errors are common throughout the process. These errors can broadly be classified into three main types:</p>
+<ul>
+<li>Syntax Errors</li>
+<li>Logic Errors</li>
+<li>Runtime Errors</li>
+</ul>
+<p>Understanding and identifying syntax, logic, and runtime errors are essential skills for any programmer. By learning about these errors and their causes, you'll be better equipped to debug and improve your code.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Syntax Errors</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Syntax errors</strong> occur when your code <strong>violates the rules of the programming language.</strong> In other words, you've made a mistake in the way you've written the code.</li>
+<li>Common syntax errors include missing or extra punctuation (such as brackets, commas, or quotes), incorrect indentation, or using an incorrect keyword. All syntax errors will be detected as the source code is translated into machine code.</li>
+<li>The translator, normally an interpreter or a compiler, is unable to understand code that contains one or more syntax errors.</li>
+<li>To fix syntax errors, carefully review your code and ensure you're following the programming language's strict rules.</li>
+</ul>
+<p>Take a look at the code snippet below:</p>
+<p><img src="../../assets/425912bf804fdb12.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197009" data-api-returntype="File" loading="lazy"></p>
+<p><span>In this example, there is a syntax error due to a missing closing quotation mark and parenthesis <code>")</code> on line 4. The correct line should be:</span></p>
+<p><img src="../../assets/8ecef0909a7c319a.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196999" data-api-returntype="File" loading="lazy"></p>
+<p><span>Syntax errors occur when the code doesn't follow the language's grammar rules. In this case, the string "Alice" should be enclosed in quotation marks, and the function call should end with a closing parenthesis. The Python interpreter cannot execute the code due to this error and will raise a <code>SyntaxError</code>.</span></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Logic Errors</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Logic errors</strong> occur when your code runs without syntax errors, but it <strong>doesn't produce the expected output or behaviour</strong>. This usually happens because the code's logic is flawed, even though it's written correctly in terms of syntax.</li>
+<li>Common logic errors include incorrect calculations, using the wrong variable, off-by-one errors (e.g., loops that run one too many or too few times), and incorrect conditional statements.</li>
+<li>Logic errors can be more challenging to find and fix, as the program will still run, but the results will be incorrect. To fix logic errors, review your code's logic and consider using debugging tools, print statements, or test cases to help identify the issue.</li>
+</ul>
+<p>Take a look at the code snippet below:</p>
+<p><img src="../../assets/1170b6e5207af28b.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197002" data-api-returntype="File" loading="lazy"></p>
+<p><span>In this example, there is a logic error on line 6, where the average calculation <strong>adds </strong>the total sum of the numbers with the length of the numbers list instead of <strong>dividing </strong>them. The average of [2, 4, 6, 8, 10] is not <code>35</code>, it should be <code>6</code>.</span></p>
+<p><span>The correct line should be:</span></p>
+<p><img src="../../assets/e810b2e4ed659ca1.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197012" data-api-returntype="File" loading="lazy"></p>
+<p><span>Logic errors occur when the code runs without any syntax or runtime errors, but the output is not what was intended. In this case, the program incorrectly calculates the average of a list of numbers. The error is in the program's logic, as the calculation does not match the intended output.</span></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Runtime Errors</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Runtime errors</strong> occur when your program encounters a serious problem while it's running, causing it to crash or terminate unexpectedly.</li>
+<li>Common runtime errors include dividing by zero, accessing an out-of-bounds index in an array, or attempting to use a null or uninitialised object or variable.</li>
+<li>These errors often stem from incorrect assumptions about the input data, unexpected situations, or misuse of resources.</li>
+<li>To fix runtime errors, add error handling to your code (e.g., using if-statements or try-except blocks in Python) to manage exceptions gracefully, and validate input data to ensure it meets your program's requirements.</li>
+</ul>
+<p>Take a look at the code snippet below:</p>
+<p><img src="../../assets/0c865dc68713dfcd.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197016" data-api-returntype="File" loading="lazy"></p>
+<p><span>In this example, there is a runtime error due to dividing by zero on line 4</span><span>.</span></p>
+<p><span>We can handle this gracefully without the program crashing by preventing the division from occurring if the denominator is 0 (and giving the user an appropriate error message):</span></p>
+<p><img src="../../assets/3eb8bc1d69c8c6f6.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196993" data-api-returntype="File" loading="lazy"></p>
+<p><span>Runtime errors occur when the code has correct syntax but encounters a problem during execution. In this case, the program attempts to divide by zero, which is an illegal operation in mathematics. Python raises a </span><code>ZeroDivisionError</code><span> when encountering this issue. To fix the runtime error, you should ensure that the denominator is never equal to zero before performing the division. If the denominator is zero, then we must handle the error gracefully to stop the program from crashing.</span></p>
+</div>
+</div>
+</div>
+<p style="text-align: left;">&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-9-error-checking" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/embed.aspx?UniqueId=abaf0e91-189a-45d6-b75b-bf87cdc04de7&amp;amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;amp;referrer=StreamWebApp&amp;amp;referrerScenario=EmbedDialog.Create</span></div></div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.9 Error Checking" href="https://canvas.kings.edu.au/courses/11962/assignments/179170" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179170" data-api-returntype="Assignment">1.9 Error Checking</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">1.10 Programming paradigms</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Experiment with object-oriented programming, imperative, logic and functional programming paradigms</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Explore different programming paradigms - object-oriented, imperative, logic, and functional - to understand their unique approaches and apply them in various programming situations.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Understand the key concepts and principles of each programming paradigm: object-oriented, imperative, logic, and functional.</span></li>
+<li><span style="font-size: 13.3333px;">Recognise and explain the differences and advantages of each paradigm.</span></li>
+<li><span style="font-size: 13.3333px;">Implement simple examples using each programming paradigm.</span></li>
+<li><span style="font-size: 13.3333px;">Demonstrate the ability to choose an appropriate paradigm for a given programming task.</span></li>
+<li><span style="font-size: 13.3333px;">Apply knowledge of different paradigms to analyse and compare existing code examples.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p class="dp-has-icon">A <strong>paradigm </strong>refers to a way of <strong>programming thinking.</strong> It can be described as a model or philosophical/theoretical framework. A different approach under which laws, theories and generalisations are produced. We will be looking at the four major programming paradigms:</p>
+<ul>
+<li>
+<p>Imperative</p>
+</li>
+<li>
+<p>Object Oriented</p>
+</li>
+<li>
+<p>Logic</p>
+</li>
+<li>
+<p>Functional</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">Von Neumann Architecture</h5>
+<p>The <strong>Von Neumann Architecture</strong> is the most common hardware architecture. This architecture stores a program in memory as a sequence of low-level instructions and executes them sequentially in a predetermined sequence inside the Central Processing Unit (CPU).</p>
+<p>The architecture has led to the development of <strong>imperative </strong>programming languages. So far in this course, you have been programming using the <strong>imperative paradigm.</strong></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Imperative</h3>
+<div class="dp-panel-content ">
+<p><strong>Imperative programming </strong>focuses on the use of variables, assignment statements, control structures, data structures and algorithms.</p>
+<p>An imperative language uses variables and data structures to model memory locations. The movement of this data is achieved through assignment statements and control structures. They are combined together into an algorithm to organise the procedures.</p>
+<p>It is good at solving <strong>logical and mathematical problems</strong> using inputs, processing and outputs as distinct individual components. However, our brains work differently as they combine these components to solve more complex problems. <strong>Other paradigms can have a more natural method of solving problems.</strong></p>
+<p>&nbsp;</p>
+<p><strong>Difficulty Solving Certain Types of Problems</strong></p>
+<ul>
+<li>Computers were initially used to solve mathematical problems. Imperative programs are not good at providing multiple answers to problems but are good at mathematical and arithmetic solutions.</li>
+<li>However, real life problems cannot be solved using imperative languages (i.e. AI, Voice Recognition/Communication, Medical Diagnosis, Predictions, etc). Other paradigms are needed for solutions with a variety of outcomes and making judgements based on experience and intuition.</li>
+</ul>
+<p><strong>Need to Specify Code for Every Individual Process</strong></p>
+<ul>
+<li>Imperative programs require every part of the program to be written before the final product will operate correctly. Whereas other paradigms can infer a solution, run even when incomplete and react to changing needs without modification.</li>
+</ul>
+<p><strong>Difficulty of Coding for Variability</strong></p>
+<ul>
+<li>Imperative programs have modules that can be reused but are not an integral part of the paradigm. Imperative programs could be difficult to adapt to changing requirements.</li>
+<li>Other paradigms can encourage the re-use of modules to solve similar problems and can contain a processing component that works on different sets and types of data.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Object-Oriented</h3>
+<div class="dp-panel-content ">
+<p><strong>Object-Oriented programming</strong> focuses on the use of objects, classes, attributes, methods, variables, control structures, instantiation, encapsulation, inheritance, polymorphism (overloading or creating variation) and abstraction.</p>
+<p><span>Object Oriented languages work with objects that communicate with each other using methods. Each object is a separate entity that is part of a class of objects. Subclasses can be created using inheritance. Objects also use encapsulation which is hiding the data from other objects.</span></p>
+<p><span>Object oriented languages are excellent for <strong>creating encapsulated code</strong> that is very easily reused in other applications, and is easily tested for bugs.</span></p>
+<p><strong>Classes</strong></p>
+<ul>
+<li>A Class outlines a template from which Objects are created, like a technical blueprint from which different types of chairs are created. A Class defines how similar objects are created and an Object is the entity of which is an instance of the Class.</li>
+</ul>
+<p><strong>Attribute</strong></p>
+<ul>
+<li>An Attribute is a variable in a Class that describes the features of that Class.</li>
+</ul>
+<p><strong>Method</strong></p>
+<ul>
+<li>A method is a function that can be called to help describe the functionality of an Object (i.e. string.upper())</li>
+</ul>
+<p><strong>Class vs Object</strong></p>
+<ul>
+<li>A class is a template for creating an object whereas an object is an instance of a class. A class can be described as a logical entity as it contains attributes that describe the features of the object whereas objects are physical entities that are the result of a class' attributes. A class is declared once from where multiple objects can be created.</li>
+</ul>
+<p><strong>Constructor</strong></p>
+<ul>
+<li>A constructor is a subroutine in object oriented programming that is used to create an object from a class. It ensures that the new object is valid by giving the object initial values in its variables.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Logic</h3>
+<div class="dp-panel-content">
+<p>Logic programming involves making decisions based on the rules and facts that it is given. It focuses on the use of variables, facts, rules, goals, inference engine (infers using previous knowledge), forward chaining, backward chaining, heuristics.</p>
+<p>A logic language has a database of facts and rules, making decisions based on the facts and rules that it is given. Solutions can be arrived at by using forward or backward chaining that uses these rules and facts. Logic languages try to <strong>simulate the operations of the brain</strong> where it makes decisions based on the rules.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Functional</h3>
+<div class="dp-panel-content">
+<p><strong>Functional programming</strong> focuses on the use of functions to create programs. By writing programs that <strong>rely on functions instead of individual statements</strong>, <span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">we can build software in a way that emphasises clarity, reusability, and predictability. In the functional programming paradigm, the emphasis is on expressing computations as the <strong>evaluation of functions</strong>, treating them as <strong>fundamental building blocks.</strong></span></p>
+<p>This approach encourages a style of coding where functions are designed to take inputs and produce outputs without altering any external state or relying on variables outside their scope. This makes it easier to understand and reason about the behaviour of functions, leading to more <strong>maintainable and bug-resistant code.</strong></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Emerging Technologies</strong></h4>
+<p>The increasing speed of technology has allowed programming languages to remove the programmer further away from machine code. Programming tools remove the need to interact with low-level CPU processes. Now, software development is more of an intuitive process.</p>
+<p>Mobile technology has increased the <strong>need to use different paradigms.</strong> Different paradigms are able to compartmentalise code and add new functionality easily. Different architectures (i.e. quantum computers) may work more efficiently with declarative paradigms compared to imperative. Paradigms may be suited to more logical human based processes.</p>
+<p>&nbsp;</p>
+<table style="border-collapse: collapse; width: 100%; height: 145px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 33.3024%; height: 29px;"><strong>Paradigm</strong></td>
+<td style="width: 33.3024%; height: 29px;"><strong>Strengths</strong></td>
+<td style="width: 33.3024%; height: 29px;"><strong>Weaknesses</strong></td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.3024%; height: 29px;">Imperative</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>Efficient</li>
+<li>Close to the machine hardware</li>
+<li>Popular</li>
+<li>Familiar</li>
+</ul>
+</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>Makes debugging harder</li>
+<li>Abstraction is more limited</li>
+<li>Order is crucial, which doesn't always suit itself to problems</li>
+<li>Code is not ideal for re-use</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.3024%; height: 29px;">Object-Oriented</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>Very easy to re-use code and extend it</li>
+<li>High degree of modularity (easier to understand and maintain)</li>
+<li>Inheritance saves the re-rewriting of intermitted attributes that are already defined in classes and subclasses</li>
+</ul>
+</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>It only benefits problems with the need for re-usable code and those that are not sequentially driven</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.3024%; height: 29px;">Logic</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>The system solves the problem, so the programming steps themselves are kept to a minimum</li>
+<li>Proving the validity of a given program is simple</li>
+</ul>
+</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>Difficult to code complex programs</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.3024%; height: 29px;">Functional</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>Focus on high-level design</li>
+<li>Flexible and reusable</li>
+<li>Easier to test and debug</li>
+<li>Easily understood by a human as the code is clear and concise</li>
+</ul>
+</td>
+<td style="width: 33.3024%; height: 29px;">
+<ul>
+<li>Used less than other paradigms (usually in combination with other paradigms)</li>
+<li>More memory usage</li>
+<li>Less expertise and tools that support this paradigm</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h4><strong>OOP in Python</strong></h4>
+<p><span>We will explore some of the fundamental concepts of OOP, demonstrating how to create a class in Python</span> and use that class as an object.</p>
+<p><strong>Classes</strong></p>
+<p>A class is a user-defined blueprint that defines a set of attributes and methods.</p>
+<p><strong> Attributes and Methods</strong></p>
+<p>Attributes are variables that store data, while methods are functions that perform actions on the data. These are defined within the blueprint of a class.&nbsp;</p>
+<p><strong>Objects</strong></p>
+<p>An object is a self-contained unit that consists of attributes and methods from a class that can be used in the program. These objects are instances of classes (i.e. objects are created from classes).</p>
+<p>&nbsp;</p>
+<p><strong>Creating a Class</strong></p>
+<p><span>In Python, a class is defined using the </span><code>class</code><span> keyword. The class body contains attributes and methods. For example:</span></p>
+<p><span><img src="../../assets/55fea7152786e3f0.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197075" data-api-returntype="File" loading="lazy"></span></p>
+<p>&nbsp;<span>The </span><code>__init__</code><span> method initialises the object's attributes when the object is created.</span></p>
+<p>&nbsp;</p>
+<p><strong>Instantiating (Creating) Objects</strong></p>
+<p><span>Objects are created by instantiating a class. For example:</span></p>
+<p><span><img src="../../assets/3d001531e021fae1.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197091" data-api-returntype="File" loading="lazy"></span></p>
+<p>Notice how the function arguments <code>"Buddy"</code> and <code>3</code> both follow the order of the function parameters of the <code>__init__</code> method.</p>
+<p>&nbsp;</p>
+<p><strong>Accessing Attributes and Methods</strong></p>
+<p>Attributes and methods are accessed using the dot <code>.</code> notation. For example:</p>
+<p><img src="../../assets/9caf52d552fd961a.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196978" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Full Code</strong></p>
+<p><img src="../../assets/ba2e8d78eae3f3d0.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196985" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-10-programming-paradigms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/_4wvIZnKUvY?si=aGgpNfI8AFZR08Cf</span></div></div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.10 Programming paradigms" href="https://canvas.kings.edu.au/courses/11962/assignments/179130" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179130" data-api-returntype="Assignment">1.10 Programming paradigms</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Complete <a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank">intro to Python 2</a> on EdStem</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EY66ayfNs7hChqng_a10YBcBeYkP7mco4Mzz7zIgVmyQNQ?e=9Nc1w9" target="_blank">1.10 Programming paradigms</a></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-10-programming-paradigms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={276bba8e-b3cd-42b8-86a9-e0fdad746017}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div><h3 class="sub">After</h3>
+<h3 class="readles">Assignment — Cycle 2 spaced repetition</h3>
+<p><em>[no description]</em></p><p><strong>Points:</strong> 20</p>
+<div class="readnav"><a href="11962-m1.html">← previous module</a><a href="../course-11962.html">all modules</a><a href="11962-m3.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

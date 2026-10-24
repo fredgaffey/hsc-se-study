@@ -1,0 +1,330 @@
+{
+  "exam": "12SEN_Cycle11",
+  "syllabus": "Software Engineering",
+  "publisher": null,
+  "topics": [
+    "Software Automation"
+  ],
+  "outcomes": [
+    "SE-12-09",
+    "SE-12-05",
+    "SE-12-03",
+    "SE-12-06",
+    "SE-12-07"
+  ],
+  "status": "LIVE",
+  "results_released": true,
+  "submitted": null,
+  "started": null,
+  "duration_minutes": null,
+  "markers": [
+    "TKS CST"
+  ],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/b889defd-aaaf-4c15-acc9-e81e5d5b8ea9",
+  "marking_session_id": "b889defd-aaaf-4c15-acc9-e81e5d5b8ea9",
+  "exam_id": "a4f8c39c-c19d-45f1-abb5-e18cf1b79c70",
+  "session_id": "3687dca9-9406-47e0-a706-567390905a22",
+  "total_mark": null,
+  "parts_answered": 0,
+  "parts_marked": 0,
+  "parts_total": 5,
+  "total_available": 12,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "53173dbb-45f0-457a-ab93-7cd22ab9301b",
+      "title": "Models of Training ML (SA, TKS 2025)",
+      "topic": "Models of Training ML",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "62c8717f-d0f9-4091-8f3d-fd90e3101902",
+          "part": "Part 1",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Evaluate the role of semi-supervised support vector machines (S3VM) within the framework of software automation.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 120
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Clearly evaluates the role of semi-supervised support vector machines (S3VM) within the framework of software automation."
+            },
+            {
+              "marks": "3",
+              "criterion": "Describes the role of semi-supervised support vector machines (S3VM) within the framework of software automation."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines how S3VMs are used within software automation."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Semi-supervised support vector machines (S3VM) play an influential role in software automation, particularly in the area of quality assurance. S3VMs utilise the structured framework of support vector machines, expanded to integrate both labelled and unlabelled data. They help in automating the process of detecting software defects by learning from a limited set of previously identified bugs and a larger set of unlabelled code. This method optimises the testing phase by predicting potential issues in unlabelled data, thus improving the efficiency and reliability of quality assurance processes. By automating defect prediction, S3VMs minimise manual testing efforts and accelerate the development cycle, ensuring higher software quality with less resource expenditure."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "a9959ac6-3817-43a0-b856-5e83fb4b7ec9",
+      "title": "Decision Tree (Draw/MC, TKS 2025)",
+      "topic": "Decision Tree",
+      "label": "Draw/MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A city health department wants to create an intelligent system that advises residents on daily health precautions based on air quality and personal health status.\n\n1.  If the air quality index **(AQI)** is **above 100**, check the **sensitivity of the person** (e.g., asthma, elderly).\n    \n    -   If the person is **sensitive**, **stay indoors** and **use an air purifier**.\n        \n    -   If the person is **not sensitive**, check the **availability of a mask**.\n        \n        -   If a mask is **available**, **wear a mask.**\n            \n        -   If a mask is **not available**, **limit outdoor exposure**.\n            \n2.  If the **AQI** is **100 or below**, check the **UV index**.\n    \n    -   If the **UV index is high (above 7)**, **wear sunscreen and sunglasses**.\n        \n    -   If the **UV index is low**, **enjoy outdoor activities freely**.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "332bff30-9e41-434e-9704-f14bf7d9b63e",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "DRAWING_V2",
+          "prompt": "Construct a decision tree to represent the logical process used by the health precaution suggestion intelligent system.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Draws a substantially correct decision tree showing all rules and actions"
+            },
+            {
+              "marks": "2",
+              "criterion": "Draws a decision tree showing understanding of some rules and actions"
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies a feature of a decision tree"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "![](assets/68e47f0f-c48f-4bac-b6fb-e2786a0b98d4.png)",
+          "sample_answer_images": [
+            "assets/68e47f0f-c48f-4bac-b6fb-e2786a0b98d4.png"
+          ]
+        },
+        {
+          "part_id": "ad038928-e33b-4fed-8fc3-6361e616e8b2",
+          "part": "Part B",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "The AQI is 120. The person has asthma. What should they do?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Go Jogging",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Wear a mask and go outside",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Wear sunscreen and sunglasses",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Stay indoors and use an air purifier",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        },
+        {
+          "part_id": "d3407b1f-4fc3-42f0-9077-a609233ee3c8",
+          "part": "Part C",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "The AQI is 85, and the UV index is 9. What should be advised?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Stay indoors",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Wear sunscreen",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Limit outdoor exposure",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Enjoy outdoor activities freely",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "6caaa737-a26c-4d51-9fef-5e824e28cff0",
+      "title": "Types of Machine Learning Algorithms (SA, TKS 2025)",
+      "topic": "Types of Machine Learning Algorithms",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "eff8a65b-41e6-482f-874e-795f25260d9e",
+          "part": "Part 1",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe the role of logistic regression in enhancing the performance of spam detection systems.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 100
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes the role of logistic regression in enhancing the performance of spam detection systems."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines how logistic regression can enhance the performance of spam detection systems."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "In spam detection systems, logistic regression serves as a robust algorithm to classify emails based on textual content, metadata, and historical interaction data. Logistic regression takes features such as frequency of certain spam-indicative words, the presence of links, sender information, and other patterns to output a probability score indicating the likelihood of an email being spam. By training the model on a labelled dataset of emails, the logistic regression model learns the boundaries between 'spam' and 'not spam', helping filter incoming emails accurately. Over time, its adaptive nature ensures that the system stays resilient against evolving spam tactics, maintaining high detection performance and enhancing user experience by reducing false positives and negatives."
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "Models of Training ML": {
+      "mark": 0,
+      "available": 4
+    },
+    "Decision Tree": {
+      "mark": 0,
+      "available": 5
+    },
+    "Types of Machine Learning Algorithms": {
+      "mark": 0,
+      "available": 3
+    }
+  }
+}

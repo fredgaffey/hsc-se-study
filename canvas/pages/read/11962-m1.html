@@ -1,0 +1,1187 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 1 (Term 1: Weeks 1-2) Programming Fundamentals — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">11SENX Software Engineering 2025 · module 2 of 17</p>
+<h1>Cycle 1 (Term 1: Weeks 1-2) Programming Fundamentals</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="11962-all.html">Whole course</a><span class="cur">By module</span><a href="../course-11962.html">By lesson</a></div>
+<h3 class="readles">Introduction to Cycle 1</h3>
+<div id="kl_wrapper_3" class="kl_bookmark variation_2 kl_wrapper">
+<div id="kl_banner" class="">
+
+</div>
+<div id="kl_custom_block_1" class="">
+<h3 class=""><i class="fas fa-hand-sparkles" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Introduction</h3>
+<p>The first section of your syllabus looks at programming fundamentals and designing algorithms. These dot points will cover an introduction to software engineering and programming principles. This knowledge will then underpin the practical work that you will undertake in creating your own products.</p>
+</div>
+<div id="kl_custom_block_3" class="">
+<h3><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Syllabus</h3>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div>
+<div class="nsw-h4" data-kontent-item-id="52f6232c-eb44-4666-a699-339ef7d978f1" data-kontent-element-codename="title">Software development</div>
+<ul class="list-disc mt-3 space-y-0 pl-[1.1875rem]">
+<li data-kontent-item-id="7baa041d-0a66-43bc-a0b8-75c59c3971ac">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Explore fundamental software development steps used by programmers when designing software</p>
+</div>
+<div class="bold mb-3">Including:</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-997nid">
+<ul>
+<li>requirements definition</li>
+<li>determining specifications</li>
+<li>design</li>
+<li>development</li>
+<li>integration</li>
+<li>testing and debugging</li>
+<li>installation</li>
+<li>maintenance</li>
+</ul>
+</div>
+</li>
+<li data-kontent-item-id="781360ca-6515-4ddb-ba60-912938d859c2">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Research and evaluate the prevalence and use of online code collaboration tools</p>
+</div>
+</li>
+</ul>
+</div>
+<div>
+<div class="nsw-h4" data-kontent-item-id="f9d7016a-6bf1-4264-90e9-c64be6835cdb" data-kontent-element-codename="title">Designing algorithms</div>
+<ul class="list-disc mt-3 space-y-0 pl-[1.1875rem]">
+<li data-kontent-item-id="5faa050c-9ddd-4afe-8472-14c78e70ce40">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Apply computational thinking and algorithmic design by defining the key features of standard algorithms, including sequence, selection, iteration and identifying data that should be stored</p>
+</div>
+</li>
+<li data-kontent-item-id="27cc6dd3-fac5-45f4-bdc2-4da6f3701372">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Apply divide and conquer and backtracking as algorithmic design strategies</p>
+</div>
+</li>
+<li data-kontent-item-id="a2f870ae-8102-492d-8d1a-82b3e65b96d4">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Develop structured algorithms using pseudocode and flowcharts, including the use of subprograms</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/introduction-to-cycle-1" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/3ts5GSnsz8E?si=2qRpi61f7ieN1F9C</span></div></p>
+<p>&nbsp;</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="kl_custom_block_2" class="">
+<h3 class=""><i class="fas fa-comments" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>Discussion</h3>
+<p><strong>Before you begin the unit, let us know any programming knowledge or skills that you currently possess leading into this course. Post in the comment box below your thoughts.</strong></p>
+<p><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/introduction-to-cycle-1" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fdiscussions.atomicjoltappsau.com%2Flti_launches%2FH73sTYnnjNucjAdopowvnYXL</span></div></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<p>&nbsp;</p><h3 class="sub">During</h3><h3 class="sub">Software Development</h3>
+<h3 class="readles">1.1 Software Development Steps</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Explore fundamental software development steps used by programmers when designing software including:</p>
+<ul>
+<li class="card-text">requirements definition</li>
+<li class="card-text">determining specifications</li>
+<li class="card-text">design</li>
+<li class="card-text">development</li>
+<li class="card-text">integration</li>
+<li class="card-text">testing and debugging</li>
+<li class="card-text">installation</li>
+<li class="card-text">maintenance</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text" style="list-style-type: disc;">
+<li><span style="font-size: 10pt;">be able to explore the fundamental steps involved in software development and evaluate their impact on software design and quality.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">describe the different steps involved in software development and provide examples of their use in different contexts.</span></li>
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">explain how each step contributes to the overall software development process and the quality of the final product.</span></li>
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">evaluate the importance of software development methodologies and provide evidence to support their arguments.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Software development follows a structured process made up of clearly defined stages. Each stage must be completed before moving on to the next to ensure the project progresses smoothly. This is especially important because development teams consist of individuals with different roles and expertise. For instance, coding cannot begin until a detailed plan for the solution has been created. The people responsible for writing the code are often not the same as those who handle the planning and design.</p>
+<p>&nbsp;</p>
+<p><img src="../../assets/46db7a3141fd0f65.png" alt="SDLC Diagram.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197909" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs dp-panel-heading-p-2">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Requirements Definition</h3>
+<div class="dp-panel-content ">
+<p>The first step in the software development process is to <strong>clearly and accurately understand the requirements</strong> of the problem. Any mistakes or omissions at this stage can be extremely costly to fix later in the development process. System analysts, who specialise in gathering and defining requirements, play a key role here.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> </i> <strong>&nbsp;Key Terminology</strong></p>
+<ul class="card-text">
+<li><strong>Requirements</strong> - The specific features, characteristics, or behaviours that a system needs to meet its intended purpose. Each requirement must be clearly defined and testable to ensure it can be verified.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>During this stage, the <strong>requirements of the system are identified and agreed upon with the client</strong>. It is crucial to fully understand the users' needs, expectations, and objectives before beginning the design of the software.</p>
+<p>Requirements define the specific features, functions, and behaviours the system must have to fulfil its purpose. For a project to be successful, each requirement must be clear, accurate, and measurable, as these requirements will later serve as the basis for testing the final solution.</p>
+<p>&nbsp;</p>
+<p><img src="../../assets/67f1391959c35a77.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197992" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Software Specifications</h3>
+<div class="dp-panel-content ">
+<p>After identifying what the software needs to accomplish (the <strong>requirements</strong>), the next step is figuring out how to make it happen. This is where <strong>specifications</strong> come into play. They act as detailed, technical instructions for turning the requirements into a working solution. While requirements focus on <strong>what</strong> the software should do from a user or business perspective, specifications explain the <strong>how</strong> in technical detail.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> </i> <strong>&nbsp;Key Terminology</strong></p>
+<ul class="card-text">
+<li><strong>Functional specifications</strong> - The specific <strong>actions</strong> the software will perform. For instance, if the software needs to calculate the <strong>average</strong> of student scores, the functional specification would outline how the scores will be entered (<strong>input</strong>), how the calculation will be done (<strong>process</strong>), and how the result will be displayed (<strong>output</strong>).<br><br></li>
+<li><strong>Non-functional specifications -</strong> The overall <strong>qualities</strong> of the software, such as <strong>performance</strong>, <strong>security</strong>, and <strong>usability</strong>. These standards determine <strong>how well</strong> the software operates rather than what it does.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Specifications</strong> are crucial because they translate the broader goals of the requirements into actionable plans for developers. They provide the detailed framework needed to ensure the software is built correctly and fulfils its purpose.</p>
+<p><strong>Refining requirements into specifications</strong> involves breaking down each requirement and defining it in precise technical terms. For example, a general request like "I want fast software" might be refined to specify "The software should process data in under three seconds."</p>
+<p>Throughout the development process, <strong>specifications</strong> serve as a <strong>benchmark</strong> for evaluating the software. They guide developers and ensure that the final product meets the agreed-upon <strong>standards</strong> and <strong>expectations</strong>.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/ad530de358485fb9.png" alt="image.png" width="521" height="380" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197995" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Design</h3>
+<div class="dp-panel-content">
+<p><strong>Design</strong> involves planning the structure of the software, including its <strong>architecture</strong>, tools, programming languages, <strong>data models</strong>, and <strong>user interface</strong>.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> </i> <strong>&nbsp;Key Terminology</strong></p>
+<ul class="card-text">
+<li><strong>Algorithms</strong> - Step-by-step instructions to solve a problem or complete a task. To design an algorithm, <strong>break down</strong> the problem into smaller steps and <strong>test</strong> it with different inputs to ensure it works correctly.</li>
+<li><strong>Subroutines -</strong> Simplify complex tasks by dividing them into smaller, manageable parts. Learn how to pass data into and out of subroutines using <strong>parameters</strong> and <strong>variables</strong>. Use testing methods like <strong>drivers</strong> to check if subroutines perform as expected.</li>
+<li><strong>Modular programming -</strong> Creating reusable code components called <strong>modules</strong>. Use <strong>existing modules</strong> or build <strong>custom modules</strong> to make programs more efficient and organised.</li>
+</ul>
+</div>
+</div>
+<p><br><strong></strong></p>
+<p><strong>User interface design</strong> should match the needs of the intended audience. Consider factors like <strong>screen size</strong>, <strong>layout</strong>, and <strong>consistency</strong> to make the interface user-friendly and visually clear.</p>
+<p><strong>Help systems</strong> assist users in understanding the software. Include features like <strong>tutorials</strong>, <strong>wizards</strong>, and <strong>context-specific help</strong> to provide clear and relevant guidance.</p>
+<p>When choosing a <strong>programming language</strong> or <strong>technology</strong>, consider the project’s requirements, the hardware it will run on, and the skills of the developers. Evaluate <strong>performance</strong> through <strong>benchmarking</strong> to select the most suitable option.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Development</h3>
+<div class="dp-panel-content">
+<p>During the development phase, the actual coding of the software takes place. Developers write and compile code to create functions and features outlined in the design phase. After development, the process and loop back to the design phase. This allows for modifications in design based on challenges or insights gained during development.</p>
+<p>In this course we will be using <strong>Python</strong> as the main programming language to develop software.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<p>The process of development varies depending on the approach used:</p>
+<ul>
+<li><strong>Waterfall Approach:</strong> In this linear approach, development occurs after the design phase is fully completed. The entire system is coded as a single project, focusing on implementing all planned features in one continuous phase before moving to testing. This method is suitable when requirements are well-defined and unlikely to change.</li>
+<li><strong>Agile Approach:</strong> Development happens incrementally over multiple iterations, called sprints. Each sprint focuses on coding a small part of the product, progressively adding functionality until the software is complete.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>During development, it is crucial to ensure that the code performs its intended tasks, handles unexpected data appropriately, and protects against potential security vulnerabilities. Debugging is a key part of this process, with modern tools like integrated development environments (IDEs) providing automated features to detect and fix errors efficiently.</p>
+<p>A widely used practice in development is <strong>Test-Driven Development (TDD)</strong>, where tests are written first, defining the criteria the code must meet. The code is then written and refined until it passes all these tests, ensuring it meets the specifications. This contrasts with traditional methods where testing is performed after the code is written.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Integration</h3>
+<div class="dp-panel-content">
+<p>After writing code, it often needs to be integrated with other existing systems, such as older legacy systems, external databases, or APIs. Different parts of the software, like individual modules, may be developed by multiple people simultaneously. These modules must then be combined into one working system.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body"><strong>Version Control Systems (VCS)</strong> help manage this process by tracking changes to the code. They allow multiple programmers to work on the same project without overwriting each other’s work. VCS also provides a backup of the code, ensuring that previous versions can be accessed if needed.</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/091d9fc178402dbd.png" alt="image.png" width="531" height="337" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197991" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Testing and Debugging</h3>
+<div class="dp-panel-content">
+<p>Testing and debugging are crucial steps in the software development process to ensure the final product works as intended. Once coding is complete, testing focuses on checking the product for errors and ensuring it meets the original requirements.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> </i> <strong>&nbsp;Key Terminology</strong></p>
+<ul class="card-text">
+<li><strong>Alpha testing</strong> - Testing done by the software development team using real data before the product is released.</li>
+<li><strong>Beta testing </strong>- Giving the product to a small group of external users to test it in real-world conditions. These users report any issues or suggest improvements.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Testing is part of quality assurance, which ensures the product meets industry standards and performs well. This process also checks if the design and development stages were successful.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">Testing happens at different levels:
+<ul>
+<li>Unit testing checks small sections of code.</li>
+<li>Program testing checks the entire program.</li>
+<li>System testing checks how the program works as a whole.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Test data is created to simulate real usage, including large file sizes, response times, and various transactions. Automated tools often help manage and report on the testing process.</p>
+<p>The results of testing are used to identify and fix problems. Each requirement and specification is checked against the final product to confirm it is fully implemented. Any faults found are corrected, ensuring the software meets its goals.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Installation</h3>
+<div class="dp-panel-content">
+<p>Once a new software product is ready, it needs to be installed and put into use. This process often involves replacing an older system with the new one, and there are different methods to do this, depending on the situation.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<p>The main methods are:</p>
+<ul>
+<li><strong>Direct cut-over</strong>: The old system is immediately replaced with the new one.</li>
+<li><strong>Parallel</strong>: Both systems run at the same time until the new one proves reliable.</li>
+<li><strong>Phased</strong>: The new system is introduced in stages, one part at a time.</li>
+<li><strong>Pilot</strong>: The new system is tested by a small group first before being rolled out to everyone.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Each method has its benefits and is chosen based on the needs of the project.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Maintenance</h3>
+<div class="dp-panel-content">
+<p><strong>Maintenance</strong> is the process of improving and fixing software after it has been released to ensure it continues to meet user needs. Over time, this often involves correcting errors (bugs), enhancing performance, or adding new features to adapt to changing requirements.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> </i> <strong>&nbsp;Key Terminology</strong></p>
+<ul class="card-text">
+<li><strong>Software Maintenance</strong> - The ongoing process of fixing issues, improving performance, and updating software to ensure it remains functional and relevant to user needs.<strong></strong></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>To decide on changes, developers communicate with users to understand issues or requests. Small changes, like bug fixes, might be released as patches, while larger changes, like redesigning the interface, may require a full upgrade. The process of making these updates often restarts the software development cycle.</p>
+<p>Good documentation of the original software is essential for maintenance. It helps developers—often different from the original team—understand the code and make changes efficiently. Many companies even have separate teams specifically for software maintenance.</p>
+<p>Software evolves over time as new versions are released. These updates typically fix bugs and add new features based on user feedback. Companies must prioritize requests for changes, often using surveys or support data to decide which modifications will have the greatest impact.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Understanding Software Development Steps</strong></h4>
+<p>In order to better understand the steps explored above, let's consider a simple scenario.&nbsp;</p>
+<p>Let's imagine we are tasked with developing a <strong>library management system</strong> for a local library. The system should allow librarians to manage books, members, and borrowing transactions. We will walk through the fundamental software development steps in the context of this scenario.</p>
+<div class="dp-panels-wrapper dp-tabs-buttons-vertical">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Requirements Definition</h3>
+<div class="dp-panel-content ">
+<p>First, we need to gather and define the requirements of the system by interviewing stakeholders, such as librarians and library staff. Through this process, we determine that the system must be able to:</p>
+<ul>
+<li>Add, edit, and delete book records</li>
+<li>Add, edit, and delete member records</li>
+<li>Record book borrowing and returning transactions</li>
+<li>Generate reports on overdue books and member activities</li>
+<li>Handle book reservation requests</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Determining Specifications</h3>
+<div class="dp-panel-content ">
+<p>Based on the requirements, we create a detailed specification document that outlines two key areas:</p>
+<ul>
+<li>
+<p><strong>Functional specifications</strong>: These describe the system's specific features and capabilities, such as:</p>
+<ul>
+<li>Adding or editing book and member records</li>
+<li>Recording borrowing and returning of books</li>
+<li>Generating overdue reports</li>
+</ul>
+</li>
+<li>
+<p><strong>Non-functional specifications</strong>: These define the performance, security, and usability expectations, such as:</p>
+<ul>
+<li>The system must process transactions quickly, with no delays</li>
+<li>Data must be secured to prevent unauthorised access</li>
+<li>The system should be user-friendly and easy to navigate for staff</li>
+</ul>
+</li>
+</ul>
+<p>This combination ensures the system not only performs the required tasks but also meets quality and user expectations.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Design</h3>
+<div class="dp-panel-content">
+<p>We then design the system by creating a high-level architecture and detailed component plans. This includes:</p>
+<ul>
+<li><strong>User interface mockups</strong> that show how screens will look and how users will interact with the system</li>
+<li><strong>Class diagrams</strong> to outline the code structure and relationships between features</li>
+<li>Planning how the different components (e.g., user input, processing, and reporting) will connect to ensure smooth operation</li>
+</ul>
+<p>At this stage, we also decide on the technologies to use, such as programming languages (e.g., Python, Java) and frameworks.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Development</h3>
+<div class="dp-panel-content">
+<p>With the design ready, we move to the development phase. Developers:</p>
+<ul>
+<li>Build the user interface, including forms for managing books and members</li>
+<li>Write the backend logic to process borrowing and returning transactions</li>
+<li>Integrate components to ensure data flows correctly between the user interface and the backend</li>
+</ul>
+<p>This phase often involves collaboration, with developers working on different parts of the system simultaneously.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Integration</h3>
+<div class="dp-panel-content">
+<p>Once the individual components are developed, we integrate them into a single, fully functioning system. For example:</p>
+<ul>
+<li>Ensuring the user interface communicates with the backend correctly</li>
+<li>Verifying that data from borrowing and returning books is processed and stored accurately</li>
+</ul>
+<p>Integration ensures that all parts of the system work together as intended.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Testing and Debugging</h3>
+<div class="dp-panel-content">
+<p>The library management system is then rigorously tested to identify and resolve any issues. Testing includes:</p>
+<ul>
+<li><strong>Unit testing</strong> – verifying that individual features, like adding a member record, work correctly</li>
+<li><strong>End-to-end testing</strong> – ensuring that complete workflows, such as borrowing a book, function as expected</li>
+</ul>
+<p>Feedback from librarians and staff is gathered to confirm the system meets their needs. Any bugs or issues are fixed, and the system is re-tested.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Installation</h3>
+<div class="dp-panel-content">
+<p>Once testing is complete, the library management system is deployed on the library's computers or servers. To ensure a smooth transition, we may also:</p>
+<ul>
+<li>Install the system on user devices</li>
+<li>Provide training for librarians and staff to help them use the new system effectively</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Maintenance</h3>
+<div class="dp-panel-content">
+<p>After the system is installed and operational, maintenance begins. This involves:</p>
+<ul>
+<li>Fixing any new issues that arise (e.g., bugs or crashes)</li>
+<li>Updating the system to meet new requirements, such as adding features for improved usability</li>
+<li>Providing regular updates to ensure security and compatibility with new technologies</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" title="Link" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EcPhBtqz2xFPto9oxTzZ08ABywcQgpBpfXZW1-jlYUdkow?e=JGXl0m" target="_blank">1.1 Software Development Steps</a></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-1-software-development-steps" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={da06e1c3-dbb3-4f11-b68f-68c53cd9d3c0}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+<li>Earth Online. (n.d.). <em>You can master Git: Git commands with these diagrams</em>. Retrieved June 17, 2024, from <a href="https://programming.earthonline.us/you-can-master-git-git-commands-with-these-diagrams-40a0b2f5cc42" target="_new"><span>https</span><span>://programming.earthonline.us</span><span>/you</span><span>-can</span><span>-master</span><span>-git</span><span>-git</span><span>-commands</span><span>-with</span><span>-these</span><span>-diagrams</span><span>-40a0b2f5cc42</span></a></li>
+<li>UppLabs. (n.d.). <em>The importance of functional and non-functional requirements in software development</em>. Retrieved June 17, 2024, from <a href="https://upplabs.com/blog/the-importance-of-functional-and-non-functional-requirements-in-software-development/" target="_new"><span>https</span><span>://upplabs.com</span><span>/blog</span><span>/the</span><span>-importance</span><span>-of</span><span>-functional</span><span>-and</span><span>-non</span><span>-functional</span><span>-requirements</span><span>-in</span><span>-software</span><span>-development/</span></a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.1 Software development steps" href="https://canvas.kings.edu.au/courses/11962/assignments/179125" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179125" data-api-returntype="Assignment">1.1 Software development steps</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">1.2 Online collaboration tools</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class="dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong>Syllabus<br></strong> <span>Research and evaluate the prevalence and use of online code collaboration tools</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;"> be able to evaluate the prevalence and use of online code collaboration tools and analyse their impact on software development. </span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp; <span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);"> identify the different types of online code collaboration tools and describe their features and functionalities. </span></li>
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);"> analyse the impact of online code collaboration tools on software development and explain their benefits, challenges, and limitations. </span></li>
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);"> evaluate the prevalence and use of online code collaboration tools in different software development contexts and provide evidence to support their arguments. </span></li>
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);"> apply online code collaboration concepts to develop a collaborative software project that reflects their understanding of using online code collaboration tools and demonstrate its functionality through testing and debugging. </span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> Content</h3>
+<p>Online code collaboration tools have become increasingly popular as they facilitate teamwork, improve productivity, and enable developers to work together from anywhere in the world. These tools offer version control, real-time collaboration, and other features that make it easier for developers to work on code together and share their work.</p>
+<div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+<div class="dp-panel-group" style="margin-bottom: 20px;">
+<h3 class="dp-panel-heading"><img src="../../assets/f3018b26b7e8d58d.png" alt="github-mark-1.png" width="50" height="50" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197882" data-api-returntype="File" loading="lazy"> &nbsp;Github</h3>
+<div class="dp-panel-content">
+<p>GitHub is a widely used platform for code collaboration and version control using Git. It provides a central repository for source code and allows developers to work on projects together, track changes, and revert to previous versions when needed. Individuals, open-source projects, and organisations of all sizes use GitHub.</p>
+<p>Examples of GitHub use:</p>
+<ul>
+<li>Open-source projects: Many open-source projects, such as TensorFlow and React, use GitHub to host their source code, manage issues, and collaborate with contributors worldwide.</li>
+<li>Team collaboration: Companies and development teams use GitHub to manage their codebases, track progress, and assign tasks to team members.</li>
+<li>Forking and pull requests: Developers can "fork" an existing repository, make changes to the code, and then submit a "pull request" to the original repository, suggesting the changes be merged back into the main project.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group" style="margin-bottom: 20px;">
+<h3 class="dp-panel-heading"><img src="../../assets/7f44cac04df947ed.png" alt="substack-icon.png" width="50" height="50" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197883" data-api-returntype="File" loading="lazy"> &nbsp;Substack</h3>
+<div class="dp-panel-content">
+<p>Substack is primarily known as a platform for writers to create and distribute newsletters, it has also been used for sharing coding tutorials, projects, and other technical content. Although not explicitly designed for code collaboration, it can foster communication and knowledge sharing within the developer community.</p>
+<p>Examples of Substack use:</p>
+<ul>
+<li>Coding tutorials: Developers and educators can write and share programming tutorials, tips, and insights with their subscribers.</li>
+<li>Project updates: Developers can use Substack to keep their audience informed about the progress and updates of their projects, including sharing code snippets and discussing challenges.</li>
+<li>Networking: Substack can help developers connect with like-minded individuals and form a community around shared interests.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading"><img src="../../assets/77a2358b370f9435.png" alt="openai-icon.png" width="50" height="51" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197884" data-api-returntype="File" loading="lazy"> &nbsp;OpenAI</h3>
+<div class="dp-panel-content">
+<p>OpenAI is an artificial intelligence research organisation, and while it is not a code collaboration tool per se, it contributes to collaborative development in the AI community by releasing research, models, and tools that developers can use, build upon, and contribute to.</p>
+<p>Examples of OpenAI use:</p>
+<ul>
+<li>Sharing AI research: OpenAI publishes research papers and releases AI models, such as GPT-3, that developers can use and contribute to.</li>
+<li>Collaborative projects: OpenAI has collaborated with other organisations and developers on projects, such as the OpenAI Codex, which allows developers to access AI-powered code generation tools.</li>
+<li>AI community: OpenAI fosters a community of developers, researchers, and enthusiasts working together to advance the field of artificial intelligence.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Online code collaboration tools like GitHub are significant in modern software development, enabling teams to work efficiently and effectively. While Substack and OpenAI are not explicitly designed for code collaboration, they contribute to knowledge sharing and collaborative development in the broader developer community.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/Ef1hmk1HoPpPmIZItunCnhQBnLdNzYMODYGO9IiRVcsiSA?e=reGnoG" target="_blank">1.2 Online Collaboration Tools</a></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-2-online-collaboration-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={4d9a61fd-a047-4ffa-9886-48b6e9c29e14}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources </strong></p>
+<ul class="card-text">
+<li><a href="https://github.com/">GitHub</a></li>
+<li><a href="https://substack.com/">Substack</a></li>
+<li><a href="https://openai.com/">OpenAI</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity </strong></p>
+<ul class="card-text">
+<li><a title="1.2 Online collaboration tools" href="https://canvas.kings.edu.au/courses/11962/assignments/179147" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179147" data-api-returntype="Assignment"> 1.2 Online Collaboration tools </a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">1.3 Computational thinking</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2" style="text-align: center;"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid" style="text-align: left;">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Apply computational thinking and algorithmic design by defining the key features of standard algorithms, including sequence, selection, iteration and identifying data that should be stored</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px; text-align: left;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text" style="text-align: left;">
+<li><span style="font-size: 10pt;">be able to apply computational thinking and algorithmic design by defining the key features of standard algorithms, including sequence, selection, iteration, and identifying data that should be stored.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px; text-align: left;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li style="text-align: left;"><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">define the key features of standard algorithms, including sequence, selection, and iteration, and provide examples of their use in solving different computational problems.</span></li>
+<li style="text-align: left;"><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">design, develop and implement algorithms that reflect their understanding of the key features of standard algorithms.</span></li>
+<li style="text-align: left;"><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">identify how variables store data for use within algorithms.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p style="text-align: left;">Computational thinking and algorithmic design are essential skills for anyone interested in programming or problem-solving. To understand standard algorithms, you'll need to learn about their key features, including sequence, selection, iteration.</p>
+<p style="text-align: left;">&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Sequence</h3>
+<div class="dp-panel-content ">
+<ul style="list-style-type: circle; text-align: left;">
+<li><strong>Sequence</strong> refers to the <span style="text-decoration: underline;">order</span> in which instructions or steps are executed in an algorithm.</li>
+<li>In programming, you write lines of code that run one after another, following a specific order. Understanding the sequence of processes is crucial to ensure that your code executes correctly and produces the desired result.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Selection</h3>
+<div class="dp-panel-content ">
+<ul style="list-style-type: circle; text-align: left;">
+<li><strong>Selection</strong> is the process of <span style="text-decoration: underline;">making decisions</span> in an algorithm based on <span style="text-decoration: underline;">certain conditions</span>. Different paths are executed in response to the outcome of the condition, where each path contains a different sequence of steps.</li>
+<li>In programming, you use conditional statements (e.g., if, else) to decide which block of code to execute based on whether a specific condition is true or false. Selection allows your algorithm to perform different actions depending on the given input or situation.</li>
+<li>There are two types of selection control structures
+<ul style="list-style-type: circle;">
+<li><strong>Binary selection</strong> (<span style="text-decoration: underline;">a choice between two paths</span>). In binary selection there are two alternatives, one being selected if the condition is true and the other if the condition is false.</li>
+<li><strong>Multiway selection</strong> (<span style="text-decoration: underline;">a choice between more then two paths</span>). Multiway or multiple selection statements can be implemented using multiple binary selection statements.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Iteration</h3>
+<div class="dp-panel-content">
+<ul style="list-style-type: circle; text-align: left;">
+<li><strong>Iteration</strong> refers to the process of <span style="text-decoration: underline;">repeating a sequence of steps</span> in an algorithm.</li>
+<li>A termination condition is used to stop the repetition.</li>
+<li>In programming, you use loops (e.g., for, while) to execute a block of code multiple times until a certain condition is met. Iteration is useful for performing repetitive tasks, such as processing a list of items or counting down from a specific number.</li>
+</ul>
+</div>
+</div>
+</div>
+<p style="text-align: left;">&nbsp;</p>
+<h4 style="text-align: left;"><strong>Variables</strong></h4>
+<ul style="list-style-type: circle; text-align: left;">
+<li>Algorithms use <strong>variables</strong> to <span style="text-decoration: underline;">store and manipulate data</span>.</li>
+<li>A variable is a symbolic name for a location in the computer's memory where data can be stored. It acts as a container, holding data that can be manipulated or referenced within a program.&nbsp;Data can be classified into different types, such as integers, floats, strings, and more.</li>
+<li>By giving variables meaningful names, it allows computer code to be easily interpreted by a human.&nbsp;<span>For example, in a program calculating the area of a rectangle, variables like </span><code>length</code><span> and </span><code>width</code><span> can store the respective dimensions which are then multiplied together to give the <code>area</code>.</span></li>
+<li>In programming, you use the equals (=) sign to allocate the variable name to a piece of data.</li>
+</ul>
+<p style="text-align: left;">&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs dp-panel-active-color-dp-white">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading" style="text-align: left;">Sequence</h3>
+<div class="dp-panel-content" style="text-align: left;">
+<p style="text-align: left;"><span>In Python, a sequence is a series of instructions or statements executed one after another. Here's a simple example to demonstrate a sequence in Python.</span></p>
+<p style="text-align: left;"><strong>Code:</strong></p>
+<p><img src="../../assets/19cec92bfed5a472.png" alt="Screen Shot 2024-01-19 at 11.13.54 am.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197922" data-api-returntype="File" loading="lazy"></p>
+<p style="text-align: left;"><strong>Output:</strong></p>
+<pre class="line-numbers"><code class="language-python">The sum of the numbers is 70<br>The product of the numbers is 1176</code></pre>
+<p style="text-align: left;">In this example, we have a sequence of three steps:</p>
+<ol style="text-align: left;">
+<li><strong>Initialise</strong> two variables (<code>num_1</code> and <code>num_2</code>) with values (28 and 42, respectively).</li>
+<li><strong>Add</strong> the values of the two variables and <strong>store</strong> the result in a new variable (<code>add_nums</code>).</li>
+<li><strong>Print</strong> the addition result to the console.</li>
+<li><strong>Multiply</strong> the values of the two variables and <strong>store</strong> the result in a new variable (<code>multiply_nums</code>).</li>
+<li><strong>Print</strong> the multiplication result to the console.</li>
+</ol>
+<p style="text-align: left;">When you run this Python script, the program executes these steps in the given order and displays the results: <code>"The sum of the numbers is 70"</code> and <code>"The product of the numbers is 1176"</code></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading" style="text-align: left;">Selection</h3>
+<div class="dp-panel-content" style="text-align: left;">
+<p><span>Selection in Python refers to making decisions in your code based on certain conditions. Conditional statements </span><span>are used for this purpose.</span></p>
+<p>&nbsp;</p>
+<h4><strong>If, Elif and Else<br></strong></h4>
+<p><span>Here's an example that demonstrates selection using the conditional statements <code>if</code>, <code>elif</code>, and <code>else</code> in Python.</span></p>
+<p><strong>Code:</strong></p>
+<p><img src="../../assets/1c887543e71bce89.png" alt="Screen Shot 2024-01-19 at 11.18.08 am.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197924" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Output:</strong></p>
+<pre class="line-numbers"><code class="language-python">The number is negative</code></pre>
+<p>In this example, we use a selection structure (<code>if</code>, <code>elif</code> and <code>else</code>) to check if the <code>num</code> variable is positive, negative, or zero. The program executes the appropriate block of code based on the condition:</p>
+<ol>
+<li><strong>If <code>num</code> is greater than 0,</strong> it prints "The number is positive."</li>
+<li><strong>If <code>num</code> is less than 0,</strong> it prints "The number is negative."</li>
+<li><strong>If none of the above conditions are true</strong> (i.e., <code>num</code> is equal to 0), it prints "The number is zero."</li>
+</ol>
+<p>When you run this Python script, it checks the value of the <code>num</code> variable (-17 in this case) and prints the result: <code>"The number is negative"</code><strong></strong></p>
+<p>&nbsp;</p>
+<h4><strong>Match and Case<br></strong></h4>
+<p>Here's an example that demonstrates selection using the conditional statements <code>match</code> and <code>case</code> in Python.</p>
+<p><strong>Code:</strong></p>
+<p><img src="../../assets/d9225e1fab0adf65.png" alt="Screen Shot 2024-01-19 at 11.36.47 am.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197925" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Output:</strong></p>
+<pre class="line-numbers"><code class="language-python">Wednesday</code></pre>
+<p>In this example, we use a selection structure (<code>match</code>&nbsp;and <code>case</code>) to match a number with a corresponding day (i.e. Monday is 1, Tuesday is 2, etc). The program executes the appropriate block of code based on the condition:</p>
+<ol>
+<li><strong>If <code>day</code> is 1,</strong> it prints "Monday"</li>
+<li><strong>If <code>day</code> is 2,</strong> it prints "Tuesday"</li>
+<li><strong>If <code>day</code> is 3,</strong> it prints "Wednesday"</li>
+<li><strong>If <code>day</code> is 4,</strong> it prints "Thursday"</li>
+<li><strong>If <code>day</code> is 5,</strong> it prints "Friday"</li>
+<li><strong>If <code>day</code> is 6,</strong> it prints "Saturday"</li>
+<li><strong>If <code>day</code> is 7,</strong> it prints "Sunday"</li>
+<li><strong>If none of the above conditions are matched, </strong>it prints "Invalid number, please use a number between 1-7"</li>
+</ol>
+<p>When you run this Python script, it checks the value of the <code>day</code> variable (3 in this case) and prints the result: <code>"Wednesday"</code></p>
+<p>&nbsp;</p>
+<p><strong>Note: </strong>Python's <code>case</code> statements only checks whether the variable next to the <code>match</code> statement is <span style="text-decoration: underline;">EQUAL</span> to the value next to the <code>case</code> statement.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading" style="text-align: left;">Iteration</h3>
+<div class="dp-panel-content" style="text-align: left;">
+<p><span>Iteration in Python refers to the process of repeating a set of instructions or steps using loops, such as </span><code>for</code><span> and </span><code>while</code><span>.</span></p>
+<p>&nbsp;</p>
+<h4><strong>For Loops<br></strong></h4>
+<p><span> Here's an example that demonstrates iteration in Python using a </span><code>for</code><span> loop.</span></p>
+<p><strong>Code:</strong></p>
+<p><img src="../../assets/dcffb2d030427347.png" alt="Screen Shot 2024-01-19 at 1.31.29 pm.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197879" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Output:</strong></p>
+<pre class="line-numbers"><code class="language-python">0 Bark!<br>1 Bark!<br>2 Bark!<br>3 Bark!<br>4 Bark!<br>5 Bark!<br>6 Bark!<br>7 Bark!</code></pre>
+<p>In this example, we use a <code>for</code> loop to iterate through the numbers from 0 to 7 and print those numbers followed by the string <code>"Bark"</code> a total of 8 times. The program follows these steps to repeat the execution of <code>print</code> statements:</p>
+<ol>
+<li><strong>Variable definition:</strong> Initialise a variable named <code>dog_sound</code> and assign the value "Bark!" to it. This variable will store the sound that a dog makes.</li>
+<li><strong>For loop: </strong>The&nbsp;<code>for</code> loop will repeat the <code>print</code> statement 8 times.
+<ul>
+<li>The <code>range</code> function generates a sequence of numbers starting from 0 up to (but not including) 8. In this case, it generates the numbers 0, 1, 2, 3, 4, 5, 6, and 7.</li>
+<li>The loop uses the variable <code>i</code> to iterate through each of these numbers one by one (i.e. the variable <code>i</code> will initially have the value 0, and the move on to the value 1 when the for loop repeats).</li>
+</ul>
+</li>
+<li><strong>Print statement:</strong> In each repetition of the loop, the program prints the current value of <code>i</code> (which represents the number in the sequence generated by range) along with the value stored in <code>dog_sound</code> (which is "Bark!"). So, during each iteration of the loop, it prints a number and the word "Bark!".</li>
+</ol>
+<p>When you run this Python script, you'll see the word <code>"Bark!"</code> printed next to the numbers <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, and <code>7</code>. In total, it will print <code>"Bark!"</code> 8 times because the loop runs 8 times.</p>
+<p>&nbsp;</p>
+<h4><strong>While Loops<br></strong></h4>
+<p>Here's an <span style="text-decoration: underline;">equivalent</span> example that demonstrates iteration in Python using a <code>while</code> loop.</p>
+<p><strong>Code:</strong></p>
+<p><strong><img src="../../assets/a82f518b2bc89401.png" alt="Screen Shot 2024-01-19 at 1.35.52 pm.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197933" data-api-returntype="File" loading="lazy"></strong></p>
+<p><strong>Output:</strong></p>
+<pre class="line-numbers"><code class="language-python">0 Bark!<br>1 Bark!<br>2 Bark!<br>3 Bark!<br>4 Bark!<br>5 Bark!<br>6 Bark!<br>7 Bark!</code></pre>
+<p>In this example, we use a <code>while</code> loop to print the numbers 0 to 7 followed by the string <code>"Bark"</code> a total of 8 times. The program follows these steps to repeat the execution of <code>print</code> statements:</p>
+<ol>
+<li><strong>Variable definition:</strong> Initialise a variable named <code>dog_sound</code> and assign the value "Bark!" to it. This variable will store the sound that a dog makes.</li>
+<li><strong>Counter variable:</strong> Initialise a variable named <code>i</code> and assign the value 0 to it. The variable will be used to keep track of how many times we've repeated the while loop.</li>
+<li><strong>While loop: </strong>The <code>while</code> loop will repeat the <code>print</code> statement as long as the value of <code>i</code> remains less than 8.<strong>&nbsp;</strong></li>
+<li><strong>Print statement and increment:&nbsp;</strong>In each repetition of the loop, the program prints the current value of <code>i</code>&nbsp;along with the value stored in <code>dog_sound</code> (which is "Bark!"). So, during each iteration of the loop, it prints a number and the word "Bark!". After printing, the variable <code>i</code> will increase its value by 1. The loop will only repeat if the value of <code>i</code> is less than 8.</li>
+</ol>
+<p>When you run this Python script, you'll see the word <code>"Bark!"</code> printed next to the numbers <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, and <code>7</code>. In total, it will print <code>"Bark!"</code> 8 times because the loop runs 8 times.</p>
+<p>&nbsp;</p>
+<p><strong>Note: </strong><code>for</code> loops and <code>while</code> loops are both used to repeat a section of code, however they are generally best suited for <span style="text-decoration: underline;">different scenarios</span>.</p>
+<ul>
+<li>A <code>for</code> loop is used for when the <span style="text-decoration: underline;">number of repeats is known</span> (like in the examples above).</li>
+<li>A <code>while</code> loop has the ability to <span style="text-decoration: underline;">repeat for an unknown number of times</span> (i.e. the loop can repeat from 0 to infinity number of times). The loop will only stop when a <span style="text-decoration: underline;">specified condition is met</span>.</li>
+</ul>
+<p>&nbsp;</p>
+<p>Here's an example that demonstrates an <span style="text-decoration: underline;">unknown number of iterations</span> in Python using a <code>while</code> loop.</p>
+<p><strong>Code:</strong></p>
+<p><img src="../../assets/c688aced9beaa512.png" alt="Screen Shot 2024-01-19 at 1.50.32 pm.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197930" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Output:</strong></p>
+<pre class="line-numbers"><code class="language-python">Enter your guess: 2<br>Enter your guess: 3<br>Enter your guess: 1<br>Enter your guess: 2<br>Enter your guess: 5<br>You've found the secret number!</code></pre>
+<p>In this example, we use a <code>while</code> loop to repeatedly ask the user to guess the secret number. The while loop is required for this scenario because the user could get the secret number on their first try, second try, third try or never (infinite loop).</p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading" style="text-align: left;">Combined</h3>
+<div class="dp-panel-content" style="text-align: left;">
+<p>Let's begin with a simple Python program that will incorporate all these elements.</p>
+<p><strong>Code:</strong></p>
+<p><img src="../../assets/8772df54a2c789d2.png" alt="Screen Shot 2024-01-19 at 2.43.09 pm.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197939" data-api-returntype="File" loading="lazy">&nbsp;</p>
+<p><strong>Output:</strong></p>
+<pre class="line-numbers"><code class="language-python">The largest number is 9</code></pre>
+<p>In this example, we use a <code>for</code> loop and an <code>if</code> statement to find the largest number in a list of numbers. The program follows these steps to find the largest number in the list:</p>
+<ol>
+<li><span><strong>Create a list of numbers:</strong>&nbsp;The code starts by creating a list of <code>numbers</code>. A list is like a container that can hold multiple values. In this case, the numbers are 7, 3, 9, 2, 4, 8, and 0.</span></li>
+<li><strong>Assume the first number is the largest:</strong> The code assumes that the first number in the list is the largest one. It's like starting with a guess that the first number is the biggest.</li>
+<li><strong>Iterate through the rest of the list:</strong> The code then goes through the rest of the numbers in the list one by one. It uses a <code>for</code> loop to check each number after the first one. <span>The </span><code>range(1, 7)</code><span> means it starts from the second number (index 1) and goes up to the last number (index 6) in the list.</span></li>
+<li><span><strong>Compare numbers to find the largest:</strong> Inside the <code>for</code> loop, there is an <code>if</code> statement that checks if the current number being looked at is greater than the assumed largest number. If it is, then it updates the assumed largest number to the current number.</span></li>
+<li><span><strong>Print the result:</strong> Finally, after going through all the numbers, the code prints the result, which is the largest number found during the loop.</span></li>
+</ol>
+<p><span>When you run this Python script, the program <span style="text-decoration: underline;">iterates</span> through the list of numbers and <span style="text-decoration: underline;">selects</span> the largest number, displaying the result: <code>"The largest number is 9"</code>.</span></p>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-3-computational-thinking" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/xh2S4ltUsvM?si=A9XWF8e9k2IhxLFn</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-3-computational-thinking" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/XcC3CY-Yexs?si=Re0t4p7jOWevjJRd</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-3-computational-thinking" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/8-L_1KhJs4g?si=jaFljgkkhErRI8TI</span></div></div>
+<div class="">
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text" style="text-align: left;"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li style="text-align: left;">Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text" style="text-align: left;"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li style="text-align: left;"><a title="1.3 Computational thinking" href="https://canvas.kings.edu.au/courses/11962/assignments/179154" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179154" data-api-returntype="Assignment">1.3 Computational thinking</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p style="text-align: left;"><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EcVewVgTaL1KpKdVgm4vNvYBqh9yy9Zk-cKUMeJAV57SUw?e=aQShnS" target="_blank">1.3 Computational Thinking</a></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-3-computational-thinking" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={58c15ec5-6813-4abd-a4a7-55826e2f36f6}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p style="text-align: left;">&nbsp;</p>
+</div>
+</div>
+<h3 class="readles">1.4 Algorithmic design</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Apply divide and conquer and backtracking as algorithmic design strategies</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt; color: var(--ic-brand-font-color-dark);">be able to apply divide and conquer and backtracking as algorithmic design strategies to solve complex computational problems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">explain the divide and conquer strategy and provide examples of how it can be used to solve complex computational problems.</span></li>
+<li><span style="font-size: 13.3333px; color: var(--ic-brand-font-color-dark);">describe the backtracking strategy and provide examples of how it can be used to search for solutions to computational problems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p><strong>Divide and Conquer</strong>, and <strong>Backtracking</strong> are two common algorithmic design strategies used to solve complex problems.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Divide and Conquer</h3>
+<div class="dp-panel-content ">
+<p>Divide and Conquer is a strategy where you break a complex problem into smaller, more manageable subproblems. You solve these subproblems individually and then combine their solutions to form the final solution to the original problem. This approach is particularly useful when dealing with large systems and complex calculations.</p>
+<p>For example, a car is a complex machine and its manufacture utilises a divide and conquer strategy.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<p><strong>Divide:</strong> A car's components are individually manufactured away from the main production line (i.e. engine, wheels, doors, lights, seats, infotainment system). The responsibility for the manufacture of these components falls on the specialised workers who produce them.</p>
+<p><strong>Conquer:</strong> After each component is completed, the car is ready to be assembled on the final production line.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Example: Snakes and Ladders</strong></p>
+<p><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">Snakes and Ladders is a classic board game played on a square grid. Players use a die to move their pieces forward, aiming to reach the top of the board. The game features ladders that act as shortcuts and snakes that force players backward. The element of luck, combined with strategic choices, makes it engaging.</span></p>
+<p><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;"> </span><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">Although this classic board is common, and we know how to play it, creating it in code could prove difficult for a programmer without experience. This is where the Divide and Conquer technique is useful. Snakes and Ladders can be broken down into core components, for example:<br></span></p>
+<p>&nbsp;</p>
+<table class="table-bordered table" style="border-collapse: collapse; width: 100%;" data-active-table="true">
+<tbody>
+<tr>
+<td style="width: 33.3024%;"><strong>Component</strong></td>
+<td style="width: 33.3024%;"><strong>Subproblem</strong></td>
+<td style="width: 33.3024%;"><strong>Possible Code Solution</strong></td>
+</tr>
+<tr>
+<td style="width: 33.3024%;">Die</td>
+<td style="width: 33.3024%;"><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">Create a standard six-sided die used for determining the number of spaces that a player moves forwards.</span></td>
+<td style="width: 33.3024%;"><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">A random number generator that gives a number between 1 and 6 inclusive.</span></td>
+</tr>
+</tbody>
+</table>
+<p>Each one of these subtasks is much more manageable to create and can be further broken down into their fundamental control structures.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ffeb3b; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-discussion icon-Solid" aria-hidden="true"> </i> &nbsp; Discussion</strong></p>
+<p>In the discussion activity below, provide at <strong>least 3</strong> more components for the Snakes and Ladders game. For each, describe a manageable subproblem and provide a possible code solution (not actual Python code, just a general approach with reference to variables, sequence, selection and iteration).</p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-4-algorithmic-design" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fdiscussions.atomicjoltappsau.com%2Flti_launches%2FKUhGJ5BhgcEYYYhdYdAcMjKi</span></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Backtracking</h3>
+<div class="dp-panel-content ">
+<p>Backtracking is a strategy that relies upon a series of <strong>brute force trial-and-errors</strong>. It aims to find a solution by going through a set of possible candidate solutions and <strong>checking if they satisfy the problem</strong>. If a candidate fails to solve the problem, then the we <strong>backtrack to the other candidate solutions and try again</strong>. This process continues until a solution is found or all possibilities are exhausted.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<p class="card-text"><span>Backtracking is particularly useful in scenarios where you need to explore various possibilities systematically, undo incorrect choices, and efficiently find a solution without exhaustive searches. It's a fundamental technique used in solving problems like maze-solving, puzzle-solving, and combinatorial problems in general.</span></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Example: Maze</strong></p>
+<p>In the context of a maze, backtracking is like exploring different paths until you find the way out. Imagine you are inside a maze, and your goal is to reach the exit. You start by choosing a path at random. If you encounter a dead-end (i.e., a path that doesn't lead to the exit), you backtrack to the last decision point and try a different path. This continues until you find the correct path leading to the exit.</p>
+<ol style="list-style-type: decimal;">
+<li>You enter the maze</li>
+<li>You reach a point where there are multiple paths</li>
+<li>Try one of the paths</li>
+<li>If the path leads to a dead-end, you backtrack to the previous decision point</li>
+<li>You try a different path from the decision point</li>
+<li>Repeat this process until you find the correct path to the exit.</li>
+</ol>
+<p><img src="../../assets/6d23c2baf15baf5d.png" alt="image.png" width="495" height="494" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3196990" data-api-returntype="File" loading="lazy"></p>
+<p>Try solving this maze first using the backtracking method before looking at the solution below.</p>
+<div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Maze Solution</h3>
+<div class="dp-panel-content">
+<p><strong>First decision point:</strong><br><img src="../../assets/75d764f28676c166.png" alt="Screen Shot 2024-01-29 at 3.25.21 pm.png" width="455" height="454" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197976" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Try a path (dead end, go back):</strong></p>
+<p><img src="../../assets/7cb8372807eb9823.png" alt="Screen Shot 2024-01-29 at 3.25.52 pm.png" width="464" height="462" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197981" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Try a path (new decision point):</strong></p>
+<p><img src="../../assets/59a503dcf76625d3.png" alt="Screen Shot 2024-01-29 at 3.26.25 pm.png" width="472" height="471" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197982" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Try a path (dead end, go back):</strong></p>
+<p><img src="../../assets/431dd89c4e0fb639.png" alt="Screen Shot 2024-01-29 at 3.27.00 pm.png" width="485" height="483" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197978" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Try a path (new decision point):</strong></p>
+<p><img src="../../assets/31cd959e87862822.png" alt="Screen Shot 2024-01-29 at 3.27.24 pm.png" width="494" height="494" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197979" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p><strong>Try a path (dead end, go back):</strong></p>
+<p><img src="../../assets/877edaf67fd23a3c.png" alt="Screen Shot 2024-01-29 at 3.28.48 pm.png" width="500" height="500" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197983" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Try a path (new decision point):</strong></p>
+<p><img src="../../assets/5cb7e7ca5b26d51b.png" alt="Screen Shot 2024-01-29 at 3.29.27 pm.png" width="508" height="509" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197986" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-4-algorithmic-design" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/xPvuJB33Fco?si=3G6t8KiFV7HT7NNS</span></div></div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/Ea0-my3xWrtIitU6dtTh_5UBjEQNn-KWWI0ZaupUOmHO8A?e=pKbceQ" target="_blank">1.4 Algorithmic design</a></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-4-algorithmic-design" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={2d9b3ead-5af1-48bb-8ad5-3a76d4e1ff95}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.4 Algorithmic design " href="https://canvas.kings.edu.au/courses/11962/assignments/179158" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179158" data-api-returntype="Assignment">1.4 Algorithmic design</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">1.5 Structured algorithms</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Develop structured algorithms using pseudocode and flowcharts, including the use of subprograms</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">be able to develop structured algorithms using pseudocode and flowcharts, including the use of subprograms, to solve complex computational problems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">explain the importance of developing structured algorithms using pseudocode and flowcharts to solve complex computational problems.</span></li>
+<li><span style="font-size: 10pt;">develop algorithms using pseudocode and flowcharts, including the use of subprograms, to solve different computational problems and apply key programming constructs such as sequence, selection, and iteration.</span></li>
+<li><span style="font-size: 10pt;">test and debug algorithms to ensure they correctly solve the computational problem and can handle different input values and boundary cases.</span></li>
+<li><span style="font-size: 10pt;">evaluate the effectiveness of different algorithmic designs, including their efficiency, scalability, and readability, and propose improvements or optimisations to enhance their performance.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<div class="dp-panels-wrapper dp-tabs dp-panel-active-color-dp-white">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Pseudocode Intro</h3>
+<div class="dp-panel-content">
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3Df2d280b5-dfde-4367-9cb6-33a0facc7a3b-3039%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+<p style="text-align: center;">&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3De336209d-867f-458d-8d9d-7f9f5d1c6601-3041%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Flowchart Intro</h3>
+<div class="dp-panel-content">
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D22ed0336-b998-4247-b510-34cea17f70a1-3050%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+<p style="text-align: center;">&nbsp;</p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D8aa2aeaa-7c05-4425-8cbe-5b7aedeb45d3-3049%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Sequence and Selection (Pseudocode and Flowchart)</h3>
+<div class="dp-panel-content">
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D73ad71dc-82bf-42bf-81b2-c24d0a2f43a1-3045%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Repetition&nbsp;(Pseudocode and Flowchart)</h3>
+<div class="dp-panel-content">
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D59fd841b-cdd0-477a-99f5-55b50c24e226-3044%26autoplay%3Dfalse%26automute%3Dfalse</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Subprograms</strong></h4>
+<p>Subprograms, also known as functions or procedures, are <strong>reusable chunks of code</strong> that perform <strong>a specific task</strong> within a program. They help in breaking down complex problems into smaller, more manageable tasks, improve code readability, and promote modularity. Using subprograms makes it easier to maintain, debug, and update the code.</p>
+<p>In Python, subprograms are created using the <code>def</code> keyword, followed by the <strong>function name</strong>, a pair of parentheses containing any <strong>input parameters</strong>, and a colon. The code block inside the function is indented. Functions can return the value of <strong>one</strong> variable using the <code>return</code> statement.</p>
+<p>Functions are defined at the <strong>top of the Python script</strong>, with the mainline in which they are called at the bottom.</p>
+<p>Here's an example in Python that demonstrates the use of subprograms.</p>
+<p><strong>Code:</strong></p>
+<p><img src="../../assets/2d58f91fb392eb42.png" alt="Screen Shot 2024-01-29 at 11.42.53 am.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197972" data-api-returntype="File" loading="lazy"></p>
+<p><strong>Output:</strong></p>
+<pre class="line-numbers"><code class="language-python">12 + 6 = 18<br>12 - 6 = 6<br>12 * 6 = 72<br>12 / 6 = 2.0</code></pre>
+<p><span>In this example, we've created four subprograms (</span><code>add_numbers</code><span>, </span><code>subtract_numbers</code><span>, </span><code>multiply_numbers</code><span>, and </span><code>divide_numbers</code><span>) to perform basic arithmetic operations. These subprograms are then called in the main program underneath all of the function definitions,&nbsp;with the given input parameters (num_1 and num_2). The results are then printed to the console.</span></p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">More Videos</h3>
+<div class="dp-panel-content ">
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/v0-Fm0_OO2g?si=j7lKlyP-X7ELZ5iD</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/Yw2Rxa6gfVg?si=bB7ygJTHNbT281W_</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/PbhfRF68GI4?si=3DLcYpFi6w20x1u2</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/PbhfRF68GI4?si=3uqA7HOtYY32Hs_h</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/Clm4qow0xZo?si=ge1IUUI7LrRvj1n2</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/jf2P5aF6PxI?si=o51YNdjUwLPwtr_I</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/gVtntHa80rU?si=rGDlgwrwrgmvMu1O</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/AgxHcDRDvCs?si=RRYETCWr_INc-yQQ</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/jMG9jNulmbw?si=00lFVazmenWuQHHW</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/HCNRAlEsJEA?si=L1gTAZNyxcrG-O6N</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/7PX63Y0g4Y0?si=Owq7579mc5ZjJXDs</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/oW9Bb1MmvYw?si=cbPNOdTQVyMoCe7k</span></div></div>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-5-structured-algorithms" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://www.youtube.com/embed/MiEBzNQy9Qc?si=rOWyg485K-DEpJab</span></div><br><br></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Davis, S. (2024). <em>Software engineering: The year 11 course</em> (S. Davis, Ed.). Parramatta Education Centre.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.5 Structured algorithms " href="https://canvas.kings.edu.au/courses/11962/assignments/179162" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179162" data-api-returntype="Assignment">1.5 Structured algorithms</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">After</h3>
+<h3 class="readles">Assignment — Cycle 1 spaced repetition</h3>
+<p><em>[no description]</em></p><p><strong>Points:</strong> 20</p>
+<div class="readnav"><a href="11962-m0.html">← previous module</a><a href="../course-11962.html">all modules</a><a href="11962-m2.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

@@ -1,0 +1,209 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.7 Privacy by Design — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 2 (Term 4: Weeks 3-4) Secure Software Architecture</div>
+<h1 style="margin-top:.2rem">1.7 Privacy by Design</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-7-privacy-by-design" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Use and explain the 'privacy by design' approach in the development of software solutions, including:&nbsp;<br></span>- p<span class="card-text">roactive not reactive approach</span><br class="card-text">- e<span class="card-text">mbed privacy into design</span><br class="card-text">- r<span class="card-text">espect for user privacy</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand the core principles of software development's‘ privacy by design' approach.</li>
+<li>Learn how to implement privacy-first practices throughout the software development lifecycle.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to explain the key principles of 'privacy by design'.</li>
+<li>Students will be able to integrate privacy-focused features into software solutions.</li>
+<li>Students will respect user privacy by embedding it directly into the software design.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;The <strong>'privacy by design'</strong> approach means that privacy considerations are incorporated from the beginning of the software development process. It's not an afterthought but rather a proactive and essential part of the design process to safeguard user privacy throughout the software's lifecycle.</p>
+<p>The three main principles of privacy by design are:</p>
+<ul>
+<li><strong>Proactive, not reactive approach</strong></li>
+<li><strong>Embed privacy into design</strong></li>
+<li><strong>Respect for user privacy</strong></li>
+</ul>
+<p>Each plays a crucial role in protecting users' personal information and complying with privacy regulations.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Proactive not reactive approach</h3>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>A proactive approach ensures that potential privacy issues are addressed before they occur. Instead of reacting to privacy breaches after they happen, developers anticipate and mitigate risks early in the design process.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><span>Privacy by design is <strong>not</strong> <strong>reactive</strong> to privacy risks that materialise or occur. Instead, it is <strong>proactive</strong> by aiming to <strong>prevent any privacy threats from occurring</strong>. In the initial stages of the software development cycle, privacy impact assessments (PIAs) are conducted to identify and evaluate potential risks.</span></p>
+<p><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/ddb68accdc468144.png" alt="image.png" width="655" height="262" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527420" data-api-returntype="File" loading="lazy"><br><br>Developers will ensure the software design addresses these privacy issues proactively - where privacy protections are embedded into the software architecture and design before deployment.</span></p>
+<p><strong>How It Works:</strong></p>
+<ul>
+<li>
+<p><strong>Risk Assessment:</strong><br>Conduct privacy risk assessments during the planning and design stages to identify potential vulnerabilities and mitigate them before deployment.</p>
+</li>
+<li>
+<p><strong>Prevention Over Detection:</strong><br>Build privacy features that prevent issues rather than relying solely on detection mechanisms. This means implementing measures like anonymising data, minimising data collection, and encrypting sensitive information.</p>
+</li>
+</ul>
+<p><strong>Example in Software Development:</strong></p>
+<p>A proactive approach would involve setting up privacy controls like consent mechanisms and data anonymisation during the project's initial stages and ensuring that these are embedded before the software is even deployed.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Embed privacy into design</h3>
+<div class="dp-panel-content ">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;">Embedding privacy into the design means that privacy measures are integrated directly into thesoftware'ss architecture, ensuring privacy is considered at every step of the development process. Privacy considerations should be incorporated into the core design and the software</span><span style="color: var(--ic-brand-font-color-dark); font-family: inherit; font-size: 1rem;"> architecture. Privacy by design should include systematic embedding of privacy, data minimisation and encryption techniques to protect user privacy.&nbsp;</span></p>
+</div>
+</div>
+<p><strong>How It Works:</strong></p>
+<ul>
+<li>
+<p><strong>Privacy as a Default:</strong><br>Systems should be designed with privacy features enabled by default. Users should not have to take extra steps to protect their privacy—it should be built into the system.</p>
+</li>
+<li>
+<p><strong>Minimal Data Collection:</strong><br>Limit the amount of personal data collected to the minimum required for the software to function, reducing the risk of data exposure.</p>
+</li>
+</ul>
+<p><strong>Example in Software Development:</strong></p>
+<p>During the design phase, developers should ensure that all features respect user privacy by limiting data collection and securing stored data.</p>
+<p><span><br></span><span><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/69710ba2d5ef7a23.png" alt="image.png" width="608" height="243" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527433" data-api-returntype="File" loading="lazy"><br></span></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Respect for user privacy</h3>
+<div class="dp-panel-content">
+<div class="dp-callout dp-callout-color-danger card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #ff5722;">
+<div class="card-body">
+<p class="card-text"><i class="icon-rubric" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> <strong>&nbsp;Definition</strong></p>
+<p>Respecting user privacy means giving users control over their data and ensuring transparency in handling their data. Users should be informed about what data is being collected and how it will be used, and they should be given options to manage or delete their information.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Respect for User Privacy aims to <strong>prioritise</strong> the <strong>interests</strong> <strong>and needs </strong>of individual users as the centre of Privacy by Design and is <strong>user-centric</strong>. The goal is to ensure that users have an active role in managing their data.&nbsp;<br><br>This includes providing unambiguous consent to the use of private data. User Privacy should also be respected by limiting user data sharing with external third parties,&nbsp;ensuring confidentiality.&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/e717771668c3b047.png" alt="image.png" width="672" height="269" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527306" data-api-returntype="File" loading="lazy"></p>
+<p><strong>How It Works:</strong></p>
+<ul>
+<li>
+<p><strong>User Control:</strong><br>Provide users with options to edit, delete, or export their information to manage their data. This shows respect for their ownership of the data.</p>
+</li>
+<li>
+<p><strong>Transparency:</strong><br>Clearly communicate with users about how their data is being used. Implement privacy policies that explain data practices in simple, understandable language.</p>
+</li>
+</ul>
+<p><strong>Example in Software Development:</strong></p>
+<p>Incorporating user controls and transparency into the application's interface allows users to manage their personal information easily.</p>
+</div>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://medium.com/@onqlave/what-is-privacy-by-design-df953d73a676" target="_blank">What is Privacy by Design</a></li>
+<li><a class="inline_disabled" href="https://www.linkedin.com/advice/1/how-can-you-respect-user-privacy-protect-data#:~:text=Limit%20data%20sharing-,Another%20step%20to%20respect%20user%20privacy%20and%20protect%20their%20data,and%20knowledge%20of%20your%20users." target="_blank">How can you respect user privacy and protect their data?</a></li>
+<li><a class="inline_disabled" href="https://dataprivacymanager.net/seve-principles-of-privacy-by-design-and-default-what-is-data-protection-by-design-and-default/" target="_blank">7 principles of Privacy by Design and Default</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.7 Privacy by Design" href="https://canvas.kings.edu.au/courses/12951/assignments/204813" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204813" data-api-returntype="Assignment">1.7 Privacy by Design</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.7%20Privacy%20by%20Design.pptx?d=wbcd6c974605849d9a8e79f9105b43324&amp;csf=1&amp;web=1&amp;e=QbXXQV">1.7 Privacy by Design.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-7-privacy-by-design" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={bcd6c974-6058-49d9-a8e7-9f9105b43324}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-012.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-014.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

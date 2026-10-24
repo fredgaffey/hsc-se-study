@@ -1,0 +1,197 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.11 Frontend Code Libraries — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 8 (Term 1: Weeks 7-8) Programming for the Web</div>
+<h1 style="margin-top:.2rem">2.11 Frontend Code Libraries</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-11-frontend-code-libraries" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+<h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">Unit</span><span class="dp-header-pre-2" style="font-size: 14pt;">2</span> </span> <span class="dp-header-title">2.11 Code Libraries<br></span></h2>
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Explore the types and significance of code libraries for front-end web development, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>frameworks that control complex web applications</li>
+<li>template engines</li>
+<li>predesigned CSS classes</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the types and importance of code libraries in front-end web development.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Identify different libraries for frameworks, template engines, and CSS classes</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Describe the use of different libraries in web development<br></span></li>
+<li class="card-text"><span style="font-size: 10pt;">Discuss the significance of code libraries for front-end web development</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4>Web Frameworks</h4>
+<p data-start="59" data-end="344">In the early 2000s, making web pages interactive required <strong data-start="117" data-end="148">manually writing JavaScript</strong> for animations, form validation, and AJAX requests. Developers had to handle <strong data-start="238" data-end="258">DOM manipulation</strong> with raw JavaScript or jQuery, which made complex applications difficult to maintain!</p>
+<p data-start="59" data-end="344">As web applications grew in complexity, <strong data-start="426" data-end="451">JavaScript frameworks</strong> like <strong data-start="457" data-end="475">Angular (2010)</strong> and <strong data-start="480" data-end="496">React (2013)</strong> emerged. These frameworks introduced <strong data-start="534" data-end="566">component-based architecture</strong>, <strong data-start="568" data-end="588">state management</strong>, and <strong data-start="594" data-end="616">reusable functions</strong>, reducing the need for manual scripting.<strong></strong></p>
+<ul>
+<li><strong>JavaScript Frameworks</strong>: Reusable UI components, state management, and hooks to build web applications.&nbsp;<br>e.g. React.js, Vue.js, Svelete<br><br></li>
+<li><strong>Full-Stack Frontend:</strong> Includes UI rendering, but extends this by including file-based routing and server-side rendering.<br>e.g. Next.js, Angular<br><br></li>
+<li><strong>Static Site Generators: </strong>Generates pre-rendered HTML pages for fasting loading and optimisation<br>e.g. Gatsby, Hugo, Flask<br><br></li>
+</ul>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-info dp-callout-color-info">
+<div class="card-body">
+<h3 class="card-title"><strong>Significance</strong>: How Web Frameworks Changed Development</h3>
+<ul>
+<li class="card-text"><strong>Prebuilt Functions &amp; Components: <br></strong>Instead of writing custom JS for everything, developers can now use pre-built libraries and community-driven components.</li>
+<li class="card-text"><strong>Faster Development:</strong> <br>Features like data binding (Angular) and virtual DOM (React) automate updates, reducing manual DOM manipulation.</li>
+<li class="card-text"><strong>Scalability &amp; Maintainability: <br></strong>Component-based design ensures that code is modular and easier to maintain in large applications.</li>
+<li class="card-text"><strong>Huge Community Support:</strong> <br>Open-source contributions allow developers to reuse and extend functionality, speeding up development.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Template Engines</h4>
+<p data-start="112" data-end="304">Initially, websites were <strong data-start="137" data-end="154">purely static</strong>, with each page being a separate HTML file. If a site had 100 pages, developers had to <strong data-start="242" data-end="261">manually update</strong> each file, making maintenance difficult!</p>
+<p>To solve redundancy, template engines (e.g., PHP, EJS, Jinja2) emerged in the early 2000s, allowing developers to reuse <strong>HTML components </strong>(headers, footers, nav bars) across pages, <strong>avoiding duplication </strong>of HTML and scale projects without the files growing too large. Languages like Python (Flask, Django) and Node.js (Express + EJS/Pug) allowed pages to be rendered dynamically on each request.</p>
+<ul>
+<li><strong>Server-Side Template Engines:</strong> Server-side rendering (SSR) generates <strong data-start="71" data-end="93">HTML on the server</strong> before sending it to the browser for display. Hence, the server manages both the front end and back end.&nbsp;<br>e.g. Jinja2, EJS<br><br></li>
+<li><strong>Client-Side Template Engines:</strong> Libraries like Mustache and Handlebars can also be used on the client side, allowing developers to dynamically generate and update HTML without server interaction.</li>
+</ul>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-danger">
+<div class="card-body">
+<h3 class="card-title"><strong>Significance</strong>: Template Engines Changed Development</h3>
+<ul style="list-style-type: disc;">
+<li class="card-text"><strong>Reusable Components: <br></strong>Instead of duplicating HTML, developers can use partials and includes to manage layouts efficiently.</li>
+<li class="card-text"><strong>Separation of Concerns: <br></strong>HTML is kept clean and structured, while logic and styling are managed separately.</li>
+<li class="card-text"><strong>Scalability &amp; Maintainability</strong>: <br>Modular templates prevent large, unmanageable files, making updates easier.</li>
+<li class="card-text"><strong>Server-Side Rendering (SSR) Support:</strong> <br>Engines like Jinja2 (Flask) and EJS (Node.js) enable faster initial page loads and better SEO.</li>
+</ul>
+</div>
+</div>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/5917ad907988d3d7.png" alt="image.png" width="550" height="244" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527537" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Predesigned CSS Classes</h4>
+<p>Predesigned CSS libraries offer sets of pre-styled components and utility classes that can be used to quickly build responsive and visually appealing user interfaces.</p>
+<ul>
+<li><strong>UI Frameworks:</strong> Libraries like Bootstrap, Foundation, and Bulma provide a comprehensive set of components (buttons, forms, modals, etc.) that are pre-styled and responsive, making it easier to create consistent UIs.</li>
+<li><strong>Utility-First CSS Frameworks:</strong> Frameworks like Tailwind CSS focus on providing utility classes for common styling needs (e.g., margins, padding, colours), allowing for more customised designs without writing extensive CSS.<br><strong></strong></li>
+</ul>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-success">
+<div class="card-body">
+<h3 class="card-title"><strong>Signifance</strong>: Impact of CSS Classes</h3>
+<ul>
+<li><strong>Speeds Up Development:</strong> Using predesigned CSS classes allows developers to quickly style elements without starting from scratch, saving time and effort.</li>
+<li><strong>Ensures Consistent Design:</strong> Predesigned classes follow a consistent design language, helping to maintain visual consistency throughout the application.</li>
+<li><strong>Responsive Design:</strong> Most modern CSS libraries are built with responsive design in mind, making it easier to create layouts that work across different screen sizes and devices.</li>
+<li><strong>Customisability:</strong> While these libraries provide pre-styled components, they are often flexible enough to be customised, allowing developers to adapt the design to specific project requirements.</li>
+</ul>
+</div>
+</div>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/e2c22d332aa12950.png" alt="image.png" width="596" height="441" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527538" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://careerfoundry.com/en/blog/web-development/programming-library-guide/" target="_blank">What is a Programming Library? A Beginner’s Guide</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.educative.io/answers/what-are-template-engines" target="_blank">What are template engines?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://css-tricks.com/should-you-use-a-template/" target="_blank">Should you use a template?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.11 Code Libraries" href="https://canvas.kings.edu.au/courses/12951/assignments/204818" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204818" data-api-returntype="Assignment">2.11 Code Libraries</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.11%20Front-End%20Libraries.pptx?d=w4a483ef646d04a21ba99fe2a87f56f33&amp;csf=1&amp;web=1&amp;e=yLYfPI">2.11 Front-End Libraries.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-11-frontend-code-libraries" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={4a483ef6-46d0-4a21-ba99-fe2a87f56f33}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-051.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-053.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

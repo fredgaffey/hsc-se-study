@@ -1,0 +1,258 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.11 Autonomous Control — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 13 (Term 3: Weeks 5-6) Mechatronics</div>
+<h1 style="margin-top:.2rem">3.11 Autonomous Control</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-11-autonomous-control" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus</strong><br class="card-text">Outline the features of an algorithm and program code used for autonomous control</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">understand the key features of an algorithm and program code used for autonomous control.</span></li>
+<li><span style="font-size: 10pt;">be able to identify and outline the components that make up an algorithm and program code for autonomous system</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">explain the main features of an algorithm used in autonomous control systems, including input, output, processing, and decision-making steps.</span></li>
+<li><span style="font-size: 13.3333px;">describe the structure and elements of program code necessary for autonomous control, such as loops, conditionals, and functions.</span></li>
+<li><span style="font-size: 13.3333px;">develop a basic algorithm and corresponding program code that demonstrates autonomous control in a given scenario.</span></li>
+<li><span style="font-size: 13.3333px;">test and debug the program code to ensure it performs the intended autonomous functions accurately.</span></li>
+<li><span style="font-size: 13.3333px;">evaluate the effectiveness of their algorithm and program code in achieving autonomous control and suggest potential improvements for optimization and efficiency.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Autonomous control refers to the capability of a system to operate independently, making decisions and performing tasks without human intervention. This involves using sensors, algorithms, and actuators to perceive the environment, plan actions, and execute commands. Autonomous control systems are widely used in various applications, such as self-driving cars, drones, robotics, and industrial automation.</p>
+<p>&nbsp;</p>
+<p class="p1">Autonomous control algorithms manage mechatronic systems by sensing the system state, calculating the error from a desired setpoint, and computing the required control values. This process repeats continuously in a control loop. The three common types of algorithms are:</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">On/Off Control (Bang-Bang Control)</h3>
+<div class="dp-panel-content ">
+<p class="p1"><strong>Functionality:</strong></p>
+<ul>
+<li class="p1">Turns actuators fully on or fully off based on the system state relative to the desired setpoint.</li>
+<li class="p1">Operates in a binary manner, switching between two extremes.</li>
+</ul>
+<p class="p1"><strong>Strengths:</strong></p>
+<ul>
+<li class="p2">Simple to implement.</li>
+<li class="p2">Suitable for systems where precise control is unnecessary.</li>
+</ul>
+<p class="p1"><strong>Weaknesses:</strong></p>
+<ul>
+<li class="p2">Tends to overshoot or undershoot the setpoint.</li>
+<li class="p2">Can cause oscillations as the system repeatedly hits its limits.</li>
+</ul>
+<p class="p1"><strong>Additional Feature: Hysteresis:</strong></p>
+<p class="p3">To reduce rapid switching and potential damage to components, a tolerance band around the setpoint is introduced. This creates stability by ensuring the system only activates when deviations exceed a certain threshold.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Proportional Control</h3>
+<div class="dp-panel-content ">
+<p class="p1"><strong>Functionality:</strong></p>
+<ul>
+<li class="p2">Adjusts the actuator’s response proportionally to the error (the difference between the system state and the desired setpoint).</li>
+<li class="p2">The larger the error, the stronger the response.</li>
+</ul>
+<p class="p3"><strong>Strengths:</strong></p>
+<ul>
+<li class="p2">Smoother and more refined control compared to on/off systems.</li>
+<li class="p2">Reduces oscillations by varying the strength of the response.</li>
+</ul>
+<p class="p3"><strong>Weaknesses:</strong></p>
+<ul>
+<li class="p2">When the error is small, the control signal may be too weak to move actuators effectively.</li>
+<li class="p2">Can result in steady-state errors, where the system stabilises near, but not exactly at, the setpoint.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PID Control (Proportional-Integral-Derivative)</h3>
+<div class="dp-panel-content">
+<p class="p1">PID control enhances proportional control by adding two components: <strong>integral</strong> and <strong>derivative</strong> control.</p>
+<p class="p1"><strong>Proportional Component (P):</strong></p>
+<ul>
+<li class="p2">Provides immediate adjustments based on the size of the error.</li>
+</ul>
+<p class="p3"><strong>Integral Component (I):</strong></p>
+<ul>
+<li class="p2">Accumulates past errors over time.</li>
+<li class="p2">Helps eliminate steady-state errors by ensuring that small deviations are corrected gradually.</li>
+</ul>
+<p class="p3"><strong>Derivative Component (D):</strong></p>
+<ul>
+<li class="p2">Reacts to the rate of change in error.</li>
+<li class="p2">Dampens overshoot by reducing the control response as the system approaches the setpoint too quickly.</li>
+</ul>
+<p class="p3"><strong>Strengths:</strong></p>
+<ul>
+<li class="p2">Combines the benefits of proportional, integral, and derivative control for precise and stable operation.</li>
+<li class="p2">Adapts to dynamic conditions, correcting both short-term and long-term deviations.</li>
+</ul>
+<p class="p3"><strong>Weaknesses:</strong></p>
+<ul>
+<li>More complex to configure due to the need to tune proportional, integral, and derivative gains.</li>
+<li>Can be computationally intensive for some systems.</li>
+</ul>
+</div>
+</div>
+</div>
+<p class="p1">&nbsp;</p>
+<p>&nbsp;</p>
+<h4><strong>Features of an Algorithm for Autonomous Control</strong></h4>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs-pills-group-vertical">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Sensor Integration</h3>
+<div class="dp-panel-content ">
+<p>Usage in Autonomous Control: Sensors provide real-time data about the environment. This data is crucial for making informed decisions and executing precise actions.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Data Acquisition: Collecting data from various sensors like GPS, LIDAR and cameras.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Sensor Fusion: Combining data from multiple sensors to create a comprehensive understanding of the environment.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Perception</h3>
+<div class="dp-panel-content ">
+<p>Usage in Autonomous Control: Perception allows the system to interpret and understand its surroundings, which is essential for safe and efficient operation.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Object Detection and Classification: Identifying and classifying objects in the environment.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Environment Mapping: Creating and updating a map of the surroundings.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Localisation: Determining the system’s position within the map.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Decision Making</h3>
+<div class="dp-panel-content">
+<p>Usage in Autonomous Control: Decision-making algorithms determine the best course of action based on the current situation and goals.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Path Planning: Generating an optimal path to the destination, considering obstacles and objectives.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Behaviour Planning: Deciding on high-level actions based on the current situation (e.g., lane changing, stopping).</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Control</h3>
+<div class="dp-panel-content">
+<p>Usage in Autonomous Control: Control algorithms convert decisions into actionable commands to guide the system’s movement and actions.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Motion Control: Converting path planning into executable commands for actuators (e.g., steering, acceleration, braking).<br>&nbsp; &nbsp; • &nbsp; &nbsp;Trajectory Tracking: Ensuring the system follows the planned path accurately.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Communication</h3>
+<div class="dp-panel-content">
+<p>Usage in Autonomous Control: Communication ensures coordination within the system and with external entities, enhancing situational awareness and safety.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Inter-System Communication: Exchanging data between different parts of the system (e.g., sensors, controllers).<br>&nbsp; &nbsp; • &nbsp; &nbsp;External Communication: Interfacing with external systems (e.g., traffic signals, other vehicles).</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Safety and Redundancy</h3>
+<div class="dp-panel-content">
+<p>Usage in Autonomous Control: Safety mechanisms and redundancy are critical to handle errors and ensure continuous operation in case of failures.</p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Error Handling: Detecting and responding to errors or failures in the system.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Fail-Safe Mechanisms: Implementing backup systems to maintain control if the primary system fails.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Features of Program Code for Autonomous Control</strong></h4>
+<p>Let's consider how all of these different features come together by thinking about Autonomous Control in VexVR.</p>
+<p>&nbsp;</p>
+<ol style="list-style-type: decimal;">
+<li><strong>Sensor Integration<br></strong>
+<p><img src="../../assets/47499404b5cc6f74.png" alt="image.png" width="418" height="194" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197885" data-api-returntype="File" loading="lazy"><br>&nbsp; &nbsp; • &nbsp; &nbsp;Purpose: This step collects data from multiple sensors. In this example, we use the distance sensor to measure the distance to objects and the gyro sensor to measure the robot’s orientation.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Relevance to Autonomous Control: Gathering accurate and real-time data from sensors is crucial for the robot to understand its environment and make informed decisions.<br><br></p>
+</li>
+<li><strong>Perception</strong><strong><br></strong>
+<p><img src="../../assets/54639248a6a28cd1.png" alt="image.png" width="553" height="268" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197886" data-api-returntype="File" loading="lazy"><br>&nbsp; &nbsp; • &nbsp;&nbsp; Purpose: This step involves interpreting sensor data to detect objects and determine the robot’s position.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Relevance to Autonomous Control: Perception allows the robot to recognize obstacles and know its orientation, which is essential for navigating and performing tasks safely and effectively.</p>
+</li>
+<li><strong>Decision Making<br></strong>
+<p><img src="../../assets/7bf56157adbea89e.png" alt="image.png" width="587" height="290" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197887" data-api-returntype="File" loading="lazy"><br>&nbsp; &nbsp; • &nbsp; &nbsp;Purpose: This step involves deciding the actions the robot should take based on its perception of the environment.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Relevance to Autonomous Control: Effective decision-making is crucial for the robot to navigate towards its goal while avoiding obstacles. The path planning function creates a sequence of movements, and behavior planning determines whether to proceed or stop based on detected objects.</p>
+</li>
+<li><strong>Control <br></strong>
+<p><img src="../../assets/596d909c674d3911.png" alt="image.png" width="460" height="334" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197888" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp; &nbsp; • &nbsp; &nbsp;Purpose: This step converts the planned actions into executable commands for the robot.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Relevance to Autonomous Control: Control algorithms ensure that the robot moves as intended, following the planned path and adjusting its actions based on real-time feedback.</p>
+</li>
+<li><strong>Communication<br></strong>
+<p><img src="../../assets/09b617a374d6161a.png" alt="image.png" width="541" height="156" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197889" data-api-returntype="File" loading="lazy"><br>&nbsp; &nbsp; • &nbsp; &nbsp;Purpose: This step involves sharing information within the system and with external entities.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Relevance to Autonomous Control: Effective communication helps in monitoring the system’s state and coordinating actions, which is essential for maintaining situational awareness and safety.</p>
+</li>
+<li><strong>Safety and Redundancy<br></strong>
+<p><img src="../../assets/3341d010ec1d6953.png" alt="image.png" width="506" height="251" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197890" data-api-returntype="File" loading="lazy"></p>
+</li>
+<li><strong>Putting It All Together<br></strong><img src="../../assets/3cff2cc9ed6b547a.png" alt="image.png" width="595" height="653" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197891" data-api-returntype="File" loading="lazy"><br>&nbsp; &nbsp; • &nbsp; &nbsp;Purpose: The main control loop orchestrates all the steps, ensuring the robot continuously gathers sensor data, perceives the environment, makes decisions, controls movements, communicates data, and handles errors.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Relevance to Autonomous Control: The control loop integrates all components of the autonomous system, allowing the robot to operate independently and adapt to changing conditions in real-time.</li>
+</ol>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%203.%20Programming%20Mechatronics/PPTs/3.11%20Autonomous%20Control.pptx?d=w7df085ccd6f647d5ae0ecdc79ac9f918&amp;csf=1&amp;web=1&amp;e=Li9SIr">3.11 Autonomous Control.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/3-dot-11-autonomous-control" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={7df085cc-d6f6-47d5-ae0e-cdc79ac9f918}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div><h3 class="sub">Programming and building</h3></main>
+<div class="pnrow"><a class="pn" href="11962-064.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-066.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

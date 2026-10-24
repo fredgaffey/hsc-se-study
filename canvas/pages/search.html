@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Search Everything — SEN Offline</title>
+<style>
+:root{--bg:#fff;--fg:#16181d;--mut:#5a6472;--card:#fff;--bd:#e2e8f0;--ac:#2b6cb0;--ok:#2f855a}
+@media(prefers-color-scheme:dark){:root{--bg:#15171c;--fg:#e6e8ec;--mut:#9aa4b2;--card:#1c1f26;--bd:#2d3340}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+.appnav{position:sticky;top:0;z-index:99;display:flex;gap:.25rem;flex-wrap:wrap;background:#1a202c;padding:.5rem .75rem}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover,.appnav a.on{background:#2d3748;color:#fff}.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+main{max-width:900px;margin:0 auto;padding:1.25rem 1.25rem 4rem}
+h1{font-size:1.5rem;margin:.2rem 0 .8rem}
+.sticky{position:sticky;top:44px;z-index:98;background:var(--bg);padding:.6rem 0 .4rem}
+input[type=search]{width:100%;font:inherit;font-size:1.05rem;padding:.7rem .95rem;border-radius:10px;
+ border:1px solid var(--bd);background:var(--card);color:var(--fg)}
+.ctrl{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.chip{font-size:.8rem;padding:.3rem .7rem;border-radius:999px;border:1px solid var(--bd);cursor:pointer;
+ background:var(--card);color:var(--mut);user-select:none}
+.chip.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.sw{display:inline-flex;align-items:center;gap:.45rem;font-size:.85rem;color:var(--mut);cursor:pointer}
+.res{border:1px solid var(--bd);border-radius:10px;padding:.8rem .95rem;margin:.6rem 0;background:var(--card)}
+.res a{color:var(--ac);text-decoration:none;font-weight:600}
+.res a:hover{text-decoration:underline}
+.crumb{font-size:.74rem;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);margin-bottom:.2rem}
+.snip{font-size:.92rem;color:var(--fg);margin-top:.35rem}
+.kind{font-size:.68rem;padding:.12rem .5rem;border-radius:999px;margin-left:.4rem;vertical-align:middle}
+.kind.page{background:rgba(43,108,176,.14);color:var(--ac)}
+.kind.q{background:rgba(183,121,31,.16);color:#b7791f}
+.kind.g{background:rgba(47,133,90,.15);color:var(--ok)}
+mark{background:rgba(43,108,176,.20);color:inherit;border-radius:3px;padding:0 2px;box-shadow:inset 0 -2px 0 rgba(43,108,176,.55);font-weight:600}
+.muted{color:var(--mut);font-size:.87rem}
+.opt{font-size:.9rem;padding:.15rem 0}
+.opt.c{color:var(--ok);font-weight:600}
+[x-cloak]{display:none!important}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+</style>
+<script src="../data/pages.js" defer></script>
+<script src="../data/questions.js" defer></script>
+<script src="../vendor/alpine.min.js" defer></script>
+<script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../index.html" class="brand">SEN Offline</a><a href="search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="course-12951.html">HSC Course</a><a href="course-11962.html">Yr 11 Course</a><a href="browse.html">Quizzes</a><a href="quiz.html">Quiz Generator</a><a href="sync.html">Sync</a></nav>
+
+<main x-data="S()" x-cloak>
+ <h1>Search everything</h1>
+ <div class="sticky">
+  <input type="search" x-model="term" @input="go()"
+   placeholder="Search course notes, quizzes and exams — e.g. 'encryption', 'waterfall', 'ORM'">
+  <div class="ctrl">
+   <span class="chip" :class="scope.pages&&'on'" @click="scope.pages=!scope.pages;go()">Course notes</span>
+   <span class="chip" :class="scope.q&&'on'" @click="scope.q=!scope.q;go()">Quiz questions</span>
+   <label class="sw"><input type="checkbox" x-model="fuzzy" @change="go()"> Fuzzy matching
+    <span class="muted" x-text="fuzzy?'(tolerates typos — on by default)':'(exact words only)'"></span></label>
+  </div>
+  <p class="muted" x-text="status"></p>
+ </div>
+
+ <template x-for="r in results" :key="r.k">
+  <div class="res">
+   <div class="crumb" x-text="r.crumb"></div>
+   <a :href="r.href" x-text="r.title"></a><span class="kind" :class="r.kind" x-text="r.label"></span>
+   <div class="snip" x-html="r.snip"></div>
+   <template x-if="r.opts">
+    <div style="margin-top:.4rem">
+     <template x-for="(o,oi) in r.opts" :key="oi">
+      <div class="opt" :class="o.c?'c':''" x-text="(o.c?'✓ ':'· ')+o.t"></div>
+     </template>
+    </div>
+   </template>
+  </div>
+ </template>
+ <p x-show="term.trim()&&!results.length" class="muted">No matches. Try fuzzy matching, or a shorter word.</p>
+</main>
+
+<script>
+function S(){return{
+ term:'', fuzzy:true, scope:{pages:true,q:false}, results:[], status:'', _t:null,
+ init(){ this.pages=window.PAGES||[]; this.qs=window.QB||[];
+   var __qparam=new URLSearchParams(location.search).get('q');
+   if(__qparam){ this.term=__qparam; setTimeout(()=>this.run(),0); }
+   this.status=(this.pages.length)+' course pages · '+(this.qs.length)+' questions indexed'; },
+ esc(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))},
+ // Damerau-Levenshtein: counts a transposition (swapped letters) as ONE edit,
+ // which is the most common real typo. Plain Levenshtein charges 2 and misses them.
+ lev(a,b){ if(Math.abs(a.length-b.length)>3)return 9;
+   const m=a.length,n=b.length;
+   const d=Array.from({length:m+1},(_,i)=>{const r=new Array(n+1).fill(0);r[0]=i;return r;});
+   for(let j=0;j<=n;j++) d[0][j]=j;
+   for(let i=1;i<=m;i++) for(let j=1;j<=n;j++){
+     const c=a[i-1]===b[j-1]?0:1;
+     d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+c);
+     if(i>1&&j>1&&a[i-1]===b[j-2]&&a[i-2]===b[j-1]) d[i][j]=Math.min(d[i][j],d[i-2][j-2]+1);
+   }
+   return d[m][n]; },
+ thr(len){ return len<=3?0 : len<=5?1 : len<=8?2 : 3; },
+ words(s,cache,key){ if(cache[key])return cache[key];
+   return cache[key]=[...new Set(s.match(/[a-z0-9]{3,}/g)||[])]; },
+ hit(hay,tokens,cache,key){
+   const pos=[];
+   for(const t of tokens){
+     let i=hay.indexOf(t);
+     if(i>=0){ pos.push([i,t.length]); continue; }
+     if(!this.fuzzy) return null;
+     const thr=this.thr(t.length); let found=null;
+     for(const w of this.words(hay,cache,key)){
+       if(w.length>=t.length-1 && w.startsWith(t.slice(0,Math.min(4,t.length)))){found=w;break;}
+       if(this.lev(t,w)<=thr){found=w;break;} }
+     if(!found) return null;
+     const j=hay.indexOf(found); pos.push([j,found.length]);
+   }
+   return pos;
+ },
+ snippet(raw,hay,pos){
+   const p=pos.slice().sort((a,b)=>a[0]-b[0])[0]||[0,0];
+   const s=Math.max(0,p[0]-110), e=Math.min(raw.length,p[0]+230);
+   let out=this.esc((s>0?'… ':'')+raw.slice(s,e)+(e<raw.length?' …':''));
+   const seen=new Set();
+   for(const [i,l] of pos){ const w=hay.substr(i,l); if(seen.has(w))continue; seen.add(w);
+     out=out.replace(new RegExp('('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark>$1</mark>'); }
+   return out;
+ },
+ go(){ clearTimeout(this._t); this._t=setTimeout(()=>this.run(),160); },
+ run(){
+  const t=this.term.trim().toLowerCase();
+  if(!t){ this.results=[]; this.status=this.pages.length+' course pages · '+this.qs.length+' questions indexed'; return; }
+  const tokens=t.split(/\s+/).filter(Boolean);
+  const cache={}; const out=[]; const t0=performance.now();
+  if(this.scope.pages) this.pages.forEach((p,i)=>{
+    const hay=(p._l||(p._l=(p.t+' '+p.x).toLowerCase()));
+    const pos=this.hit(hay,tokens,cache,'p'+i); if(!pos)return;
+    out.push({k:'p'+i,kind:'page',label:'course notes',crumb:p.cl+' · '+p.m,title:p.t,
+      href:p.f+(p.a?'#'+p.a:''),snip:this.snippet(p.t+' '+p.x,hay,pos),score:pos[0][0]});
+  });
+  if(this.scope.q) this.qs.forEach((q,i)=>{
+    const body=q.q+' '+q.opts.map(o=>o.t).join(' ');
+    const hay=(q._l||(q._l=body.toLowerCase()));
+    const pos=this.hit(hay,tokens,cache,'q'+i); if(!pos)return;
+    out.push({k:'q'+i,kind:'q',label:'quiz',crumb:q.unit+' · '+q.quiz,
+      title:q.q.slice(0,110)+(q.q.length>110?'…':''),
+      href:'browse.html',snip:this.snippet(body,hay,pos),
+      opts:q.opts.slice(0,6),score:pos[0][0]});
+  });
+  out.sort((a,b)=>a.score-b.score);
+  this.results=out.slice(0,120);
+  this.status=out.length+' matches'+(out.length>120?' (showing 120)':'')
+    +' · '+Math.round(performance.now()-t0)+'ms'+(this.fuzzy?' · fuzzy':'');
+ }
+}}
+</script><script>
+/* autofocusSearch: land ready to type; Escape clears */
+(function(){
+ function arm(){
+  var b=document.querySelector('input[type=search]');
+  if(!b){ return setTimeout(arm,80); }
+  b.focus({preventScroll:true});
+  window.__searchFocused = (document.activeElement===b);
+  b.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){ b.value=''; b.dispatchEvent(new Event('input',{bubbles:true})); }
+  });
+ }
+ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',arm);
+ else arm();
+})();
+</script>
+<link rel="stylesheet" href="../vendor/findbar.css?v=5800f209">
+<script src="../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

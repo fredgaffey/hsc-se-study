@@ -1,0 +1,172 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Introduction to Cycle 2 — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 2 (Term 4: Weeks 3-4) Secure Software Architecture</div>
+<h1 style="margin-top:.2rem">Introduction to Cycle 2</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/introduction-to-cycle-2" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div id="" class="dp-banner-image"><img class="dp-full-width" style="width: 100%; height: auto; max-width: 100%;" role="presentation" src="https://kingsnet.kings.edu.au/images/UserUploadedImages/1754/banner2.jpg" alt=" [online-only image]" loading="lazy"></div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-read-time-wrapper"><i class="fas fa-clock cp-txt-dp-primary" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> 2 min read&nbsp; |&nbsp; no activities&nbsp; |&nbsp;&nbsp;<i class="dp-icon fas fa-brain cp-txt-primary" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp; (easy)&nbsp;&nbsp;</div>
+<h4>Timing</h4>
+<p>Weeks 3 and 4</p>
+<p>&nbsp;</p>
+<h4>Content</h4>
+<p><strong>Secure Software Architecture</strong></p>
+<p>This cycle delves deeper into the technical implementation of secure software systems. Moving beyond the foundational concepts, we explore how to proactively build security and privacy directly into software architecture from the ground up.</p>
+<p>Throughout this cycle, we will cover the following key areas:</p>
+<ul>
+<li>The 'Security by Design' approach, focusing on the technical pillars of cryptography and sandboxing.</li>
+<li>Implementing the 'Privacy by Design' framework to ensure user data is proactively protected and respected.</li>
+<li>Testing software resilience, determining vulnerabilities, handling breaches, and planning for business continuity and disaster recovery.</li>
+<li>Utilising vital developer strategies and tools, including SAST, DAST, code reviews, and penetration testing.</li>
+<li>Designing defensive code with robust data input handling, validation, and sanitisation to prevent malicious exploits like SQL injection.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Deliverables</h4>
+<p>By the end of this cycle, you need to complete:</p>
+<ul>
+<li>Quiz — 1.6 Security by Design</li>
+<li>Activity — Solve the Cryptograms</li>
+<li>Activity — Make your own Cryptograms</li>
+<li>Quiz — 1.7 Privacy by Design</li>
+<li>Quiz — 1.8 Test Security &amp; Resilience</li>
+<li>Quiz — 1.9 Security Strategies &amp; Tools</li>
+<li>EdStem — SAST</li>
+<li>EdStem — DAST</li>
+<li>Quiz — 1.10 Defensive Data</li>
+<li>Practical — SQL Injection</li>
+<li>Gradeo — Cycle 2</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Lessons</h4>
+<table style="border-collapse: collapse; width: 100%;" border="1" data-active-table="true">
+<tbody>
+<tr>
+<td style="width: 26.8426%;"><strong>Title</strong></td>
+<td style="width: 34.4899%;"><strong>Syllabus</strong></td>
+<td style="width: 38.6675%;"><strong>Page Focus</strong></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.6 Security by Design" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.6 Security by Design</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p>Use and explain the contribution of cryptography and sandboxing to the 'security by design' approach in the development of software solutions.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Building security into software from the ground up is more effective than adding it later. This page explores two key technical pillars of 'Security by Design': Cryptography for data protection and Sandboxing for safe execution.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.7 Privacy by Design" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.7 Privacy by Design</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Use and explain the 'privacy by design' approach in the development of software solutions, including:</p>
+<ul>
+<li>proactive not reactive approach</li>
+<li>embed privacy into design</li>
+<li>respect for user privacy</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Privacy isn't an afterthought; it's a core component of modern software architecture. This page explores the 'Privacy by Design' framework, ensuring user data is protected proactively, embedded deeply, and respected throughout the software lifecycle.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.8 Test Security &amp; Resilience" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.8 Test Security &amp; Resilience</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Test and evaluate the security and resilience of software by determining vulnerabilities, hardening systems, handling breaches, maintaining business continuity and conducting disaster recovery.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>Building software is only half the battle; keeping it safe is the other. This page explores how we test software for vulnerabilities, harden it against attacks, handle breaches when they happen, and ensure the business keeps running even when disaster strikes.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.9 Security Strategies &amp; Tools" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.9 Security Strategies &amp; Tools</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Apply and evaluate strategies used by software developers to manage the security of programming code:</p>
+<ul>
+<li>code review</li>
+<li>static application security testing (SAST)</li>
+<li>dynamic application security testing (DAST)</li>
+<li>vulnerability assessment</li>
+<li>penetration testing</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Writing code is only half the battle; ensuring it is secure is equally important. This page explores the tools and strategies developers use to find and fix vulnerabilities, including code reviews, automated testing (SAST/DAST), and penetration testing.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="1.10 Defensive Data" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">1.10 Defensive Data</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Design, develop and implement code using defensive data input handling practices, including input validation, sanitisation and error handling.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Input based vulnerabilities are a major security risk for software. This page covers how to design and implement defensive data handling, including validation, sanitisation, and error handling, to protect systems from malicious attacks like SQL injection.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">During </h3><h3 class="sub">Developing Secure Code</h3></main>
+<div class="pnrow"><a class="pn" href="12951-010.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-012.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

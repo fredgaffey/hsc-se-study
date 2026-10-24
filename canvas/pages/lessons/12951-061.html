@@ -1,0 +1,224 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.19 Object-Relational Mapping — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 9 (Term 1: Weeks 9-10) Programming for the Web</div>
+<h1 style="margin-top:.2rem">2.19 Object-Relational Mapping</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-19-object-relational-mapping" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Compare Object-Relational Mapping (ORM) to SQL</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the core differences between SQL and ORM, and learn when to choose between direct SQL querying and using an ORM framework in application development.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Describe the differences between SQL and ORM in terms of how they interact with databases.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Identify scenarios where using SQL or ORM would be more appropriate based on project needs.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Analyse the performance trade-offs and benefits of using ORM versus writing raw SQL queries.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<h5 class="card-title">What is ORM?</h5>
+<p>ORM is a programming technique that allows you to interact with the database by using the object-oriented programming (OOP) model. With ORM, you manipulate database tables as though they were programming language classes, and rows are represented as instances (objects) of those classes.</p>
+<p>Popular ORM frameworks include Hibernate (Java), SQLAlchemy (Python), Django ORM (Python), and Entity Framework (C#).</p>
+<ul>
+<li>Abstraction of SQL: Instead of writing SQL queries, ORM frameworks generate SQL code on behalf of the developer based on the objects and methods in the application code. This creates an abstraction layer between the database and the application code, allowing developers to interact with databases without manually writing SQL.</li>
+<li>Example of ORM Usage:</li>
+</ul>
+<pre># Using Django ORM in Python to query users<br>users = User.objects.filter(age__gt=30).order_by('last_name')</pre>
+<p>This ORM query performs the same operation as the SQL query above but uses Python-like syntax to query the database. The ORM framework translates this into an SQL statement under the hood.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Advantages of ORM:</strong></p>
+<ul>
+<li>Increased Productivity: By automating <span class="dp-tooltip-container"><a id="dpPopup0" class="dp-tooltip-trigger dp-popup-trigger" role="button" href="https://canvas.kings.edu.au/courses/12951/modules#dpPopup0tooltip" class="ext" target="_blank" rel="noopener" aria-describedby="" data-bs-toggle="tooltip">CRUD</a> <span id="dpPopup0tooltip" class="dp-tooltip-content dp-popup-content" style="background-color: #545454; color: #ffffff; padding: 2px 5px; border-radius: 3px;" role="tooltip">CRUD: An acronym for Create, Read, Update, Delete, which represents the four basic operations performed on data in a database or storage system.</span></span> operations, developers can focus on the business logic rather than manually writing SQL queries.</li>
+<li>Database-Agnostic: ORM frameworks allow developers to switch between different databases (e.g., from MySQL to PostgreSQL) with minimal code changes, as the SQL is abstracted away.</li>
+<li>Less Boilerplate: Common database operations are handled by the ORM framework, leading to less repetitive code and improved maintainability.</li>
+<li>Object-Oriented Approach: ORMs allow you to work with native language objects (classes and objects), which is more intuitive for developers familiar with object-oriented programming. This can also lead to better integration with the rest of the application.</li>
+</ul>
+<p><strong>Disadvantages of ORM:</strong></p>
+<ul>
+<li>Performance Overhead: ORMs typically introduce some performance overhead because the generated SQL queries may not be as optimised as hand-written SQL. This is especially noticeable in large or complex queries.</li>
+<li>Less Fine-Grained Control: While ORMs simplify many operations, they can make it more difficult to fine-tune queries for performance or handle very specific use cases that require complex SQL logic.</li>
+<li>Learning Curve: Using an ORM effectively requires understanding both the ORM framework and the underlying database concepts. Inexperienced developers might misuse the ORM and create inefficient database queries.&nbsp;</li>
+</ul>
+<p>&nbsp;</p>
+<h4>SQL vs ORM</h4>
+<p>&nbsp;</p>
+<table style="border-collapse: collapse; width: 100%; height: 261px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;"><strong>Feature</strong></td>
+<td style="width: 33.2865%; height: 29px;"><strong>SQL</strong></td>
+<td style="width: 33.2865%; height: 29px;"><strong>ORM</strong></td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Level of Abstraction</td>
+<td style="width: 33.2865%; height: 29px;">Low: Direct database access through SQL queries</td>
+<td style="width: 33.2865%; height: 29px;">High: Access through programming language objects</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Performance</td>
+<td style="width: 33.2865%; height: 29px;">High for complex queries, fine-tuned optimisations</td>
+<td style="width: 33.2865%; height: 29px;">Lower performance due to abstraction overhead</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Ease of Use</td>
+<td style="width: 33.2865%; height: 29px;">Requires knowledge of SQL and database schema</td>
+<td style="width: 33.2865%; height: 29px;">Easier for developers familiar with OOP, no SQL needed</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Portability</td>
+<td style="width: 33.2865%; height: 29px;">Low: SQL may need adaptation for different DBs</td>
+<td style="width: 33.2865%; height: 29px;">High: ORMs are designed to work with multiple databases</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Maintenance</td>
+<td style="width: 33.2865%; height: 29px;">Can be harder to maintain as the app grows</td>
+<td style="width: 33.2865%; height: 29px;">Easier due to less boilerplate and abstraction</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Granular Control</td>
+<td style="width: 33.2865%; height: 29px;">High: Full control over the query execution</td>
+<td style="width: 33.2865%; height: 29px;">Low: ORM abstracts query execution details</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Flexibility</td>
+<td style="width: 33.2865%; height: 29px;">High: Complex queries are easier to implement</td>
+<td style="width: 33.2865%; height: 29px;">Limited: Complex queries can be hard to implement in ORM</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Learning Curve</td>
+<td style="width: 33.2865%; height: 29px;">Steep: Requires SQL and database knowledge</td>
+<td style="width: 33.2865%; height: 29px;">Moderate: Requires understanding of both ORM and DB basics</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h4>When to Use SQL vs ORM</h4>
+<p><strong>Use SQL when:</strong></p>
+<ul>
+<li>Performance is critical, and you need full control over database queries (e.g., in performance-sensitive applications like banking systems or data-heavy analytics).</li>
+<li>You need to write complex queries with multiple joins, nested subqueries, or optimizations that are hard to express in ORM.</li>
+<li>The project requires database-specific features such as stored procedures, triggers, or specific SQL dialects that the ORM cannot easily handle.</li>
+</ul>
+<p><strong>Use ORM when:</strong></p>
+<ul>
+<li>The project is more CRUD-heavy, and you need to automate routine database interactions (e.g., simple web apps).</li>
+<li>Portability is important, and the ability to switch databases without modifying code is a key requirement.</li>
+<li>You want to speed up development by avoiding the need to write SQL and managing database objects using the language’s OOP principles.</li>
+<li>You need to rapidly prototype an application without worrying about database details at first.</li>
+</ul>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/" target="_blank">What is an ORM – The Meaning of Object Relational Mapping Database Tools</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.edgedb.com/blog/a-solution-to-the-sql-vs-orm-dilemma" target="_blank">A solution to the SQL vs. ORM dilemma</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.19 Object-Relational Mapping" href="https://canvas.kings.edu.au/courses/12951/assignments/204826" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204826" data-api-returntype="Assignment">2.19 Object-Relational Mapping</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.19%20ORMs.pptx?d=wfe40593c0084440abdb98bcd5c511d0c&amp;csf=1&amp;web=1&amp;e=32TLEZ">2.19 ORMs.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-19-object-relational-mapping" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={fe40593c-0084-440a-bdb9-8bcd5c511d0c}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-060.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-062.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

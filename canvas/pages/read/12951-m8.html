@@ -1,0 +1,1724 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 9 (Term 1: Weeks 9-10) Programming for the Web — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">12SENX2 Software Engineering 2026 · module 9 of 15</p>
+<h1>Cycle 9 (Term 1: Weeks 9-10) Programming for the Web</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="12951-all.html">Whole course</a><span class="cur">By module</span><a href="../course-12951.html">By lesson</a></div>
+<h3 class="readles">Introduction to Cycle 9</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div id="" class="dp-banner-image"><img class="dp-full-width" style="width: 100%; height: auto; max-width: 100%;" role="presentation" src="https://kingsnet.kings.edu.au/images/UserUploadedImages/1754/banner2.jpg" alt=" [online-only image]" loading="lazy"></div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-read-time-wrapper"><i class="fas fa-clock cp-txt-dp-primary" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> 2 min read&nbsp; |&nbsp; no activities&nbsp; |&nbsp;&nbsp;<i class="dp-icon fas fa-brain cp-txt-primary" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp; (easy)&nbsp;&nbsp;</div>
+<h4>Timing</h4>
+<p>Weeks 9 and 10</p>
+<p>&nbsp;</p>
+<h4>Content</h4>
+<p><strong>Programming for the Web: Backend and Beyond</strong></p>
+<p>While the frontend creates the visual experience for users, the backend is the invisible engine powering web applications. This cycle dives deep into the architecture, tools, and processes that run on the server side, ensuring applications are dynamic, secure, and scalable.</p>
+<p>Throughout this cycle, we will cover the following key areas:</p>
+<ul>
+<li>The fundamental role of backend development in managing data, security, and the overall success of a web application.</li>
+<li>The lifecycle of a web request and the interplay between webservers, frameworks, objects, libraries, and databases.</li>
+<li>The use of scripting languages, specifically shell scripts, for automating server-side tasks.</li>
+<li>Database interaction using SQL and Object-Relational Mapping (ORM) to retrieve and manipulate stored data.</li>
+<li>Best practices for collaboration between frontend and backend teams.</li>
+<li>The design and implementation of Progressive Web Apps (PWAs) with a focus on UI/UX, accessibility, and inclusivity.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Deliverables</h4>
+<p>By the end of this cycle, you need to complete:</p>
+<ul>
+<li>Quiz — 2.15 Backend Development</li>
+<li>Quiz — 2.16 Web Requests</li>
+<li>Quiz — 2.17 Scripting Languages</li>
+<li>Quiz — 2.18 Web-Based Databases</li>
+<li>Quiz — 2.19 Object-Relational Mapping</li>
+<li>Quiz — 2.20 Collaborative Work Practises</li>
+<li>Quiz — 2.21 Progressive Web Apps</li>
+<li><strong>AT3a Due (Week 9)</strong></li>
+<li>Gradeo — Cycle 9 (Week 10)</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Lessons</h4>
+<div class="dp-table-scroll">
+<table style="border-collapse: collapse; width: 100%;" border="1" data-active-table="true">
+<tbody>
+<tr>
+<td style="width: 26.8426%;"><strong>Title</strong></td>
+<td style="width: 34.4899%;"><strong>Syllabus</strong></td>
+<td style="width: 38.6675%;"><strong>Page Focus</strong></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.15 Backend Development" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.15 Backend Development</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p>Assess the contribution of back-end web development to the success of a web application.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>While the front end is what users see, the back end is the engine that powers the application. This page explores how the back end manages data, security, and scalability to ensure the success of modern web applications.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.16 Web Requests" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.16 Web Requests</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Observe and describe the back-end process used to manage a web request, including:</p>
+<ul>
+<li>role of webserver software</li>
+<li>web framework</li>
+<li>objects</li>
+<li>libraries</li>
+<li>databases</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>When you click a link or submit a form, a complex series of events happens behind the scenes. This page breaks down the back-end process, exploring how webservers, frameworks, objects, libraries, and databases work together to manage requests and deliver content.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.17 Scripting Languages" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.17 Scripting Languages</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Develop a web application using an appropriate scripting language with shell scripts to make files and directories, and searching for text in a text file.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;"><span>This lesson introduces shell scripting as an interpreted command-line scripting language used to automate backend tasks in web development, including creating files and directories, managing data, and searching text within files.</span></td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.18 Web-Based Databases" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.18 Web-Based Databases</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Apply a web-based database and construct script that executes SQL, including:</p>
+<ul>
+<li>selecting fields</li>
+<li>incorporating ‘group by’</li>
+<li>common SQL queries</li>
+<li>constraints using WHERE keyword</li>
+<li>table joins</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>This page provides an overview of SQL, covering its standard syntax, various operation types (Retrieval, Manipulation, Definition, and Control), and its role as the universal language for relational databases.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.19 Object-Relational Mapping" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.19 Object-Relational Mapping</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Compare Object-Relational Mapping (ORM) to SQL.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Object-Relational Mapping (ORM) is a programming technique that acts as a bridge between your object-oriented code and your relational database, letting you interact with data without writing raw SQL.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.20 Collaborative Work Practises" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.20 Collaborative Work Practises</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Describe how collaborative work practices between front-end and back-end developers improve the development of a web solution.</p>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Effective front-end and back-end collaboration relies on clear communication, efficient integration and shared responsibility. By using collaborative tools and conducting joint debugging both teams can reduce errors and speed up development.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 26.8426%;"><a title="2.21 Progressive Web Apps" href="https://canvas.kings.edu.au/courses/12951/modules#" class="ext" target="_blank" rel="noopener">2.21 Progressive Web Apps</a></td>
+<td style="width: 34.4899%;">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text">Design, develop and implement a progressive web app (PWA), including:</p>
+<ul>
+<li>The application of design and user interface (UI) and user experience (UX) principles of font, colour, audio, video and navigation</li>
+<li>A UI that considers accessibility and inclusivity</li>
+</ul>
+</div>
+</div>
+</td>
+<td style="width: 38.6675%;">
+<p>Progressive Web Apps (PWAs) combine web and native app experiences to deliver fast, installable, and offline-capable applications. Designing an effective PWA also requires careful attention to UI/UX principles, accessibility, and inclusivity to ensure the app is usable and welcoming for all users across any device.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>&nbsp;</p>
+</div>
+</div><h3 class="sub">During</h3>
+<h3 class="readles">2.15 Backend Development</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Assess the contribution of back-end web development to the success of a web application</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">understand the role of back-end web development in ensuring the functionality, performance, security, and scalability of a web application<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">explain the main components of back-end development (server, database, APIs, security).</span></li>
+<li class="card-text"><span style="font-size: 10pt;">assess how a well-implemented back end contributes to a web application’s performance, security, and scalability.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">provide examples of successful web applications that rely on strong back-end development to meet user needs.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Back-end web development refers to the server-side components of a web application. It involves managing the database, server, and application logic. While front-end development focuses on what users see and interact with, back-end development ensures the app functions properly, processes requests, and delivers the correct data.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<h5 class="card-title">Recall: Components of Back-End</h5>
+<ul>
+<li class="card-text"><strong>Server</strong>: Handles client requests, processes data, and sends responses</li>
+<li class="card-text"><strong>Database</strong>: Stores and manages data that the application needs to function</li>
+<li class="card-text"><strong>APIs</strong> (Application Programming Interfaces): Allow communication between different parts of the application or between external services</li>
+<li class="card-text"><strong>Security</strong>: Ensures that data is stored and transferred securely (e.g., authentication and encryption)</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/b9da8f0d85463c0e.png" alt="image.png" width="288" height="288" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527534" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Contribution to Web Application</h4>
+<p>Back-end web development is the backbone of a web application. It ensures the application runs smoothly, securely, and efficiently behind the scenes. A strong back-end infrastructure supports key aspects like performance, scalability, data management, security, and integration, all of which are crucial for the overall success and growth of the application.&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Performance and Speed</h3>
+<div class="dp-panel-content ">
+<p>The back end plays a crucial role in determining the speed and responsiveness of a web application. When a user interacts with the front end (such as clicking a button or submitting a form), the request is sent to the back end, which processes it and returns the necessary data. Well optimised back-end processes ensure minimal delays, which enhances the overall user experience.</p>
+<ul>
+<li>Example: In an e-commerce application, when a user searches for a product, the back-end queries the database to retrieve the relevant results. If the back end is inefficient or poorly structured, it could lead to long wait times or even timeouts, frustrating the user and potentially causing them to leave the site.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Scalability</h3>
+<div class="dp-panel-content ">
+<p>Scalability is the ability of a web application to handle growth, whether it’s more users, larger datasets, or increased functionality. A scalable back end allows the application to handle high traffic without crashing or experiencing significant slowdowns.</p>
+<ul>
+<li>Vertical Scaling: Adding more resources (like CPU or memory) to a single server.</li>
+<li>Horizontal Scaling: Adding more servers to handle the workload.</li>
+</ul>
+<p>Back-end technologies, such as load balancers, distributed databases, and cloud services, enable scalability. A scalable back end ensures that an application can grow along with its user base, without performance degradation.</p>
+<ul>
+<li>Example: Social media platforms like Facebook or Instagram handle millions of concurrent users and enormous amounts of data. Their back-end systems are designed to scale horizontally, allowing them to manage this load effectively without crashing.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Data Management and Integrity</h3>
+<div class="dp-panel-content">
+<p>Back-end development is essential for managing how data is stored, retrieved, and updated. This includes designing and maintaining databases that handle structured (e.g., SQL databases) or unstructured (e.g., NoSQL databases) data. A robust back end ensures that user information, content, and transactions are handled efficiently and with high integrity, preventing data loss or inconsistencies.</p>
+<ul>
+<li>Example: In a banking application, the back end ensures that data such as account balances and transaction history are accurately stored and updated in real time. Proper data management guarantees that users see the correct information without errors or discrepancies.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Security</h3>
+<div class="dp-panel-content">
+<p>A key responsibility of back-end development is ensuring the security of the web application. The back end manages user authentication, authorisation, and encryption of sensitive data. Security measures include safeguarding the database against SQL injections, securing APIs, and implementing HTTPS to encrypt data transferred between the client and the server.</p>
+<ul>
+<li>Authentication: Verifying a user’s identity (e.g., login systems).</li>
+<li>Authorisation: Controlling what resources a user can access based on their role.</li>
+<li>Data Encryption: Ensuring that sensitive information like passwords and financial data are stored securely.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Example: An online banking application’s back end is responsible for securing user accounts, ensuring only authorised users can access personal financial information, and encrypting sensitive data during transmission.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Reliability and Availability</h3>
+<div class="dp-panel-content">
+<p>Reliability refers to the ability of the web application to perform its functions correctly and consistently, even in the face of errors or system failures. Back-end development ensures that the web app can recover quickly from unexpected issues such as server crashes or network failures. It also involves designing fail over mechanisms, where backups are automatically activated if something goes wrong.</p>
+<p>High availability ensures that the application is accessible to users 24/7. This is achieved through techniques like database replication, server clustering, and the use of cloud services.</p>
+<ul>
+<li>Example: Netflix ensures reliability and availability by using distributed server architecture and multiple data centres across the globe. Even if one server fails, users can continue to stream content without disruption because the back-end systems automatically route them to another server.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">API and Third-Party Integration</h3>
+<div class="dp-panel-content">
+<p>A modern web application often relies on third-party services for added functionality (e.g., payment gateways, social media logins, geolocation services). The back end is responsible for integrating these external APIs (Application Programming Interfaces) into the web application securely and efficiently.</p>
+<p>Effective back-end development ensures that data is passed between the application and third-party services without errors and that performance is not hindered. This can also extend the capabilities of the app, making it more versatile and useful to the user.</p>
+<ul>
+<li>Example: Uber integrates with Google Maps and third-party payment services through its back-end APIs. This seamless integration enables real-time location tracking and secure payments without disrupting the user experience.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Real World Examples</h4>
+<p>These real-world examples demonstrate that back-end web development is fundamental to ensuring scalability, performance, security, and data management in high-traffic applications. In each case, the back end is what enables these companies to deliver reliable, seamless services to millions of users globally, contributing to their overall success.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading dp-has-icon"><i class="dp-icon fab fa-amazon " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp;Amazon</h3>
+<div class="dp-panel-content ">
+<p><strong>Back-End Contribution:</strong></p>
+<p>Amazon’s success as the largest e-commerce platform is heavily reliant on its robust back-end infrastructure, which supports millions of users, thousands of vendors, and enormous amounts of transaction data.</p>
+<ul>
+<li>Performance: Amazon uses distributed databases and caching mechanisms to ensure fast product search and retrieval. This allows users to browse thousands of products quickly without noticeable delay.</li>
+<li>Scalability: The back-end system is built to handle massive traffic surges, such as on Prime Day or Black Friday. Amazon achieves this scalability by using cloud services like AWS (Amazon Web Services), which allows the infrastructure to expand or contract based on demand.</li>
+<li>Data Management: The back end efficiently manages customer data, product inventory, and transaction histories. The system ensures data integrity for orders, payments, and shipping.</li>
+<li>Security: Amazon uses sophisticated encryption and token-based authentication mechanisms to protect user data, especially during payment transactions.</li>
+</ul>
+<p><strong>Success Impact:</strong> Without a scalable and secure back-end infrastructure, Amazon wouldn’t be able to process millions of orders, handle thousands of sellers, and provide real-time updates on shipping or inventory. The back end’s capability to handle these elements is crucial to the platform’s ability to grow and meet customer demands worldwide.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading dp-has-icon"><i class="dp-icon fab fa-uber " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp;Uber</h3>
+<div class="dp-panel-content ">
+<p><strong>Back-End Contribution:</strong></p>
+<p>Uber’s ride-hailing service connects drivers with passengers, and its success hinges on a highly efficient and scalable back-end system.</p>
+<ul>
+<li>Performance: Uber’s back end manages real-time data to match passengers with available drivers based on their locations, traffic conditions, and estimated wait times. The back end ensures that this happens quickly, minimising waiting time for users.</li>
+<li>Scalability: The back-end system is designed to handle millions of users across different cities and countries. Uber’s infrastructure dynamically scales based on peak usage times (e.g., during holidays or major events). The platform uses a microservices architecture, allowing various back-end components to scale independently.</li>
+<li>Data Management: Uber’s back-end system manages various types of data, including user profiles, ride histories, and payment information. It also stores real-time data like GPS locations for drivers and passengers.</li>
+<li>Integration: The back-end seamlessly integrates with third-party services for payments (e.g., credit cards, digital wallets) and location services like Google Maps for navigation and route optimisation.</li>
+<li>Security: Uber’s back end secures user data and handles payment processing, using encryption and secure payment gateways to protect both drivers and passengers.</li>
+</ul>
+<p><strong>Success Impact: </strong>The reliability and speed of Uber’s back end is crucial for providing a seamless experience to users. The ability to scale efficiently allows Uber to serve millions of rides per day, while ensuring users feel safe and confident in their transactions.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://aws.amazon.com/compare/the-difference-between-frontend-and-backend/" target="_blank">What’s the Difference Between Frontend and Backend in Application Development?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.15 Backend Development" href="https://canvas.kings.edu.au/courses/12951/assignments/204822" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204822" data-api-returntype="Assignment">2.15 Backend Development</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.15%20Backend%20Development.pptx?d=wd8374290b4aa4202a8d026ce78cb1d8d&amp;csf=1&amp;web=1&amp;e=byMwRs">2.15 Backend Development.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-15-backend-development" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={d8374290-b4aa-4202-a8d0-26ce78cb1d8d}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">2.16 Web Requests</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Observe and describe the back-end process used to manage a web request, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>role of webserver software</li>
+<li>web framework</li>
+<li>objects</li>
+<li>libraries</li>
+<li>databases</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">understand the back-end process of handling a web request and recognise how different components interact to manage user data and deliver a response.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 12pt;"><span style="font-size: 10pt;">describe how a web framework organises and routes requests.</span><br></span></li>
+<li class="card-text"><span style="font-size: 12pt;"><span style="font-size: 10pt;">identify the function of objects and how they relate to database tables.</span><br></span></li>
+<li class="card-text"><span style="font-size: 12pt;"><span style="font-size: 10pt;">explain how libraries provide additional functionalities to applications.</span></span></li>
+<li class="card-text"><span style="font-size: 12pt;"><span style="font-size: 10pt;">describe the relationship between the web framework and the database for handling data storage and retrieval.</span></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4>Role of Webserver Software</h4>
+<p>The web server is the software responsible for accepting HTTP (or HTTPS) requests from clients (typically browsers) and delivering responses back to the client, which may include HTML pages, JSON data, images, or files.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Request Handling</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Request Handling: The webserver receives the request from the client and determines whether it can serve the requested resource (like a static file) directly or if the request needs to be processed further.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Static Content Delivery</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Static Content Delivery: If the request is for a static file, such as an HTML page, image, or CSS file, the webserver directly delivers that content to the client. Static files don’t require additional server-side processing.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Proxying to Application Server</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Proxying to Application Server: For requests that require dynamic content generation, such as retrieving user data or processing form submissions, the webserver forwards the request to an application server. In this case, the webserver acts as a “reverse proxy,” forwarding the request to the web framework.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Popular Webservers</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Apache: Apache is an open-source HTTP server that can handle both static and dynamic content. It uses modules to manage different types of content.</li>
+<li>Nginx: Known for being lightweight and efficient at handling a large number of concurrent requests. It often acts as a reverse proxy for dynamic content.</li>
+<li>IIS (Internet Information Services): A web server from Microsoft used for hosting websites and web applications on Windows servers.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Web Framework</h4>
+<p>A web framework provides the structure and reusable components that simplify the development of a web application. It takes care of the complex tasks involved in handling HTTP requests, URL routing, database access, and rendering views.</p>
+<p>&nbsp;</p>
+<p>Flask provides a flexible framework to structure and manage web requests. Its simplicity makes it a great choice for small to medium-sized applications.</p>
+<ul>
+<li>In Flask, routing is straightforward. Each route corresponds to a URL pattern that the application responds to. The <code>@app.route()</code> decorator is used to map a URL to a Python function (also known as a view function).</li>
+</ul>
+<pre>@app.route('/profile/&lt;username&gt;')<br>def profile(username):<br>&nbsp; &nbsp; return f"User profile page of {username}"</pre>
+<p>&nbsp;</p>
+<ul>
+<li>Flask supports middleware that processes requests before and after they reach the route. Middleware can handle tasks such as authentication, request logging, or modifying the request data.</li>
+</ul>
+<pre>@app.before_request<br>def log_request():<br>&nbsp; &nbsp; print(f"Request method: {request.method}, Request path: {request.path}")</pre>
+<p>&nbsp;</p>
+<h4>Objects</h4>
+<p>In a back-end system, objects typically represent key entities or concepts in the domain of the application. They are instances of classes that structure and store data, often correlating with database tables (in relational databases) or collections (in NoSQL databases).</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Object-Relational Mapping (ORM)</h3>
+<div class="dp-panel-content ">
+<p>Object-Relational Mapping (ORM): Many web frameworks use an ORM to map these objects to database tables. This makes it easier to work with databases using an object-oriented programming paradigm rather than writing raw SQL queries.</p>
+<ul>
+<li>Example: In Django, models are Python classes that represent database tables. For example, a User model might be written as:</li>
+</ul>
+<pre>class User(models.Model):<br>&nbsp; &nbsp; username = models.CharField(max_length=100)<br>&nbsp; &nbsp; email = models.EmailField(unique=True)</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Manipulation</h3>
+<div class="dp-panel-content ">
+<p>Objects allow developers to interact with data as if they were working with in-memory objects in code, even though the data might actually be stored in a database.</p>
+<pre>user = User.objects.get(id=1) &nbsp;# Retrieves a user from the database<br>user.username = "NewName" &nbsp;# Updates the username<br>user.save() &nbsp;# Commits the changes to the database</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Libraries</h4>
+<p>Libraries are reusable sets of functions and tools that provide additional functionality and speed up development by abstracting common tasks. These are often external packages installed via a package manager (e.g., pip for Python or npm for Node.js).</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Types of Libraries</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Utility Libraries: Provide helper functions for common tasks, like manipulating strings, formatting dates, or handling arrays.</li>
+<li>Database Libraries: Provide functions to interact with databases, sometimes extending the ORM.</li>
+<li>Authentication and Authorisation: Libraries like OAuth or JWT (JSON Web Tokens) are used to handle secure authentication flows.</li>
+<li>Form Processing Libraries: Handle user input validation and sanitation</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Integration Libraries</h3>
+<div class="dp-panel-content ">
+<p>For integrating with third-party services, such as payment gateways (Stripe, PayPal), email services (SendGrid), or cloud storage (AWS S3).</p>
+<ul>
+<li>Example: A payment library might provide methods to interact with Stripe’s API, making it easier to charge a customer or process refunds without manually building API calls.</li>
+</ul>
+<pre>stripe.Charge.create(<br>&nbsp; amount=2000,<br>&nbsp; currency="usd",<br>&nbsp; source="tok_mastercard",<br>&nbsp; description="Charge for user@example.com"<br>)</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Databases</h4>
+<p>Databases are essential for storing, managing, and retrieving the data that the web application needs. Based on the type of data and application requirements, different databases are used.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Relational Databases (SQL)</h3>
+<div class="dp-panel-content ">
+<p>These are structured databases where data is stored in tables with rows and columns. SQL databases are highly structured and enforce relationships between tables using foreign keys.</p>
+<ul>
+<li>Examples: MySQL, PostgreSQL, SQLite.</li>
+<li>Use Cases: When the data is structured and relationships between entities are important, such as for e-commerce platforms, user management systems, etc.</li>
+<li>Example SQL query:</li>
+</ul>
+<pre>SELECT * FROM users WHERE email = 'user@example.com';</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Non-Relational Databases (NoSQL)</h3>
+<div class="dp-panel-content ">
+<p>These are databases designed for unstructured or semi-structured data. They are more flexible and allow for storing data in formats like JSON or key-value pairs.</p>
+<ul>
+<li>Examples: MongoDB, Cassandra, Redis.</li>
+<li>Use Cases: When you need to store large amounts of unstructured data or when schema flexibility is important, such as for real-time applications, content management systems, or logging systems.</li>
+<li>Example NoSQL query (MongoDB):</li>
+</ul>
+<pre>db.users.find({ email: 'user@example.com' });</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Interactions Between Framework and Database</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Database Queries: During a request, the web framework may interact with the database to retrieve or update data.</li>
+<li>Connection Management: Web frameworks manage database connections through connection pools, allowing efficient and concurrent access to the database.</li>
+<li>Query Optimisation: The framework often provides built-in query optimisation, caching, and indexing options to improve performance.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://sourcedefense.com/glossary/web-request/" target="_blank">What is a Web Request?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.mongodb.com/resources/basics/databases/nosql-explained/nosql-vs-sql" target="_blank">Understanding SQL vs NoSQL Databases</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.16 Web Requests" href="https://canvas.kings.edu.au/courses/12951/assignments/204823" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204823" data-api-returntype="Assignment">2.16 Web Requests</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.16%20Web%20Request.pptx?d=w1d48d991974a4767ae84d292af90235f&amp;csf=1&amp;web=1&amp;e=XMy32W">2.16 Web Request.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-16-web-requests" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={1d48d991-974a-4767-ae84-d292af90235f}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">2.17 Scripting Languages</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Develop a web application using an appropriate scripting language with shell scripts to make files and directories, and searching for text in a text file</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Learn how to develop a basic web application using an appropriate scripting language<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li>
+<p><span style="font-size: 10pt;">Identify and use a suitable scripting language to develop a functional web application with both front-end and back-end components.</span></p>
+</li>
+<li>
+<p><span style="font-size: 10pt;">Construct shell scripts that automate tasks such as creating files, directories, and searching for text in files</span></p>
+</li>
+<li>
+<p><span style="font-size: 10pt;">Implement </span><span style="font-size: 10pt;">shell scripts within the context of their web application, demonstrating how shell scripts can automate backend tasks like file management and data processing.</span></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Shell scripts are powerful tools used to automate tasks on the command line, offering efficiency and control over system processes. In the context of web development, they allow developers to manage files and directories, run repetitive tasks, and manipulate text files directly from the terminal. By integrating shell scripts into web applications, server-side operations can be streamlined, making development and maintenance more efficient.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<h3 class="card-title">What is a Shell Script?</h3>
+<p>A <strong>shell script</strong> is a program written for a command-line interface (CLI) that allows you to automate tasks by executing a series of commands. These scripts are interpreted by the shell (such as Bash on Linux or macOS) and can perform tasks like file manipulation, system monitoring, or even web server management.</p>
+<p>In a web development environment, shell scripts are often used for:</p>
+<ul>
+<li>Automating server setup and configuration.</li>
+<li>Managing files and directories for data storage.</li>
+<li>Running maintenance tasks like log file cleanup.</li>
+<li>Searching and manipulating text files, such as configuration files or logs.</li>
+</ul>
+<p>Shell scripting plays an essential role in the backend operations of a web application, especially when it comes to automating repetitive tasks, which increases efficiency and reduces the potential for human error.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Basic Bash Script Commands</h4>
+<p>Here are some fundamental Bash commands that you can use within shell scripts. These commands will help you manipulate files, directories, and text, which are essential operations in web development.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Creating and Managing Directories</h3>
+<div class="dp-panel-content ">
+<p><code>mkdir</code>: Creates a new directory.</p>
+<pre><span class="hljs-built_in">mkdir</span> my_directory</pre>
+<p>This creates a directory named <code>my_directory</code>.</p>
+<p>&nbsp;</p>
+<p><code>rmdir</code>: Removes an empty directory.</p>
+<pre><span class="hljs-built_in">rmdir</span> my_directory</pre>
+<p>&nbsp;</p>
+<p><code>cd</code>: Changes the current directory.</p>
+<pre><span class="hljs-built_in">cd</span> my_directory</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Creating and Managing Files</h3>
+<div class="dp-panel-content ">
+<p><code>touch</code>: Creates an empty file.</p>
+<pre>touch myfile.txt  </pre>
+<p>This command creates a new file named myfile.txt.</p>
+<p>&nbsp;</p>
+<p><code>rm</code>: Removes a file.</p>
+<pre><span class="hljs-built_in">rm</span> myfile.txt</pre>
+<p>&nbsp;</p>
+<p><code>cp</code>: Copies a file or directory.</p>
+<pre><span class="hljs-built_in">cp</span> source.txt destination.txt</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Searching for Text in Files</h3>
+<div class="dp-panel-content">
+<p><code>grep</code>: Searches for specific patterns or text in files.</p>
+<pre>grep "search_term" file.txt</pre>
+<p>This command searches for "search_term" in the <code>file.txt</code> and returns the lines where the term appears.</p>
+<p>&nbsp;</p>
+<p><code>cat</code>: Outputs the content of a file.</p>
+<pre>cat file.txt</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Automating Tasks</h3>
+<div class="dp-panel-content">
+<p>You can combine these commands into a script to automate tasks. For example, to create a directory, a file inside it, and then search for specific text:</p>
+<pre>#!/bin/bash<br><br># Create a directory<br>mkdir project_directory<br><br># Navigate into the directory<br>cd project_directory<br><br># Create a file<br>touch notes.txt<br><br># Add text to the file<br>echo "This is a sample project. TODO: Finish the setup." &gt; notes.txt<br><br># Search for the word "TODO" in the file<br>grep "TODO" notes.txt</pre>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<p class="card-text">The <strong>hash bang</strong> at the beginning of a script is a special sequence of characters (<code>#!/</code>) followed by the path to the interpreter that should be used to execute the script.&nbsp;</p>
+<pre class="card-text">#!/bin/bash</pre>
+<p class="card-text">&nbsp;</p>
+<p>The purpose of it is to ensure that the correct interpreter is used, even if the user runs the script from a different shell or terminal that may not default to Bash. By specifying <code>#!/bin/bash</code>, the script will always run using the Bash interpreter, regardless of the environment in which it's executed.</p>
+<p>If you were to leave it out, the script would still work if executed explicitly with Bash (like running <code>bash script.sh</code>), but it wouldn’t run correctly if executed without specifying Bash, since the system might try to run it with a different shell (e.g., <code>sh</code> or <code>zsh</code>) or treat it as a regular file.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Shell Scripts in Web Development</h4>
+<ol style="list-style-type: decimal;">
+<li>
+<p><strong>Automating Server Management:</strong></p>
+<p>Shell scripts play a critical role in automating server-side tasks like file management, backups, and configurations. Automating these tasks increases the efficiency and reliability of web applications.</p>
+</li>
+<li>
+<p><strong>Handling Log Files and Data:</strong></p>
+<p>Web servers generate extensive logs, which require regular monitoring and maintenance. Shell scripts can be used to search, filter, and process logs to ensure smooth operation or identify potential issues.</p>
+</li>
+<li>
+<p><strong>Efficient File and Directory Management:</strong></p>
+<p>Managing the file system is central to web development. Tasks like creating directories for user uploads, setting permissions, or organising static assets can be automated using shell scripts to save time and ensure consistency.</p>
+</li>
+<li>
+<p><strong>Streamlining Development Processes:</strong></p>
+<p>Repetitive tasks such as server restarts, running tests, or performing database backups are ideal candidates for automation with shell scripts. This results in faster development cycles and fewer errors.</p>
+</li>
+<li>
+<p><strong>Customising Web Application Behaviour:</strong></p>
+<p>Background tasks such as scheduled data backups or log rotations can be automated through shell scripts, ensuring that the application performs key maintenance operations without requiring manual intervention.</p>
+</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/" target="_blank">Bash Scripting Tutorial</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.geeksforgeeks.org/introduction-to-scripting-languages/" target="_blank">Introduction to Scripting Languages</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.17 Scripting Languages" href="https://canvas.kings.edu.au/courses/12951/assignments/204824" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204824" data-api-returntype="Assignment">2.17 Scripting Languages</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.17%20Scripting%20Languages.pptx?d=w6347804fa28e41e98e5c1f83ab72ee67&amp;csf=1&amp;web=1&amp;e=WLXViz">2.17 Scripting Languages.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-17-scripting-languages" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={6347804f-a28e-41e9-8e5c-1f83ab72ee67}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">2.18 Web-Based Databases</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Apply a web-based database and construct script that executes SQL, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>selecting fields</li>
+<li>incorporating ‘group by’</li>
+<li>common SQL queries</li>
+<li>constraints using WHERE keyword</li>
+<li>table joins</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">apply SQL commands in a web-based database environment to effectively retrieve and manipulate data, with a focus on selecting fields, using ‘GROUP BY’, executing common SQL queries, applying constraints, and performing table joins.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -<span style="font-size: 10pt;">&nbsp;Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">implement SQL commands to select specific fields from a database.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">apply the GROUP BY clause to group data effectively.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">construct common SQL queries, including filtering data with the WHERE clause.<br></span></li>
+<li class="card-text"><span style="font-size: 10pt;">apply join tables using various types of joins.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h4 class="card-title">What is SQL?</h4>
+<p class="card-text">SQL (Structured Query Language) is a domain-specific language designed for managing and manipulating relational databases. It is the standard language used to interact with databases that store data in tables (rows and columns) and is integral to modern web-based applications. SQL allows users to perform various operations on data, including querying (retrieving data), updating, deleting, and inserting new records, as well as managing database structure and access control.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Key Characteristics of SQL</h4>
+<p>SQL’s key features are essential for efficiently managing and interacting with relational databases. These include the ability to retrieve data with <code>SELECT</code>, filter results using <code>WHERE</code>, and sort or group data using <code>ORDER BY</code> and <code>GROUP BY</code>. SQL also supports aggregating data with functions like <code>COUNT()</code> and <code>SUM()</code>, and allows combining data from multiple tables through joins. These features are crucial for performing detailed queries and analyses on structured datasets.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Declarative Language</h3>
+<div class="dp-panel-content ">
+<p>SQL is considered a declarative language, meaning that instead of explicitly coding how the data should be retrieved or manipulated, you declare what you want, and the database system figures out the optimal way to do it. For example, you specify which data you want (SELECT statement), but you don’t control the internal processes that the database engine uses to retrieve it.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Relational Databases</h3>
+<div class="dp-panel-content ">
+<p>SQL is used primarily with relational databases, which organise data into tables. Each table contains rows and columns, where rows represent records (individual data entries) and columns represent fields (specific data attributes like name, age, or salary). Relationships between different tables can be established via key fields, enabling complex queries that span multiple tables.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Standardised Language</h3>
+<div class="dp-panel-content">
+<p>SQL is governed by various standards, with the most well-known being ANSI SQL. Although different database management systems (DBMS) like MySQL, PostgreSQL, Oracle, and Microsoft SQL Server may have slight variations, they all generally adhere to the SQL standard. This standardisation makes SQL a widely transferable and universal language in the database domain.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">SQL Operations</h3>
+<div class="dp-panel-content">
+<p>SQL allows for a wide range of operations, from querying data to modifying the structure of the database. Some key operations include:</p>
+<ul>
+<li>Data Retrieval: Using SELECT statements to query data from one or more tables.</li>
+<li>Data Manipulation: Inserting, updating, or deleting records with INSERT, UPDATE, and DELETE commands.</li>
+<li>Data Definition: Creating and modifying tables, indexes, and relationships using commands like CREATE TABLE and ALTER TABLE.</li>
+<li>Data Control: Managing access to the database with GRANT and REVOKE to control user permissions.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Constructing SQL Commands</h4>
+<p>Constructing SQL statements involves creating structured queries that perform specific actions on a database. A typical query begins with the <code>SELECT</code> statement to define which fields to retrieve. Data is pulled from the relevant table(s) specified in the <code>FROM</code> clause, and you can refine the results using the <code>WHERE</code> clause to filter the dataset based on specific conditions. The <code>GROUP BY</code> clause can be used to aggregate data, while <code>ORDER BY</code> helps you organize the results in a specific sequence. By combining these elements, you can construct complex queries to extract and analyze the data you need from a relational database.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">SELECT</h3>
+<div class="dp-panel-content ">
+<p>In SQL, the <code>SELECT</code> statement is used to retrieve specific data from a table. The fields you want to display must be explicitly defined.</p>
+<p>&nbsp;</p>
+<p><strong>Basic Syntax:</strong></p>
+<pre>SELECT field1, field2, field3<br>FROM table_name;</pre>
+<p>&nbsp;</p>
+<p><strong>Example:</strong></p>
+<pre><span class="hljs-keyword">SELECT</span> first_name, last_name <br><span class="hljs-keyword">FROM</span> employees;</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">FROM</h3>
+<div class="dp-panel-content">
+<p>For the purposes of this course, we use a simplified approach to <strong>joining tables</strong>. Instead of explicitly using <code>JOIN</code> clauses, you can list multiple tables in the <code>FROM</code> clause, and SQL will automatically link the tables based on common fields, provided those fields are correctly referenced in the <code>WHERE</code> clause.</p>
+<p>&nbsp;</p>
+<p><strong>HSC SQL Example:</strong></p>
+<pre>SELECT employees.first_name, departments.department_name<br>FROM employees, departments<br>WHERE employees.department_id = departments.department_id;</pre>
+<p>&nbsp;</p>
+<p>In this version:</p>
+<ul>
+<li>You simply list the tables (e.g., <code>employees, departments</code>) in the <code>FROM</code> clause.</li>
+<li>Then, specify the relationship between the tables using a condition in the <code>WHERE</code> clause (e.g., <code>employees.department_id = departments.department_id</code>).</li>
+</ul>
+<p>This method simplifies the syntax for educational purposes, but the logic behind how the tables are joined remains the same.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<h5 class="card-title">SQL <strong><code>JOIN</code></strong> Keyword</h5>
+<p>In real-world SQL, joins are typically done using explicit <code>JOIN</code> clauses, such as <code>INNER JOIN</code>, <code>LEFT JOIN</code>, and <code>RIGHT JOIN</code>, which provide more control over how the data is combined. These joins require a more formal structure but are commonly used in professional database management.</p>
+<p><strong>Standard SQL Example (INNER JOIN):</strong></p>
+<pre>SELECT employees.first_name, departments.department_name<br>FROM employees<br>INNER JOIN departments<br>ON employees.department_id = departments.department_id;<strong><br></strong></pre>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">WHERE</h3>
+<div class="dp-panel-content">
+<p>The <code>WHERE</code> clause is used to specify conditions that must be met for records to be included in the results. This is critical for narrowing down large datasets and focusing on the information you need.</p>
+<p>&nbsp;</p>
+<p><strong>Basic Filtering with <code>WHERE</code>:</strong></p>
+<pre>SELECT field1, field2<br>FROM table_name<br>WHERE field1 = 'value';<strong><br></strong></pre>
+<p>&nbsp;</p>
+<p><strong>Example: Retrieve all employees who work in the "Sales" department:</strong></p>
+<pre>SELECT first_name, last_name<br>FROM employees<br>WHERE department = 'Sales';<strong><br></strong></pre>
+<p>&nbsp;</p>
+<p><strong>Relational Operators Available in SQL:</strong></p>
+<ul>
+<li><code>=</code>: Equals</li>
+<li><code>!=</code> or <code>&lt;&gt;</code>: Not equals</li>
+<li><code>&gt;</code>: Greater than</li>
+<li><code>&gt;=</code>: Greater than or equal to</li>
+<li><code>&lt;</code>: Less than</li>
+<li><code>&lt;=</code>: Less than or equal to</li>
+</ul>
+<p><strong>Logical Operators:</strong></p>
+<ul>
+<li><code>AND</code>: Combines conditions, both must be true.</li>
+<li><code>OR</code>: At least one condition must be true.</li>
+<li><code>NOT</code>: Negates the condition.</li>
+</ul>
+<p><strong>Example with Logical Operators:</strong></p>
+<ul>
+<li>Find employees in the "Sales" department who earn more than 50,000:</li>
+</ul>
+<pre>SELECT first_name, last_name<br>FROM employees<br>WHERE department = 'Sales' AND salary &gt; 50000;</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">ORDER BY</h3>
+<div class="dp-panel-content">
+<p>The <code>ORDER BY</code> clause in SQL is used to sort the results of a query based on one or more columns. By default, SQL sorts the data in <strong>ascending order</strong> (A–Z or 0–9), but you can also specify <strong>descending order</strong> (Z–A or 9–0) if needed. This is particularly useful when you want to organise your query results in a specific way, such as alphabetically, by date, or numerically.</p>
+<p>&nbsp;</p>
+<p><strong>Syntax for <code>ORDER BY</code>:</strong></p>
+<pre><span class="hljs-keyword">SELECT</span> field1, field2 <br><span class="hljs-keyword">FROM</span> table_name <br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> field1 [<span class="hljs-keyword">ASC</span><span class="hljs-operator">|</span><span class="hljs-keyword">DESC</span>];&nbsp;</pre>
+<p>&nbsp;</p>
+<p><strong>Sort Results in Ascending Order </strong></p>
+<pre>SELECT first_name, last_name<br>FROM employees<br>ORDER BY last_name ASC;</pre>
+<p>This query retrieves the first and last names of employees and orders them alphabetically by <code>last_name</code>.</p>
+<p>&nbsp;</p>
+<p><strong>Sort Results in Descending Order</strong>:</p>
+<pre><span class="hljs-keyword">SELECT</span> first_name, last_name, salary <br><span class="hljs-keyword">FROM</span> employees <br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> salary <span class="hljs-keyword">DESC</span>;</pre>
+<p>This query retrieves employee names and their salaries, ordering the results from the highest salary to the lowest using <code>DESC</code>.</p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">GROUP BY</h3>
+<div class="dp-panel-content ">
+<p>The <code>GROUP BY</code> clause groups rows that have the same values in specified columns. This is typically used in conjunction with aggregate functions like <code>SUM()</code>, <code>COUNT()</code>, <code>AVG()</code>, <code>MAX()</code>, and <code>MIN()</code>.</p>
+<p>&nbsp;</p>
+<p><strong>Basic Syntax:</strong></p>
+<pre>SELECT field1, COUNT(*)<br>FROM table_name<br>GROUP BY field1;</pre>
+<p>&nbsp;</p>
+<p><strong>Example:</strong></p>
+<pre>SELECT department, COUNT(*)<br>FROM employees<br>GROUP BY department;</pre>
+<p>&nbsp;</p>
+<p><strong>Using the <code>GROUP BY</code> Clause with Aggregate Functions</strong></p>
+<p>When you need to summarise data, such as calculating totals or averages, you will use aggregate functions alongside <code>GROUP BY</code>.</p>
+<p>Available Aggregate Functions:</p>
+<ul>
+<li><code>SUM(field)</code>: Returns the total sum of values in a field.</li>
+<li><code>AVG(field)</code>: Returns the average of values in a field.</li>
+<li><code>COUNT(field)</code>: Counts the number of rows or occurrences.</li>
+<li><code>MAX(field)</code>: Returns the highest value in a field.</li>
+<li><code>MIN(field)</code>: Returns the lowest value in a field.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Calculate the total sales per department:</li>
+</ul>
+<pre>SELECT department, SUM(sales)<br>FROM employees<br>GROUP BY department;</pre>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/2a43c7d9170d2b16.png" alt="image.png" width="570" height="268" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527470" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.datacamp.com/cheat-sheet/sql-basics-cheat-sheet" target="_blank">SQL Basics Cheat Sheet</a></li>
+<li><a class="inline_disabled" title="Link" href="https://blog.nexalab.io/data-management/what-is-web-database/" target="_blank">Web Database: Definitions, Types, and Best Practices</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.18 Web-Based Databases" href="https://canvas.kings.edu.au/courses/12951/assignments/204825" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204825" data-api-returntype="Assignment">2.18 Web-Based Databases</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint - SQL</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="http://&lt;iframe%20src=%22https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={d1db07e1-8647-4cce-a565-59fffc93fe38}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333%22%20width=%22476px%22%20height=%22288px%22%20frameborder=%220%22&gt;This%20is%20an%20embedded%20&lt;a%20target=%22_blank%22%20href=%22https://office.com%22&gt;Microsoft%20Office&lt;/a&gt;%20presentation,%20powered%20by%20&lt;a%20target=%22_blank%22%20href=%22https://office.com/webapps%22&gt;Office&lt;/a&gt;.&lt;/iframe&gt;" target="_blank">SQL</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-18-web-based-databases" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={498cf34a-ba0a-41d6-9484-e07bebed1389}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint - SENG SQL</h3>
+<div class="dp-panel-content">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.18%20Web%20Based%20Databases.pptx?d=wb28af4d59c2e4e9b806744d3467a8c81&amp;csf=1&amp;web=1&amp;e=9o1SjH">2.18 Web Based Databases.pptx</a></p>
+<div class="dp-embed-wrapper" data-ratio-w="32.88" data-ratio-h="0.03"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-18-web-based-databases" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={b28af4d5-9c2e-4e9b-8067-44d3467a8c81}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">2.19 Object-Relational Mapping</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Compare Object-Relational Mapping (ORM) to SQL</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the core differences between SQL and ORM, and learn when to choose between direct SQL querying and using an ORM framework in application development.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Describe the differences between SQL and ORM in terms of how they interact with databases.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Identify scenarios where using SQL or ORM would be more appropriate based on project needs.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Analyse the performance trade-offs and benefits of using ORM versus writing raw SQL queries.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-dp-primary">
+<div class="card-body">
+<h5 class="card-title">What is ORM?</h5>
+<p>ORM is a programming technique that allows you to interact with the database by using the object-oriented programming (OOP) model. With ORM, you manipulate database tables as though they were programming language classes, and rows are represented as instances (objects) of those classes.</p>
+<p>Popular ORM frameworks include Hibernate (Java), SQLAlchemy (Python), Django ORM (Python), and Entity Framework (C#).</p>
+<ul>
+<li>Abstraction of SQL: Instead of writing SQL queries, ORM frameworks generate SQL code on behalf of the developer based on the objects and methods in the application code. This creates an abstraction layer between the database and the application code, allowing developers to interact with databases without manually writing SQL.</li>
+<li>Example of ORM Usage:</li>
+</ul>
+<pre># Using Django ORM in Python to query users<br>users = User.objects.filter(age__gt=30).order_by('last_name')</pre>
+<p>This ORM query performs the same operation as the SQL query above but uses Python-like syntax to query the database. The ORM framework translates this into an SQL statement under the hood.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Advantages of ORM:</strong></p>
+<ul>
+<li>Increased Productivity: By automating <span class="dp-tooltip-container"><a id="dpPopup0" class="dp-tooltip-trigger dp-popup-trigger" role="button" href="https://canvas.kings.edu.au/courses/12951/modules#dpPopup0tooltip" class="ext" target="_blank" rel="noopener" aria-describedby="" data-bs-toggle="tooltip">CRUD</a> <span id="dpPopup0tooltip" class="dp-tooltip-content dp-popup-content" style="background-color: #545454; color: #ffffff; padding: 2px 5px; border-radius: 3px;" role="tooltip">CRUD: An acronym for Create, Read, Update, Delete, which represents the four basic operations performed on data in a database or storage system.</span></span> operations, developers can focus on the business logic rather than manually writing SQL queries.</li>
+<li>Database-Agnostic: ORM frameworks allow developers to switch between different databases (e.g., from MySQL to PostgreSQL) with minimal code changes, as the SQL is abstracted away.</li>
+<li>Less Boilerplate: Common database operations are handled by the ORM framework, leading to less repetitive code and improved maintainability.</li>
+<li>Object-Oriented Approach: ORMs allow you to work with native language objects (classes and objects), which is more intuitive for developers familiar with object-oriented programming. This can also lead to better integration with the rest of the application.</li>
+</ul>
+<p><strong>Disadvantages of ORM:</strong></p>
+<ul>
+<li>Performance Overhead: ORMs typically introduce some performance overhead because the generated SQL queries may not be as optimised as hand-written SQL. This is especially noticeable in large or complex queries.</li>
+<li>Less Fine-Grained Control: While ORMs simplify many operations, they can make it more difficult to fine-tune queries for performance or handle very specific use cases that require complex SQL logic.</li>
+<li>Learning Curve: Using an ORM effectively requires understanding both the ORM framework and the underlying database concepts. Inexperienced developers might misuse the ORM and create inefficient database queries.&nbsp;</li>
+</ul>
+<p>&nbsp;</p>
+<h4>SQL vs ORM</h4>
+<p>&nbsp;</p>
+<table style="border-collapse: collapse; width: 100%; height: 261px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;"><strong>Feature</strong></td>
+<td style="width: 33.2865%; height: 29px;"><strong>SQL</strong></td>
+<td style="width: 33.2865%; height: 29px;"><strong>ORM</strong></td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Level of Abstraction</td>
+<td style="width: 33.2865%; height: 29px;">Low: Direct database access through SQL queries</td>
+<td style="width: 33.2865%; height: 29px;">High: Access through programming language objects</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Performance</td>
+<td style="width: 33.2865%; height: 29px;">High for complex queries, fine-tuned optimisations</td>
+<td style="width: 33.2865%; height: 29px;">Lower performance due to abstraction overhead</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Ease of Use</td>
+<td style="width: 33.2865%; height: 29px;">Requires knowledge of SQL and database schema</td>
+<td style="width: 33.2865%; height: 29px;">Easier for developers familiar with OOP, no SQL needed</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Portability</td>
+<td style="width: 33.2865%; height: 29px;">Low: SQL may need adaptation for different DBs</td>
+<td style="width: 33.2865%; height: 29px;">High: ORMs are designed to work with multiple databases</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Maintenance</td>
+<td style="width: 33.2865%; height: 29px;">Can be harder to maintain as the app grows</td>
+<td style="width: 33.2865%; height: 29px;">Easier due to less boilerplate and abstraction</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Granular Control</td>
+<td style="width: 33.2865%; height: 29px;">High: Full control over the query execution</td>
+<td style="width: 33.2865%; height: 29px;">Low: ORM abstracts query execution details</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Flexibility</td>
+<td style="width: 33.2865%; height: 29px;">High: Complex queries are easier to implement</td>
+<td style="width: 33.2865%; height: 29px;">Limited: Complex queries can be hard to implement in ORM</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.2865%; height: 29px;">Learning Curve</td>
+<td style="width: 33.2865%; height: 29px;">Steep: Requires SQL and database knowledge</td>
+<td style="width: 33.2865%; height: 29px;">Moderate: Requires understanding of both ORM and DB basics</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h4>When to Use SQL vs ORM</h4>
+<p><strong>Use SQL when:</strong></p>
+<ul>
+<li>Performance is critical, and you need full control over database queries (e.g., in performance-sensitive applications like banking systems or data-heavy analytics).</li>
+<li>You need to write complex queries with multiple joins, nested subqueries, or optimizations that are hard to express in ORM.</li>
+<li>The project requires database-specific features such as stored procedures, triggers, or specific SQL dialects that the ORM cannot easily handle.</li>
+</ul>
+<p><strong>Use ORM when:</strong></p>
+<ul>
+<li>The project is more CRUD-heavy, and you need to automate routine database interactions (e.g., simple web apps).</li>
+<li>Portability is important, and the ability to switch databases without modifying code is a key requirement.</li>
+<li>You want to speed up development by avoiding the need to write SQL and managing database objects using the language’s OOP principles.</li>
+<li>You need to rapidly prototype an application without worrying about database details at first.</li>
+</ul>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/" target="_blank">What is an ORM – The Meaning of Object Relational Mapping Database Tools</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.edgedb.com/blog/a-solution-to-the-sql-vs-orm-dilemma" target="_blank">A solution to the SQL vs. ORM dilemma</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.19 Object-Relational Mapping" href="https://canvas.kings.edu.au/courses/12951/assignments/204826" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204826" data-api-returntype="Assignment">2.19 Object-Relational Mapping</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.19%20ORMs.pptx?d=wfe40593c0084440abdb98bcd5c511d0c&amp;csf=1&amp;web=1&amp;e=32TLEZ">2.19 ORMs.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-19-object-relational-mapping" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={fe40593c-0084-440a-bdb9-8bcd5c511d0c}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">2.20 Collaborative Work Practises</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Describe how collaborative work practices between front-end and back-end developers improve the development of a web solution</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the importance of collaboration between front-end and back-end developers in creating efficient, high-quality web solutions.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explain how communication and shared practices between front-end and back-end developers enhance integration.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Describe specific ways that collaborative practices improve the overall development process, such as reducing bugs, improving performance, and speeding up iterations.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>In web development, front-end and back-end developers play distinct but interconnected roles. Front-end developers focus on building the part of the website that users interact with, while back-end developers ensure that the server, database, and business logic function properly. Collaborative work between these two teams is essential for building efficient, high-performing web solutions. By fostering clear communication, shared responsibilities, and integrated workflows, teams can reduce errors, improve development speed, and deliver a seamless user experience.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<h5 class="card-title">Recall</h5>
+<ul style="list-style-type: disc;">
+<li class="card-text"><strong>Front-End Development: </strong>Refers to the creation of the user interface (UI) and user experience (UX) that the end-user interacts with directly. It involves languages and technologies like HTML, CSS, JavaScript, and frameworks such as React or Angular.</li>
+<li class="card-text"><strong>Back-End Development: </strong>Focuses on server-side logic, databases, APIs, and everything that supports the front-end. Common languages for back-end development include Python, Java, Ruby, and frameworks like Django or Node.js. Back-end development ensures data storage, processing, and application functionality.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Clear Communication</h3>
+<div class="dp-panel-content ">
+<p><strong>Importance: </strong>Clear communication ensures that both teams understand the requirements and constraints of each other’s work.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Front-end developers need to know how data is structured, what APIs are available, and how to handle responses (e.g., data formats like JSON or XML).</li>
+<li>Back-end developers need to understand front-end user experience goals to ensure that server responses are fast, well-structured, and align with the user interface needs.</li>
+</ul>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Use collaborative tools like Slack, Microsoft Teams, or Jira for regular updates and issue tracking.</li>
+<li>Create shared documentation for API structures, expected data formats, and error handling to avoid misunderstandings.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Efficient Integration</h3>
+<div class="dp-panel-content ">
+<p><strong>Importance: </strong>Early and continuous collaboration reduces the risk of integration issues, where front-end and back-end components don’t work together as expected.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Aligning on how data is passed between the front-end and back-end—whether through APIs, web services, or server-side rendering—ensures smooth integration.</li>
+<li>For instance, a front-end developer working on a product page needs to know exactly how product data will be delivered (e.g., pagination or filtered results from an API).</li>
+</ul>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Front-end and back-end teams should collaborate early in defining API endpoints, agreeing on data formats (e.g., JSON or XML), and setting up testing environments.</li>
+<li>Use API testing tools like Postman or Swagger to ensure smooth interactions between the front-end and back-end components.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Rapid Prototyping</h3>
+<div class="dp-panel-content">
+<p><strong>Importance: </strong>Working together during prototyping allows both teams to test functionality quickly and make adjustments before full-scale development.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Back-end developers can create early API mocks, which front-end developers can use to build and test UI components without waiting for the full back-end functionality to be completed.</li>
+<li>This approach helps detect issues, such as data inconsistencies or performance bottlenecks, early in the development process.</li>
+</ul>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Create a feedback loop where both teams test small features incrementally rather than waiting for full development to be completed.</li>
+<li>Front-end developers can focus on UI functionality and interactivity while back-end developers fine-tune the server-side logic and database queries.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Shared Responsibility</h3>
+<div class="dp-panel-content">
+<p><strong>Importance: </strong>Both teams must consider how their work impacts overall performance. A slow back-end can result in poor front-end performance, and vice versa.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Front-end developers should minimise unnecessary API calls or overly complex UI components that strain resources.</li>
+<li>Back-end developers must ensure that database queries are optimised and that API responses are lightweight and efficient, reducing server load times.</li>
+</ul>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Conduct joint performance reviews to identify areas where performance can be optimised (e.g., reducing API response times, minimising page load times).</li>
+<li>Use performance monitoring tools like Google Lighthouse for front-end and server-side monitoring tools like New Relic for back-end performance.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Problem Solving</h3>
+<div class="dp-panel-content">
+<p><strong>Importance: </strong>Collaboration allows teams to troubleshoot issues that might involve both the front-end and back-end, leading to faster resolution and a more comprehensive solution.</p>
+<p>Examples:</p>
+<ul>
+<li>A performance issue such as slow page loads could be due to inefficient API calls (back-end) or excessive rendering (front-end). By working together, both teams can pinpoint the issue more effectively.</li>
+<li>A front-end bug may seem unrelated to the back-end at first but could be traced to incorrect or delayed data from an API.</li>
+</ul>
+<p>Best Practices:</p>
+<ul>
+<li>Conduct joint debugging sessions where both front-end and back-end developers analyse issues together.</li>
+<li>Use error tracking tools like Sentry or LogRocket that capture both front-end and back-end errors, enabling both teams to work off the same set of data.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/4c50dfe9ae972503.png" alt="image.png" width="444" height="320" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527472" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://swimm.io/learn/code-collaboration/code-collaboration-styles-tools-and-best-practices" target="_blank">Code collaboration</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.20 Collaborative Work Practises" href="https://canvas.kings.edu.au/courses/12951/assignments/204828" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204828" data-api-returntype="Assignment">2.20 Collaborative Work Practises</a><strong><a title="2.20 Collaborative Work Practises" href="https://canvas.kings.edu.au/courses/12951/assignments/204828" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204828" data-api-returntype="Assignment"></a></strong></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.20%20Collaborative%20Work%20Practices.pptx?d=w4e3006dc6ac042be9e42ca7447316f12&amp;csf=1&amp;web=1&amp;e=0c9fEV">2.20 Collaborative Work Practices.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-20-collaborative-work-practises" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={4e3006dc-6ac0-42be-9e42-ca7447316f12}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">2.21 Progressive Web Apps</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Design, develop and implement a progressive web app (PWA), including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>the application of design and user interface (UI) and user experience (UX) principles of font, colour, audio, video and navigation</li>
+<li>a UI that considers accessibility and inclusivity</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">understand how to design and develop a Progressive Web App (PWA) with a focus on applying user interface (UI) and user experience (UX) design principles, ensuring accessibility and inclusivity.<br></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -<span style="font-size: 10pt;">&nbsp;Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">design and implement a PWA that applies key UX/UI principles, including effective use of fonts, colors, multimedia, and clear navigation.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">create a user interface that is accessible to all users, with features such as screen reader compatibility and inclusive design elements.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>A <strong>Progressive Web App (PWA) </strong>is a hybrid between a web application and a native mobile application. It uses modern web technologies like HTML, CSS, JavaScript and APIs to provide an experience similar to that of a traditional native app, but it is accessible through a web browser without needing to be downloaded from an app store. The “progressive” part refers to its ability to enhance functionality depending on the device and browser capabilities.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-warning dp-callout-type-default">
+<div class="card-body">
+<h4 class="card-title">PWA Key Features</h4>
+<ul>
+<li class="card-text"><strong>Progressive</strong>: It works for every user, regardless of browser choice, as it’s built with progressive enhancement at its core.</li>
+<li class="card-text"><strong>Responsive</strong>: It fits any form factor — whether on desktop, mobile, or tablet — using responsive design techniques.</li>
+<li class="card-text"><strong>Offline Capabilities:</strong> Through Service Workers, PWAs can cache essential resources and operate even when the device is offline or has poor network conditions.</li>
+<li class="card-text"><strong>App-like Feel: </strong>PWAs mimic the look and feel of a native app using the app shell model. This means fast, smooth transitions between screens and a consistent experience.</li>
+<li class="card-text"><strong>Installable: </strong>Users can add the PWA to their home screen without visiting an app store. Once installed, it behaves like a standalone app, launching in its own window without the browser UI.</li>
+<li class="card-text"><strong>Secure</strong>: PWAs are always served over HTTPS, ensuring that the content delivered is safe and tamper-proof.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Developing a PWA differs from a traditional full stack by heavily focusing on client-side capabilities like offline access and a UI accessible across various devices, using technologies like service workers and responsive design. In contrast, traditional full-stack apps rely more on server-side logic and consistent internet connectivity.<br><br>From a <strong>practical and development perspective</strong>, a PWA generally includes the following key features:&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs-buttons-vertical">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>Caching</strong></h3>
+<div class="dp-panel-content">
+<p>Caching allows web apps to store frequently accessed assets (such as HTML, CSS, JavaScript, and images) in the browser. This means these assets can be <strong>loaded from the local cache</strong> on subsequent visits without fetching from the web server, giving it offline capabilities.&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-info dp-callout-type-info">
+<div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-info-circle dp-default-icon">​</i></div>
+<div class="card-body">
+<p class="card-text"><strong>Caching is a way of storing copies of important data or files in a special place so they can be accessed quickly without having to re-download.&nbsp;</strong></p>
+</div>
+</div>
+<ol>
+<li><strong>First Visit</strong>: When you visit a website for the first time, your browser downloads all the necessary files from the server to display the page (like <code>index.html</code>, <code>styles.css</code> and JavaScript files).<br><br></li>
+<li><strong>Saving Files</strong>: The browser stores these files locally in its cache (a special storage area) while downloading.<br><br></li>
+<li><strong>Reusing Files</strong>: The next time you visit the same website, the browser checks its cache instead of downloading everything again. If the files haven’t changed, it loads them directly from the cache, loading the website much faster.</li>
+</ol>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/200fee35b40e7513.png" alt="image.png" width="525" height="393" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527618" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading"><strong>Service Workers</strong></h3>
+<div class="dp-panel-content">
+<p>A service worker that helps manage your web app and configure offline capabilities.&nbsp;</p>
+<p>A service worker is like a "<strong><em>helper</em></strong>" that sits between your web app and the Internet. When your browser requests a webpage or image from the server, the service worker can <strong>decide</strong> whether to <strong>fetch it from the Internet</strong> or <strong>use a saved version </strong>(called a <em>cache</em>). After configuring a service worker, it can effectively automate decisions on whether to cache or fetch files from the server.</p>
+<ul>
+<li><strong>Runs Separately:</strong> Service workers operate independently from the web app, which allows them to continue functioning even if the page is closed.&nbsp;</li>
+<li><strong>Event-Driven:</strong> Service workers are built around an event-based model. Hence, they respond to specific user and system events, such as API fetching, installation, and activation.&nbsp;</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/3685e953c0ee99e5.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527356" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading"><strong>Web Manifest</strong></h3>
+<div class="dp-panel-content">
+<p>A web <code>manifest.json</code> is a JSON file that provides metadata or critical information about your web app and the UI design when the app is launched.&nbsp;<br><br>Traditional web apps typically rely on fetching to load a page's appearance. A web manifest automates this process by defining the structure of the PWA on the client's device or browser.&nbsp;</p>
+<ul>
+<li><strong>App Appearance:</strong> Defines how the app appears when launched, including its icons, screens, and theme colours.</li>
+<li><strong>Behaviour:</strong> Specifies the display mode (e.g., fullscreen, standalone) and orientation, determining how the app interacts with the device's UI.</li>
+<li><strong>Navigation</strong>: Sets the start URL, determining which page loads when the app is launched from the home screen. Usually, this is handled by server-side routing (via Flask) or client frameworks (via React or Angular)&nbsp;&nbsp;</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/7028e2d974b6557b.png" alt="image.png" width="520" height="325" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527357" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading "><strong>Responsive Design</strong></h3>
+<div class="dp-panel-content">
+<p>UI design that is responsive to different devices and browsers. PWAs aim to deliver a native-like experience, and users might access them from various devices, such as smartphones, tablets, and desktops. Designing our UI, we should consider:</p>
+<ul>
+<li><strong>Flexible Layouts</strong>: PWAs use fluid grids that scale content proportionally based on the screen size. This ensures that elements like buttons, text, and images resize appropriately, whether on a small mobile screen or a large desktop monitor</li>
+<li><strong>Media Queries</strong>: CSS media queries help define different styles for screen sizes or device characteristics. For example, you might adjust font sizes or change navigation menus for mobile versus desktop views</li>
+<li><strong>Viewport</strong>: Setting the HTML viewport meta tag ensures that the app is scaled and displays properly on different devices. This prevents users from needing to zoom in or scroll horizontally to see content</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/26d35137931052a1.png" alt="image.png" width="611" height="338" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527359" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<h4>UI/UX Principles</h4>
+<p>&nbsp;When designing a PWA, it’s crucial to create an interface and experience that is not only visually appealing but also intuitive and user-friendly.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<h5 class="card-title">UI vs UX</h5>
+<p class="card-text"><strong>UI (User Interface)</strong> refers to the visual elements and layout that users interact with, such as buttons, icons, and menus, while <strong>UX (User Experience) </strong>focuses on the overall feel and usability of the app, ensuring that interactions are intuitive, efficient, and enjoyable for the user.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Fonts</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Readability: Select fonts that ensure readability across various devices and screen sizes. Avoid overly decorative fonts that might reduce legibility, especially on smaller screens.</li>
+<li>Web-safe Fonts: Use fonts that are either available on most devices (like Arial, Verdana, or Times New Roman) or utilise web fonts from libraries like Google Fonts. Ensure they are lightweight to maintain performance.</li>
+<li>Consistency: Maintain font consistency across the app by limiting the number of typefaces and styles. Use font hierarchies (e.g., larger fonts for headers, smaller for body text) to guide users.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Colour</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Contrast: Ensure sufficient contrast between text and background colours to make content readable, especially for users with visual impairments. You can use tools like WCAG colour contrast checkers to verify accessibility.</li>
+<li>Branding and Visual Identity: Use colour schemes that align with your app’s branding and purpose. Colours evoke emotions; for example, blue conveys trust, while green suggests growth or success.</li>
+<li>Colour Psychology: Consider how colour impacts user perception. Choose your palette based on the emotions or actions you want to encourage.</li>
+<li>Accessibility: Ensure colour-blind users can navigate and understand the app by avoiding colour-dependent actions (e.g., only using colour to convey meaning). Incorporate additional visual cues such as icons or text.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Audio and Video</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Appropriate Use: Use multimedia elements like audio or video to enhance the user experience without overwhelming the interface. For example, videos can be used for tutorials, but they should not auto-play with sound, which can disrupt user experience.</li>
+<li>Performance Considerations: Multimedia should be optimised to reduce loading times. Use techniques such as lazy loading and responsive media queries to ensure smooth performance on all devices.</li>
+<li>Accessibility: Provide captions for videos and transcripts for audio to make the content accessible to users who are deaf or hard of hearing.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Navigation</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Intuitive Structure: Simplify navigation so users can easily find what they need. Follow the “three-click rule” — users should reach any part of the app within three taps or clicks.</li>
+<li>Consistent UI Patterns: Use familiar patterns such as hamburger menus, tabs, and bottom navigation bars to make navigation intuitive.</li>
+<li>Sticky Elements: Consider using sticky navigation bars that remain visible as users scroll to give them easy access to primary navigation options.</li>
+<li>Interactive Feedback: Provide clear feedback when a user interacts with navigation elements, like button animations or visual cues (hover effects, loading indicators).</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/086057c7bd754a9c.png" alt="image.png" width="628" height="329" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527535" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Accessibility and Inclusivity</h4>
+<p>Accessibility ensures that your PWA can be used by as many people as possible, including those with disabilities. Inclusivity means that the app design takes into account different cultural backgrounds, devices, and levels of ability.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Accessibility</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Screen Reader Support: Ensure your app’s content is compatible with screen readers. Use semantic HTML (e.g., &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, etc.) to structure your app properly. Provide alt text for images and make sure every actionable element is keyboard-accessible.</li>
+<li>Keyboard Navigation: Users who rely on a keyboard or other input devices should be able to navigate through the entire PWA. Elements such as buttons, links, and form fields should be focusable using the keyboard (using the tab key).</li>
+<li>ARIA (Accessible Rich Internet Applications): Use ARIA attributes to enhance accessibility, especially for dynamic content. For instance, aria-live can alert users of important updates, or aria-expanded can indicate if a dropdown is open.</li>
+<li>Contrast Ratios: The Web Content Accessibility Guidelines (WCAG) recommend a contrast ratio of 4.5:1 for normal text and 3:1 for large text to ensure readability for visually impaired users.</li>
+<li>Forms and Labels: Always associate form inputs with labels so users relying on screen readers can understand what information is being requested.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Inclusivity</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Language Support: Provide language options for international users. Ensure the app can switch seamlessly between different languages and that text expansion (in languages like German or Arabic) is accounted for.</li>
+<li>Cultural Sensitivity: Avoid using icons, symbols, or colours that could be misinterpreted across different cultures. For example, the colour red may mean “danger” in some cultures, but in others, it signifies celebration or good luck.</li>
+<li>Diverse User Needs: Design for different physical and cognitive abilities. This might involve simplifying complex tasks, providing visual and text cues, or giving users the option to adjust font sizes and contrast settings.</li>
+<li>Flexible Interfaces: Allow users to customise the app to suit their needs, such as changing font sizes, colour schemes (dark mode), and enabling or disabling animations.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/5fcb4d59ef9c02bc.png" alt="image.png" width="416" height="224" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527536" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://www.interaction-design.org/literature/topics/inclusive-design" target="_blank">Inclusive Design</a></li>
+<li><a class="inline_disabled" href="https://www.uxdesigninstitute.com/blog/ux-vs-ui-design/" target="_blank">What’s the difference between UX vs UI design?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.21 Progressive Web Apps" href="https://canvas.kings.edu.au/courses/12951/assignments/204829" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204829" data-api-returntype="Assignment">2.21 Progressive Web Apps</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.21%20PWA.pptx?d=wfe47a9f877124dfd98ce486eca53950a&amp;csf=1&amp;web=1&amp;e=EGSzPD">2.21 PWA.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-21-progressive-web-apps" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={fe47a9f8-7712-4dfd-98ce-486eca53950a}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div><h3 class="sub">After</h3>
+<div class="readnav"><a href="12951-m7.html">← previous module</a><a href="../course-12951.html">all modules</a><a href="12951-m9.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

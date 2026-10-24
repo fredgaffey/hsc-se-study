@@ -1,0 +1,210 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.11 Number systems — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 3 (Term 1: Weeks 5-6) Programming Fundamentals</div>
+<h1 style="margin-top:.2rem">1.11 Number systems</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-11-number-systems" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Investigate the use of number systems for computing purposes, including binary, decimal and hexadecimal</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Develop an understanding of number systems used in computing, specifically binary, decimal, and hexadecimal, and investigate their applications and importance in the field.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Accurately convert between binary, decimal, and hexadecimal number systems.</span></li>
+<li><span style="font-size: 13.3333px;">Understand the significance of each number system in computing contexts.</span></li>
+<li><span style="font-size: 13.3333px;">Identify real-world scenarios where each number system is commonly used.</span></li>
+<li><span style="font-size: 13.3333px;">Explain the advantages and disadvantages of each number system in computing applications.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p class="amber-el amber-paragraph amber-content">In mathematics, we as humans arbitrarily chose to use a <strong class="amber-el amber-bold">base 10</strong> number system.</p>
+<p class="amber-el amber-paragraph amber-content">For example, when we write the number 2743, we actually interpret it as:</p>
+<p class="amber-el amber-paragraph amber-content"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> <semantics> <mrow> <mn>2</mn> <mo>⋅</mo> <mn>1</mn> <msup> <mn>0</mn> <mn>3</mn> </msup> <mo>+</mo> <mn>7</mn> <mo>⋅</mo> <mn>1</mn> <msup> <mn>0</mn> <mn>2</mn> </msup> <mo>+</mo> <mn>4</mn> <mo>⋅</mo> <mn>1</mn> <msup> <mn>0</mn> <mn>1</mn> </msup> <mo>+</mo> <mn>3</mn> <mo>⋅</mo> <mn>1</mn> <msup> <mn>0</mn> <mn>0</mn> </msup> <mo>=</mo> <mn>2743</mn></mrow></semantics></math></span></span></span><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn></mn> </mrow> </semantics> </math></span></span></span></p>
+<div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; You may remember learning about <strong class="amber-el amber-bold">'place values'</strong> from primary school. This is the way we were taught to use the base 10 number system.</span></p>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">&nbsp;</p>
+<p class="amber-el amber-paragraph amber-content">In reality, we can make our own number systems <strong class="amber-el amber-bold">using any base</strong>. To denote which base is being used, we use subscript:</p>
+<p class="amber-el amber-paragraph amber-content"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> <semantics> <mrow> <mn>274</mn> <msub> <mn>3</mn> <mn>10</mn> </msub> </mrow> </semantics> </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s">​</span></span></span></span></span></span></span></span></span></p>
+<p class="amber-el amber-paragraph amber-content">In this course, you will be learning about the number systems used to represent numbers modern computing:</p>
+<ul class="amber-el amber-list">
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Decimal</p>
+</li>
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Binary</p>
+</li>
+<li class="amber-el amber-listItem">
+<p class="amber-el amber-paragraph amber-content">Hexadecimal</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h4><strong>Decimal</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Decimal is a <strong class="amber-el amber-bold">base 10 number system</strong>, which we use in our daily lives because it is the standard number system in mathematics. It is the easiest number system for a human to read and manipulate.</p>
+<p class="amber-el amber-paragraph amber-content">Decimal is denoted using the digits '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' in each place value:</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">2836</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">Each digit (reading from right to left) increases by a factor of 10:</p>
+<p class="amber-el amber-paragraph amber-content"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> <semantics> <mrow> <mn>2000</mn> <mo>+</mo> <mn>800</mn> <mo>+</mo> <mn>30</mn> <mo>+</mo> <mn>6</mn> <mtext>&nbsp;</mtext> <mo>=</mo> <mtext>&nbsp;</mtext> <mn>2836</mn> </mrow> </semantics> </math></span></span></span></p>
+<div class="dp-callout dp-callout-color-lg-info  card dp-callout-position-default dp-callout-type-solid text-center" style="text-align: left; background-color: #ecf3fe; color: #000000;">
+<div class="card-body" style="padding: 5px;">
+<p class="card-text"><span class="card-text" style="font-size: 10pt;"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; However, computers at their lowest level cannot comprehend a base 10 number system. This is why modern computing uses <strong class="amber-el amber-bold">binary.</strong></span></p>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">&nbsp;</p>
+<p class="amber-el amber-paragraph amber-content">This limits modern computers to using binary, which is a <strong class="amber-el amber-bold">base 2 number system</strong>. It is the easiest number system for a computer to read and manipulate, but not for a human.</p>
+<h4><strong>Binary</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Transistors (the main building block of modern computing) can only exist in either an 'on' state or an 'off' state (i.e. true/false or 0/1).</p>
+<p class="amber-el amber-paragraph amber-content">This limits modern computers to using binary, which is a <strong class="amber-el amber-bold">base 2 number system</strong>. It is the easiest number system for a computer to read and manipulate, but not for a human.</p>
+<p class="amber-el amber-paragraph amber-content">Binary is denoted using the digits '0' and '1' in each place value:</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">10011011</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">Each digit (reading from right to left) increases by a factor of 2:</p>
+<p class="amber-el amber-paragraph amber-content"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"> <semantics> <mrow> <mn>1</mn> <mo>⋅</mo> <mn>128</mn> <mo>+</mo> <mn>0</mn> <mo>⋅</mo> <mn>64</mn> <mo>+</mo> <mn>0</mn> <mo>⋅</mo> <mn>32</mn> <mo>+</mo> <mn>1</mn> <mo>⋅</mo> <mn>16</mn> <mo>+</mo> <mn>1</mn> <mo>⋅</mo> <mn>8</mn> <mo>+</mo> <mn>0</mn> <mo>⋅</mo> <mn>4</mn> <mo>+</mo> <mn>1</mn> <mo>⋅</mo> <mn>2</mn> <mo>+</mo> <mn>1</mn> <mo>⋅</mo> <mn>1</mn> <mo>=</mo> <mn>155</mn> </mrow> </semantics> </math></span></span></span></p>
+<div class="dp-panels-wrapper dp-expander-default dp-panel-active-color-dp-primary">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Decimal to Binary</h3>
+<div class="dp-panel-content">
+<p><img src="../../assets/1380a3851ad97dfd.png" alt="Binary Activity_Page_1.png" width="655" height="1256" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197627" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Binary to Decimal</h3>
+<div class="dp-panel-content">
+<p><img src="../../assets/c8da599829cdc405.png" alt="Binary Activity_Page_2.png" width="665" height="210" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197630" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">&nbsp;</p>
+<h4><strong>Hexadecimal</strong></h4>
+<p class="amber-el amber-paragraph amber-content">Hexadecimal is a <strong class="amber-el amber-bold">base 16 number system</strong>, an alternative representation of the base 2 number system. It is difficult for a human programmer to read Binary 0's and 1's, thus Hexadecimal representation is used to make Binary a bit more readable.</p>
+<p class="amber-el amber-paragraph amber-content">Hexadecimal is denoted using a '0x' followed by the digits '0' to '9' and/or the characters 'A' to 'F':</p>
+<div class="amber-display-codeblock amber-el amber-content ed-print-hidden">
+<div class="amdiscb-slot">
+<pre class="amber-el amber-pre">0x9:B</pre>
+</div>
+</div>
+<p class="amber-el amber-paragraph amber-content">Each digit/character represents 4 bits (i.e. four 0's and 1's).</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li><a title="1.11 Number Systems" href="https://canvas.kings.edu.au/courses/11962/assignments/179133" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/assignments/179133" data-api-returntype="Assignment">1.11 Number systems</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://edstem.org/au/courses/14919/lessons" target="_blank">Number Systems in Computing</a></li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/ETisMOzGvLxGnZhN_dbP_rcByVfstQrWKWvUlRK8hZ886g?e=d3WKxp" target="_blank">1.11 Number Systems</a></p>
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/1-dot-11-number-systems" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={ec30ac38-bcc6-46bc-9d98-4dfdd6cffeb7}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div></main>
+<div class="pnrow"><a class="pn" href="11962-020.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-022.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

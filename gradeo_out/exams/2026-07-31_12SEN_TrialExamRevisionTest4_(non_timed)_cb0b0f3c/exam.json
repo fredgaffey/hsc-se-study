@@ -1,0 +1,2262 @@
+{
+  "exam": "12SEN_TrialExamRevisionTest4 (non timed)",
+  "syllabus": "Software Engineering",
+  "publisher": null,
+  "topics": [
+    "Secure Software Architecture",
+    "Programming for the Web",
+    "Software Automation",
+    "Software Engineering Project"
+  ],
+  "outcomes": [
+    "SE-12-01",
+    "SE-12-09",
+    "SE-12-03",
+    "SE-12-02",
+    "SE-12-04",
+    "SE-12-06",
+    "SE-12-07",
+    "SE-12-05"
+  ],
+  "status": "IN_PROGRESS",
+  "results_released": true,
+  "submitted": null,
+  "started": "2026-07-31T00:59:20.471Z",
+  "duration_minutes": 120,
+  "markers": [
+    "TKS CST"
+  ],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/cb0b0f3c-6112-40ab-ab06-82aac6b9837d",
+  "marking_session_id": "cb0b0f3c-6112-40ab-ab06-82aac6b9837d",
+  "exam_id": "e15eeaf9-9888-4e78-b504-1c871f72c274",
+  "session_id": "0a081077-7b04-4b8c-a27b-13951a9a98c6",
+  "total_mark": null,
+  "parts_answered": 25,
+  "parts_marked": 0,
+  "parts_total": 31,
+  "total_available": 80,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "49141e2e-8d16-44ee-af6d-5a73b2338fb3",
+      "title": "Managing Load Times (MC, TKS2025)",
+      "topic": "Managing Load Times",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "0ddb3b6d-089d-460a-8433-07806bda55b0",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "How does reducing the number of HTTP requests improve the load times of a web frontend?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It compresses images and videos automatically.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It reduces time fetching resources from the server.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "It decreases the number of user interactions required.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "It allows the browser to use newer HTML tags more efficiently.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "e8f39178-f9fd-4487-a2a1-b5226fbdb81e",
+      "title": "Cascading Style Sheets (MC, TKS2025)",
+      "topic": "Cascading Style Sheets",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "9db2870a-3636-4e02-a2bd-f76e689fc51c",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which practice helps manage CSS in large web apps?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Grouping unrelated styles together without separation.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Writing all styles inline inside HTML elements for speed",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Using reusable styles and variables to keep code organized.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "Adding repeated code for each page to avoid dependencies",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "5951f9aa-7fdf-45ec-b00e-f79ea77df30b",
+      "title": "Human and Dataset Bias in ML (MC, TKS 2025)",
+      "topic": "Human and Dataset Bias in ML",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "33ba0be7-8773-4349-b2aa-723b5e5beb58",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best describes AI 'label bias'?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Bias in how data is classified or labelled by humans.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "B",
+                "text": "Bias caused by selecting certain algorithmic structures.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Bias introduced during the choice of features for a model.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Bias due to over-representation of certain demographic groups.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "A"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question_id": "694e3a71-8cc7-4f59-bd52-cea6e42a55ae",
+      "title": "Social/Ethical/Legal Issues (OR, TKS 2025)",
+      "topic": "Social/Ethical/Legal Issues",
+      "label": "OR",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "2fd9b053-add3-4073-bdba-dffeb76fc864",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "Match each scenario to the primary issue or ramification it demonstrates in the context of secure software development.\n\nSelect only one correct response per row.",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "Employment Impact",
+              "Data Security / Privacy",
+              "Copyright / IP",
+              "Digital Disruption"
+            ],
+            "rows": [
+              {
+                "statement": "A company uses automated tools, reducing demand for manual testing roles.",
+                "correct": [
+                  "Employment Impact"
+                ],
+                "yours": [
+                  "Employment Impact"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A start-up patents its secure authentication method to prevent competitors copying it.",
+                "correct": [
+                  "Copyright / IP"
+                ],
+                "yours": [
+                  "Copyright / IP"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A healthcare app uses encryption and access controls for patient records.",
+                "correct": [
+                  "Data Security / Privacy"
+                ],
+                "yours": [
+                  "Data Security / Privacy"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A logistics firm moves to a cloud platform that replaces older systems with secure APIs.",
+                "correct": [
+                  "Digital Disruption"
+                ],
+                "yours": [
+                  "Digital Disruption"
+                ],
+                "right": true
+              }
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "rows": [
+              {
+                "statement": "A company uses automated tools, reducing demand for manual testing roles.",
+                "yours": [
+                  "Employment Impact"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A start-up patents its secure authentication method to prevent competitors copying it.",
+                "yours": [
+                  "Copyright / IP"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A healthcare app uses encryption and access controls for patient records.",
+                "yours": [
+                  "Data Security / Privacy"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A logistics firm moves to a cloud platform that replaces older systems with secure APIs.",
+                "yours": [
+                  "Digital Disruption"
+                ],
+                "right": true
+              }
+            ]
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Correctly selects all options"
+            },
+            {
+              "marks": "1",
+              "criterion": "Partially correct selection"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question_id": "7c103a67-e4f2-4ce9-81b8-962942558b77",
+      "title": "AI and ML (OR, TKS 2025)",
+      "topic": "AI and ML",
+      "label": "OR",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "0916b0a0-9c63-4cb0-a6e1-68af066c2c1e",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "Artificial Intelligence (AI) and Machine Learning (ML) are two key concepts in the world of modern computing. \n\nSelect the correct cells from below. Multiple selections can be made per column.",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "ML",
+              "AI"
+            ],
+            "rows": [
+              {
+                "statement": "Process of utilising mathematical models to learn without direct intuition.",
+                "correct": [
+                  "ML"
+                ],
+                "yours": [
+                  "AI"
+                ],
+                "right": false
+              },
+              {
+                "statement": "Utilises insights and allows machines to extract knowledge from data to learn autonomously.",
+                "correct": [
+                  "ML"
+                ],
+                "yours": [
+                  "ML",
+                  "AI"
+                ],
+                "right": false
+              },
+              {
+                "statement": "Refers to a general set of techonologies in a system to learn and sove a complex problem.",
+                "correct": [
+                  "AI"
+                ],
+                "yours": [
+                  "ML"
+                ],
+                "right": false
+              }
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "rows": [
+              {
+                "statement": "Process of utilising mathematical models to learn without direct intuition.",
+                "yours": [
+                  "AI"
+                ],
+                "right": false
+              },
+              {
+                "statement": "Utilises insights and allows machines to extract knowledge from data to learn autonomously.",
+                "yours": [
+                  "ML",
+                  "AI"
+                ],
+                "right": false
+              },
+              {
+                "statement": "Refers to a general set of techonologies in a system to learn and sove a complex problem.",
+                "yours": [
+                  "ML"
+                ],
+                "right": false
+              }
+            ]
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question_id": "ba5d3d7a-7917-448d-b679-2b15f2b01ab0",
+      "title": "Efficient Execution (MC, TKS 2025)",
+      "topic": "Efficient Execution",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "93c29874-5003-4fec-a780-ae067f6387f8",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which is the best practice when handling exceptions in software development?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Ignore exceptions to avoid interrupting the user",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Catch all exceptions broadly to prevent any errors",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Only catch specific exceptions you expect and log detailed error information",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "Display full error messages and log information including stack traces to users",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question_id": "a3df05ce-db40-40a7-97c8-eae30a078ca9",
+      "title": "Neural Models OOP (MC, TKS 2025)",
+      "topic": "Neural Models OOP",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "0cec9605-3299-48b1-8495-4a01163fa2b8",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "How does backpropagation contribute to the training of a neural network?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It directs data flows between neurons.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It calculates the gradients of the loss function.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "It introduces non-linearity to a regression model.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "It establishes neural connections between layers.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question_id": "29609132-7010-4f20-9a5f-251aacf671f8",
+      "title": "Programmed Data Backup (MC, TKS 2025)",
+      "topic": "Programmed Data Backup",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "bdc0d005-b19a-4f00-9d90-6b7d93c97fdf",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Why is regular scheduling of data backups important?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "To reduce the cost of data storage.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "To enhance data security by encrypting files.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "To ensure business continuity and data integrity.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "To improve network speeds during data transmission.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question_id": "813637eb-9b58-44dc-9e6c-4908900be134",
+      "title": "Open-Source Software (MC, TKS2025)",
+      "topic": "Open-Source Software",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "8543e28a-e688-42cf-8ef2-8268148d2669",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "How does community collaboration improve open-source web tools?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It guarantees all contributions are high quality.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It ensures the software stays small and simple.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "It allows more users to test, report bugs, and suggest improvements.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "It reduces the need for testing by spreading development across many people.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question_id": "354c59f8-366a-42b1-af29-fad26e3b3d84",
+      "title": "Generating Solutions (MC, TKS 2025)",
+      "topic": "Generating Solutions",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "e8e109e1-0759-45e3-8fcf-06b9b1beea72",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best describes debugging in the context of software development?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "The process of finding and fixing errors in the code",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "B",
+                "text": "The task of writing code to enhance a program's features",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "The process of running a program to check its performance",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "The operation of integrating different modules into the system",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "A"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question_id": "f246033e-02f2-4027-a7b8-8b047f3a67fe",
+      "title": "Security and Resilience of Software (SA, TKS 2025)",
+      "topic": "Security and Resilience of Software",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "bf503519-951b-4434-9aae-69827be01b08",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Providing reasons, assess the effectiveness of automated patch management in securing large systems.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 120
+          },
+          "your_response": {
+            "answered": true,
+            "text": "A proplery working autmated patch managment system is esintal to securting a large system but if it dosent work is is a large liableity. Exuonox had a breach because it was running a old veriton of apachy and its autmated pattch managment system satd that is was all updated but it didnt work as there wass a ssl cert that had expired. But with a lage and compex aystme the systems admistarts have TO much to do and say on top of so thay need automated systmes to aply patchs or they will mis them by huyman error. This is why it is essenth to have a WORKING patch managment system!",
+            "images": [],
+            "word_count": 111
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Provides atleast 3 reasons AND Assesses the effectiveness of automated patch management in securing large systems."
+            },
+            {
+              "marks": "3",
+              "criterion": "Provides atleast 2 reasons AND Explains the effectiveness of automated patch management in securing large systems."
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides atleast 1 reason AND Describes some features of automated patch management in securing large systems."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Automated patch management is highly effective in securing large systems because it ensures that security updates are applied consistently and promptly across all devices, reducing the window of vulnerability. It lowers the risk of human error and saves time compared to manual patching. However, it may be less effective if updates are not properly tested, potentially causing system disruptions or compatibility issues."
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question_id": "913e078b-dda4-47a1-8f44-98b8fcc600b2",
+      "title": "Security By Design (SA, TKS 2025)",
+      "topic": "Security By Design",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "76fe8bf1-73ae-448b-a204-e217010af8c4",
+          "part": "Part 1",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "A company is developing a cloud-based document sharing platform.\n\nDescribe how both cryptography and sandboxing can work together to enhance the platform’s security.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Explains clearly how both cryptography and sandboxing improve security, with relevant details and examples."
+            },
+            {
+              "marks": "3",
+              "criterion": "Outlines the contributions of both cryptography and sandboxing with some detail."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes one technique clearly and mentions the other."
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of either cryptography or sandboxing."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Cryptography supports authentication by verifying the identities of users or devices through techniques like digital signatures and certificates. These methods use encrypted keys that prove a user is who they claim to be, preventing unauthorised access. By ensuring only authorised parties can access the software, cryptography strengthens security and helps protect sensitive information from attackers."
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question_id": "375a3b44-e71c-4544-b742-df91e5f63f40",
+      "title": "Security Features (SA, TKS 2025)",
+      "topic": "Security Features",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "32e8e0b0-97f9-4918-b87b-7066f0fbcba6",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain why implementing a data retention policy is important for software development. In your answer include TWO key benefits such a policy provides.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 120
+          },
+          "your_response": {
+            "answered": true,
+            "text": "-   leagality you are not liabel for a fine $330 000 this is a extra cost\n-   also and primerly it will help you biule trust with useres as then they know what there data is bing usef for and why this will help ehnabe the diditly diruprtion\n\nIS MY FIRST POINT RELVENT!!!???",
+            "images": [],
+            "word_count": 51
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly explains the importance of a data retention policy in software development\n\nDescribes two relevant benefits the policy provides"
+            },
+            {
+              "marks": "2",
+              "criterion": "Explains the importance with limited detail\n\nDescribes one relevant benefit"
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of data retention policies or their benefits"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "A data retention policy defines how long user data is stored and when it should be deleted. This is important to ensure compliance with legal regulations, such as GDPR, which require data to be kept only as long as necessary. One key benefit is reducing the risk of data breaches by limiting the amount of sensitive data stored. Another benefit is protecting user privacy by preventing unnecessary or outdated personal information from being kept, which builds trust and meets regulatory requirements."
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question_id": "f6ef211b-3c73-4608-8bac-7799d230311c",
+      "title": "Securing The Web (SA, TKS2025)",
+      "topic": "Securing The Web",
+      "label": "SA",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "1d6a59ce-ba06-4892-aebe-b84a70b2fcce",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain the importance of SSL certificates for establishing trust between users and websites.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 50
+          },
+          "your_response": {
+            "answered": true,
+            "text": "A SSL cert or as it shold propely be called a TLS certifice as ssl is decrped. But this sert allows you to verifi that you are talking to the corect server as you can ask the cerficet authoriy and you can varifif the public key wit them.",
+            "images": [],
+            "word_count": 48
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly explains the importance of SSL certificates for establishing trust between users and websites."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes the function of SSL certificates."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "SSL certificates verify a website’s identity, assuring users they are communicating with the legitimate site. This builds trust and encourages users to safely share sensitive information, knowing their data is encrypted and protected. Without SSL, users risk phishing attacks and data theft."
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question_id": "d508f0fa-33f1-4a4d-a491-c8967ba01590",
+      "title": "Level 0 DFD (Draw, TKS 2025)",
+      "topic": "Level 0 DFD",
+      "label": "Draw",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS2025",
+      "stimulus": "A library uses an online system to manage book loans.\n\nWhen a student borrows a book, they enter their student ID and book title into the system.\n\nThe system then sends the loan record to the library and a confirmation to the student.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "427558c5-f7d5-4845-b8c9-ac9f41a316a4",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "DRAWING_V2",
+          "prompt": "Complete the following level 0 data flow diagram to represent this system.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Provides a substantially correct level 0 data flow diagram."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "### **Sample Answer**\n\n| Entity | Data Flow | Process | Data Flow | Entity |\n|---|---|---|---|---|\n| **Student** → | `Student ID, Book title` → Confirmation returned to student | **Loan Management System** → | `Loan record` → | **Library Database** |"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question_id": "6129178d-311d-439b-962d-7c37e7f28843",
+      "title": "Fundamental Security Concepts (SA, TKS 2025)",
+      "topic": "Fundamental Security Concepts",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A medical appointment app ensures that only doctors and nurses can view patient health records. All records are encrypted during transmission, and if a user tries to access data they’re not permitted to see, the system logs the attempt.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "5fe7ce7a-ce71-453a-86b1-792a395d0b58",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe how this system uses three different security concepts to protect sensitive data. Explain how each concept works in this context.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "Role Based Acess is where olny cirtern people can acess the data. So for example a paitiont cant see other peopls midical infomatin. \n\nThe pricipel of incyptin is used as it will protect the data over tansomtin the will ennsure that the usere data is protecte. most likey acumtisd with a TLS.\n\nThe system is auditaple this meand accountabley. So that if someone does a action there is a recod of that and it can be trased back. This is speicaly usfull for dasaster responce.",
+            "images": [],
+            "word_count": 85
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Describes three relevant security concepts\n\nClearly explains how each concept is applied to protect sensitive data in context"
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes two relevant security concepts\n\nOR\n\nDescribes three concepts with limited or unclear explanation"
+            },
+            {
+              "marks": "1",
+              "criterion": "Mentions at least one security concept with minimal explanation"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "This system uses authorisation, confidentiality, and accountability. Authorisation limits access so that only doctors and nurses can view patient records, preventing unauthorised users from accessing private health information. Confidentiality is maintained by encrypting the data during transmission, ensuring it cannot be intercepted and read by others. Accountability is enforced by logging all unauthorised access attempts, so that any misuse can be traced back to a specific user. These combined measures protect sensitive medical data and ensure responsible system use."
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question_id": "1063f52d-c3e1-4cbb-b741-1ad2a45c8bc0",
+      "title": "Machine Learning and Automation (SA, TKS 2025)",
+      "topic": "Machine Learning and Automation",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "adc83468-936b-4741-b441-102acf24c71f",
+          "part": "Part 1",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain how machine learning enhances Business Process Automation systems' capability to process unstructured data.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 140
+          },
+          "your_response": {
+            "answered": true,
+            "text": "ML enables BPA on unstrucred data this is because if the data is unstruced is is very dificalt to pass without a soficticated passer. But with ML it can pass the data from a unstrued form in to strured of diriclty tool call to automate the syestem. THis allows data BPA to work with natral humans content like emails and document not just sttruecd things liek invoices. Thus ading tyhe capiplity for better BPA  \n  \nTHIS FEELS TO SHORT WHAT DO I NEED TO ADD???",
+            "images": [],
+            "word_count": 84
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Clearly explains how machine learning enhances BPA systems' capability to process unstructured data."
+            },
+            {
+              "marks": "3",
+              "criterion": "Describes how machine learning enhances BPA systems' capability to process unstructured data."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines how machine learning can improve the functionality of BPA systems."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Machine learning enhances Business Process Automation (BPA) by enabling systems to process unstructured data such as emails, contracts, and customer feedback. This is achieved through technologies like Natural Language Processing (NLP) and computer vision. For instance, NLP allows BPA systems to automatically classify and extract information from unstructured text, integrating it into workflows. An example of this is in human resources, where ML-enhanced BPA can process unstructured resumes. Machine learning models scan resumes, extracting key details such as work history and qualifications, thereby reducing the manual effort of screening candidates. The integration of machine learning into BPA provides benefits such as enhanced efficiency, improved accuracy, scalability, and adaptability. ML automates decision-making and processes unstructured data faster, reduces errors through learning from past data, scales to handle larger data volumes, and adapts to changing business conditions, making BPA systems more flexible and responsive."
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question_id": "56db9923-dccd-4ef5-a089-f8ba8dc2a3bd",
+      "title": "Decision Tree (SA/Draw, TKS 2025)",
+      "topic": "Decision Tree",
+      "label": "SA/Draw",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A local government wishes to design a mode of transport suggestion intelligent system for its residents:\n\n1.  if the weather is **forecast to rain**, check **the chance of rain**.\n    -   If the chance of rain is **less than 20%**, take the **train**.\n    -   Otherwise, check the **battery capacity/fuel** of the **car**.\n        -   if the battery capacity is **at least 30%**, take the **car.**\n        -   if the battery capacity is **below 30%**, take the **b****us**.\n2.  If the weather is **not forecast to rain**, check the **traffic**.\n    -   If the traffic is **congested**, take the **bicycle**.\n    -   If the traffic is **not** **congested**, take the **bus**.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "4500b342-c740-4654-a6a9-d50153c507e8",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "DRAWING_V2",
+          "prompt": "Construct a decision tree to represent the logical process used by the intelligent system.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "drawing_empty": true
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Draws a substantially correct decision tree showing all rules and actions"
+            },
+            {
+              "marks": "2",
+              "criterion": "Draws a decision tree showing of some rules and actions"
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies a feature of a decision tree"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "![](assets/a9f6a80a-01b3-401b-ae3b-faca6c3f47bc.png)",
+          "sample_answer_images": [
+            "assets/a9f6a80a-01b3-401b-ae3b-faca6c3f47bc.png"
+          ]
+        },
+        {
+          "part_id": "c6f349bf-3a42-424f-b8a3-de4794a60e8a",
+          "part": "Part B",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Suggests an extension of the rule set to account for cloudy weather when it is not forecast to rain.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 50
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Suggests any extension to the existing rule set that adds rules in relation to the inclusion of cloudy weather."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information"
+            }
+          ],
+          "marking_rubric": "Note that there can be variations in what the student decides to do.",
+          "marking_guidance": null,
+          "sample_answer": "1.  if the weather is **forecast to rain**, check **the chance of rain**.\n    -   If the chance of rain is **less than 20%**, take the **train**.\n    -   Otherwise, check the **battery capacity/fuel** of the **car**.\n        -   if the battery capacity is **at least 30%**, take the **car.**\n        -   if the battery capacity is **below 30%**, take the **b****us**.\n2.  If the weather is **not forecast to rain**, check the **for overcast**.\n    -   If overcast, take the **bicycle.**\n    -   Otherwise, check **congestion.**\n        -   If the traffic is **congested**, take the **bicycle**.\n        -   If the traffic is **not** **congested**, take the **bus**."
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question_id": "bd6b0d08-1fe9-456b-be9d-ce1ecc6ddefe",
+      "title": "Web Protocols (SA, TKS2025)",
+      "topic": "Web Protocols",
+      "label": "SA",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "04dfff40-0a5a-4d52-ae4a-257d306855c9",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe how SSL and TLS protect data being transferred between a client and a server.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 35
+          },
+          "your_response": {
+            "answered": true,
+            "text": "SSL is the older verion of TLS thay both have were designe to enaable hight speed tarsmtion of data while bing seure. theay first exchange keys public keys then the client will verifi with the CA to chekc the public key once that is done. Simetric key incrytion will coments to send all futher data.",
+            "images": [],
+            "word_count": 55
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes SSL and TLS using encryption and certificates."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes SSL and TLS using encryption OR certificates."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "SSL and TLS encrypt data between client and server to keep it secure and verify that the data is sent to the correct server using certificates, preventing impersonation."
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question_id": "1e8b672c-4739-4d1e-928e-d6442fe1cfe8",
+      "title": "Programming - Vowel Count (Decision, 2025 TKS)",
+      "topic": "Programming - Vowel Count",
+      "label": "Decision",
+      "kind": "2025 TKS",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "d4271c69-f320-4996-b493-6711be548673",
+          "part": "Part A",
+          "marks_available": 6,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "Write a program that counts vowels in a string. Include both uppercase and lowercase, and treat “y” as a vowel.",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": null
+          },
+          "your_response": {
+            "answered": true,
+            "code": "vowels = \"aeiouy\"\nstring = input(\"enter the word and we will count the vowels\")\nv_cnt = 0\n\nfor i in string.lower():\n  if i in vowels:\n    v_cnt += 1\nprint(f\"there are {v_cnt} vowels\")"
+          },
+          "result": {
+            "mark": null,
+            "available": 6,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Loops through every character, treats a e i o u y in both cases as vowels, tallies an accurate total, and prints exactly Vowel count: 8 for the given string"
+            },
+            {
+              "marks": "2",
+              "criterion": "Correct loop and case-insensitive check; counts most vowels but off by 1 (e.g. overlooked a single &ldquo;y&rdquo;) or minor output-format slip."
+            },
+            {
+              "marks": "1",
+              "criterion": "Somewhat Counts standard vowels correctly but fails upper-case handling."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "text = \"Dynamic Python Programming\"  \n  \nvowels = \"aeiouyAEIOUY\"  \n  \ncount = 0  \n  \nfor char in text:  \n    if char in vowels:  \n        count += 1  \n  \nprint(\"Vowel count:\", count)  \n  \n  \nVowel Count: 8"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question_id": "2b4861f3-22cd-4d0e-a955-e4df5553b40f",
+      "title": "Decision Tree (Draw/MC, TKS 2025)",
+      "topic": "Decision Tree",
+      "label": "Draw/MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS2025",
+      "stimulus": "A hospital uses a smart monitoring system to assess patients' vital signs and decide whether to alert medical staff or take automated action.\n\n1\\. If the patient is currently being monitored in **real time**:\n\n-   The system checks the **heart rate** (HR).\n    \n    -   If the heart rate is **abnormally high or low**, it checks the **patient's alert status**.\n        \n        -   If the patient is **conscious**, it **sends an alert to the attending nurse**.\n            \n        -   If the patient is **unconscious**, it **triggers a code blue response**.\n            \n    -   If the heart rate is **within the normal range**, it checks the **oxygen level** (SpO2).\n        \n        -   If oxygen is **below 95%**, it **administers oxygen automatically** and **logs the event**.\n            \n        -   If oxygen is **normal**, it does **nothing**.\n            \n\n2\\. If the patient is **not** currently under **real-time monitoring**:\n\n-   The system checks whether the **patient has a chronic condition**.\n    \n    -   If **yes**, it checks whether **a check-in is overdue**.\n        \n        -   If **yes**, it **sends a remote check-in prompt**.\n            \n        -   If **no**, it **schedules the next routine check**.\n            \n    -   If **no chronic condition**, it checks whether the patient has had **any new symptoms reported** in the past 24 hours.\n        \n        -   If **yes**, it **requests a nurse** to examine patient.\n            \n        -   If **no**, it does **nothing**.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "747495ad-b636-411a-b7af-55641cee8653",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "DRAWING_V2",
+          "prompt": "Construct a decision tree to represent the logical process used by the smart patient monitoring system.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "drawing_png": "drawings/q21_Part_A.png",
+            "drawing_scene": "drawings/q21_Part_A.excalidraw.json",
+            "drawing_text": {
+              "element_counts": {
+                "rectangle": 6,
+                "text": 11,
+                "line": 5
+              },
+              "texts": [
+                {
+                  "text": "monoterd real\ntime",
+                  "inside": "rectangle"
+                },
+                {
+                  "text": "yes",
+                  "inside": null
+                },
+                {
+                  "text": "hr not nomal",
+                  "inside": "rectangle"
+                },
+                {
+                  "text": "no",
+                  "inside": null
+                },
+                {
+                  "text": "conscious",
+                  "inside": "rectangle"
+                },
+                {
+                  "text": "yes",
+                  "inside": null
+                },
+                {
+                  "text": "alert nurce",
+                  "inside": "rectangle"
+                },
+                {
+                  "text": "no",
+                  "inside": null
+                },
+                {
+                  "text": "blue code",
+                  "inside": "rectangle"
+                },
+                {
+                  "text": "is o2 normal",
+                  "inside": "rectangle"
+                },
+                {
+                  "text": "yes",
+                  "inside": null
+                }
+              ],
+              "shapes": [
+                {
+                  "shape": "rectangle",
+                  "label": "monoterd real\ntime"
+                },
+                {
+                  "shape": "rectangle",
+                  "label": "hr not nomal"
+                },
+                {
+                  "shape": "rectangle",
+                  "label": "conscious"
+                },
+                {
+                  "shape": "rectangle",
+                  "label": "alert nurce"
+                },
+                {
+                  "shape": "rectangle",
+                  "label": "blue code"
+                },
+                {
+                  "shape": "rectangle",
+                  "label": "is o2 normal"
+                }
+              ],
+              "connectors": [
+                {
+                  "type": "line",
+                  "from": "monoterd real\ntime (nearest)",
+                  "to": "hr not nomal (nearest)",
+                  "label": null
+                },
+                {
+                  "type": "line",
+                  "from": "hr not nomal (nearest)",
+                  "to": "conscious (nearest)",
+                  "label": null
+                },
+                {
+                  "type": "line",
+                  "from": "conscious (nearest)",
+                  "to": "alert nurce (nearest)",
+                  "label": null
+                },
+                {
+                  "type": "line",
+                  "from": "conscious (nearest)",
+                  "to": "blue code (nearest)",
+                  "label": null
+                },
+                {
+                  "type": "line",
+                  "from": "hr not nomal (nearest)",
+                  "to": "is o2 normal (nearest)",
+                  "label": null
+                }
+              ]
+            },
+            "uploaded_files": [
+              {
+                "name": "image.jpg",
+                "path": "assets/7053796a-7872-4260-b7ae-0cc966ab3405.jpg"
+              }
+            ]
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Draws a substantially correct decision tree showing all rules and actions"
+            },
+            {
+              "marks": "3",
+              "criterion": "Draws a partially correct decision tree showing all rules and actions"
+            },
+            {
+              "marks": "2",
+              "criterion": "Draws a decision tree showing understanding of some rules and actions"
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies some features of a decision tree"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "![](assets/5ac3b42d-c937-46a2-b830-6f86e13483cb.png)",
+          "sample_answer_images": [
+            "assets/5ac3b42d-c937-46a2-b830-6f86e13483cb.png"
+          ]
+        },
+        {
+          "part_id": "dc8b9d3f-ff19-4e87-823f-b7304887b842",
+          "part": "Part B",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "A patient is under real-time monitoring. Their heart rate is abnormal, and they are conscious. What will the system do?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Administer oxygen",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Alert the attending nurse",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "Schedule a routine check",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Trigger a code blue response",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        },
+        {
+          "part_id": "e7628646-84d5-4f6b-bbb7-d807419ebcb0",
+          "part": "Part C",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "The system detects a normal heart rate, but the patient’s oxygen level is at 89%. What action does the system take?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Do nothing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Alert the attending nurse",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Trigger a code blue response",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Administer oxygen and logs the event",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        },
+        {
+          "part_id": "7db1fe0e-b5d7-4497-8663-660c299891d5",
+          "part": "Part D",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "A patient is being monitored. Their heart rate is abnormal, and they are unconscious. What happens?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Do nothing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Alert the attending nurse",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Trigger a code blue response",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Administer oxygen and logs the event",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        },
+        {
+          "part_id": "b13b466b-e4ff-4e75-b5ec-53513bc01b16",
+          "part": "Part E",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "A patient is not being monitored and has no chronic condition, but reports new symptoms today. What will the system do?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Alert the attending nurse",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Trigger a code blue response",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Sends a nurse to examine the patient",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Administer oxygen and logs the event",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question_id": "d1c897fc-43a8-4799-915d-84b858d72406",
+      "title": "Programming - Current Maximum (Iteration, 2025 TKS)",
+      "topic": "Programming - Current Maximum",
+      "label": "Iteration",
+      "kind": "2025 TKS",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "08cc4b95-0a60-4dcf-9e29-d8189bcd93de",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "Write a Python program that prints the largest value seen so far as it loops through a list.\n\nlist = \\[4, 2, 9, 5, 12, 3\\]",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": null
+          },
+          "your_response": {
+            "answered": true,
+            "code": "# change name to ls as not to shadow \nls = [4, 2, 9, 5, 12, 3]\n\n# is this ok \nmax_value = float('inf')*-1\n# of woule you prefer ???????\nmax_value = ls[0]\n\n\nfor i in ls:\n  if i > max_value:\n    max_value = i\nprint(max_value)"
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Initialises max_so_far to first element, updates inside loop, prints Current max: after every element, resulting sequence 4, 4, 9, 9, 12, 12."
+            },
+            {
+              "marks": "3",
+              "criterion": "Correct running max logic but printed label/spacing off or final element omitted."
+            },
+            {
+              "marks": "2",
+              "criterion": "Updates max correctly but prints only at end or misses first comparison edge-case."
+            },
+            {
+              "marks": "1",
+              "criterion": "Finds overall max once or prints intermediate values without updating rule."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "lst = \\[4, 2, 9, 5, 12, 3\\]  \n  \nmax\\_so\\_far = lst\\[0\\]  \n  \nfor val in lst:  \n    if val > max\\_so\\_far:  \n        max\\_so\\_far = val  \n    print(\"Current max:\", max\\_so\\_far)  \n  \nOutput:  \nCurrent max: 4  \nCurrent max: 4  \nCurrent max: 9  \nCurrent max: 9  \nCurrent max: 12  \nCurrent max: 12"
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question_id": "6c750cdd-39da-489b-bee2-7d665c0a81ec",
+      "title": "Neural Models OOP (SA, TKS 2025)",
+      "topic": "Neural Models OOP",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "2794cdfa-2e95-4a4f-bb39-1387ea4b7557",
+          "part": "Part 1",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain how feedforward neural networks can address challenges with large datasets AND complex relationships.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 150
+          },
+          "your_response": {
+            "answered": true,
+            "text": "FNN poform better on compex data sets as the layer in eahc layer ofd tghe netowr are conected to the next aluer this allow for the netowk to better fit complex data and you cane have nonliner activation funcinnts this will allow it it fit better. Becase of the more pramaters and more compeld patters it can fit large and complx data sest verry well due to the multable layers",
+            "images": [],
+            "word_count": 70
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Clearly explains how feedforward neural networks can address challenges with large datasets AND complex relationships."
+            },
+            {
+              "marks": "3",
+              "criterion": "Describes how feedforward neural networks can address challenges with large datasets OR complex relationships."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines how feedforward neural networks can address challenges with large datasets OR complex relationships."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Feedforward neural networks can address challenges with large datasets and complex relationships by utilising multiple layers of neurons which capture more intricate patterns within the data. Unlike traditional regression models, which rely on linear relationships and are limited in their capacity to model non-linear interactions, feedforward neural networks incorporate activation functions that introduce non-linearity, enabling them to learn complex mappings from inputs to outputs. As data flows through these interconnected layers, each neuron aggregates information from the previous layer using weighted inputs, biases, and an activation function, allowing the network to progressively extract higher-level features. This layered approach allows neural networks to automatically learn feature representations directly from the data, which is particularly useful when dealing with high-dimensional data or when explicit feature engineering is impractical or impossible."
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question_id": "dbd0e7b1-c7d3-4c1f-9a1f-65f3a5edebb4",
+      "title": "Applications of Web Programming (SA, TKS 2025)",
+      "topic": "Applications of Web Programming",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A startup wants to develop an interactive website that adapts to user preferences and provides real-time updates.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "c3c9e715-3eaf-4b56-9038-cb6616c48a53",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain two benefits of using interactive websites for businesses aiming to improve customer engagement.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "A pwa is faster and you can send notificatin. Besause it is faster it is easery to for the uers to use is as there is less overhed so that it is more repsocive this allow the users to be more ingaged. Also the app can send notificatn this will increase engagment as it will remind the uses to reengage with the site.",
+            "images": [],
+            "word_count": 63
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Explains two benefits of interactive websites and links them to customer engagement."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes two benefits with limited detail or partial connection to customer engagement."
+            },
+            {
+              "marks": "1",
+              "criterion": "Mentions one benefit or provides vague/incomplete explanations."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Interactive websites improve customer engagement by offering personalised content based on user preferences, which makes users feel valued and increases their time on the site. They also provide real-time updates, such as live chats or dynamic product recommendations, which keep users informed and encourage immediate action. Together, these features create a more engaging and responsive experience that can boost customer satisfaction and loyalty."
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question_id": "9b8297c3-d720-41ce-853f-5876a927bdc2",
+      "title": "Programming - Reverse Sentence (Sequence, 2025 TKS)",
+      "topic": "Programming - Reverse Sentence",
+      "label": "Sequence",
+      "kind": "2025 TKS",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "c34b5375-382e-471e-b79d-caba3934e6d6",
+          "part": "Part A",
+          "marks_available": 6,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "Write a Python program that prints a sentence's words in reverse order.\n\nInput: \"Learning Python is fun\"",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": null
+          },
+          "your_response": {
+            "answered": true,
+            "code": "sentence = input(\"enter your sentence \")\n\nwords_in_order = [[]]\nfor i in sentence:\n  if i == ' ':\n    words_in_order.append([])\n  else:\n    words_in_order[-1].append(i)\n    \nreversed_words = \"\"\nfor i in words_in_order[::-1]:\n  word = \"\"\n  for j in i:\n    word += j\n  word += \" \"\n  reversed_words += word\n\nprint(reversed_words)\n    "
+          },
+          "result": {
+            "mark": null,
+            "available": 6,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Splits sentence into words, reverses order, joins with single spaces to output “fun is Python Learning” exactly"
+            },
+            {
+              "marks": "2",
+              "criterion": "Correct reversal but extra/trailing space or different capitalisation."
+            },
+            {
+              "marks": "1",
+              "criterion": "Ateempted to reverse the string and output the new string correctly"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "sentence \\= \"Learning Python is fun\"  \nwords \\= sentence.split()  \nwords.reverse()  \nprint(\" \".join(words))  \n  \nOutput:  \nfun is Python Learning"
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question_id": "c57a4fc1-1d28-4b14-b6a1-3ea4d270150a",
+      "title": "Social, Ethical & Legal (ER, TKS 2025)",
+      "topic": "Social, Ethical & Legal",
+      "label": "ER",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A video on data privacy shows how companies collect and use personal information from users online. This raises social, ethical, and legal concerns about consent, security, and misuse of data.\n\n[▶ VIDEO (open this file)](assets/e1aed016-9cf8-4b65-a25f-a79c6142bad6.mp4)\n\nVideo Credit: Netwrix.com",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "828c926a-754e-48af-8a9e-2ec3bc155124",
+          "part": "Part A",
+          "marks_available": 8,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Evaluate the impact of data privacy concerns on individuals and organisations, making reference to the social, ethical, and legal issues involved.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 500
+          },
+          "your_response": {
+            "answered": true
+          },
+          "result": {
+            "mark": null,
+            "available": 8,
+            "not_submitted": false,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "7-8",
+              "criterion": "Demonstrates a comprehensive understanding of data privacy\n\nEffectively links social, ethical, and legal issues to impacts on individuals and organisations\n\nIntegrates detailed and relevant examples, including legislation or case studies\n\nProvides sustained evaluation and well-structured analysis"
+            },
+            {
+              "marks": "5-6",
+              "criterion": "Demonstrates a sound understanding of data privacy\n\nExplains social, ethical, and legal issues in detail\n\nProvides relevant examples and considers impacts on individuals and organisations\n\nSome evaluation of issues is evident"
+            },
+            {
+              "marks": "3-4",
+              "criterion": "Demonstrates a basic understanding of data privacy\n\nDescribes some social, ethical, or legal issues, but unevenly\n\nUses simple or partially relevant examples"
+            },
+            {
+              "marks": "1-2",
+              "criterion": "Provides limited information about data privacy\n\nMay identify a social, ethical, or legal issue with little detail\n\nExamples, if present, are minimal or irrelevant"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Data privacy is one of the most significant challenges in the digital age, affecting both individuals and organisations. The collection of personal information by companies creates major social, ethical, and legal issues that influence how technology is developed and used.\n\nFrom a social perspective, privacy breaches can erode trust between users and organisations. If personal information such as location data or browsing habits is shared without consent, individuals may feel vulnerable and exploited. This can discourage people from engaging with online platforms and create anxiety about constant surveillance. At the same time, responsible data use can provide social benefits, such as personalised recommendations and improved services, highlighting the need for balance.\n\nEthical issues also emerge around consent and fairness. Many companies collect data through lengthy terms and conditions that most users do not read or fully understand. Ethically, this raises questions about whether consent is truly informed. Additionally, there is debate over the fairness of companies profiting from user data without providing clear benefits to the individuals whose information is being sold. Ethical responsibility requires organisations to be transparent and accountable in their handling of personal information.\n\nLegal issues are central to regulating data privacy. In Australia, the Privacy Act 1988 and the Notifiable Data Breaches scheme require organisations to handle personal data responsibly and report breaches. Internationally, regulations such as the European Union’s General Data Protection Regulation (GDPR) enforce stricter standards for consent and data storage. However, enforcement can be inconsistent, especially across global digital platforms.\n\nOverall, data privacy impacts society at multiple levels. Individuals risk harm when data is misused, while organisations face reputational and legal consequences if they fail to protect it. Evaluating these social, ethical, and legal issues highlights the importance of stronger regulation and ethical responsibility in safeguarding personal information."
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "Managing Load Times": {
+      "mark": 0,
+      "available": 1
+    },
+    "Cascading Style Sheets": {
+      "mark": 0,
+      "available": 1
+    },
+    "Human and Dataset Bias in ML": {
+      "mark": 0,
+      "available": 1
+    },
+    "Social/Ethical/Legal Issues": {
+      "mark": 0,
+      "available": 2
+    },
+    "AI and ML": {
+      "mark": 0,
+      "available": 1
+    },
+    "Efficient Execution": {
+      "mark": 0,
+      "available": 1
+    },
+    "Neural Models OOP": {
+      "mark": 0,
+      "available": 4
+    },
+    "Programmed Data Backup": {
+      "mark": 0,
+      "available": 1
+    },
+    "Open-Source Software": {
+      "mark": 0,
+      "available": 1
+    },
+    "Generating Solutions": {
+      "mark": 0,
+      "available": 1
+    },
+    "Security and Resilience of Software": {
+      "mark": 0,
+      "available": 4
+    },
+    "Security By Design": {
+      "mark": 0,
+      "available": 4
+    },
+    "Security Features": {
+      "mark": 0,
+      "available": 3
+    },
+    "Securing The Web": {
+      "mark": 0,
+      "available": 3
+    },
+    "Level 0 DFD": {
+      "mark": 0,
+      "available": 2
+    },
+    "Fundamental Security Concepts": {
+      "mark": 0,
+      "available": 3
+    },
+    "Machine Learning and Automation": {
+      "mark": 0,
+      "available": 4
+    },
+    "Decision Tree": {
+      "mark": 0,
+      "available": 13
+    },
+    "Web Protocols": {
+      "mark": 0,
+      "available": 3
+    },
+    "Programming - Vowel Count": {
+      "mark": 0,
+      "available": 6
+    },
+    "Programming - Current Maximum": {
+      "mark": 0,
+      "available": 4
+    },
+    "Applications of Web Programming": {
+      "mark": 0,
+      "available": 3
+    },
+    "Programming - Reverse Sentence": {
+      "mark": 0,
+      "available": 6
+    },
+    "Social, Ethical & Legal": {
+      "mark": 0,
+      "available": 8
+    }
+  }
+}

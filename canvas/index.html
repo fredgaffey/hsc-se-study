@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEN Offline — Software Engineering</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#1a202c">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<style>
+:root{--bg:#fff;--fg:#16181d;--mut:#5a6472;--card:#fff;--bd:#e2e8f0;--ac:#2b6cb0}
+@media(prefers-color-scheme:dark){:root{--bg:#15171c;--fg:#e6e8ec;--mut:#9aa4b2;--card:#1c1f26;--bd:#2d3340}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+header{background:#1a202c;color:#fff;padding:2.5rem 1.25rem 2rem}
+.wrap{max-width:900px;margin:0 auto}
+h1{margin:0 0 .3rem;font-size:1.9rem}
+header p{margin:0;color:#a0aec0}
+.status{display:inline-flex;align-items:center;gap:.4rem;margin-top:1rem;font-size:.8rem;
+ background:#2d3748;color:#cbd5e0;padding:.3rem .7rem;border-radius:20px}
+.dot{width:8px;height:8px;border-radius:50%;background:#48bb78}
+main{max-width:900px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+a.card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--bd);
+ border-radius:12px;padding:1.2rem;transition:transform .12s,border-color .12s}
+a.card:hover{transform:translateY(-2px);border-color:var(--ac)}
+.card h2{margin:0 0 .3rem;font-size:1.05rem;color:var(--ac)}
+.card .n{font-size:1.7rem;font-weight:700;margin:.2rem 0}
+.card p{margin:0;color:var(--mut);font-size:.85rem}
+#install{margin-top:1rem;font:inherit;font-size:.85rem;background:#48bb78;color:#fff;border:0;
+ padding:.5rem 1rem;border-radius:8px;cursor:pointer;display:none}
+.note{margin-top:2.5rem;padding:1rem 1.2rem;border-left:3px solid #d69e2e;background:rgba(214,158,46,.09);
+ border-radius:0 8px 8px 0;font-size:.87rem;color:var(--mut)}
+.note b{color:var(--fg)}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<header><div class="wrap">
+<h1>SEN Offline</h1>
+<p>Software Engineering — everything in one place, no internet needed</p>
+<div class="status"><span class="dot" id="dot"></span><span id="st">checking…</span></div>
+<br><button id="install">Install as app</button>
+</div></header>
+<main>
+<div class="grid">
+<a class="card" href="./pages/search.html"><h2>Search Everything</h2><div class="n">195</div><p>Course notes + questions, with fuzzy matching</p></a>
+<a class="card" href="./pages/quiz.html"><h2>Quiz Generator</h2><div class="n">680</div><p>Mix questions across any modules, self-marking</p></a>
+<a class="card" href="./pages/browse.html"><h2>Quizzes</h2><div class="n">65</div><p>All 60 quizzes by module, with scores and retakes</p></a>
+<a class="card" href="./pages/course-12951.html"><h2>HSC Course</h2><div class="n">105</div><p>12SENX2 2026 — 105 lessons</p></a>
+<a class="card" href="./pages/course-11962.html"><h2>Year 11 Course</h2><div class="n">90</div><p>11SENX 2025 — 90 lessons</p></a>
+</div>
+<div class="note">
+<b>What's not in here:</b> no videos — 256 embeds are links only, and SharePoint denied access under the
+Microsoft account this browser is using. 43 images live in a Canvas course you're not enrolled in and are
+unavailable.  Quiz diagrams
+(DFD, flowchart, ERD) are missing — those questions have wording but no image.
+</div>
+</main>
+<script>
+const st=document.getElementById('st'),dot=document.getElementById('dot');
+function upd(){const on=navigator.onLine;st.textContent=on?'online':'offline — running from cache';
+ dot.style.background=on?'#48bb78':'#ecc94b';}
+addEventListener('online',upd);addEventListener('offline',upd);upd();
+if('serviceWorker' in navigator && location.protocol.startsWith('http')){
+  navigator.serviceWorker.register('./sw.js').then(()=>{st.textContent+=' · cached for offline';})
+  .catch(e=>{st.textContent='SW failed: '+e.message;});
+} else if(location.protocol==='file:'){
+  st.textContent='file:// mode — works, but not installable';
+}
+let dp;addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e;
+ const b=document.getElementById('install');b.style.display='inline-block';
+ b.onclick=async()=>{b.style.display='none';dp.prompt();await dp.userChoice;};});
+</script><link rel="stylesheet" href="./vendor/findbar.css?v=5800f209">
+<script src="./vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

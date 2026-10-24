@@ -1,0 +1,2242 @@
+{
+  "exam": "12SEN_TrialExamRevisionTest1 (non-timed)",
+  "syllabus": "Software Engineering",
+  "publisher": null,
+  "topics": [
+    "Secure Software Architecture",
+    "Programming for the Web",
+    "Software Automation",
+    "Software Engineering Project"
+  ],
+  "outcomes": [
+    "SE-12-06",
+    "SE-12-07",
+    "SE-12-04",
+    "SE-12-09",
+    "SE-12-08",
+    "SE-12-03",
+    "SE-12-01",
+    "SE-12-02",
+    "SE-12-05"
+  ],
+  "status": "LIVE",
+  "results_released": true,
+  "submitted": null,
+  "started": null,
+  "duration_minutes": 120,
+  "markers": [
+    "TKS CST"
+  ],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/5070160c-3ca7-4adc-9371-83e26361ef7d",
+  "marking_session_id": "5070160c-3ca7-4adc-9371-83e26361ef7d",
+  "exam_id": "b9c88873-3481-4aca-a4f4-75191c892ac5",
+  "session_id": "2358fd00-48ea-4381-be0e-bfae2abf0e6b",
+  "total_mark": null,
+  "parts_answered": 0,
+  "parts_marked": 0,
+  "parts_total": 31,
+  "total_available": 78,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "5ff0b835-ca90-43d9-a0ba-ae28032ea125",
+      "title": "Version Control (MC, TKS 2025)",
+      "topic": "Version Control",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A team of developers is collaborating on a web application using Git and GitHub. During a sprint, a developer accidentally pushes a commit to the main branch that breaks the layout of the homepage. The team wants to fix the issue while preserving the project history and avoiding disruption to other contributors who are working on feature branches.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "d129eeca-81b8-4818-83fc-850b8588c7c9",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following would be the most appropriate way to resolve the issue using Git?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Delete the main branch and recreate it from a stable feature branch, then notify all contributors to rebase their work.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Force push an older version of the project to the main branch using \"git push -- force\" removing the faulty commit from history.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Use \"git revert\" to create a new commit that undoes the changes from the faulty commit, then push the revert to the main branch.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Pause all development, clone the repository locally, manually fix the layout, and upload the corrected files without using Git commands.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "a5853c41-5a5f-4185-a6f4-9e66d3fd900d",
+      "title": "Backup (MC, TKS 2025)",
+      "topic": "Backup",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A medium-sized business experiences a ransomware attack that encrypts all its customer data and financial records. The IT department had implemented programmed backups, but the last successful backup was completed two weeks prior to the attack.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "43ccbf2c-29e5-446c-ac71-33ab1e6d0ff1",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following actions would best minimise data loss and ensure business continuity in the future?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Disable all internet access to prevent future attacks",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Increase the frequency of programmed backups and offsite storage",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Performing full manual backups when major changes occur in the system",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Switch to a staggered method of data backup (ie: Grandfather, Father, Son)",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "f83625e5-2c63-4b80-bb07-f81dc9c46acf",
+      "title": "Types of Machine Learning Algorithms (MC, TKS 2025)",
+      "topic": "Types of Machine Learning Algorithms",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "d8efc543-3d04-42c3-96a1-dbb2c40b213b",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "If we want to make predictions by comparing new data points to similar instances in a dataset, which algorithm fits this approach?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Linear regression",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Logistic regression",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Support Vector Machine",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "K-nearest neighbour (KNN)",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question_id": "c21d6e68-2bae-4ab8-b5a7-aca51f40c5e8",
+      "title": "Generating Solutions (MC, TKS 2025)",
+      "topic": "Generating Solutions",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "ccf0ad96-e017-4cf2-bd46-111619b505aa",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which type of testing focuses on verifying that individual components or functions of a program work as expected?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Unit testing",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "System testing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Integration testing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Acceptance testing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question_id": "debb09ce-e22b-4ffc-ac28-307658dbc389",
+      "title": "Security Strategies & Tools (MC, TKS 2025) ",
+      "topic": "Security Strategies & Tools",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "02dbe9e2-dc60-407b-9dd9-94b9ecdaec70",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "In what stage of development can SAST tools be applied?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Only during integration testing.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Only during initial design phases.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Only after the code is completed.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "At any stage after Requirements definition.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question_id": "43dca905-635a-4b52-ac7d-11f6c3f6bcff",
+      "title": "Presentation (MC, TKS 2025)",
+      "topic": "Presentation",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "c75feb09-95ca-4ebb-98d0-35990cd07be5",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best describes how to maintain consistency in presentation design?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Use the same fonts, colors, and spacing on all slides",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Change slide backgrounds frequently to keep things interesting",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Add animations and transitions to every slide to impress the audience",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Vary font sizes and styles based on the importance of content on each slide",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "A"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question_id": "499e5385-1935-4fcf-a4ab-e41ba81c5698",
+      "title": "Development (MC, TKS 2025)",
+      "topic": "Development",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "abfde732-219f-4b55-857e-6d66a018ed05",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "In software engineering, why is it important to include a contingency fund when allocating financial resources?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "To cover the costs of team social events and morale-boosting activities",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "To guarantee that hardware and software purchases can be made immediately",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "To account for unforeseen challenges such as scope changes or technical issues",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "To ensure that all team members receive overtime pay regardless of project needs",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question_id": "25a85121-924e-4526-a6dc-a4a31dfc9bbb",
+      "title": "Designing and Analysing ML (MC, TKS 2025)",
+      "topic": "Designing and Analysing ML",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "36dce9d1-8956-4828-b9e8-d8e7d2e55bde",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "How does batch normalisation improve the training process of neural networks?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "By minimising the number of layers required",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "By normalising input weights of selected neurons",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "By decreasing computation time through layer fusing",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "By ensuring inputs to each layer are on a similar scale",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question_id": "5049e9f2-0bcc-484b-8648-45e5f0ae510f",
+      "title": "Requirements (MC, TKS 2025)",
+      "topic": "Requirements",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "The development team agrees the app will handle user login, profile management, and order placement but will not include social media features.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "fa90b9bc-eb17-4d9e-8317-851b82e6b85f",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which section of the requirements definition does the stimulus describe?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Defining data types",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Defining boundaries",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Generating requirements",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Assessing scheduling feasibility",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question_id": "b0a1ec56-e268-43e1-b2f1-11ba7e062fe3",
+      "title": "Quality Assurance (OR, TKS 2025)",
+      "topic": "Quality Assurance",
+      "label": "OR",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "fadc5302-4cf0-42a6-87c2-5fb577396309",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "For each software project described below, select the most appropriate quality assurance focus area that should be prioritised.",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "Functionality",
+              "Performance",
+              "Security",
+              "Usability"
+            ],
+            "rows": [
+              {
+                "statement": "A government website designed for public access",
+                "correct": [
+                  "Usability"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "A video game app requiring fast response times",
+                "correct": [
+                  "Performance"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "A medical records system needing accurate data entry",
+                "correct": [
+                  "Functionality"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "An online banking platform that processes transactions",
+                "correct": [
+                  "Security"
+                ],
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "rows": [
+              {
+                "statement": "A government website designed for public access",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "A video game app requiring fast response times",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "A medical records system needing accurate data entry",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "An online banking platform that processes transactions",
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Correctly selects all options"
+            },
+            {
+              "marks": "1",
+              "criterion": "Partially correct selection"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question_id": "fefda179-86d0-4f2b-bc37-5aed375fc1cd",
+      "title": "Social/Ethical/Legal Issues (SA, TKS 2025)",
+      "topic": "Social/Ethical/Legal Issues",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "f6446fb7-67e7-47db-baa3-7534a10227db",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe the concept of digital disruption and how the development of secure software can both cause and respond to it.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes digital disruption and how secure software relates to it, with examples."
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides a general description of digital disruption with some link to secure software"
+            },
+            {
+              "marks": "1",
+              "criterion": "Makes a vague or minimal connection between digital disruption and security."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Digital disruption refers to how new technologies change or replace traditional business models. Secure software development can cause digital disruption by enabling innovative services, like blockchain-secured transactions, that make older methods obsolete. It also helps enterprises respond to disruption by protecting data and systems from cyber threats, allowing them to adopt new digital tools safely. For example, a financial company using secure blockchain tech disrupts traditional banking with faster, safer services. At the same time, secure software helps businesses protect themselves and adapt to these technological changes."
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question_id": "99317d23-d872-443c-b764-b6c3f2bebfee",
+      "title": "Collaboration Benefits (SA, TKS 2025)",
+      "topic": "Collaboration Benefits",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "129b6f70-2854-4453-a529-de4300a840c8",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe how collaborative code reviews contribute to the security of a software system. In your answer, refer to specific benefits of having multiple team members involved in reviewing code.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Demonstrates a thorough understanding of how collaborative code reviews improve security, with specific and relevant benefits clearly explained"
+            },
+            {
+              "marks": "3",
+              "criterion": "Shows a sound understanding of code review benefits with some relevant explanation."
+            },
+            {
+              "marks": "2",
+              "criterion": "Identifies a general benefit of code reviews with limited or vague explanation."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides a basic or general statement about teamwork or checking code, without clear links to security."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Collaboration is important in secure software development because no single developer can identify every possible vulnerability or threat. Security is a complex area that benefits from multiple perspectives and areas of expertise. While one developer may be skilled in coding secure authentication, another may be better at identifying potential network vulnerabilities. By working together, the team can address more risks and validate each other’s work, which increases the overall quality and resilience of the software. Relying on one person increases the chance of blind spots or overlooked errors, while collaboration spreads responsibility and strengthens the final product."
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question_id": "c6fa4624-f58e-4d5e-b275-215cb3f951c0",
+      "title": "ML Regression Models with OOP (OR, TKS 2025)",
+      "topic": "ML Regression Models with OOP",
+      "label": "OR",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "662011fe-d141-4892-8699-a666262bdbc0",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "The following are equations for different regression models.\n\nSelect the correct equation for each model.",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "Polynomial Regression",
+              "Logistic Regression",
+              "Linear Regression"
+            ],
+            "rows": [
+              {
+                "statement": null,
+                "correct": [
+                  "Logistic Regression"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": null,
+                "correct": [
+                  "Polynomial Regression"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": null,
+                "correct": [
+                  "Linear Regression"
+                ],
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "rows": [
+              {
+                "statement": null,
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": null,
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": null,
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question_id": "5a246b45-cbc4-4566-b1d9-eb01a6069ffd",
+      "title": "Programming - Dictionaries (Structured Data Types, 2025 TKS)",
+      "topic": "Programming - Dictionaries",
+      "label": "Structured Data Types",
+      "kind": "2025 TKS",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "19a52f88-1954-468c-8086-9169586b35a8",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "Write a dictionary called student that stores the keys: \"name\", \"age\", and \"grade\". Assign values of your choice and print them.",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": null
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Dictionary is created with correct keys and values, and each value is accessed and printed correctly."
+            },
+            {
+              "marks": "2",
+              "criterion": "Dictionary created, but missing a key/value or incorrect access when printing."
+            },
+            {
+              "marks": "1",
+              "criterion": "Dictionary partially attempted or printed incorrectly."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "student = {\"name\": \"Liam\", \"age\": 16, \"grade\": \"A\"}  \nprint(student\\[\"name\"\\])  \nprint(student\\[\"age\"\\])  \nprint(student\\[\"grade\"\\])"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question_id": "cca6d338-45d9-465d-ac8d-6a18ca37dc30",
+      "title": "File Security (SA, TKS 2025)",
+      "topic": "File Security",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "c66190ae-cc25-4e30-ab51-87a0574b9d6f",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Outline two mitigation strategies a developer can implement to protect against insecure file uploads in a web application",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly outlines two effective and relevant mitigation strategies with brief explanations"
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines two strategies with limited explanation, or one strategy with clear explanation"
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies one strategy with limited detail or vague description."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "To protect against insecure file uploads, developers should restrict uploaded file types to safe formats using whitelisting (e.g., only allowing .jpg or .pdf). This prevents execution of malicious scripts like .php or .exe files. Additionally, files should be stored in a non-executable directory, separate from the application logic, to avoid accidental execution. These measures reduce the risk of attackers uploading and executing harmful files on the server."
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question_id": "1ef9acaa-946d-43ec-b4f0-15882b9c55de",
+      "title": "Minimise Vulnerabilities (SA, TKS 2025)",
+      "topic": "Minimise Vulnerabilities",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "dd4bdb35-8fa0-4282-91cb-b0013f71cab6",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain what Cross-Site Scripting (XSS) attacks are and describe two ways developers can protect their applications against them.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Thorough explanation of XSS and two clear, accurate mitigation methods with reasoning."
+            },
+            {
+              "marks": "3",
+              "criterion": "Thorough explanation of XSS and two clear, accurate mitigation methods with reasoning."
+            },
+            {
+              "marks": "2",
+              "criterion": "Basic understanding of XSS and at least one mitigation method explained."
+            },
+            {
+              "marks": "1",
+              "criterion": "Vague or limited explanation of XSS or mitigation methods."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Cross-Site Scripting (XSS) is a security vulnerability where attackers inject malicious scripts into web pages viewed by other users. These scripts execute in the victim’s browser, allowing attackers to steal sensitive data or perform actions on behalf of the user. To protect against XSS, developers should validate and sanitize all user inputs to remove harmful code or characters. Additionally, encoding output before rendering it in web pages prevents injected scripts from executing by treating them as text rather than code. Implementing a Content Security Policy (CSP) is also effective in restricting the execution of untrusted scripts. Together, these measures reduce the risk of XSS attacks and improve application security."
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question_id": "5edbf9a1-8511-4ce4-8415-a15140860289",
+      "title": "Object-Relational Mapping (SA, TKS2025)",
+      "topic": "Object-Relational Mapping",
+      "label": "SA",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "a75e7d95-2fad-423e-a0fa-ae8728534573",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Which of the following is an example of human bias influencing AI system design?",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 50
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Correctly explains why ORM improves developer productivity."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes one reason why ORM improves developer productivity."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "ORM improves developer productivity by handling multiple SQL queries behind the scenes to perform a single high level task. This means developers can use simple method calls instead of writing and managing several related SQL statements manually."
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question_id": "783ba658-ecbb-48a2-9cd6-64005537a0e0",
+      "title": "SQL Query Results (Yr12, CT, TKS2025)",
+      "topic": "SQL Query Results",
+      "label": "Yr12",
+      "kind": "CT",
+      "source": "TKS2025",
+      "copyright": "TKS 2025",
+      "stimulus": "The following table represents a database at a book store:\n\n| **BookID** | **Title** | **Author** | **Year** |\n|---|---|---|---|\n| 201 | The Hobbit | J.R.R. Tolkien | 1937 |\n| 202 | 1984 | George Orwell | 1949 |\n| 203 | Brave New World | Aldous Huxley | 1932 |\n| 204 | Dune | Frank Herbert | 1965 |\n| 205 | Animal Farm | Geroge Orwell | 1945 |",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "2baaaf54-29c9-49a8-9a4c-1e35b52b0356",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "RICH_TABLE",
+          "prompt": "The following SQL query is run to test the database.\n\n**SELECT Title, Year**  \n**FROM Books**   \n**WHERE Author <> 'Geroge Orwell'**  \n**ORDER BY Year ASC**\n\nFill in the table below with the result of running the SQL query. You may not need to use all the rows or columns.",
+          "prompt_images": [],
+          "question": {
+            "table": [
+              [
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                },
+                {
+                  "type": "text",
+                  "text": null
+                }
+              ]
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "filled_cells": 0
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "| **Title** | **Year** |\n|---|---|\n| Brave New World | 1932 |\n| The Hobbit | 1937 |\n| Dune | 1965 |"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question_id": "0e23e5a0-722d-42f2-b5b5-d7802a817c47",
+      "title": "PWA (OR, TKS 2025)",
+      "topic": "PWA",
+      "label": "OR",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "6a861495-c43b-4b73-83ff-f9d258dfa5ce",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "Identify the corresponding feature to its relevant appliation.",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "Interactive Website",
+              "E-commerce Website",
+              "Progressive Web App (PWA)"
+            ],
+            "rows": [
+              {
+                "statement": "A platform that allows users to buy products online",
+                "correct": [
+                  "E-commerce Website"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "A site that updates content based on user input",
+                "correct": [
+                  "Interactive Website"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "An app-like website that works offline and sends notifications",
+                "correct": [
+                  "Progressive Web App (PWA)"
+                ],
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "rows": [
+              {
+                "statement": "A platform that allows users to buy products online",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "A site that updates content based on user input",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "An app-like website that works offline and sends notifications",
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Correctly selects all options"
+            },
+            {
+              "marks": "1",
+              "criterion": "Partially correct selection"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question_id": "56a8a8df-6e22-423c-9826-45313eb8454c",
+      "title": "Human Behaviour Influences on ML and AI (SA, TKS 2025)",
+      "topic": "Human Behaviour Influences on ML and AI",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "c40942de-a277-4fda-8b8d-9e61efab4b87",
+          "part": "Part 1",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain the importance of cultural sensitivity in the design of AI systems.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 150
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Clearly explains the importance cultural sensitivity in the design of AI systems."
+            },
+            {
+              "marks": "3",
+              "criterion": "Describes the importance cultural sensitivity in the design of AI systems."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines why cultural sensitivity may be important in designing AI systems."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Cultural sensitivity in AI design involves tailoring AI systems to respect and incorporate the cultural norms and practices of the intended user base. This ensures that the AI systems are perceived as respectful, relevant, and responsive to the users' cultural contexts, promoting higher levels of engagement and acceptance. For example, localisation of AI voice assistants like Amazon Alexa or Google Assistant is a critical component of cultural sensitivity. When deployed in different countries, these assistants undergo significant adaptation processes that include recognising local dialects, respecting local customs, and following region-specific social norms. By doing so, users across different cultures feel understood and respected, improving their overall engagement with the AI system. For instance, in a country where formality is a key social norm, the AI might be designed to use titles and formal language in its interactions, reflecting the users' cultural expectations and enhancing their comfort and trust in the system."
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question_id": "4e8bc2cf-0fff-4633-b43f-e592500f88a2",
+      "title": "Decision Tree (SA, TKS 2025)",
+      "topic": "Decision Tree",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A smart recycling bin uses an intelligent system to decide how to sort waste. It follows these steps:\n\n1.  If the **item is metal**, it is sent to the **metal bin**.\n    \n2.  If the item is **not metal**, it checks whether the item is **plastic**.\n    \n    -   If it **is plastic**, it checks whether the **item is clean**.\n        \n        -   If **clean**, it is sent to the **plastic bin**.\n            \n        -   If **not clean**, it is sent to **general waste**.\n            \n    -   If it **is not plastic**, the item is sent to **general waste**.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "b7ad75d0-2c85-4d9d-97b1-2ed85864e05e",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "DRAWING_V2",
+          "prompt": "Construct a decision tree to represent the logical process used by the intelligent recycling system.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Draws a substantially correct decision tree showing all rules and actions"
+            },
+            {
+              "marks": "2",
+              "criterion": "Draws a decision tree showing understanding of some rules and actions"
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies a feature of a decision tree"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "![](assets/f7b2e65f-536f-4741-bd8d-3152f38cc2ed.png)",
+          "sample_answer_images": [
+            "assets/f7b2e65f-536f-4741-bd8d-3152f38cc2ed.png"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "question_id": "2d491780-dead-4aaf-b042-dd29421d7c50",
+      "title": "Testing and Evaluating (OR, TKS 2025)",
+      "topic": "Testing and Evaluating",
+      "label": "OR",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "272ccbb7-7511-484d-8f26-d2cb9addd3e1",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "Match the appropriate testing methodology to its definition.",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "Unit Testing",
+              "System Testing",
+              "Acceptance Testing",
+              "Integration Testing"
+            ],
+            "rows": [
+              {
+                "statement": "Confirming that the software meets the business requirements and is ready for deployment.",
+                "correct": [
+                  "Acceptance Testing"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Testing individual components or functions of the code in isolation.",
+                "correct": [
+                  "Unit Testing"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Verifying that the entire application functions as expected in its environment.",
+                "correct": [
+                  "System Testing"
+                ],
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Ensuring that different modules work together correctly.",
+                "correct": [
+                  "Integration Testing"
+                ],
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "rows": [
+              {
+                "statement": "Confirming that the software meets the business requirements and is ready for deployment.",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Testing individual components or functions of the code in isolation.",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Verifying that the entire application functions as expected in its environment.",
+                "yours": [],
+                "right": null
+              },
+              {
+                "statement": "Ensuring that different modules work together correctly.",
+                "yours": [],
+                "right": null
+              }
+            ]
+          },
+          "result": {
+            "mark": null,
+            "available": 2,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "question_id": "79e4f26c-80f2-46b0-b64a-f12a11d2bef6",
+      "title": "Feedback (SA, TKS 2025)",
+      "topic": "Feedback",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "adc312cd-2800-4e43-9af8-7ca8f89d7a34",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe two steps involved in analysing feedback during software development.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 120
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes two steps involved in analysing feedback during software development."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines AT LEAST ONE step involved in analysing feedback during software development."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "One step in analysing feedback is categorisation, where feedback is sorted based on its source such as user, stakeholder, peer, or automated. This helps developers prioritise feedback appropriately, ensuring that critical issues like user-reported bugs are addressed before less urgent suggestions. Another step is impact analysis, which involves evaluating how implementing the feedback will affect the software’s architecture, performance, or user experience. This helps developers avoid introducing new problems and ensures that changes lead to meaningful improvements."
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "question_id": "af0b3091-1ace-4b18-b912-858ffd29b69a",
+      "title": "Additional Solutions (SA + MC, TKS 2025)",
+      "topic": "Additional Solutions",
+      "label": "SA + MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025\n",
+      "stimulus": "A development team is creating a mobile app to help users track their daily water intake. While the app prototype functions correctly, user feedback reveals that the interface is cluttered and confusing. Users struggle to locate key features like the daily goal tracker and hydration reminders.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "d1a15afd-a899-44d6-bc77-75c2e9744b0b",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe how the principle of consistency could be applied to improve the user interface of the app.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 125
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes how the principle of consistency could be applied to improve the user interface of the app."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines how the principle of consistency could be applied to improve the user interface of the app."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Consistency in UI design means using uniform visual elements (such as colours, fonts, and icons) and predictable interaction patterns across the app. By applying consistency, the team could ensure that similar features look and behave the same way throughout the app. For example, placing all tracking tools in a similar layout or using the same icon style for reminders would help users recognise and navigate features more easily, reducing confusion."
+        },
+        {
+          "part_id": "911b17d2-0ab3-4c5a-98d2-37dacaa4daf6",
+          "part": "Part B",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best demonstrates the principle of consistency in UI design?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Changing the interface design regularly to keep users engaged with new visuals",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Placing navigation menus in different locations depending on the feature being used",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Applying the same font, colour scheme, and layout structure across all screens in the app",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Using different button styles and colours for each screen to make the app visually dynamic",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "question_id": "85a03d97-dcaf-4409-bbeb-caafcb339ac9",
+      "title": "Testing and Evaluating (SA, TKS 2025)",
+      "topic": "Testing and Evaluating",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A software engineer is developing a weather forecasting application. Before launching the app, they test how different modules such as the data retrieval module, the temperature conversion module, and the display module work together. They want to ensure that the modules interact correctly and that data flows smoothly between them.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "4f9904dd-1f02-4d54-836c-6aab07c85312",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Based on the scenario, identify the type of software testing being used and describe how this testing helps ensure the reliability of the final product.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 110
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Correctly identifies systems testing and clearly describes how this testing helps ensure the reliability of the final product."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes the benefits of integration testing."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": "Note that the student may have variations in their solutions, and integration testing can be accepted as a partly correct solution if the student explains provides a valid enough justification such as how the function would interact with other components of the application.",
+          "sample_answer": "The type of testing being used is system testing. This method is important because it evaluates the entire application as a whole, ensuring that all components such as step counting, heart rate monitoring, and data syncing work together correctly in a real-world environment. System testing helps identify issues that may arise from the interaction between modules and confirms that the software meets its functional and performance requirements before release."
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "question_id": "9cecec9a-1453-4e77-b42a-db67096773b3",
+      "title": "Development (SA, TKS 2025)",
+      "topic": "Development",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "45cb4c11-9c4b-47fc-a733-a1596a058435",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "A software team is using Agile methodology for a complex project that frequently changes priorities.\n\nExplain how resource allocation strategies should adapt to ensure project success.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 120
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 4,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Provides a detailed explanation of flexible resource allocation in Agile with examples and clear justification."
+            },
+            {
+              "marks": "3",
+              "criterion": "Explains the need for flexibility and some strategies, but lacks full detail or examples."
+            },
+            {
+              "marks": "2",
+              "criterion": "Mentions flexibility or Agile but with limited understanding or incomplete explanation."
+            },
+            {
+              "marks": "1",
+              "criterion": "Vague or minimal response with little relevance to Agile or resource allocation."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "In an Agile project with shifting priorities, resource allocation must be flexible. The team should regularly reassess and adjust resources to focus on high-priority tasks, reallocating developers, testers, and designers as needed. Overlapping tasks, such as testers preparing test cases during coding, helps maintain efficiency. Agile ceremonies like sprint planning and daily stand-ups support ongoing communication, allowing quick identification of resource shortages or bottlenecks. Maintaining a contingency fund helps manage unexpected issues without delaying work. This adaptive approach ensures critical features are developed first, prevents resource bottlenecks, and supports timely delivery despite changes, aligning with Agile’s iterative nature and promoting high-quality outcomes."
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "question_id": "20030942-fb18-4ea6-9d88-7dffffde82cf",
+      "title": "Version Control (MC + SA, TKS 2025)",
+      "topic": "Version Control",
+      "label": "MC + SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A development team is working on a collaborative project using Git and GitHub. Each developer is assigned a feature and works on a separate branch. Before merging their work into the main branch, the team conducts code reviews and tests for compatibility. One developer notices that their branch has diverged significantly from main due to recent updates by others.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "d4a97530-0aee-41cc-a72d-3e2a0796ebe1",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe the steps the developer should take to ensure their branch is compatible with the latest version of main before merging.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 120
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 3,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes the steps the developer should take to ensure their branch is compatible with the latest version of main before merging."
+            },
+            {
+              "marks": "2",
+              "criterion": "Outlines how the developer can ensure their branch is compatible with main without causing unnecessary conflicts."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "To ensure their branch is compatible with the latest version of main, the developer should first use \"git fetch\" to retrieve the most recent changes from the remote repository. Then, they can use \"git rebase main\" while on their feature branch to apply their changes on top of the updated \"main\" branch. This helps integrate the latest updates and resolve any conflicts before merging. Git supports this process by allowing developers to rebase or merge branches, which helps maintain a clean and linear project history. Rebasing is especially useful for keeping feature branches up to date without creating unnecessary merge commits."
+        },
+        {
+          "part_id": "c1c1903f-496f-4abc-a0fa-0f7970826307",
+          "part": "Part B",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "In addition, what is the most appropriate action the developer should take to maintain team workflow discipline and avoid integration issues?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Skip code review and merge their branch immediately to avoid delaying the sprint timeline.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Archive their branch and start a new one from main, assuming the original work will be too difficult to integrate.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Push their branch to the remote repository and collaborate with other team members to resolve any conflicts during the merge.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Communicate with the team, pull the latest changes from main, and rebase their branch to align with the current codebase before requesting a merge.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": false,
+            "chosen_letters": []
+          },
+          "result": {
+            "mark": null,
+            "available": 1,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "question_id": "764bfae9-fb6a-4344-bd20-24702981e20e",
+      "title": "Programming - Positive Integers (Iteration, 2025 TKS)",
+      "topic": "Programming - Positive Integers",
+      "label": "Iteration",
+      "kind": "2025 TKS",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "4065bb2c-4068-402c-b552-f4a2b052ddf1",
+          "part": "Part A",
+          "marks_available": 5,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "Write a Python program that:\n\n-   Creates an empty list\n-   Uses a loop to ask the user to enter 5 integers\n-   Only adds the number to the list if it is positive\n-   After the loop prints the list of positive numbers entered.",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": null
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 5,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Fully working code: loop collects 5 inputs, conditionally adds positives to list, and final output correct."
+            },
+            {
+              "marks": "2",
+              "criterion": "Minor issue in loop or input validation, but logic mostly accurate and result produced."
+            },
+            {
+              "marks": "1",
+              "criterion": "Inputs and loop correct, but list logic partially implemented (e.g. all values added without condition)."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "positive\\_numbers = \\[\\]  \n  \nfor i in range(5):  \n    num = int(input(\"Enter a number: \"))  \n    if num > 0:  \n        positive\\_numbers.append(num)  \n  \nprint(\"Positive numbers:\", positive\\_numbers)"
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "question_id": "af9676cc-d599-4b8d-8ea9-cbed119f0fea",
+      "title": "Impact of Secure Software (ER, TKS 2025)",
+      "topic": "Impact of Secure Software",
+      "label": "ER",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "733f3e91-fe71-4e80-9172-df49f00a6d3c",
+          "part": "Part A",
+          "marks_available": 10,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Secure software development has become essential for modern enterprises.\n\nEvaluate how collaboration, enterprise-level practices, and awareness of social, ethical, and legal issues contribute to developing safe and secure software.\n\nIn your response, refer to specific examples and consider both technical and non-technical impacts on people and organisations.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": null,
+            "available": 10,
+            "not_submitted": true,
+            "automarked": null,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "9-10",
+              "criterion": "Provides a comprehensive evaluation of collaboration, enterprise practices, and social/ethical/legal issues in secure software development. Uses relevant, well-integrated examples. Demonstrates deep understanding of technical and non-technical impacts. Response is well-structured and clearly communicated."
+            },
+            {
+              "marks": "7-8",
+              "criterion": "Provides a detailed explanation of most aspects of the question, with relevant examples. Demonstrates good understanding of secure software development and its impacts. May be slightly less thorough or balanced in discussion."
+            },
+            {
+              "marks": "5-6",
+              "criterion": "Identifies and explains some relevant elements from at least two of the three key areas (collaboration, enterprise practices, legal/social issues). Examples may be general or underdeveloped. Understanding is sound but lacks depth."
+            },
+            {
+              "marks": "3-4",
+              "criterion": "Makes general statements about security practices or related concepts. Shows limited understanding of the specific impacts or lacks coverage of key areas. Few or no examples given."
+            },
+            {
+              "marks": "1-2",
+              "criterion": "Attempts to answer the question with minimal relevant content. Misunderstands key ideas or refers only vaguely to secure software."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Secure software development is not just a technical process—it is a multidimensional approach that involves collaboration, enterprise-wide planning, and a deep understanding of social, ethical, and legal considerations. By integrating these elements, organisations can create software that is not only secure, but also resilient, ethical, and aligned with stakeholder expectations.\n\nCollaboration is essential in developing secure software because it draws upon a wide range of perspectives and skills. Security is a complex issue that no single developer or department can address alone. In a collaborative environment, tasks can be delegated based on expertise, which ensures that encryption, authentication, data protection, and testing are handled by individuals with the most relevant skills. For example, in a team developing a banking app, one specialist might focus on secure data transmission while another ensures that multi-factor authentication is implemented effectively. This division of labour not only increases efficiency but also enhances the quality of the final product. In addition, collaboration supports practices like peer review and collective testing, which are crucial for catching vulnerabilities that might be missed by individuals. By integrating diverse viewpoints, teams are more likely to anticipate potential threats and address them proactively.\n\nFrom an enterprise perspective, implementing safe and secure development practices delivers both immediate and long-term benefits. These include improved product reliability, reduced costs from post-release fixes, enhanced customer trust, and streamlined future development. When security is integrated from the start of the Software Development Life Cycle (SDLC), software is less likely to contain critical vulnerabilities. This reduces the need for emergency patches, minimises downtime, and builds user confidence. For example, a SaaS company that integrates security scanning into its development pipeline can identify and remediate vulnerabilities before deployment. This saves time and money in the long term and reduces the reputational damage that comes from data breaches.\n\nIn addition, secure practices influence future development. By standardising secure components, such as authentication libraries and encryption modules, organisations create a reusable security foundation. This not only improves consistency but accelerates development in future projects. Over time, secure development becomes embedded in the organisation's culture, leading to a proactive rather than reactive approach to security.\n\nEqually important are the social, ethical, and legal issues that surround the development and implementation of secure software. Enterprises must consider how their practices affect both individuals and the broader community. For instance, secure software has major implications for employment. While it creates new roles in cybersecurity, it may also lead to the automation of lower-level IT jobs. Ethically, this creates a responsibility for businesses to retrain displaced workers.\n\nData security and privacy are also key ethical and legal concerns. Users have a right to control their personal information, and software must be designed to uphold this right. Regulations like the GDPR require organisations to obtain consent for data collection, implement access controls, and respond to data requests from individuals. A company that fails to comply not only risks fines but also violates public trust. For example, an online platform that allows users to adjust privacy settings and opt out of tracking demonstrates both legal compliance and ethical respect for user autonomy.\n\nCopyright and intellectual property concerns also shape the secure development process. Developers have legal rights to protect their code, but in some cases, they may choose to license it under open-source terms to support broader innovation. Balancing protection with access is particularly important when secure software has public safety implications.\n\nFinally, secure software contributes to digital disruption. It enables new technologies, such as blockchain or secure cloud services, that transform industries and change how businesses operate. While this can provide a competitive edge, it also challenges traditional models and requires enterprises to adapt quickly.\n\nIn conclusion, secure software development is a shared responsibility that relies on effective collaboration, enterprise commitment to best practices, and thoughtful engagement with legal and ethical standards. When these areas are addressed holistically, organisations can deliver software that is not only functional and efficient but also secure, sustainable, and socially responsible."
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "Version Control": {
+      "mark": 0,
+      "available": 5
+    },
+    "Backup": {
+      "mark": 0,
+      "available": 1
+    },
+    "Types of Machine Learning Algorithms": {
+      "mark": 0,
+      "available": 1
+    },
+    "Generating Solutions": {
+      "mark": 0,
+      "available": 1
+    },
+    "Security Strategies & Tools": {
+      "mark": 0,
+      "available": 1
+    },
+    "Presentation": {
+      "mark": 0,
+      "available": 1
+    },
+    "Development": {
+      "mark": 0,
+      "available": 5
+    },
+    "Designing and Analysing ML": {
+      "mark": 0,
+      "available": 1
+    },
+    "Requirements": {
+      "mark": 0,
+      "available": 1
+    },
+    "Quality Assurance": {
+      "mark": 0,
+      "available": 2
+    },
+    "Social/Ethical/Legal Issues": {
+      "mark": 0,
+      "available": 3
+    },
+    "Collaboration Benefits": {
+      "mark": 0,
+      "available": 4
+    },
+    "ML Regression Models with OOP": {
+      "mark": 0,
+      "available": 1
+    },
+    "Programming - Dictionaries": {
+      "mark": 0,
+      "available": 3
+    },
+    "File Security": {
+      "mark": 0,
+      "available": 3
+    },
+    "Minimise Vulnerabilities": {
+      "mark": 0,
+      "available": 4
+    },
+    "Object-Relational Mapping": {
+      "mark": 0,
+      "available": 3
+    },
+    "SQL Query Results": {
+      "mark": 0,
+      "available": 2
+    },
+    "PWA": {
+      "mark": 0,
+      "available": 2
+    },
+    "Human Behaviour Influences on ML and AI": {
+      "mark": 0,
+      "available": 4
+    },
+    "Decision Tree": {
+      "mark": 0,
+      "available": 3
+    },
+    "Testing and Evaluating": {
+      "mark": 0,
+      "available": 5
+    },
+    "Feedback": {
+      "mark": 0,
+      "available": 3
+    },
+    "Additional Solutions": {
+      "mark": 0,
+      "available": 4
+    },
+    "Programming - Positive Integers": {
+      "mark": 0,
+      "available": 5
+    },
+    "Impact of Secure Software": {
+      "mark": 0,
+      "available": 10
+    }
+  }
+}

@@ -1,0 +1,257 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.12 Open-Source Software — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 8 (Term 1: Weeks 7-8) Programming for the Web</div>
+<h1 style="margin-top:.2rem">2.12 Open-Source Software</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-12-open-source-software" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Explain the use and development of open-source software in relation to web development</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explain the role and significance of open-source software in web development, including how it is used, developed, and contributed to by the developer community.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Describe how open-source software supports the development of web applications by providing accessible tools and libraries.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Explain the benefits of using open-source frameworks and platforms in building and maintaining web projects.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Identify ways in which developers can contribute to open-source projects, including reporting issues, writing code, and creating documentation.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Discuss the impact of community collaboration on the evolution and improvement of open-source software in web development.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Open-source software plays a pivotal role in the web development ecosystem, providing developers with accessible, modifiable, and distributable code that accelerates innovation and collaboration. Understanding the use and development of open-source software in web development helps explain how these projects contribute to the rapid evolution of technologies and standards on the web.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">What is Open-Source Software?</h5>
+<p class="card-text">Open-source software refers to software that is freely available to the public, with its source code open for anyone to view, use, modify, and distribute. It is typically governed by open-source licenses, such as the MIT License, GNU General Public License (GPL), and Apache License, which define how the software can be used and shared.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Open-Source in Web Development&nbsp;</h4>
+<p>Open-source software is fundamental to the web development community, providing developers with free, modifiable, and distributable code. It fosters innovation and collaboration, allowing developers to build and improve applications while benefiting from community-driven support and resources.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Accessibility and Community Support</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Free Access: Open-source software is often free to use, lowering the barriers to entry for developers and organisations. This accessibility allows a wide range of users, from individual developers to large enterprises, to leverage powerful tools without licensing costs.</li>
+<li>Community-Driven Development: Open-source projects are often maintained by a global community of developers who contribute code, report bugs, and suggest features. This collaborative environment fosters innovation and ensures that the software evolves rapidly to meet user needs.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Flexibility and Customisation</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Modifiable Code: Developers can modify the source code of open-source projects to suit their specific requirements, whether it’s customising a user interface, adding new features, or integrating with other systems.</li>
+<li>Transparency: Because the code is publicly available, developers can review and audit the software for security vulnerabilities, performance issues, and compliance with standards, ensuring a higher level of trust and reliability.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Accelerated Development and Innovation</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Reusable Components: Open-source libraries and frameworks provide pre-built components and functionalities, allowing developers to focus on building unique features rather than reinventing the wheel.</li>
+<li>Rapid Prototyping: Open-source tools enable developers to quickly prototype and test new ideas, reducing development time and facilitating innovation.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Key Areas</h4>
+<p>Open-source plays a crucial role across various aspects of web development, including frameworks, content management systems, development tools, and servers. These tools enable developers to build efficient, scalable, and modern web applications with greater flexibility and reduced costs.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Frameworks and Libraries</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>React, Angular, and Vue.js: These open-source JavaScript frameworks and libraries are widely used for building interactive and dynamic user interfaces. They are supported by large communities and extensive documentation, making them accessible to both beginners and experienced developers.</li>
+<li>Node.js and Express: Node.js is an open-source runtime environment that allows developers to build scalable server-side applications using JavaScript. Express is a minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Content Management Systems</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>WordPress: An open-source CMS that powers over 40% of the web, WordPress allows users to create and manage websites without needing to write code. It is supported by a vast ecosystem of themes, plugins, and a dedicated community.</li>
+<li>Drupal and Joomla: Other popular open-source CMS platforms that offer powerful features for building complex websites and applications, with extensive customisation options and community support.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Development Tools</h3>
+<div class="dp-panel-content">
+<ul>
+<li>VS Code: An open-source code editor from Microsoft, Visual Studio Code is highly customisable and extensible, supporting a wide range of programming languages and frameworks through plugins.</li>
+<li>Git: A distributed version control system that is open-source and widely used in web development to track changes, manage code, and collaborate on projects. Platforms like GitHub and GitLab provide additional features for managing open-source projects.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Web Servers and Databases</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Apache and Nginx: Open-source web servers that power a significant portion of the internet, providing flexible, high-performance solutions for serving web content.</li>
+<li>MySQL and PostgreSQL: Open-source relational database management systems that offer robust, scalable, and feature-rich solutions for managing data in web applications.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Development and Contribution<strong></strong></h4>
+<p>Contributing to open-source projects not only helps improve software quality but also allows developers to gain valuable experience, enhance their skills, and connect with a global community. Whether through reporting bugs, adding features, or writing documentation, contributions to open-source projects are essential for the growth and evolution of the web development ecosystem.</p>
+<p>&nbsp;</p>
+<p><strong>Contributing to Open-Source:</strong></p>
+<ul>
+<li>Reporting and Fixing Bugs: Developers can contribute by identifying issues, reporting bugs, or submitting patches to fix problems. This helps improve the software for everyone.</li>
+<li>Adding New Features: Experienced developers can contribute new features or enhancements to existing projects, helping the software evolve and meet new use cases.</li>
+<li>Documentation and Support: Writing documentation, creating tutorials, and helping other users in forums or discussion groups are valuable ways to contribute to open-source projects.</li>
+</ul>
+<p><strong>Benefits of Contributing:</strong></p>
+<ul>
+<li>Skill Development: Contributing to open-source projects provides hands-on experience with real-world codebases, improving technical skills and understanding of software development practices.</li>
+<li>Professional Recognition: Developers can build a portfolio of contributions, showcasing their skills and expertise to potential employers or collaborators.</li>
+<li>Networking Opportunities: Engaging with the open-source community allows developers to connect with like-minded professionals, opening doors to collaborations, mentorship, and career opportunities.</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading dp-has-icon active"><i class="dp-icon fas fa-search " aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>&nbsp;Open Source Initiative</h3>
+<div class="dp-panel-content active">
+<p>The <a class="inline_disabled" href="https://opensource.org/" target="_blank">Open Source Initiative</a> (OSI) is a non-profit organisation founded in 1998 that promotes and protects open-source software. It is best known for maintaining the Open Source Definition, which outlines the criteria software must meet to be considered open source, such as free distribution, access to source code, and the ability to modify and share the software.</p>
+<p>The OSI also approves open-source licenses, ensuring they comply with these principles, and advocates for the adoption of open-source software in both the public and private sectors. Through its efforts, the OSI helps foster a collaborative community, encourages transparency in software development, and supports the ethical use of technology.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/9b6419581ec53bbd.png" alt="image.png" width="299" height="107" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527431" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">Impact of Open-Source on Web Development</h5>
+<p><strong>Standardisation and Best Practices: </strong></p>
+<ul>
+<li>Open-source projects often set standards and best practices in the industry. For example, tools like ESLint for JavaScript code linting and Prettier for code formatting have become standard in web development workflows.</li>
+</ul>
+<p><strong>Democratisation of Technology:</strong></p>
+<ul>
+<li>Open-source software empowers developers from all backgrounds to build, innovate, and contribute to technology, reducing the digital divide and fostering a more inclusive and collaborative tech community.</li>
+</ul>
+<p><strong>Driving Innovation and New Technologies:</strong></p>
+<ul>
+<li>Many ground breaking technologies, such as blockchain, machine learning frameworks (like TensorFlow), and modern web development tools (like Webpack and Babel), originated from open-source projects. This collaborative model accelerates the adoption of new technologies and drives innovation across the industry.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://opensource.org/" target="_blank">Open Source Initiative</a></li>
+<li><a class="inline_disabled" title="Link" href="https://opensource.com/resources/what-open-source" target="_blank">What is open source?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://opensource.google/documentation/reference/why" target="_blank">Why Open Source?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.12 Open-Source Software" href="https://canvas.kings.edu.au/courses/12951/assignments/204819" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204819" data-api-returntype="Assignment">2.12 Open-Source Software</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.12%20Open-Source%20Software.pptx?d=we3f356b7958147caa44d5c1690720ca8&amp;csf=1&amp;web=1&amp;e=rIoyB9">2.12 Open-Source Software.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-12-open-source-software" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={e3f356b7-9581-47ca-a44d-5c1690720ca8}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-052.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-054.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

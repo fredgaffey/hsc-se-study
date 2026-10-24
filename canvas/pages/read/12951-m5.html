@@ -1,0 +1,2291 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cycle 5 (Term 1: Weeks 1-2) Software Engineering Project — SEN Offline</title><style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.ll{margin:.3rem 0 1.4rem;padding-left:1.4rem} .ll li{margin:.28rem 0}
+.ll a{color:#2b6cb0;text-decoration:none} .ll a:hover{text-decoration:underline}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.4rem}
+.tools button{font:inherit;font-size:.86rem;padding:.45rem .9rem;border-radius:8px;cursor:pointer;
+ border:1px solid #2b6cb0;background:#2b6cb0;color:#fff}
+.tools button.ghost{background:transparent;color:#2b6cb0}
+.tools .count{font-size:.82rem;color:#667;margin-left:auto}
+details.modbox{border:1px solid #dde;border-radius:10px;margin:.55rem 0;overflow:hidden;background:transparent}
+details.modbox>summary{cursor:pointer;list-style:none;padding:0;margin:0}
+details.modbox>summary::-webkit-details-marker{display:none}
+details.modbox>summary h2.mod{margin:0;display:flex;align-items:center;gap:.6rem}
+details.modbox>summary h2.mod .car{transition:transform .15s;display:inline-block;font-size:.8em}
+details.modbox[open]>summary h2.mod .car{transform:rotate(90deg)}
+details.modbox>summary h2.mod .ct{margin-left:auto;font-size:.72rem;font-weight:400;opacity:.85}
+.ll{margin:.5rem 0 1rem;padding-left:2.2rem}
+.ll li{margin:.3rem 0}
+.ll a{color:#2b6cb0;text-decoration:none}
+.ll a:hover{text-decoration:underline}
+@media(prefers-color-scheme:dark){details.modbox{border-color:#333}.tools .count{color:#9aa4b2}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.readnav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin:.6rem 0 1rem}
+.readbar{position:sticky;top:46px;z-index:6;padding:.5rem 0;margin-bottom:.8rem;
+ background:inherit;border-bottom:1px solid #dde}
+.readbar select{font:inherit;font-size:.8rem;padding:.3rem .5rem;border-radius:8px;
+ border:1px solid #dde;background:inherit;color:inherit;max-width:min(60vw,26rem)}
+.readbar .prog{font-size:.74rem;color:#667;margin-left:auto}
+@media(prefers-color-scheme:dark){.readbar,.readbar select{border-color:#333}.readbar .prog{color:#9aa4b2}}
+.readnav a,.readnav span.cur{font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.readnav span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.readnav a:hover{border-color:#2b6cb0}
+.modjump{position:sticky;top:52px;background:inherit;padding:.4rem 0;font-size:.8rem;z-index:5}
+.modjump a{color:#2b6cb0;text-decoration:none;margin-right:.7rem}
+h2.readmod{margin-top:3rem;background:#2b6cb0;color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.15rem}
+h3.readles{margin-top:2.2rem;font-size:1.1rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+.lesscrumb{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#667}
+@media(prefers-color-scheme:dark){.readnav a,.readnav span.cur{border-color:#333}h3.readles{border-color:#333}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search</a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+
+<p class="lesscrumb">12SENX2 Software Engineering 2026 · module 6 of 15</p>
+<h1>Cycle 5 (Term 1: Weeks 1-2) Software Engineering Project</h1>
+<div class="readbar"><span class="prog" id="prog"></span></div>
+<div class="readnav"><b style="font-size:.78rem;color:#667;margin-right:.3rem">VIEW</b><a href="12951-all.html">Whole course</a><span class="cur">By module</span><a href="../course-12951.html">By lesson</a></div>
+<h3 class="readles">4.1 Requirements</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Define and analyse the requirements of a problem, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>demonstrating need(s) or opportunities</li>
+<li>assessing scheduling and financial feasibility</li>
+<li>generating requirements including functionality and performance</li>
+<li>defining data structures and data types</li>
+<li>defining boundaries</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the process of defining and analysing the requirements of a software problem, including identifying needs, assessing feasibility, specifying requirements, and setting clear boundaries for a successful project.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Identify the needs or opportunities for a software project.</span></li>
+<li><span style="font-size: 10pt;">Assess the scheduling and financial feasibility of a project.</span></li>
+<li><span style="font-size: 10pt;">Define functional and performance requirements clearly and accurately.</span></li>
+<li><span style="font-size: 10pt;">Specify appropriate data structures and data types.</span></li>
+<li><span style="font-size: 10pt;">Establish clear system boundaries to avoid scope creep.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>The process of defining and analysing the requirements of a problem is a critical first step in any structured software development process. This initial phase is crucial because it directly influences the success or failure of the project, determining whether the final product will meet the client’s needs and expectations. It is during this stage that developers and system analysts work closely with stakeholders to establish a clear understanding of the problem, identify opportunities for improvement, and lay out the groundwork for design and development.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h3 class="card-title">What are requirements?</h3>
+Requirements are the <strong>specific features or functions</strong> a system must have to <strong>solve a problem</strong> or <strong>meet its purpose</strong>. They provide <strong>clear, measurable goals</strong> to guide development and ensure the system meets <strong>user needs</strong> and can be <strong>tested</strong> for success.</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Demonstrating Needs or Opportunities</h3>
+<div class="dp-panel-content ">
+<p>The first step in defining the requirements is to clearly establish the <strong>need</strong> for the software solution or identify an <strong>opportunity</strong> where technology can bring improvement. In a real-world context, this involves conducting a <strong>feasibility study</strong> or engaging with stakeholders (such as end-users, clients, or business owners) to understand their goals and challenges. A software system must have a clear purpose—whether it's solving a specific problem, improving an existing process, or seizing an opportunity for innovation.</p>
+<p>You would begin by identifying and <strong>documenting the needs</strong> through techniques like:</p>
+<ul>
+<li><strong>Interviews</strong> with stakeholders to understand their needs.</li>
+<li><strong>Questionnaires</strong> to gather input from a wide range of users.</li>
+<li><strong>Observations</strong> of current systems or processes to pinpoint inefficiencies.</li>
+</ul>
+<p>By the end of this stage, you should have a clear understanding of why the project is necessary.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Scheduling and Feasibility</h3>
+<div class="dp-panel-content ">
+<p>Before committing to the design and development phases, it's essential to assess whether the project is feasible in terms of both <strong>scheduling</strong> and <strong>financial</strong> constraints. Failure to properly evaluate these factors can lead to project delays, overspending, or even abandonment.</p>
+<ul>
+<li><strong>Scheduling feasibility</strong> involves estimating the duration of the project and ensuring it can be completed within a given timeframe. Tools like <strong>Gantt charts</strong> are commonly used to break down the project into tasks, allocate time to each, and identify potential bottlenecks.</li>
+<li><strong>Financial feasibility</strong> looks at whether the project can be completed within the available budget. This involves estimating costs for resources, personnel, technology, and ongoing maintenance.</li>
+</ul>
+<p>By assessing both scheduling and financial feasibility upfront, the development team ensures that the project remains within scope and can be delivered on time and within budget.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Generating Requirements</h3>
+<div class="dp-panel-content">
+<p>Once the need is established and feasibility is confirmed, the next step is to generate specific <strong>requirements</strong> in terms of functionality and performance.</p>
+<ul>
+<li><strong>Functional requirements</strong> describe the specific actions the system must perform. For example, a booking system might need to allow users to search for available appointments, make bookings, and receive confirmation emails. Each function must be precisely defined so that the development team knows exactly what to implement.</li>
+<li><strong>Performance requirements</strong> specify how well the system should perform these functions. This could include:
+<ul>
+<li>Speed (e.g., "The system must process user inputs within 2 seconds.")</li>
+<li>Reliability (e.g., "The system must have a 99.9% uptime.")</li>
+<li>Scalability (e.g., "The system must support up to 1,000 concurrent users without degradation.")</li>
+</ul>
+</li>
+</ul>
+<p>These requirements should be documented in a <strong>software requirements specification (SRS)</strong>, which will act as a reference throughout the development process.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Structures and Data Types</h3>
+<div class="dp-panel-content">
+<p>As part of the requirements definition process, it is important to define the <strong>data structures</strong> and <strong>data types</strong> that the system will use. These elements are essential for efficient data management and processing.</p>
+<ul>
+<li><strong>Data structures</strong> refer to the way data is organised and stored within the system, such as arrays, lists, stacks, queues, or trees. The choice of data structure affects how quickly and efficiently data can be accessed and modified.</li>
+<li><strong>Data types</strong> define the kind of data that will be processed by the system, such as integers, floating-point numbers, strings, or complex objects. Each data type needs to be carefully selected to match the specific needs of the system.</li>
+</ul>
+<p>For example, in an inventory management system, you would define a data structure for storing product details, including fields for product names (strings), prices (floats), and quantities (integers). Correctly defining data structures and types is critical for system performance and reliability.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Defining Boundaries</h3>
+<div class="dp-panel-content">
+<p>Defining the <strong>boundaries</strong> of a system is a crucial step in controlling the scope of the project. Boundaries determine what the system <strong>will</strong> do (in scope) and what it <strong>will not</strong> do (out of scope). This helps ensure the development team stays focused on the core objectives of the project, avoiding unnecessary features or requirements that could lead to <strong>scope creep</strong>.</p>
+<p>Scope creep occurs when additional features or functionalities are added to a project without proper planning, which can lead to delays, increased costs, and confusion. For example, if you're developing a food delivery app, the core functionality might include order placement, payment, and tracking. However, if you start adding features like social media integration without a clear reason, this could derail the project and stretch resources.</p>
+<p>By defining clear system boundaries, stakeholders and the development team remain aligned, ensuring that the project delivers the required solution without exceeding time or budget constraints.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Importance of Requirements Phase</h4>
+<p>One of the leading causes of project failure in software development is the lack of clear and well-defined requirements. Studies show that a significant percentage of software projects fail because they run over budget, miss deadlines, or don’t deliver what users need. Many of these issues stem from poor initial planning and an incomplete understanding of the problem.</p>
+<p>To avoid this, the requirements phase must be thorough and accurate. It serves several key purposes:</p>
+<ul>
+<li><strong>Guiding development</strong>: The requirements act as a roadmap for the development team.</li>
+<li><strong>Validating success</strong>: The final product can be tested against the requirements to determine whether it meets its objectives.</li>
+<li><strong>Setting expectations</strong>: Clear requirements ensure that all stakeholders understand what the system will and will not deliver.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Requirements Verification</h4>
+<p>Once the requirements are defined, they must be <strong>verified</strong> to ensure they are clear, complete, and achievable. Verification involves reviewing the requirements with stakeholders to confirm that they align with the project’s goals and constraints. This step helps to identify any conflicting or unclear requirements before the project progresses to the design phase.</p>
+<p>Effective requirement verification also ensures that every requirement is testable. For each requirement, there should be a clear way to measure whether the system meets the specified criteria.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/cc4bf122aabad1b9.png" alt="image.png" width="561" height="337" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527541" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Software Engineering: The Year 11 Course, 2024 Edition</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">4.2 Generate Solutions</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Explore tools used to develop ideas and generate solutions, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>brainstorming, mind-mapping and storyboards</li>
+<li>data dictionaries, including selecting appropriate data types</li>
+<li>algorithm design</li>
+<li>code generation</li>
+<li>testing and debugging</li>
+<li>installation</li>
+<li>maintenance</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text">
+<p><span style="font-size: 10pt;">Understand the tools and techniques used in the software development process to develop ideas and generate solutions, from brainstorming to maintenance.</span></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explore brainstorming, mind-mapping, and storyboards to generate ideas.</span></li>
+<li><span style="font-size: 10pt;">Understand the role of data dictionaries and select appropriate data types.</span></li>
+<li><span style="font-size: 10pt;">Design algorithms that are efficient and scalable.</span></li>
+<li><span style="font-size: 10pt;">Generate code from design using good coding practices.</span></li>
+<li><span style="font-size: 10pt;">Apply testing and debugging techniques to ensure the software functions as intended.</span></li>
+<li><span style="font-size: 10pt;">Understand the processes of installation and ongoing software maintenance.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>In software development, a variety of tools and techniques are used to help teams develop ideas and generate solutions efficiently. Each tool or method plays a critical role in turning an initial concept into a working software product. It is important to understand how these tools interact with each other in the development process, from initial brainstorming to ongoing maintenance.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Brainstorming, Mind-Mapping, and Storyboards</h3>
+<div class="dp-panel-content ">
+<p><strong>Brainstorming</strong> is an essential technique for generating ideas and exploring potential solutions. It typically involves team members contributing their thoughts freely, without judgement, to encourage creativity. The goal is to generate as many ideas as possible, which can then be refined into viable solutions.</p>
+<p><strong>Mind-mapping</strong> is another useful tool for organising and visualising ideas. It allows developers to structure information in a non-linear way, showing how different concepts are connected. A mind map starts with a central idea, branching out to sub-ideas and related concepts, helping to explore complex problems and identify possible solutions.</p>
+<p><strong>Storyboards</strong> are commonly used to visually represent a user’s interaction with the system. Each frame of a storyboard illustrates a different step in the user journey, showing how the system responds at each stage. This technique helps developers visualise the flow of the system and identify any potential issues with user interaction early in the design process.</p>
+<p>&nbsp;</p>
+<p>The following storyboard shows the relationship between three pages of information aimed at promoting a school canteen on a website.</p>
+<p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/29648c4e3da78537.png" alt="image.png" width="452" height="301" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527475" data-api-returntype="File" loading="lazy"><em>(From Course Specifications)</em></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Dictionaries</h3>
+<div class="dp-panel-content ">
+<p>A <strong>data dictionary</strong> provides a comprehensive description of each variable stored or referred to in a system. This commonly includes variable name, data type, format, size in bytes, number of characters to display the item including number of decimal places (if applicable), the purpose of each variable and a relevant example. Any validation rules applicable to the data item can also be included. Details of records or arrays of records can be included in data dictionaries.</p>
+<p>When constructing a data dictionary, it's important to <strong>select appropriate data types</strong> for each data element. Data types, such as integers, floating-point numbers, characters, or strings, determine how data is stored, processed, and validated within the system. Choosing the correct data type ensures the system operates efficiently and avoids errors, such as storing text in a field meant for numbers or vice versa.</p>
+<p>&nbsp;</p>
+<p>An extract of a data dictionary is shown.</p>
+<p style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/e0fd95a6756511b3.png" alt="image.png" width="573" height="367" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527476" data-api-returntype="File" loading="lazy"><em>(From Course Specifications)</em></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: left;"><em>Note: a date and time data type is always stored as 32 bits (4 bytes) and can be displayed using different formats such as DD/MM/YYYY hh:mm:ss or YYYY/MM/DD.</em></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Algorithm Design</h3>
+<div class="dp-panel-content">
+<p><strong>Algorithm design</strong> involves creating a step-by-step set of instructions to solve a specific problem or perform a task within a program. Algorithms are the foundation of how a program operates, determining the logic behind the software’s functionality.</p>
+<p>Effective algorithms are designed to be both <strong>efficient</strong> and <strong>scalable</strong>. Efficiency refers to how quickly the algorithm can solve a problem, and scalability refers to the algorithm's ability to handle increasing amounts of data or users. Common techniques for algorithm design include <strong>flowcharts</strong> and <strong>pseudocode</strong>, which allow developers to visualise and outline the logic before coding begins.</p>
+<p>&nbsp;</p>
+<table style="border-collapse: collapse; width: 128.153%; height: 1167px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 3.9195%; text-align: center; height: 29px;"><strong>Control Structure</strong></td>
+<td style="width: 35.3198%; text-align: center; height: 29px;"><strong>Psuedocode</strong></td>
+<td style="width: 19.8145%; text-align: center; height: 29px;"><strong>Flowchart</strong></td>
+<td style="width: 40.8533%; text-align: center; height: 29px;"><strong>Python</strong></td>
+</tr>
+<tr style="height: 195px;">
+<td style="width: 3.9195%; text-align: center; height: 195px;"><strong>Sequence</strong></td>
+<td style="width: 35.3198%; text-align: left; height: 195px;">
+<pre>process 1<br>process 2<br>...<br>...<br>process n<strong><br></strong></pre>
+</td>
+<td style="width: 19.8145%; text-align: center; height: 195px;"><strong><img src="https://canvas.kings.edu.au/courses/8355/files/2771348/download" alt="Screenshot 2024-03-01 at 3.53.58 pm.png [online-only image]" width="111" height="191" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/8355/files/2771348" data-api-returntype="File" loading="lazy"><br></strong></td>
+<td style="width: 40.8533%; text-align: left; height: 195px;">
+<pre>process_1()<br>process_2()<br>...<br>...<br>process_n()</pre>
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 3.9195%; text-align: center; height: 29px;"><strong>Binary Selection</strong></td>
+<td style="width: 35.3198%; text-align: left; height: 29px;">
+<pre>IF condition THEN<br>    process 2<br>ELSE <br>    process 1<br>END IF</pre>
+</td>
+<td style="width: 19.8145%; text-align: center; height: 29px;"><img src="https://canvas.kings.edu.au/courses/8355/files/2771353/download" alt="Screenshot 2024-03-01 at 3.56.08 pm.png [online-only image]" width="268" height="146" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/8355/files/2771353" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 40.8533%; text-align: left; height: 29px;">
+<pre>if condition:<br>    process_2()<br>else:<br>    process_1()</pre>
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 3.9195%; text-align: center; height: 29px;"><strong>Nested If</strong></td>
+<td style="width: 35.3198%; text-align: left; height: 29px;">
+<pre>IF condition A THEN<br>    process 1<br>ELSEIF condition B THEN<br>    process 2<br>ELSEIF condition C THEN<br>    process 3<br>ELSE<br>    process 4<br>ENDIF</pre>
+</td>
+<td style="width: 19.8145%; text-align: center; height: 29px;"><strong><img src="https://canvas.kings.edu.au/courses/8355/files/2771354/download" alt="Screenshot 2024-03-01 at 3.58.17 pm.png [online-only image]" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/8355/files/2771354" data-api-returntype="File" loading="lazy"><br></strong></td>
+<td style="width: 40.8533%; text-align: left; height: 29px;">
+<pre>if condition A:<br>    process_1()<br>elif condition B:<br>    process_2()<br>elif condition C:<br>    process_3()<br>else<br>    process_4()</pre>
+</td>
+</tr>
+<tr style="height: 172px;">
+<td style="width: 3.9195%; text-align: center; height: 172px;"><strong>Multi-way Selection<br></strong></td>
+<td style="width: 35.3198%; text-align: left; height: 172px;">
+<pre>CASEWHERE expression evaluates to<br>    choice a: process a<br>    choice b: process b<br>    ...<br>    OTHERWISE: default process<br>END CASE</pre>
+</td>
+<td style="width: 19.8145%; text-align: center; height: 172px;"><img src="https://canvas.kings.edu.au/courses/8355/files/2771356/download" alt="Screenshot 2024-03-01 at 4.00.35 pm.png [online-only image]" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/8355/files/2771356" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 40.8533%; text-align: left; height: 172px;">
+<pre>match expression evaluates to:<br>    case a:<br>        process_a()<br>    case b:<br>        process_b()<br>    ...<br>    case _:<br>        default_process()</pre>
+</td>
+</tr>
+<tr style="height: 253px;">
+<td style="width: 3.9195%; text-align: center; height: 253px;"><strong>Pre-test Repetition</strong></td>
+<td style="width: 35.3198%; text-align: left; height: 253px;">
+<pre>WHILE condition is true<br>    process<br>ENDWHILE</pre>
+</td>
+<td style="width: 19.8145%; text-align: center; height: 253px;"><img src="https://canvas.kings.edu.au/courses/8355/files/2771358/download" alt="Screenshot 2024-03-01 at 4.06.54 pm.png [online-only image]" width="180" height="248" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/8355/files/2771358" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 40.8533%; text-align: left; height: 253px;">
+<pre>while condition:<br>    process()</pre>
+</td>
+</tr>
+<tr style="height: 53px;">
+<td style="width: 3.9195%; text-align: center; height: 53px;"><strong>Post-test Repetition<br></strong></td>
+<td style="width: 35.3198%; text-align: left; height: 53px;">
+<pre>REPEAT<br>    process<br>UNTIL condition is true</pre>
+</td>
+<td style="width: 19.8145%; text-align: center; height: 53px;"><img src="https://canvas.kings.edu.au/courses/8355/files/2771364/download" alt="Screenshot 2024-03-01 at 4.15.26 pm.png [online-only image]" width="164" height="214" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/8355/files/2771364" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 40.8533%; height: 53px; text-align: center;">
+<p>N/A</p>
+<p>(Python has no Post-test structure)</p>
+</td>
+</tr>
+<tr style="height: 407px;">
+<td style="width: 3.9195%; text-align: center; height: 407px;"><strong>FOR / NEXT<br></strong></td>
+<td style="width: 35.3198%; text-align: left; height: 407px;">
+<pre>FOR variable = start to finish STEP inc<br>    statements<br>NEXT variable</pre>
+</td>
+<td style="width: 19.8145%; text-align: center; height: 407px;"><img src="https://canvas.kings.edu.au/courses/8355/files/2771360/download" alt="Screenshot 2024-03-01 at 4.14.43 pm.png [online-only image]" width="193" height="403" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/8355/files/2771360" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 40.8533%; text-align: left; height: 407px;">
+<pre>for variable in range(start, finish + 1, inc):<br>    statements</pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Code Generation</h3>
+<div class="dp-panel-content">
+<p><strong>Code generation</strong> is the process of translating the algorithm or system design into actual code in a programming language. This step converts the conceptual plan into a functional program that can be executed by a computer. Developers write code that implements the logic defined by the algorithm, adhering to the syntax and rules of the chosen programming language.</p>
+<p>During this stage, good coding practices such as <strong>modularity</strong> (breaking the code into smaller, reusable components), <strong>readability</strong>, and <strong>commenting</strong> are essential for ensuring that the code is maintainable and understandable by other developers.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/02c519fbe142aeef.png" alt="image.png" width="544" height="544" loading="lazy" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527543" data-api-returntype="File"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Testing and Debugging</h3>
+<div class="dp-panel-content">
+<p>Once the code is written, it must undergo <strong>testing</strong> to ensure it functions as expected. Testing involves running the program under various conditions to identify any issues or bugs. There are different types of testing, including:</p>
+<ul>
+<li><strong>Unit testing</strong>: Testing individual components or functions.</li>
+<li><strong>Integration testing</strong>: Ensuring that different modules of the system work together correctly.</li>
+<li><strong>System testing</strong>: Testing the entire system to verify that it meets the requirements.</li>
+</ul>
+<p>If problems or bugs are identified during testing, the next step is <strong>debugging</strong>. Debugging is the process of finding the source of errors in the code and fixing them. This often involves using specialised debugging tools that help developers trace and pinpoint where the problem occurs.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/ef622bab0f89d919.png" alt="image.png" width="604" height="262" loading="lazy" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527542" data-api-returntype="File"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Installation</h3>
+<div class="dp-panel-content">
+<p>After testing and debugging, the software is ready for <strong>installation</strong>. This is the process of transferring the software from the development environment to the end-user environment, making it ready for use. The installation process can vary depending on the system but often involves setting up databases, configuring hardware, and ensuring that all components are correctly deployed.</p>
+<p>Installation must be done carefully to avoid introducing any new issues. Thorough documentation and testing of the installation process are essential to ensure the system works as intended in the target environment.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Maintenance</h3>
+<div class="dp-panel-content">
+<p><strong>Maintenance</strong> is the ongoing process of updating and improving the software after it has been installed. This may involve fixing bugs that are discovered after release, adding new features, or making updates to ensure the system remains compatible with other software or hardware.</p>
+<p>Maintenance is often categorised into:</p>
+<ul>
+<li><strong>Corrective maintenance</strong>: Fixing problems or defects that arise post-deployment.</li>
+<li><strong>Adaptive maintenance</strong>: Updating the software to work in a new or changing environment (e.g., when hardware or operating systems are updated).</li>
+<li><strong>Perfective maintenance</strong>: Enhancing or adding new features to improve performance or functionality.</li>
+</ul>
+<p>Effective maintenance ensures that the software continues to meet user needs and remains relevant in a changing technological landscape.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Software Engineering Course Specifications</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">4.3 Implementation Methods</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate types of software implementation methods, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>direct</li>
+<li>phased</li>
+<li>parallel</li>
+<li>pilot</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the different methods of software implementation and how they can be used to transition from an old system to a new system effectively.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Identify and describe the four main methods of software implementation.</span></li>
+<li><span style="font-size: 10pt;">Explain the advantages and disadvantages of each implementation method.</span></li>
+<li><span style="font-size: 10pt;">Recognise scenarios where each implementation method would be most appropriate.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>When a new software system is ready to be implemented, it is essential to choose the most appropriate method for installation. This process is commonly referred to as <strong>system conversion</strong> and involves transitioning from an existing system to the new one. The method chosen depends on several factors such as the size of the organisation, the critical nature of the system, and the risks associated with the transition. The four common methods of software implementation are <strong>Direct</strong>, <strong>Parallel</strong>, <strong>Phased</strong>, and <strong>Pilot</strong>. Each method has its own advantages and is suited to specific circumstances.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Direct</h3>
+<div class="dp-panel-content ">
+<p>In <strong>direct conversion</strong> (also known as "direct cut-over"), the old system is entirely replaced by the new system at a specific point in time. The old system is immediately discontinued, and the new system begins full operation. This method is often used when it is impractical to operate both systems simultaneously. For direct conversion to succeed, the new system must be thoroughly tested, and users must be fully trained before the switchover.</p>
+<p>One of the main benefits of direct conversion is that it is fast and clean—the organisation does not have to maintain two systems at once. However, this method carries significant risk. If the new system has any issues or errors, the organisation could face operational disruptions because there is no backup system in place.</p>
+<p><strong>Example</strong>: A bank installing new ATMs with advanced features such as a touch screen would likely use direct conversion. It would be impractical to have old and new ATMs operating side by side, as it would confuse customers and duplicate work.</p>
+<p>&nbsp;</p>
+<p><img src="../../assets/e0f2c1d2c02ff333.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527545" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Parallel</h3>
+<div class="dp-panel-content ">
+<p><strong>Parallel conversion</strong> involves running both the old and new systems simultaneously for a period of time. This method allows users to gradually familiarise themselves with the new system while retaining the security of the old system. If any problems occur with the new system, the old system is still available as a backup, ensuring no data is lost.</p>
+<p>While parallel conversion reduces the risk of failure, it is resource-intensive. Users are required to perform tasks on both systems, effectively doubling their workload until the new system is fully operational and proven to meet requirements.</p>
+<p><strong>Example</strong>: A hospital installing new life support systems could use parallel conversion. Staff would continue to monitor patients manually while becoming familiar with the automated monitoring system, ensuring patient safety throughout the transition.</p>
+<p>&nbsp;</p>
+<p><img src="../../assets/0aac1248c7305b2b.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527546" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Phased</h3>
+<div class="dp-panel-content">
+<p>In <strong>phased conversion</strong>, the new system is introduced gradually, often in stages or modules. As parts of the new system are implemented, the corresponding parts of the old system are removed. This method is particularly useful for large or complex systems where implementing everything at once would be overwhelming or risky.</p>
+<p>Phased conversion allows users to adapt gradually, reduces the likelihood of errors, and makes the process more manageable for both the developers and the users. However, it can take longer than other methods, and coordination between different parts of the system is crucial.</p>
+<p><strong>Example</strong>: A large restaurant introducing a new system that handles point of sale, accounting, wages, and ordering could use phased conversion. They might start by implementing the point of sale system and then gradually introduce the other modules, ensuring that each part functions properly before moving to the next.</p>
+<p>&nbsp;</p>
+<p><img src="../../assets/5afcc309716ad50d.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527547" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Pilot</h3>
+<div class="dp-panel-content">
+<p>The <strong>pilot conversion</strong> method involves installing the new system for a small group of users or a specific department before rolling it out to the entire organisation. This allows the system to be tested in a real-world environment, providing valuable feedback to developers and ensuring that any issues are addressed before full-scale implementation. The pilot users can also assist in training others when the system is eventually rolled out.</p>
+<p>This method is often used for new or highly complex systems where there is uncertainty about how the system will perform under real-world conditions. It provides a safety net by limiting the impact of any issues to a small group.</p>
+<p><strong>Example</strong>: A new ticketing system for a travelling circus could be first piloted at a single location to ensure it works properly before being used across all venues.</p>
+<p>&nbsp;</p>
+<p><img src="../../assets/c314a48a9e9c41b2.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527548" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+</div><h3 class="sub">Research and planning</h3>
+<h3 class="readles">4.4 Waterfall Approach</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Research and use the Waterfall software development approach, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>logical progression of steps used throughout the life cycle</li>
+<li>stages of ‘falling water’</li>
+<li>advantages and disadvantages</li>
+<li>scale and types of developments</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text">
+<p><span style="font-size: 10pt;">Understand the Waterfall software development approach, its stages, advantages, disadvantages, and the types of projects where it is best applied.</span></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Describe the logical progression of steps in the Waterfall approach.</span></li>
+<li><span style="font-size: 10pt;">Identify and explain the stages of the Waterfall model.</span></li>
+<li><span style="font-size: 10pt;">Explain the advantages and disadvantages of the Waterfall approach.</span></li>
+<li><span style="font-size: 10pt;">Recognise the scale and types of projects where the Waterfall approach is appropriate.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>The <strong>Waterfall</strong> approach to software development is a traditional, linear methodology where each phase of the project must be completed before moving on to the next. This structured approach is characterised by a logical progression of steps that follow one after the other, much like a series of "falling water." It is typically used for large-scale projects where stability, performance, and reliability are essential.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Progression of Steps</h3>
+<div class="dp-panel-content ">
+<p>The Waterfall approach is a structured, linear method for software development where each stage must be completed before moving to the next. It’s often visualised as a step-by-step "falling water" process, where each phase flows into the next. The 8-step version of the Waterfall model expands on the typical approach by adding more granularity in the early and later stages of development.</p>
+<p>1. <strong>Requirements Definition</strong></p>
+<ul>
+<li>
+<p>In this first phase, all the necessary requirements for the project are gathered and documented. This involves meeting with stakeholders and end-users to fully understand what the software must achieve. These requirements are used as the foundation for all future development.</p>
+</li>
+</ul>
+<p>2. <strong>Software Specifications</strong></p>
+<ul>
+<li>
+<p>Once the requirements are clearly defined, the next step involves turning these into technical specifications. This includes specifying the software architecture, defining data structures, and identifying system inputs and outputs. The specifications guide how the software will be built.</p>
+</li>
+</ul>
+<p>3. <strong>Design</strong></p>
+<ul>
+<li>
+<p>In the design phase, the overall structure of the system is created. This includes creating detailed design documents, such as system architecture diagrams, user interfaces, and data models. The design serves as a blueprint for the developers to follow when writing the code.</p>
+</li>
+</ul>
+<p>4. <strong>Development</strong></p>
+<ul>
+<li>
+<p>The actual coding and development of the software take place in this phase. Developers use the design documents and specifications to write the code. Each component of the software is built and then tested individually to ensure it functions as expected.</p>
+</li>
+</ul>
+<p>5. <strong>Integration</strong></p>
+<ul>
+<li>
+<p>After each component has been developed, they are integrated into a single system. This is where the different parts of the system come together and are tested to ensure they work as a cohesive whole.</p>
+</li>
+</ul>
+<p>6. <strong>Testing and Debugging</strong></p>
+<ul>
+<li>
+<p>During this phase, the integrated system is thoroughly tested to find and fix any bugs or issues. Testing can involve various methods, such as unit testing, system testing, and acceptance testing. This stage is crucial to ensure the software functions according to the requirements and performs reliably.</p>
+</li>
+</ul>
+<p>7. <strong>Installation</strong></p>
+<ul>
+<li>
+<p>Once testing is complete and the software is validated, it is installed in the user environment. This involves setting up the software on production servers and ensuring that all configurations are correct. In some cases, this may also involve data migration from older systems.</p>
+</li>
+</ul>
+<p>8. <strong>Maintenance</strong></p>
+<ul>
+<li>
+<p>After deployment, the software enters the maintenance phase, where ongoing support is provided to fix any issues that arise, implement updates, and make improvements based on user feedback. Maintenance ensures the software remains functional and efficient over time.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p>The term "Waterfall" refers to how the development process flows downwards through these stages in a sequential manner, much like water cascading down a series of steps. Once one stage is complete, the project moves to the next without returning to the previous stage. This lack of overlap or flexibility is both a strength and a limitation of the Waterfall approach.</p>
+<ul>
+<li><strong>Falling Water</strong> stages are linear and follow a clear sequence, ensuring that there is no ambiguity in what comes next.</li>
+<li>There is little to no iteration in this model. If a problem is discovered in a later stage, fixing it requires revisiting earlier stages, which can be expensive and time-consuming.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/2830da7512630543.png" alt="image.png" width="1037" height="130" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527477" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Advantages</h3>
+<div class="dp-panel-content">
+<p>The Waterfall method offers several advantages, particularly for large, complex, or high-stakes projects:</p>
+<ul>
+<li><strong>Clear Structure</strong>: The rigid stage-by-stage process provides a clear roadmap from start to finish, which is easy to follow and manage.</li>
+<li><strong>Defined Requirements</strong>: Because the requirements are fully documented before the project begins, the development team and stakeholders have a shared understanding of the project's goals.</li>
+<li><strong>Easy to Manage</strong>: The linear nature of the Waterfall approach makes it easier to manage large teams with different skill sets, as each team knows precisely what is expected at each stage.</li>
+<li><strong>Good for Large-Scale Projects</strong>: The Waterfall approach is ideal for projects that have a large scope, long timelines, and extensive resources. Its structure ensures that every aspect of the project is meticulously planned and executed.</li>
+<li><strong>Well-Suited for Safety-Critical Applications</strong>: Projects where safety, performance, and reliability are crucial (e.g., in healthcare, aerospace, or financial systems) benefit from the thorough testing and validation processes within Waterfall.</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/a8bc87f79cfaf78c.png" alt="image.png" width="184" height="306" loading="lazy" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527478" data-api-returntype="File"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Disadvantages</h3>
+<div class="dp-panel-content">
+<p>Despite its advantages, the Waterfall model also has several significant drawbacks:</p>
+<ul>
+<li><strong>Inflexibility</strong>: One of the main criticisms of the Waterfall approach is its lack of flexibility. Once a stage is completed, it is difficult to go back and make changes without causing delays and increasing costs.</li>
+<li><strong>Late Testing</strong>: Since testing only occurs after the development stage is completed, issues or defects may not be discovered until late in the process. Fixing these issues often requires revisiting earlier stages, which is inefficient.</li>
+<li><strong>Poor Adaptation to Change</strong>: In projects where requirements evolve over time, the Waterfall model is not well-suited. It assumes that all requirements can be fully known and fixed at the start of the project, which is often unrealistic in dynamic environments.</li>
+<li><strong>Longer Timeframes</strong>: The sequential nature of Waterfall can lead to longer development times, particularly for large-scale projects, as each stage must be completed before moving on to the next.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/1d572dbd10db2d42.png" alt="image.png" width="195" height="261" loading="lazy" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527549" data-api-returntype="File"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Developments</h3>
+<div class="dp-panel-content">
+<p>The Waterfall approach is typically used for <strong>large-scale</strong> and <strong>complex projects</strong> where the requirements are well understood from the outset and unlikely to change. These projects often involve significant investments of time, money, and resources, and they usually have strict performance, safety, or regulatory requirements.</p>
+<p>Common examples of projects that suit the Waterfall model include:</p>
+<ul>
+<li><strong>Government and Defence</strong>: Large government contracts or defence systems, which often require strict adherence to timelines, budgets, and regulatory standards.</li>
+<li><strong>Infrastructure and Construction</strong>: Like software, infrastructure projects benefit from Waterfall’s structured approach, as they often follow well-defined steps from planning through to execution.</li>
+<li><strong>Safety-Critical Systems</strong>: Projects such as medical devices, aviation software, or financial systems that require extensive testing and validation are well-suited to Waterfall due to its structured, rigorous testing phase.</li>
+</ul>
+<p>The Waterfall approach is best suited for projects where the scope is clearly defined and unlikely to change, where performance and reliability are critical, and where the consequences of errors or defects are significant.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Software Engineering, The Year 11 Course</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">4.5 Agile Approach</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Research and use the Agile software development approach, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>rate of developing a final solution</li>
+<li>method tailoring</li>
+<li>iteration workflow</li>
+<li>scale and types of developments</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explore the Agile software development approach, including its focus on rapid delivery, iterative workflow, method tailoring, and how it can be applied to different scales and types of projects.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Understand the rate at which Agile delivers working solutions.</span></li>
+<li><span style="font-size: 10pt;">Explain how method tailoring allows for flexibility in Agile.</span></li>
+<li><span style="font-size: 10pt;">Describe the iteration workflow used in Agile development.</span></li>
+<li><span style="font-size: 10pt;">Recognise how Agile scales across different types and sizes of projects.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>The <strong>Agile software development approach</strong> is designed to address the challenges of rapidly changing requirements in software projects, especially when the development environment is unpredictable or evolving. Unlike traditional software development methodologies that rely on rigid stages and thorough documentation upfront, Agile promotes flexibility, collaboration, and iterative development. The focus is on delivering workable solutions to users quickly, then continuously refining and expanding the software based on user feedback and changing needs.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h3 class="card-title">What is Agile?</h3>
+<p class="card-text">Agile is a flexible and iterative approach to software development that focuses on delivering small, functional increments of a solution quickly, while continuously adapting to changes based on user feedback and collaboration.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Rate of Developing</h3>
+<div class="dp-panel-content ">
+<p>One of the most important characteristics of Agile is the <strong>speed</strong> at which a basic, working version of the solution can be developed and delivered to users. This is achieved through short development cycles, or <strong>iterations</strong>, each of which focuses on delivering a functional increment of the software.</p>
+<ul>
+<li>
+<p><strong>Initial Delivery</strong>: In Agile, the goal is to release a simplified version of the software with essential features as quickly as possible, allowing real users to begin interacting with it early in the development process. This version, often called a <strong>Minimum Viable Product (MVP)</strong>, serves as the foundation for future improvements.</p>
+</li>
+<li>
+<p><strong>Frequent Releases</strong>: Agile prioritises small, frequent updates over a single large release at the end of the project. Each iteration adds new features or improves existing functionality, which allows the team to respond quickly to changing requirements or feedback.</p>
+</li>
+<li>
+<p><strong>Continuous Improvement</strong>: Because working software is released regularly, users and stakeholders can continuously provide feedback, allowing the development team to refine the solution and add functionality incrementally.</p>
+</li>
+</ul>
+<p>The focus on quick delivery allows Agile projects to get usable software into the hands of users early, ensuring that the project delivers value even before it's fully complete.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Method Tailoring</h3>
+<div class="dp-panel-content ">
+<p><strong>Method tailoring</strong> refers to the flexibility Agile offers in adapting its practices to suit the specific needs of a project, team, or organisation. Rather than adhering to rigid guidelines, Agile allows teams to <strong>customise</strong> the development process to better meet the project’s requirements.</p>
+<ul>
+<li>
+<p><strong>Choice of Frameworks</strong>: Agile includes a variety of frameworks like <strong>Scrum</strong>, <strong>Kanban</strong>, or <strong>Extreme Programming (XP)</strong>. Each framework has its own set of practices and tools, but they share the core Agile principles of flexibility, collaboration, and iterative development. Teams can choose the framework that best fits their project or even combine practices from different frameworks.</p>
+<ul>
+<li><strong>Scrum</strong>: Often used for complex projects, it emphasises short, time-boxed iterations called <strong>sprints</strong>, with regular meetings (e.g., daily stand-ups) to keep the team on track.</li>
+<li><strong>Kanban</strong>: Focuses on visualising the workflow and limiting the number of tasks in progress, which makes it useful for teams that need flexibility without fixed sprint cycles.</li>
+<li><strong>XP (Extreme Programming)</strong>: Focuses on technical excellence, including practices like test-driven development (TDD) and pair programming, which improve code quality.</li>
+</ul>
+</li>
+<li>
+<p><strong>Customising Processes</strong>: Teams can tailor the Agile process itself by adjusting sprint lengths, deciding how to collect and act on feedback, or choosing how to track progress (e.g., using a task board in Kanban or sprint backlogs in Scrum). This adaptability ensures that Agile can be applied to various project types, team structures, and organisational cultures.</p>
+</li>
+</ul>
+<p>Method tailoring in Agile allows teams to be more responsive and ensures the development process fits the project’s unique demands, rather than forcing the project to fit into a predefined methodology.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Iteration Workflow</h3>
+<div class="dp-panel-content">
+<p>In Agile, development is conducted through a cycle of short, repeatable development stages called <strong>iterations</strong>. Each iteration results in a working version of the software that can be tested, reviewed, and evaluated by stakeholders.</p>
+<ul>
+<li>
+<p><strong>Planning</strong>: At the start of each iteration, the team collaborates to determine the most important features or tasks to focus on. These are often selected from a <strong>backlog</strong> of user stories or requirements. Prioritisation ensures that the highest-value features are developed first.</p>
+</li>
+<li>
+<p><strong>Design and Development</strong>: Once the priorities for the iteration are set, the team moves into designing and coding the features. Unlike traditional development approaches, design and development in Agile are often informal and adaptive, allowing for quick adjustments as new insights are gained.</p>
+</li>
+<li>
+<p><strong>Testing</strong>: Testing is a crucial part of each iteration, ensuring that the features developed work as expected. Agile encourages <strong>continuous integration</strong>, where new code is integrated into the system regularly and immediately tested to catch any issues early.</p>
+</li>
+<li>
+<p><strong>Feedback and Evaluation</strong>: At the end of the iteration, the working software is released, either to the client or to end-users. The feedback gathered from these users is critical and informs the direction of the next iteration. This allows the software to evolve according to real-world needs and preferences.</p>
+</li>
+<li>
+<p><strong>Iterative Cycle</strong>: After feedback is received, the team returns to planning, beginning the next iteration with new priorities. Each iteration builds on the previous one, adding more functionality or improving existing features.</p>
+</li>
+</ul>
+<p>Agile’s iterative workflow ensures that development remains focused on delivering value, with each iteration improving and expanding the product in a meaningful way.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Developments</h3>
+<div class="dp-panel-content">
+<p>Agile is highly adaptable and can be applied to both small and large-scale projects, as well as across different types of software development efforts.</p>
+<ul>
+<li>
+<p><strong>Small Projects</strong>: Agile works particularly well for small to medium-sized projects, where the flexibility of small teams allows for quick decision-making and fast adaptation to change. This includes projects like mobile applications or web-based tools, which often require rapid development cycles and frequent updates.</p>
+</li>
+<li>
+<p><strong>Large Projects</strong>: Although Agile is often associated with smaller teams, it can also be scaled to larger projects. When working on large-scale systems or enterprise-level software, Agile can be applied by breaking the project down into smaller, self-organising teams that each focus on a component or feature of the larger system. Techniques like <strong>Scaled Agile Framework (SAFe)</strong> and <strong>Large Scale Scrum (LeSS)</strong> provide strategies for coordinating multiple Agile teams working on a single project.</p>
+</li>
+<li>
+<p><strong>Types of Developments</strong>:</p>
+<ul>
+<li><strong>Mobile App Development</strong>: Agile is well-suited for mobile apps because of the need for rapid iterations, frequent updates, and user feedback.</li>
+<li><strong>Web Development</strong>: For web-based applications or services, Agile helps deliver continuous updates and improvements, allowing the product to evolve based on user needs.</li>
+<li><strong>Enterprise Systems</strong>: While more complex, Agile has been successfully applied to the development of large enterprise systems by scaling the methodology to involve multiple teams working in parallel.</li>
+</ul>
+</li>
+</ul>
+<p>Agile’s flexibility and scalability make it a suitable approach for a wide range of project types, from small apps requiring frequent updates to complex, large-scale systems.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-primary">
+<div class="card-body">
+<h6 class="card-title dp-has-icon"><i class="dp-icon fas fa-info-circle " aria-hidden="true">&nbsp; </i><strong>Collaboration in the Agile approach</strong></h6>
+<p>Agile is distinct in its <strong>collaborative nature</strong>. Teams work closely with one another, as well as with users, throughout the development process. The inclusion of users (or their representatives) as active participants in the development team ensures that the software meets real-world needs. The <strong>feedback loop</strong> between the development team and users is continuous, with each iteration refining the product based on insights gained through actual usage.</p>
+<p>In Agile, the team uses <strong>user stories</strong> to prioritise development tasks. These stories are narratives that describe how a user interacts with the system to accomplish a specific goal. By focusing on user stories, Agile ensures that each iteration delivers meaningful features that solve real problems for users.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/884a4691d8647534.png" alt="image.png" width="798" height="417" loading="lazy" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527550" data-api-returntype="File"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>Software Engineering, The Year 11 Course</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">4.6 WAgile approach</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Research the WAgile software development approach, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>understanding it is a hybrid model</li>
+<li>analysis of the ‘when’ and ‘how’ intervention is applied during the development life cycle</li>
+<li>scale and types of developments</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the WAgile software development approach, including its hybrid nature, when and how interventions are applied during the development lifecycle, and the scale and types of developments it is suited for.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Understand the hybrid nature of WAgile combining Waterfall and Agile methods.</span></li>
+<li><span style="font-size: 10pt;">Identify when and how interventions occur during the development process.</span></li>
+<li><span style="font-size: 10pt;">Recognise the scale of projects where WAgile is most effective.</span></li>
+<li><span style="font-size: 10pt;">Understand the types of developments suited to the WAgile approach.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Different methodologies offer distinct advantages depending on the nature of the project, the needs of the stakeholders, and the working environment. Two of the most widely used methodologies are <strong>Waterfall</strong> and <strong>Agile</strong>. Waterfall is a linear and structured approach, best suited for projects where requirements are clear and unlikely to change, while Agile is more flexible and iterative, designed for projects that need frequent adjustments and constant feedback. However, many projects require a balance between the structure of Waterfall and the flexibility of Agile, leading to the emergence of <strong>WAgile</strong>, a hybrid model that incorporates elements of both.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h3 class="card-title">What is WAgile?</h3>
+<p class="card-text"><strong>WAgile</strong> is a <strong>hybrid software development approach</strong> that combines the structured, linear nature of the <strong>Waterfall methodology</strong> with the flexible, iterative elements of the <strong>Agile methodology</strong>. In WAgile, the initial phases of development, such as requirements gathering and design, follow a sequential Waterfall-like process, ensuring that key aspects of the project are well-planned and documented upfront.</p>
+<p class="card-text">However, once the project moves into the development phase, Agile techniques are introduced, allowing for iterative cycles of development, frequent feedback, and adaptability to changes. This combination makes WAgile a versatile approach that provides the predictability and documentation of Waterfall, while also offering the flexibility and adaptability of Agile.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Understanding WAgile as a Hybrid Model</h4>
+<p>WAgile combines the <strong>predictability</strong> of Waterfall with the <strong>adaptability</strong> of Agile. Waterfall follows a linear approach where each phase of the software development process (such as requirements gathering, design, implementation, testing, and deployment) is completed sequentially before moving on to the next. Agile, on the other hand, embraces <strong>incremental development</strong>, allowing teams to work in iterative cycles (called sprints) where portions of the project are developed, reviewed, and adjusted based on feedback.</p>
+<p>WAgile integrates both by starting with the structured planning and documentation from the Waterfall approach, which provides clarity and a roadmap for the project. Then, Agile’s iterative development cycles are incorporated into the later stages of development, allowing for flexibility, regular feedback, and adaptation to change. This makes WAgile suitable for projects that need a balance between formal planning and flexibility in execution.</p>
+<p>&nbsp;</p>
+<h4>When and How Intervention Is Applied During the Development Lifecycle</h4>
+<p>In WAgile, <strong>intervention</strong> occurs at key points in the development lifecycle, combining the pre-planned checkpoints from Waterfall with Agile's frequent feedback loops.</p>
+<ol>
+<li>
+<p><strong>Early Phases (Waterfall Approach)</strong><br>The WAgile process often starts with traditional Waterfall phases—<strong>requirements analysis, design, and initial planning</strong>. These stages are handled with thorough documentation and clear, step-by-step planning. This part of the process is highly structured, and intervention here involves ensuring that all requirements are captured before the development begins.</p>
+</li>
+<li>
+<p><strong>Transition to Agile (Iterative Cycles)</strong><br>Once the project transitions to the <strong>development phase</strong>, WAgile adopts Agile’s iterative process. The project is divided into smaller units (often referred to as sprints), allowing development teams to work on features incrementally. Intervention here is more flexible—<strong>scrum meetings</strong>, <strong>reviews</strong>, and <strong>feedback sessions</strong> are regularly held to assess progress, identify issues, and make adjustments based on stakeholder feedback.</p>
+</li>
+<li>
+<p><strong>Ongoing Monitoring and Adjustments</strong><br>One of the key benefits of WAgile is that it allows for <strong>ongoing intervention</strong> throughout the project. Unlike Waterfall, where changes are difficult to implement once the project has moved forward, WAgile allows stakeholders to make adjustments based on new information or changes in business requirements. This intervention happens at the end of each sprint cycle, where progress is reviewed and priorities are adjusted accordingly.</p>
+</li>
+</ol>
+<p>The <strong>"when"</strong> of intervention in WAgile follows a structured initial phase with pre-planned reviews but becomes more flexible during the iterative stages, allowing interventions at the end of each cycle based on user feedback and testing results. The <strong>"how"</strong> of intervention involves structured checkpoints early on, but once the iterative phase begins, intervention happens through Agile practices such as daily stand-ups, sprint reviews, and retrospectives.</p>
+<p>&nbsp;</p>
+<h4>Scale and Types of Developments</h4>
+<p>WAgile is particularly suited to <strong>medium to large-scale projects</strong> where there is a need for both structure and flexibility. The hybrid approach works well in situations where the project’s <strong>requirements are well-defined upfront</strong> but are expected to change during the development process.</p>
+<ul>
+<li>
+<p><strong>Small-scale projects</strong>: While WAgile can be applied to small-scale projects, its overhead of initial planning and documentation may be excessive. Agile methods tend to work better in smaller projects that require quick iterations and immediate feedback.</p>
+</li>
+<li>
+<p><strong>Medium to large-scale projects</strong>: WAgile is ideal for projects that require a <strong>structured roadmap</strong> but also anticipate <strong>evolving requirements</strong>. In such projects, the initial Waterfall-like phases allow for comprehensive planning, while the Agile-like iterations during development allow for flexibility in handling complexity and changing requirements.</p>
+</li>
+<li>
+<p><strong>Types of developments</strong>: WAgile is commonly used in <strong>enterprise-level</strong> software development where both business stakeholders and end-users are involved. It suits projects such as <strong>ERP systems, large-scale web applications</strong>, and <strong>complex software products</strong> where some aspects of the project can be defined early on, but other aspects may require iterative improvement based on user feedback and testing. It can also be applied in industries such as <strong>finance, healthcare, and government</strong>, where compliance and thorough documentation are essential but rapid adaptability is equally important.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">4.7 Project Management</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Apply project management to plan and conduct the development and implementation of a project and software engineering solution, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>scheduling and tracking using a software tool, including Gantt charts</li>
+<li>using collaboration tools</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand how to apply project management principles, including scheduling, tracking, and collaboration tools, to plan, develop, and implement a software engineering project.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Identify key tasks and milestones and organise them using a Gantt chart.</span></li>
+<li><span style="font-size: 10pt;">Effectively use software tools to track project progress and adjust timelines as necessary.</span></li>
+<li><span style="font-size: 10pt;">Utilise collaboration tools to communicate, share files, and manage version control within a software development team.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>When working on any software engineering project, it is essential to apply sound project management principles to ensure the development and implementation of the solution is both efficient and effective. Project management helps to organise the tasks, resources, and timeframes needed to bring a project from conception to completion. It involves planning, executing, and tracking progress while balancing constraints such as scope, time, cost, and quality.</p>
+<p>A successful software engineering project often involves multiple stakeholders, team members, and potentially complex workflows. Managing these elements requires tools and methodologies that streamline communication, track progress, and ensure deadlines are met. Two key aspects of this are scheduling and tracking the project's progress, and using collaboration tools that allow team members to work together seamlessly.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Scheduling Tools</h3>
+<div class="dp-panel-content ">
+<p>Project scheduling involves identifying and outlining the tasks and milestones that need to be completed and setting deadlines to ensure everything is accomplished in a timely manner. It’s important to define each phase of the project, including planning, development, testing, and implementation.</p>
+<p>To track the progress of a project, software tools are used to monitor deadlines and completion rates. One of the most commonly used tools is <strong>Gantt charts</strong>, which are visual representations of a project timeline.</p>
+<p><strong>Gantt charts</strong>:</p>
+<ul>
+<li>A Gantt chart is a type of bar chart that illustrates the start and finish dates of various tasks within a project.</li>
+<li>Tasks are represented by horizontal bars, and the length of the bar reflects the duration of the task.</li>
+<li>The chart shows task dependencies (which tasks must be completed before others can start), which helps in identifying critical paths—essential task sequences that directly affect the project timeline.</li>
+<li>Gantt charts can also highlight overlapping tasks, helping to identify which phases of the project can run simultaneously to maximise efficiency.</li>
+<li>The use of Gantt charts aids project managers in keeping track of deadlines, ensuring that team members are aware of their responsibilities, and providing an overview of the project’s status at any given time.</li>
+</ul>
+<p>A variety of project management software, such as Microsoft Project, Asana, Trello, and Jira, include built-in Gantt chart features or allow for their creation. These tools also allow for continuous updates to reflect changes in task statuses, making them dynamic and responsive to the evolving nature of software projects.</p>
+<p>&nbsp;</p>
+<p>The following diagram shows the main elements of a Gantt chart. Other formats are acceptable. <em>(Examples from Course Specifications)</em></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/07e36ee6f4b854fd.png" alt="image.png" width="625" height="300" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527551" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>Gantt charts can also be used to allocate resources, including team members, to specific tasks. The following chart shows the percentage completion of tasks by each team member. Charts should be regularly updated during development to reflect actual versus estimated times for tasks.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/79f7b161ea65646d.png" alt="image.png" width="627" height="315" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527552" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Collaboration Tools</h3>
+<div class="dp-panel-content ">
+<p>In the context of modern software engineering projects, especially when teams are distributed across different locations or working remotely, <strong>collaboration tools</strong> play a crucial role in maintaining clear communication, coordination, and productivity.</p>
+<p>Collaboration tools are designed to help teams share information, files, and updates in real-time. Some key features of these tools include:</p>
+<ul>
+<li><strong>File sharing</strong>: The ability to store and share files among team members, ensuring everyone has access to the latest version of documents, code, and design materials.</li>
+<li><strong>Version control</strong>: Managing and tracking changes to code and documents to prevent conflicts or duplication of effort. Tools like GitHub or Bitbucket are essential for managing source code in software development projects.</li>
+<li><strong>Task management</strong>: Tools such as Jira, Trello, or Asana allow project managers to assign tasks to individuals, set priorities, and track progress. These platforms often include features like to-do lists, notifications, and status updates.</li>
+<li><strong>Communication</strong>: Tools like Slack, Microsoft Teams, and Zoom enable real-time messaging, video calls, and file sharing, ensuring team members can communicate efficiently.</li>
+<li><strong>Documentation</strong>: Platforms such as Confluence or Google Docs allow teams to collaborate on writing and editing project documentation, ensuring that project plans, requirements, and other critical information are up-to-date and accessible.</li>
+</ul>
+<p>Effective collaboration tools are not only about sharing files or communicating but also about fostering a sense of teamwork and alignment on the project's goals. These tools often integrate with scheduling and tracking software to provide a comprehensive project management system that brings together task tracking, communication, and progress monitoring.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Applying Project Management</h4>
+<p>The successful development and implementation of a software engineering solution rely heavily on structured project management. Each phase of the project requires careful planning, task assignment, progress tracking, and collaboration to meet deadlines and deliver a functional product that meets the project goals</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-danger">
+<div class="card-body">
+<h3 class="card-title">Key Tips</h3>
+<ul>
+<li><strong>Gantt Charts</strong>: Plan timelines and track task dependencies.</li>
+<li><strong>Regular Tracking</strong>: Monitor progress and adjust as needed.</li>
+<li><strong>Effective Collaboration</strong>: Use real-time tools for communication and version control.</li>
+<li><strong>Adaptability</strong>: Stay flexible to manage delays or issues.</li>
+<li><strong>Frequent Testing</strong>: Test throughout the project to catch problems early.</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Project Planning</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Define Project Scope</strong>: Clearly outline the goals and objectives of the software solution. This includes identifying the key features, functionalities, and limitations of the software, as well as any specific user or stakeholder requirements.</li>
+<li><strong>Break Down the Project</strong>: Decompose the project into <strong>phases</strong> or <strong>milestones</strong>. Common phases in software engineering projects include requirements gathering, system design, development, testing, and deployment. Each phase should be clearly defined with specific goals and deliverables.</li>
+<li><strong>Create a Detailed Timeline</strong>: Use a tool like a <strong>Gantt chart</strong> to visually represent the timeline of the project. Tasks are laid out along a timeline, showing when they start and finish. Each task should have a clear duration and deadline. Make sure to establish key milestones, such as project reviews or delivery of prototypes, so progress can be measured at each stage.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Task Assignment and Scheduling</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Assign Roles and Responsibilities</strong>: Identify the specific tasks that need to be accomplished and assign them to team members according to their expertise and capacity. Ensure everyone understands their responsibilities and the deadlines associated with each task.</li>
+<li><strong>Set Task Dependencies</strong>: In any project, some tasks are dependent on others being completed first. For example, testing cannot begin until coding is complete. Use <strong>Gantt charts</strong> or similar scheduling tools to highlight task dependencies, ensuring that delays in one area don’t cascade across the project.</li>
+<li><strong>Set Realistic Deadlines</strong>: Establish clear start and end dates for each task. Consider the team’s workload, the complexity of each task, and potential bottlenecks when setting deadlines. Adjust the schedule when necessary to avoid overloading team members or unrealistic timeframes.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Progress Tracking</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Regularly Monitor Progress</strong>: Project management software like Jira, Asana, or Microsoft Project allows the team to update the status of tasks, marking them as "in progress," "completed," or "pending." The project manager can track progress using reports and dashboards, making it easy to identify if the project is on schedule or falling behind.</li>
+<li><strong>Track Task Completion</strong>: Gantt charts can help visualise which tasks are completed, in progress, or delayed. This allows project managers to identify any risks or delays that might require intervention.</li>
+<li><strong>Identify Risks and Adjust</strong>: Regularly review the project timeline and adjust where necessary. If a task is delayed, identify the cause and reallocate resources or shift deadlines to prevent further delays. Look out for tasks on the <strong>critical path</strong>, as delays here could impact the overall project completion date.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Collaboration and Communication</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Set Up a Shared Workspace</strong>: Use collaboration tools like Slack, Microsoft Teams, or Confluence to create a shared space where team members can communicate, share documents, and track tasks. This ensures everyone is working with the most up-to-date information.</li>
+<li><strong>Real-Time Communication</strong>: Effective communication is key in software projects, especially when dealing with distributed teams or remote workers. Real-time messaging platforms like Slack or Microsoft Teams enable instant communication, reducing the lag that can occur with email.</li>
+<li><strong>Use Version Control</strong>: In software development, using version control tools like Git (through GitHub or Bitbucket) ensures that the team can collaborate on code without conflicts. Version control allows multiple team members to work on different parts of the codebase at the same time, track changes, and merge updates without overwriting anyone’s work.</li>
+<li><strong>Maintain Transparency</strong>: Use tools to keep all team members and stakeholders updated on the project’s status. Progress reports, shared timelines, and regular meetings ensure everyone has visibility into the current state of the project, upcoming tasks, and any issues that need addressing.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Quality Assurance and Testing</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Plan for Testing Phases</strong>: Schedule specific periods for testing within the project timeline. Testing should not be an afterthought but an integral part of the development process. Testing phases may include unit testing, integration testing, system testing, and user acceptance testing.</li>
+<li><strong>Bug Tracking and Resolution</strong>: Use bug-tracking tools like Jira or Bugzilla to log issues encountered during testing. Assign each bug or issue to a relevant team member for resolution and track its progress to ensure it’s resolved before the final product is delivered.</li>
+<li><strong>Collaboration in Testing</strong>: Testing often involves collaboration between the development team and other stakeholders, such as quality assurance teams or end-users. Use collaboration tools to facilitate feedback loops and ensure test results and issues are communicated promptly.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Project Review and Reflection</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Post-Project Analysis</strong>: Once the project is complete, conduct a post-project review to evaluate the process. Analyse what worked well, what challenges were encountered, and how effectively the team applied project management techniques.</li>
+<li><strong>Documentation</strong>: Maintain clear documentation of the project’s development, including how challenges were addressed, which tools were most effective, and what could be improved in future projects. Good documentation helps future teams learn from past projects and improves overall organisational efficiency. </li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">4.8 Social and Ethical</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Explore social and ethical issues associated with project work, including working individually, collaboratively and responding to stakeholders</p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Explore the social and ethical issues related to individual and collaborative work in project management and how to respond ethically to stakeholder needs.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Identify and explain social and ethical issues when working individually or in teams.</span></li>
+<li><span style="font-size: 10pt;">Demonstrate fair and respectful collaboration within a project team.</span></li>
+<li><span style="font-size: 10pt;">Apply ethical decision-making when responding to stakeholder demands and expectations.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>In software engineering, projects are developed not only to solve technical problems but also to serve real-world needs. As a result, both social and ethical considerations are crucial in guiding project work, ensuring that the software developed benefits its users, respects ethical standards, and promotes responsible teamwork. Social and ethical issues can arise in many forms, including how teams collaborate, interact with stakeholders, and the broader impact of the software being developed.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-warning">
+<div class="card-body">
+<h5 class="card-title dp-has-icon"><i class="dp-icon fas fa-info-circle " aria-hidden="true"> </i>&nbsp;Working Responsibly</h5>
+<p class="card-text">When working on a project—whether individually or in a team—it's essential to be aware of the responsibilities that come with the work. These responsibilities extend beyond meeting technical requirements, encompassing the way team members interact with one another, the effects of the project on society, and how feedback and expectations from stakeholders are managed.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>In this context, working individually and collaboratively introduces its own set of social and ethical challenges. Responding effectively to stakeholder needs, maintaining fairness, and promoting respect in collaborative environments are all necessary to ensure the ethical integrity of a project.</p>
+<p>&nbsp;</p>
+<h4>Key Social and Ethical Issues</h4>
+<p>In the world of software engineering, projects are often intertwined with complex social and ethical concerns that must be considered throughout the development process. Ethical project management goes beyond technical requirements, it involves understanding the impact of the project on society, the team, and its stakeholders. These issues can include intellectual property rights, privacy, inclusivity, and adherence to ethical codes of conduct, among others.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Intellectual Property</h3>
+<div class="dp-panel-content ">
+<p>Intellectual property (IP) refers to the ownership of ideas, inventions, designs, and code. Protecting intellectual property rights is crucial in software development, especially when working in teams or using third-party tools and libraries. The key ethical considerations regarding IP include:</p>
+<ul>
+<li><strong>Respecting Copyright</strong>: When using third-party libraries, frameworks, or software, it’s important to follow licensing agreements. Failing to do so can lead to legal repercussions and ethical breaches.</li>
+<li><strong>Plagiarism</strong>: Claiming someone else’s work as your own, whether code, design, or documentation, is unethical. Ethical project management involves giving proper credit to original creators and not infringing on others' intellectual property.</li>
+<li><strong>Open Source</strong>: Using open-source software is common in development, but it's essential to comply with the terms of use, including providing attribution or making modifications publicly available where required.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Quality</h3>
+<div class="dp-panel-content ">
+<p>The quality of the software solution directly affects its users and stakeholders. Ensuring high quality isn't just about delivering a functional product—it's about creating a solution that is reliable, safe, and fit for purpose. Ethical concerns around quality include:</p>
+<ul>
+<li><strong>User Safety</strong>: Software must not expose users to harm or security vulnerabilities. In fields like healthcare or finance, the consequences of poor-quality software can be severe, so ethical project management includes thorough testing and validation.</li>
+<li><strong>Reliability and Performance</strong>: Ethically, developers should ensure that their software performs as promised and is reliable under expected usage conditions. Releasing substandard or incomplete products can damage trust and negatively impact users.</li>
+<li><strong>Responsibility for Defects</strong>: If flaws or bugs are discovered, it’s the development team’s responsibility to fix them promptly and transparently, ensuring that users are not left with a defective or unsafe product.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Response to Problems</h3>
+<div class="dp-panel-content">
+<p>In the lifecycle of a software project, problems such as bugs, security vulnerabilities, or ethical dilemmas may arise. How the team responds to these issues is a reflection of their ethical commitment.</p>
+<ul>
+<li><strong>Transparency and Accountability</strong>: When problems occur, it's crucial to be transparent with stakeholders about the issue and the steps being taken to resolve it. Ethical project management avoids covering up issues and prioritises honest communication.</li>
+<li><strong>Timely Resolution</strong>: Ethical responsibility involves addressing problems quickly, especially if they pose a risk to users. Ignoring or delaying responses to problems can lead to larger ethical concerns, including harm to users or stakeholders.</li>
+<li><strong>Learning from Mistakes</strong>: After resolving issues, it’s important to review what went wrong and document lessons learned to prevent similar problems in the future.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Code of Conduct</h3>
+<div class="dp-panel-content">
+<p>A <strong>code of conduct</strong> refers to the set of ethical standards that team members are expected to follow when working on a project. This applies to both individual behaviours and collaborative efforts. Some key elements include:</p>
+<ul>
+<li><strong>Professionalism</strong>: Team members should act professionally, communicate respectfully, and work collaboratively. Ethical behaviour in the workplace promotes a positive and productive environment.</li>
+<li><strong>Honesty and Integrity</strong>: Team members should be honest in their work, avoid exaggerating progress or achievements, and report any issues or mistakes truthfully. Integrity in project work fosters trust and accountability.</li>
+<li><strong>Ethical Coding Practices</strong>: Code should be written following best practices, ensuring clarity, maintainability, and ethical use of resources. Additionally, developers should avoid writing code that could be used for harmful purposes, such as creating malware.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Malware and Security</h3>
+<div class="dp-panel-content">
+<p>Security is a significant ethical concern in software development, particularly regarding the risk of creating or distributing malicious software (malware).</p>
+<ul>
+<li><strong>Avoiding Harm</strong>: Developing software that harms users or compromises their data—whether intentionally or unintentionally—is unethical. Ethical developers ensure that their software is secure and does not contain malicious features.</li>
+<li><strong>Responsibility for Security</strong>: Developers have a duty to design software that is secure against attacks, protecting users' personal information and preventing unauthorised access. Ethical security practices include regular testing, code reviews, and updates to address vulnerabilities.</li>
+<li><strong>Respect for Privacy</strong>: In some cases, malicious software is designed to violate users' privacy by collecting personal data without their consent. Ethical development involves respecting privacy laws and ensuring that software does not exploit users.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Ergonomic Issues in Software Design</h3>
+<div class="dp-panel-content">
+<p>The design of software can impact the physical and mental well-being of its users. Ethical project management takes into account ergonomic principles to ensure that users are not adversely affected by the software.</p>
+<ul>
+<li><strong>User-Friendly Design</strong>: Software should be designed with ease of use in mind, minimising frustration and cognitive load on users. Poor design can cause stress or repetitive strain injuries if users are required to perform unnecessary or awkward actions frequently.</li>
+<li><strong>Accessibility</strong>: Ergonomic design includes making software accessible to people with disabilities. Ensuring that interfaces are navigable via assistive technologies is a critical ethical responsibility.</li>
+<li><strong>Workplace Health</strong>: For software developers themselves, ergonomic considerations—such as workspace setup and screen time—can impact physical health. Ethical project management should include policies that promote healthy work practices, reducing strain and overwork.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Inclusivity Issues</h3>
+<div class="dp-panel-content">
+<p>Inclusivity ensures that software is designed to be usable and beneficial for a diverse range of people, regardless of their background, abilities, or circumstances. Ethical considerations around inclusivity include:</p>
+<ul>
+<li><strong>Diversity of Users</strong>: Software should be inclusive of different cultures, languages, and abilities. This means ensuring that interfaces are intuitive across diverse groups and accessible to people with disabilities (e.g., incorporating features for the visually or hearing impaired).</li>
+<li><strong>Avoiding Bias</strong>: Software algorithms, particularly in AI and machine learning, can unintentionally incorporate biases. Ethical development involves auditing algorithms to ensure that they do not unfairly discriminate against certain groups based on race, gender, or other characteristics.</li>
+<li><strong>Cultural Sensitivity</strong>: When developing software for global markets, it’s important to be sensitive to cultural differences in design, language, and functionality.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Privacy Issues</h3>
+<div class="dp-panel-content">
+<p>Privacy is a significant ethical concern, particularly when handling users' personal data. Key privacy considerations include:</p>
+<ul>
+<li><strong>Data Protection</strong>: Ethical project management involves protecting users' personal information, ensuring that it is not shared or exposed without consent. This includes following data protection laws, such as the General Data Protection Regulation (GDPR).</li>
+<li><strong>Informed Consent</strong>: Users must be informed about how their data is being collected, stored, and used. Gaining informed consent is an ethical requirement that ensures users are aware of what data they are sharing and how it will be used.</li>
+<li><strong>Minimising Data Collection</strong>: Ethical projects avoid collecting more data than necessary. Developers should limit the scope of data collection to what is essential for the software’s functionality, ensuring privacy by design.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Social and Ethical Issues in Projects</h4>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Working Individually</h3>
+<div class="dp-panel-content ">
+<p>Working on a project individually can pose challenges in terms of accountability, quality of work, and decision-making. When responsible for all aspects of the project, the individual must ensure that their decisions are ethical and socially responsible. Some key ethical considerations when working alone include:</p>
+<ul>
+<li><strong>Accountability</strong>: When you are the sole person responsible for a project, it's important to take ownership of the decisions made and the consequences of those decisions. This includes ensuring that the project meets ethical standards and doesn't negatively impact users or society.</li>
+<li><strong>Bias in Decision-Making</strong>: One risk of working individually is the lack of diverse perspectives. Without input from others, an individual may unintentionally overlook important considerations or allow personal biases to influence the design and implementation of the project. Ethically, it’s important to challenge one's assumptions and seek feedback from external sources when necessary.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Working Collaboratively</h3>
+<div class="dp-panel-content ">
+<p>Collaboration in project work brings together multiple perspectives, skills, and backgrounds. While this can lead to more creative and well-rounded solutions, it also introduces challenges related to team dynamics, fairness, and mutual respect. Key social and ethical considerations in collaborative work include:</p>
+<ul>
+<li><strong>Respect and Inclusion</strong>: In a collaborative setting, it is essential to respect each team member's contributions and viewpoints, regardless of their background or role. Fostering an inclusive environment ensures that all voices are heard, and that team members feel valued. This promotes ethical behaviour by preventing discrimination, favouritism, or exclusion.</li>
+<li><strong>Fairness in Task Distribution</strong>: An ethical approach to teamwork involves ensuring that tasks are distributed fairly among team members based on their skills and capacities. Unequal distribution of workload can lead to frustration and conflicts within the team.</li>
+<li><strong>Conflict Resolution</strong>: Disagreements can arise in any collaborative effort, but it is essential to resolve conflicts ethically and respectfully. This includes open communication, active listening, and finding compromises that benefit the entire team and the project.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Responding to Stakeholders</h3>
+<div class="dp-panel-content">
+<p>Stakeholders, whether clients, users, or the community at large, play a significant role in the success of a project. Responsiveness to stakeholder needs is not only a technical requirement but also an ethical one. Key considerations in this area include:</p>
+<ul>
+<li><strong>Transparency</strong>: When engaging with stakeholders, it’s important to maintain transparency regarding project progress, limitations, and potential risks. Being honest about what the project can achieve helps manage stakeholder expectations and ensures trust.</li>
+<li><strong>Responsibility to Users</strong>: The end users of a software project are often directly affected by its quality, usability, and security. Ethical project management requires prioritising the needs and safety of users, ensuring that the software does not harm them or compromise their privacy and data.</li>
+<li><strong>Managing Ethical Dilemmas</strong>: Sometimes, stakeholder demands may conflict with ethical principles. For example, a stakeholder might request a feature that invades user privacy. In such cases, it’s important to weigh these demands against ethical considerations and find a balanced solution that prioritises the greater good.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Broader Social Impact</h3>
+<div class="dp-panel-content">
+<p>Projects often extend beyond the immediate team and stakeholders, potentially impacting society at large. Ethical project management requires considering how the software could influence social structures, communities, or vulnerable populations. Important considerations include:</p>
+<ul>
+<li><strong>Social Responsibility</strong>: Projects should aim to have a positive impact on society. This includes ensuring that the software is accessible to diverse groups, does not perpetuate harm, and promotes inclusivity.</li>
+<li><strong>Environmental Sustainability</strong>: In some cases, projects might involve energy use, waste production, or material consumption. An ethical approach considers the environmental impact of the project and aims to minimise any negative effects.</li>
+<li><strong>Long-Term Consequences</strong>: Ethical project work also requires thinking beyond the immediate project goals and considering the long-term consequences. Could the software be misused? Does it support social equality and justice? Is it future-proofed to adapt to changing societal needs?</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">4.9 Communication Issues</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Explore communication issues associated with project work, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>involving and empowering the client</li>
+<li>enabling feedback</li>
+<li>negotiating</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand how to address communication challenges in project work, focusing on involving clients, enabling effective feedback, and applying negotiation strategies to maintain project success.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Understand how to assist a client through regular updates, involvement in decision-making, and sharing project progress.</span></li>
+<li><span style="font-size: 10pt;">Apply effective negotiation strategies to resolve conflicts and manage project scope, timeline, and resources.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Effective communication is one of the most critical components of any successful software engineering project. Since these projects often involve multiple stakeholders, including developers, clients, and end-users, clear and consistent communication ensures everyone is aligned and working toward the same goals. Poor communication can lead to misunderstandings, unmet expectations, and delays in project delivery.</p>
+<p>Communication in project management is not just about exchanging information; it's about ensuring that the right people are involved at the right times, that feedback is encouraged and acted upon, and that negotiations happen smoothly when conflicts or differing viewpoints arise. When done well, communication fosters trust, keeps the project on track, and leads to a solution that meets both the client’s and the team’s expectations.</p>
+<p>&nbsp;</p>
+<h4>Key Communication Issues</h4>
+<p>There are several communication challenges that teams face during project work. These include ensuring that the client is involved and empowered, enabling regular feedback loops, and handling negotiations effectively.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Involving and Empowering the Client</h3>
+<div class="dp-panel-content ">
+<p>A software engineering project is typically developed for a client or stakeholder who has specific needs or business goals. It's crucial that the client is not just an observer but an active participant throughout the project. Involving the client early and consistently ensures that the final product aligns with their vision and needs.</p>
+<p><strong>Strategies to Empower the Client</strong>:</p>
+<ul>
+<li><strong>Regular Check-Ins</strong>: Hold frequent meetings with the client to update them on progress, gather feedback, and adjust the project scope as necessary. This ensures that the client remains involved and their requirements are continuously met.</li>
+<li><strong>Clear Documentation</strong>: Provide the client with detailed project plans, timelines, and updates. This allows them to understand the project’s direction and provides a sense of ownership over the process.</li>
+<li><strong>Decision-Making Power</strong>: Involve the client in key decisions, such as changes in scope, design choices, and feature prioritisation. By giving them the authority to make decisions, the client feels empowered and valued as part of the project team.</li>
+<li><strong>Prototypes and Demos</strong>: Regularly deliver prototypes or product demonstrations to the client. This helps them visualise progress and ensures their needs are being met.</li>
+</ul>
+<p>Empowering the client can reduce the risk of misalignment between their expectations and the actual product. It also enhances the client’s trust in the project team and allows for smoother collaboration.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Enabling Feedback</h3>
+<div class="dp-panel-content ">
+<p>Feedback is essential in software projects because it allows teams to identify areas of improvement early and adjust their work accordingly. However, for feedback to be effective, it must be actively encouraged and integrated throughout the project lifecycle.</p>
+<p><strong>Key Feedback Practices</strong>:</p>
+<ul>
+<li><strong>Frequent Feedback Opportunities</strong>: Create multiple opportunities for feedback throughout the project, rather than waiting until the final stages. This can be through weekly meetings, sprint reviews, or milestone check-ins. Early feedback prevents larger issues from arising later in the project.</li>
+<li><strong>Open Communication Channels</strong>: Use tools such as email, instant messaging, and project management platforms to ensure the client and team can easily share feedback. Ensure that all team members and stakeholders feel comfortable expressing concerns or suggestions.</li>
+<li><strong>Clarify Feedback Expectations</strong>: Ensure the client and team understand the importance of constructive feedback. This means providing actionable, specific comments rather than general opinions. Encouraging the use of user stories, mockups, and detailed requirements can help guide meaningful feedback.</li>
+<li><strong>Act on Feedback</strong>: It’s not enough to gather feedback; it needs to be addressed and reflected in the project. Create a process to log and prioritise feedback and adjust the project plan accordingly. Let the client know how their input is being used to enhance the solution.</li>
+</ul>
+<p>Incorporating regular feedback helps ensure that the project stays on track and that the client’s evolving needs are continuously met.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Negotiating</h3>
+<div class="dp-panel-content">
+<p>Negotiation plays a key role in resolving conflicts and ensuring that both the client and the development team are satisfied with the project's direction. In software development, negotiation can arise over scope changes, timeline adjustments, resource allocation, or differing priorities.</p>
+<p><strong>Effective Negotiation Techniques</strong>:</p>
+<ul>
+<li><strong>Understand Both Sides</strong>: Before entering a negotiation, it's important to understand both the client’s priorities and the project team’s limitations. Knowing these perspectives helps in finding common ground.</li>
+<li><strong>Focus on Solutions</strong>: Negotiations should focus on problem-solving rather than assigning blame or pushing for personal agendas. The goal is to reach a win-win situation where both the client’s needs and the team’s capabilities are respected.</li>
+<li><strong>Be Transparent</strong>: Open and honest communication is critical in negotiations. Ensure that both the client and the team understand the constraints, such as budget, time, or technical limitations, and work together to find the best compromise.</li>
+<li><strong>Set Clear Boundaries</strong>: When negotiating changes to the project scope or deadlines, it's important to set clear boundaries. For example, if a new feature is added, make sure to communicate the impact on the timeline or budget. Setting these expectations early can prevent misunderstandings later.</li>
+<li><strong>Document Agreements</strong>: Any negotiated changes to the project should be clearly documented and agreed upon by both parties. This ensures there is a mutual understanding of the outcomes and prevents future disputes.</li>
+</ul>
+<p>Negotiation is a critical skill in project management, helping balance the client’s desires with the realities of development, ensuring the project remains feasible while still delivering value.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/8d605f4acc3c1539.png" alt="image.png" width="557" height="307" loading="lazy" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527553" data-api-returntype="File"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">4.10 Quality Assurance</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate how software engineering solutions are quality assured, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>defining criteria on which quality will be judged</li>
+<li>ensuring requirements are met using a continual checking process</li>
+<li>addressing compliance and legislative requirements</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand how quality assurance processes ensure that software engineering solutions meet defined quality standards and comply with legal and regulatory requirements.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Define the key quality criteria used to evaluate software, including functionality, performance, and compliance.</span></li>
+<li><span style="font-size: 10pt;">Implement a continual checking process to ensure that software consistently meets requirements through testing and feedback.</span></li>
+<li><span style="font-size: 10pt;">Identify and address legal, regulatory, and industry standards that the software must comply with during development.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Quality assurance (QA) in software engineering is a crucial part of the development process, ensuring that software solutions meet defined standards of quality and comply with legal and regulatory requirements. This page explores the key components of QA, including how quality criteria are defined, how continual checking processes help ensure software meets requirements, and how compliance with laws and standards is maintained throughout the project.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">What is Quality Assurance (QA)?</h5>
+<p><strong>Quality Assurance (QA)</strong> is a systematic process that ensures a software product meets defined quality standards. QA focuses on preventing defects in the development process, ensuring the software functions correctly, is secure, and satisfies the requirements of both stakeholders and end users. QA also addresses legal and regulatory compliance, ensuring the software is not only functional but also safe and lawful.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Defining Criteria</h3>
+<div class="dp-panel-content ">
+<p>The first step in QA is to determine how quality will be measured. The criteria for evaluating software quality typically include:</p>
+<ul>
+<li><strong>Functionality</strong>: The software must perform its intended tasks correctly, covering all use cases and requirements.</li>
+<li><strong>Usability</strong>: The interface must be user-friendly and accessible to the target audience.</li>
+<li><strong>Reliability</strong>: The software should operate consistently without frequent crashes or errors.</li>
+<li><strong>Performance</strong>: The system must meet speed, responsiveness, and resource efficiency standards.</li>
+<li><strong>Security</strong>: The software must protect against unauthorised access and vulnerabilities.</li>
+<li><strong>Compliance</strong>: Ensure the software adheres to legal and regulatory standards relevant to the industry (e.g., data protection laws, accessibility requirements).</li>
+</ul>
+<p>These criteria are defined early in the project and used to shape development decisions, testing strategies, and the overall approach to software delivery.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Ensuring Requirements Are Met</h3>
+<div class="dp-panel-content ">
+<p>Once quality criteria are established, software engineers use a variety of methods to continually check and ensure the software meets these requirements throughout the development process.</p>
+<ul>
+<li>
+<p><strong>Test-Driven Development (TDD)</strong>: In TDD, tests are created before the code is written, ensuring that developers focus on meeting predefined requirements. Each feature is developed to pass specific tests that reflect the expected behaviour and quality standards.</p>
+</li>
+<li>
+<p><strong>Continuous Integration (CI)</strong>: With CI, developers regularly integrate their code into a shared repository, allowing for immediate testing of new changes. This helps catch issues early, preventing bugs from accumulating.</p>
+</li>
+<li>
+<p><strong>Automated Testing</strong>: Automated tests (such as unit tests, integration tests, and performance tests) ensure that repetitive checks can be run consistently without human intervention. This guarantees that critical functionality is continuously validated.</p>
+</li>
+<li>
+<p><strong>Manual Testing and User Acceptance Testing (UAT)</strong>: While automated tests are crucial, manual testing is also important. In UAT, real users test the software to ensure it meets their needs and expectations. This step ensures that the software is practical and user-friendly in real-world scenarios.</p>
+</li>
+</ul>
+<p>These ongoing checks allow for early detection of issues, reducing the risk of major problems during the final stages of development.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Addressing Compliance</h3>
+<div class="dp-panel-content">
+<p>Ensuring that software complies with relevant laws and standards is a vital part of QA. Compliance can involve many aspects, such as:</p>
+<ul>
+<li>
+<p><strong>Data Protection and Privacy</strong>: Software handling user data must comply with privacy laws like the <strong>General Data Protection Regulation (GDPR)</strong> in the EU, the <strong>Australian Privacy Act</strong>, or the <strong>California Consumer Privacy Act (CCPA)</strong>. This involves ensuring secure storage, responsible data handling, and transparent consent procedures.</p>
+</li>
+<li>
+<p><strong>Accessibility Standards</strong>: Software should be accessible to all users, including those with disabilities. Guidelines like the <strong>Web Content Accessibility Guidelines (WCAG)</strong> (<a title="2.6 World Wide Web Consortium" href="../lessons/12951-046.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/2-dot-6-world-wide-web-consortium" data-api-returntype="Page">2.6 World Wide Web Consortium</a>) define best practices to make software usable by individuals with visual, auditory, or motor impairments.</p>
+</li>
+<li>
+<p><strong>Security and Industry Standards</strong>: Depending on the domain, software may need to meet specific security or industry requirements. For example, <strong>PCI DSS</strong> standards for financial software ensure the secure handling of payment data.</p>
+</li>
+</ul>
+<p>To address these compliance requirements, QA teams regularly review and audit the software against these standards. This might involve external legal advice or specialised tools that automate the verification of legal compliance, especially for data protection and security protocols.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Applying QA in Practice</h4>
+<ol>
+<li>
+<p><strong>Define Quality Metrics</strong>: Work with stakeholders to establish measurable quality criteria (functionality, usability, performance, security, etc.) that reflect the project's goals and user expectations.</p>
+</li>
+<li>
+<p><strong>Continual Testing and Checking</strong>: Integrate testing throughout the development process, using TDD, CI, and automated tools to continually verify that the software meets quality criteria. Supplement automated testing with manual checks for usability and user feedback.</p>
+</li>
+<li>
+<p><strong>Compliance and Audits</strong>: Regularly audit the software to ensure it complies with legal and regulatory requirements. Make adjustments early in the process to prevent legal risks or non-compliance at later stages of the project.</p>
+</li>
+</ol>
+<p>By focusing on these QA principles throughout the development cycle, software engineering teams can produce robust, high-quality solutions that meet user needs, perform reliably, and comply with legal standards.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/f7be51e15cbbcbf2.png" alt="image.png" width="645" height="413" loading="lazy" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527554" data-api-returntype="File"></p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">4.11 Modelling Tools</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Demonstrate the use of modelling tools</p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the use and purpose of various modelling tools in system development to visually represent data, processes, and structures for better planning and communication.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Create data flow diagrams to map the flow of data through a system.</span></li>
+<li><span style="font-size: 10pt;">Design structure charts to outline the hierarchy and relationships between system modules.</span></li>
+<li><span style="font-size: 10pt;">Develop a data dictionary to standardise data usage and definitions.</span></li>
+<li><span style="font-size: 10pt;">Construct class diagrams to represent object-oriented relationships.</span></li>
+<li><span style="font-size: 10pt;">Utilise storyboards to map out user navigation and interface design.</span></li>
+<li><span style="font-size: 10pt;">Apply decision trees to document and analyse decision-making processes.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Modelling tools play a critical role in software development by helping teams visualise, organise, and document different components of a system before the actual coding begins. These tools provide a blueprint that guides the development process, ensuring that all stakeholders have a clear understanding of how the system will function. Different modelling tools serve different purposes, whether it's for mapping out data flow, visualising system structures, or documenting class relationships.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Flow Diagrams</h3>
+<div class="dp-panel-content ">
+<p>Recall that a <strong>Data Flow Diagram (DFD)</strong> is a graphical representation of how data moves through a system. It focuses on the flow of information, where the data comes from, how it is processed, and where it is stored. DFDs are widely used during the planning stages of a project to ensure a shared understanding of how data is handled.</p>
+<p>Key components of a DFD:</p>
+<ul>
+<li><strong>Processes</strong>: Represented by circles or rounded rectangles, these are the activities that transform incoming data into outgoing data.</li>
+<li><strong>Data Stores</strong>: Shown as open-ended rectangles, these are places where data is stored within the system.</li>
+<li><strong>Data Flows</strong>: Represented by arrows, these indicate the movement of data between processes, data stores, and external entities.</li>
+<li><strong>External Entities</strong>: Represented by squares, these are outside systems or users that interact with the system by sending or receiving data.</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs-buttons-vertical">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Flow Diagram Intro</h3>
+<div class="dp-panel-content ">
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/4-dot-11-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/12951/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D3e16d1ca-0f03-4f78-a472-5db9fe89f495-3038%26custom_arc_start_at%3D0</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Level 0</h3>
+<div class="dp-panel-content ">
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/4-dot-11-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/12951/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3Db8f2b2e7-9b17-4d3b-901d-9744e6da8fe8-3051%26custom_arc_start_at%3D0</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Example DFD</h3>
+<div class="dp-panel-content">
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/4-dot-11-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/12951/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D36b8a1a0-e994-46ea-8bfc-15bfeb8f680c-3040%26custom_arc_start_at%3D0</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Structure Charts</h3>
+<div class="dp-panel-content ">
+<p>A structure chart is an <strong>abstracted</strong> <strong>graphical representation</strong> of a software system by showing the <strong>separate modules or subroutines that comprise the system</strong> and <strong>their relationship to each other.</strong></p>
+<p>They are represented as a hierarchical diagram, where the top level represents the system as a whole, and each subsequent level represents increasingly detailed and <strong>refined</strong> components of the system. Each component in the structure chart is represented by a rectangular box, and the relationships between components are shown by lines connecting the boxes.</p>
+<p>Structure charts are particularly useful for breaking down a large and complex system into smaller, more manageable pieces, and for identifying the relationships and dependencies between those pieces.</p>
+<p>Further <strong>refinement</strong> for each of the lower-level subroutines can be shown in a separate structure chart, using the same name as the subroutine that you are refining in the main structure chart.</p>
+<p>The chart is read from <strong>top to bottom,</strong> with component modules or subroutines on successively lower levels, indicating these modules or subroutines are called by the module or subroutine above.</p>
+<p>For all modules or subroutines called by a single module or subroutine, the diagram is read from <strong>left to right</strong> to show the order of execution.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs-buttons-vertical">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Introduction</h3>
+<div class="dp-panel-content">
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/4-dot-11-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/12951/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3Dac879446-71d1-4ddd-8714-21ac4f87ca77-3047%26custom_arc_start_at%3D0</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">2018 HSC Scenario</h3>
+<div class="dp-panel-content ">
+<p style="text-align: left;">&nbsp;</p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/4-dot-11-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/12951/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D93d33a7e-929b-41e9-a749-577c2a8f08a6-3043%26custom_arc_start_at%3D0</span></div></div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">2013 HSC Scenario</h3>
+<div class="dp-panel-content">
+<div class="dp-embed-wrapper" style="text-align: center;"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/4-dot-11-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/12951/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D49f655ef-64ca-4e63-9382-02ce1719a79f-3037%26custom_arc_start_at%3D0</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Dictionary</h3>
+<div class="dp-panel-content">
+<p>A <strong>Data Dictionary</strong> is a centralised repository of information about the data within a system. It defines the data elements, their meanings, formats, relationships, and any restrictions or rules. The data dictionary ensures consistency in how data is used across the project.</p>
+<p>&nbsp;</p>
+<p class="amber-el amber-paragraph amber-content">In this course, <strong class="amber-el amber-bold">the following metadata is required</strong> in the columns of a data dictionary:</p>
+<p class="amber-el amber-paragraph amber-content"><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/1efde09f2fd647b3.png" alt="Uploaded Image" width="731" height="105" loading="lazy" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3538384" data-api-returntype="File"></p>
+<ul>
+<li class="amber-el amber-paragraph amber-content"><strong><span class="amber-el amber-underline">Data Item:</span></strong> The name of the variable</li>
+<li class="amber-el amber-paragraph amber-content"><span class="amber-el amber-underline"><strong>Data Type:</strong></span> The data type of the variable (i.e. integer, string, boolean, float)</li>
+<li class="amber-el amber-paragraph amber-content"><span class="amber-el amber-underline"><strong>Format:</strong></span> The general input/output mask of the variable (i.e. XXXXXX for a 6 character string</li>
+<li class="amber-el amber-paragraph amber-content"><strong><span class="amber-el amber-underline">Number of Bytes for Storage: </span></strong>Number of bytes required to store data the variable (i.e. 4 bytes for an integer</li>
+<li class="amber-el amber-paragraph amber-content"><strong><span class="amber-el amber-underline">Size for Display: </span></strong>Number of characters required to display the variable when printed (i.e. 10 for the date 01/05/2021</li>
+<li class="amber-el amber-paragraph amber-content"><strong><span class="amber-el amber-underline">Description:</span> </strong>Describes the purpose and use of the variable</li>
+<li class="amber-el amber-paragraph amber-content"><strong><span class="amber-el amber-underline">Example:</span> </strong>An example of data that can be stored in the variabl</li>
+<li class="amber-el amber-paragraph amber-content"><strong><span class="amber-el amber-underline">Validation: </span></strong>Checks that have been put in place (i.e. IF statements) that are used to ensure data integrity (i.e. there are only 12 months in a year)</li>
+</ul>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs-buttons-vertical">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Intro</h3>
+<div class="dp-panel-content ">
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/4-dot-11-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/12951/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3Db57863af-b56e-42a5-ab43-4db6a31adcd5-3042%26custom_arc_start_at%3D0</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Presentation</h3>
+<div class="dp-panel-content ">
+<p><a class="inline_disabled" href="https://kingsnsw.sharepoint.com/:p:/s/ComputingStudies/EWVYvhjDlcdPvg5q4yYcYg0BLHTvrJqjMPj2CULJz3soWQ?e=dFE79Q" target="_blank">Data Dictionary</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/4-dot-11-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={18be5865-95c3-4fc7-be0e-6ae3261c620d}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Class Diagrams</h3>
+<div class="dp-panel-content">
+<p>A <strong>Class Diagram</strong> is a type of <strong>Unified Modeling Language (UML)</strong> diagram that illustrates the structure of a system by showing its classes, attributes, methods, and relationships. Class diagrams are particularly useful in object-oriented programming as they map out how different objects (or classes) interact within the system.</p>
+<p>Key components of a Class Diagram:</p>
+<ul>
+<li><strong>Classes</strong>: Represented by rectangles, each class has attributes (properties) and methods (functions) inside the box.</li>
+<li><strong>Relationships</strong>: Lines or arrows between classes indicate how they are connected (e.g., inheritance, association, or dependency).</li>
+</ul>
+<p>&nbsp;</p>
+<p>The basic building blocks of a class diagrams are <strong>Classes</strong>, which are represented as a rectangle, divided into three parts:</p>
+<ul>
+<li>The class' name</li>
+<li>Attributes of the class, with the type of the attribute is specified with a colon and then the type.</li>
+<li>Methods that the class implements, with the parameters in parenthesis and then the return type specified after a colon</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://canvas.kings.edu.au/courses/8355/files/2813958/download" alt="Blank diagram(8).svg [online-only image]" width="303" height="223" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/8355/files/2813958" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>In a class diagram we can create many classes and then represent their structure by specifying relationships between them. These may include:</p>
+<table style="border-collapse: collapse; width: 97.8664%; height: 86px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 16.8017%; text-align: center; height: 29px;"><strong>Type</strong></td>
+<td style="width: 30.1666%; text-align: center; height: 29px;"><strong>Use<br></strong></td>
+<td style="width: 52.9389%; height: 29px; text-align: center;"><strong>Example</strong></td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 16.8017%; height: 29px; text-align: center;">Inheritance</td>
+<td style="width: 30.1666%; text-align: center; height: 29px;">Represents a relationship between a child class and a parent class</td>
+<td style="width: 52.9389%; height: 29px;"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://canvas.kings.edu.au/courses/8355/files/2813959/download" alt="Blank diagram(9).svg [online-only image]" width="377" height="254" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/8355/files/2813959" data-api-returntype="File" loading="lazy"></td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 16.8017%; height: 28px; text-align: center;">Relationship</td>
+<td style="width: 30.1666%; height: 28px; text-align: center;">
+<p>Models the relationship where a class can use or own objects from another class</p>
+<p>Multiplicities specify the number of instances of one class that can be associated with one instance of another class.</p>
+<p><img src="https://canvas.kings.edu.au/courses/8355/files/2813978/download" alt="image.png [online-only image]" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/8355/files/2813978" data-api-returntype="File" loading="lazy"></p>
+</td>
+<td style="width: 52.9389%; height: 28px;"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://canvas.kings.edu.au/courses/8355/files/2813977/download" alt="Blank diagram(10).svg [online-only image]" width="392" height="272" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/8355/files/2813977" data-api-returntype="File" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Intro</h3>
+<div class="dp-panel-content ">
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/4-dot-11-modelling-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/12951/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D5554920d-ff39-4998-bcbf-068c533d54d0-3048%26custom_arc_start_at%3D0</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Storyboards</h3>
+<div class="dp-panel-content">
+<p>A <strong>Storyboard</strong> is a visual tool used primarily in user interface (UI) and user experience (UX) design to show how users will navigate through a system. Storyboards consist of a series of drawings or screenshots that represent key screens and interactions within an application, allowing designers to map out the user journey.</p>
+<p>Key components of a Storyboard:</p>
+<ul>
+<li><strong>Screens</strong>: Visual representations of the different interfaces the user interacts with.</li>
+<li><strong>User Actions</strong>: Descriptions of what the user does on each screen (e.g., click a button, fill out a form).</li>
+<li><strong>Transitions</strong>: Arrows or lines showing how users move from one screen to another.</li>
+</ul>
+<p>&nbsp;</p>
+<p>The following storyboard shows the relationship between three pages of information aimed at promoting a school canteen on a website.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/b414510a9d340d63.png" alt="image.png" width="481" height="326" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527555" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Decision Trees</h3>
+<div class="dp-panel-content">
+<p>A <strong>Decision Tree</strong> is a diagram that helps to map out decisions and their possible consequences, outcomes, or actions. It is especially useful for systems that need to incorporate logical decision-making processes based on input data.</p>
+<p>&nbsp;</p>
+<p>The following decision tree shows the rules in controlling the temperature system within a ‘smart’ house.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/c72d0a81ed3a79e6.png" alt="image.png" width="704" height="283" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527556" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<p>The following diagram shows another way to represent a decision tree.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/bf39cd3bed657ad6.png" alt="image.png" width="449" height="308" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527479" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h3 class="readles">4.12 Back-End Engineering</h3>
+<div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Explain the contribution of back-end engineering to the success and ease of software development, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>technology used</li>
+<li>error handling</li>
+<li>interfacing with front end</li>
+<li>security engineering</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Understand the role of back-end engineering in ensuring the successful development of software applications, with a focus on technology, error handling, front-end interfacing, and security.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Explain key back-end technologies and their contribution to software projects.</span></li>
+<li><span style="font-size: 10pt;">Describe how error handling is managed in back-end systems.</span></li>
+<li><span style="font-size: 10pt;">Discuss how back-end systems interface with front-end development to provide seamless user experiences.</span></li>
+<li><span style="font-size: 10pt;">Identify security practices implemented in back-end engineering to protect software systems.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>Back-end engineering refers to the server-side logic and infrastructure that powers a software application. While front-end development focuses on the user interface and experience, the back end ensures the smooth functioning, security, and data processing of the application. Back-end systems handle requests, manage databases, ensure security protocols are followed, and communicate with the front end. Let's explore how back-end engineering plays a vital role in software development by looking at key aspects like technology, error handling, interfacing, and security.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Technology Used</h3>
+<div class="dp-panel-content ">
+<p>Back-end engineering relies on various technologies, including programming languages, frameworks, databases, and servers. These technologies are crucial for ensuring that the back-end system can process requests efficiently, store data securely, and scale when necessary.</p>
+<ul>
+<li>
+<p><strong>Programming Languages</strong>: Common back-end languages include Python, Java, PHP, Ruby, and Node.js. These languages are used to create server-side logic and handle requests from the front end.</p>
+</li>
+<li>
+<p><strong>Frameworks</strong>: Frameworks like Django (Python), Spring (Java), or Express (Node.js) streamline development by providing pre-built components that developers can use to manage routing, authentication, and data handling.</p>
+</li>
+<li>
+<p><strong>Databases</strong>: Back-end engineering involves working with databases to store, retrieve, and manage data. Databases can be relational (SQL) or non-relational (NoSQL) depending on the needs of the application. For example, MySQL, PostgreSQL, and MongoDB are popular database systems used in back-end development. </p>
+</li>
+<li>
+<p><strong>Servers</strong>: Servers such as Apache, Nginx, or cloud-based services (like AWS or Microsoft Azure) handle requests from users, execute code, and return the appropriate data or responses.</p>
+</li>
+</ul>
+<p>These technologies form the backbone of a software application, ensuring that it can manage data, handle traffic, and scale efficiently as the user base grows.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Error Handling</h3>
+<div class="dp-panel-content ">
+<p>Error handling in back-end engineering ensures that applications continue running smoothly even when unexpected issues arise. Errors can occur for many reasons, such as invalid inputs from users, database failures, or server issues. Effective error handling helps maintain the reliability and stability of an application.</p>
+<ul>
+<li>
+<p><strong>Error Detection</strong>: Back-end systems need mechanisms to detect errors when they occur, such as invalid database queries or exceptions in code execution. Modern frameworks often have built-in error handling methods.</p>
+</li>
+<li>
+<p><strong>Error Logging</strong>: Logging errors allows developers to track issues and debug them later. Tools like Logstash or Sentry help store and manage logs of errors, making it easier to identify recurring issues.</p>
+</li>
+<li>
+<p><strong>Graceful Recovery</strong>: Instead of letting the application crash, good error handling should allow the system to recover gracefully. This could involve retrying a failed request, showing an error message to users, or rolling back to a stable state.</p>
+</li>
+</ul>
+<p>Handling errors efficiently prevents major disruptions to the user experience and ensures the application continues to function even in the face of unforeseen problems.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Front-End</h3>
+<div class="dp-panel-content">
+<p>The back end and front end must communicate seamlessly to create a smooth and responsive user experience. This interaction typically happens through APIs (Application Programming Interfaces), which act as a bridge between the two.</p>
+<ul>
+<li>
+<p><strong>API Communication</strong>: APIs allow the front end to send requests to the back end (e.g., fetching data or submitting user input) and receive the necessary data or responses. APIs can be RESTful or GraphQL, depending on the design of the system. Refer to <a title="1.11 APIs" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-11-apis-2" class="ext" target="_blank" rel="noopener" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/1-dot-11-apis-2" data-api-returntype="Page">1.11 APIs</a> for more information</p>
+</li>
+<li>
+<p><strong>Data Exchange</strong>: Back-end systems typically process requests from the front end and return structured data, often in formats like JSON or XML. The front end can then display this data to users.</p>
+</li>
+<li>
+<p><strong>Real-Time Updates</strong>: In some applications, the front end needs real-time data from the back end (e.g., notifications, live chat, or financial transactions). Technologies like WebSockets or server-sent events enable real-time communication between the front end and back end.</p>
+</li>
+</ul>
+<p>By ensuring efficient communication, back-end systems make sure that front-end users get timely responses and can interact smoothly with the application.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Security Engineering</h3>
+<div class="dp-panel-content">
+<p>Security is one of the most critical aspects of back-end engineering. The back end is responsible for protecting sensitive data, ensuring that users are authenticated, and guarding against potential security threats. Some common security practices include:</p>
+<ul>
+<li>
+<p><strong>Authentication and Authorisation</strong>: Back-end systems manage user authentication (verifying a user’s identity) and authorisation (determining what resources a user can access). Technologies like OAuth or JWT (JSON Web Tokens) are often used to manage secure logins and user sessions. Refer to <a title="2.4 Securing the Web" href="../lessons/12951-044.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/2-dot-4-securing-the-web" data-api-returntype="Page">2.4 Securing the Web</a> for more related info.</p>
+</li>
+<li>
+<p><strong>Data Encryption</strong>: Sensitive data (such as passwords, financial information, and personal details) must be encrypted both at rest (in the database) and in transit (as it moves between the front end and back end). HTTPS and SSL certificates are commonly used to encrypt data in transit. </p>
+</li>
+<li>
+<p><strong>Secure Coding Practices</strong>: Back-end engineers must write secure code to prevent vulnerabilities like SQL injection or cross-site scripting (XSS). Using parameterised queries and input validation are key techniques to protect against attacks. Refer to <a title="1.13 Minimise Vulnerabilities" href="../lessons/12951-020.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/1-dot-13-minimise-vulnerabilities" data-api-returntype="Page">1.13 Minimise Vulnerabilities</a> for more related info.</p>
+</li>
+<li>
+<p><strong>Firewalls and Intrusion Detection</strong>: Firewalls can block unauthorised access to the server, while intrusion detection systems monitor for suspicious activity and potential breaches.</p>
+</li>
+</ul>
+<p>Security engineering ensures that the software application is protected from threats and that user data remains confidential and safe from malicious actors.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-info">
+<div class="card-body">
+<h4 class="card-title">Related Content</h4>
+<p class="card-text">For a deeper look into how back-end engineering contributes to web applications specifically, refer to <a title="2.15 Backend Development" href="../lessons/12951-057.html" data-course-type="wikiPages" data-published="false" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/pages/2-dot-15-backend-development" data-api-returntype="Page">2.15 Backend Development</a>. It provides insights into the back-end components that ensure a web application's functionality, security, and scalability.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Theory</strong></p>
+<ul class="card-text">
+<li>Direct the students to an activity to be completed in their OneNote</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="icon-materials-required-light icon-Solid" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li>Provide instructions for a practical activity or direct the students to an EdStem activity</li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li>List sources here</li>
+</ul>
+</div>
+</div>
+</div>
+</div><h3 class="sub">After</h3>
+<div class="readnav"><a href="12951-m4.html">← previous module</a><a href="../course-12951.html">all modules</a><a href="12951-m6.html">next module →</a></div><link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+<script>
+(function(){var p=document.getElementById('prog');if(!p)return;
+ function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+  p.textContent=(max>0?Math.round(h.scrollTop/max*100):0)+'% read';}
+ addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
+</body></html>

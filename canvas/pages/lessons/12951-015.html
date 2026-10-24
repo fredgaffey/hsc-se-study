@@ -1,0 +1,224 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.9 Security Strategies &amp; Tools — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 2 (Term 4: Weeks 3-4) Secure Software Architecture</div>
+<h1 style="margin-top:.2rem">1.9 Security Strategies &amp; Tools</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-9-security-strategies-and-tools" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong><span class="card-text">Apply and evaluate strategies used by software developers to manage the security of programming code:&nbsp;<br></span>- code review<br class="card-text">- s<span class="card-text">tatic application security testing (SAST)</span><br class="card-text">- d<span class="card-text">ynamic application security testing (DAST)</span><br class="card-text">- v<span class="card-text">ulnerability assessment</span><br class="card-text">- p<span class="card-text">enetration testing</span></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul class="card-text">
+<li>Understand the strategies software developers use to manage and improve the security of programming code.</li>
+<li>Learn about the various testing methods and assessments used to identify and address security vulnerabilities in code.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li>Students will be able to explain different strategies used to evaluate and secure programming code.</li>
+<li>Students will understand how to identify security flaws by applying code reviews, static and dynamic testing, vulnerability assessments, and penetration testing.</li>
+<li>Students will evaluate the effectiveness of these strategies in real-world software development.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Code review</h3>
+<div class="dp-panel-content ">
+<h2>Sources of Error</h2>
+<p>Often, as programmers, we overlook errors within the code we write. This can stem from any number of reasons. Personal bias may be up there, and it is the same with negligence, but a far more frequent source of such errors comes from our understanding. We understand this code and believe it's the best way to do this specific task because we wrote it. We often don't see a need to question or refine our approach, not because of ego, but simply because we don't spare any more thought to our ideas and how we implement</p>
+<p>&nbsp;</p>
+<p>The idea is that when a programmer needs to debug their code, they should explain the program line-by-line to a rubber duck. This results in a greater depth of code analysis and can help identify problem areas or find better approaches to issues. If your code is errored and you feel stuck, this might be one way to think through your problem rationally. And don't worry; you don't need a don't duck for this; it's purely metaphoricit'sYou can explain your code to any object, toy, dog, cat, or some fancy esoteric pet you might have around, or even.</p>
+<p>As incredible as chatting to a rubber duck about your code may sound, it doesn't precisely. And, of course, the duck can't exactly talk, meaning you're stuck with your thoughts throughout the process. Sure, the thoughts might be more organised, but that doesn't always help; it's fresh out of you and doesn't account for sources of mistakes, bias and overconfidence, for example.</p>
+<p>That's why we are involved in the process! Another person can bring a fresh perspective to your code and, this time around, even voice it. Of course, it's better if they are themselves programmers, even better if they have more knowledge to share, and even better if they are part of your team.</p>
+<h2>Professional Setting</h2>
+<p>If you are in a professional setting, or specifically in an experienced team, running your code by others to identify errors or mistakes is called a Code Review.</p>
+<p>This has several aspects to it, though most organisations will have this as a last 'sanity check' before the code is deployed or added to the project but after the bots and testing software have had their way with it (we will cover these in the following sections), though some may place it before. Generally, these are done in the text through comments, as nobody has the time to hold a meeting after every change of code, but everyone has time to write up a couple of lines of text about some error they found while glancing the code over.</p>
+<p>This is a more formal process than you may be used to. The scale of the professional software environment is much greater than the one you typically study in, with large teams cooperating on larger projects. So, let's run through an example code review in the developer platform you should all be familiar with at this point: GitHub.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/7a11db7c6ce3515b.png" alt="image.png" width="640" height="637" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527455" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Static application security testing (SAST)</h3>
+<div class="dp-panel-content ">
+<h2>Testing Software</h2>
+<p>We can have our digital tools check our code for us. They won’t be perfect either, as they can only do what we taught them to do. But they are accurate and can be relied on to do a job a relatively infinite amount of times without fail, which isn’t the case with people. As we saw prior, these are generally run after code is deemed “completed” by the programmer but can be run at any stage of development to ensure you’re on the right track.</p>
+<p>Now, let’s look at our first digital Method of Testing.</p>
+<p>&nbsp;</p>
+<h2>SAST</h2>
+<p>Passive. That’s generally what the Static in the name represents. The defining characteristic of this testing method is that it looks through your code without running it.</p>
+<p>The software used here is the programming equivalent of Microsoft Word Spellcheck. It looks through your code and tries to find possible issues and flaws based on information and patterns it has in its database. Generally, these are common flaws previously identified and added in. Much like our beloved Spellcheck holds a dictionary of words and checks grammar based on them, a SAST tool holds a dictionary of vulnerability patterns, meaning it works a bit in reverse, checking that none of these unsafe practices and patterns are within the code you give it. It then generates a report of its findings and recommendations for improving your code.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/d6e0bd83a545a096.png" alt="image.png" width="555" height="312" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527436" data-api-returntype="File" loading="lazy"></p>
+<p>Let’s make an analogy that will help us contrast this methodology with another one later on. A SAST tool sits on the couch until you come and give it code to review. It takes out a highlighter and, still on the couch, circles everything you got wrong. It returns it to you, tells you what you should do, and keeps you sitting on the couch.</p>
+<p>If that sounds a bit dull… It is, but there are two reasons. Firstly, it’s one-half of two methodologies used together, so hold your breath. Secondly, SAST tools are handy since they are pretty fast and tell you if you’re on the right track without using too much time or resources.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/b1fcce4b1957178f.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527322" data-api-returntype="File" loading="lazy"></p>
+<div class="flex max-w-full flex-col flex-grow">
+<div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5" data-message-author-role="assistant" data-message-id="deca6abc-f731-42ff-a600-c6cfe17dda23">
+<div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
+<div class="markdown prose w-full break-words dark:prose-invert dark">
+<p>Bandit is a tool for performing Static Application Security Testing (SAST) on Python code, including Flask applications. By integrating Bandit into your development workflow, you can proactively identify and remediate security vulnerabilities early in the coding process, enhancing the overall security posture of your application.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Dynamic application security testing (DAST)</h3>
+<div class="dp-panel-content">
+<p>DAST is a black-box testing method that evaluates an application's security while running. It simulates external attacks on the application to identify vulnerabilities that attackers could exploit.</p>
+<p><strong>How DAST Works:</strong></p>
+<ul>
+<li>
+<p><strong>Testing in a Live Environment:</strong><br>DAST tools simulate attacks on the running application by sending inputs, such as malformed requests or known attack patterns, to see how the application responds.</p>
+</li>
+<li>
+<p><strong>Common Tools:</strong><br>Tools like OWASP ZAP (Zed Attack Proxy) and Burp Suite perform DAST by identifying security issues such as cross-site scripting (XSS), insecure authentication mechanisms, and weak session management.</p>
+</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/6f039e0b5e2746fe.png" alt="image.png" width="446" height="446" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527429" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Vulnerability assessment</h3>
+<div class="dp-panel-content">
+<p>The Vulnerability Assessment process, a comprehensive approach to system security, involves identifying, quantifying, and prioritising vulnerabilities within a system. Programmers are responsible for ensuring the system's security by conducting checks before sending the code for review or production. This assessment entails a thorough analysis and documentation, typically a checklist of items to be reviewed and verified, ensuring robust system security.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/84f73db0a64a6173.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527439" data-api-returntype="File" loading="lazy"></p>
+<p>In an extensive application, the process generally includes the following steps:</p>
+<p>1. Identifying possible vulnerabilities.<br>2. Analysing the findings to determine potential issues and risks associated with the identified vulnerabilities.<br>3. Perform a risk assessment to evaluate the likelihood and consequences of each risk and prioritise the risks for mitigation.<br>4. Remediation of the identified risks and vulnerabilities may involve removing vulnerabilities, managing risks in alternative ways, and establishing preventive measures or contingencies for potential risks.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Penetration testing</h3>
+<div class="dp-panel-content">
+<p>On the other hand, Penetration Testing involves simulating cyberattacks to evaluate a system's security. It is an authorised attempt to breach Penetration testing, often called "pen testing," which simulates real-world cyberattacks to identify security vulnerabilities that malicious actors could exploit. Pen testing helps determine an application's security posture by actively attempting to breach its defences.</p>
+<p><strong>How Penetration Testing Works:</strong></p>
+<ul>
+<li>
+<p><strong>Simulated Attacks:</strong><br>Ethical hackers (pen testers) use various methods to exploit known and unknown vulnerabilities in a system. This can include attempting to bypass authentication, gain access to sensitive data, or escalate privileges.</p>
+</li>
+<li>
+<p><strong>Manual and Automated Approaches:</strong><br>Pen testers use automated tools and manual techniques to simulate realistic attacks. Tools like Metasploit and Kali Linux are often used alongside manual methods to perform penetration tests.</p>
+</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/6fc5460940ddd0d9.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527352" data-api-returntype="File" loading="lazy"></p>
+<p>This process typically follows a five-step approach:</p>
+<p>1. Planning and reconnaissance: Gathering information about the target system.<br>2. Scanning: Using tools to understand how the target system responds to various intrusion attempts.<br>3. Gaining Access: Attempting to exploit vulnerabilities to gain access to the system.<br>4. Maintaining Access: Trying to sustain access to achieve the test's goals while overcoming protective measures.<br>5. Analysis and Reporting: Compiling the results and providing recommendations based on the penetration test findings.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://www.synopsys.com/glossary/what-is-dast.html#:~:text=Dynamic%20application%20security%20testing%20(DAST)%20is%20a%20method%20of%20AppSec,visibility%20into%20the%20source%20program." target="_blank">Dynamic Application Security Testing (DAST)</a></li>
+<li><a class="inline_disabled" href="https://www.synopsys.com/glossary/what-is-sast.html#A" target="_blank">Static Application Security Testing</a></li>
+<li><a class="inline_disabled" href="https://www.opentext.com/en-gb/what-is/sast" target="_blank">What is Static Application Security Testing (SAST)?</a></li>
+<li><a class="inline_disabled" href="https://www.synopsys.com/glossary/what-is-penetration-testing.html" target="_blank">Penetration Testing</a></li>
+<li><a class="inline_disabled" href="https://snyk.io/learn/code-review/finding-vulnerabilities-in-source-code/#perform-static-code" target="_blank">How to find security vulnerabilities in source code</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.imperva.com/learn/application-security/vulnerability-assessment/" target="_blank">What is Vulnerability Assessment</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="1.9 Security Strategies &amp; Tools" href="https://canvas.kings.edu.au/courses/12951/assignments/204815" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204815" data-api-returntype="Assignment">1.9 Security Strategies &amp; Tools</a><strong><a title="1.9 Security Strategies &amp; Tools" href="https://canvas.kings.edu.au/courses/12951/assignments/204815" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204815" data-api-returntype="Assignment"></a></strong></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<p class="card-text"><a class="inline_disabled" href="https://edstem.org/au/courses/19403/lessons" target="_blank"><strong>SAST</strong></a></p>
+<p class="card-text"><a class="inline_disabled" href="https://edstem.org/au/courses/19403/lessons" target="_blank"><strong>DAST</strong></a></p>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%201.%20Secure%20Software%20Architecture/PPTs/1.9%20Security%20Strategies%20%26%20Tools.pptx?d=wb17e8eb8707542a495f9c38451a22751&amp;csf=1&amp;web=1&amp;e=a9uyke">1.9 Security Strategies &amp; Tools.pptx</a></p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/1-dot-9-security-strategies-and-tools" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={b17e8eb8-7075-42a4-95f9-c38451a22751}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+&nbsp;</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-014.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-016.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

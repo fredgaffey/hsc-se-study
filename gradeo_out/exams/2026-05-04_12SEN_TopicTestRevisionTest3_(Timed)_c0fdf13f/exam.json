@@ -1,0 +1,1854 @@
+{
+  "exam": "12SEN_TopicTestRevisionTest3 (Timed)",
+  "syllabus": "Software Engineering",
+  "publisher": null,
+  "topics": [
+    "Secure Software Architecture",
+    "Programming for the Web",
+    "Software Automation",
+    "Software Engineering Project"
+  ],
+  "outcomes": [
+    "SE-12-08",
+    "SE-12-06",
+    "SE-12-05",
+    "SE-12-04",
+    "SE-12-03",
+    "SE-12-01",
+    "SE-12-09",
+    "SE-12-02",
+    "SE-12-07"
+  ],
+  "status": "COMPLETED",
+  "results_released": true,
+  "submitted": "2026-05-04T13:05:27.230Z",
+  "started": "2026-05-04T12:01:04.443Z",
+  "duration_minutes": 120,
+  "markers": [
+    "TKS CST"
+  ],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/c0fdf13f-55b7-4537-8534-de67721701c5",
+  "marking_session_id": "c0fdf13f-55b7-4537-8534-de67721701c5",
+  "exam_id": "c344ea37-10ae-41af-907f-26ab53592060",
+  "session_id": "24d27710-fce5-46f3-bb86-be9d292f74d1",
+  "total_mark": 36,
+  "parts_answered": 22,
+  "parts_marked": 23,
+  "parts_total": 23,
+  "total_available": 61,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "debb09ce-e22b-4ffc-ac28-307658dbc389",
+      "title": "Security Strategies & Tools (MC, TKS 2025) ",
+      "topic": "Security Strategies & Tools",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "02dbe9e2-dc60-407b-9dd9-94b9ecdaec70",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "In what stage of development can SAST tools be applied?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Only during integration testing.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Only during initial design phases.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Only after the code is completed.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "At any stage after Requirements definition.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "D"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "694e3a71-8cc7-4f59-bd52-cea6e42a55ae",
+      "title": "Social/Ethical/Legal Issues (OR, TKS 2025)",
+      "topic": "Social/Ethical/Legal Issues",
+      "label": "OR",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "2fd9b053-add3-4073-bdba-dffeb76fc864",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "Match each scenario to the primary issue or ramification it demonstrates in the context of secure software development.\n\nSelect only one correct response per row.",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "Employment Impact",
+              "Data Security / Privacy",
+              "Copyright / IP",
+              "Digital Disruption"
+            ],
+            "rows": [
+              {
+                "statement": "A company uses automated tools, reducing demand for manual testing roles.",
+                "correct": [
+                  "Employment Impact"
+                ],
+                "yours": [
+                  "Employment Impact"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A start-up patents its secure authentication method to prevent competitors copying it.",
+                "correct": [
+                  "Copyright / IP"
+                ],
+                "yours": [
+                  "Copyright / IP"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A healthcare app uses encryption and access controls for patient records.",
+                "correct": [
+                  "Data Security / Privacy"
+                ],
+                "yours": [
+                  "Data Security / Privacy"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A logistics firm moves to a cloud platform that replaces older systems with secure APIs.",
+                "correct": [
+                  "Digital Disruption"
+                ],
+                "yours": [
+                  "Digital Disruption"
+                ],
+                "right": true
+              }
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "rows": [
+              {
+                "statement": "A company uses automated tools, reducing demand for manual testing roles.",
+                "yours": [
+                  "Employment Impact"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A start-up patents its secure authentication method to prevent competitors copying it.",
+                "yours": [
+                  "Copyright / IP"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A healthcare app uses encryption and access controls for patient records.",
+                "yours": [
+                  "Data Security / Privacy"
+                ],
+                "right": true
+              },
+              {
+                "statement": "A logistics firm moves to a cloud platform that replaces older systems with secure APIs.",
+                "yours": [
+                  "Digital Disruption"
+                ],
+                "right": true
+              }
+            ]
+          },
+          "result": {
+            "mark": 2,
+            "available": 2,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Correctly selects all options"
+            },
+            {
+              "marks": "1",
+              "criterion": "Partially correct selection"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "63c07868-9a53-4131-8dce-4f55c3a91c95",
+      "title": "Enterprise Benefits (MS, TKS 2025)",
+      "topic": "Enterprise Benefits",
+      "label": "MS",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A software enterprise is reviewing its long-term strategy. It wants to gain the most benefit from implementing secure development practices across all future projects.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "64bbca3f-3865-4b92-ae80-5722f4a3bfa1",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Select TWO benefits the company is most likely to achieve",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Developers will no longer need to perform manual testing.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "The company can eliminate the need for any external penetration testing.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Security becomes embedded in company culture, improving future development.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "Secure components can be reused across projects, increasing development speed.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "C",
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C",
+              "D"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 1,
+                "feedback": null,
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question_id": "560d112a-5bdf-46ae-ab5b-8b4f48ea3622",
+      "title": "Collaborative Work  Practises (MC, TKS2025)",
+      "topic": "Collaborative Work  Practises",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "4b2e627f-ebcd-494c-a948-2839cbce49b8",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which practice improves integration between frontend and backend teams?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Ignoring frontend needs.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Using different programming languages.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Working separately and merging at the end.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Defining API endpoints and data formats early.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "D"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question_id": "96a867e2-4d06-44b3-9da2-575e9c5bd9e5",
+      "title": "Web Requests (MC, TKS2025)",
+      "topic": "Web Requests",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "79405f5a-8996-48d7-b982-877ab18835d3",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "When a user sends a request to a dynamic web page, which of the following shows the correct order of processes in the back end?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Database &rarr; Web server &rarr; URL Router &rarr; Response",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "URL Router &rarr; Database &rarr; Web server &rarr; Response",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "URL Router &rarr; Web server &rarr; Database &rarr; Response",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Web server → URL Router → Database → Response",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [],
+            "correct": false
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 1,
+                "feedback": "URL Router goes in between so that the web server can communicate to the database.",
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question_id": "d5a918a5-6dc5-474c-9857-b0be9fd09108",
+      "title": "Web Elements (MC, TKS2025)",
+      "topic": "Web Elements",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "01be44ce-d0a0-4207-8cb4-b7979c10fb8a",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following tasks is most commonly handled by a back-end system?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Styling the web page layout.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Handling mouse and keyboard events.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Managing authentication and access control",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "Displaying images and video content in the browser.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question_id": "a4b6bd4a-388b-4be3-b2ca-582cdd1f539e",
+      "title": "Difficulties (OR, TKS 2025)",
+      "topic": "Difficulties",
+      "label": "OR",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "5a088b9e-8c97-4235-b5a4-fc72cbafa722",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "For each situation in the left-hand column, select the strategy most likely to introduce the described challenge.",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "Looking Online",
+              "Collaborating with Peers",
+              "Outsourcing"
+            ],
+            "rows": [
+              {
+                "statement": "Difficulty verifying whether a solution is trustworthy",
+                "correct": [
+                  "Looking Online"
+                ],
+                "yours": [
+                  "Looking Online"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Misunderstandings caused by time zone differences",
+                "correct": [
+                  "Outsourcing"
+                ],
+                "yours": [
+                  "Outsourcing"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Reduced hands-on problem-solving by the internal development team",
+                "correct": [
+                  "Outsourcing"
+                ],
+                "yours": [
+                  "Outsourcing"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Disagreements over the best approach to solving a problem",
+                "correct": [
+                  "Collaborating with Peers"
+                ],
+                "yours": [
+                  "Collaborating with Peers"
+                ],
+                "right": true
+              }
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "rows": [
+              {
+                "statement": "Difficulty verifying whether a solution is trustworthy",
+                "yours": [
+                  "Looking Online"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Misunderstandings caused by time zone differences",
+                "yours": [
+                  "Outsourcing"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Reduced hands-on problem-solving by the internal development team",
+                "yours": [
+                  "Outsourcing"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Disagreements over the best approach to solving a problem",
+                "yours": [
+                  "Collaborating with Peers"
+                ],
+                "right": true
+              }
+            ]
+          },
+          "result": {
+            "mark": 2,
+            "available": 2,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Correctly selects all options"
+            },
+            {
+              "marks": "1",
+              "criterion": "Partially correct selection"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question_id": "ffda77cb-cfae-4f27-908d-549859ef7fe1",
+      "title": "WAgile Approach (MC, TKS2025)",
+      "topic": "WAgile Approach",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "aa214ada-9e56-4d8e-b751-a75a604a523f",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Why might WAgile be unsuitable for very small projects?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It requires no documentation at all.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It doesn&rsquo;t support team collaboration.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Its iterative cycles are too short for small teams.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "The structured setup may cause extra overhead.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "D"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question_id": "b49a0b6f-f0dc-47c8-90ec-f6447616eac6",
+      "title": "Design (Q7, 2015 HSC Exam SDD)",
+      "topic": "Design",
+      "label": "Q7",
+      "kind": "2015 HSC Exam SDD",
+      "source": null,
+      "copyright": "HSC 2015",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "dcfc6aaa-5603-4ee0-a49a-45945568680d",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "How can the inclusivity of a computer program be enhanced?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "By replacing password characters with asterisks",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "By providing a range of methods for inputting data",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "By providing all the necessary library routines in a single DLL",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "By ensuring that all sources have been included in the acknowledgements",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question_id": "7affe905-dd2e-4040-a7c3-cdc18fdb8701",
+      "title": "Security and Resilience of Software (SA, TKS 2025)",
+      "topic": "Security and Resilience of Software",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "c886b7bb-08b3-431d-b297-2b8ad76e434b",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain why regular patching is important for maintaining software security.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 90
+          },
+          "your_response": {
+            "answered": true,
+            "text": "if patches are not aplied regualy attacers can find vuribliys and exploit them before they are secured this can lead to data being exfiltrted and catosrific damage to you compoys infsture.\n\nFor example openclaw has hundreds of CVE's and this has lead to 13,000 + open claw instence exposed on VPS. this is why open claw has a reputaion of being insecure unless you harden it you self.",
+            "images": [],
+            "word_count": 68
+          },
+          "result": {
+            "mark": 3,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 3,
+                "feedback": "Looks good.",
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Explains why regular patching is important to maintain software security."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes why regular patching"
+            },
+            {
+              "marks": "1",
+              "criterion": "Clearly describes 1 ways OR outlines 2 ways in which system hardening can improve software security."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Regular patching is important because it fixes known vulnerabilities and security flaws in software, preventing attackers from exploiting them. It also helps maintain compliance with security standards and keeps systems protected against emerging threats."
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question_id": "5bc8c9e2-f634-4a5f-afbe-494cc2795dbc",
+      "title": "Security of Programming Code (SA, TKS 2025)",
+      "topic": "Security of Programming Code",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "ac6e4b83-b02d-401a-a843-d6824730404a",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe the role of code review in identifying programming errors and improving security.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 90
+          },
+          "your_response": {
+            "answered": true,
+            "text": "When devs write code they often constract a carll mentel model of that is happeing and this can be wrong somtines containg wrong asumtins or logical errores. \n\na example in python \n\nif n >= 0: # check not is neg\n\nthis is a example of a error that can be made the \">\" should be \"<\" this is why a code reviw is imptant it is like getting someone else to check you work.",
+            "images": [],
+            "word_count": 74
+          },
+          "result": {
+            "mark": 2,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "You must also discuss the role of code reviews in enhancing security, specifically how a second reviewer can identify potential vulnerabilities or weaknesses that could be exploited by attackers before the software is finalised.",
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly describes the role of code reviews in finding errors AND improving security."
+            },
+            {
+              "marks": "2",
+              "criterion": "Clearly describes the role of code reviews in finding errors OR improving security.\n\nOR\n\nOutlines the role of code reviews in finding errors AND improving security."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Code review helps identify programming errors by allowing another developer to examine the code for mistakes, poor practices, or overlooked logic. It improves security by spotting vulnerabilities that the original author may have missed, ensuring safer and more reliable code before it is deployed."
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question_id": "e7c48dfb-0911-47b7-b01f-132e38872b72",
+      "title": "Defensive Data (SA, TKS 2025)",
+      "topic": "Defensive Data",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "51d092ae-5a34-4d20-91ae-1f8d60daacdb",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain why input validation is important in software development and give two examples of input validation techniques.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "Input validatin is essental to makeing good softhere as if you dont do this it will lead to hard to dignose errore cause by use error or miloious attack. for example lenght checking is where you will check the lengh of a provided imput for exaple a password needs to be 10 caricters long. this ensure that you dont have buffer oveflows or insecure passords. NOTE: memory mangment isue were a substantl cause for many bugs found in 2024. range checking is anouther form of input validation it is where you see if the number is with in a valid range. for example a month field might be range checkt to see if it is in <= 1 and <= 12.",
+            "images": [],
+            "word_count": 121
+          },
+          "result": {
+            "mark": 3,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 3,
+                "feedback": "Well done.",
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Thorough explanation of input validation importance and two clear examples with correct terminology."
+            },
+            {
+              "marks": "2",
+              "criterion": "Sound explanation with at least one example detailed correctly."
+            },
+            {
+              "marks": null,
+              "criterion": "Basic explanation with examples lacking depth or clarity."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Input validation is important because it ensures that data entered by users meets expected formats, helping prevent errors and security risks like injection attacks. It acts as the first line of defence by rejecting invalid or malicious input before it can be processed. Examples include type checking, which verifies that input is of the correct data type (e.g., number or string), and length checking, which restricts inputs to a specified number of characters to avoid overflow or abuse."
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question_id": "0b70abc1-7aae-4800-86aa-925329252ea1",
+      "title": "SQL (ER, TKS 2025)",
+      "topic": "SQL",
+      "label": "ER",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "As part of a class project, a student has created a video explaining how SQL is used in enterprise environments to manage large-scale databases.\n\n[▶ VIDEO (open this file)](assets/0d7ecf5f-cfef-42c2-986e-f4d3a7038b66.mp4)",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "ea8c8963-904a-42aa-98d7-ba6f72d54ca3",
+          "part": "Part A",
+          "marks_available": 8,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Evaluate the effectiveness of SQL in supporting enterprise-level data management and security, using examples and insights from the video to support your response.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 400
+          },
+          "your_response": {
+            "answered": true
+          },
+          "result": {
+            "mark": 0,
+            "available": 8,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 0,
+                "feedback": null,
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "8",
+              "criterion": "Clearly evaluates SQL’s effectiveness in enterprise data management and security whilst referencing both strengths and limitations. Integrates relevant and specific examples from the video to support the response."
+            },
+            {
+              "marks": "6-7",
+              "criterion": "Makes a judgement about SQL&rsquo;s effectiveness in enterprise data management and security that has some flaws. Integrates relevant and specific examples from the video to support the response."
+            },
+            {
+              "marks": "4-5",
+              "criterion": "Describes SQL&rsquo;s effectiveness in enterprise data management and security whilst referencing both strengths and limitations."
+            },
+            {
+              "marks": "2-3",
+              "criterion": "Outlines SQL&rsquo;s effectiveness in enterprise data management and security."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": "Note that answers could include numerous points:\n\n-   Explanation of SQL as a language used to manage relational databases in enterprise environments.\n-   Description of how SQL supports data management through commands such as `SELECT`, `UPDATE`, `DELETE`, and `JOIN`.\n-   Reference to SQL’s ability to handle large volumes of structured data efficiently.\n-   Discussion of data integrity features in SQL, including the use of constraints like `PRIMARY KEY`, `FOREIGN KEY`, and `CHECK`.\n-   Explanation of transaction control (`BEGIN`, `COMMIT`, `ROLLBACK`) and its importance in maintaining reliable operations.\n-   Description of SQL’s role in enterprise security through access control mechanisms (`GRANT`, `REVOKE`) and role-based permissions.\n-   Reference to examples from the video, such as restricting access to financial records or updating customer data securely.\n-   Mention of SQL’s widespread use and compatibility across enterprise platforms.\n-   Evaluation of SQL’s limitations, such as vulnerability to SQL injection if input is not properly validated.\n-   Discussion of the need for secure coding practices and skilled developers to implement SQL effectively.\n-   Consideration of SQL’s complexity and potential performance issues in large-scale systems.\n-   A balanced judgement on SQL’s overall effectiveness, acknowledging both its strengths and areas that require careful implementation.",
+          "sample_answer": "SQL (Structured Query Language) is a widely used tool in enterprise computing for managing and securing data. Its effectiveness lies in its ability to handle large volumes of structured data efficiently, while also offering features that support data integrity and security. However, its success depends on how well it is implemented and maintained.\n\nIn terms of data management, SQL allows enterprises to perform complex operations such as querying, updating, and reporting. These capabilities are essential for businesses that rely on real-time access to accurate information. For example, the video demonstrates how SQL commands like `SELECT`, `UPDATE`, and `JOIN` are used to retrieve and manipulate data across multiple tables. This shows how SQL enables businesses to generate insights and make informed decisions quickly.\n\nSQL also supports data integrity through the use of constraints such as `PRIMARY KEY`, `FOREIGN KEY`, and `CHECK`. These ensure that data entered into the database follows specific rules, reducing the risk of errors and inconsistencies. Transactions, managed through commands like `BEGIN`, `COMMIT`, and `ROLLBACK`, allow multiple operations to be treated as a single unit. This is particularly useful in enterprise systems where data accuracy is critical, such as in financial or healthcare databases.\n\nFrom a security perspective, SQL provides access control features that help protect sensitive data. The video highlights how commands like `GRANT` and `REVOKE` are used to assign or remove user permissions. This allows organisations to implement role-based access control, ensuring that only authorised users can view or modify certain data.\n\nDespite these strengths, SQL does have limitations. One of the main concerns is its vulnerability to SQL injection attacks, which occur when malicious input is used to manipulate queries. The video explains that without proper input validation and secure coding practices, attackers can gain unauthorised access to data. Additionally, SQL can become complex to manage in large systems and often requires skilled developers to maintain performance and security.\n\nIn conclusion, SQL is a highly effective tool for enterprise data management and security. Its strengths in scalability, precision, and control make it a valuable asset. However, its effectiveness depends on secure implementation, regular maintenance, and the expertise of those managing the system.\n\n**Note that answers could include numerous points:**\n\n-   Explanation of SQL as a language used to manage relational databases in enterprise environments.\n-   Description of how SQL supports data management through commands such as `SELECT`, `UPDATE`, `DELETE`, and `JOIN`.\n-   Reference to SQL’s ability to handle large volumes of structured data efficiently.\n-   Discussion of data integrity features in SQL, including the use of constraints like `PRIMARY KEY`, `FOREIGN KEY`, and `CHECK`.\n-   Explanation of transaction control (`BEGIN`, `COMMIT`, `ROLLBACK`) and its importance in maintaining reliable operations.\n-   Description of SQL’s role in enterprise security through access control mechanisms (`GRANT`, `REVOKE`) and role-based permissions.\n-   Reference to examples from the video, such as restricting access to financial records or updating customer data securely.\n-   Mention of SQL’s widespread use and compatibility across enterprise platforms.\n-   Evaluation of SQL’s limitations, such as vulnerability to SQL injection if input is not properly validated.\n-   Discussion of the need for secure coding practices and skilled developers to implement SQL effectively.\n-   Consideration of SQL’s complexity and potential performance issues in large-scale systems.\n-   A balanced judgement on SQL’s overall effectiveness, acknowledging both its strengths and areas that require careful implementation."
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question_id": "b6db57f1-3c2b-46c0-b533-ece998d89c14",
+      "title": "Object-Relational Mapping (SA, TKS2025)",
+      "topic": "Object-Relational Mapping",
+      "label": "SA",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "4f96d5f3-4463-46f6-85eb-0929dd99b4f8",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain a performance trade-off when using an ORM instead of just SQL.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 60
+          },
+          "your_response": {
+            "answered": true,
+            "text": "If you use a ORM you will genraly get worse pofanse as you will need to creat the obgect evry time but making obgects make it easer to work will but it is slower. On the outher hand you have SQL that is much better pofance but you need to handle the passing of the data your self which is more complex. \n\nFor example I chose to use a ORM in my sofwhere engenrin prgect as it was faster to devlop and i was willing to take the mincule progamnce drop. But if i was a large compony storing 10 000 000 user entrys and documnst i would use SQL as it is much cheaper but it will be more complex.",
+            "images": [],
+            "word_count": 121
+          },
+          "result": {
+            "mark": 3,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 3,
+                "feedback": "Discuss how ORMs sometimes generate inefficient queries for complex data relationships, which increases database load compared to hand-optimised SQL.",
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Correctly explains a performance trade-off when using ORM instead of SQL."
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes a performance trade-off when using ORM instead of SQL."
+            },
+            {
+              "marks": "1",
+              "criterion": "Desmonstrates some understanding."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "ORM adds a layer between your code and the database, which reduces control over how queries are written and executed. This can result in less efficient SQL being generated, especially for complex operations or large data sets, leading to increased load on the database compared to custom written SQL and slower response times."
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question_id": "16ce51bb-48a5-49b1-a993-be8e5bc0c13d",
+      "title": "Content Management System (SA, TKS2025)",
+      "topic": "Content Management System",
+      "label": "SA",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "52074df8-c21a-4a05-b271-61600c1d91f4",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain why a CMS might be preferred for a small business website.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 60
+          },
+          "your_response": {
+            "answered": true,
+            "text": "This conteent managemt seirvise can be priferd there is less of time/ learnign curve that they may not want to invest.\n\nfor example if i wanted a simple ecomse store it would be realy esey to do the auth and login. but if the user dident do that they would have to do all pament and also auth, think about crsf cors and many outher thing that i had no ider about but and i have done a SDD. this small team that my have just a maketing guy needing the throw togeter a website. \n\nthis is why espicaly for a small bisnues this is not a good idrer to make there own website but instad use CMS.",
+            "images": [],
+            "word_count": 118
+          },
+          "result": {
+            "mark": 3,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 3,
+                "feedback": "Improve your response by using more formal terminology and explicitly linking these advantages to the business's need for cost-effectiveness.",
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Clearly explains 2 reasons why a CMS may be preferred for a small business website."
+            },
+            {
+              "marks": "2",
+              "criterion": "Explains one reason why a CMS may be preferred for a small business website.\n\nOR \n\nDescribes two relevant features of CMS's."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "A CMS might be preferred for a small business website because it allows non-technical users to easily create, edit, and manage content without needing coding skills. It also offers ready made templates and plugins that speed up development and reduce costs, making it ideal for small budgets and quick setup."
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question_id": "520538f4-21b5-4929-94a9-92677d0f6c60",
+      "title": "Programming - ASCII Encode (Sequence, 2025 TKS)",
+      "topic": "Programming - ASCII Encode",
+      "label": "Sequence",
+      "kind": "2025 TKS",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "1e62ef21-bb1f-42e8-9bc8-be11debe4193",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "Write a Python program that takes a string entered by the user and then encodes it by shifting it one letter forward. Your answer must be **all letters.** \n\nYou only need to consider **lowercase** characters. \n\nNote that the ASCII number for 'a' is 97.",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": null
+          },
+          "your_response": {
+            "answered": true,
+            "code": "# Write a Python program that takes a string entered by the user and then encodes it by shifting it one letter forward. Your answer must be all letters. \n\n# You only need to consider lowercase characters. \n\n# Note that the ASCII number for 'a' is 97. \nin_string = input(\"enter you string: \")\nout_string = \"\"\nfor i in in_string:\n  out_string += chr(ord(i)+1)\nprint(out_string)\n  "
+          },
+          "result": {
+            "mark": 2,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "The current code does not account for the wrap-around from z back to a, which results in an incorrect character when z is entered. To improve the program, you should include a conditional check to identify when a character is z and manually set it back to a to ensure the output remains within the lowercase alphabet.",
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Provides a substantially correct algorithms that includes the following features:\n\nUses input to obtain a lowercase string from the user\nUses ord() to convert characters to ASCII values\nIncrements the ASCII value of each character by 1 (accounting for 'z' to 'a')\nUses chr() to convert back to characters and constructs the new encoded string.\nCorrectly outputs the encoded string"
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides an algorithm that includes most key features, but has minor logic or syntax errors that do not significantly impact the outcome"
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides an algorithm that addresses some key aspects of the task (e.g. correctly converts or encodes some characters, loop may be flawed)"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "text = input(\"Enter a lowercase word: \")  \nencoded = \"\"  \n  \nfor char in text:  \n    ascii\\_val = ord(char)  \n    if ascii\\_val == (97 + 25):  # Check if it's 'z'  \n        new\\_char = chr(97)     # Wrap around to 'a'  \n    else:  \n        new\\_char = chr(ascii\\_val + 1)  \n    encoded += new\\_char  \n  \nprint(\"Original string:\", text)  \nprint(\"Encoded string:\", encoded)"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question_id": "028d5466-0dc2-46b4-872a-2c02dd7de515",
+      "title": "Language Dependent Optimisation (SA, TKS 2025)",
+      "topic": "Language Dependent Optimisation",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025\n",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "e1c19431-f47d-4642-bda3-e5b94d7b1a84",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Outline why code optimisation in Python is tricky as opposed to others.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 80
+          },
+          "your_response": {
+            "answered": true,
+            "text": "Python is a langae that is very abstract so therfor it is dificlt to do meory mangment unlike C. in C you can difine pointers and do things like maloc() but in python you can not uless you comple parts like useing cthon but this is complex and 'tricky\"",
+            "images": [],
+            "word_count": 49
+          },
+          "result": {
+            "mark": 1,
+            "available": 2,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 1,
+                "feedback": "While you correctly identified that limited memory management and a lack of pointers make Python challenging to optimise, the response would be stronger if it addressed Python’s nature as an interpreted and dynamically typed language. Explaining how runtime type checking and line by line execution add overhead compared to compiled languages would provide a more comprehensive outline of why performance tuning is particularly tricky.",
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Clearly outlines why code optimisation in Python is tricky."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Python is an interpreted and dynamically typed language. This means that code is executed line-by-line and types are checked at runtime, which can slow down performance. In contrast, compiled languages like C++ or Java perform type checking and optimisation during compilation, making them faster and easier to optimise."
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question_id": "11429f73-9710-4ef0-b616-d2ee6d272e09",
+      "title": "Software Project (Q22, 2019 HSC Exam SDD)",
+      "topic": "Software Project",
+      "label": "Q22",
+      "kind": "2019 HSC Exam SDD",
+      "source": null,
+      "copyright": "HSC 2019",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "6ef72c4b-c15e-49fb-b1a8-ca46ef1ee2fe",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Identify TWO advantages and TWO disadvantages to users if a particular software development company is dominant in the software marketplace",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "There are many advangaes and disavantages to the to the user. some advantages include better compadiblit insed of switch between compedoters the user can have evryting in one place this is simlar to google drive ingrates semlessly with docs and sites\n\n_IS IT OK TO JUST ANSWER IN BULETE POINTS_\n\nTWO disadvantages\n\n-   eorbidant pricing (adoby)\n-   single point to failer\n\nTWO advantages\n\n-   compadiblity \n-   training",
+            "images": [],
+            "word_count": 63
+          },
+          "result": {
+            "mark": 2,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "You should present your answer in full sentences to clearly explain how a company's dominance in the marketplace directly causes these specific advantages and disadvantages for the user. Just dot points doesn't link back to question well enough for 3/3.",
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Identifies TWO advantages and TWO disadvantages to users if a particular software development company is dominant in the software marketplace"
+            },
+            {
+              "marks": "2",
+              "criterion": "Identify ONE advantage and ONE disadvantage to users if a particular software development company is dominant in the software marketplace"
+            },
+            {
+              "marks": "1",
+              "criterion": "Identifies a relevant issue"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "A large customer base (with a dominant developer) results in potentially more support being available through user groups. Because more clients use the product, most errors have been addressed. \n\nHowever, less competition leads to less incentive for innovative creative ideas or maintenance of the product. Also, there is less incentive to respond to user requests for support."
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "question_id": "175a015c-7581-40c2-b4c4-7d455c1e712d",
+      "title": "Class Diagrams (Draw/MCQ, TKS 2025)",
+      "topic": "Class Diagrams",
+      "label": "Draw/MCQ",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025\n",
+      "stimulus": "A new online shopping platform is being developed using Java, and the following requirements have been identified:\n\n-   A customer can have multiple shopping carts, but they always have one active cart by default when they log in.\n    \n-   A shopping cart can contain multiple items, but each item belongs to only one cart. Items include products such as electronics, clothing, and groceries. Items can be both added and removed from the cart, as well as viewed.\n    \n-   Each item has a name, price, and quantity.\n    \n-   There can be different products that are cart items. Electronics have a warranty period, clothing has a size, and groceries have an expiry date.\n    \n-   A customer can add or remove items from their cart or delete entire carts, but they must always have at least one active cart.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "59ad5b25-7197-4636-8a12-1912e08dfa6a",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "DRAWING_V2",
+          "prompt": "Construct a class diagram to represent the online shopping platform.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "drawing_png": "drawings/q19_Part_A.png",
+            "drawing_scene": "drawings/q19_Part_A.excalidraw.json",
+            "drawing_text": {
+              "element_counts": {
+                "rectangle": 3,
+                "text": 4
+              },
+              "texts": [
+                {
+                  "text": "customer",
+                  "inside": null
+                },
+                {
+                  "text": "cart",
+                  "inside": null
+                },
+                {
+                  "text": "item",
+                  "inside": null
+                },
+                {
+                  "text": "this bad bosidin fork is\nunsable i cant clike anywehre\nit just wont work my mouse\nis up 3 cm but it paere to be\ndown so i need to clik 3 cm\nbelow to click on it \nPLEASE FIX THIS BEFORE\nMY EXAM ON TURS (i am on\nweb) might not be a isue on\nthe real seb",
+                  "inside": null
+                }
+              ],
+              "shapes": [
+                {
+                  "shape": "rectangle",
+                  "label": "[rectangle]"
+                },
+                {
+                  "shape": "rectangle",
+                  "label": "[rectangle]"
+                },
+                {
+                  "shape": "rectangle",
+                  "label": "[rectangle]"
+                }
+              ],
+              "connectors": []
+            }
+          },
+          "result": {
+            "mark": 1,
+            "available": 4,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 1,
+                "feedback": null,
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Accurately constructs a class diagram with minimal errors. This includes showing all attributes, inheritance, relationships and multiplicity."
+            },
+            {
+              "marks": "3",
+              "criterion": "Constructs a class diagram with a maximum of two major omissions."
+            },
+            {
+              "marks": "2",
+              "criterion": "Constructs a class diagram with a maximum of four major omissions."
+            },
+            {
+              "marks": "1",
+              "criterion": "Attempts to construct a class diagram relevant to the scenario."
+            }
+          ],
+          "marking_rubric": "Note that there can be variances in the student's relationship descriptions. For instance, using \"uses\" or \"attains\" instead of \"has\".",
+          "marking_guidance": null,
+          "sample_answer": "![](assets/2bebde1b-2e66-4721-93ad-379e74e1bc4e.png)",
+          "sample_answer_images": [
+            "assets/2bebde1b-2e66-4721-93ad-379e74e1bc4e.png"
+          ]
+        },
+        {
+          "part_id": "c1df81e8-48ca-4a5e-b47f-cf739c322017",
+          "part": "Part B",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "As Electronics extends Product, then which of the following is most TRUE?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Electronics will not inherit anything from Product.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Electronics will inhert only the methods from Product.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Electronics will inherit only the attributes from Product.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Electronics will inherit both the attributes and methods from Product.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "D"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        },
+        {
+          "part_id": "59e53227-5116-4a29-8ebe-a68eb6f836c6",
+          "part": "Part C",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best describes the relationship between Customer and Cart?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "One to One",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "B",
+                "text": "One to Many",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Many to One",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Many to Many",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "A"
+            ],
+            "correct": false
+          },
+          "result": {
+            "mark": 0,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 0,
+                "feedback": "Question states customer can have multiple shopping carts.",
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "question_id": "764bfae9-fb6a-4344-bd20-24702981e20e",
+      "title": "Programming - Positive Integers (Iteration, 2025 TKS)",
+      "topic": "Programming - Positive Integers",
+      "label": "Iteration",
+      "kind": "2025 TKS",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "4065bb2c-4068-402c-b552-f4a2b052ddf1",
+          "part": "Part A",
+          "marks_available": 5,
+          "syllabus": "Software Engineering",
+          "answer_type": "CODING",
+          "prompt": "Write a Python program that:\n\n-   Creates an empty list\n-   Uses a loop to ask the user to enter 5 integers\n-   Only adds the number to the list if it is positive\n-   After the loop prints the list of positive numbers entered.",
+          "prompt_images": [],
+          "question": {
+            "language": "PYTHON",
+            "starter_code": null
+          },
+          "your_response": {
+            "answered": true,
+            "code": "# Write a Python program that:\n\n# Creates an empty list\nelist = []\n# Uses a loop to ask the user to enter 5 integers\nfor i in range(1,6):\n  n = int(input(f\"enter int {i}\"))\n# Only adds the number to the list if it is positive\n  if n >= 0: elist.append(n)\nfor i in elist: print(i)\n# After the loop prints the list of positive numbers entered."
+          },
+          "result": {
+            "mark": 4,
+            "available": 5,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 4,
+                "feedback": "Change >= 0 to > 0, and replace the final for-loop with a single print(elist) to match the expected output format.",
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Fully working code: loop collects 5 inputs, conditionally adds positives to list, and final output correct."
+            },
+            {
+              "marks": "2",
+              "criterion": "Minor issue in loop or input validation, but logic mostly accurate and result produced."
+            },
+            {
+              "marks": "1",
+              "criterion": "Inputs and loop correct, but list logic partially implemented (e.g. all values added without condition)."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "positive\\_numbers = \\[\\]  \n  \nfor i in range(5):  \n    num = int(input(\"Enter a number: \"))  \n    if num > 0:  \n        positive\\_numbers.append(num)  \n  \nprint(\"Positive numbers:\", positive\\_numbers)"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "question_id": "1f9405a6-4b52-42b4-9beb-1a62697d83ab",
+      "title": "Intellectual Property (ER, TKS 2025)",
+      "topic": "Intellectual Property",
+      "label": "ER",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "Below is a video excerpt that explains intellectual property. \n\n[▶ VIDEO (open this file)](assets/3e71dd80-dc9c-4ddd-ade5-73667f8549d4.mp4)\n\nSource: Federal Laboratory Consortium for Technology Transfer (FLC)",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "70c4bf08-7d9d-419a-8b6c-4f982a9fc7fc",
+          "part": "Part A",
+          "marks_available": 8,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Evaluate the social, ethical and legal issues associated with secure software development. In your response, refer to the provided infographic and include relevant examples.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 400
+          },
+          "your_response": {
+            "answered": false
+          },
+          "result": {
+            "mark": 0,
+            "available": 8,
+            "not_submitted": true,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 0,
+                "feedback": null,
+                "marked": "2026-03-06T02:08:05.497Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "8",
+              "criterion": "Clearly evaluates the social, ethical and legal issues associated with secure software development and refers to the provided infographic for example(s) and/or definition(s). Response is also well structured and coherent."
+            },
+            {
+              "marks": "6-7",
+              "criterion": "Describes the social, ethical and legal issues associated with secure software development and refers to the provided infographic for example(s) and/or definition(s)."
+            },
+            {
+              "marks": "4-5",
+              "criterion": "Outlines the social, ethical and legal issues associated with secure software development."
+            },
+            {
+              "marks": "2-3",
+              "criterion": "Attempts to outline what social, ethical and legal issues are OR attempts to outline what secure software development is."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Secure software development raises a range of social, ethical, and legal issues that developers must navigate to ensure their work is both effective and responsible. These issues are particularly complex due to the evolving nature of security threats and the collaborative environment in which software is often developed.\n\nFrom a legal perspective, intellectual property (IP) laws such as copyright and patents are essential for protecting software innovations. Under the Copyright Act 1968, developers have the right to protect their source code from unauthorised use. As shown in the infographic, a developer can apply for a copyright of their code for commercial use, allowing others to use the software while retaining legal control. However, legal disputes can arise when multiple contributors are involved, especially in collaborative or open-source projects, making ownership unclear. \n\nEthically, developers must consider the balance between protecting their work and allowing access to tools that benefit society. For example, secure software used in healthcare or public infrastructure may be critical for public safety. Strict enforcement of copyright or patents could limit access to these tools, raising ethical concerns about equity and social responsibility. \n\nSocial issues include the impact of secure software on users and communities. Developers have a responsibility to ensure their software protects user data and privacy. If security features are poorly implemented or withheld due to IP restrictions, users may be exposed to risks. \n\nIn evaluating these issues, it’s clear that legal protections like copyright and patents are effective in supporting innovation and rewarding developers. However, they must be applied flexibly and ethically, especially when public welfare is at stake. Open-source models offer a middle ground, allowing for innovation, collaboration, and access.\n\nIn conclusion, secure software development involves navigating complex social, ethical, and legal considerations. Developers must balance protection with accessibility, and legal rights with ethical responsibilities, to ensure their software serves both enterprise goals and societal needs. \n\n**Answers could also include:**\n\n-   Definition of intellectual property (IP) as legal protection for creations such as software. \n-   Reference to patents protecting unique algorithms or security methods.\n-   Use of open-source licensing to allow collaboration while retaining copyright control. \n-   Example(s) of a developer releasing code for non-commercial use.\n-   Example(s) of a cybersecurity start-up patenting an encryption algorithm.\n-   Discussion of challenges in applying IP laws to rapidly evolving secure software. \n-   Mention of legal disputes over ownership in collaborative development.\n-   Ethical considerations around access to secure software for public welfare.\n-   Evaluation of how well IP laws balance innovation, protection, and accessibility."
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "Security Strategies & Tools": {
+      "mark": 1,
+      "available": 1
+    },
+    "Social/Ethical/Legal Issues": {
+      "mark": 2,
+      "available": 2
+    },
+    "Enterprise Benefits": {
+      "mark": 1,
+      "available": 1
+    },
+    "Collaborative Work  Practises": {
+      "mark": 1,
+      "available": 1
+    },
+    "Web Requests": {
+      "mark": 1,
+      "available": 1
+    },
+    "Web Elements": {
+      "mark": 1,
+      "available": 1
+    },
+    "Difficulties": {
+      "mark": 2,
+      "available": 2
+    },
+    "WAgile Approach": {
+      "mark": 1,
+      "available": 1
+    },
+    "Design": {
+      "mark": 1,
+      "available": 1
+    },
+    "Security and Resilience of Software": {
+      "mark": 3,
+      "available": 3
+    },
+    "Security of Programming Code": {
+      "mark": 2,
+      "available": 3
+    },
+    "Defensive Data": {
+      "mark": 3,
+      "available": 3
+    },
+    "SQL": {
+      "mark": 0,
+      "available": 8
+    },
+    "Object-Relational Mapping": {
+      "mark": 3,
+      "available": 3
+    },
+    "Content Management System": {
+      "mark": 3,
+      "available": 3
+    },
+    "Programming - ASCII Encode": {
+      "mark": 2,
+      "available": 3
+    },
+    "Language Dependent Optimisation": {
+      "mark": 1,
+      "available": 2
+    },
+    "Software Project": {
+      "mark": 2,
+      "available": 3
+    },
+    "Class Diagrams": {
+      "mark": 2,
+      "available": 6
+    },
+    "Programming - Positive Integers": {
+      "mark": 4,
+      "available": 5
+    },
+    "Intellectual Property": {
+      "mark": 0,
+      "available": 8
+    }
+  }
+}

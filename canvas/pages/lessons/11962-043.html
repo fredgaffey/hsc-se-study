@@ -1,0 +1,229 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.2.4 OOP Features: Generalisation &amp; Abstraction — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 7 (Term 2: Weeks 3-4) OOP</div>
+<h1 style="margin-top:.2rem">2.2.4 OOP Features: Generalisation &amp; Abstraction</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-2-dot-4-oop-features-generalisation-and-abstraction" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Apply the key features of an object-oriented programming (OOP) language Including:<br class="card-text">- generalisation<br class="card-text">- abstraction</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_objectives2">
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Understand and apply the concepts of abstraction and generalisation in object-oriented programming to design more efficient and maintainable code</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Define Abstraction and Generalisation</span></li>
+<li><span style="font-size: 13.3333px;">Explain the purpose of abstraction in OOP</span></li>
+<li><span style="font-size: 13.3333px;">Implement abstracting using abstract classes and methods</span></li>
+<li><span style="font-size: 13.3333px;">Understand generalisation and its role in creating class hierarchies</span></li>
+<li><span style="font-size: 13.3333px;">Apply generalisation to design a class structure</span></li>
+<li><span style="font-size: 13.3333px;">Identify real-world applications of abstraction and generalisation</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<hr>
+<p>Please complete the EdStem Activity:&nbsp;<em>Polymorphism</em> <strong>BEFORE</strong> continuing further.&nbsp;</p>
+<hr>
+<h4><strong>Generalisation</strong></h4>
+<p><strong>Generalisation</strong> revolves around the concept of <strong>reusability</strong> in object oriented programming.</p>
+<p>The process of generalisation aims to reduce copied code and improve maintainability by <strong>finding common traits</strong> among various specific classes and <strong>creating a general class</strong> from these traits.</p>
+<p>&nbsp;</p>
+<p><strong>Example of Generalising Classes</strong></p>
+<p>We achieve generalisation by <strong>extracting the essential characteristics</strong> (attributes and methods) that are shared between related or similar classes. These common characteristics then <strong>form the generalised parent class</strong> of those classes (which are now child classes).</p>
+<p>Consider two separate classes called <code>FullTimeEmployee</code> and <code>PartTimeEmployee</code>.</p>
+<p>Both types of employees have a name, a job title and a list of tasks. Full-time employees have a yearly salary, which is paid on a monthly basis. Part-time employees have a set number of working hours per week and are paid on an hourly rate.</p>
+<table class="table-borderless" style="border-collapse: collapse; width: 100%; height: 29px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 49.9536%; height: 29px; border-style: hidden; vertical-align: top;"><img src="../../assets/69cfa466cb2eafd4.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197307" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 49.9536%; height: 29px; border-style: hidden; vertical-align: top;"><img src="../../assets/dd10e937f05a1b4b.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197310" data-api-returntype="File" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p>Looking at the <code>FullTimeEmployee</code> and <code>PartTimeEmployee</code> classes, we can find common characteristics.</p>
+<p>Both classes have the same:</p>
+<ul>
+<li>attributes <code>__name</code>, <code>__title</code> and <code>__tasks</code></li>
+<li>methods <code>getName()</code>, <code>getTitle()</code>, <code>getTasks()</code>, <code>setName()</code>, <code>setTitle()</code>, <code>addTask()</code> and <code>removeTask()</code></li>
+</ul>
+<p>Additionally, the first 3 lines of the <code>printInfo()</code> method are the same between the classes.</p>
+<p>&nbsp;</p>
+<p>Using these common characteristics, let us create a generalised parent class called <code>Employee</code> that will contain the attributes and methods that ALL types of employees should have.</p>
+<p><img src="../../assets/a25f0cd6238cfb2a.png" alt="image.png" width="600" height="1003" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197455" data-api-returntype="File" loading="lazy"></p>
+<p>To complete the generalisation process, we must modify the <code>FullTimeEmployee</code> and <code>PartTimeEmployee</code> classes&nbsp;so that they are child classes that inherit from the <code>Employee</code> parent class.</p>
+<p>The common attributes and methods that were placed in the <code>Employee</code> parent class can now be <strong>removed</strong> from the <code>FullTimeEmployee</code> and <code>PartTimeEmployee</code> classes since these are inherited from the Employee class.</p>
+<table class="table-borderless" style="border-collapse: collapse; width: 100%; height: 29px;" border="1">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 49.9536%; height: 29px; border-style: hidden; vertical-align: top;"><img src="../../assets/d4d8c8f6a8940316.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197321" data-api-returntype="File" loading="lazy"></td>
+<td style="width: 49.9536%; height: 29px; border-style: hidden; vertical-align: top;"><img src="../../assets/4d7ca9040510361c.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197328" data-api-returntype="File" loading="lazy"></td>
+</tr>
+</tbody>
+</table>
+<p>Notice how the <code>FullTimeEmployee</code> and <code>PartTimeEmployee</code> classes are substantially shorter than before, only containing the attributes and methods that are <strong>specific to the type of employee</strong> with common characteristics placed out of sight in the <code>Employee</code> parent class.</p>
+<ul>
+<li><code>FullTimeEmployee</code>&nbsp;contains the attributes and methods that deal with a <strong>salary</strong><strong></strong></li>
+<li><code>PartTimeEmployee</code>&nbsp;contains the attributes and methods that deal with an <strong>hourly rate</strong></li>
+<li><code>Employee</code>&nbsp;contains the attributes and methods that all types employees should have (<strong>name, job title and tasks</strong>)</li>
+</ul>
+<p>A benefit of having common characteristics contained in a single class is that it allows us to make modifications to these characteristics which will <strong>apply to all child classes</strong> without the need to manually make the same modification to multiple classes.</p>
+<p>&nbsp;</p>
+<p><strong>Use of Polymorphism in printInfo()</strong></p>
+<p>The only difference in the <code>printInfo()</code> method between the <code>FullTimeEmployee</code> and <code>PartTimeEmployee</code> classes was the last <code>print()</code> statement which either showed the employee's salary or hourly rate.</p>
+<ul>
+<li>The first three <code>print()</code> statements which displayed the employee's name, title and tasks have been placed in the <code>printInfo()</code> method of the <code>Employee</code><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;"> parent class.</span></li>
+<li><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">The last <code>print()</code> statement has remained in the now overridden </span><code>printInfo()</code> method of the <code>FullTimeEmployee</code> and <code>PartTimeEmployee</code> classes, where the&nbsp;<code>printInfo()</code> method of the <code>Employee</code><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;"> parent class is called using <code>super().printInfo()</code> before running the last <code>print()</code> statement to show either the salary or hourly rate depending on the child class.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><strong><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">The Need for Abstraction</span></strong></p>
+<p><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">Currently, the <code>Employee</code> parent class <strong>guarantees</strong> that all types employees must have a name, a job title and a list of tasks. However, it does <strong>NOT guarantee</strong> that all types employees must be paid. In other words, nothing is preventing the programmer from accidentally (or on purpose) omitting the <code>calculate_pay()</code> method from a child class of <code>Employee</code>.</span></p>
+<p><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">We can enforce that all Employees must have a <code>calculate_pay()</code> method by using <strong>ABSTRACTION</strong>.</span></p>
+<p>&nbsp;</p>
+<h4><strong>Abstraction</strong></h4>
+<p><strong>Abstraction</strong> revolves around the concept of <strong>hiding implementation details</strong> and <strong>focusing on the essential features</strong> of a class. This benefits the programmer, helping to manage complexity by allowing them to deal with ideas rather than specifics.</p>
+<p>In Python and many other object oriented programming languages we are able to declare classes and methods as 'abstract'.</p>
+<ul>
+<li>For a class this means it <strong>cannot</strong> be instantiated, as such, the only way to access its attributes and methods is to create a subclass which can inherit these features which can then be used.</li>
+<li>For an abstract method, this means that the implementation is not defined in the method, but will rather be defined in subclasses.</li>
+</ul>
+<p>For example, consider a set of different characters in a video game.</p>
+<ul>
+<li>We know at a minimum that all characters in this video game must move, but we don't know how each type of character will move. Some characters might walk normally on the ground, some might be able to fly and some might be able to dig underground.</li>
+<li>Using abstraction, we can have an unimplemented move() method inside a generalised character class which hides the complex details of how different characters will move; leaving each type of character to implement their own move() method in each child class.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Example of Abstraction</strong></p>
+<p>We achieve generalisation by using the Abstract Base Classes (ABC) library which is a Python standard library. This library is imported at the top of the Python file by using:</p>
+<div>
+<ul>
+<li><code><span>from</span> <span>abc</span> <span>import</span> <span>ABC</span><span>, </span><span>abstractmethod</span></code></li>
+</ul>
+</div>
+<p>Consider the generalised <code>Employee</code> parent class from before.</p>
+<p>The <code>Employee</code> class will need to abstracted for two reasons.</p>
+<ol style="list-style-type: decimal;">
+<li><strong>To prevent the <code>Employee</code> class itself from being instantiated into an object.</strong> We need all employee objects to be instantiated from specific types of employees only (the child classes of <code>Employee</code>).</li>
+<li><strong>To ensure that all child classes of Employee have a </strong><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;"><strong><code>calculate_pay()</code> method.</strong> We need all employee objects to have this method.</span></li>
+</ol>
+<p>&nbsp;</p>
+<p>First, we need to import the Abstract Base Classes (ABC) library and define the <code>Employee</code> class as an abstract class.</p>
+<ul>
+<li>This tells the Python interpreter that the <code>Employee</code> class cannot be instantiated into an object; it can only be inherited from.</li>
+</ul>
+<p>&nbsp;<img src="../../assets/0e46abae2e1c5470.png" alt="image.png" width="500" height="246" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197452" data-api-returntype="File" loading="lazy"></p>
+<p>Second, we need to add the <span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;"><code>calculate_pay()</code> method as an abstract method using <code>@abstractmethod</code> tag above the method's definition and using the keyword <code>pass</code> inside the method's implementation.</span></p>
+<ul>
+<li><span style="color: var(--ic-brand-font-color-dark); font-size: 1rem;">This tells the Python interpreter that any class that inherits from <code>Employee</code> must have an implemented <code>calculate_pay()</code> method.</span></li>
+</ul>
+<p><img src="../../assets/4b0fd88b211249d0.png" alt="code.png" width="600" height="356" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197470" data-api-returntype="File" loading="lazy"></p>
+<p>Now consider a new type of employee called <code>InternEmployee</code> which is a child class of the <code>Employee</code> class.</p>
+<p><img src="../../assets/02ef99ee6b88fb46.png" alt="image.png" width="600" height="671" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197475" data-api-returntype="File" loading="lazy"></p>
+<p>Notice how the <code>calculate_pay()</code> method is missing from the <code>InternEmployee</code> class. If we tried to instantiate this class as it is, then we will be met with the following error message.</p>
+<p><img src="../../assets/9a7634a4dfd06e7c.png" alt="image.png" width="800" height="241" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197482" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>Traceback (most recent call last):<br>&nbsp; File "/Users/martin/Desktop/Python OOP/main.py", line 3, in &lt;module&gt;<br>&nbsp; &nbsp; employee = Employee("Martin Madrid", "Software Engineer", "UNSW")<br>TypeError: Can't instantiate abstract class Employee with abstract method calculate_pay</pre>
+<p>&nbsp;</p>
+<p>By adding the <code>calculate_pay()</code> abstract method in the <code>Employee</code> parent class, it prevents the <code>InternEmployee</code> child class from being instantiated into an object without the <code>calculate_pay()</code> method.</p>
+<p>To fix this error, we need to implement the <code>calculate_pay()</code> method in the <code>InternEmployee</code> class like so.</p>
+<p><img src="../../assets/63f2586db533ce3e.png" alt="image.png" width="700" height="974" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197485" data-api-returntype="File" loading="lazy"></p>
+<p>By implementing all abstract methods in the <code>Employee</code> parent class, we can now instantiate the <code>InternEmployee</code> child class.</p>
+<p><img src="../../assets/0569de44b2523d47.png" alt="image.png" width="800" height="284" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197488" data-api-returntype="File" loading="lazy"></p>
+<p><em>Output:</em></p>
+<pre>Employee Name: Martin Madrid<br>Title: Software Engineer<br>Current Tasks: ['Task 1', 'Task 2']<br>University: UNSW<br>Allowance: $20000</pre>
+<p>&nbsp;</p>
+<hr></div>
+<div class="dp-content-block kl_activities2">
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" href="https://edstem.org/au/courses/14919/lessons" target="_blank"><em>Edstem Activity: Generalisation and Abstraction</em></a></li>
+</ul>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2011/Resources/Unit%202.%20The%20Object-Oriented%20Paradigm/PPs/2.2.4%20generalisation%20and%20abstraction.pptx?d=wb0cd6fa1bcd34908a16767d2175bf8b2&amp;csf=1&amp;web=1&amp;e=nb4XAx">2.2.4 OOP - Generalisation and Abstraction.pptx</a></p>
+<div class="dp-embed-wrapper" data-ratio-w="32.88" data-ratio-h="0.03"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-2-dot-4-oop-features-generalisation-and-abstraction" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={b0cd6fa1-bcd3-4908-a167-67d2175bf8b2}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="11962-042.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-044.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

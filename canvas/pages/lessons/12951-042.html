@@ -1,0 +1,354 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.2 Data Transfer — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 7 (Term 1: Weeks 5-6) Programming for the Web</div>
+<h1 style="margin-top:.2rem">2.2 Data Transfer</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-2-data-transfer" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate and practise how data is transferred on the internet, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>data packets</li>
+<li>internet protocol (IP) addresses, including IPv4</li>
+<li>domain name systems (DNS)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Investigate how data is transferred over the internet using data packets, IP addresses, and the Domain Name System (DNS).</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">Describe data packets and their role in internet data transfer.</span></li>
+<li><span style="font-size: 10pt;">Explain the function of IPv4 addresses in identifying devices.</span></li>
+<li><span style="font-size: 10pt;">Understand how DNS translates domain names into IP addresses.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>The internet enables billions of devices to communicate by breaking data into smaller, manageable packets, assigning unique IP addresses to every device, and using DNS to map human-readable domain names to machine-readable IP addresses. Understanding how these elements work together will provide you with a deeper insight into the foundations of modern networking and internet functionality.</p>
+<p>&nbsp;</p>
+<h4>Data Packet</h4>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title"><span style="color: #000000;">What is a packet?</span></h5>
+<p>Imagine sending a long letter through a mail system that only allows small envelopes. Instead of trying to fit the entire letter into one envelope, you would break it into smaller parts, put each part into its envelope, and send them individually. When the recipient receives all the envelopes, they put the parts back together to read the full letter.</p>
+<p>This is similar to how packets work in networking. When data, such as a file or image, is sent over the internet, it is <strong>broken down into smaller segments</strong> called packets. Each packet is <strong>transmitted independently</strong> and can take <strong>different routes</strong> to reach the destination. Once all packets arrive, the receiving device reassembles them to recreate the original data.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>The Importance of Packets</strong></p>
+<p>Theoretically, large chunks of data could be sent in one continuous stream; however, this method would be inefficient, especially on shared networks. Imagine trying to communicate with someone using a single long phone call that prevents others from using the network.</p>
+<p>Instead, packets allow multiple devices to use the same network resources simultaneously, as packets can be switched and routed through different paths independently.</p>
+<p>&nbsp;</p>
+<p><strong>Components of a Packet</strong></p>
+<div class="dp-panels-wrapper dp-tabs-buttons-vertical dp-panel-color-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Header</h3>
+<div class="dp-panel-content ">
+<p>The header contains crucial information required for data transmission:</p>
+<ul>
+<li><strong>Sender's IP Address</strong>: Identifies the source of the packet.</li>
+<li><strong>Receiver's IP Address</strong>: Specifies the intended recipient.</li>
+<li><strong>Protocol</strong>: Defines the communication rules (e.g., TCP, UDP).</li>
+<li><strong>Packet Number</strong>: Indicates the sequence order for reassembly.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Payload</h3>
+<div class="dp-panel-content ">
+<p>The payload is the actual data being transmitted. It could be part of a file, an email message, or any other information that needs to be sent.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Trailer</h3>
+<div class="dp-panel-content">
+<p>The trailer marks the end of the packet and includes:</p>
+<ul>
+<li><strong>Error Detection Data</strong>: Helps verify data integrity (e.g., checksum).</li>
+<li><strong>End of Packet Signal</strong>: Indicates that the packet transmission is complete.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Packet Switching and Routing</h3>
+<div class="dp-panel-content ">
+<p>In a packet-switching network, each packet can travel a different route to its destination. This flexibility allows multiple devices to send data over the same network simultaneously. Once all packets arrive at the destination, protocols like TCP (Transmission Control Protocol) reassemble them into the correct order.</p>
+<p>This method makes the internet robust, as packets can be rerouted if a path is busy or unavailable, ensuring that billions of devices can communicate concurrently.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Packet Security and Malicious Traffic</h3>
+<div class="dp-panel-content ">
+<p>While packets enable seamless communication, they are also susceptible to manipulation for malicious purposes. Hackers may generate packets designed to overwhelm networks (e.g., in Distributed Denial of Service (DDoS) attacks). Advanced cybersecurity measures, such as packet inspection and filtering, help safeguard networks from these attacks.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Internet Protocol (IP)</h4>
+<p>&nbsp;</p>
+<p><strong>Internet Protocol (IP) </strong>is a fundamental system that allows data to travel between devices over the internet. Every device connected to the internet is assigned a unique IP address, similar to a mailing address, that identifies it from other devices. This allows data to be sent and received across networks in a highly organised way.</p>
+<p>When a message or file is sent over the internet, it is assigned a source and destination IP address.&nbsp; After the packets arrive at the destination IP address, another protocol, like Transmission Control Protocol (TCP), reassembles them into the original message.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">What is IPv4?</h3>
+<div class="dp-panel-content ">
+<p><strong>Internet Protocol Version 4 (IPv4)</strong> is the most widely used IP version and has been the backbone of Internet communication for decades. IPv4 uses a 32-bit address system, meaning it can support around 4.3 billion unique IP addresses. This format typically represents four numbers separated by periods (e.g., 192.168.1.1).</p>
+<p>IPv4 has been instrumental in enabling global communication, but its main limitation is the finite number of available addresses. As the internet expanded, the demand for IP addresses increased, leading to the problem of<strong> </strong>IPv4 address exhaustion.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-tip">
+<div class="card-body">
+<p class="card-text">Microsoft Runs Out of U.S. Addresses For Azure Cloud: <a class="inline_disabled" title="Link" href="https://www.internetsociety.org/blog/2014/06/ipv4-exhaustion-gets-real-microsoft-runs-out-of-u-s-addresses-for-azure-cloud-time-to-move-to-ipv6/" target="_blank">Article</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Key Features of IPv4</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>
+<p><strong>Address Format</strong>:</p>
+<ul>
+<li>An IPv4 address consists of four octets (8-bit segments), separated by periods, each ranging from 0 to 255 (e.g., 172.16.254.1).</li>
+</ul>
+</li>
+<li>
+<p><strong>Routing</strong>:</p>
+<ul>
+<li>IPv4 supports <strong>dynamic routing</strong>, allowing packets to travel through different paths and networks to reach their destination.</li>
+</ul>
+</li>
+<li>
+<p><strong>Subnetting</strong>:</p>
+<ul>
+<li>IPv4 allows the division of large networks into smaller sub-networks, optimises traffic, and enhances security within large-scale organisations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Address Exhaustion</strong>:</p>
+<ul>
+<li>Despite its success, IPv4's limited address pool became a concern as internet usage grew exponentially, necessitating the development of a successor, <strong>IPv6</strong>.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/5bcda1e212c0d7d4.png" alt="image.png" width="570" height="301" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527430" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">IPv6</h3>
+<div class="dp-panel-content">
+<p>The introduction of <strong>Internet Protocol Version 6 (IPv6)</strong> was a response to the limitations of IPv4, particularly the exhaustion of available addresses. IPv6 provides a much larger address space, using 128-bit addresses, allowing for trillions of unique IP addresses. While IPv4 is still widely used, the adoption of IPv6 continues to grow to accommodate the increasing number of devices connected to the internet.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/1705b5bebc6e440e.png" alt="image.png" width="531" height="349" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527345" data-api-returntype="File" loading="lazy"></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Domain Name System</h4>
+<p>The Domain Name System (DNS) is a crucial technology that translates human-readable domain names (like <em><a href="http://bitly.com/98K8eH%C2%A0" target="_new">www.example.com</a></em>) into IP addresses (like <em>192.0.2.1</em>), which computers use to identify and communicate with each other over the internet. DNS acts as the internet's "phonebook," allowing users to access websites without remembering complex numerical IP addresses.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">What is DNS?</h3>
+<div class="dp-panel-content ">
+<p>Imagine trying to call someone, but instead of dialling their phone number, you say their name, and your phone automatically finds their number and places the call. DNS works similarly for the internet. When you type a website address into your browser, DNS translates the domain name into the correct IP address, allowing your computer to find and connect to the desired website.</p>
+<p>Without DNS, you would have to memorise the numerical IP addresses of every website you wanted to visit, making navigating the internet extremely cumbersome.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">How does DNS work?</h3>
+<div class="dp-panel-content ">
+<p>When a user enters a URL, such as <em><a href="https://www.kings.edu.au/" target="_new">www.kings.edu.au</a></em>, the browser initiates a DNS query to retrieve the IP address associated with that domain. This process involves multiple DNS servers, each performing a specific role:</p>
+<ol>
+<li><strong>User input</strong>: a user enters a domain name (like ‘example.com’) into their web browser.</li>
+<li><strong>DNS lookup</strong>: the browser sends a DNS query to a DNS resolver, typically provided by the user's internet service provider (ISP) or configured in their network settings</li>
+<li><strong>DNS resolver</strong>: the DNS resolver receives the query and checks its cache to see if it already has the IP address for the requested domain. If the address is found in the cache and is still valid (has not expired), the resolver returns it immediately to the browser. If not, it proceeds to step 4.</li>
+<li><strong>Recursive query</strong>: if the resolver doesn't have the IP address in its cache, it becomes responsible for finding it. It starts by querying the root DNS servers, which hold information about the top-level domains (like ‘.com’, ‘.org’, ‘.net’ and so on).</li>
+<li><strong>Top-level domain (TLD) server</strong>: the root server directs the resolver to the appropriate TLD server based on the domain extension (for example, ‘.com’). The TLD server holds information about the authoritative name servers responsible for the next level of the domain hierarchy.</li>
+<li><strong>Authoritative name server</strong>: the resolver contacts the authoritative name server for the specific domain (for example, ‘example.com’). This server holds the most up-to-date information about the domain, including its IP address.</li>
+<li><strong>Response</strong>: the authoritative name server responds to the resolver with the requested IP address.</li>
+<li><strong>Cache update</strong>: the resolver caches the IP address for future use, reducing the need for repeated lookups.</li>
+<li><strong>Browser request</strong>: armed with the IP address obtained from DNS, the browser can now send a request to the appropriate server hosting the website.</li>
+<li><strong>Website access</strong>: the server responds to the browser's request and the website is displayed to the user.</li>
+</ol>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Types of DNS Servers</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Recursive DNS Server</strong>: The first point of contact for the user’s DNS query. It resolves the request by communicating with other DNS servers.</li>
+<li><strong>Authoritative DNS Server</strong>: This server contains the actual DNS records (IP addresses) for domains and provides the definitive answer to a query.</li>
+<li><strong>Root Nameserver</strong>: Directs queries to the appropriate TLD nameserver.</li>
+<li><strong>TLD Nameserver</strong>: Responsible for resolving queries for specific top-level domains (like <em>.com</em>, <em>.org</em>).</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Types of DNS Queries</h3>
+<div class="dp-panel-content">
+<ul>
+<li>
+<p><strong>Recursive Query</strong>: The client expects the DNS server to return the correct IP address or an error message if the domain is not found.</p>
+</li>
+<li>
+<p><strong>Iterative Query</strong>: The DNS server provides the best answer, typically directing the query to another DNS server with the required information.</p>
+</li>
+<li>
+<p><strong>Non-Recursive Query</strong>: The DNS server returns a cached result, offering a faster response without contacting other servers.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Why is DNS Important?</h3>
+<div class="dp-panel-content">
+<p>DNS ensures that users can access websites using easy-to-remember domain names instead of complex IP addresses. It also optimises performance by caching results, reducing the time required for repeated lookups. Without DNS, navigating the internet would be both tedious and impractical.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">DNS Caching</h3>
+<div class="dp-panel-content">
+<p>Caching plays a critical role in DNS efficiency. When a DNS query is resolved, the result is stored temporarily (cached) by the resolver. The next time the same query is made, the DNS resolver can return the cached IP address without repeating the entire lookup process. This reduces latency and network traffic, allowing websites to load more quickly.</p>
+</div>
+</div>
+</div>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Security Considerations: DNS Cache Poisoning</h3>
+<div class="dp-panel-content ">
+<p>DNS is not without vulnerabilities. One of the most common security issues is <strong>DNS cache poisoning</strong> (also known as DNS spoofing). In this attack, malicious actors inject false DNS records into the resolver’s cache, causing users to be redirected to harmful websites. This can lead to phishing, malware infections, and other security breaches.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-lg-tip">
+<div class="card-body">
+<p class="card-text">Find out more about the latest discovered method of DNS Cache Poisoning <a class="inline_disabled" title="Link" href="https://snapshot.internetx.com/en/sad-dns-a-revival-of-the-dns-cache-poisoning-attack/" target="_blank">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default w-100 dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong> <i class="fas fa-pen" aria-hidden="true"> <span class="dp-icon-content" style="display: none;">&nbsp;</span> </i> &nbsp; Activity<br></strong></p>
+<ul class="card-text">
+<li><a title="2.2 Data Transfer" href="https://canvas.kings.edu.au/courses/12951/assignments/204827" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204827" data-api-returntype="Assignment">2.2 Data Transfer</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.cloudflare.com/en-gb/learning/network-layer/what-is-a-packet/" target="_blank">What is a packet?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.techtarget.com/searchunifiedcommunications/definition/Internet-Protocol" target="_blank">Internet Protocol (IP)</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.fortinet.com/resources/cyberglossary/what-is-dns" target="_blank">What is DNS (Domain Name System)?</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.hostwinds.com/blog/ipv4-classes-what-are-they-and-how-are-they-used" target="_blank">IPv4 Classes: What are They &amp; How are They used</a></li>
+<li><a class="inline_disabled" title="Link" href="https://vasexperts.com/resources/glossary/ipv6/" target="_blank">IPv6</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+<p class="card-text"><strong>Cisco Packet tracer</strong><strong></strong></p>
+</div>
+</div>
+</div>
+<div class="dp-content-block">
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p style="text-align: left;"><a href="https://kingsnsw.sharepoint.com/:p:/r/sites/ComputingStudies/Shared%20Documents/Stage%206/Software%20Engineering/Year%2012/Resources/Unit%202.%20Programming%20for%20the%20Web/PPTs/2.2%20Data%20Transfer.pptx?d=wc64134565f7b4f829340efe37cdcc7ae&amp;csf=1&amp;web=1&amp;e=e6t6mz">2.2 Data Transfer.pptx</a></p>
+<p style="text-align: center;">&nbsp;</p>
+<div class="dp-embed-wrapper"><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-2-data-transfer" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/ComputingStudies/_layouts/15/Doc.aspx?sourcedoc={c6413456-5f7b-4f82-9340-efe37cdcc7ae}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333&amp;amp;wdEaaCheck=0</span></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div></main>
+<div class="pnrow"><a class="pn" href="12951-041.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-043.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

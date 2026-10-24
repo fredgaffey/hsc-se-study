@@ -1,0 +1,1909 @@
+{
+  "exam": "12SEN_TopicTestRevisionTest2 (Timed)",
+  "syllabus": "Software Engineering",
+  "publisher": null,
+  "topics": [
+    "Secure Software Architecture",
+    "Programming for the Web",
+    "Software Automation",
+    "Software Engineering Project"
+  ],
+  "outcomes": [
+    "SE-12-07",
+    "SE-12-06",
+    "SE-12-05",
+    "SE-12-09",
+    "SE-12-01",
+    "SE-12-03",
+    "SE-12-04",
+    "SE-12-08",
+    "SE-12-02"
+  ],
+  "status": "COMPLETED",
+  "results_released": true,
+  "submitted": "2026-05-03T03:46:14.459Z",
+  "started": "2026-05-03T02:14:10.234Z",
+  "duration_minutes": 120,
+  "markers": [
+    "TKS CST"
+  ],
+  "review_url": "https://platform.gradeo.com.au/reviewExam/1a625df8-374d-41cc-8646-d8297fd73555",
+  "marking_session_id": "1a625df8-374d-41cc-8646-d8297fd73555",
+  "exam_id": "5a9c7fa9-9625-4a0a-9702-38e1d00e086b",
+  "session_id": "9c27e407-74a0-417c-b594-97395ab5a4f8",
+  "total_mark": 40,
+  "parts_answered": 24,
+  "parts_marked": 24,
+  "parts_total": 24,
+  "total_available": 60,
+  "questions": [
+    {
+      "number": 1,
+      "question_id": "63c07868-9a53-4131-8dce-4f55c3a91c95",
+      "title": "Enterprise Benefits (MS, TKS 2025)",
+      "topic": "Enterprise Benefits",
+      "label": "MS",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A software enterprise is reviewing its long-term strategy. It wants to gain the most benefit from implementing secure development practices across all future projects.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "64bbca3f-3865-4b92-ae80-5722f4a3bfa1",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Select TWO benefits the company is most likely to achieve",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Developers will no longer need to perform manual testing.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "The company can eliminate the need for any external penetration testing.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Security becomes embedded in company culture, improving future development.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "Secure components can be reused across projects, increasing development speed.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "C",
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "C",
+              "D"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 1,
+                "feedback": null,
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "65aa12c6-26b0-4c54-987d-3509621cfbb4",
+      "title": "Yr12 Data Structures - Arrays (MC5, 2024 HSC SDD Exam)",
+      "topic": "Yr12 Data Structures - Arrays",
+      "label": "MC5",
+      "kind": "2024 HSC SDD Exam",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "f62eda78-46ec-4a93-993f-280b2e31c89f",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following describes data that would best be stored in an array of floating point/real numbers?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Dice rolls that are randomly generated for a game",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "The average daily temperature for each day in 2024",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "Product codes that need to be sorted alphabetically for display",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Attendance data for a school indicating whether each student was absent or present",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "56d2e0ac-f019-4a53-892f-ec1817b219a0",
+      "title": "Cascading Style Sheets (MC, TKS2025)",
+      "topic": "Cascading Style Sheets",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "eb0d8ebe-226b-4176-88bb-3abb6a788ef5",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "How does CSS help maintain consistent appearance in a web application?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It adds server-side validation for user inputs",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It creates responsive animations",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "It automatically adjusts content structure for different browsers",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "It allows styles to be defined once and applied across multiple pages",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B",
+              "C",
+              "D"
+            ],
+            "correct": false
+          },
+          "result": {
+            "mark": 0,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 0,
+                "feedback": "CSS is strictly a frontend styling language so B can't be correct.\n\nWhile CSS is capable of creating responsive animations and transitions, this is a specific feature rather than the fundamental mechanism that maintains an application's overall consistent appearance. As such C can't be correct either.",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "question_id": "949b0c5a-043f-4a43-8e86-27cd8db81635",
+      "title": "Algorithms (Q18, 2023 HSC Exam SDD)",
+      "topic": "Algorithms",
+      "label": "Q18",
+      "kind": "2023 HSC Exam SDD",
+      "source": null,
+      "copyright": "HSC 2023",
+      "stimulus": "A sort is applied to the array {C,D,A,S,F}\n\nThe result of the first pass of the sort is {D,C,A,S,F}",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "33fba75c-4b0a-467f-8337-a7f7bcdf123f",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following will be the result of the next pass?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": null,
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "B",
+                "text": null,
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": null,
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": null,
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "A"
+            ],
+            "correct": false
+          },
+          "result": {
+            "mark": 0,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 0,
+                "feedback": "This problem uses the Insertion Sort algorithm to sort the letters in reverse alphabetical order. (You have to infer the type of sort and order based on the info in question)\n\nPass 1: The algorithm looks at the second letter, D, and moves it in front of C because it comes later in the alphabet. The array becomes {D, C, A, S, F}. The sorted portion of the list is now {D, C}.\n\nPass 2: The algorithm looks at the next letter, A. It compares A to the sorted portion ({D, C}). Since A comes before both C and D in the alphabet, it is already in the correct spot at the end of that sorted group.\n\nBecause A doesn't need to shift forward, the array doesn't visually change during this pass. That is why the correct answer is B {D, C, A, S, F}.",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "question_id": "0d0ff26c-0fb7-46fb-a320-fdf7b422576a",
+      "title": "Quality Assurance (MC, TKS 2025)",
+      "topic": "Quality Assurance",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "60821732-3b63-4496-baaa-5982a5c4abe8",
+          "part": "Part 1",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Accessibility standards, like the WCAG, are designed to:",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Reduce development time.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Boost software performance.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Limit access to only authorised users.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Ensure software is accessible to users with disabilities.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "D"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "question_id": "a4879362-476e-457b-bd2c-888cafec4c5d",
+      "title": "PWAs (MC, TKS 2025)",
+      "topic": "PWAs",
+      "label": "MC",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A PWA developer chooses colours with high contrast between text and background and adds alt text for images",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "10a8eab7-91b9-4ad1-88ed-0474e15b01cd",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which design principle is being described in the stimulus?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Offline caching",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "B",
+                "text": "Flexible layouts",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Performance optimisation",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "Accessibility and inclusivity",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "A",
+              "C"
+            ],
+            "correct": false
+          },
+          "result": {
+            "mark": 0,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 0,
+                "feedback": "The stimulus focuses on two specific actions: using high contrast colours and adding alt text for images. High contrast helps users with low vision or colour blindness read the text, while alt text allows screen reading software to describe images to users who are blind. Both of these practices are all about making the app usable for people with disabilities, which is the definition of Accessibility and inclusivity.",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "question_id": "a4c6e980-5641-4ae3-b077-508072f5ce58",
+      "title": "Frontend Code Libraries (MC, TKS2025)",
+      "topic": "Frontend Code Libraries",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "d9e6d808-06ca-4015-b195-5f7540778b60",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "How do frameworks improve the maintainability of large web applications?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "By encrypting data transfers.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "By generating UI automatically.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "By supporting the reuse of components.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "D",
+                "text": "By storing all project files in a single HTML file",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "C"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B",
+              "C"
+            ],
+            "correct": false
+          },
+          "result": {
+            "mark": 0,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 0,
+                "feedback": "Frameworks don't generate the UI for you. Developers still must write the code to define the layout, logic, and styling. Frameworks just provide the structure and tools to render it efficiently.",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "question_id": "03d43d42-f7f2-47e7-b9c8-f379419ce32c",
+      "title": "Developing Secure Code (MC, TKS2025)",
+      "topic": "Developing Secure Code",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "fd19e29f-1fce-4d09-9417-ec689880f7cc",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of these would be effective at preventing Cross Site Scripting?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "Using prepared SQL statements",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "Trust the user to only enter valid input",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "Disable Javascript in the user's browser",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Sanitising user input to remove special characters",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "D"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "question_id": "bea8f321-6781-40df-9b14-f080394dcad7",
+      "title": "Object-Relational Mapping (MC, TKS2025)",
+      "topic": "Object-Relational Mapping",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "39a6dad8-bcd3-432e-9930-c17fdcf3a508",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best describes how an ORM interact with a database?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "It bypasses the database engine.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "It sends commands through a web API.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "C",
+                "text": "It writes data to plain text files for storage.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "It generates SQL queries based on code objects.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              }
+            ],
+            "correct_letters": [
+              "D"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "D"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "question_id": "682c161b-968e-4b4a-87d3-68cabfe6e7df",
+      "title": "Communication Issues (MC, TKS2025)",
+      "topic": "Communication Issues",
+      "label": "MC",
+      "kind": "TKS2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "dca814da-9c43-4ca0-bf4a-3dede5939a12",
+          "part": "Part A",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best describes the purpose of regular feedback in software development?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "To speed up coding and reduce testing.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "To identify issues early during development.",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "To finalise design decisions before client input.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "To delay release until feedback is fully analysed.",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "question_id": "cf080315-576a-48fc-88ce-18abb023dd7d",
+      "title": "Backend Engineering (OR, TKS 2025)",
+      "topic": "Backend Engineering",
+      "label": "OR",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "4762b767-e92f-4219-b67a-42800b171bc0",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "OBJECTIVE_RESPONSE",
+          "prompt": "Select the cell that best describes the primary back-end responsibility for each situation. \n\nOnly ONE correct option per row.",
+          "prompt_images": [],
+          "question": {
+            "columns": [
+              "Error Handling",
+              "Technology Used",
+              "Security Engineering",
+              "Front-End"
+            ],
+            "rows": [
+              {
+                "statement": "Logging failed login attempts for later review",
+                "correct": [
+                  "Error Handling"
+                ],
+                "yours": [
+                  "Error Handling"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Encrypting sensitive user data before storing it in the database",
+                "correct": [
+                  "Security Engineering"
+                ],
+                "yours": [
+                  "Security Engineering"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Using a framework to manage database access and routing",
+                "correct": [
+                  "Technology Used"
+                ],
+                "yours": [
+                  "Technology Used"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Sending formatted data from the server to the user interface",
+                "correct": [
+                  "Front-End"
+                ],
+                "yours": [
+                  "Front-End"
+                ],
+                "right": true
+              }
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "rows": [
+              {
+                "statement": "Logging failed login attempts for later review",
+                "yours": [
+                  "Error Handling"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Encrypting sensitive user data before storing it in the database",
+                "yours": [
+                  "Security Engineering"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Using a framework to manage database access and routing",
+                "yours": [
+                  "Technology Used"
+                ],
+                "right": true
+              },
+              {
+                "statement": "Sending formatted data from the server to the user interface",
+                "yours": [
+                  "Front-End"
+                ],
+                "right": true
+              }
+            ]
+          },
+          "result": {
+            "mark": 2,
+            "available": 2,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Correctly selects all options"
+            },
+            {
+              "marks": "1",
+              "criterion": "Partially correct selection"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "question_id": "af9676cc-d599-4b8d-8ea9-cbed119f0fea",
+      "title": "Impact of Secure Software (ER, TKS 2025)",
+      "topic": "Impact of Secure Software",
+      "label": "ER",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "733f3e91-fe71-4e80-9172-df49f00a6d3c",
+          "part": "Part A",
+          "marks_available": 10,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Secure software development has become essential for modern enterprises.\n\nEvaluate how collaboration, enterprise-level practices, and awareness of social, ethical, and legal issues contribute to developing safe and secure software.\n\nIn your response, refer to specific examples and consider both technical and non-technical impacts on people and organisations.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "secure sofwhere development is complex and has many facits recruies comuicant collabratin and a understenign of leagal social and the deffrence between tecnical and nontecnical people.\n\nwhen colabratin happens sofwhere becomes more secure. take large proects like luinx or curl. these have a large amout of peoplo working on using git. this resulted in lunx being the moset secure oprating system in the world and curl being the mose secres way to make webrequests. this collabratn where you can use outher peoples well testerd secure code insted of having to reinvent the wheell evry tiime make sofwhere more secre. in adtion when there are lotes of people colabratin like on ssh someonf foud that ssh was a few ns slower slower and this led to them finding a backdoor that somone put in to ssh.\n\nA cultre of secruty by design this is from regula pshing training in all the eimplyeys in the busuns not just the devs but also admin and the c team. this enterprise levely sercrity by desien mean that secury is not just somting that you do at the end as a after thought but is intergrated through out the whole prosess. this is crucial for the devlopemn of safe softhwere.\n\nThe useeser of softhwer are usealy non tecnical so that needs to be taken in to account so secrity pracits like maule has verifactin is not a good idere (like when you downlod a iso image). This will imvolve them useing the teriminsl the non tecnical midet of the terminl use is that i will get hacted instanly if i use it this is not true but it will seem suspios even if it is a ligitment secrtiy feture. but things like 2FA are becoming more of a social tredn in sosity so this sought  so you s shoiuld allwasys take in to account the tecnical abliy of your useres. \n\nthere is also a leagl resolnibliy to secure data there are lawas like HIPI and GDPR that make rulse about how data must be stored and kept safe. If you dont follow this you are liabe for fines and the libiley.\n\ntecnical people in the rognisat get the pourps of things like 2FA but notecnical peopele just think it is a wast of time. so make in seure softhere needs to take in to account tecnical and not tecnial people it is ulimity evryons respomibley. so a atmofher of collabratin a williness to admit your mistakes and culter that is fully on bord with make evryones secure.",
+            "images": [],
+            "word_count": 422
+          },
+          "result": {
+            "mark": 7,
+            "available": 10,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 7,
+                "feedback": "Your response shows a solid understanding of the core concepts, particularly with your excellent use of real world examples like open source collaboration catching backdoors, GDPR compliance, and the user experience of security features like 2FA. Additionally, try to expand more on the ethical implications of software development, such as the moral responsibilities businesses have when handling sensitive user data, rather than just focusing on the legal compliance and user frustration aspects.",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "9-10",
+              "criterion": "Provides a comprehensive evaluation of collaboration, enterprise practices, and social/ethical/legal issues in secure software development. Uses relevant, well-integrated examples. Demonstrates deep understanding of technical and non-technical impacts. Response is well-structured and clearly communicated."
+            },
+            {
+              "marks": "7-8",
+              "criterion": "Provides a detailed explanation of most aspects of the question, with relevant examples. Demonstrates good understanding of secure software development and its impacts. May be slightly less thorough or balanced in discussion."
+            },
+            {
+              "marks": "5-6",
+              "criterion": "Identifies and explains some relevant elements from at least two of the three key areas (collaboration, enterprise practices, legal/social issues). Examples may be general or underdeveloped. Understanding is sound but lacks depth."
+            },
+            {
+              "marks": "3-4",
+              "criterion": "Makes general statements about security practices or related concepts. Shows limited understanding of the specific impacts or lacks coverage of key areas. Few or no examples given."
+            },
+            {
+              "marks": "1-2",
+              "criterion": "Attempts to answer the question with minimal relevant content. Misunderstands key ideas or refers only vaguely to secure software."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Secure software development is not just a technical process—it is a multidimensional approach that involves collaboration, enterprise-wide planning, and a deep understanding of social, ethical, and legal considerations. By integrating these elements, organisations can create software that is not only secure, but also resilient, ethical, and aligned with stakeholder expectations.\n\nCollaboration is essential in developing secure software because it draws upon a wide range of perspectives and skills. Security is a complex issue that no single developer or department can address alone. In a collaborative environment, tasks can be delegated based on expertise, which ensures that encryption, authentication, data protection, and testing are handled by individuals with the most relevant skills. For example, in a team developing a banking app, one specialist might focus on secure data transmission while another ensures that multi-factor authentication is implemented effectively. This division of labour not only increases efficiency but also enhances the quality of the final product. In addition, collaboration supports practices like peer review and collective testing, which are crucial for catching vulnerabilities that might be missed by individuals. By integrating diverse viewpoints, teams are more likely to anticipate potential threats and address them proactively.\n\nFrom an enterprise perspective, implementing safe and secure development practices delivers both immediate and long-term benefits. These include improved product reliability, reduced costs from post-release fixes, enhanced customer trust, and streamlined future development. When security is integrated from the start of the Software Development Life Cycle (SDLC), software is less likely to contain critical vulnerabilities. This reduces the need for emergency patches, minimises downtime, and builds user confidence. For example, a SaaS company that integrates security scanning into its development pipeline can identify and remediate vulnerabilities before deployment. This saves time and money in the long term and reduces the reputational damage that comes from data breaches.\n\nIn addition, secure practices influence future development. By standardising secure components, such as authentication libraries and encryption modules, organisations create a reusable security foundation. This not only improves consistency but accelerates development in future projects. Over time, secure development becomes embedded in the organisation's culture, leading to a proactive rather than reactive approach to security.\n\nEqually important are the social, ethical, and legal issues that surround the development and implementation of secure software. Enterprises must consider how their practices affect both individuals and the broader community. For instance, secure software has major implications for employment. While it creates new roles in cybersecurity, it may also lead to the automation of lower-level IT jobs. Ethically, this creates a responsibility for businesses to retrain displaced workers.\n\nData security and privacy are also key ethical and legal concerns. Users have a right to control their personal information, and software must be designed to uphold this right. Regulations like the GDPR require organisations to obtain consent for data collection, implement access controls, and respond to data requests from individuals. A company that fails to comply not only risks fines but also violates public trust. For example, an online platform that allows users to adjust privacy settings and opt out of tracking demonstrates both legal compliance and ethical respect for user autonomy.\n\nCopyright and intellectual property concerns also shape the secure development process. Developers have legal rights to protect their code, but in some cases, they may choose to license it under open-source terms to support broader innovation. Balancing protection with access is particularly important when secure software has public safety implications.\n\nFinally, secure software contributes to digital disruption. It enables new technologies, such as blockchain or secure cloud services, that transform industries and change how businesses operate. While this can provide a competitive edge, it also challenges traditional models and requires enterprises to adapt quickly.\n\nIn conclusion, secure software development is a shared responsibility that relies on effective collaboration, enterprise commitment to best practices, and thoughtful engagement with legal and ethical standards. When these areas are addressed holistically, organisations can deliver software that is not only functional and efficient but also secure, sustainable, and socially responsible."
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "question_id": "b7018282-b97f-496e-90df-918c94ad0e7f",
+      "title": "Programming Paradigms (Q32, 2022 HSC Exam SDD)",
+      "topic": "Programming Paradigms",
+      "label": "Q32",
+      "kind": "2022 HSC Exam SDD",
+      "source": null,
+      "copyright": "HSC 2022",
+      "stimulus": "For Part B:\n\nConsider the following fragment of code which has been written using the object oriented programming (OOP) paradigm\n\n![](assets/6d987ee2-d0e9-4c17-aabd-4791db703bfa.png)\n\nFor Part C:\n\nThe following facts have been defined using the logic paradigm.\n\n![](assets/fe46cd26-ff93-4a66-a6fe-66d7754a4981.png)\n\nFor Part C (ii): \n\nThe following rules are defined.\n\n![](assets/9f88207e-8752-4b40-b62e-7f4c2dcfe94c.png)",
+      "stimulus_images": [
+        "assets/6d987ee2-d0e9-4c17-aabd-4791db703bfa.png",
+        "assets/fe46cd26-ff93-4a66-a6fe-66d7754a4981.png",
+        "assets/9f88207e-8752-4b40-b62e-7f4c2dcfe94c.png"
+      ],
+      "parts": [
+        {
+          "part_id": "ccb1738d-7ecd-4013-b1aa-b1c91e8e3d45",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Describe abstraction in the context of object oriented programming",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "abstraction is where you remove deitals and this allows the proramer to remove the unecery detilas. this leads to faster development. like how all road viecals drive but some have diffrent numers of wheels. so you make a parant class that has go stop but the you add the dietas in later.",
+            "images": [],
+            "word_count": 52
+          },
+          "result": {
+            "mark": 1,
+            "available": 2,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 1,
+                "feedback": "Your answer shows a basic understanding of hiding unnecessary details, but to improve, you should use precise object-oriented terminology like objects, attributes and methods. Focus your explanation on how abstraction allows a programmer to use an object without needing to understand its complex internal workings, rather than just stating it leads to faster development.",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Describes abstraction in the context of object oriented programming"
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of abstraction"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "In OOP, abstraction enables a programmer to make use of an existing object without having to know the detail of all of the attributes or methods of that object"
+        },
+        {
+          "part_id": "6ff9eb5d-6b7f-4c92-ba01-ed748f40d72b",
+          "part": "Part B (i)",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "With reference to the fragment of code above, explain the importance of inheritance in the OOP paradigm",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "Inheratecns i oop is where you can instancate a class from a base calss thiss reduses code duplican. for exampl GetWholeName is difind in the arant calss and then the child class doent have to rewrite that. this lease the faster devlopemnt time and code is easer to dobug.",
+            "images": [],
+            "word_count": 49
+          },
+          "result": {
+            "mark": 3,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 3,
+                "feedback": "Looks good.",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Explains the importance of inheritance in the OOP paradigm\n\nReferences the code"
+            },
+            {
+              "marks": "2",
+              "criterion": "Describes the importance of inheritance in the OOP paradigm"
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "Inheritance enables attributes of a superclass to be automatically assumed by its subclasses, thus saving the programmer from having to redefine them. In this case, the WATERBIRD class will automatically include all of the attributes of the BIRD class."
+        },
+        {
+          "part_id": "4d6d6fb7-6c2e-43ea-ad00-e4d83f939e94",
+          "part": "Part B (ii)",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Write the code to define a subclass of WATERBIRD called SEABIRD which has the following attributes and method\n\n![](assets/fd254e3c-5309-49f5-a38c-a394f5bee3cd.png)",
+          "prompt_images": [
+            "assets/fd254e3c-5309-49f5-a38c-a394f5bee3cd.png"
+          ],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "subclass SEABIRD is a WATERBIRD {\n\n   public - \n\n      Ocean: String\n\n      MaxDistance: String\n\n      MaxAltitued: String\n\nHowHigh(CommonName)\n\nretrun MaxAltitude\n\nend HowHigh\n\n}",
+            "images": [],
+            "word_count": 20
+          },
+          "result": {
+            "mark": 2,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "Since the specifications indicate that the distance and altitude are represented in whole numbers, MaxDistance and MaxAltitude must be defined as Integers instead of Strings.",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Writes the code that defines a subclass of WATERBIRD called SEABIRD which has the following attributes and method"
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides half of the solution"
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of the problem"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "SUBCLASS SEABIRD IS A WATERBIRD {  \n    PUBLIC -  \n        Ocean: String  \n        MaxDistance: Integer  \n        MaxAltitude: Integer\n\n        HowHigh(CommonName)  \n            RETURN MaxAltitude  \n        END HowHigh  \n}"
+        },
+        {
+          "part_id": "43102272-32d5-46ef-8044-a586652641ac",
+          "part": "Part C (i)",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain the result of the following query.\n\n  \n?- larger(elephant, cat)",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "it is a elafant \n\na e is larger than a h wihich is larger that a donky and donky is larger then a cat therfor cat",
+            "images": [],
+            "word_count": 26
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 1,
+                "feedback": null,
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Explains the result of the following query."
+            },
+            {
+              "marks": "1",
+              "criterion": "Shows some understanding of the query"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "No. Because there is no fact or rule that matches the query."
+        },
+        {
+          "part_id": "30a0fbec-4f45-4d6b-96cb-e7909f53ae1a",
+          "part": "Part C (ii)",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Write a query to find animals that are both smaller than a donkey and bigger than a cat",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "is\\_bigger(donky,cat)",
+            "images": [],
+            "word_count": 1
+          },
+          "result": {
+            "mark": 2,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "Need to consider X too.\n\nMust check two things, Donkey is bigger than X and X is bigger than Cat.",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Writes a substantially correct query to find animals that are both smaller than a donkey and bigger than a cat"
+            },
+            {
+              "marks": "2",
+              "criterion": "Writes a query to find animals that are both smaller than a donkey and bigger than a cat"
+            },
+            {
+              "marks": "1",
+              "criterion": "Demonstrates some understanding of rules or queries in the logic paradigm"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "? is\\_bigger(donkey, X), is\\_bigger(X, cat)"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "question_id": "fa88ca74-76d4-49a7-aada-c0649f94c5b5",
+      "title": "Algorithms/Testing (Q32, 2023 HSC Exam SDD)",
+      "topic": "Algorithms/Testing",
+      "label": "Q32",
+      "kind": "2023 HSC Exam SDD",
+      "source": null,
+      "copyright": "HSC 2023",
+      "stimulus": "An algorithm is required to convert a date in DD/MM/YYYY format into its equivalent long date such as 29 October 2023.\n\nThe entered date will always be 10 characters and in the format DD/MM/YYYY.\n\nThe date is validated as follows:\n\n-   the month must be a valid month (from 1 to 12)\n-   the day value must be valid for that month \n-   (for example, no more than 28 for February – ignore leap years).\n\nFor Part B:\n\nYou may use the following two library routines in your pseudocode:\n\n-   Extract(string, start, N) eg Extract(“Names”, 3, 2) returns “me”\n-   Value(string) converts a string to its numerical value eg Value(“42”) returns 42.\n\nYou may use the following two arrays (indexed from 1) in your pseudocode\n\n![](assets/3e23242a-373d-48b5-8eb3-b90ec9838df7.png)",
+      "stimulus_images": [
+        "assets/3e23242a-373d-48b5-8eb3-b90ec9838df7.png"
+      ],
+      "parts": [
+        {
+          "part_id": "bd33b08a-90e7-4732-bed7-8479380e8e79",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "RICH_TABLE",
+          "prompt": "Refer to the stimulus.\n\nComplete the table with THREE items of test data that test different aspects of the logic of the algorithm.",
+          "prompt_images": [],
+          "question": {
+            "table": [
+              [
+                {
+                  "type": "text",
+                  "text": "Test Data"
+                },
+                {
+                  "type": "text",
+                  "text": "Reason for inclusion"
+                }
+              ],
+              [
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": "day = 20"
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": "test if overlow is allowed"
+                }
+              ],
+              [
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": "month = 20"
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": "test if overlow is allowed"
+                }
+              ],
+              [
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": "day = -10 month = -12"
+                },
+                {
+                  "type": "input",
+                  "expected": null,
+                  "yours": "test negives"
+                }
+              ]
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "filled_cells": 6
+          },
+          "result": {
+            "mark": 2,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": "Inputs do not match the required format, should be, DD/MM/YYYY",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Provides THREE items of test data for different aspects of the algorithm, with corresponding reasons for inclusion"
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides TWO items of test data for different aspects of the algorithm, with some justification"
+            },
+            {
+              "marks": "1",
+              "criterion": "Demonstrates some understanding of test data relevant to this algorithm"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "![](assets/2dce8389-3986-42a4-a716-ae44ff7fa7f6.png)",
+          "sample_answer_images": [
+            "assets/2dce8389-3986-42a4-a716-ae44ff7fa7f6.png"
+          ]
+        },
+        {
+          "part_id": "260fd3ce-2db8-4461-95d2-fbb05817d406",
+          "part": "Part B",
+          "marks_available": 5,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Refer to the stimulus. \n\nDesign an algorithm to validate a date in the form DD/MM/YYYY and output the equivalent long date, eg 29 October 2023.  \n \n\nInclude all meaningful error messages to assist the user to understand why their entered date is not valid.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "raw = INPUT(\"enter you date in the follwoing format DD/MM/YYYY\")\n\nday = Value(Extract(raw,1,2))\n\nmonth = Value(Extract(raw,3,4))\n\nyear = Value(Extract(raw,6,10))\n\nday\\_ = Extract(raw,1,2)\n\nmonth\\_ = Extract(raw,3,4)\n\nyear\\_ = Extract(raw,6,10)\n\n#like this will do not neg like bool = -1 \n\nIF not (day and month and year)\n\n   DISPLAY \"there is a neg\"\n\n   exit\n\nENDIF\n\nIF not year > 0\n\n   DISPLAY \"the year is not valid\"\n\n   exit\n\nENDIF\n\nIF not DaysinMonth(moth) <= day\n\n   DISPLAY \"the days are invlid\"\n\n   exit\n\nENDIF\n\nIF month > 12 \n\n   DISPLAY \"month is not valid\"\n\n   exit \n\nENDIF\n\nDISPLAY day\\_ +\" \" + MonthName(month) + \" \" + year\\_",
+            "images": [],
+            "word_count": 99
+          },
+          "result": {
+            "mark": 3,
+            "available": 5,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 3,
+                "feedback": "Your algorithm demonstrates a good structural attempt at solving the problem, but you need to carefully review the parameters for the Extract routine, as it requires the starting position and the number of characters (N) rather than the start and end index positions. Additionally, your logic for validating the days in a month is reversed and will falsely reject valid dates, and your month validation must also ensure the value is not less than 1.",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "5",
+              "criterion": "Provides a substantially correct algorithm that addresses the following\nfeatures:\n&ndash; Validates the inputted date\n&ndash; Uses appropriate data structures and library routines\n&ndash; Outputs the correct long date\n&ndash; Provides meaningful error messages"
+            },
+            {
+              "marks": "4",
+              "criterion": "Provides a substantially correct algorithm that addresses most of the features"
+            },
+            {
+              "marks": "3",
+              "criterion": "Provides an algorithm that addresses some of the features"
+            },
+            {
+              "marks": "2",
+              "criterion": "Provides an algorithm that attempts to address one of the features"
+            },
+            {
+              "marks": "1",
+              "criterion": "Demonstrates some understanding of the problem"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "![](assets/ad3d6cbb-d6ba-4458-b52c-2c4ebf0a5159.png)",
+          "sample_answer_images": [
+            "assets/ad3d6cbb-d6ba-4458-b52c-2c4ebf0a5159.png"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "question_id": "697d34c3-ca80-4965-8908-2b91bd0a0022",
+      "title": "Applications of Web Programming (SA, TKS 2025)",
+      "topic": "Applications of Web Programming",
+      "label": "SA",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A local bookstore wants to create an interactive website where customers can search for books, submit reviews, and receive personalised recommendations.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "c39f41f4-28a2-4393-9456-fd2a27ab649d",
+          "part": "Part A",
+          "marks_available": 3,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Explain two ways an interactive website can improve user experience for this bookstore.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "-   the useres dont have to deal with refreshing the page on click of anything \n-   it is faster and easery to navigate \n\nboth these make the useres life eaiar",
+            "images": [],
+            "word_count": 28
+          },
+          "result": {
+            "mark": 1,
+            "available": 3,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 1,
+                "feedback": "Your response touches on the benefit of faster loading times, but you need to specifically identify two distinct interactive features, such as a book search bar or a customer review section. To improve your answer, clearly state these two features and explicitly explain how each one directly enhances the customer's experience when browsing or buying books on the website, rather than just stating it makes their life easier.",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "3",
+              "criterion": "Thorough explanation of two distinct interactive features with clear relevance to user experience."
+            },
+            {
+              "marks": "2",
+              "criterion": "Some explanation of interactive features, with partial relevance."
+            },
+            {
+              "marks": "1",
+              "criterion": "Mentions interactive features but lacks clear explanation or relevance."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "An interactive website can improve user experience by allowing customers to search for books easily, providing quick and relevant results based on their input. Additionally, enabling users to submit reviews creates engagement and builds community trust. Personalised recommendations based on past searches or reviews make the experience tailored to individual preferences, encouraging more visits and purchases."
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "question_id": "118dcc8c-54db-408f-8c7b-12b3631f7561",
+      "title": "Class Diagrams (Draw/MCQ, TKS 2025)",
+      "topic": "Class Diagrams",
+      "label": "Draw/MCQ",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "A company wishes to develop a movie streaming platform uisng Java, an OOP language that manages users, subscriptions, movies, and reviews. It will have the following requirements. \n\n-   A user must create an account with a unique userID, name, email, and password. They will also have the ability to update their email and password. \n    \n-   Each user can have one subscription plan (e.g., Basic, Premium) that determines their streaming quality,  subscription fee and what the user can access. \n    \n-   A subscription also has details like plan name, price, and renewal date. \n-   The platform offers a range of movies, each with a title, genre, release year, and duration.\n    \n-   Users can maintain a watch history, recording what movies or shows they’ve watched and when. They can also add movies to their favourites list. \n    \n-   Users can also rate movies on a numerical scale, comments within each review they create and endorse other reviews. Each review can only be assigned to one movie.",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "7193f130-0615-47f8-ace5-65f781ea08b4",
+          "part": "Part A",
+          "marks_available": 4,
+          "syllabus": "Software Engineering",
+          "answer_type": "DRAWING_V2",
+          "prompt": "Complete the following task diagram by appending an attribute or method where a (-) exists.",
+          "prompt_images": [],
+          "question": {
+            "background_images": [
+              "assets/33d21165-fae3-45a5-9c4c-ace7a5bf72f4.png"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "drawing_png": "drawings/q16_Part_A.png",
+            "drawing_scene": "drawings/q16_Part_A.excalidraw.json",
+            "drawing_text": {
+              "element_counts": {
+                "image": 1,
+                "text": 12
+              },
+              "texts": [
+                {
+                  "text": "password",
+                  "inside": null
+                },
+                {
+                  "text": "updatePassword()",
+                  "inside": null
+                },
+                {
+                  "text": "fee",
+                  "inside": null
+                },
+                {
+                  "text": "price ",
+                  "inside": null
+                },
+                {
+                  "text": "renual_date",
+                  "inside": null
+                },
+                {
+                  "text": "genre\n\nrelease_year\n\n\nduration",
+                  "inside": null
+                },
+                {
+                  "text": "comments",
+                  "inside": null
+                },
+                {
+                  "text": "rating",
+                  "inside": null
+                },
+                {
+                  "text": "movieId",
+                  "inside": null
+                },
+                {
+                  "text": "assign_to_movie()",
+                  "inside": null
+                },
+                {
+                  "text": "change_plan()",
+                  "inside": null
+                },
+                {
+                  "text": "plan_id()",
+                  "inside": null
+                }
+              ],
+              "shapes": [],
+              "connectors": []
+            }
+          },
+          "result": {
+            "mark": 3,
+            "available": 4,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 3,
+                "feedback": "Need to specify types of attributes.",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "4",
+              "criterion": "Accurately constructs a class diagram with minimal errors. This includes showing all attributes, inheritance, relationships and multiplicity."
+            },
+            {
+              "marks": "3",
+              "criterion": "Constructs a class diagram with a maximum of two major omissions."
+            },
+            {
+              "marks": "2",
+              "criterion": "Constructs a class diagram with a maximum of four major omissions."
+            },
+            {
+              "marks": "1",
+              "criterion": "Attempts to construct a class diagram relevant to the scenario."
+            }
+          ],
+          "marking_rubric": "Note that there can be variances in the student's relationship descriptions. For instance, using \"uses\" or \"attains\" instead of \"has\".",
+          "marking_guidance": null,
+          "sample_answer": "![](assets/59f232f6-79e6-46aa-b6bd-c8ac6b90c2c4.png)",
+          "sample_answer_images": [
+            "assets/59f232f6-79e6-46aa-b6bd-c8ac6b90c2c4.png"
+          ]
+        },
+        {
+          "part_id": "68294bb4-f120-4abf-89a5-00fe0cbd93a4",
+          "part": "Part B",
+          "marks_available": 1,
+          "syllabus": "Software Engineering",
+          "answer_type": "MULTI_CHOICE",
+          "prompt": "Which of the following best describes the relationship between Subscription and Movie?",
+          "prompt_images": [],
+          "question": {
+            "options": [
+              {
+                "letter": "A",
+                "text": "One to One",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "B",
+                "text": "One to Many",
+                "image": null,
+                "correct": true,
+                "chosen_by_you": true
+              },
+              {
+                "letter": "C",
+                "text": "Many to One",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              },
+              {
+                "letter": "D",
+                "text": "Many to Many",
+                "image": null,
+                "correct": false,
+                "chosen_by_you": false
+              }
+            ],
+            "correct_letters": [
+              "B"
+            ]
+          },
+          "your_response": {
+            "answered": true,
+            "chosen_letters": [
+              "B"
+            ],
+            "correct": true
+          },
+          "result": {
+            "mark": 1,
+            "available": 1,
+            "not_submitted": false,
+            "automarked": true,
+            "feedback": []
+          },
+          "marking_criteria": null,
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": null
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "question_id": "ce3e2a82-bb8f-462b-8924-4154f0128d51",
+      "title": "Prototyping (Q21, 2023 HSC Exam SDD)",
+      "topic": "Prototyping",
+      "label": "Q21",
+      "kind": "2023 HSC Exam SDD",
+      "source": null,
+      "copyright": null,
+      "stimulus": null,
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "3773a7b1-90dd-4e87-b7eb-c059acd61506",
+          "part": "Part A",
+          "marks_available": 2,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Outline how a prototype can be used in the development of a software application.",
+          "prompt_images": [],
+          "question": {},
+          "your_response": {
+            "answered": true,
+            "text": "A prototype allow the engenrest to make get ealy feadback so giued the directon of the progect. It can also be used to asses teclnical fisibleiy.",
+            "images": [],
+            "word_count": 26
+          },
+          "result": {
+            "mark": 2,
+            "available": 2,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 2,
+                "feedback": null,
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "2",
+              "criterion": "Demonstrates a sound understanding of the use of prototyping"
+            },
+            {
+              "marks": "1",
+              "criterion": "Demonstrates some understanding of prototyping"
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "A prototype can be used to show screen design and navigation, to clarify understanding of the system and get client feedback."
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "question_id": "d1f43152-9083-486c-912f-dcb65832b092",
+      "title": "UI & UX (ER, TKS 2025)",
+      "topic": "UI & UX",
+      "label": "ER",
+      "kind": "TKS 2025",
+      "source": null,
+      "copyright": "TKS 2025",
+      "stimulus": "Below is a video going through the OECD Government at a Glance 2025 dashboard which compares the performance of OECD Countries. \n\n[▶ VIDEO (open this file)](assets/73db782d-dae0-40f4-8a71-792b46f52d13.mov)\n\nYou browser not support video\n\nYou browser not support video\n\nSource: The OECD",
+      "stimulus_images": [],
+      "parts": [
+        {
+          "part_id": "51d05a18-6f2c-4557-938a-9f9b2f835e74",
+          "part": "Part A",
+          "marks_available": 8,
+          "syllabus": "Software Engineering",
+          "answer_type": "SHORT",
+          "prompt": "Evaluate the effectiveness of the above dashboard in communicating its information in terms of its UI and UX.",
+          "prompt_images": [],
+          "question": {
+            "word_limit": 400
+          },
+          "your_response": {
+            "answered": true,
+            "text": "-   consitancy \n-   interactivy \n\nThis is a exceptnaly well design UI provindeg the usere with a exepltery UX. It is consistant and responcive (it scales to diffent dispays) and it is intuitve. this make the imfomatin on it easey to read and prosess as the user doesnt have to think about how to find out what they need. This siite is also asesable.\n\nThe UI is concistan as it has one coulor scheme all the way throught that is a nice green and blue this makes it feel like a word doument a format that the users is filliar with also this scheem doent hart there eyes.\n\nUnlike outer websites this website is intuive to use there is now mulit lay tab selection and nothing confusing like that but is is scroling with buttons that allow you to jump to key feturea this means that it is easy for the uer to navigat fast and effintly even if it is ther fist time. the only donwside is the intuve ness scrifecs a small amoutn to profmance (no complx key bord shortcuts) but the timesaving are not work the comliexity. \n\nthis website is acceable in the stimula you can see clear selectable titles this means the blid peplos screen readeers can help the see. this means that it is accable this will greatly enhance the ux of someone that is blind.\n\nUltimely the OECD gov website is easy to use and has followed best pracitss with UI and UX. theis reusltin in a great user expernce.",
+            "images": [],
+            "word_count": 253
+          },
+          "result": {
+            "mark": 4,
+            "available": 8,
+            "not_submitted": false,
+            "automarked": false,
+            "feedback": [
+              {
+                "marker": "TKS CST",
+                "mark": 4,
+                "feedback": "Your response correctly identifies basic UI and UX concepts like accessibility, colour consistency, and navigation, but to improve, you need to deeply analyse the specific features of this particular data dashboard. Focus on evaluating how well interactive elements like charts, filters, and data comparisons actually communicate the complex information, rather than just discussing generic website elements like scrolling. Additionally, it requires providing a balanced judgement that looks at both strengths and potential weaknesses, such as whether the dashboard might overwhelm users with visual density or lack guidance for non expert visitors.",
+                "marked": "2026-03-06T02:07:54.738Z"
+              }
+            ]
+          },
+          "marking_criteria": [
+            {
+              "marks": "8",
+              "criterion": "Clearly evaluates the effectiveness of the OECD Government at a Glance 2025 Dashboard in achieving its goal with reference to UI and UX."
+            },
+            {
+              "marks": "6-7",
+              "criterion": "Describes how effective the OECD Government at a Glance 2025 Dashboard is in achieving its goal with reference to UI and UX."
+            },
+            {
+              "marks": "4-5",
+              "criterion": "Outlines major features of the dashboard particularly in reference to UI and UX."
+            },
+            {
+              "marks": "2-3",
+              "criterion": "Outlines some features of the dashboard and if its UI and UX are effective."
+            },
+            {
+              "marks": "1",
+              "criterion": "Provides some relevant information."
+            }
+          ],
+          "marking_rubric": null,
+          "marking_guidance": null,
+          "sample_answer": "The OECD Government at a Glance 2025 interactive dashboard is designed to present comparative data on public governance across OECD member countries. While the dashboard succeeds in delivering a wealth of information, its overall effectiveness is shaped significantly by its user experience (UX) and user interface (UI) design.\n\nFrom a UX perspective, the dashboard offers a structured and informative experience for users familiar with data analysis. It allows exploration of governance indicators such as trust in government, digital service delivery, and public sector performance. The ability to compare countries and track changes over time enhances its analytical value. However, the dashboard lacks onboarding features or guided navigation, which can make it difficult for first-time or non-expert users to engage meaningfully. The absence of contextual explanations for indicators may also hinder understanding, especially for students or general audiences. Furthermore, the dashboard is not fully optimised for mobile devices, limiting accessibility for users on the go.\n\nIn terms of UI, the dashboard presents a clean and professional layout consistent with OECD branding. Interactive elements such as dropdown filters and dynamic charts allow users to customise their view, which supports deeper engagement. The use of colour coding and visual hierarchy helps distinguish between data categories, making the interface visually coherent. However, the design could benefit from more intuitive controls and clearer labelling. For example, some filters are nested or hidden, which may confuse users unfamiliar with the structure. Additionally, the lack of downloadable summaries or simplified visualisations reduces the dashboard’s utility for educators or policymakers who need quick insights.\n\nOverall, the dashboard’s UX and UI are functional but not fully inclusive. While it serves its core audience—policy analysts and researchers—well, it could be improved to better support broader public engagement. Enhancements such as mobile responsiveness, clearer navigation, and contextual help would significantly improve the user experience. Similarly, UI improvements like simplified layouts and exportable visuals would make the dashboard more versatile and accessible.\n\nIn conclusion, the OECD Government at a Glance 2025 dashboard is a powerful tool for comparative governance analysis. Its UX and UI are generally effective but require refinement to maximise accessibility, usability, and impact across a wider audience.\n\n**The student may also talk about:**\n\n-   User Journey Flow: The dashboard lacks a clear progression or guided path for users to follow, which can lead to confusion about where to start or how to interpret data.\n-   Audience Appropriateness: The dashboard seems tailored more for policymakers and analysts than for general public or students, which limits its broader educational utility.\n-   Feedback Mechanism: There is no visible way for users to provide feedback or report issues, which reduces opportunities for iterative improvement.\n-   Visual Density: Some pages are crowded with charts and filters, which can overwhelm users and reduce clarity.\n-   Tooltip Use: Limited use of tooltips or hover-over explanations for technical terms or indicators.\n-   Consistency Across Pages: While the design is professional, some sections use different layouts or chart styles, which can reduce cohesion."
+        }
+      ]
+    }
+  ],
+  "by_topic": {
+    "Enterprise Benefits": {
+      "mark": 1,
+      "available": 1
+    },
+    "Yr12 Data Structures - Arrays": {
+      "mark": 1,
+      "available": 1
+    },
+    "Cascading Style Sheets": {
+      "mark": 0,
+      "available": 1
+    },
+    "Algorithms": {
+      "mark": 0,
+      "available": 1
+    },
+    "Quality Assurance": {
+      "mark": 1,
+      "available": 1
+    },
+    "PWAs": {
+      "mark": 0,
+      "available": 1
+    },
+    "Frontend Code Libraries": {
+      "mark": 0,
+      "available": 1
+    },
+    "Developing Secure Code": {
+      "mark": 1,
+      "available": 1
+    },
+    "Object-Relational Mapping": {
+      "mark": 1,
+      "available": 1
+    },
+    "Communication Issues": {
+      "mark": 1,
+      "available": 1
+    },
+    "Backend Engineering": {
+      "mark": 2,
+      "available": 2
+    },
+    "Impact of Secure Software": {
+      "mark": 7,
+      "available": 10
+    },
+    "Programming Paradigms": {
+      "mark": 9,
+      "available": 12
+    },
+    "Algorithms/Testing": {
+      "mark": 5,
+      "available": 8
+    },
+    "Applications of Web Programming": {
+      "mark": 1,
+      "available": 3
+    },
+    "Class Diagrams": {
+      "mark": 4,
+      "available": 5
+    },
+    "Prototyping": {
+      "mark": 2,
+      "available": 2
+    },
+    "UI & UX": {
+      "mark": 4,
+      "available": 8
+    }
+  }
+}

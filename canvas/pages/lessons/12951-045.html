@@ -1,0 +1,366 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.5 Big Data — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">12SENX2 Software Engineering 2026 · Cycle 7 (Term 1: Weeks 5-6) Programming for the Web</div>
+<h1 style="margin-top:.2rem">2.5 Big Data</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-5-big-data" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/12951-all.html">Whole course</a><a href="../read/12951-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong></p>
+<div class="richtext mui-style-1qrt5y2" data-kontent-element-codename="title">
+<p>Investigate the effect of big data on web architecture, including:</p>
+</div>
+<div class="richtext cms-content-formatting richtext-example mui-style-ovmm8v">
+<ul>
+<li>data mining</li>
+<li>metadata</li>
+<li>streaming service management</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 10pt;">Students will:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Investigate and analyse the impact of big data on web architecture, focusing on data mining, metadata, and streaming service management.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 10pt;">Students can:</span></p>
+<ul>
+<li class="card-text"><span style="font-size: 10pt;">Define data mining, metadata, and streaming service management in the context of big data.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Explain how big data technologies influence web architecture, particularly in processing and storing large datasets.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Describe the role of data mining in extracting useful information from large datasets and how it affects decision-making in web services.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Identify how metadata is used to organise, manage, and retrieve data effectively in web systems.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Discuss the architecture and technology requirements for managing streaming services, including real-time data processing and content delivery.</span></li>
+<li class="card-text"><span style="font-size: 10pt;">Analyse real-world examples of how big data impacts companies like Netflix, particularly in content recommendations and user experience optimization.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+</div>
+<div class="dp-content-block kl_custom_block_1">Big Data is transforming the architecture of the web in profound ways, driving new structures and technologies to handle the vast influx of data. By examining <strong>data mining</strong>, <strong>metadata</strong>, and <strong>streaming service management</strong>, we can understand how modern web systems evolve to meet the demands of an increasingly data-driven world.
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<h5 class="card-title">What is Big Data?</h5>
+<p class="card-text">Big Data refers to extremely large and complex datasets that cannot be managed or processed using traditional data processing tools.</p>
+<p class="card-text">The concept of Big Data has evolved over time, leading to various definitions, but the most widely accepted characterisation is based on the <strong>"V's" framework</strong>, which outlines the key attributes of Big Data. Originally, Big Data was defined by three Vs—<strong>Volume, Velocity, and Variety</strong>—but over time, other V's have been added to describe its growing complexity and importance.</p>
+</div>
+</div>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../assets/577aebf99880549f.png" alt="image.png" width="653" height="392" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/files/3527421" data-api-returntype="File" loading="lazy"></p>
+<p>&nbsp;</p>
+<h4>Data Mining</h4>
+<p><strong>Data mining</strong> refers to the process of discovering patterns, correlations, and insights from large datasets. By analysing massive amounts of data, organisations can extract valuable information that can be used to make informed decisions, optimise processes, and predict future trends. Data mining is essential in industries such as e-commerce, healthcare, finance, and marketing.</p>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">How it works?</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Data is collected from various sources (such as social media, IoT devices, and transaction records).</li>
+<li>Advanced algorithms analyse the data to uncover hidden patterns and relationships.</li>
+<li>These insights are used to guide decision-making, enhance user experiences, and improve business operations.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Common Data Mining Techniques</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Classification</strong>: Assigning data into predefined categories (e.g., classifying customers based on purchase behaviours).</li>
+<li><strong>Clustering</strong>: Grouping similar data points together (e.g., segmenting users based on browsing patterns).</li>
+<li><strong>Association</strong>: Discovering relationships between variables (e.g., identifying which products are frequently bought together).</li>
+<li><strong>Regression</strong>: Predicting a continuous value based on other variables (e.g., forecasting sales based on past trends).</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Examples</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Retail and E-commerce</strong>: Amazon uses data mining to recommend products based on user history.</li>
+<li><strong>Healthcare</strong>: Hospitals analyse patient data to predict the likelihood of diseases and personalise treatments.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>The rise of Big Data has significantly impacted web architecture, leading to the development of new technologies and approaches to manage, store, and process enormous volumes of data. Traditional data processing methods are insufficient, and modern web architecture has adapted to meet the challenges posed by Big Data.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Scalability and Distributed Systems</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Challenge</strong>: Big Data systems must handle vast volumes of data that are continuously generated from various sources. Centralised systems cannot manage this level of data efficiently.</li>
+<li><strong>Solution</strong>: Modern web architecture incorporates <strong>distributed systems</strong>, where data is processed and stored across multiple servers. Technologies such as <strong>Hadoop</strong> and <strong>Apache Spark</strong> enable parallel data processing, allowing systems to scale horizontally by adding more servers as data volume grows.</li>
+</ul>
+<p><strong>Example</strong>: Companies like Google and Facebook use distributed systems to manage data generated by billions of users in real-time.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Real-Time Data Processing</h3>
+<div class="dp-panel-content ">
+<ul>
+<li><strong>Challenge</strong>: The speed (velocity) at which data is generated, especially from IoT devices and social media, requires web systems that can process and respond to data instantly.</li>
+<li><strong>Solution</strong>: Web architectures now integrate <strong>real-time data processing</strong> frameworks such as <strong>Apache Kafka</strong> and <strong>Apache Flink</strong>, which handle streaming data. These systems allow businesses to analyse data as it arrives, enabling real-time decision-making.</li>
+</ul>
+<p><strong>Example</strong>: Streaming platforms like <strong>Twitch</strong> and <strong>Netflix</strong> analyse user data in real-time to optimise streaming quality and recommend content.</p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading">Data Storage and Management</h3>
+<div class="dp-panel-content">
+<ul>
+<li><strong>Challenge</strong>: The volume and variety of Big Data demand storage solutions that can handle structured, unstructured, and semi-structured data.</li>
+<li><strong>Solution</strong>: Web architectures have shifted towards <strong>cloud-based storage</strong> solutions like <strong>Amazon S3</strong> and <strong>Google Cloud Storage</strong>, which offer flexibility, scalability, and cost-effectiveness. These solutions allow organisations to store data in its raw form and process it as needed, reducing the need for pre-defined schemas.</li>
+</ul>
+<p><strong>Example</strong>: E-commerce platforms store massive amounts of customer interaction data in cloud databases, which are analysed for marketing, inventory management, and customer service.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Metadata</h4>
+<p>Metadata is a set of data that describes and gives information about other data. Think of it as a label or tag that provides details about a file or piece of information. For example, when you take a photo with your phone, metadata can include the date and time the photo was taken, the location, the camera settings, and more. This extra information helps organise, categorise, and make sense of data.</p>
+<p>&nbsp;</p>
+<p>In the world of Big Data, metadata is like a roadmap or a guide that helps us navigate through the massive and complex landscape of information. Imagine trying to find a specific book in a gigantic library without a catalogue or labels on the shelves. It would be nearly impossible! Metadata serves as that catalogue, providing essential details about the data so that we can understand, find, and use it effectively.</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Organisation</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Categorising Data: Metadata helps categorise data by providing information about its content. For example, in a huge collection of social media posts, metadata can include tags like the type of content (text, image, video), the topic discussed, the language used, and even user demographics. This makes it easier to group similar data together.</li>
+<li>Data Models and Schemas: Metadata defines the structure of data in databases, such as tables, columns, and relationships. This structure is essential for storing and retrieving information efficiently, especially when dealing with large datasets.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Discovery</h3>
+<div class="dp-panel-content ">
+<ul>
+<li>Enhanced Search Capabilities: When we search for something on the internet or in a database, metadata helps narrow down the results. For example, if you’re looking for movies from the 1990s on a streaming service, metadata tags like the release year, genre, and director make this search possible and efficient.</li>
+<li>Facilitating Advanced Queries: In complex datasets, metadata enables advanced search queries. For example, a company might use metadata to filter customer data based on purchase history, geographic location, or engagement with marketing campaigns.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Improving Search and Analysis</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Connecting Different Data Sources: In Big Data, information often comes from various sources, like social media, e-commerce, and sensor data. Metadata standardises these diverse sources by providing common reference points, such as time stamps or geographic coordinates, making it easier to combine and compare them.</li>
+<li>APIs and Data Sharing: Metadata facilitates data sharing between systems and applications through APIs (Application Programming Interfaces). It provides the necessary details, such as data format and access protocols, to ensure that different systems can communicate and share data effectively.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Data Quality and Accuracy</h3>
+<div class="dp-panel-content">
+<ul>
+<li>Ensuring Data Accuracy: Metadata includes information about data provenance, or the origin of the data, which helps verify its accuracy and reliability. For example, knowing who created the data and when it was last updated can be crucial for research and decision-making.</li>
+<li>Data Lifespan and Usage Policies: Metadata can include rules about how long data should be stored (data retention policies) and who is allowed to access or modify it. This is especially important in sectors like healthcare or finance, where data privacy and security are critical.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Streaming Service Management</h4>
+<p>Streaming service management involves organising, storing, and delivering digital content like movies, music, and videos over the internet. Companies like Netflix, Spotify, and YouTube are examples of streaming services that manage vast libraries of content and deliver it to users on demand.</p>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-type-default dp-callout-color-warning">
+<div class="card-body">
+<p>Managing a streaming service involves several key tasks:</p>
+<ol style="list-style-type: decimal;">
+<li>Content Storage: Storing massive amounts of data, including videos, audio files, and metadata.</li>
+<li>Content Delivery: Making sure content is delivered quickly and efficiently to users around the world. This often uses Content Delivery Networks (CDNs) that cache content close to users.</li>
+<li>User Experience: Providing features like content recommendations, fast loading times, and high-quality streaming without buffering.</li>
+<li>Analytics and Personalisation: Analysing user behaviour to recommend new content based on their preferences.</li>
+</ol>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Content Recommendations</h3>
+<div class="dp-panel-content ">
+<p>Big Data’s Role:</p>
+<ul>
+<li>Streaming platforms like Netflix and Spotify gather data on what content users interact with, including what they watch or listen to, the time spent on each piece of content, and their browsing habits.</li>
+<li>This data is used to create personalised recommendations, improving user engagement and satisfaction. For instance, Netflix’s recommendation engine suggests movies and shows based on viewing history, ratings, and even how long a user watched a particular type of content.</li>
+</ul>
+<p>Effect on Architecture:</p>
+<ul>
+<li>To process and analyse this enormous amount of data, streaming services use big data technologies like Hadoop, which stores and processes large datasets, and Apache Spark, which performs real-time data processing.</li>
+<li>The backend infrastructure is designed to be scalable and capable of handling real-time analytics. This often involves using distributed databases such as Cassandra or MongoDB, which can efficiently manage and query large datasets across multiple servers.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Real-Time Streaming and Adaptive Bitrate</h3>
+<div class="dp-panel-content ">
+<p>Big Data’s Role:</p>
+<ul>
+<li>Streaming services monitor the quality of the user’s internet connection and the specifications of their device (like screen resolution) to dynamically adjust the quality of the video or audio being streamed. This is called adaptive bitrate streaming.</li>
+<li>By analysing network conditions in real-time, services can switch between different quality streams to prevent buffering, thus ensuring a smooth viewing experience.</li>
+</ul>
+<p>Effect on Architecture:</p>
+<ul>
+<li>The architecture for real-time streaming involves microservices that handle different tasks like encoding, caching, and distribution of content. These microservices work together to adjust the stream quality based on real-time data.</li>
+<li>Tools like Kafka or RabbitMQ are used for real-time data streaming and processing. These tools help in the continuous monitoring of network conditions and user interactions, ensuring the stream quality is adjusted on the fly.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Predictive Maintenance</h3>
+<div class="dp-panel-content">
+<p>Big Data’s Role:</p>
+<ul>
+<li>Predictive maintenance involves using big data analytics to foresee and prevent potential technical issues that could disrupt the service. For example, by analysing server logs, network traffic, and user error reports, streaming platforms can identify patterns that may indicate an impending system failure.</li>
+<li>This helps in proactive troubleshooting, reducing downtime, and maintaining a seamless user experience.</li>
+</ul>
+<p>Effect on Architecture:</p>
+<ul>
+<li>The architecture must support the ingestion and analysis of large volumes of real-time data. Technologies like Apache Kafka or Amazon Kinesis are often used for data streaming, while machine learning models are deployed to detect anomalies in the data.</li>
+<li>The system also needs to be highly available and fault-tolerant, as it is crucial to react quickly to potential issues. This often involves using cloud-based solutions that provide auto-scaling and automated recovery features.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Scalability and Flexibility</h3>
+<div class="dp-panel-content">
+<p>Big Data’s Role:</p>
+<ul>
+<li>As the number of users and the amount of content grow, streaming services need to scale their infrastructure to handle increased traffic and data loads. Big data analytics helps predict when these spikes will occur, such as during the release of a popular show or live event.</li>
+<li>By analysing historical data, services can allocate resources dynamically to meet demand, ensuring that users experience no delays or interruptions.</li>
+</ul>
+<p>Effect on Architecture:</p>
+<ul>
+<li>The architecture is typically cloud-based, utilising platforms like AWS, Google Cloud, or Microsoft Azure. These platforms offer scalable storage and computing resources that can be adjusted based on demand.</li>
+<li>Containerisation tools like Docker and orchestration platforms like Kubernetes are often used to deploy and manage applications in a scalable and flexible manner. This allows streaming services to add or remove resources easily, maintaining performance during peak times.</li>
+</ul>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Enhanced Security and Fraud Detection</h3>
+<div class="dp-panel-content">
+<p>Big Data’s Role:</p>
+<ul>
+<li>Streaming platforms collect data to monitor for unusual activity, such as multiple logins from different locations, which could indicate account sharing or hacking attempts. Analysing this data helps in detecting and preventing fraud and security breaches.</li>
+<li>For example, services like Netflix use machine learning models trained on user behaviour data to identify suspicious activity patterns.</li>
+</ul>
+<p>Effect on Architecture:</p>
+<ul>
+<li>The architecture for security and fraud detection needs to support real-time data analysis and rapid response. Tools like Elasticsearch are used to search and analyse security logs, while machine learning models deployed in the cloud can process large volumes of data and detect anomalies.</li>
+<li>Data security measures, including encryption and secure APIs, are integrated into the architecture to protect user data and ensure compliance with regulations like GDPR.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Use of Big Data: Netflix</h3>
+<div class="dp-panel-content ">
+<p>Netflix is an example where big data and web architecture come together, learn how Netflix utilises big data to provide personalised content recommendations, improve streaming quality, and make informed decisions about new shows and movies. Read more about this <a class="inline_disabled" title="Link" href="https://seleritysas.com/2019/04/05/how-netflix-used-big-data-and-analytics-to-generate-billions/" target="_blank">here</a>.</p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="dp-callout dp-callout-color-info card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #9e9e9e;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-search" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Sources</strong></p>
+<ul class="card-text">
+<li><a class="inline_disabled" title="Link" href="https://www.techtarget.com/searchdatamanagement/definition/big-data" target="_blank">Big Data</a></li>
+<li><a class="inline_disabled" title="Link" href="https://www.oracle.com/au/big-data/what-is-big-data/" target="_blank">What is Big Data?</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #7719aa; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="fas fa-pen" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Activity</strong></p>
+<ul>
+<li class="card-text"><a title="2.5 Big Data" href="https://canvas.kings.edu.au/courses/12951/assignments/204832" class="ext" target="_blank" rel="noopener" data-course-type="quizzes.next" data-published="true" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/12951/assignments/204832" data-api-returntype="Assignment">2.5 Big Data</a></li>
+</ul>
+</div>
+</div>
+<div class="dp-callout dp-callout-color-warning card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px; border-left-color: #00bcd4; border-left-width: 5px;">
+<div class="card-body">
+<p class="card-text"><strong><i class="icon-materials-required-light icon-Solid" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> &nbsp; Practical</strong></p>
+</div>
+</div>
+&nbsp;
+<div class="dp-panels-wrapper dp-accordion-default">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">PowerPoint</h3>
+<div class="dp-panel-content ">
+<p><a href="https://kingsnsw.sharepoint.com/:p:/s/CanvasSharepoint/IQCes6bijcEtR4feshXE-H7WAQGDV9Oehgmh0jVlBcBkb2U?e=2XpPSl">2.5 Big Data on Web.pptx</a></p>
+<p><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/12951/pages/2-dot-5-big-data" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/12951/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://kingsnsw.sharepoint.com/sites/CanvasSharepoint/_layouts/15/Doc.aspx?sourcedoc={e2a6b39e-c18d-472d-87de-b215c4f87ed6}&amp;amp;action=embedview&amp;amp;wdAr=1.7770833333333333</span></div></p>
+</div>
+</div>
+</div>
+</div>
+</div><h3 class="sub">Designing Web Applications</h3></main>
+<div class="pnrow"><a class="pn" href="12951-044.html">← Previous</a><a class="pn idx" href="../course-12951.html">All lessons</a><a class="pn" href="12951-046.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

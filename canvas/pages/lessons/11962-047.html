@@ -1,0 +1,141 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.4.1 Git Practices — SEN Offline</title>
+<style>
+:root{--ac:#2b6cb0}body{font:16px/1.65 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:2rem 1.25rem;color:#16181d;background:#fff}
+h1{border-bottom:3px solid var(--ac);padding-bottom:.4rem}
+h2.mod{margin-top:3.5rem;background:var(--ac);color:#fff;padding:.55rem .8rem;border-radius:6px;font-size:1.2rem}
+h3.sub{color:var(--ac);border-left:4px solid var(--ac);padding-left:.6rem;font-size:.95rem;text-transform:uppercase;letter-spacing:.05em}
+h4.pg{margin-top:2.2rem;font-size:1.15rem;border-bottom:1px solid #dde;padding-bottom:.25rem}
+img{max-width:100%;height:auto;border-radius:4px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid #ccd;padding:.35rem .5rem}
+pre{background:#f4f5f7;padding:.75rem;border-radius:4px;overflow-x:auto}code{background:#f4f5f7;padding:.1rem .25rem;border-radius:3px}
+.embed{background:#fff8e1;border-left:4px solid #f0a500;padding:.5rem .75rem;margin:.75rem 0;font-size:.85rem;word-break:break-all}
+.tag{background:#e6f4ea;color:#1e6b34;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.q{border:1px solid #dde;border-radius:6px;padding:.75rem 1rem;margin:1rem 0}.q .meta{font-size:.8rem;color:#667}
+nav a{text-decoration:none}nav li{margin:.15rem 0}@media print{nav{display:none}}
+@media (prefers-color-scheme:dark){body{background:#15171c;color:#e6e8ec}pre,code{background:#22252c}h4.pg{border-color:#333}.embed{background:#2a2415}.q{border-color:#333}}
+
+.lesson-top{max-width:900px;margin:0 auto;padding:.5rem 1.25rem 0}
+.crumb{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#667;margin:.6rem 0 .2rem}
+.pnrow{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.pn{border:1px solid #dde;border-radius:8px;padding:.45rem .85rem;text-decoration:none;color:#2b6cb0;font-size:.88rem}
+.pn:hover{border-color:#2b6cb0} .pn.idx{margin-left:auto;margin-right:auto}
+@media(prefers-color-scheme:dark){.pn{border-color:#333}}
+
+.appnav{position:sticky;top:0;z-index:999;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;
+ background:#1a202c;padding:.5rem .75rem;margin:-2rem -1.25rem 1.5rem;border-radius:0 0 10px 10px}
+.appnav a{color:#cbd5e0;text-decoration:none;font-size:.85rem;padding:.35rem .6rem;border-radius:6px}
+.appnav a:hover{background:#2d3748;color:#fff}
+.appnav .brand{font-weight:700;color:#fff;margin-right:.5rem}
+@media(max-width:600px){.appnav{margin:-1rem -.75rem 1rem}}
+
+.appnav kbd{font:inherit;font-size:.68rem;border:1px solid #4a5568;background:#2d3748;color:#a0aec0;
+ border-radius:4px;padding:0 .28rem;margin-left:.3rem;vertical-align:middle}
+
+.viewsw{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1rem 0 1.3rem}
+.viewsw b{font-size:.72rem;color:#667;letter-spacing:.06em}
+.viewsw a,.viewsw span.cur{font-size:.8rem;padding:.35rem .75rem;border-radius:999px;
+ border:1px solid #dde;text-decoration:none;color:#2b6cb0}
+.viewsw span.cur{background:#2b6cb0;border-color:#2b6cb0;color:#fff;font-weight:600}
+.viewsw a:hover{border-color:#2b6cb0}
+.viewsw .hint{font-size:.75rem;color:#667}
+@media(prefers-color-scheme:dark){.viewsw a,.viewsw span.cur{border-color:#333}.viewsw b,.viewsw .hint{color:#9aa4b2}}
+</style><script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../../index.html" class="brand">SEN Offline</a><a href="../search.html">Search <kbd>/</kbd><kbd>//</kbd></a><a href="../course-12951.html">HSC Course</a><a href="../course-11962.html">Yr 11 Course</a><a href="../browse.html">Quizzes</a><a href="../quiz.html">Quiz Generator</a><a href="../sync.html">Sync</a></nav>
+<div class="lesson-top"><div class="crumb">11SENX Software Engineering 2025 · Cycle 8 (Term 2: Weeks 5-6) OOP</div>
+<h1 style="margin-top:.2rem">2.4.1 Git Practices</h1><p class="canvas-open"><a href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-4-dot-1-git-practices" target="_blank" rel="noopener">Open this lesson in Canvas ↗</a> <span class="dim">· if the direct link misses, try <a href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a></span></p><div class="viewsw"><b>VIEW</b><a href="../read/11962-all.html">Whole course</a><a href="../read/11962-m0.html">By module</a><span class="cur">By lesson</span><span class="hint">one lesson, next/prev</span></div></div>
+<main style="max-width:900px;margin:0 auto;padding:0 1.25rem"><div id="dp-wrapper" class="dp-wrapper dp-bookmark variation-2"><header class="dp-header dp-bookmark variation-2 ">
+
+</header>
+<div class="dp-content-block kl_custom_block_0">
+<div class=" dp-callout-color-lt-primary dp-callout card dp-callout-position-default dp-callout-type-solid">
+<div class="card-body">
+<p class="card-text"><strong class="card-text">Syllabus<br></strong>Outline the features of OOP that support collaborative code development including:<br class="card-text">- consistency<br class="card-text">- code commenting<br class="card-text">- version control<br class="card-text">- feedback</p>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_content_block_1">
+<h3 class="dp-has-icon"><i class="far fa-check-square" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Learning Intention and Success Criteria</h3>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4" style="padding: 0px 5px 0px 0px;">
+<div class="dp-callout dp-callout-color-primary card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Learning Intention</strong> - <span style="font-size: 12pt;">Students will:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 10pt;">Understand and explain how Object-Oriented Programming (OOP) features support collaborative code development, focusing on consistency, code commenting, version control, and feedback mechanisms.</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-8" style="padding: 0px 0px 0px 5px;">
+<div class="dp-callout dp-callout-color-success card dp-callout-position-default dp-callout-type-default" style="padding: 0px 10px 5px 10px;">
+<div class="card-body">
+<p class="card-text" style="margin-bottom: 0px;"><strong>Success Criteria</strong> -&nbsp;<span style="font-size: 12pt;">Students can:</span></p>
+<ul class="card-text">
+<li><span style="font-size: 13.3333px;">Explain how OOP features like modularity, naming conventions, design patterns, and comments contribute to consistency and readability in collaborative development.</span></li>
+<li><span style="font-size: 13.3333px;">Describe the role of version control systems in managing code changes and the importance of code reviews, automated testing, and CI/CD pipelines in maintaining high code quality.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dp-content-block kl_custom_block_1">
+<h3 class="dp-has-icon"><i class="fas fa-info-circle" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Content</h3>
+<p>&nbsp;</p>
+<h4><strong>Video Tutorials</strong></h4>
+<p>&nbsp;</p>
+<div class="dp-panels-wrapper dp-tabs">
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Git Basics</h3>
+<div class="dp-panel-content ">
+<p><br><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-4-dot-1-git-practices" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D4238dc1b-7998-4f39-bc66-1a7050cc3242-2768%26custom_arc_start_at%3D0</span></div></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Cloning and Repo Initialisation</h3>
+<div class="dp-panel-content ">
+<p><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-4-dot-1-git-practices" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3D9521e049-e570-40f7-ae5d-3b2d11e1fee1-2766%26custom_arc_start_at%3D0</span></div></p>
+</div>
+</div>
+<div class="dp-panel-group">
+<h3 class="dp-panel-heading ">Branches and Merge Conflicts</h3>
+<div class="dp-panel-content">
+<p><div class="embed">▶ <b>Video won't play offline.</b> <a class="canvaslink" href="https://canvas.kings.edu.au/courses/11962/pages/2-dot-4-dot-1-git-practices" target="_blank" rel="noopener">Watch on Canvas</a> · <a class="canvaslink alt" href="https://canvas.kings.edu.au/courses/11962/modules" target="_blank" rel="noopener">all modules</a><br><span class="embedsrc">https://canvas.kings.edu.au/courses/11962/external_tools/retrieve?display=borderless&amp;amp;url=https%3A%2F%2Fkings.instructuremedia.com%2Flti%2Flaunch%3Fcustom_arc_launch_type%3Dbare_embed%26custom_arc_media_id%3De0b4a4a8-4a76-4a8d-9bf7-edd68171dccd-2767%26custom_arc_start_at%3D0</span></div></p>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4><strong>Initial Clone of a Repository</strong></h4>
+<ol style="list-style-type: decimal;">
+<li>Use <code>git clone &lt;url&gt;</code> to clone the repository. Remember to replace the <code>&lt;url&gt;</code> with the link that is found under: <em>Code (green button) &gt; HTTPS</em> (see screenshot below)<em>.<br><br>Reason: We must be editing our code locally on Visual Studio Code, not using the online editor on GitHub.</em><em><br><br><img src="../../assets/059963299a95970d.png" alt="image.png" width="700" height="465" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197840" data-api-returntype="File" loading="lazy"><br><br><img src="../../assets/ced904d35f12c280.png" alt="1.png" width="1000" height="626" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197876" data-api-returntype="File" loading="lazy"><br></em></li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4>&nbsp;<strong>Using a Branch to Add Features<br></strong></h4>
+<ol style="list-style-type: decimal;">
+<li>Change the Visual Studio Code workspace to the folder that was created from cloning the repository. Use the command <code>git pull origin main</code> to update the local repository with any changes that may be on the GitHub repository.<br><br><em>Reason: Ensures your local repository is synchronized with the remote repository to avoid conflicts.<br><br><img src="../../assets/8a6c5e74027fcbe3.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197842" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Then, create a new branch for your feature using this command <code>git checkout -b &lt;new-feature-branch&gt;</code>. Remember to replace <code>&lt;new-feature-branch&gt;</code> with the name of the feature that you are implementing (you come up with this name).<br><br><em>Reason: Creating a new branch allows you to work on the new feature without affecting the main branch.&nbsp;<br><br><img src="../../assets/11463d59718c0e63.png" alt="Screenshot 2024-05-26 at 8.01.41 PM.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197843" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Now, implement the code for your new feature in your local environment, i.e., Visual Studio Code.<br><br><img src="../../assets/394225c658e0dc5a.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197844" data-api-returntype="File" loading="lazy"><br><br></li>
+<li>After this, you may stage all the changes you've made to the code by running the command <code>git add .</code><br><br><em>Reason: Staging the changes prepares them to be committed. You can also add specific files instead of all changes.<br><br><img src="../../assets/de98a3da4b239b77.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197845" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Commit the changes with a message through the command, <code>git commit -m "Add feature X"</code>. Make sure you include an appropriate message with your commit that details the changes you made. <br><br><em>Reason: Commit messages should be descriptive to provide context about the changes.<br><br><img src="../../assets/209b3db9f333f3b4.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197846" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Push the changes to the remote repository by using <code>git push</code>.<br><br>At this stage you will likely be asked to login to GitHub if you have not already. For the first push we do to a new branch, there is be no corresponding branch on the GitHub repository so the push command will fail (see screenshot). So, just copy the command in the error, <code>git push --set-upstream origin &lt;branch-name&gt;</code>,&nbsp; to push it for the first time, you only need to run this command once for a new branch.<br><br><em>Reason: Pushing the changes uploads your branch to the remote repository, making it available for review and merging.<br><br><img src="../../assets/e570d494e6376024.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197847" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Create a Pull Request and Merge on GitHub<br>&nbsp; &nbsp; •&nbsp; &nbsp; Copy the link that you received when running the <code>git push</code> command from the previous step. Paste it into your browser; it should be in the form <code>https://github.com/&lt;username&gt;/&lt;repository&gt;/pull/new/&lt;branch&gt;</code><br>&nbsp; &nbsp; • &nbsp;&nbsp; Fill in a meaningful title and description for your pull request, then press the "Create pull request" button<br>&nbsp; &nbsp; • &nbsp; &nbsp;Review the changes, address any comments or feedback.<br>&nbsp; &nbsp; • &nbsp; &nbsp;Once approved, merge the pull request into the main branch.<br><br><em>Reason: Merging via a pull request allows for code review and ensures that the main branch is always stable.</em><em><br><br><img src="../../assets/6922886f2cb6128e.png" alt="image-d25d76ca-214a-4495-85e0-4604f11d3439.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197853" data-api-returntype="File" loading="lazy"><br></em><img src="../../assets/1910e088607c60f7.png" alt="Screenshot 2024-05-26 at 8.28.03 PM.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197850" data-api-returntype="File" loading="lazy"><br><br></li>
+<li>Return to Visual Studio Code and checkout the main branch which you have just merged your changes to by using <code>git checkout main</code><br><br><em>Reason: Switches your working directory back to the main branch to incorporate the latest changes.<br><br><img src="../../assets/5948a222b2455f37.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197851" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Pull the latest changes from the main branch with the command <code>git pull origin main</code><br><br><em>Reason: Ensures your local main branch is up to date with the remote main branch, including the new feature you just merged.<br><br><img src="../../assets/1b2fd465f237d889.png" alt="image.png" data-api-endpoint="https://canvas.kings.edu.au/api/v1/courses/11962/files/3197852" data-api-returntype="File" loading="lazy"><br><br></em></li>
+<li>Repeat from Step 1 whenever you want to add a new feature into your program.<br><br><em>Reason: To add a new feature into the codebase.</em><br><br></li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div></main>
+<div class="pnrow"><a class="pn" href="11962-046.html">← Previous</a><a class="pn idx" href="../course-11962.html">All lessons</a><a class="pn" href="11962-048.html">Next →</a></div>
+<link rel="stylesheet" href="../../vendor/findbar.css?v=5800f209">
+<script src="../../vendor/findbar.js?v=863e9cad" defer></script>
+</body></html>

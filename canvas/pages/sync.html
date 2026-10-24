@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sync — SEN Offline</title>
+<style>
+:root{--bg:#fff;--fg:#16181d;--mut:#5a6472;--card:#fff;--bd:#e2e8f0;--ac:#2b6cb0;--ok:#2f855a;--no:#c53030}
+@media(prefers-color-scheme:dark){:root{--bg:#15171c;--fg:#e6e8ec;--mut:#9aa4b2;--card:#1c1f26;--bd:#2d3340}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+main{max-width:760px;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+h1{font-size:1.5rem;margin:.2rem 0 .3rem}
+.lead{color:var(--mut);margin:0 0 1.2rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:1.1rem;margin-bottom:1rem}
+.card h2{font-size:1rem;margin:0 0 .6rem}
+code.key{display:block;font:600 1.05rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;
+ background:rgba(43,108,176,.1);border:1px solid var(--bd);border-radius:8px;padding:.7rem .9rem;
+ word-break:break-all;user-select:all}
+button,input{font:inherit}
+button{padding:.5rem 1rem;border-radius:8px;border:1px solid var(--ac);background:var(--ac);color:#fff;cursor:pointer}
+button.ghost{background:transparent;color:var(--ac)}
+input[type=text]{width:100%;padding:.55rem .8rem;border-radius:8px;border:1px solid var(--bd);
+ background:var(--bg);color:var(--fg);font-family:ui-monospace,Menlo,monospace}
+.row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-top:.7rem}
+.muted{color:var(--mut);font-size:.88rem}
+.stat{font-size:.9rem;padding:.5rem .7rem;border-radius:8px;margin-top:.7rem}
+.stat.ok{background:rgba(47,133,90,.12);color:var(--ok)}
+.stat.err{background:rgba(197,48,48,.12);color:var(--no)}
+.stat.idle{background:rgba(127,127,127,.1);color:var(--mut)}
+.warn{background:#fff8e6;border-left:3px solid #e0a800;padding:.7rem .9rem;border-radius:0 8px 8px 0;
+ font-size:.88rem;color:var(--mut)}
+@media(prefers-color-scheme:dark){.warn{background:#2a2415}}
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:.5rem}
+th,td{text-align:left;padding:.4rem .3rem;border-bottom:1px solid var(--bd)}
+th{color:var(--mut);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+td.r,th.r{text-align:right}
+</style>
+<link rel="stylesheet" href="../vendor/findbar.css?v=5800f209">
+<script src="../vendor/sync.js" defer></script>
+<script src="../vendor/findbar.js?v=863e9cad" defer></script>
+<script>try{var t=localStorage.getItem("sen_theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
+<nav class="appnav"><a href="../index.html" class="brand">SEN Offline</a>
+<a href="search.html">Search</a><a href="course-12951.html">HSC Course</a>
+<a href="course-11962.html">Yr 11 Course</a><a href="browse.html">Quizzes</a>
+<a href="quiz.html">Quiz Generator</a><a href="sync.html">Sync</a></nav>
+
+<main>
+<h1>Sync your progress</h1>
+<p class="lead">Quiz scores are saved on this device first, so everything works offline.
+Syncing copies them to the server so another device can pick them up.</p>
+
+<div class="card">
+  <h2>Account</h2>
+  <p class="muted" id="who">checking…</p>
+  <p class="muted" style="font-size:.82rem">Use <b>Sign out</b> in the bar above to sign out on this device.</p>
+  <div class="row">
+    <button class="ghost" id="sync">Sync now</button>
+    <button class="ghost" id="pull">Pull from server</button>
+  </div>
+  <div class="stat idle" id="stat">not synced yet</div>
+</div>
+
+
+
+<div class="card">
+  <h2>What's stored</h2>
+  <table><thead><tr><th>Topic</th><th class="r">Attempts</th><th class="r">Best</th><th class="r">Last</th></tr></thead>
+  <tbody id="rows"><tr><td colspan="4" class="muted">nothing yet — take a quiz</td></tr></tbody></table>
+</div>
+
+<p class="warn">Your progress is tied to your account. Signing out clears the scores
+cached on this device — they stay safe on the server and come back when you sign in.</p>
+</main>
+
+<script>
+function $(id){return document.getElementById(id)}
+function paint(){
+  var S=window.SENSync;
+  var st=S.status();
+  var el=$('stat');
+  el.className='stat '+(st.ok===true?'ok':st.ok===false?'err':'idle');
+  el.textContent=st.msg+(st.at?' · '+new Date(st.at).toLocaleString():'');
+  var sc={}; try{sc=JSON.parse(localStorage.getItem('sen_scores'))||{}}catch(e){}
+  var keys=Object.keys(sc).sort();
+  var tb=$('rows'); tb.textContent='';
+  if(!keys.length){
+    var tr=document.createElement('tr'), td=document.createElement('td');
+    td.colSpan=4; td.className='muted'; td.textContent='nothing yet — take a quiz';
+    tr.appendChild(td); tb.appendChild(tr); return;
+  }
+  // textContent, never innerHTML: quiz names come back from the server and
+  // must never be parsed as HTML.
+  keys.forEach(function(k){
+    var v=sc[k], tr=document.createElement('tr');
+    [[k.split('|')[1]||k,''],[v.attempts,'r'],[v.best+'%','r'],[v.last+'%','r']]
+      .forEach(function(cell){
+        var td=document.createElement('td');
+        if(cell[1]) td.className=cell[1];
+        td.textContent=cell[0];
+        tr.appendChild(td);
+      });
+    tb.appendChild(tr);
+  });
+}
+addEventListener('DOMContentLoaded',async function(){
+  paint();
+  var u=await window.SENSync.me();
+  document.getElementById('who').textContent =
+    u ? ('Signed in as ' + u.username) : 'Not signed in';
+  $('sync').onclick=async function(){ $('sync').textContent='Syncing…';
+    await window.SENSync.sync(); $('sync').textContent='Sync now'; paint(); };
+  $('pull').onclick=async function(){ $('pull').textContent='Pulling…';
+    await window.SENSync.pull(); $('pull').textContent='Pull from server'; paint(); };
+  addEventListener('sen-scores-updated',paint);
+});
+</script></body></html>

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SQL Practice</title>
+<style>
+  :root {
+    --bg: #1a1d23;
+    --panel: #232730;
+    --panel-2: #2b303b;
+    --code-bg: #11141a;
+    --border: #353a45;
+    --text: #e6e6e6;
+    --muted: #9aa3b2;
+    --accent: #4ea1ff;
+    --accent-fg: #06121f;
+    --good: #4ade80;
+    --good-bg: #14361f;
+    --good-border: #1c5630;
+    --bad: #f87171;
+    --bad-bg: #3a1818;
+    --bad-border: #5a1f1f;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  :root[data-theme="light"] {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --panel-2: #eef1f5;
+    --code-bg: #f0f2f6;
+    --border: #d6dae0;
+    --text: #1a1d23;
+    --muted: #5a6472;
+    --accent: #1f6feb;
+    --accent-fg: #ffffff;
+    --good: #137a3b;
+    --good-bg: #e3f5ea;
+    --good-border: #b6e0c5;
+    --bad: #b42a2a;
+    --bad-bg: #fbe9e9;
+    --bad-border: #efc1c1;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: system-ui, sans-serif; background: var(--bg);
+    color: var(--text); display: flex; height: 100vh;
+  }
+  aside {
+    width: 260px; background: var(--panel); border-right: 1px solid var(--border);
+    overflow-y: auto; padding: 12px 0;
+  }
+  aside h1 { font-size: 14px; margin: 0 16px 12px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+  .task-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 16px; cursor: pointer; border-left: 3px solid transparent;
+    font-size: 14px;
+  }
+  .task-item:hover { background: var(--panel-2); }
+  .task-item.active { background: var(--panel-2); border-left-color: var(--accent); }
+  .task-item .num { color: var(--muted); font-family: var(--mono); width: 24px; }
+  .task-item .check { color: var(--good); width: 14px; }
+  main {
+    flex: 1; overflow-y: auto; padding: 24px 32px; max-width: 1100px;
+  }
+  h2 { margin: 0 0 6px; }
+  .desc { color: var(--muted); margin-bottom: 8px; line-height: 1.5; white-space: pre-wrap; }
+  .hint-toggle {
+    background: transparent; color: var(--accent); border: 0; padding: 0;
+    font-size: 13px; cursor: pointer; text-decoration: underline; margin-bottom: 12px;
+  }
+  .hint-box {
+    background: var(--panel-2); border-left: 3px solid var(--accent);
+    padding: 10px 14px; margin-bottom: 16px; font-size: 14px; color: var(--text);
+  }
+  .schema {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 6px;
+    padding: 12px 14px; margin-bottom: 16px; font-size: 13px;
+  }
+  .schema h3 { margin: 0 0 6px; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .schema .cols { font-family: var(--mono); margin-bottom: 8px; color: var(--text); }
+  textarea {
+    width: 100%; min-height: 140px; background: var(--code-bg); color: var(--text);
+    border: 1px solid var(--border); border-radius: 6px; padding: 12px;
+    font-family: var(--mono); font-size: 14px; resize: vertical;
+  }
+  textarea:focus { outline: none; border-color: var(--accent); }
+  .row { display: flex; gap: 12px; align-items: center; margin: 12px 0; }
+  button {
+    background: var(--accent); color: var(--accent-fg); border: 0; padding: 8px 16px;
+    border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px;
+  }
+  button:hover { filter: brightness(1.1); }
+  .theme-toggle {
+    background: transparent; color: var(--muted); border: 1px solid var(--border);
+    font-weight: 500; padding: 4px 10px; font-size: 12px; margin: 0 16px 12px;
+  }
+  .theme-toggle:hover { color: var(--text); }
+  .hint { color: var(--muted); font-size: 12px; }
+  .verdict { padding: 10px 14px; border-radius: 6px; margin: 10px 0; font-weight: 600; white-space: pre-wrap; }
+  .verdict.good { background: var(--good-bg); color: var(--good); border: 1px solid var(--good-border); }
+  .verdict.bad  { background: var(--bad-bg);  color: var(--bad);  border: 1px solid var(--bad-border); }
+  table.result {
+    width: 100%; border-collapse: collapse; margin-top: 8px; font-family: var(--mono);
+    font-size: 13px;
+  }
+  table.result th, table.result td {
+    border: 1px solid var(--border); padding: 6px 10px; text-align: left;
+  }
+  table.result th { background: var(--panel-2); color: var(--muted); }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .pair h4 { margin: 12px 0 6px; font-size: 12px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+  footer { padding: 20px 0; color: var(--muted); font-size: 12px; }
+  footer a { color: var(--muted); cursor: pointer; text-decoration: underline; }
+</style>
+</head>
+<body>
+<aside>
+  <h1>SQL Practice</h1>
+  <button class="theme-toggle" id="theme-toggle">Toggle theme</button>
+  <div id="task-list"></div>
+</aside>
+<main id="main">
+  <p class="hint">Loading…</p>
+</main>
+
+<script>
+let tasks = [];
+let schema = [];
+let progress = {};
+let current = 1;
+let saveTimer = null;
+
+async function load() {
+  const [t, p] = await Promise.all([
+    fetch('/tasks').then(r => r.json()),
+    fetch('/progress').then(r => r.json()),
+  ]);
+  tasks = t.tasks;
+  schema = t.schema;
+  progress = Object.fromEntries(p.map(x => [x.task_id, x]));
+  renderSidebar();
+  renderTask(current);
+}
+
+function renderSchema() {
+  return schema.map(tbl => {
+    const cols = tbl.columns.map(c => `${c.name} ${c.type}`.trim()).join(', ');
+    return `
+      <div class="schema">
+        <h3>Table: ${tbl.name}</h3>
+        <div class="cols">(${cols})</div>
+        ${renderTable(tbl.sample_columns, tbl.sample_rows)}
+      </div>`;
+  }).join('');
+}
+
+function renderSidebar() {
+  const el = document.getElementById('task-list');
+  el.innerHTML = '';
+  for (const t of tasks) {
+    const done = progress[t.id]?.completed_at;
+    const div = document.createElement('div');
+    div.className = 'task-item' + (t.id === current ? ' active' : '');
+    div.innerHTML =
+      `<span class="num">${String(t.id).padStart(2,'0')}</span>` +
+      `<span class="check">${done ? '✓' : ''}</span>` +
+      `<span>${t.title}</span>`;
+    div.onclick = () => { current = t.id; renderSidebar(); renderTask(t.id); };
+    el.appendChild(div);
+  }
+}
+
+function renderTask(id) {
+  const t = tasks.find(x => x.id === id);
+  if (!t) return;
+  const p = progress[id] || {};
+  const initial = p.draft_query ?? p.best_query ?? '';
+  const main = document.getElementById('main');
+  main.innerHTML = `
+    <h2>${t.id}. ${t.title}</h2>
+    <p class="desc">${escapeHtml(t.description)}</p>
+    ${t.hint ? `<button class="hint-toggle" id="hint-toggle">Show hint</button><div class="hint-box" id="hint-box" style="display:none">${escapeHtml(t.hint)}</div>` : ''}
+    ${renderSchema()}
+    <textarea id="sql" spellcheck="false" placeholder="SELECT ...">${escapeHtml(initial)}</textarea>
+    <div class="row">
+      <button id="run">Run (Ctrl+Enter)</button>
+      <span class="hint">Attempts: ${p.attempts || 0}${p.completed_at ? ' · completed ' + p.completed_at : ''}</span>
+    </div>
+    <div id="verdict"></div>
+    <div id="output"></div>
+    <footer>
+      <a id="reset">Reset all progress</a>
+    </footer>
+  `;
+  const ta = document.getElementById('sql');
+  ta.focus();
+  ta.addEventListener('input', () => {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => saveDraft(id, ta.value), 400);
+  });
+  ta.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') { e.preventDefault(); runQuery(id); }
+  });
+  document.getElementById('run').onclick = () => runQuery(id);
+  const hintBtn = document.getElementById('hint-toggle');
+  if (hintBtn) hintBtn.onclick = () => {
+    const box = document.getElementById('hint-box');
+    const show = box.style.display === 'none';
+    box.style.display = show ? 'block' : 'none';
+    hintBtn.textContent = show ? 'Hide hint' : 'Show hint';
+  };
+  document.getElementById('reset').onclick = async () => {
+    if (!confirm('Wipe all progress and drafts?')) return;
+    await fetch('/reset', { method: 'POST' });
+    progress = {};
+    renderSidebar();
+    renderTask(current);
+  };
+}
+
+async function saveDraft(id, query) {
+  await fetch('/save_draft', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({task_id: id, query}),
+  });
+  if (!progress[id]) progress[id] = { task_id: id };
+  progress[id].draft_query = query;
+}
+
+async function runQuery(id) {
+  const query = document.getElementById('sql').value;
+  const verdict = document.getElementById('verdict');
+  const output = document.getElementById('output');
+  verdict.innerHTML = '';
+  output.innerHTML = '<p class="hint">Running…</p>';
+  const r = await fetch('/run', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({task_id: id, query}),
+  });
+  const data = await r.json();
+  if (data.error) {
+    verdict.innerHTML = `<div class="verdict bad">${escapeHtml(data.error)}</div>`;
+    output.innerHTML = '';
+  } else if (data.correct) {
+    verdict.innerHTML = `<div class="verdict good">✓ Correct</div>`;
+    output.innerHTML = renderTable(data.columns, data.rows);
+  } else {
+    verdict.innerHTML = `<div class="verdict bad">✗ Output doesn't match the expected result.</div>`;
+    output.innerHTML = `
+      <div class="pair">
+        <div><h4>Your result</h4>${renderTable(data.columns, data.rows)}</div>
+        <div><h4>Expected</h4>${renderTable(data.expected_columns, data.expected_rows)}</div>
+      </div>
+    `;
+  }
+  // Refresh progress.
+  progress = Object.fromEntries(
+    (await fetch('/progress').then(r => r.json())).map(x => [x.task_id, x])
+  );
+  renderSidebar();
+  // Update attempts counter inline without re-rendering textarea (keep cursor).
+  const p = progress[id] || {};
+  const hint = document.querySelector('.row .hint');
+  if (hint) hint.textContent =
+    `Attempts: ${p.attempts || 0}${p.completed_at ? ' · completed ' + p.completed_at : ''}`;
+}
+
+function renderTable(cols, rows) {
+  if (!cols || !cols.length) return '<p class="hint">(no columns)</p>';
+  let h = '<table class="result"><thead><tr>';
+  for (const c of cols) h += `<th>${escapeHtml(c)}</th>`;
+  h += '</tr></thead><tbody>';
+  if (!rows.length) {
+    h += `<tr><td colspan="${cols.length}" style="color:var(--muted)">(no rows)</td></tr>`;
+  } else {
+    for (const r of rows) {
+      h += '<tr>';
+      for (const v of r) h += `<td>${escapeHtml(String(v ?? ''))}</td>`;
+      h += '</tr>';
+    }
+  }
+  return h + '</tbody></table>';
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+
+// Theme handling — persisted in localStorage, default follows system.
+(function () {
+  const saved = localStorage.getItem('theme');
+  const theme = saved || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  document.documentElement.setAttribute('data-theme', theme);
+  document.getElementById('theme-toggle').onclick = () => {
+    const cur = document.documentElement.getAttribute('data-theme');
+    const next = cur === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  };
+})();
+
+load();
+</script>
+</body>
+</html>

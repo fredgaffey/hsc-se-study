@@ -346,7 +346,7 @@ function startClock() {
 // ---------- home (menu) ----------
 async function home() {
   exam = null; attempt = null; groups = []; clearInterval(tick); closeModal();
-  const [{ exams, pdfs }, attempts] = await Promise.all([api('/api/exams'), api('/api/attempts')]);
+  const [{ exams, pdfs, drills = [] }, attempts] = await Promise.all([api('/api/exams'), api('/api/attempts')]);
   const fresh = exams.filter(e => !e.sat), sat = exams.filter(e => e.sat);
   const prefs = { reading: 10, targets: true, restPer: 5, ...store.get('nesa:prefs', {}) };
   const examRow = e => `<div class="exam-row"><button class="nsw-button nsw-button--dark" data-start="${esc(e.folder)}">${esc(e.exam)}</button>
@@ -359,7 +359,9 @@ async function home() {
     <div class="landing-grid">
       <div class="feature">
         ${unsub.length ? `<h2>Resume</h2>${unsub.map(a => `<div class="exam-row"><button class="nsw-button nsw-button--dark" data-resume="${esc(a.id)}">${esc(a.title)}</button><span class="meta">started ${new Date(a.startedAt).toLocaleString()}</span></div>`).join('')}` : ''}
-        <h2${unsub.length ? ' class="small"' : ''}>Exported Gradeo papers – not sat yet</h2>
+        ${drills.filter(d => !d.done).length ? `<h2${unsub.length ? ' class="small"' : ''}>From Claude</h2>${drills.filter(d => !d.done).map(examRow).join('')}` : ''}
+        ${drills.some(d => d.done) ? `<details><summary>Finished questions from Claude (${drills.filter(d => d.done).length})</summary>${drills.filter(d => d.done).map(examRow).join('')}</details>` : ''}
+        <h2${unsub.length || drills.length ? ' class="small"' : ''}>Exported Gradeo papers – not sat yet</h2>
         ${fresh.map(examRow).join('') || '<p>None</p>'}
         <details><summary>Papers you've sat before (${sat.length})</summary>${sat.map(examRow).join('')}</details>
         <h2 class="small">PDF papers</h2>
@@ -434,6 +436,7 @@ const durWords = min => words(min * 60000);
 // ---------- structured (exported Gradeo) exam ----------
 async function startStructured(folder, settings) {
   exam = await api(`/api/exam/${encodeURIComponent(folder)}`);
+  if (exam.reading_minutes != null) settings = { ...settings, readingMs: exam.reading_minutes * 60000 };
   const durationMinutes = exam.duration_minutes || Math.round(exam.total_available * 1.9);
   const counts = {};
   const typeName = { MULTI_CHOICE: 'multiple-choice', OBJECTIVE_RESPONSE: 'objective-response', SHORT: 'short-answer', CODING: 'coding', SQL: 'SQL', RICH_TABLE: 'table', DRAWING_V2: 'drawing' };

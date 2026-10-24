@@ -20,12 +20,15 @@ const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.
   '.pdf': 'application/pdf', '.mp4': 'video/mp4', '.mov': 'video/quicktime', '.webm': 'video/webm', '.md': 'text/markdown; charset=utf-8',
   '.woff2': 'font/woff2', '.woff': 'font/woff', '.ttf': 'font/ttf' };
 
-const readExam = folder => JSON.parse(fs.readFileSync(path.join(EXAMS, folder, 'exam.json'), 'utf8'));
+const DRILLS = path.join(ROOT, 'papers', 'drills');
+// "drill:<name>" = a one-off question set Claude wrote into papers/drills/<name>/exam.json
+const examDir = folder => folder.startsWith('drill:') ? path.join(DRILLS, path.basename(folder.slice(6))) : path.join(EXAMS, path.basename(folder));
+const readExam = folder => JSON.parse(fs.readFileSync(path.join(examDir(folder), 'exam.json'), 'utf8'));
 
 // Remove everything that would give the answer away.
 function sanitize(e) {
   return {
-    exam: e.exam, folder: e.folder, duration_minutes: e.duration_minutes, total_available: e.total_available,
+    exam: e.exam, folder: e.folder, duration_minutes: e.duration_minutes, total_available: e.total_available, reading_minutes: e.reading_minutes ?? null, drill: !!e.drill,
     questions: e.questions.map(q => ({
       number: q.number, title: q.title, stimulus: q.stimulus,
       parts: q.parts.map(p => {
@@ -52,6 +55,23 @@ function listExams() {
     } catch {}
   }
   return out.sort((a, b) => b.marks - a.marks || a.exam.localeCompare(b.exam));
+}
+
+function listDrills() {
+  if (!fs.existsSync(DRILLS)) return [];
+  const submitted = new Set();
+  for (const f of fs.readdirSync(ATTEMPTS).filter(f => f.endsWith('.json'))) {
+    try { const a = JSON.parse(fs.readFileSync(path.join(ATTEMPTS, f), 'utf8')); if (a.submittedAt) submitted.add(a.folder); } catch {}
+  }
+  const out = [];
+  for (const name of fs.readdirSync(DRILLS)) {
+    try {
+      const e = readExam('drill:' + name);
+      const folder = 'drill:' + name;
+      out.push({ folder, exam: e.exam, marks: e.total_available, minutes: e.duration_minutes, parts: e.parts_total, created: e.created || '', done: submitted.has(folder), drill: true });
+    } catch {}
+  }
+  return out.sort((a, b) => (b.created || '').localeCompare(a.created || ''));
 }
 
 // ---- marking pack written on submit ----
@@ -131,8 +151,8 @@ http.createServer(async (req, res) => {
     if (p === '/vendor/marked.js') return serveFile(req, res, path.join(ROOT, 'node_modules/marked/lib/marked.umd.js'));
     if (p.startsWith('/exams/')) return serveFile(req, res, safeJoin(EXAMS, p.slice(7)));
     if (p.startsWith('/papers/')) return serveFile(req, res, safeJoin(PAPERS, p.slice(8)));
-    if (p === '/api/exams') return send(res, 200, { exams: listExams(), pdfs: fs.readdirSync(PAPERS).filter(f => f.toLowerCase().endsWith('.pdf')) });
-    if (p.startsWith('/api/exam/')) { const folder = p.slice(10); const e = readExam(path.basename(folder)); return send(res, 200, sanitize({ ...e, folder })); }
+    if (p === '/api/exams') return send(res, 200, { exams: listExams(), drills: listDrills(), pdfs: fs.readdirSync(PAPERS).filter(f => f.toLowerCase().endsWith('.pdf')) });
+    if (p.startsWith('/api/exam/')) { const folder = p.slice(10); const e = readExam(folder); return send(res, 200, sanitize({ ...e, folder })); }
     if (p === '/api/attempts') {
       return send(res, 200, fs.readdirSync(ATTEMPTS).filter(f => f.endsWith('.json')).map(f => {
         const a = JSON.parse(fs.readFileSync(path.join(ATTEMPTS, f), 'utf8'));

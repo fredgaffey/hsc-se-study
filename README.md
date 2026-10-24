@@ -43,6 +43,10 @@ Every Gradeo paper in this repo is in the menu, plus any PDF you drop into `pape
 Python questions run in the browser, SQL questions run against the question's own data, and drawing
 questions use Excalidraw (the same tool NESA uses). Spell-check is off, as in the real exam.
 
+**Questions from Claude:** Claude can write a one-off set of questions for you with
+`node exam-app/drill.mjs spec.json` (format at the top of that file). It appears under **From Claude** in
+the menu. Answer it in the exam layout, and Claude reads your answers from `papers/attempts/`.
+
 When you finish, your answers are saved to `papers/attempts/<name>.md`, ready to mark yourself
 against `gradeo_out/exams/<paper>/exam.md` or to give to Claude with `skills/hsc-marking`.
 

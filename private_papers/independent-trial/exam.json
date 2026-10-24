@@ -1,0 +1,2170 @@
+{
+ "exam": "Independent Trial",
+ "private": true,
+ "source": "software.paper.is via the SEN Discord (personal study only)",
+ "duration_minutes": 150,
+ "total_available": 80,
+ "parts_total": 32,
+ "parts_answered": 0,
+ "parts_marked": 0,
+ "total_mark": null,
+ "questions": [
+  {
+   "number": 1,
+   "question_id": "question-1",
+   "title": "New Question 1, Privacy by Design",
+   "topic": "New Question 1, Privacy by Design",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-1-0-87478959",
+     "part": "Question 1",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "The “Privacy by Design” approach is defined as:",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Features added after software is released to lock down stored data.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Improvements to processing reliability made after a security breach.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Modifications made following user feedback on interface inefficiencies.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Building software with data protection measures integrated from the outset.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "question_id": "question-2",
+   "title": "New Question 2, CSRF Attack",
+   "topic": "New Question 2, CSRF Attack",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-2-0-090f3280",
+     "part": "Question 2",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A user logs into their bank’s website, which allows money transfers via a button. A hacker sends the user a malicious email containing a link. When the user clicks the link, a money transfer request is executed without their knowledge.\n\nWhat type of attack is this?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Cross-Site Request Forgery (CSRF)",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Cross-Site Scripting (XSS)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Denial of Service (DoS)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "SQL Injection",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "question_id": "question-3",
+   "title": "New Question 3, Email Protocol",
+   "topic": "New Question 3, Email Protocol",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-3-0-6573c043",
+     "part": "Question 3",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Email clients send mail using which protocol?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "SMTP",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "IMAP",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "FTP",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "POP3",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "question_id": "question-4",
+   "title": "New Question 4, Client-Side Programming",
+   "topic": "New Question 4, Client-Side Programming",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-4-0-1dcf5d53",
+     "part": "Question 4",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In the context of a web application, what is the main role of client-side programming?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Managing server databases and application logic.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Handling user interface interactions and dynamic content display in the browser.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Storing persistent data and authenticating users on the server.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Processing requests and sending responses from the web server.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "question_id": "question-5",
+   "title": "New Question 5, Automation Benefits",
+   "topic": "New Question 5, Automation Benefits",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-5-0-83410756",
+     "part": "Question 5",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is the most effective approach to ensuring that automation benefits society as a whole?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Allow market forces to guide the adoption of automation, trusting that economic growth will naturally lead to broader societal benefits.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Prioritise technological advancement and productivity gains, with social concerns addressed only after implementation.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Encourage collaboration between policymakers, educators, and businesses to promote inclusivity, skill development, and sustainability.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Limit the use of automation to industries with low employment rates.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "question_id": "question-6",
+   "title": "New Question 6, Regression Model",
+   "topic": "New Question 6, Regression Model",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-6-0-b90e6256",
+     "part": "Question 6",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A real estate agency wants to build a model to predict whether a house is likely to be sold within 60 days based on features such as its price, location score, number of bedrooms, and age. Based on the scenario above, which regression model is most appropriate, and why?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Linear regression, because it can handle multiple input features and will predict the number of days it takes to sell the house.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Polynomial regression, because housing data often involves curved relationships between price and location.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Logistic regression, because the goal is to classify whether a house will be sold within a specific time frame.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Polynomial regression, because the number of bedrooms and age of the house are discrete variables requiring non-linear models.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "question_id": "question-7",
+   "title": "New Question 7, Implementation Method",
+   "topic": "New Question 7, Implementation Method",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-7-0-1cb7f7f0",
+     "part": "Question 7",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A new software application is introduced by initially running the program with only a few of its modules active. After confirming that these modules function correctly, the remaining components are gradually activated.\n\nWhat type of implementation method does this scenario describe?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Direct",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Phased",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Parallel",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Pilot",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "question_id": "question-8",
+   "title": "New Question 8, Agile Development",
+   "topic": "New Question 8, Agile Development",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-8-0-210d5f9e",
+     "part": "Question 8",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is true for the Agile Development Approach?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Suited to projects with clear requirements and performance is not considered to be critical.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Suited to projects with evolving requirements and performance is not considered to be critical.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Suited to user-centred projects with clear requirements and performance is critical.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Suited to software automation projects, with evolving requirements and performance is critical.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "question_id": "question-9",
+   "title": "New Question 9, Sandboxing",
+   "topic": "New Question 9, Sandboxing",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-9-0-efaf4b0d",
+     "part": "Question 9",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What are the benefits of using sandboxing in software development or deployment?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Replaces the need for authentication by isolating users",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Prevents untrusted code from damaging the host system",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Allows developers to test software in a controlled environment",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Reduces the need for secure coding practices in application development",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "E",
+        "text": "Reduces the risk of security vulnerabilities affecting other parts of the system",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "F",
+        "text": "Improves execution speed by isolating software from operating system processes",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "G",
+        "text": "Prevents changes to live data during development and training",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B",
+       "C",
+       "E",
+       "G"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "question_id": "question-10",
+   "title": "New Question 10, CSS",
+   "topic": "New Question 10, CSS",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Consider the following CSS code.\n\n  \n\n```\nbody {\n    background-color: #0000ff;\n    color: #00ff00;\n    font-family: Arial, serif;\n    margin: 20px;\n}\nh1 {\n    color: #ff0000;\n    text-align: center;\n}\np {\n    color: #ffffff;\n    font-size: 16px;\n}\n```",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-10-0-2e99c5f7",
+     "part": "Question 10",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is true for pages styled using the above CSS code?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Paragraph text is displayed in white",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "All heading text (h1, h2, etc.) will be red",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "The color property in the body overrides the paragraph text color",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Only the h1 heading text is centred",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "E",
+        "text": "The background of the page is blue",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "F",
+        "text": "All fonts will have serifs if Arial is not available",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "G",
+        "text": "Body text is hard against the left side of the screen",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "H",
+        "text": "Text not within <h1> or <p> tags will be green",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "I",
+        "text": "All text will be in a font size of 16 pixels",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "D",
+       "E",
+       "F",
+       "H"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "question_id": "question-11",
+   "title": "New Question 11, Workplace Automation",
+   "topic": "New Question 11, Workplace Automation",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-11-0-51372469",
+     "part": "Question 11",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following impacts are likely to result from increased automation in the workplace?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Greater job satisfaction for manual labourers",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Reduction in demand for some low-skilled jobs",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Increased access to public transport",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Improved safety in high-risk work environments",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "E",
+        "text": "More diverse cultural representation in media",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "F",
+        "text": "Decrease in energy consumption from all industries",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "G",
+        "text": "Reduced labour costs for employers",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "H",
+        "text": "Need for workforce reskilling and upskilling",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B",
+       "D",
+       "G",
+       "H"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "question_id": "question-12",
+   "title": "New Question 12, Context Diagram",
+   "topic": "New Question 12, Context Diagram",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "The following context diagram describes a food ordering app.\n\n![image](assets/12.png.png)",
+   "stimulus_images": [
+    "assets/12.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "question-12-0-001d50d6",
+     "part": "Question 12",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Based on the above diagram, which statements are correct?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Food outlets, Customers and Financial Institutions are sub-modules or sub-programs",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "This is a level 0 data flow diagram",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Food Ordering App is an external entity that interacts with the system",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Food outlets, Customers and Financial Institutions are external entities",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "E",
+        "text": "The system is shown as a single process",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "F",
+        "text": "Order details are provided by Customers directly to a Food Outlet",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "G",
+        "text": "The Food Ordering App sends a message to the Customer once their order has been shipped by a Food Outlet",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "H",
+        "text": "The Food Ordering App sends the Order Details to the Food Outlet before the Transaction Status is received",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B",
+       "D",
+       "E",
+       "G"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "question_id": "question-13",
+   "title": "New Question 13, Security Testing",
+   "topic": "New Question 13, Security Testing",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-13-0-3cb54972",
+     "part": "Question 13",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Match each feature with its correct security testing strategy.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "Dynamic Application Security Testing (DAST)",
+       "Static Application Security Testing (SAST)",
+       "Penetration Testing"
+      ],
+      "rows": [
+       {
+        "statement": "Simulates cyber attacks to find and exploit vulnerabilities.",
+        "correct": [
+         "Penetration Testing"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Requires either the source code or binary.",
+        "correct": [
+         "Static Application Security Testing (SAST)"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Checks for security vulnerabilities without executing the code.",
+        "correct": [
+         "Static Application Security Testing (SAST)"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Evaluates environment and runtime issues.",
+        "correct": [
+         "Dynamic Application Security Testing (DAST)"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Utilises scanning tools to understand how a target responds to intrusions.",
+        "correct": [
+         "Penetration Testing"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Checks for security vulnerabilities while the program is running.",
+        "correct": [
+         "Dynamic Application Security Testing (DAST)"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "A purely white box testing strategy.",
+        "correct": [
+         "Static Application Security Testing (SAST)"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Simulates cyber attacks to find and exploit vulnerabilities.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Requires either the source code or binary.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Checks for security vulnerabilities without executing the code.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Evaluates environment and runtime issues.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Utilises scanning tools to understand how a target responds to intrusions.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Checks for security vulnerabilities while the program is running.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "A purely white box testing strategy.",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "question_id": "question-14",
+   "title": "New Question 14, Web Development Roles",
+   "topic": "New Question 14, Web Development Roles",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-14-0-d5e4f070",
+     "part": "Question 14",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Match each web development role with the W3C initiative or focus area to which it belongs.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "Web Security",
+       "Web Accessibility Initiative (WAI)",
+       "Internationalisation",
+       "Machine-readable data",
+       "Privacy"
+      ],
+      "rows": [
+       {
+        "statement": "Creates standards and working groups to protect user data and privacy",
+        "correct": [
+         "Privacy"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Develops standards and guidelines for secure web applications",
+        "correct": [
+         "Web Security"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Defines open formats (like XML) for data to be processed by computers",
+        "correct": [
+         "Machine-readable data"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Supports web standards for multiple languages and cultural contexts",
+        "correct": [
+         "Internationalisation"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Ensures web content is usable by people with disabilities",
+        "correct": [
+         "Web Accessibility Initiative (WAI)"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Creates standards and working groups to protect user data and privacy",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Develops standards and guidelines for secure web applications",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Defines open formats (like XML) for data to be processed by computers",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Supports web standards for multiple languages and cultural contexts",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Ensures web content is usable by people with disabilities",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "question_id": "question-15",
+   "title": "New Question 15, Machine Learning Models",
+   "topic": "New Question 15, Machine Learning Models",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-15-0-83281896",
+     "part": "Question 15",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Match each application scenario to the most appropriate machine learning model.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "Supervised learning",
+       "Semi-supervised learning",
+       "Unsupervised learning",
+       "Reinforcement learning"
+      ],
+      "rows": [
+       {
+        "statement": "Training a robot to navigate a maze",
+        "correct": [
+         "Reinforcement learning"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Labelling a small set of medical images and using them to classify a larger set",
+        "correct": [
+         "Semi-supervised learning"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Predicting student grades based on past results",
+        "correct": [
+         "Supervised learning"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Teaching an AI agent to win a game through trial and error",
+        "correct": [
+         "Reinforcement learning"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Classifying email as spam or not spam",
+        "correct": [
+         "Semi-supervised learning"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Grouping customers based on shopping habits",
+        "correct": [
+         "Unsupervised learning"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Training a robot to navigate a maze",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Labelling a small set of medical images and using them to classify a larger set",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Predicting student grades based on past results",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Teaching an AI agent to win a game through trial and error",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Classifying email as spam or not spam",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Grouping customers based on shopping habits",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "question_id": "question-16",
+   "title": "New Question 16, Software Project Phases",
+   "topic": "New Question 16, Software Project Phases",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-16-0-eaee4534",
+     "part": "Question 16",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Match each task with the correct software project phase.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "Identifying and defining",
+       "Testing and evaluating",
+       "Research and planning",
+       "Producing and implementing"
+      ],
+      "rows": [
+       {
+        "statement": "Decide on a suitable software development approach.",
+        "correct": [
+         "Research and planning"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Develop, construct and document algorithms.",
+        "correct": [
+         "Producing and implementing"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Explore tools used to develop ideas and generate solutions.",
+        "correct": [
+         "Identifying and defining"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Use a language-dependent code optimisation technique.",
+        "correct": [
+         "Testing and evaluating"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Explore social and ethical issues associated with project work.",
+        "correct": [
+         "Research and planning"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Define and analyse the requirements of a problem.",
+        "correct": [
+         "Identifying and defining"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Compare actual with expected output",
+        "correct": [
+         "Testing and evaluating"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Code the solution in a programming language",
+        "correct": [
+         "Producing and implementing"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Decide on a suitable software development approach.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Develop, construct and document algorithms.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Explore tools used to develop ideas and generate solutions.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Use a language-dependent code optimisation technique.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Explore social and ethical issues associated with project work.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Define and analyse the requirements of a problem.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Compare actual with expected output",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Code the solution in a programming language",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "question_id": "question-17",
+   "title": "New Question 17, Authentication vs Authorisation",
+   "topic": "New Question 17, Authentication vs Authorisation",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-17-0-31adf493",
+     "part": "Question 17",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Distinguish between authentication and authorisation.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "**Authentication**  \nAuthentication is the process of verifying who you are. The question it answers is: \"Are you who you say you are?\" It's the first step in granting access to a system. To authenticate, a user provides credentials, which are then checked against a trusted database or system.\n\nCommon examples include:\n\n-   **Username and Password:** You enter your username and a password. The system checks if the combination is valid.\n-   **Biometrics:** Using a fingerprint or facial recognition to unlock a device.\n-   **Multi-Factor Authentication (MFA):** This is a more robust method that requires two or more forms of verification. For example, after entering your password, you might also have to enter a code sent to your phone.\n\n  \n\n**Authorization**  \nOnce a user has been authenticated, authorization determines what they are allowed to do. The question it answers is: \"What are you permitted to access or do?\" This process involves checking the user's permissions and access rights.\n\nExamples of authorization include:\n\n-   **Role-Based Access Control (RBAC):** Users are assigned roles, and these roles have specific permissions. A \"Student\" role might allow a user to view course materials, while a \"Teacher\" role would allow them to create and edit them.\n-   **Discretionary Access Control (DAC):** The owner of a resource can decide who can access it and what they can do. A good example is sharing a Google Doc. The document owner can grant \"view only,\" \"comment,\" or \"edit\" permissions to others.\n-   **Attribute-Based Access Control (ABAC):** This is a more granular method that uses a set of attributes, like a user's department, the time of day, or the data's sensitivity, to decide access. For instance, a system might only allow access to a specific report during business hours.\n\n  \n\n**The Key Difference**  \nThe simplest way to remember the difference is with a simple analogy:\n\n-   **Authentication** is like showing your ID to get into a building. It proves you're a valid person.\n-   **Authorization** is like getting a special keycard that only lets you into certain floors or rooms in that building. It determines what you can do once you're inside.\n\nAuthentication is a prerequisite for authorization. You can't decide what a person is allowed to do until you've confirmed who they are."
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "question_id": "question-18",
+   "title": "New Question 18, Race Condition",
+   "topic": "New Question 18, Race Condition",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "The Python code below defines a function that allows a user to purchase an item.\n\n  \n\n```\nimport threading\nlock = threading.Lock()\ndef purchase_item(user_id, item_id):\n    with lock:  \n        if inventory[item_id] > 0:\n            inventory[item_id] -= 1\n            confirm_purchase(user_id, item_id)\n```",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-18-0-3381d093",
+     "part": "Question 18",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Explain what a race condition is and how it could affect the purchase\\_item function if no lock was implemented.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "A race condition is a problem that can happen in multi-threaded or multi-process applications when multiple threads or processes try to access and modify the same shared resource at the same time. The final outcome depends on the unpredictable timing or order of execution.\n\n  \n\n**How it affects purchase\\_item**  \nWithout the lock, a race condition could lead to a user purchasing an item that is out of stock. Here's how it could happen:\n\n-   A user checks if an item is in stock. The inventory for that item is 1.\n-   At the same exact moment, another user also checks the inventory for the same item. The inventory is still 1.\n-   The first user purchases the item, and the inventory count goes down to 0.\n-   The second user's purchase request goes through based on their earlier check, and they also get the item.\n\nThe inventory is now at -1, which is not what you would want.\n\nThe **threading.Lock()** object is a mutual exclusion lock that makes sure only one thread can access the code within the **with lock:** block at any given time, preventing this from happening."
+    }
+   ]
+  },
+  {
+   "number": 19,
+   "question_id": "question-19",
+   "title": "New Question 19, Security Compromise",
+   "topic": "New Question 19, Security Compromise",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A school’s online portal allows students to upload assessment files. Recently, a student discovered that by modifying the URL, they could access and download other students’ submitted files. It was also found that students could re-upload their work multiple times, overwriting previous submissions without detection even after the due date.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-19-0-cd640f73",
+     "part": "Question 19",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Describe how confidentiality, accountability and integrity has been compromised in this scenario.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "This scenario is a classic example of security vulnerabilities in a web application. Let's break down how confidentiality, integrity, and accountability were compromised.\n\n  \n\n**Confidentiality**  \nConfidentiality is about making sure that information is only accessible to those who are authorised to view it. In this case, the school portal failed to protect the students' assessment files from unauthorised access.\n\nThe confidentiality of the files was compromised when the student was able to modify the URL to access and download other students' work. This means the system didn't properly check if the user had the correct permissions to view the file they were requesting. This is often referred to as an Insecure Direct Object Reference (IDOR) vulnerability.\n\n  \n\n**Integrity**  \nIntegrity refers to maintaining the accuracy and consistency of data. It ensures that data is not altered or corrupted by unauthorised parties.\n\nThe integrity of the assessment files was compromised because students could re-upload their work multiple times. Allowing a file to be overwritten without a proper version history or logging system means there's no way to verify the file's state at a specific time, such as the due date. This compromises the validity of the submission, as the original file submitted before the due date could have been changed.\n\n  \n\n**Accountability**  \nAccountability is the ability to trace actions to a specific user. It relies on a system's logging and auditing features to prove who did what and when.\n\nAccountability was compromised because the system didn't detect or log the multiple re-uploads after the due date. Without a clear audit trail of file submissions, it's impossible for a teacher to verify when a file was last changed or who changed it. This allows students to modify their work post-deadline without any record of the action, making it difficult to enforce academic rules."
+    }
+   ]
+  },
+  {
+   "number": 20,
+   "question_id": "question-20",
+   "title": "New Question 20, Collaboration Benefits",
+   "topic": "New Question 20, Collaboration Benefits",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-20-0-166d4274",
+     "part": "Question 20",
+     "marks_available": 6,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Discuss the benefits of collaboration in software engineering.\n\nIn your response:\n\n-   Highlight at least three key advantages that effective collaboration can bring to a software development project.\n-   Provide an example of a collaboration tool and explain how it facilitates collaboration among developers.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 6,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 21,
+   "question_id": "question-21",
+   "title": "New Question 21, DNS Function",
+   "topic": "New Question 21, DNS Function",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-21-0-7df2fcad",
+     "part": "Question 21",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Outline the primary function performed by the Domain Name System (DNS).",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The Domain Name System (DNS) acts like the internet's phonebook. Its primary purpose in web data transmission is to translate human-readable domain names (like www.example.com) into machine-readable Internet Protocol (IP) addresses (like 192.0.2.1). When you type a domain name into your browser, DNS lookups occur to find the corresponding IP address of the web server hosting that site, allowing your browser to connect to the correct server and retrieve the web page."
+    }
+   ]
+  },
+  {
+   "number": 22,
+   "question_id": "question-22",
+   "title": "New Question 22, Web Content Management Systems",
+   "topic": "New Question 22, Web Content Management Systems",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-22-0-8ec2be7e",
+     "part": "Question 22",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Outline the functions performed by web content management systems. Include two examples of web content management systems to assist your response.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Web Content Management Systems (CMS) are software applications that allow users to create, manage, and modify digital content on a website without needing extensive technical knowledge. They simplify the process of publishing online content, making website management accessible to non-programmers.\n\n  \n\n**Functions of a CMS**  \nA CMS performs a variety of functions that cover the entire lifecycle of web content:\n\n-   **Content Creation and Editing:** A CMS provides a user-friendly interface, often a what-you-see-is-what-you-get (WYSIWYG) editor, that lets users write and format content similar to a word processor.\n-   **Workflow Management:** It allows for the creation of workflows where content can be drafted by one user, reviewed by another, and approved by a third before being published. This is crucial for larger teams to maintain quality control.\n-   **Content Organisation:** A CMS helps organise content into a logical structure using categories, tags, and a navigation menu. This makes it easier for both users and search engines to find information.\n-   **Design and Layout:** Most CMS platforms use a templating system that separates content from design. This allows developers to create a consistent look and feel for a website, while content creators can focus on writing without affecting the site's layout.\n-   **User Management:** They provide tools to manage user roles and permissions, ensuring that only authorised users can access and modify specific parts of the website.\n-   **Version Control:** They can track changes made to content over time, allowing users to revert to a previous version if needed.\n-   **Publishing:** The CMS handles the process of making content live on the website, often with a simple click of a button.\n\n  \n\n**Examples of CMS**\n\n-   **WordPress:** This is one of the most popular and widely used CMS platforms in the world. Originally a blogging tool, it has evolved into a full-featured system for building everything from simple blogs to complex e-commerce sites. Its open-source nature and vast library of plugins and themes make it highly flexible.\n-   **Squarespace:** is another well-known example, particularly due to its extensive marketing. It's an all-in-one CMS platform that is famous for its simple, drag-and-drop interface and beautiful, ready-made templates. It's often used by small business owners, artists, and students who want to build a professional-looking website or online portfolio without needing to know any code.\n-   **Joomla!:** A free and open-source CMS used for publishing web content. It's often seen as more complex than WordPress but offers greater flexibility for building more intricate applications and websites. It is particularly well-suited for social networking, community portals, and corporate websites."
+    }
+   ]
+  },
+  {
+   "number": 23,
+   "question_id": "question-23",
+   "title": "New Question 23, Secure Communication",
+   "topic": "New Question 23, Secure Communication",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-23-0-47485277",
+     "part": "Question 23",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Secure encrypted communication between browsers and web servers utilises the https protocol which includes SSL/TLS certificates.\n\nOutline the exchange between browser and web server to:\n\n-   Confirm the identity of the web server\n-   Establish a secure session\n-   Communicate securely during the session",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Establishing a secure HTTPS connection involves a crucial handshake between the browser and the web server, which confirms the server's identity and sets up an encrypted communication channel. This process is orchestrated by SSL/TLS certificates.\n\n  \n\n**Confirm the Identity of the Web Server**\n\n-   **Browser Hello:** When you type a URL with https://, your browser sends a \"Client Hello\" message to the web server. This message includes the browser's supported SSL/TLS versions and cryptographic algorithms.\n-   **Server Hello and Certificate:** The server responds with a \"Server Hello,\" choosing the highest common SSL/TLS version and a cryptographic suite. Most importantly, it sends its SSL/TLS certificate back to the browser. This certificate is a digital file that contains the server's public key, the domain name, and is signed by a trusted Certificate Authority (CA).\n-   **Authentication:** The browser verifies the server's identity by checking the certificate's authenticity. It confirms that the certificate is valid, hasn't expired, and that the domain name in the certificate matches the server it's trying to connect to. It also checks that the certificate was signed by a CA that the browser already trusts. This step prevents a fake server from impersonating the real one.\n\n  \n\n**Establish a Secure Session**\n\n-   **Session Key Exchange:** Once the server's identity is confirmed, the browser generates a unique, single-use pre-master secret and encrypts it using the server's public key from the certificate.\n-   **Decrypting the Secret:** The browser sends this encrypted secret to the server. Only the server, with its corresponding private key, can decrypt it.\n-   **Symmetric Key Generation:** Both the browser and the server now have the pre-master secret. They each use this secret, along with other data from the handshake, to independently generate the same symmetric session key. Symmetric encryption is much faster and more efficient for ongoing communication than public-key encryption.\n\n  \n\n**Communicate Securely During the Session**  \nOnce the symmetric session key is established, all subsequent communication between the browser and the server is encrypted using this key.\n\n-   **Encryption:** The browser uses the session key to encrypt all data (e.g., login credentials, form data) before sending it to the server.\n-   **Decryption:** The server uses the same session key to decrypt the data.\n-   **Ongoing Security:** This process is reversed for data sent from the server back to the browser. The session key ensures that all data transmitted is unreadable to anyone who might be eavesdropping, providing confidentiality and integrity for the duration of the session."
+    }
+   ]
+  },
+  {
+   "number": 24,
+   "question_id": "question-24",
+   "title": "New Question 24, PWA Design Principles",
+   "topic": "New Question 24, PWA Design Principles",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-24-0-f47f77de",
+     "part": "Question 24",
+     "marks_available": 6,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "You have been tasked with designing and developing a Progressive Web App (PWA) aimed at enhancing the accessibility and inclusivity of educational resources for infants school students.\n\nOutline how you would address the following key design principles when creating the user interface (UI) and user experience (UX) of your PWA.\n\n-   Font selection and typography\n-   Colour schemes and contrast\n-   The use of audio and video elements\n-   Navigation design",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 6,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Designing a Progressive Web App (PWA) for infant school students requires a focus on simplicity, clarity, and engagement to support accessibility and inclusivity. Here's how you would approach the UI and UX design principles for this project:\n\n  \n\n**Font Selection and Typography**  \nFor infant school students, the key is legibility and familiarity. You would select a sans-serif font that is simple, with clear letterforms and no unnecessary embellishments. Fonts like Open Sans or Comic Sans are often good choices as they are widely recognized and have a playful, friendly feel. You would use a large font size to ensure that all text is easy to read, especially for students who may have developing eyesight. The use of a consistent font size and weight across the app would help reduce cognitive load and make the interface predictable.\n\n  \n\n**Colour Schemes and Contrast**  \nThe colour scheme should be vibrant and engaging while maintaining high accessibility standards. You would use a palette with high contrast between the text and the background to make sure that the content is readable for students with visual impairments. For example, a dark blue text on a light yellow or white background works well. The colour scheme would also be used to create clear visual cues for interactive elements, such as using a bright colour for buttons and a muted colour for inactive items. You would avoid using colour alone to convey meaning, as this can be a barrier for students who are colourblind.\n\n  \n\n**The Use of Audio and Video Elements**  \nAudio and video are essential for this audience. You would use narrated text and visual animations to reinforce concepts. For instance, a video of a narrator explaining a concept would be paired with a simple animation that shows the concept in action. This multi-sensory approach helps different types of learners. Audio cues, such as a gentle chime for a correct answer or a soft buzz for an incorrect one, would be used to provide immediate, non-verbal feedback. All audio and video content would have closed captions and transcripts to support students who are hearing impaired or who learn better by reading.\n\n  \n\n**Navigation Design**  \nNavigation would need to be extremely simple and intuitive. The design would feature large, clear icons that represent different sections or activities. The text labels under the icons would be short and easy to read. A hierarchical navigation structure with a clear \"Home\" button would be implemented to prevent students from getting lost. The use of a progress bar or a simple visual tracker would show students how far they have progressed in an activity. All interactive elements would be generously spaced to make them easy to tap, even with small fingers. The entire navigation would be designed to require minimal reading and be based primarily on visual recognition."
+    }
+   ]
+  },
+  {
+   "number": 25,
+   "question_id": "question-25",
+   "title": "New Question 25, Supervised vs Unsupervised Learning",
+   "topic": "New Question 25, Supervised vs Unsupervised Learning",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-25-0-210c4a53",
+     "part": "Question 25",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Distinguish between supervised and unsupervised learning.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Supervised and unsupervised learning are two fundamental categories in machine learning, distinguished by the type of data they use and the task they perform. The main difference lies in whether the training data is labelled.\n\n  \n\n**Supervised Learning**  \nIn supervised learning, the algorithm is trained on a labelled dataset. This means that each piece of training data comes with a correct \"answer\" or \"label\" that the model can learn from. The goal is for the model to learn a mapping from input data to the correct output.\n\nThink of it like a teacher-student relationship. The training data acts as the teacher, providing the correct answers for the model to learn from. Once trained, the model can then be used to predict labels for new, unseen data. A common use case is a model that predicts house prices based on features like size and location, where the training data includes historical prices.\n\n  \n\n**Unsupervised Learning**  \nIn unsupervised learning, the algorithm is given an unlabelled dataset. There are no correct answers to learn from. The goal is for the model to find hidden patterns, structures, or relationships within the data on its own.\n\nThis is more like a student exploring a subject without a teacher. The algorithm looks for similarities and groupings within the data. A classic example is a clustering algorithm that groups customers with similar buying habits for marketing purposes, or a model that finds anomalies in a network for fraud detection. The model isn't told what a \"fraudulent transaction\" looks like; it simply finds unusual patterns."
+    }
+   ]
+  },
+  {
+   "number": 26,
+   "question_id": "question-26",
+   "title": "New Question 26, Neural Network Learning",
+   "topic": "New Question 26, Neural Network Learning",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-26-0-63bdf3d7",
+     "part": "Question 26",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Explain how weights and backpropagation allow a neural network to learn using training data.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Weights and backpropagation are the core mechanisms that allow a neural network to learn from training data, working together in a continuous feedback loop.\n\n  \n\n**Weights**  \nThink of weights as the network's knowledge base. Each connection between neurons in a neural network has an associated weight. When a neural network makes a prediction, the input data is multiplied by these weights as it passes through the network. A higher weight on a particular connection means that the input from the connected neuron is considered more important for the network's output.\n\nInitially, these weights are set to small, random values. The goal of the learning process is to adjust these weights so that the network's predictions become more accurate.\n\n  \n\n**Backpropagation**  \nBackpropagation is the process of adjusting the weights. It's an algorithm that calculates the \"error\" of the network's prediction and then systematically distributes that error back through the network, from the output layer to the input layer.\n\nHere's how it works in simple terms:\n\n-   **Forward Pass:** The neural network takes a training data point (e.g., an image of a cat) and performs a forward pass to make a prediction.\n-   **Calculate Error:** The network's prediction is compared to the actual answer (the image is a cat). The difference between the prediction and the actual answer is the error.\n-   **Backward Pass:** Backpropagation then takes this error and propagates it backward through the network. It calculates how much each individual weight contributed to the total error.\n-   **Weight Adjustment:** Using an optimization algorithm (like gradient descent), the weights are adjusted. Weights that contributed to a larger error are changed more, while those that led to a correct prediction are changed less. This process is repeated thousands or millions of times with different training examples.\n\nIn short, weights hold the knowledge, and backpropagation is the method for refining that knowledge by learning from mistakes. The cycle of forward pass, error calculation, and backward pass allows the network to iteratively improve its predictions."
+    }
+   ]
+  },
+  {
+   "number": 27,
+   "question_id": "question-27",
+   "title": "New Question 27, Predicting Test Scores",
+   "topic": "New Question 27, Predicting Test Scores",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-27-0-2e21108d",
+     "part": "Question 27",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "You have been asked to create a program that predicts student test scores based on the number of hours they studied.\n\n-   Identify the most appropriate machine learning regression algorithm for this task.\n-   Briefly outline how you would implement this using object oriented programming (OOP).\n-   List two features your model would require to function effectively.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The most appropriate machine learning regression algorithm for predicting student test scores based on hours studied is **Simple Linear Regression**.\n\nThis is because the problem involves a single independent variable (hours studied) and a single dependent variable (test score) with the assumption of a linear relationship between them. This algorithm is straightforward, easy to interpret, and highly effective for this type of problem.\n\n  \n\n**Implementing with OOP**  \nTo implement this using object-oriented programming, you could create a **ScorePredictor** class. This class would encapsulate the data and the methods for training the model and making predictions.\n\nHere is a brief outline:\n\n-   **Class:** ScorePredictor\n-   **Attributes:**\n    -   **slope:** A variable to store the calculated slope of the regression line.\n    -   **intercept:** A variable to store the calculated y-intercept of the regression line.\n-   **Methods:**\n    -   **\\_\\_init\\_\\_(self, hours\\_studied, test\\_scores):** The constructor would take the training data (hours studied and test scores) as input.\n    -   **train(self):** This method would calculate the slope and intercept using the training data. This is where the core regression formula would be applied.\n    -   **predict(self, new\\_hour):** This method would take a new value for hours studied and use the trained slope and intercept to predict the corresponding test score. It would use the formula: y = mx + b.\n\n  \n\n**Required Model Features**  \nYour model would require two key features to function effectively:\n\n-   **A training dataset:** The model needs a set of historical data points, consisting of pairs of \"hours studied\" and \"test score,\" to learn the relationship between the two variables. Without this, the model has nothing to train on.\n-   **An equation for prediction:** The model needs a defined mathematical formula, in this case, the linear regression equation (y=mx+b), to make predictions on new data. The **train** method is responsible for finding the optimal m and b values."
+    }
+   ]
+  },
+  {
+   "number": 28,
+   "question_id": "question-28",
+   "title": "New Question 28, KNN Algorithm",
+   "topic": "New Question 28, KNN Algorithm",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "The K-Nearest Neighbours (KNN) algorithm is used to classify a new data point by comparing it to existing classified/labelled data points. It calculates the Euclidean distance between the new data point (shown as a question mark on the chart below) and every other point in the training data. It then counts the labels of the k closest points. The most common label among these neighbours is the predicted label assigned to the new point.\n\n![image](assets/28.png.png)",
+   "stimulus_images": [
+    "assets/28.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "question-28-0-4b2d674a",
+     "part": "Question 28",
+     "marks_available": 6,
+     "syllabus": null,
+     "answer_type": "PSEUDOCODE",
+     "prompt": "Write a pseudocode algorithm for a function called knn. It is passed:\n\n-   **newPoint:** the x and y coordinates of the point to classify as A, B, C or D\n-   **tData:** an array of x and y coordinates for all labelled points\n-   **tLabels:** an array of strings with the label A, B, C or D for each known point\n-   **k:** an integer\n\nYou may use the following pre-defined functions in your algorithm:\n\n-   **distance(p1, p2):** returns the Euclidian distance between two (x, y) points\n-   **sort(pairlist):** sorts an array of \\[distance, label\\] pairs in ascending order by distance\n-   **mode(array):** returns the label that occurs most frequently in an array\n\nYour algorithm should return the predicted label for the new data point.",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "type": "PSEUDOCODE"
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 6,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nfunction knn(newPoint, tData, tLabels, k):\n    // 1. Create an empty list to store distances and labels\n    distancesAndLabels = []\n    // 2. Loop through each point in the training data\n    for i from 0 to length(tData) - 1:\n        // 3. Get the current training point and its label\n        currentPoint = tData[i]\n        currentLabel = tLabels[i]\n        // 4. Calculate the Euclidean distance between the new point and the current training point\n        d = distance(newPoint, currentPoint)\n        // 5. Add the distance and its corresponding label to the list\n        distancesAndLabels.append([d, currentLabel])\n    // 6. Sort the list of pairs in ascending order based on distance\n    sortedDistances = sort(distancesAndLabels)\n    // 7. Create a new list to hold the labels of the k nearest neighbours\n    kNearestLabels = []\n    // 8. Loop k times to get the labels of the k closest points\n    for i from 0 to k - 1:\n        // 9. Get the label from the sorted list and add it to the kNearestLabels array\n        kNearestLabels.append(sortedDistances[i][1])\n    // 10. Determine the most frequent label among the k nearest neighbours\n    predictedLabel = mode(kNearestLabels)\n    // 11. Return the predicted label\n    return predictedLabel\n```"
+    }
+   ]
+  },
+  {
+   "number": 29,
+   "question_id": "question-29",
+   "title": "New Question 29, Gantt Charts",
+   "topic": "New Question 29, Gantt Charts",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-29-0-19eae6ee",
+     "part": "Question 29",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "How can Gantt charts assist project managers ensure project deadlines are met?",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Gantt charts are powerful visual tools that help project managers ensure project deadlines are met by providing a clear, holistic view of a project's timeline and progress. They essentially function as a roadmap, allowing managers to see not only what tasks need to be done, but also when, in what order, and by whom.\n\n  \n\n**Visualizing the Timeline**  \nGantt charts break down a large project into smaller, manageable tasks. Each task is represented by a horizontal bar on a timeline, with the bar's length corresponding to the task's duration. This visual representation makes it easy to see if a project is on track. You can quickly spot potential delays by looking at how the current date line aligns with the progress bars. This clarity helps in setting realistic deadlines from the very beginning.\n\n  \n\n**Identifying Dependencies**  \nOne of the most important features of a Gantt chart is its ability to show task dependencies. These are the relationships between tasks where one task cannot begin until another is completed. For example, in a software project, you can't start coding a module until the design for that module is finalized. A Gantt chart uses lines or arrows to connect these dependent tasks, allowing a project manager to see how a delay in one area will affect all subsequent tasks. This helps prevent bottlenecks and allows for proactive adjustments.\n\n  \n\n**Progress Tracking and Resource Management**  \nAs work progresses, a Gantt chart is updated to reflect the percentage of each task that has been completed. This provides a real-time snapshot of the project's health. By comparing planned progress with actual progress, a manager can identify tasks that are falling behind schedule. This information is crucial for making informed decisions, such as reallocating resources or adjusting the timeline. It also provides transparency for team members and stakeholders, as everyone can see who is responsible for each task and where the project stands."
+    }
+   ]
+  },
+  {
+   "number": 30,
+   "question_id": "question-30",
+   "title": "New Question 30, FindItem Pseudocode",
+   "topic": "New Question 30, FindItem Pseudocode",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "![image](assets/30.png.png)",
+   "stimulus_images": [
+    "assets/30.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "question-30-0-6c6b4394",
+     "part": "Question 30",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "PSEUDOCODE",
+     "prompt": "Write a possible pseudocode algorithm for the FindItem routine based on the following structure chart.",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "type": "PSEUDOCODE"
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nBEGIN FindItem(itemToFind):\n\n    // Step 1: Check if the item exists in the list by calling the ItemExists module.\n    // The black circle on the structure chart indicates a pass-by-value of the 'Found' boolean result.\n    Found = ItemExists(itemToFind)\n    initialise Location TO -1\n\n    // Step 2: Use a selection structure to determine the next action.\n    IF Found IS TRUE:\n        // Step 3: If the item exists, call the CheckLocation module to find its index.\n        // The structure chart shows ItemID is passed to CheckLocation, and Location is returned.\n        Location = CheckLocation(itemToFind)        \n     ENDIF\n\n     // Step 4: Return the location found.\n     RETURN Location\n\nEND FUNCTION\n```"
+    }
+   ]
+  },
+  {
+   "number": 31,
+   "question_id": "question-31",
+   "title": "New Question 31, Backup and Version Control",
+   "topic": "New Question 31, Backup and Version Control",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-31-0-00128c01",
+     "part": "Question 31",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Discuss the role and importance of programmed data backup and version control when producing and implementing code.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "When you're producing and implementing code, programmed data backup and version control are two essential practices that protect your work and support a collaborative environment. While they have different primary roles, they both contribute to the overall resilience and integrity of your projects.\n\n  \n\n**Programmed Data Backup**  \nProgrammed data backup is the automated process of creating and storing copies of your files and data. It's a fundamental safety net against data loss.\n\n-   **Role:** The main role is to safeguard your code and project data from unforeseen disasters. This includes hardware failure, accidental deletion, cyber-attacks, or natural disasters. By automating the process, you ensure that backups are performed regularly without manual intervention, reducing the risk of human error.\n-   **Importance:** Its importance lies in disaster recovery. If something catastrophic happens, a recent backup allows you to restore your codebase and get back to work quickly, minimising downtime and potential financial loss. It's the last line of defence for your project's integrity.\n\n  \n\n**Version Control**  \nVersion control, managed by a system like Git, is a method of tracking and managing changes to code. It's designed for collaboration and maintaining a complete history of a project.\n\n-   **Role:** The main role is to track every change made to the code over time. This creates a detailed history, showing who made what changes, when, and why. It also facilitates collaboration by allowing multiple developers to work on the same project simultaneously without overwriting each other's work. It enables merging changes and resolving conflicts.\n-   **Importance:** Its importance is in change management and collaboration. It allows developers to revert to a previous version of the code if a new change introduces a bug, providing a safety net for development. It also makes teamwork efficient and organised. Each developer can work on their own branch of the code and then merge it back into the main project.\n\n  \n\n**Summary**  \nIn short, programmed data backup is about protecting your entire project from catastrophic loss, while version control is about managing the evolution of your codebase and enabling team collaboration. You need both for a robust software development workflow. A good backup system can save you from a hard drive failure, but only version control can tell you which line of code broke the build last Tuesday."
+    }
+   ]
+  },
+  {
+   "number": 32,
+   "question_id": "question-32",
+   "title": "New Question 32, Wagile vs Agile",
+   "topic": "New Question 32, Wagile vs Agile",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "question-32-0-c3320d3d",
+     "part": "Question 32",
+     "marks_available": 6,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Compare the Wagile and Agile software development approaches.\n\nIn your response:\n\n-   Outline the key characteristics of each approach.\n-   Discuss one advantage and one disadvantage of each.\n-   Justify a project scenario where pure Agile would be more suitable than Wagile.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 6,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Agile and Wagile are two distinct approaches to software development. Agile is an iterative, flexible methodology, while Wagile is a hybrid model that combines elements of both the rigid Waterfall and flexible Agile approaches.\n\n  \n\n**Key Characteristics**\n\n**Agile** is a mindset and a set of principles defined by the Agile Manifesto. It focuses on:\n\n-   **Iterative Development:** The project is broken down into small, time-boxed cycles called sprints (typically 1-4 weeks).\n-   **Flexibility:** It welcomes changing requirements, even late in development.\n-   **Collaboration:** There is constant communication and collaboration between the development team and the customer.\n-   **Working Software:** The primary measure of progress is working software, not documentation.\n\n**Wagile** (or hybrid) is often an unintentional state that arises when a team tries to implement Agile principles within an organisation that is still fundamentally structured around a Waterfall model. It typically involves:\n\n-   **Waterfall-like Planning:** A significant amount of upfront planning and detailed requirements gathering occur before development begins.\n-   **Agile-like Execution:** Once the planning is done, the development team uses Agile methods, like sprints, to build the product.\n-   **Documentation-Heavy:** It often maintains the extensive documentation common in Waterfall.\n-   **Limited Flexibility:** Changes after the initial planning phase can be difficult and costly to implement, much like in Waterfall.\n\n  \n\n**Advantages and Disadvantages**\n\n**Agile**\n\n-   **Advantage:** Adaptability. The ability to respond to changing requirements and customer feedback throughout the project is a major strength. This leads to a final product that is more aligned with market needs and customer desires.\n-   **Disadvantage:** Lack of predictability. With constantly evolving requirements, it can be difficult to accurately estimate a final timeline or budget at the start of a project, which can be challenging for stakeholders who need a clear plan.\n\n**Wagile**\n\n-   **Advantage:** Structured flexibility. Wagile provides a middle ground. It offers the predictability of upfront planning from the Waterfall model while allowing for iterative development and some flexibility during the execution phase. This can be useful for companies that are transitioning from a traditional model to a more Agile one.\n-   **Disadvantage:** Potential for confusion and conflict. The combination of two fundamentally different philosophies can lead to friction. Teams may struggle with the clash between rigid upfront planning and the desire for continuous change, leading to a dysfunctional process where neither approach is fully embraced.\n\n  \n\n**Project Scenario for Pure Agile**  \nA pure Agile approach would be far more suitable than Wagile for a project involving a startup developing an innovative mobile application for a new market.\n\nIn this scenario, the market is highly unpredictable, and the end-goal is not fully defined at the start. The startup needs to \"fail fast\" and pivot based on early user feedback and market trends.\n\nWith Wagile, the extensive upfront planning would be a waste of time and resources, as the initial requirements are likely to change dramatically. The rigid plan would hinder the ability to respond to new information. In contrast, an Agile approach would allow the startup to build a Minimum Viable Product (MVP), get it into users' hands quickly, gather feedback, and iterate in short cycles, ensuring that the final product is what the market actually wants. The project's success is tied directly to its ability to embrace and respond to change, which is the core principle of Agile."
+    }
+   ]
+  }
+ ]
+}

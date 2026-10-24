@@ -1,0 +1,2043 @@
+{
+ "exam": "Preliminary (Year 11) Paper",
+ "private": true,
+ "source": "software.paper.is via the SEN Discord (personal study only)",
+ "duration_minutes": 114,
+ "total_available": 60,
+ "parts_total": 25,
+ "parts_answered": 0,
+ "parts_marked": 0,
+ "total_mark": null,
+ "questions": [
+  {
+   "number": 1,
+   "question_id": "e62ab693-abc1-4248-b99d-5d5fc0319ec4",
+   "title": "1 - PF - Software Development (BHHS, Prelim Yearly, 2025)",
+   "topic": "1 - PF - Software Development",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "Place the steps of the software development cycle in the correct order.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "9e091cda-080a-45f3-80c2-bb4b1605ab6d",
+     "part": "Part A",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SORTING_TABLE",
+     "prompt": null,
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "version": 0,
+       "type": "SORTING_TABLE",
+       "settings": {
+        "allowPartialMark": false
+       },
+       "header": null,
+       "rows": [
+        {
+         "id": "d1f60f4a-7833-483a-85a8-f2b737bd35a0",
+         "cells": [
+          {
+           "text": "<p>Requirements Definition</p>"
+          }
+         ]
+        },
+        {
+         "id": "0acccb6c-f6a5-42d0-862d-35c91f00218a",
+         "cells": [
+          {
+           "text": "<p>Determining Specifications</p>"
+          }
+         ]
+        },
+        {
+         "id": "58427993-2f83-4966-9a10-d77f2ea3d4a8",
+         "cells": [
+          {
+           "text": "<p>Design</p>"
+          }
+         ]
+        },
+        {
+         "id": "8e551c97-9e2a-4abd-8c41-4817496dfd29",
+         "cells": [
+          {
+           "text": "<p>Development</p>"
+          }
+         ]
+        },
+        {
+         "id": "eaab79f1-96f0-4daf-86a0-55babc4b61fb",
+         "cells": [
+          {
+           "text": "<p>Integration</p>"
+          }
+         ]
+        },
+        {
+         "id": "0156e9e8-e80f-4eab-984d-9d45d8530219",
+         "cells": [
+          {
+           "text": "<p>Testing and Debugging</p>"
+          }
+         ]
+        },
+        {
+         "id": "d877c452-eccb-4bdd-b07b-6ac7d605414e",
+         "cells": [
+          {
+           "text": "<p>Installation</p>"
+          }
+         ]
+        },
+        {
+         "id": "2d8e73cc-276c-4dea-a0ab-1ac640c8a866",
+         "cells": [
+          {
+           "text": "<p>Maintenance</p>"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Correctly orders the step of the software development cycle"
+      },
+      {
+       "marks": "1",
+       "criterion": "Partially correct order"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "question_id": "75bcaad3-c73b-4328-a520-7f05e87bcbc7",
+   "title": "2 - OOP - Design (BHHS, Prelim Yearly, 2025)",
+   "topic": "2 - OOP - Design",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "f9747a52-a24c-42a5-8cf7-c14290d88dc5",
+     "part": "Part A",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Identify the code that properly accesses an engine\\_sound() method in a Car class.",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "porsche.engine_sound()",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "engine_sound(porsche):",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "porsche = engine_sound()",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "engine_sound.Car(porsche)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "question_id": "048f3165-65dc-43e2-bad1-7178676a8cbd",
+   "title": "3 - PF - Modules - MC (BHHS, Prelim Yearly, 2025)",
+   "topic": "3 - PF - Modules - MC",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "f80c3b9c-2a8b-4985-97a2-ffa845073600",
+     "part": "Part A",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A key benefit of modular design is:",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "More lines of code",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Fewer subroutines to run",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Enhanced real-time performance",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Easier testing, reuse, and maintenance",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "question_id": "3402caaf-833e-48da-9098-a0cef8622902",
+   "title": "4 - Mecha - Hardware - MC (BHHS, Prelim Yearly, 2025)",
+   "topic": "4 - Mecha - Hardware - MC",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "0451e0cb-4aff-4e72-89ee-9cdd1045e79b",
+     "part": "Part A",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is an actuator?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Thermistor",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Rotary potentiometer",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Servo motor",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Photodiode",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "question_id": "167ad266-8771-4824-9659-146b05675e6d",
+   "title": "5 - OOP - Inheritance (BHHS, Prelim Yearly, 2025)",
+   "topic": "5 - OOP - Inheritance",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "bd6b77be-b5bc-465a-bb6f-d39bc07d2718",
+     "part": "Part A",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is \"inheritance\" in object-oriented programming?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "The process by which one class acquires the properties of another",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Writing multiple functions in one program",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "A method for sorting data",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "A way to write pseudocode",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1",
+       "criterion": "Selects the correct option"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "question_id": "e2e37d15-823d-4186-9de3-9b0aa054fa3f",
+   "title": "6 - Mecha - Testing (BHHS, Prelim Yearly, 2025)",
+   "topic": "6 - Mecha - Testing",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "4263a48c-30e5-467d-9778-466fbe97a2e1",
+     "part": "Part A",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which type of testing is used when developing mechatronic solutions.",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Black Box Testing",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "White Box Testing",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Grey Box Testing",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Peer Testing",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "E",
+        "text": "Proceedual Testing",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1",
+       "criterion": "Selects the correct option"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "question_id": "3485f02c-ac0f-4f4e-a768-ae89a65d8307",
+   "title": "7 - Mecha - Code structs (BHHS, Prelim Yearly, 2025)",
+   "topic": "7 - Mecha - Code structs",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "a8fe2df1-680e-47f5-b88e-4ba14c6411dc",
+     "part": "Part A",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "RICH_TABLE",
+     "prompt": "Match each code snippet to its type.",
+     "prompt_images": [],
+     "question": {
+      "table": [
+       [
+        {
+         "type": "text",
+         "text": "Snippet"
+        },
+        {
+         "type": "text",
+         "text": "Type"
+        }
+       ],
+       [
+        {
+         "type": "text",
+         "text": "JMP"
+        },
+        {
+         "type": "dropdown",
+         "options": [
+          "Operand",
+          "Opcode",
+          "Assembly",
+          "High Level",
+          "Machine Code"
+         ],
+         "correct": [
+          "Opcode"
+         ],
+         "yours": null
+        }
+       ],
+       [
+        {
+         "type": "text",
+         "text": "11001100"
+        },
+        {
+         "type": "dropdown",
+         "options": [
+          "Operand",
+          "Opcode",
+          "Assembly",
+          "High Level",
+          "Machine Code"
+         ],
+         "correct": [
+          "Machine Code"
+         ],
+         "yours": null
+        }
+       ],
+       [
+        {
+         "type": "text",
+         "text": "print(\"Hello\")"
+        },
+        {
+         "type": "dropdown",
+         "options": [
+          "Operand",
+          "Opcode",
+          "Assembly",
+          "High Level",
+          "Machine Code"
+         ],
+         "correct": [
+          "High Level"
+         ],
+         "yours": null
+        }
+       ],
+       [
+        {
+         "type": "text",
+         "text": "mov X0, #1"
+        },
+        {
+         "type": "dropdown",
+         "options": [
+          "Operand",
+          "Opcode",
+          "Assembly",
+          "High Level",
+          "Machine Code"
+         ],
+         "correct": [
+          "Assembly"
+         ],
+         "yours": null
+        }
+       ]
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "filled_cells": 0
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Correctly matching of the code snippets to their types"
+      },
+      {
+       "marks": "1",
+       "criterion": "Partially correct matching of the code snippets to their types"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "question_id": "0cc37b20-c05d-4c41-a76b-b69361b3eaeb",
+   "title": "8 - PF - DFD (BHHS, Prelim Yearly, 2025)",
+   "topic": "8 - PF - DFD",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "e2c40117-f2f6-43b0-bbfd-dbab3593e4e7",
+     "part": "Part A",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In a DFD, data must move into/out of a data store via:",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "A process",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Another data store",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Transmission lines",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "External entities directly",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "question_id": "c4566500-02c1-4da5-9d70-2638bdd5cd54",
+   "title": "9 - Mecha - Pico (BHHS, Prelim Yearly, 2025)",
+   "topic": "9 - Mecha - Pico",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "c11bb880-30b0-4073-8f4a-86405b9aec71",
+     "part": "Part A",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Select the correct True / False options about the Raspeberry Pi Pico.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "True",
+       "False"
+      ],
+      "rows": [
+       {
+        "statement": "It has 26 GPIO pins",
+        "correct": [
+         "True"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Runs Raspberry Pi OS",
+        "correct": [
+         "False"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "It has built-in DAC (true analog output) pins",
+        "correct": [
+         "False"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "GPIO operate at 3.3 V",
+        "correct": [
+         "True"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Can only be programmed using MicroPython",
+        "correct": [
+         "False"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "It has 26 GPIO pins",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Runs Raspberry Pi OS",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "It has built-in DAC (true analog output) pins",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "GPIO operate at 3.3 V",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Can only be programmed using MicroPython",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Correct selection of options"
+      },
+      {
+       "marks": "1",
+       "criterion": "Patially correct selection of options"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "question_id": "0131890a-76d1-45ff-999f-b535df30bcd2",
+   "title": "10 - PF - Data Types (BHHS, Prelim Yearly, 2025)",
+   "topic": "10 - PF - Data Types",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "Select the most correct data type for the data provided.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "366bd01a-abdd-4bfa-9224-e398f7b7842a",
+     "part": "Part A",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "RICH_TABLE",
+     "prompt": null,
+     "prompt_images": [],
+     "question": {
+      "table": [
+       [
+        {
+         "type": "text",
+         "text": "2025-02-08"
+        },
+        {
+         "type": "dropdown",
+         "options": [
+          "Character",
+          "String",
+          "Floating Point",
+          "Integer",
+          "Date and Time",
+          "Boolean",
+          "List",
+          "Array"
+         ],
+         "correct": [
+          "Date and Time"
+         ],
+         "yours": null
+        }
+       ],
+       [
+        {
+         "type": "text",
+         "text": "TRUE"
+        },
+        {
+         "type": "dropdown",
+         "options": [
+          "Character",
+          "String",
+          "Floating Point",
+          "Integer",
+          "Date and Time",
+          "Boolean",
+          "List",
+          "Array"
+         ],
+         "correct": [
+          "Boolean"
+         ],
+         "yours": null
+        }
+       ],
+       [
+        {
+         "type": "text",
+         "text": "A"
+        },
+        {
+         "type": "dropdown",
+         "options": [
+          "Character",
+          "String",
+          "Floating Point",
+          "Integer",
+          "Date and Time",
+          "Boolean",
+          "List",
+          "Array"
+         ],
+         "correct": [
+          "Character"
+         ],
+         "yours": null
+        }
+       ],
+       [
+        {
+         "type": "text",
+         "text": "1.234"
+        },
+        {
+         "type": "dropdown",
+         "options": [
+          "Character",
+          "String",
+          "Floating Point",
+          "Integer",
+          "Date and Time",
+          "Boolean",
+          "List",
+          "Array"
+         ],
+         "correct": [
+          "Floating Point"
+         ],
+         "yours": null
+        }
+       ],
+       [
+        {
+         "type": "text",
+         "text": "True"
+        },
+        {
+         "type": "dropdown",
+         "options": [
+          "Character",
+          "String",
+          "Floating Point",
+          "Integer",
+          "Date and Time",
+          "Boolean",
+          "List",
+          "Array"
+         ],
+         "correct": [
+          "String"
+         ],
+         "yours": null
+        }
+       ],
+       [
+        {
+         "type": "text",
+         "text": "7"
+        },
+        {
+         "type": "dropdown",
+         "options": [
+          "Character",
+          "String",
+          "Floating Point",
+          "Integer",
+          "Date and Time",
+          "Boolean",
+          "List",
+          "Array"
+         ],
+         "correct": [
+          "Integer"
+         ],
+         "yours": null
+        }
+       ]
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "filled_cells": 0
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Correctly selects ALL data types"
+      },
+      {
+       "marks": "1",
+       "criterion": "Correctly selects SOME data types"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "question_id": "4afb87f5-edc3-48a6-bb89-9d7077296a76",
+   "title": "10bv2 - OOP - Sorting (BHHS, Prelim, 2025)",
+   "topic": "10bv2 - OOP - Sorting",
+   "label": "BHHS",
+   "kind": "Prelim",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "ca32ca7d-704d-4c28-9af8-05d5fb038e21",
+     "part": "Part A",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Categorise the following algorithms to their Big O notation.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "O(n)",
+       "O(n log n)",
+       "O(n&sup2;)"
+      ],
+      "rows": [
+       {
+        "statement": "Linear Search",
+        "correct": [
+         "O(n)"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Bubble Sort",
+        "correct": [
+         "O(n)"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Merge Sort",
+        "correct": [
+         "O(n log n)"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Selection Sort",
+        "correct": [
+         "O(n&sup2;)"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Linear Search",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Bubble Sort",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Merge Sort",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Selection Sort",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1",
+       "criterion": "Categories the items correctly"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "question_id": "979e29db-9f9b-44cb-b1fa-69085b0dc416",
+   "title": "11 - PF - Pseudo (BHHS, Prelim Yearly, 2025)",
+   "topic": "11 - PF - Pseudo",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "## Algorithm A\n\n**BEGIN**  \n  **READ N**  \n  **READ FirstScore**  \n  **MaxScore = FirstScore**  \n  **FOR i = 2 TO N**  \n    **READ Score**  \n    **IF Score > MaxScore THEN**  \n      **MaxScore = Score**  \n    **ENDIF**  \n  **NEXT i**  \n  **DISPLAY MaxScore**  \n**END**\n\n## Algorithm B\n\n**BEGIN**  \n  **READ Score**  \n  **IF Score < 0 THEN**  \n    **DISPLAY \"No data entered\"**  \n  **ELSE**  \n    **MaxScore = Score**  \n    **WHILE Score >= 0**  \n      **READ Score**  \n      **IF Score >= 0 AND Score > MaxScore THEN**  \n        **MaxScore = Score**  \n      **ENDIF**  \n    **ENDWHILE**  \n    **DISPLAY MaxScore**  \n  **ENDIF**  \n**END**",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "62ec5056-d352-4a01-9942-378d6f82a3f5",
+     "part": "Part A",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "RICH_TABLE",
+     "prompt": "Which control structure is used in each algorithm?",
+     "prompt_images": [],
+     "question": {
+      "table": [
+       [
+        {
+         "type": "text",
+         "text": "Algorithm A"
+        },
+        {
+         "type": "text",
+         "text": "Algorithm B"
+        }
+       ],
+       [
+        {
+         "type": "dropdown",
+         "options": [
+          "Pre-Test Loop",
+          "Post-Test Loop",
+          "Counted Loop"
+         ],
+         "correct": [
+          "Counted Loop"
+         ],
+         "yours": null
+        },
+        {
+         "type": "dropdown",
+         "options": [
+          "Pre-Test",
+          "Post-Test",
+          "Counted"
+         ],
+         "correct": [
+          "Pre-Test"
+         ],
+         "yours": null
+        }
+       ]
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "filled_cells": 0
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1",
+       "criterion": "Selects the correct options"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    },
+    {
+     "part_id": "5fc6d1b2-3323-48f9-8801-d29609f32e14",
+     "part": "Part B",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which initialisation choice prevents a logic error?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Set MaxScore = 0 in both algorithms before any read.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "In A, set MaxScore to FirstScore; in B, set MaxScore to the first non-negative input.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "In A, read all data before setting MaxScore; in B, set MaxScore = 100.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Set MaxScore = -9999 in both algorithms.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1",
+       "criterion": "Selects the correct option"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "question_id": "7214fade-c315-472c-aabf-28282b0dd238",
+   "title": "12 - PF - Documentation (BHHS, Prelim Yearly, 2025)",
+   "topic": "12 - PF - Documentation",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "e5d25806-f4ad-492c-be56-8e892535651b",
+     "part": "Part A",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "RinWar is a utility software which creates, views and unpacks archive files such as .zip.   \nIt gets an update 12 months after release that fixes bugs and adds features.\n\nWhich documentation actions should the team take?",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       null
+      ],
+      "rows": [
+       {
+        "statement": "Use vague phrases like &ldquo;various improvements&rdquo; instead of specifics.",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Update the version number and release date  across documentation.",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Document known issues and any workarounds for this release.",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Update documentation if commands, flags, or outputs changed.",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Update the user manual, help pages and screenshots to reflect the changes.",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Hide security fixes so attackers won&rsquo;t notice.",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Publish clear release notes with links to issues.",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Announce only on social media, formal documentation is unnecessary.",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Provide upgrade guidance for both users and enterprises.",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Delete previous release notes to avoid confusing users.",
+        "correct": [],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Use vague phrases like &ldquo;various improvements&rdquo; instead of specifics.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Update the version number and release date  across documentation.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Document known issues and any workarounds for this release.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Update documentation if commands, flags, or outputs changed.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Update the user manual, help pages and screenshots to reflect the changes.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Hide security fixes so attackers won&rsquo;t notice.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Publish clear release notes with links to issues.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Announce only on social media, formal documentation is unnecessary.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Provide upgrade guidance for both users and enterprises.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Delete previous release notes to avoid confusing users.",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Selects ALL correct options"
+      },
+      {
+       "marks": "2",
+       "criterion": "Selects most of the correct options"
+      },
+      {
+       "marks": "1",
+       "criterion": "Selects some of the correct options"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "question_id": "05a4670a-2478-4b9b-829a-333b16a8b697",
+   "title": "13v2 - Mecha - PWM (BHHS, Prelim Yearly, 2025)",
+   "topic": "13v2 - Mecha - PWM",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "You are programming a microcontroller to control an LED and a positional servo using Pulse Width Modulation (PWM).\n\nDescribe Pulse Width Modulation (PWM) and duty cycle.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "c97c5bdd-098d-47bc-9bf1-6d9d8603ddcd",
+     "part": "Part A",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": null,
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Defines PWM and duty cycle"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "PWM (Pulse Width Modulation) switches a digital pin on and off very quickly, this is to mimic analog. The duty cycle is the fraction of time the signal is ON during one period, usually written as a percentage."
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "question_id": "5168088b-4674-4a51-96ac-f3f1900d9b9c",
+   "title": "14 - PF - Lvl 0 DFD (BHHS, Prelim Yearly, 2025)",
+   "topic": "14 - PF - Lvl 0 DFD",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "Draw a Level 0 Data Flow Diagram for a School Absence Notification system where:\n\n-   Teachers input attendance data during roll call\n-   Parents submit absence notes via SMS\n-   The system sends confirmations and daily absence summaries to Head Teacher Admin",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "79e49997-7b15-4327-aa96-af4a553dbecd",
+     "part": "Part A",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "DRAWING_V2",
+     "prompt": null,
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Substantially correct Level 0 DFD"
+      },
+      {
+       "marks": "2",
+       "criterion": "Partially correct Level 0 DFD"
+      },
+      {
+       "marks": "1",
+       "criterion": "Attempts to represent the scenerio with a diagram"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![](assets/8a380d1d-685d-460a-b597-39b65b6893bc.png)",
+     "sample_answer_images": [
+      "assets/8a380d1d-685d-460a-b597-39b65b6893bc.png"
+     ]
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "question_id": "71ee2117-a586-4e99-a346-1725c490c7ad",
+   "title": "15 - PF - Require/Specs (BHHS, Prelim Yearly, 2025)",
+   "topic": "15 - PF - Require/Specs",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "Explain the difference between requirements definition and determining specifications in the software development process.\n\nIn your answer, refer to the perspectives of both the client and the developer.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "f2020039-fae9-4b70-bc9a-3d3dae5ac678",
+     "part": "Part A",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": null,
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Explains BOTH Requirements Definition and Determining Specifications, WITH BOTH perspectives referenced"
+      },
+      {
+       "marks": "3",
+       "criterion": "Describes BOTH Requirements Definition and Determining Specifications, with a perspective referenced"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines BOTH Requirements Definition and Determining Specifications"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the development cycle"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Requirements definition identifies the features and behaviours the client needs from the system, expressed in business terms. It focuses on what the system must achieve. For example, a requirement might be: The system must notify customers when their order is ready for pickup.\n\nDetermining specifications translates these requirements into precise technical details for developers. Specifications explain how the requirement will be met, through functional specifications (inputs, processes, outputs) and non-functional specifications (performance, usability, security). For example: The system shall use an API to send an SMS to the customer’s registered number within 5 seconds of the order status changing to ready.\n\nIn short, requirements are written for the client’s understanding, while specifications are written for developers to implement."
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "question_id": "b853ddeb-a7b4-4fdf-9adf-f5018510ae08",
+   "title": "16v2 - Mecha - pseudo (BHHS, Prelim Yearly, 2025)",
+   "topic": "16v2 - Mecha - pseudo",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "A robot vacuum cleaner utilises microswitches on it's bumpers to detect if it hits objects. \n\nThe following functions are prebuilt into the robot's codebase.\n\n-   MoveForward(): Moves the vacuum one step forward.\n-   TurnLeft(): Turns the vacuum 30 degrees to the left.\n-   TurnRight(): Turns the vacuum 30 degrees to the right.\n-   CheckObstacle(): Returns TRUE if there is an obstacle (wall or furniture) in front of the robot, otherwise FALSE.\n\nThe robot will need to follow the below key instructions:\n\n-   The robot should move forward if there is no obstacle in front of it.\n-   If the robot encounters an obstacle, it will check for obstacles to it's left.\n    -   If it is clear it will turn left and continue in that direction.\n    -   If it is not clear, it will turn left again and check. It will do this a maximum of 4 times. After which it will turn 180 degrees, and try to move forward.\n\n![](assets/bc7f7b57-7ed4-465a-af3d-7e683c60aaae.png)",
+   "stimulus_images": [
+    "assets/bc7f7b57-7ed4-465a-af3d-7e683c60aaae.png"
+   ],
+   "parts": [
+    {
+     "part_id": "f63727fe-963c-455b-b6d4-176860963d1b",
+     "part": "Part A",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Write a pseudocode algorithm for the robot vacuum to navigate around a room. \n\nYou are to utilise the premade functions and loops into your answer.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Substantially correct pseudocode algorithm which meets the scenario"
+      },
+      {
+       "marks": "3",
+       "criterion": "Mostly correct pseudocode algorithm which meets the scenario"
+      },
+      {
+       "marks": "2",
+       "criterion": "Partially correct pseudocode algorithm which meets the scenario"
+      },
+      {
+       "marks": "1",
+       "criterion": "Demonstrates an attempt of an algorithm"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "BEGIN ROBOVAC\n\n\\# Helper to turn left N times (N \\* 30°)  \nFUNCTION TurnLeftNTimes(N):  \n    i := 0  \n    WHILE i < N:  \n        TurnLeft()  \n        i := i + 1  \nEND FUNCTION\n\n\\# Main loop: run continuously  \nWHILE TRUE:  \n    IF NOT CheckObstacle():  \n        MoveForward()  \n    ELSE:  \n        # Obstacle ahead — sweep left up to 4 times (max 120°) to find a clear path  \n        turns := 0  \n        path\\_found := FALSE\n\n        WHILE turns < 4 AND NOT path\\_found:  \n            TurnLeft()            # rotate 30° left  \n            turns := turns + 1  \n            IF NOT CheckObstacle():  \n                MoveForward()  \n                path\\_found := TRUE\n\n        IF NOT path\\_found:  \n            TurnLeftNTimes(6 - turns)  \nEND WHILE\n\nEND ROBOVAC"
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "question_id": "e665009d-6707-4034-bd58-ecb65bc7de82",
+   "title": "17 - PF - E-Bike (BHHS, Prelim Yearly, 2025)",
+   "topic": "17 - PF - E-Bike",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "Write a Python program that calculates the total cost of renting an e-bike. The rental shop charges $10 per hour. The program should:\n\n-   Prompt the user to enter the number of hours they want to rent the bicycle. (Allow decimals like 1.5 hours)\n-   Use a loop to ensure that the user enters a positive number of hours (i.e., greater than 0). If the user enters 0 or a negative number, prompt them to enter the number again.\n-   Calculate the total cost by multiplying the number of hours by the hourly rate.\n-   Display the total cost to the user.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "3579a09a-a0b8-433f-b49a-bcdfae88fbff",
+     "part": "Part A",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "CODING",
+     "prompt": null,
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Substantially correct Python algorithm for the given scenario"
+      },
+      {
+       "marks": "3",
+       "criterion": "Mostly correct Python algorithm for the given scenario"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a good attempt at solving the scenario"
+      },
+      {
+       "marks": "1",
+       "criterion": "Demonstrates some understanding of Python algorithms"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "hourly\\_rate = 10.0  # dollars per hour \n\n\\# Keep asking until the user enters a positive number  \nwhile True:  \n    try:  \n        hours\\_hired = float(input(\"Enter hours to hire the e-bike (e.g., 1.5): \"))  \n        if hours\\_hired > 0:  \n            break    \n        else:  \n            print(\"Please enter a number greater than 0.\")  \n    except ValueError:  \n        print(\"Invalid input. Please enter a number (e.g., 2 or 1.5).\")\n\n\\# Calculate and display the total cost  \ntotal\\_cost = hours\\_hired \\* hourly\\_rate  \nprint(f\"Total cost: ${total\\_cost:.2f}\")"
+    }
+   ]
+  },
+  {
+   "number": 19,
+   "question_id": "864770ec-1c48-409b-8a8e-f4d63c9f5246",
+   "title": "18 - Mecha - Requirements (BHHS, Prelim Yearly, 2025)",
+   "topic": "18 - Mecha - Requirements",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "A local ag-tech startup is building AgriCart, a battery-powered, line-following cart that moves trays of seedlings through greenhouse aisles, it utilises a mechanical arm to pick up the seedlings. \n\nKey components of AgriCart:\n\n-   **Sensors**: two (2) reflective IR line sensors, one (1) front ultrasonic sensor, two (2) pressure sensor in mechanical gripper\n-   **Actuators**: two DC motors for wheel movement, a micro-servo that engages a mechanical brake, and a mechanical arm with 4 Degrees of Freedom (4DOF)\n-   **Proccesing**: Microcontroller to control the AgriCart, a separate Wi-Fi board for communication with the other AgriCarts and to recieve OTA updates.\n-   **Constraints**: aisles are 0.8 m wide, target speed 0.6 m/s, must stop within 0.3 m of obstacles, and operate 3 hours per charge.\n\nThe AgriCart recieves OTA (over-the-air) updates on a weekly basis and will not  run without recieving it's weekly update. Farm workers share the same space as the AgriCarts.\n\n![](assets/8d6861e5-8529-460d-83dd-0e06d744783f.jpg)",
+   "stimulus_images": [
+    "assets/8d6861e5-8529-460d-83dd-0e06d744783f.jpg"
+   ],
+   "parts": [
+    {
+     "part_id": "a3623af9-bcf9-415b-9067-de560563e4af",
+     "part": "Part A",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "![](assets/MechatronikRobotiks%20Foto1.jpg.jpg)Outline the functional and non-functional requirements for AgriCart.",
+     "prompt_images": [
+      "assets/MechatronikRobotiks%20Foto1.jpg.jpg"
+     ],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Correctly outlines the functional and non-functional requriements of AgriCart"
+      },
+      {
+       "marks": "2",
+       "criterion": "Identifies the functional and non-functional requriements of AgriCart"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of requirements"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    },
+    {
+     "part_id": "b632ac7a-b9e2-4768-86f9-bc3ddf6a58ce",
+     "part": "Part B",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Explain the social and ethical issues related to the scenario.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Explanation of social and ethical issues related to the scenario"
+      },
+      {
+       "marks": "2",
+       "criterion": "Description of social and ethical issues related to the scenario"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of social and ethical issues"
+      },
+      {
+       "marks": null,
+       "criterion": null
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Worker safety & duty of care: Carts share the equivalent aisles with people, so a sensor or brake failure could injure workers or damage crops. Ethically, the design needs rich fail safes and procedures to stop the robot.\n\nSecurity and vendor control (OTA): Requiring weekly updates to run creates dependency and the risk of downtime if an update fails or servers are unreachable. Ethically, updates must be firmly signed, tested, and changeable (rollback), with “grace periods” so operations and worker schedules aren’t disrupted.\n\nEmployment and Automation may reduce or change roles; workers should be consulted, retrained."
+    }
+   ]
+  },
+  {
+   "number": 20,
+   "question_id": "e1c963b7-40c2-4517-9c14-2e71e51ed331",
+   "title": "19 - OOP - Features of OOP (BHHS, Prelim  Yearly, 2025)",
+   "topic": "19 - OOP - Features of OOP",
+   "label": "BHHS",
+   "kind": "Prelim  Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "A game design studio is beginning to work on a new 2D action game. \n\nExplain how adopting the object-oriented paradigm (OOP) can streamline the development of the game and reduce maintenance.\n\nIn your response, include references to classes, encapsulation, and polymorphism, with examples related to a 2D game. \n\n![](assets/18603792-75c9-47d3-8357-5b74e9d1d48e.png)",
+   "stimulus_images": [
+    "assets/18603792-75c9-47d3-8357-5b74e9d1d48e.png"
+   ],
+   "parts": [
+    {
+     "part_id": "3fff75d5-9b00-47bd-840d-3a6fbcecca55",
+     "part": "Part A",
+     "marks_available": 5,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": null,
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 5,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "5",
+       "criterion": "Explanation of OOP with reference to classes, encapsulation, and polymorphism, with examples related to a 2D game."
+      },
+      {
+       "marks": "4",
+       "criterion": "Description of OOP with reference to classes, encapsulation, and polymorphism, with minor reference to a 2D game"
+      },
+      {
+       "marks": "3",
+       "criterion": "Describes OOP with some reference to a 2D game OR classes/encapsulation/polymorphism"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines OOP features"
+      },
+      {
+       "marks": "1",
+       "criterion": "Demonstrates some understanding of OOP"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Object-oriented programming (OOP) helps a 2D game feel organised and easier to change. We build classes for the things in the game: a base Entity class with position and sprite, then Player, Enemy, Projectile, and PowerUp that extend it.\n\nEncapsulation means each class keeps its own data safe. For example, Player stores health and collision box privately and offers methods like takeDamage(type) or pickUp(item). Enemies hide their AI state and expose setTarget() instead of random public flags. This stops other code from breaking rules. \n\nPolymorphism lets the game loop treat different objects the same. We can keep a list of Entity and call update(dt) and render() on all of them easily. A Weapon can hit anything that implements IDamageable, so adding a Boss or ShieldedProjectile doesn’t change the loop.\n\nReusing components like Movement or Health reduces duplicate code, makes teamwork smoother, and keeps bugs contained when we add new features."
+    }
+   ]
+  },
+  {
+   "number": 21,
+   "question_id": "85271ea1-2799-4039-b43e-7b7f8daebeab",
+   "title": "20 - OOP - Classes (BHHS, Prelim Yearly, 2025)",
+   "topic": "20 - OOP - Classes",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "Design a Python class to help manage a small library.\n\n### 1.\n\nCreate a Python class called **Book** with the following requirements:\n\n-   It should have three attributes:\n    -   title (string)\n    -   author (string)\n    -   is\\_borrowed (boolean, default False)\n\n### 2.\n\nWrite a method **\\_\\_str\\_\\_** that returns a string with the following format: \n\n**Title by Author - Borrowed/Available**\n\nThe word Borrowed should appear if the book’s is\\_borrowed value is True, otherwise show Available.\n\n### 3.\n\nPrint each book in the test data using the **\\_\\_str\\_\\_** method.\n\n**Output example:**\n\n**Moby-Dick by Herman Melville - Available**  \n**Pride and Prejudice by Jane Austen - Borrowed**  \n**The Odyssey by Homer - Available**  \n**The War of the Worlds by H.G. Wells - Available**",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "ccb78d46-e8f0-4c81-876e-41fb7e2bd047",
+     "part": "Part A",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "CODING",
+     "prompt": null,
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": "class Book:\n    def __init__(self, title, author, is_borrowed=False):\n        \n\n\n\n# Test data\nbook1 = Book(\"Moby-Dick\", \"Herman Melville\", False)\nbook2 = Book(\"Pride and Prejudice\", \"Jane Austen\", True)\nbook3 = Book(\"The Odyssey\", \"Homer\", False)\nbook4 = Book(\"The War of the Worlds\", \"H.G. Wells\", False)"
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Substantially correct Python algorithm for the given scenario"
+      },
+      {
+       "marks": "3",
+       "criterion": "Mostly correct Python algorithm for the given scenario"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a good attempt at solving the scenario"
+      },
+      {
+       "marks": "1",
+       "criterion": "Demonstrates some understanding of Python algorithms"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "class Book:  \n    def \\_\\_init\\_\\_(self, title, author, is\\_borrowed=False):  \n        self.title = title  \n        self.author = author  \n        self.is\\_borrowed = is\\_borrowed\n\n    def \\_\\_str\\_\\_(self):  \n        status = \"Borrowed\" if self.is\\_borrowed else \"Available\"  \n        return f\"{self.title} by {self.author} - {status}\"\n\n  \n\\# Test program  \nbook1 = Book(\"Moby-Dick\", \"Herman Melville\", False)  \nbook2 = Book(\"Pride and Prejudice\", \"Jane Austen\", True)  \nbook3 = Book(\"The Odyssey\", \"Homer\", False)  \nbook4 = Book(\"The War of the Worlds\", \"H.G. Wells\", False)\n\nprint(book1)  \nprint(book2)  \nprint(book3)  \nprint(book4)"
+    }
+   ]
+  },
+  {
+   "number": 22,
+   "question_id": "8fa790b6-ab82-470f-86ec-f2c436444377",
+   "title": "21 - PF - Linear Search (BHHS, Prelim Yearly, 2025)",
+   "topic": "21 - PF - Linear Search",
+   "label": "BHHS",
+   "kind": "Prelim Yearly",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "A school’s help desk keeps an unsorted list of open ticket IDs in a Python list:\n\n**\\[1042, 987, 1201, 773, 987, 660, 661, 501, 911, 724\\]**\n\nWhen a student reports their ticket number, the system needs to check whether it exists and, if so, report the index of the first match.\n\nThe team plans to implement this using a linear search.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "8e484d7d-c9e5-46f3-a972-9e9322926254",
+     "part": "Part A",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Describe the key feautres of a linear search algorithm.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Good description of the features of a linear search"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines features of a linear search"
+      },
+      {
+       "marks": "1",
+       "criterion": "Demonstrates some understanding of linear search"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "**Answers can include:**\n\nSequential scan: checks each element from start to finish, one by one.\n\nWorks everywhere: simple to implement, easy to read, and applies to arrays, Python lists, or any iterable you can loop through.\n\nNo sorting required: works on any list/array in any order.\n\nEarly exit on success: stops as soon as the target is found.\n\nClear “not found” outcome: typically returns -1/None/False if the target isn’t present.\n\nDuplicates handled: usually reports the first matching index it encounters.\n\nTime complexity:\n\n-   Best case: O(1) (target is at the first position)\n-   Average/Worst case: O(n) (may check every element)"
+    },
+    {
+     "part_id": "06e2c3be-81e0-4753-8b5c-d0153b04050e",
+     "part": "Part B",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "CODING",
+     "prompt": "Write a Python function which performs a linear search.\n\nThe function should:\n\n1.  Loop\n2.  Check if the target value exists\n3.  Counts each time it checks a value\n4.  Outputs if target value is / is not found\n5.  Outputs the total number of checks it performs \n6.  Utilise the helper code tests given",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": "def linear_search(nums, target):\n  \n\nnums = [1042, 987, 1201, 773, 987, 660, 661, 501, 911, 724]\nlinear_search(nums, 1201) #\nlinear_search(nums, 111)\nlinear_search(nums, 911)\n"
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Substanitally correct Python algorithm which meets all requirements."
+      },
+      {
+       "marks": "3",
+       "criterion": "Mostly correct Python algorithm which meets some requirements."
+      },
+      {
+       "marks": "2",
+       "criterion": "Produces a Python algorithm which meets some requirements."
+      },
+      {
+       "marks": "1",
+       "criterion": "Attempts a Python algorithm."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "def linear\\_search(nums, target):  \n  count = 0  \n  for i, value in enumerate(nums):  \n    count += 1  \n    if value == target:  \n      print(f\"Found {target} at index {i} after {count} comparisons.\")  \n      return i, count  \n  print(f\"{target} not found after {count} comparisons.\")  \n  return -1, count\n\nnums = \\[1042, 987, 1201, 773, 987, 660, 661, 501, 911, 724\\]  \nlinear\\_search(nums, 1201)  \nlinear\\_search(nums, 111)  \nlinear\\_search(nums, 911)"
+    }
+   ]
+  }
+ ]
+}

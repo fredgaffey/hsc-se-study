@@ -1,0 +1,1729 @@
+{
+ "exam": "NSW Software Engineering Paper",
+ "private": true,
+ "source": "software.paper.is via the SEN Discord (personal study only)",
+ "duration_minutes": 150,
+ "total_available": 80,
+ "parts_total": 30,
+ "parts_answered": 0,
+ "parts_marked": 0,
+ "total_mark": null,
+ "questions": [
+  {
+   "number": 1,
+   "question_id": "q1",
+   "title": "New Question 1, Machine Learning Model",
+   "topic": "New Question 1, Machine Learning Model",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q1-0-c09a429e",
+     "part": "Question 1",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A company is designing an algorithm to predict non-linear customer purchasing patterns based on complex interactions between demographics, browsing behavior, and prior purchases. Which machine learning model is best suited for this task?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Decision trees, because they map customer information to clustered predictions.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Neural networks, due to the multidimensional nature of the customer data.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "K-nearest neighbours, because it predicts outcomes based on similarity accross customer attributes.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Polynomial regression, due to the non-linear nature of the customer purchasing patterns.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "question_id": "q2",
+   "title": "New Question 2, System Design Diagram",
+   "topic": "New Question 2, System Design Diagram",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q2-0-7cfad83d",
+     "part": "Question 2",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which diagram is used during the system design phase to show the interaction between modules?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Flowchart",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Context diagram",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Structure chart",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Gantt chart",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "question_id": "q3",
+   "title": "New Question 3, Security Testing",
+   "topic": "New Question 3, Security Testing",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q3-0-eecccb7a",
+     "part": "Question 3",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In Object-Oriented Programming, what is the term for bundling data (attributes) and the methods that operate on the data into a single unit or class?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Inheritance",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Polymorphism",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Abstraction",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Encapsulation",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "question_id": "q4",
+   "title": "New Question 4, Security Testing",
+   "topic": "New Question 4, Security Testing",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q4-0-aa451cae",
+     "part": "Question 4",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A development team is building a new financial application and wants to find security flaws by analyzing the application's source code for issues like SQL injection vulnerabilities before the program is compiled and run. Which of the following strategies is most appropriate for this task?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Dynamic Application Security Testing (DAST)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Penetration Testing",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Static Application Security Testing (SAST)",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "A/B Testing",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "question_id": "q5",
+   "title": "New Question 5, AI Bias",
+   "topic": "New Question 5, AI Bias",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "![image](assets/5.png.png)",
+   "stimulus_images": [
+    "assets/5.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "q5-0-654a9baf",
+     "part": "Question 5",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "An AI model designed to screen job applications is found to consistently rank candidates from a specific demographic group lower, even with equivalent qualifications. It is discovered the model was trained on historical hiring data from a time when discriminatory practices were common. This is a clear example of:",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Poor memory management",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "The model successfully maintaining the company's workplace atmosphere.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Human and dataset source bias",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "The AI developing its own \"gut feeling,\" which is legally distinct from discrimination",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "question_id": "q6",
+   "title": "New Question 6, Web Page Load Times",
+   "topic": "New Question 6, Web Page Load Times",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q6-0-62f8edbc",
+     "part": "Question 6",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following methods help to manage and reduce the load times of a web page?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Enabling file compression",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Using a Content Delivery Network (CDN)",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Using the highest-resolution images possible",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Caching frequently accessed data",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "E",
+        "text": "Minimizing the number of HTTP requests",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "D",
+       "E"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "question_id": "q7",
+   "title": "New Question 7, CMS Example",
+   "topic": "New Question 7, CMS Example",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q7-0-210b6aaf",
+     "part": "Question 7",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is an example of a web content management system (CMS)?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "React.js",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "MySQL",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "WordPress",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Apache",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "question_id": "q8",
+   "title": "New Question 8, PWA Steps",
+   "topic": "New Question 8, PWA Steps",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q8-0-992f8fd9",
+     "part": "Question 8",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SORTING_TABLE",
+     "prompt": "Arrange the following steps in the order they typically occur when a user first visits a Progressive Web App (PWA) for offline capabilities.",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "version": 0,
+       "type": "SORTING_TABLE",
+       "rows": [
+        {
+         "id": "step2-install",
+         "cells": [
+          {
+           "text": "<p>The service worker is installed and waits for activation.</p>"
+          }
+         ]
+        },
+        {
+         "id": "step5-homescreen",
+         "cells": [
+          {
+           "text": "<p>The user adds the PWA to their home screen.</p>"
+          }
+         ]
+        },
+        {
+         "id": "step3-cache",
+         "cells": [
+          {
+           "text": "<p>The service worker caches essential files for offline use.</p>"
+          }
+         ]
+        },
+        {
+         "id": "step1-manifest",
+         "cells": [
+          {
+           "text": "<p>The browser downloads manifest.json to determine app name, icons, and theme.</p>"
+          }
+         ]
+        },
+        {
+         "id": "step4-activate",
+         "cells": [
+          {
+           "text": "<p>The service worker is activated and takes control of pages.</p>"
+          }
+         ]
+        }
+       ],
+       "correctRowOrder": [
+        "step1-manifest",
+        "step2-install",
+        "step3-cache",
+        "step4-activate",
+        "step5-homescreen"
+       ]
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Steps in correct order"
+      },
+      {
+       "marks": "1",
+       "criterion": "At least 3 steps in correct order"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "1.  The browser downloads manifest.json to determine app name, icons, and theme\n2.  The service worker is installed and waits for activation.\n3.  The service worker is activated and takes control of pages.\n4.  The service worker caches essential files for offline use.\n5.  The user adds the PWA to their home screen."
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "question_id": "q9",
+   "title": "New Question 9, SDLC Order",
+   "topic": "New Question 9, SDLC Order",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q9-0-0bf977ec",
+     "part": "Question 9",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SORTING_TABLE",
+     "prompt": "Arrange these fundamental software development steps into the correct order.",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "version": 0,
+       "type": "SORTING_TABLE",
+       "rows": [
+        {
+         "id": "sdlc-design",
+         "cells": [
+          {
+           "text": "<p>design</p>"
+          }
+         ]
+        },
+        {
+         "id": "sdlc-spec",
+         "cells": [
+          {
+           "text": "<p>determining specifications</p>"
+          }
+         ]
+        },
+        {
+         "id": "sdlc-req",
+         "cells": [
+          {
+           "text": "<p>requirements definition</p>"
+          }
+         ]
+        },
+        {
+         "id": "sdlc-dev",
+         "cells": [
+          {
+           "text": "<p>development</p>"
+          }
+         ]
+        },
+        {
+         "id": "sdlc-install",
+         "cells": [
+          {
+           "text": "<p>installation</p>"
+          }
+         ]
+        },
+        {
+         "id": "sdlc-test",
+         "cells": [
+          {
+           "text": "<p>testing and debugging</p>"
+          }
+         ]
+        },
+        {
+         "id": "sdlc-int",
+         "cells": [
+          {
+           "text": "<p>integration</p>"
+          }
+         ]
+        },
+        {
+         "id": "sdlc-maint",
+         "cells": [
+          {
+           "text": "<p>maintenance</p>"
+          }
+         ]
+        }
+       ],
+       "correctRowOrder": [
+        "sdlc-req",
+        "sdlc-spec",
+        "sdlc-design",
+        "sdlc-dev",
+        "sdlc-int",
+        "sdlc-test",
+        "sdlc-install",
+        "sdlc-maint"
+       ]
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Steps in correct order"
+      },
+      {
+       "marks": "1",
+       "criterion": "At least 4 steps in correct order"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "1.  Requirements definition\n2.  Determining specifications\n3.  Design\n4.  Development\n5.  Integration\n6.  Testing and debugging\n7.  Installation\n8.  Maintenance"
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "question_id": "q10",
+   "title": "New Question 10, Web Protocols and Ports",
+   "topic": "New Question 10, Web Protocols and Ports",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q10_p1",
+     "part": "Question 10",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Match each protocol to its default port number by selecting the correct option in each row.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "21",
+       "53",
+       "80",
+       "443"
+      ],
+      "rows": [
+       {
+        "statement": "HTTP",
+        "correct": [
+         "80"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "HTTPS",
+        "correct": [
+         "443"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "FTP",
+        "correct": [
+         "21"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "DNS",
+        "correct": [
+         "53"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "HTTP",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "HTTPS",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "FTP",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "DNS",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "question_id": "q11",
+   "title": "New Question 11, Modularisation",
+   "topic": "New Question 11, Modularisation",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q11_p1",
+     "part": "Question 11",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Describe the purpose of modularisation in software development and explain two advantages it provides for large-scale projects.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Clearly and accurately describes the purpose of modularisation using correct syllabus terminology (e.g. top-down design, system design phase, maintainability, reusability).Provides two well-explained advantages clearly related to large-scale software projects.Response is cohesive, detailed, and uses appropriate technical language."
+      },
+      {
+       "marks": "3",
+       "criterion": "Describes the purpose of modularisation and provides two advantages (one may lack depth or direct link to large-scale projects).Uses mostly correct terminology.Shows a sound understanding of software design principles."
+      },
+      {
+       "marks": "2",
+       "criterion": "Demonstrates a basic understanding of modularisation by describing its purpose and one advantage, or two advantages with limited explanation.May use some relevant terminology but lacks clarity or depth."
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides a simple or partial statement about modularisation"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Modularisation is a software design strategy in which a complex system is decomposed into smaller, self-contained modules, each responsible for a specific function or process. This practice is essential in the system design phase of the software development cycle, as it enables programmers to apply top-down design principles and create programs that are easier to test, debug, and maintain. Each module can be developed and verified independently, then integrated to form the complete system.\n\n  \n\nFor large-scale software projects, modularisation offers distinct benefits. It enhances maintainability, as faults can be isolated and corrected within a single module without affecting the overall system — improving reliability and reducing maintenance time. Additionally, it facilitates teamwork and reusability: separate development teams can work on different modules concurrently, promoting efficient project management, while well-defined modules can be reused in future systems, increasing productivity and software quality."
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "question_id": "q12",
+   "title": "New Question 12, Password Check Pseudocode",
+   "topic": "New Question 12, Password Check Pseudocode",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A programmer is designing a program to check the length of a password and to check if the password input is the same as the stored password.\n\nThe program requirements are:\n\n-   input the password, ‘Password’\n-   check if there are at least 8 characters in the password\n-   check that the password is not the same as the stored password ‘OldPass’\n-   output 'accepted' if both tests are completed successfully\n-   otherwise, output 'rejected'.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q12_p1",
+     "part": "Question 12",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "PSEUDOCODE",
+     "prompt": "Create pseudocode for this using the variable names as given.",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "type": "PSEUDOCODE"
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "The pseudocode correctly checks both the password length and compares it to the stored password 'OldPass' using a logical AND.The program correctly outputs 'accepted' or 'rejected' based on the outcome of the conditional checks."
+      },
+      {
+       "marks": "2",
+       "criterion": "The pseudocode correctly checks one of the conditions (either length or comparison to 'OldPass'), but not both.The program correctly outputs 'accepted' or 'rejected' based on the single condition that is checked."
+      },
+      {
+       "marks": "1",
+       "criterion": "The pseudocode shows a basic understanding of input and output, but the logical conditions are incorrect or incomplete.The program attempts to check the password but does not implement the conditions correctly, leading to incorrect outputs."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nBEGIN\n  INPUT Password\n  IF LENGTH(Password) >= 8 AND Password <> “OldPass” THEN\n    Display 'accepted'\n  ELSE\n    Display 'rejected'\n  ENDIF\nEND\n```"
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "question_id": "q13",
+   "title": "New Question 13, Vulnerability Assessment",
+   "topic": "New Question 13, Vulnerability Assessment",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q13_p1",
+     "part": "Question 13",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Describe how vulnerability assessment helps manage the security of programming code.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Describes how vulnerability assessment helps manage the security of programming code"
+      },
+      {
+       "marks": "1",
+       "criterion": "Outlines what vulnerability assessment is"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Vulnerability assessment involves identifying, quantifying, and prioritising vulnerabilities within a system, programmers can implement secure code solutions to nullify these vulnerabilities and maintain security."
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "question_id": "q14",
+   "title": "New Question 14, W3C Influence",
+   "topic": "New Question 14, W3C Influence",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q14_p1",
+     "part": "Question 14",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Explain how the World Wide Web Consortium (W3C) influences the development of web applications. Use examples in your response.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Explains how the World Wide Web Consortium influences the development of web applications with relevant examples ANDResponse should cover at least 4 of the following syllabus points: Web Accessibility Initiative (WAI), internationalisation, web security, privacy and machine-readable data"
+      },
+      {
+       "marks": "3",
+       "criterion": "Describes how the World Wide Web Consortium influences the development of web applications ORExplains how the World Wide Web Consortium influences the development of web applications with relevant examples for 3 of the syllabus points"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines the World Wide Web Consortium"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information on the World Wide Web Consortium"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The W3C influences the development of web applications by establishing standards and guidelines developers should implement. The web accessibility initiative provides guidelines for developers managing web apps like the Web Content Accessibility Guidelines (WCAG) causing developers to implement features like high contrast colours in the UI frontend for disabled people. Developers are also recommended to implement internationalisation to address diversity of end users , such as defining css properties to handle different writing directions (left, right) Web security guidelines cause developers to follow secure coding standards such as the CPS (content Security Policy) which helps prevent cross-site scripting (XSS) attacks by allowing developers to specify which sources of content are trusted and can be safely loaded by the browser. W3C’s privacy standards aim to provide users with greater control over their personal information and ensure that web applications handle data responsibly, for example the privacy sandbox initiative leads to developers creating more privacy-friendly web environments in the context of advertising and tracking"
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "question_id": "q15",
+   "title": "New Question 15, Delivery Anomaly Detection",
+   "topic": "New Question 15, Delivery Anomaly Detection",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Uber tracks the delivery time of their drivers and wants to understand why some deliveries take unusually long. They decide to flag any deliveries that take more than 1.5 times the overall average delivery time.\n\nUber’s delivery times:\n\n```\ndeliveries = [\n  {\"driver\": \"Alice\", \"time\": 30},\n  {\"driver\": \"Bob\", \"time\": 45},\n  {\"driver\": \"Alice\", \"time\": 40},\n  {\"driver\": \"Bob\", \"time\": 100},\n  {\"driver\": \"Alice\", \"time\": 90}\n]\n```",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q15_p1",
+     "part": "Question 15 (a)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "CODING",
+     "prompt": "Create a Python function that takes the `deliveries` and returns a list of flagged deliveries.",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Creates a correct function that returns the expected list"
+      },
+      {
+       "marks": "2",
+       "criterion": "The function is mostly correct but contains one significant error"
+      },
+      {
+       "marks": "1",
+       "criterion": "Correctly calculates the overall average delivery time"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\ndef detectAnomaly(deliveries):\n  times = [t[\"time\"] for t in deliveries]\n  averageTime = sum(times)/len(times)\n  flagged = [f for f in deliveries if f[\"time\"]>1.5*averageTime]\n  return flagged\n```"
+    },
+    {
+     "part_id": "q15_p2",
+     "part": "Question 15 (b)",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Uber wants to automate the whole process and receive alerts automatically. Outline the role of RPA and BPA in fully automating Uber’s anomaly detection system.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Correctly outlines the role of RPA and BPA with an example of each"
+      },
+      {
+       "marks": "1",
+       "criterion": "Identifies at least one correct example of either RPA or BPA"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "RPA automates small repetitive tasks such as logging delivery times, while BPA automate the whole workflow by triggering the anomaly detection algorithm and then sending notifications to Uber."
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "question_id": "q16",
+   "title": "New Question 16, Logistic Regression vs KNN",
+   "topic": "New Question 16, Logistic Regression vs KNN",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A software company collects data of the vitals of patients with a certain disease.\n\nThe company aims to analyse this data and predict whether or not a new patient has the disease by looking at their vitals.\n\nThe developers are stuck between using logistic regression or KNN for this model.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q16_p1",
+     "part": "Question 16 (a)",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Outline why these two models were considered by the developers?",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1",
+       "criterion": "Explains the need to use classification models"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "KNN and logistic regression are both classification models which are required to predict whether or not someone has a disease (Yes Or No)."
+    },
+    {
+     "part_id": "q16_p2",
+     "part": "Question 16 (b)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "By first explaining how each model works, justify which model the company should use to get the most accurate results?",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "For explaining how each model works to classify data ANDJustifies why logistic regression is more suitable"
+      },
+      {
+       "marks": "2",
+       "criterion": "For explaining how each model works to classify data"
+      },
+      {
+       "marks": "1",
+       "criterion": "Justifies why logistic regression is more suitable"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "KNN finds the 'k' nearest points and looks at the majority to classify while logistic regression uses a sigmoid function to get a probability between 0 and 1 to classify.\n\nKNN is highly sensitive to noise as every feature (including unnecessary vitals) contribute equally to the Euclidean distance while Logistic regression adds weights for each factor so that irrelevant features don't contribute as much to the prediction. Hence, Logistic regression is more accurate and suitable.\n\n**Answers Could Include:**\n\nKNN works slow on large datasets as it needs to calculate a lot of Euclidean distances every time the model predicts, while Logistic Regression is much faster due to a set sigmoid function that instantly returns a value."
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "question_id": "q17",
+   "title": "New Question 17, Encryption vs Hashing",
+   "topic": "New Question 17, Encryption vs Hashing",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "The robot stores data internally, such as internal logs, and also communicates with other robots and users across the web securely via a wireless network which is password protected. All data for these tasks is secured using either encryption or hashing.\n\nAdditionally, hashed values are appended to the files that the robot transfers.\n\n![image](assets/17.png.png)",
+   "stimulus_images": [
+    "assets/17.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "q17_p1",
+     "part": "Question 17",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Compare the purpose and function of the robot's use of encryption and hashing for storing and communicating data.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1-4",
+       "criterion": "Provides the differences between hashing and encryption in terms of:Purpose, must mention the purpose of the hashes (tampering) etcHow they work (function), must mention keys, and properties of hashesProvides multiple references with the stimulus including for:Internal logsSecure wireless communication. Mentions TLS/SSL protocols.-1 mark for each not met"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Encryption and hashing are both cryptographic methods used to secure data, but they have different purposes:\n\n  \n\nEncryption ensures confidentiality (keeping data secret) by converting readable plaintext into unreadable ciphertext. There are two types of encryption:  \nSymmetric Encryption (e.g., AES): Used for bulk encryption of stored data (data at rest), such as internal sensitive logs, ensuring that if storage is accessed, the data is unreadable without the key.  \nAsymmetric Encryption (e.g., RSA): Used in securing communications (data in transit) with protocols such as SSL/TLS for the secure exchange of session keys, which then encrypt the data transmitted wirelessly.\n\nHashing ensures integrity (preventing/detecting unauthorized modification) and irreversibility with a hash function that produces a fixed-size, irreversible string (hash value) from the input.  \nPasswords for the wireless network access must be hashed before storage to prevent retrieval in plaintext, leveraging the irreversibility property. Hashing is used to generate checksums or digital signatures, which are vital for verifying that data packets sent across the wireless network have not been tampered with or altered during transmission."
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "question_id": "q18",
+   "title": "New Question 18, Web Communication",
+   "topic": "New Question 18, Web Communication",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Sam is using his web browser to search for an iPhone on Google.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q18_p1",
+     "part": "Question 18 (a)",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "![](/img/nswseng/18.png)\n\nExplain how Sam's browser is able locate Google’s server.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1",
+       "criterion": "Explains the role of DNS"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The browser queries the Domain-Name System (DNS) server which translates the domain 'Google.com' into an IP address for the browser to locate Google's server."
+    },
+    {
+     "part_id": "q18_p2",
+     "part": "Question 18 (b)",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Sam searches for an iphone, sending a HTTPS request to get data from the server.\n\nHow is the iphone data transmitted reliably from the server to the browser, ensuring that no information is missing?",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Identifies the use of TCP/IP and data packets ANDJustifies why the transmission is reliable"
+      },
+      {
+       "marks": "1",
+       "criterion": "Completes ONE above criterion"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "TCP/IP establishes a connection that allows for reliable data transmission by breaking the information into numbered data packets which are reassembled on the receiver's end. Any packet that is missing is sent again, ensuring that the transmission is reliable."
+    },
+    {
+     "part_id": "q18_p3",
+     "part": "Question 18 (c)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "How is the security of Sam's connection to the server and their data transmissions maintained?",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Identifies the use of TLS ANDDescribes 2 features of TLS in enhancing security"
+      },
+      {
+       "marks": "2",
+       "criterion": "Describes 2 features of TLS in enhancing security"
+      },
+      {
+       "marks": "1",
+       "criterion": "Identifies the use of TLS"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Sam sends a HTTPS requests which runs HTTP over TLS (Transport Layer Security). TLS authenticates the connection to the server by verifying digital certificates and exchanges encryption keys. It encrypts any data being transmitted and drops the connection if it detects tampering with the data, hence maintaining security."
+    }
+   ]
+  },
+  {
+   "number": 19,
+   "question_id": "q19",
+   "title": "New Question 19, Decision Tree Simplification",
+   "topic": "New Question 19, Decision Tree Simplification",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A mystery mark student had a stroke and created this even more worse decision tree to the HSC Familiarisation question:\n\n![image](assets/19.png.png)",
+   "stimulus_images": [
+    "assets/19.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "q19_p1",
+     "part": "Question 19",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "DRAWING_V2",
+     "prompt": "The decision tree can be simplified without compromising its logic. Redraw the decision tree to reduce the number of branches.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1-3",
+       "criterion": "Groups VehicleGroups SUV TypeGroups Colour=Silver-1 mark for each not met"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![](img/nswseng/a19.png)"
+    }
+   ]
+  },
+  {
+   "number": 20,
+   "question_id": "q20",
+   "title": "New Question, Library System",
+   "topic": "New Question, Library System",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A small library needs a terminal based system. The system should allow you to:\n\n-   Add a new book with title, author, and year.\n-   Remove a book by title.\n-   Display all books sorted by year.\n\nUse a class called **Library** to store and manage the books. Each book should be a dictionary or a small class with attributes **title**, **author**, and **year**.\n\nMethods should include **add\\_book()**, **remove\\_book()**, and **display\\_books()**.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q20-0-b8336e14",
+     "part": "Question 20 (a)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "DRAWING_V2",
+     "prompt": "Create a UML class diagram for this library system.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1-3",
+       "criterion": "Correct library classCorrect book classCorrect ratio / relationship-1 mark for each not met"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![](img/nswseng/a20.png)"
+    },
+    {
+     "part_id": "q20-1-220182e6",
+     "part": "Question 20 (b)",
+     "marks_available": 6,
+     "syllabus": null,
+     "answer_type": "CODING",
+     "prompt": "Make the system in python based on the stimulus.\n\n  \n\n**Constraints:**\n\n-   Use a list to store books.\n-   Use loops and conditionals to navigate options.\n-   Handle cases like removing a book that doesn’t exist.\n\n**Example output:**\n\n```\n1. Add Book\n2. Remove Book\n3. Display Books\nChoose an option: 1\nEnter title: Python 101\nEnter author: John Doe\nEnter year: 2023\nBook added successfully.\n\nChoose an option: 3\nBooks in library:\n1. Python 101 by John Doe (2023)\n```",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 6,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1-6",
+       "criterion": "Complete, working codePrints available optionsHandle user inputsCorrectly displays booksCorrectly removes booksCorrectly adds books-1 mark for each not met"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nclass Library:\n  def __init__(self):\n    self.books = []\n\n  def add_book(self, book):\n    self.books.append(book)\n    print('added')\n\n  def remove_book(self, title):\n    for i in self.books:\n      if i.title == title:\n        self.books.remove(i)\n        print('removed')\n\n  def display_books(self):\n    print('Books in the library: ')\n    def year(book):\n      return book.year\n    sortedb = sorted(self.books, key = year)\n    for n, z in enumerate(sortedb, 1):\n      print(f\"{n}. {z.title} by {z.author} ({z.year})\")\n\nclass Books:\n  def __init__(self, title, author, year):\n    self.title = title\n    self.author = author\n    self.year = year\n\n# Option print\nprint('1. Add book')\nprint('2. Remove book')\nprint('3. Display books')\n\nlibrary = Library()\n\nwhile True:\n  option = int(input('Choose an option: '))\n  if option == 1:\n    title = str(input('Enter a title: '))\n    author = str(input('Enter an author: '))\n    year = int(input('Enter a year: '))\n    book = Books(title, author, year)\n    library.add_book(book)\n  elif option == 2:\n    title = str(input('Enter a title: '))\n    library.remove_book(title)\n  elif option == 3:\n    library.display_books()\n```"
+    }
+   ]
+  },
+  {
+   "number": 21,
+   "question_id": "q21",
+   "title": "New Question 21, Authorisation vs Authentication",
+   "topic": "New Question 21, Authorisation vs Authentication",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q21_p1",
+     "part": "Question 21",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Compare and contrast authorisation and authentication measures when designing a login portal for a fast food restaurant.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Compares and contrasts authorisation and authentication in the context of designing a fast food login portal."
+      },
+      {
+       "marks": "3",
+       "criterion": "Compares authorisation and authentication without reference to the stimulus ORExplains authorisation and authentication with no comparison"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines authorisation and authentication ORExplains one of them with sufficient detail"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Authentication is the ability of a system to verify a user's identity, using passwords, MFA, or security questions, in order to protect systems from inappropriate access by bad actors. In this restaurant's login portal, usernames and passwords should be required to log into the website to order food or perform employee-related activities, and hashing algorithms should be used to secure the passwords of employees and customers.\n\n  \n\nAuthorisation also relates to securing a system, however, it is the managing of permissions for such systems through this authentication, specific users or roles should be given different levels of access throughout a system as per the principle of least privilege. For instance, role based access control can be implemented by ensuring base level employees have the required levels of clearance to perform their jobs, higher than the customers, but managers who require more features, such as monitoring information not available to employees, can access it.\n\n  \n\nHence, authorisation and authentication work together to keep a website secure, but the results of authentication will often dictate the authorisation provided to an individual."
+    }
+   ]
+  },
+  {
+   "number": 22,
+   "question_id": "q22",
+   "title": "Question 22 sql",
+   "topic": "Question 22 sql",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "You are a data analyst for an online retail company tasked with analyzing sales data to find the most consistently high-performing product categories. The goal is to identify categories that generate significant revenue through a high volume of sales.\n\nYou have access to the `Sales_Transactions` table:\n\n**Table: Sales\\_Transactions**\n\n| Transaction\\_ID | Product\\_Name | Category | Unit\\_Price | Quantity | Order\\_Date | Region |\n|---|---|---|---|---|---|---|\n| 1001 | Wireless Mouse | Electronics | 75 | 2 | 2024-03-15 | North |\n| 1002 | SQL for Pro | Books | 50 | 3 | 2024-04-22 | South |\n| 1003 | Gaming Keyboard | Electronics | 150 | 1 | 2024-03-20 | North |\n| 1004 | The Martian | Books | 25 | 2 | 2024-05-10 | North |\n| 1005 | T-Shirt | Apparel | 30 | 5 | 2024-03-18 | West |\n| 1006 | Smart Watch | Electronics | 450 | 1 | 2024-06-05 | North |\n\n  \n**Expected Output**\n\n| Category | Number\\_of\\_Transactions | Total\\_Items\\_Sold | Average\\_Items\\_Per\\_Transaction | Total\\_Revenue | Highest\\_Unit\\_Price |\n|---|---|---|---|---|---|\n| Books | 2 | 5 | 2.5 | 200 | 50 |\n| Electronics | 1 | 2 | 2 | 150 | 75 |\n| Apparel | 1 | 5 | 5 | 150 | 30 |",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q22-0-577d6eab",
+     "part": "Question 22",
+     "marks_available": 5,
+     "syllabus": null,
+     "answer_type": "SQL",
+     "prompt": "Write a single SQL query to identify the top-performing product categories from all sales in 2024.\n\nYour query must:\n\n-   Only include transactions where the **Quantity** of items sold was greater than 1.\n-   For each category, calculate and display:\n    -   The category name.\n    -   Total number of transactions.\n    -   Total number of items sold.\n    -   Average items sold per transaction.\n    -   Total revenue, as the sum of.\n    -   The highest price of a single unit sold.\n-   Sort the final results by **Total\\_Revenue** in descending order.",
+     "prompt_images": [],
+     "question": {
+      "dataset_setup_sql": "CREATE TABLE Sales_Transactions (\n    Transaction_ID INTEGER PRIMARY KEY,\n    Product_Name TEXT,\n    Category TEXT,\n    Unit_Price REAL,\n    Quantity INTEGER,\n    Order_Date TEXT,\n    Region TEXT\n);\n\nINSERT INTO Sales_Transactions (Transaction_ID, Product_Name, Category, Unit_Price, Quantity, Order_Date, Region) VALUES\n(1001, 'Wireless Mouse', 'Electronics', 75, 2, '2024-03-15', 'North'),\n(1002, 'SQL for Pro', 'Books', 50, 3, '2024-04-22', 'South'),\n(1003, 'Gaming Keyboard', 'Electronics', 150, 1, '2024-03-20', 'North'),\n(1004, 'The Martian', 'Books', 25, 2, '2024-05-10', 'North'),\n(1005, 'T-Shirt', 'Apparel', 30, 5, '2024-03-18', 'West'),\n(1006, 'Smart Watch', 'Electronics', 450, 1, '2024-06-05', 'North');",
+      "starter_query": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 5,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1-5",
+       "criterion": "Correct Calculations: The SELECT clause includes all five required calculationsCorrect Aliases: All five calculated columns are correctly renamed using AS to match the names in the \"Expected Output\" tableCorrect Filtering: The WHERE clause correctly filters the data for both required conditions using AND: Quantity > 1 and accurately selects for the year 2024Correct Grouping: The query correctly groups the aggregated results by Category using the GROUP BY Category clause.Correct Sorting: The final result set is correctly sorted by Total_Revenue in descending order using the ORDER BY Total_Revenue DESC clause.-1 mark for each not met"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nSELECT\n    Category,\n    COUNT(Transaction_ID) AS Number_of_Transactions,\n    SUM(Quantity) AS Total_Items_Sold,\n    AVG(Quantity) AS Average_Items_Per_Transaction,\n    SUM(Unit_Price * Quantity) AS Total_Revenue,\n    MAX(Unit_Price) AS Highest_Unit_Price\nFROM\n    Sales_Transactions\nWHERE\n    Quantity > 1\n    AND Order_Date >= '2024-01-01'\n    AND Order_Date <= '2024-12-31'\nGROUP BY\n    Category\nORDER BY\n    Total_Revenue DESC;\n```"
+    }
+   ]
+  },
+  {
+   "number": 23,
+   "question_id": "q23",
+   "title": "New Question 23, RL Model Failure Analysis",
+   "topic": "New Question 23, RL Model Failure Analysis",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A mystery mark student (inventors) had an innovative idea to make a pricing strategy business model for a technology audience, and it was very successful and used by many consumers. However, one day the RL model decided to not do what it is supposed to do. Here is the slideshow of the incomplete investigation carried by the mystery mark student.\n\n![image](assets/23-1.png.png)\n\n![image](assets/23-2.png.png)\n\n![image](assets/23-3.png.png)",
+   "stimulus_images": [
+    "assets/23-1.png.png",
+    "assets/23-2.png.png",
+    "assets/23-3.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "q23_p1",
+     "part": "Question 23 (a)",
+     "marks_available": 8,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Critically evaluate the failure of Security by Design (SbD) principles in this scenario and how these can be mitigated with appropriate exception and session management, and at TWO other techniques you have learnt in this course.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 8,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1-8",
+       "criterion": "2 - Explains failure of 2 SbD principles, description, cause and effect must be evident. Note: SbD includes CIA triad (Confidentiality, Integrity, Availability), Authentication, Authorisation, and Accountability (AAA) and Defensive Coding. Explicit correct description must be provided for at least TWO of them (as it says ‘principles’)3- Exception and Session management: Clearly describes what is checked, the response, and how it mitigates the issue(s).3- Explains how the two tools chosen could have been used to mitigate the impacts.-marks for each not met"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "**SbD Failure 1: Defensive Coding**  \nThe system intentionally bypassed the Object-Relational Mapping (ORM) layer \\[slide 1\\]. The ORM is a critical security and abstraction layer, handling tasks like query parameterization, managing transaction scopes, and ensuring data consistency. Bypassing it removed a key defensive layer, leaving the database directly exposed to potentially flawed logic from the RL agent.\n\n**SbD Failure 2: Accountability**  \nRL agent was granted excessive privileges, allowing it to execute raw SQL UPDATE commands directly against the database. This violates the principle of least privilege, which dictates that a component should only have the bare minimum permissions necessary to perform its function. The agent was over-authorized, giving it the power to cause widespread damage.\n\n**Exception Management:**  \nTo prevent a complete system crash, exception management must check for database errors indicating that a physical resource limit has been reached and when such an exception is caught, the response should immediately trigger an alert to the team. The application could enter a safe mode, gracefully rejecting new pricing update requests from the RL agent. This prevents a disorderly crash by handling the error gracefully, which protects the integrity of all data committed before the resource limit was hit.\n\n**Session Management:**  \nDatabase sessions should be managed to enforce transaction isolation levels. This ensures that concurrent transactions do not interfere with each other, preventing the race conditions described. The application should manage the lifecycle of a transaction within a controlled session, committing only upon successful completion of all required steps.\n\n**Input sanitisation:**  \nAs RL agent's output must be treated as untrusted user input, as a black box system, sanitisation is essential. Sanitising the input variables passed to the raw UPDATE command, or escaping special characters, would prevent the execution of malicious or conflicting code (such as potential SQL injection if the agent's logic were compromised)\n\n**DAST tools:**  \nDAST could have provided a realistic assessment of the security strength of the live system. It would have been used to actively test the endpoints that the high-velocity RL agent was using and uncovered the weakness caused by the ORM bypass or exposed the race condition under high load, allowing these critical flaws to be fixed before the production crash.\n\n  \n**Answers may also include:**\n\n**SbD Failure 1: Defensive Coding**  \nCould also mention  \n• The system treats the raw SQL generated by the black box RL agent as a trusted input. Defensive coding mandates that all inputs, especially from complex or external components, must be considered potentially hostile or malformed. By executing this SQL directly, the application created a potential vulnerability path.  \n• A defensively coded system should anticipate and handle errors (like resource limits or transaction conflicts) gracefully, rather than allowing them to cause a complete system failure.\n\n**SbD Failure 3: Integrity**  \nThe use of concurrent, unsynchronized modifications on shared database records led to an unpredictable race condition, resulting in compromised data integrity \\[Slide 3\\]. Integrity ensures that data remains accurate, consistent, and trustworthy throughout its lifecycle, preventing unauthorized modification. The core purpose was undermined when the outcomes of concurrent operations depended on the unpredictable order of execution of race conditions. Additionally the high-velocity data streams \\[Slide 1\\] introduces the challenge of handling massive datasets, which may be inputted.\n\n**SbD Failure 4: Accountability**  \nAccountability requires maintaining logging and auditing mechanisms so that every action and security event can be traced back to a responsible individual or entity. As the \"data corruption is untraceable and obstructs any form of accountability\"\\[slide 3\\] because the model's logic is a black box. Without a clear audit trail, it is impossible to determine why the faulty commands were generated or to hold the system's designers responsible.\n\n**SbD Failure 5: Availability**  \nSince the \"database crashed with its storage resources exceeded.\" The uncontrolled updates caused transaction log bloating or data file growth beyond provisioned limits, resulting in a denial of service (DoS), and thus lack of availability or all consumers and the business itself.\n\n**Exception Management**  \nThe exception handler can check for database constraint violations that the uncontrolled RL may make, such as attempting to insert a negative price or updating a ProductID that doesn't exist. The response is to catch the specific exception, log it as a critical failure of the agent's logic, and trigger a Rollback. It should also generate an alert, preventing the database from being polluted with nonsensical or invalid data, preserving data quality and integrity by strictly enforcing the business rules.\n\n**Implementing API**  \nInstead of allowing the RL agent to generate raw UPDATE commands, it should be restricted to calling a predefined stored procedure. This acts as a controlled API to the database. The stored procedure itself would contain the necessary logic for validation (e.g., ensuring the price is within a valid range), logging the change for accountability, and implementing concurrency controls like row-level locking to prevent race conditions. This abstracts the risky database operations away from the \"black box\" agent.\n\n**Locks:**  \nThe section of code that performs the price update must only have one thread that can access and modify that database record at a time. This ensures that when the RL agent decides on a new price for a shared record, only one at a time. This guarantees that the final state of the price (the outcome) is predictable and maintains data integrity.\n\n**Audit Trails:**  \nThe system must maintain detailed logs of user actions, access attempts, and security events. Specifically, every price update transaction initiated by the RL agent must be logged, including the input data used by the model, the resulting raw SQL, the timing of the transaction attempt, allowing traceability and ability investigate the logs and retrospectively determine the exact sequence of events that led to data corruption, ensuring accountability even if the model logic itself is opaque."
+    },
+    {
+     "part_id": "q23_p2",
+     "part": "Question 23 (b)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "With uncontrolled UPDATE commands, the database crashed with its storage resources exceeded.\n\nExplain how version control features can serve as necessary disaster recovery mechanisms.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1-3",
+       "criterion": "Identifies one feature and what it doesIdentifies two features and what it doesExplains both features in reaction to disaster recovery-1 mark for each not met"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "**Logs:** A detailed version history of the database can provide a sequential record of every change made over time. In this scenario, every update command from the RL agent would be recorded in this log where the team can count the exact number of records affected and the rate at which the updates occurred. This helps in assessing the full scope of the data corruption and understanding how the system’s storage resources were overwhelmed, informing future planning and monitoring for recovery.\n\n  \n\n**Backups:** They can also serve as effective backup tools to rollback the database to the last stable version identified from the logs, which can prevent data loss of the company and ensure the availability of data to the customers in short durations of time, serving as an effective disaster recovery."
+    },
+    {
+     "part_id": "q23_p3",
+     "part": "Question 23 (c)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "The mystery mark student hired his band 6 classmate that he knew on NSW SENG. He quickly pentested and noticed that it is highly vulnerable to bot attacks and brute forcing, which could compromise their server and overwhelm their RL agent. Luckily no one had attempted this attack yet, but by SbD principles he suggested:\n\n-   A time-based one-time password (TOTP) from an authenticator app.\n-   A visual CAPTCHA to prevent bots.\n\nHowever, the mystery mark student suggests that apps should be easy to use, especially for elderly or non-technical users.\n\nExplain the ethical problem with implementing a purely visual CAPTCHA, specifically in the context of web accessibility, and propose the alternative secure solution.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1-3",
+       "criterion": "Identifies the ethical problem (discrimination)Explains with an example of how it could be inaccessibleExplains a valid alternate secure solution-1 mark for each not met"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The primary ethical problem with a purely visual CAPTCHA is exclusion and discrimination based on ability. For instance, users who are blind or have low vision cannot perceive the distorted text or images, and users with dyslexia or other cognitive disabilities may struggle to interpret the characters. Rate Limiting addresses brute-force attempts by restricting the number of API requests allowed within a specific time window, preventing the server from being overwhelmed.\n\n  \n\n**Answers could include:**\n\nA behaviour-based system like Google's reCAPTCHA v3 can work invisibly in the background, by monitoring user behaviour on the site to generate a risk score and present further tests only if the score is high."
+    }
+   ]
+  }
+ ]
+}

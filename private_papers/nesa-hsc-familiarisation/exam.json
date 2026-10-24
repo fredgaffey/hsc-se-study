@@ -1,0 +1,1138 @@
+{
+ "exam": "NESA HSC Familiarisation",
+ "private": true,
+ "source": "software.paper.is via the SEN Discord (personal study only)",
+ "duration_minutes": 101,
+ "total_available": 53,
+ "parts_total": 18,
+ "parts_answered": 0,
+ "parts_marked": 0,
+ "total_mark": null,
+ "questions": [
+  {
+   "number": 1,
+   "question_id": "uuid-q1-sdlc-sort",
+   "title": "Question 1, Software Development Steps",
+   "topic": "Question 1, Software Development Steps",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "uuid-q1-part1",
+     "part": "Question 1",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "SORTING_TABLE",
+     "prompt": "Place the following software development steps in the correct order by clicking and holding each step and dragging it into its position.",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "type": "SORTING_TABLE",
+       "rows": [
+        {
+         "id": "sort-design",
+         "cells": [
+          {
+           "text": "Design"
+          }
+         ]
+        },
+        {
+         "id": "sort-install",
+         "cells": [
+          {
+           "text": "Installation"
+          }
+         ]
+        },
+        {
+         "id": "sort-maint",
+         "cells": [
+          {
+           "text": "Maintenance"
+          }
+         ]
+        },
+        {
+         "id": "sort-dev",
+         "cells": [
+          {
+           "text": "Development"
+          }
+         ]
+        },
+        {
+         "id": "sort-test",
+         "cells": [
+          {
+           "text": "Testing and debugging"
+          }
+         ]
+        },
+        {
+         "id": "sort-spec",
+         "cells": [
+          {
+           "text": "Determining specifications"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "1.  Determining specifications\n2.  Design\n3.  Development\n4.  Testing and debugging\n5.  Installation\n6.  Maintenance"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "question_id": "uuid-q2-sql-mc",
+   "title": "Question 2, SQL Query",
+   "topic": "Question 2, SQL Query",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "An online business is planning to use a database to keep track of its products. The contents of the **Products** table during testing are shown.\n\n**Products**\n\n| ProductID | ProductName | ProductPrice |\n|---|---|---|\n| P001 | The Plant (DVD) | 28.00 |\n| P002 | Discovery 1 and 2 (DVD) | 26.98 |\n| P003 | Travel 1 and 2 (Blu-Ray) | 22.00 |\n| P004 | The Best Movie (DVD) | 19.98 |\n| P005 | Celebration (DVD) | 12.00 |\n\n  \n\nAfter executing a SQL query, the following results were obtained.\n\n| ProductName | ProductPrice |\n|---|---|\n| The Plant (DVD) | 28.00 |\n| Discovery 1 and 2 (DVD) | 26.98 |\n| Travel 1 and 2 (Blu-Ray) | 22.00 |",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "uuid-q2-part1",
+     "part": "Question 2",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following SQL queries would produce the results shown?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "SELECT ProductName, ProductPrice FROM Products WHERE ProductPrice >= 22.00 ORDER BY ProductPrice DESC;",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "SELECT * FROM Products WHERE ProductPrice > 22.00 ORDER BY ProductName ASC;",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "SELECT ProductName, ProductPrice FROM Products WHERE ProductPrice <= 28.00 ORDER BY ProductPrice ASC;",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "SELECT ProductName, ProductPrice FROM Products WHERE ProductName LIKE '%DVD%' ORDER BY ProductID DESC;",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "question_id": "uuid-q3-protocols",
+   "title": "Question 3, Email Protocols",
+   "topic": "Question 3, Email Protocols",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "uuid-q3-part1",
+     "part": "Question 3",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Match each of the features to the relevant protocol(s).",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "POP3",
+       "SMTP",
+       "IMAP"
+      ],
+      "rows": [
+       {
+        "statement": "Commonly used for sending email",
+        "correct": [
+         "SMTP"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Commonly used for receiving email",
+        "correct": [
+         "POP3",
+         "IMAP"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Allows email to synchronise across devices",
+        "correct": [
+         "IMAP"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Server deletes messages when they are downloaded and opened",
+        "correct": [
+         "POP3"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Commonly used for sending email",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Commonly used for receiving email",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Allows email to synchronise across devices",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Server deletes messages when they are downloaded and opened",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "question_id": "uuid-q4-structure-chart",
+   "title": "Question 4, Structure Chart",
+   "topic": "Question 4, Structure Chart",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "This structure chart describes a hotel booking system.\n\n![image](assets/4.svg.svg)",
+   "stimulus_images": [
+    "assets/4.svg.svg"
+   ],
+   "parts": [
+    {
+     "part_id": "uuid-q4-part1",
+     "part": "Question 4",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Select the items that are **TRUE** about this structure chart.  \n**(Multiple items may be selected.)**",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Booking made is a flag.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Login is the first module called.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Booking ID may only be true or false.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Display new bookings may not be executed.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "E",
+        "text": "Members do not need to log in to browse hotels.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "F",
+        "text": "A choice is continually offered between Browse hotels and Book.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "G",
+        "text": "Login calls Enter member details and validate when Member ID is set to true.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "D",
+       "F"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "question_id": "uuid-q5-test-data",
+   "title": "Question 5, Test Data",
+   "topic": "Question 5, Test Data",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Consider the following algorithm.\n\nBEGIN determineGrade\n    get Mark\n    CASEWHERE Mark\n        >=80 : Grade = \"H\"\n        >=50 : Grade = \"P\"\n        OTHERWISE : Grade = \"N\"\n    ENDCASE\n    print Grade\nEnd determineGrade",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "uuid-q5-part1",
+     "part": "Question 5",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Provide a set of 5 test data that will thoroughly test the algorithm. Include the expected outputs and reasons for inclusion. You may assume that all input data are valid.\n\n_Please format your answer in three columns: Test data (Mark), Expected output (Grade), and Reason for inclusion._",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides a set of test data within the table that will thoroughly test the algorithmIncludes expected outputs and reasons for inclusion"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a set of test data that tests most boundaries and/or pathsIncludes most of the expected outputs and reasons for inclusion"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "| Test data   (Mark) | Expected output   (Grade) | Reason for inclusion |\n|---|---|---|\n| 85 | H | Testing greater than 80 |\n| 80 | H | Testing boundary value (80) |\n| 60 | P | Testing between 50 and 80 |\n| 50 | P | Testing boundary value (50) |\n| 45 | N | Testing ‘otherwise’ (below 50) |"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "question_id": "uuid-q6-sandboxing",
+   "title": "Question 6, Sandboxing",
+   "topic": "Question 6, Sandboxing",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A new operating system is to be developed for a mobile phone. The operating system needs to allow users to install a variety of third-party applications such as social media applications and games on the phone.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "uuid-q6-part1",
+     "part": "Question 6",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Discuss the use of sandboxing in this operating system.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides a thorough discussion of the use of sandboxing in the operating system"
+      },
+      {
+       "marks": "2",
+       "criterion": "Shows some understanding of the advantages and/or disadvantages of the use of sandboxing"
+      },
+      {
+       "marks": "1",
+       "criterion": "Identifies a feature of sandboxing"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Sandboxing allows each application to be isolated so that it cannot pose a security risk by accessing system resources or other applications. However, it requires more resources as each application requires its own container. It may also be less convenient for users to access resources such as the device’s camera or files as the sandbox will either prevent access or make it more difficult.\n\n  \n\n**Answers could include:**\n\nSandboxing limits the resource use of different processes (eg applications) running on the device, ensuring that if a process contains bad code, such as a memory leak, it does not consume all the resources of the operating system – potentially starving other processes, or the operating system itself, of resources."
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "question_id": "uuid-q7-decision-tree",
+   "title": "Question 7, Decision Tree",
+   "topic": "Question 7, Decision Tree",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Consider the following decision tree of a trained machine learning model that determines whether to purchase a vehicle.\n\n![image](assets/7.png.png)",
+   "stimulus_images": [
+    "assets/7.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "uuid-q7-part-a",
+     "part": "Question 7(a)",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Using the decision tree, determine the outcome of each of the following situations.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "Buy",
+       "Do not buy"
+      ],
+      "rows": [
+       {
+        "statement": "Mileage = 8000 km, Colour = Silver, Optional Accessories = No",
+        "correct": [
+         "Buy"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Mileage = 11 000 km, Colour = Red, Optional Accessories = Yes",
+        "correct": [
+         "Buy"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Type = SUV, Colour = Red, Optional Accessories = No",
+        "correct": [
+         "Buy"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Mileage = 8000 km, Colour = Silver, Optional Accessories = No",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Mileage = 11 000 km, Colour = Red, Optional Accessories = Yes",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Type = SUV, Colour = Red, Optional Accessories = No",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    },
+    {
+     "part_id": "uuid-q7-part-b",
+     "part": "Question 7(b)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "DRAWING_V2",
+     "prompt": "The decision tree can be simplified without compromising its logic. Redraw the decision tree to reduce the number of branches.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Draws a correctly simplified decision tree"
+      },
+      {
+       "marks": "2",
+       "criterion": "Draws a simplified decision tree with most of the logic"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the requirement"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![A simplified decision tree is shown.](img/hsc_familiarisation/a7.png)"
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "question_id": "uuid-q8-algo-fix",
+   "title": "Question 8, Algorithm Correction",
+   "topic": "Question 8, Algorithm Correction",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "The following subroutine is intended to search an array for an item and output the position of that item in the array. There are several mistakes in the algorithm.\n\nThe array is called **ItemArray** and it is indexed from 1.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "uuid-q8-part1",
+     "part": "Question 8",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "PSEUDOCODE",
+     "prompt": "Copy the algorithm into the space below and modify the algorithm logic so that it achieves its intended purpose.\n\n  \nBEGIN Search (SearchItem) Set LastIndex to the number of elements in ItemArray Index = 1 WHILE Found = FALSE OR Index < LastIndex IF Index = SearchItem THEN Found = TRUE ENDIF ENDWHILE IF Found = TRUE THEN Display 'Position', Index ELSE Display 'Not found' ENDIF END Search",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "type": "PSEUDOCODE",
+       "defaultCode": ""
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Correctly modifies the algorithm to achieve its intended purpose"
+      },
+      {
+       "marks": "2",
+       "criterion": "Corrects some mistakes in the algorithm"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the problem"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nBEGIN Search (SearchItem)\n  Set LastIndex to the number of elements in ItemArray\n  Found = FALSE\n  Index = 1\n  WHILE Found = FALSE AND Index < LastIndex + 1\n    IF ItemArray(Index) = SearchItem THEN\n      Found = TRUE\n    ENDIF\n    Index = Index + 1\n  ENDWHILE\n  IF Found = TRUE THEN\n    Display ‘Position’, Index – 1\n  ELSE\n    Display ‘Not found’\n  ENDIF\nEND Search\n```"
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "question_id": "uuid-q9-ui-python",
+   "title": "Question 9, UI and Python",
+   "topic": "Question 9, UI and Python",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "An online store allows users to register for an account using their name, phone number and date of birth. Users must also create a username and password.\n\nEach username must satisfy these rules:\n\n-   There must be no more than 8 characters.\n-   Only uppercase and lowercase letters are accepted.\n-   The character \"<\" is not allowed, to prevent attempts at injecting code through the username.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "uuid-q9-part-a",
+     "part": "Question 9(a)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "DRAWING_V2",
+     "prompt": "Design a user interface for registering an account. Clearly label all features.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides a user interface suitable for users to register an account, with features labelled"
+      },
+      {
+       "marks": "2",
+       "criterion": "Designs a user interface with some relevant features"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the problem"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![A user interface design for account registration is shown.](img/hsc_familiarisation/a9.png)"
+    },
+    {
+     "part_id": "uuid-q9-part-b",
+     "part": "Question 9(b)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "CODING",
+     "prompt": "Write a function in Python that will check whether a username satisfies the rules.",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": "# Write your Python function here"
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides a correct function in Python that checks whether a username satisfies the rules"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a partially correct function in Python that attempts to check whether a username satisfies the rules"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the problem and Python programming"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\ndef validateUsername(username):\n  # Length check\n  if len(username) > 8:\n    return False\n  # Alpha character only check\n  elif username.isalpha() == False:\n    return False\n  # < character check\n  elif \"<\" in username:\n    return False\n  # If we reach here then the username meets the requirements\n  return True\n```\n\n_Answers may include print statements to test the code  \neg print(validateUsername(\"test\"))_"
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "question_id": "uuid-q10-web-perf",
+   "title": "Question 10, Web Performance",
+   "topic": "Question 10, Web Performance",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Consider the following source code for a web page.\n\n<html>\n<body>\n<link rel=\"stylesheet\" href=\"style3.css\"/>\n<script src=\"image-gallery.js\"/><!--this script is slow to load-->\n<link rel=\"stylesheet\" href=\"styles1.css\"/>\n<link rel=\"stylesheet\" href=\"styles2.css\"/>\n<h1>My Awesome Website!</h1>\n<p>I hope you like my website, I spent a lot of time designing it.</p>\n<h2>Photos from my holiday</h2>\n<img src=\"holiday1\\_4000x3000.jpg\" width=\"640\" height=\"480\"/>\n<img src=\"holiday2\\_4000x3000.jpg\" width=\"640\" height=\"480\"/>\n<img src=\"holiday3\\_4000x3000.jpg\" width=\"640\" height=\"480\"/>\n<img src=\"holiday4\\_4000x3000.jpg\" width=\"640\" height=\"480\"/>\n</body>\n</html>",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "uuid-q10-part1",
+     "part": "Question 10",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "The web page is loading too slowly. Explain how the load time of this page can be improved.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Explains how the load time of the web page can be improved"
+      },
+      {
+       "marks": "3",
+       "criterion": "Outlines how some issues affecting the load time can be resolved"
+      },
+      {
+       "marks": "2",
+       "criterion": "Identifies issues affecting the load time\nOROutlines how to resolve ONE issue affecting the load time"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The images can be resized to 640 x 480 beforehand so that the webpage does not need to load the large 4000 x 3000 images. The multiple CSS style sheets could be converted into a single .css file, reducing the number of HTTP requests the browser needs to send. If the \"image-gallery.js\" JavaScript file at the top of the source code loads slowly, it can be moved to the bottom just above </body> so that it will not block the rest of the page from loading.\n\n  \n\n**Answers could include:**\n\nIf the \"image-gallery.js\" JavaScript file at the top of the source code loads slowly, the \"async\" property can be added to the <script> tag so that it can load in parallel with the rest of the page."
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "question_id": "uuid-q11-xss",
+   "title": "Question 11, Web Vulnerability",
+   "topic": "Question 11, Web Vulnerability",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Bob is testing a website for vulnerability. The website allows the user to add their name at the end of the URL and prints their name on the webpage.\n\nIn addition to his name, Bob has added some code to the URL and the following is displayed.\n\n![image](assets/11.png.png)",
+   "stimulus_images": [
+    "assets/11.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "uuid-q11-part-a",
+     "part": "Question 11(a)",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What type of vulnerability is being demonstrated?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Invalid redirecting",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Cross site scripting",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Broken authentication",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Cross site request forgery",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    },
+    {
+     "part_id": "uuid-q11-part-b",
+     "part": "Question 11(b)",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Explain ONE way to minimise this vulnerability.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Explains ONE way to minimise the vulnerability"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The website could check and change user input so that markup and script become plain text. This will still allow the page to display the information but will prevent it from executing script code.\n\n  \n\n_Note: For example, special characters such as < > and ( ) would be encoded to their HTML equivalent (%3C %3E and %28 %29)._"
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "question_id": "uuid-q12-sql-again",
+   "title": "Question 12, SQL",
+   "topic": "Question 12, SQL",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "An online business is planning to use a database to keep track of its products, customers and orders. The contents of the Products, Customers and Orders tables during testing are shown.\n\n![image](assets/12.png.png)",
+   "stimulus_images": [
+    "assets/12.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "uuid-q12-part-a",
+     "part": "Question 12(a)",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "The following SQL query is run to test the database.\n\nSELECT ProductName, ProductPrice \nFROM Products \nWHERE ProductPrice > 22.00 \nORDER BY ProductPrice ASC\n\nFill in the table below with the result of running the SQL query. You may not need to use all the rows or columns.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Provides the correct output for the SQL query, including the correct ordering of the rows"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nProductName           ProductPrice\nDiscovery 1 & 2 (DVD)   26.98\nThe Plant (DVD)         28.00\n```"
+    },
+    {
+     "part_id": "uuid-q12-part-b",
+     "part": "Question 12(b)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SQL",
+     "prompt": "The contents of the Orders table need to be displayed as follows.\n\n| Customer | Product | Quantity |\n|---|---|---|\n| Nicky Singh | The Best Movie (DVD) | 2 |\n| Kim Smith | Celebration (DVD) | 1 |\n| Casey He | Travel 1 and 2 (Blu-Ray) | 1 |\n| Nicky Singh | Discovery 1 and 2 (DVD) | 2 |\n| Pat Alvardo | Discovery 1 and 2 (DVD) | 2 |\n\nWrite a SQL query that can produce this result.",
+     "prompt_images": [],
+     "question": {
+      "dataset_setup_sql": "CREATE TABLE Products (ProductID TEXT, ProductName TEXT, ProductPrice REAL); INSERT INTO Products VALUES ('P001', 'The Plant (DVD)', 28.00), ('P002', 'Discovery 1 and 2 (DVD)', 26.98), ('P003', 'Travel 1 and 2 (Blu-Ray)', 22.00), ('P004', 'The Best Movie (DVD)', 19.98), ('P005', 'Celebration (DVD)', 12.00); CREATE TABLE Customers (CustID TEXT, CustName TEXT, CustEmail TEXT); INSERT INTO Customers VALUES ('C001', 'Nicky Singh', 'N.Singh@nesa.edu.au'), ('C002', 'Casey He', 'C.He@bos.edu.au'), ('C003', 'Ash Lee', 'A.Lee@bosnsw.edu.au'), ('C004', 'Kim Smith', 'K.Smith@nesa.edu.au'), ('C005', 'Pat Alvardo', 'P.Alvardo@bos.edu.au'); CREATE TABLE Orders (OrderID TEXT, CustID TEXT, ProductID TEXT, OrderQuantity INTEGER); INSERT INTO Orders VALUES ('T001', 'C001', 'P004', 2), ('T002', 'C004', 'P005', 1), ('T003', 'C002', 'P003', 1), ('T004', 'C001', 'P002', 2), ('T005', 'C005', 'P002', 2);",
+      "starter_query": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides a correct SQL query"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a substantially correct SQL query with at least TWO of the following features:renaming the columnsselecting the three tablesjoining the tables"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of renaming the columns or joining the tables"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nSELECT Customers.CustName as 'Customer', Products.ProductName as 'Product',\nOrders.OrderQuantity as 'Quantity'\nFROM Products, Customers, Orders\nWHERE Orders.ProductID = Products.ProductID\nAND Orders.CustID = Customers.CustID\nORDER BY Orders.OrderID ASC\n```"
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "question_id": "uuid-q13-python-game",
+   "title": "Question 13, Python Game",
+   "topic": "Question 13, Python Game",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "In a computer game, each player has 10 rounds and the maximum score for each round is 5. The score for each round is equal to the number of points, except when bonus points are assigned. Every time a player scores 5, the score from the next round is added as bonus points. If a player scores 5 in the last round, they get 10 points.\n\nA player's scores and corresponding points for a full game are shown.\n\n**Round:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10  \n**Score:** 3, 5, 5, 2, 1, 4, 0, 1, 4, 5  \n**Points:** 3, 10, 7, 2, 1, 4, 0, 1, 4, 10",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "uuid-q13-part1",
+     "part": "Question 13",
+     "marks_available": 6,
+     "syllabus": null,
+     "answer_type": "CODING",
+     "prompt": "Write a program in Python that will:\n\n-   display the player's scores and corresponding points\n-   calculate and display the total points for the player, taking into account the bonuses.\n\nStart your program with: scores = \\[3,5,5,2,1,4,0,1,4,5\\]\n\n  \n\nThe output of the program should match the following:\n\nRound   Score   Points\n1       3       3\n2       5       10\n3       5       7\n4       2       2\n5       1       1\n6       4       4\n7       0       0\n8       1       1\n9       4       4\n10      5       10\nTOTAL POINTS: 42",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": "# Write your code here"
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 6,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "6",
+       "criterion": "Provides a substantially correct solution including all of the following features:looping correctlyreferring to contents of the data structure correctlydisplaying the player’s scores and corresponding pointscalculating the total pointstaking bonus points into accounthandling the final round correctlyas shown"
+      },
+      {
+       "marks": "5",
+       "criterion": "Provides a solution that shows understanding of most of the above features"
+      },
+      {
+       "marks": "3–4",
+       "criterion": "Provides a solution that shows understanding of some features"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a solution that shows understanding of one feature"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the requirement"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\n# Input code\nscores = [3,5,5,2,1,4,0,1,4,5]\n\n# Display the scores and points\n# Header row\nprint(\"Round\\tScore\\tPoints\")\ntotalPoints = 0\n\n# Calculate the points and print\nfor i in range(len(scores)):\n  roundNumber = i + 1\n  score = scores[i]\n  points = score\n\n  # Check if any bonuses apply and NOT the final round\n  if points == 5 and i != 9:\n    # Add the points from the next round as bonus points\n    points += scores[i + 1]\n\n  # Check if the final round bonus applies\n  if points == 5 and i == 9:\n    # Give the bonus points of 10\n    points = 10\n\n  # Add to the total points tally\n  totalPoints += points\n\n  # Print the results\n  print(str(roundNumber) + \"\\t\" + str(score) + \"\\t\" + str(points))\n\nprint(\"\\nTOTAL POINTS: \" + str(totalPoints))\n```"
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "question_id": "uuid-q14-ai-slideshow",
+   "title": "Question 14, AI in Society",
+   "topic": "Question 14, AI in Society",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "The following slideshow was prepared by a student as part of a research project.\n\nNavigate the slideshow by clicking the forward and backward arrows.\n\n![image](assets/14a.png.png)\n\n![image](assets/14b.png.png)\n\n![image](assets/14c.png.png)\n\n![image](assets/14d.png.png)\n\n![image](assets/14e.png.png)\n\n![image](assets/14f.png.png)\n\n![image](assets/14g.png.png)\n\n![image](assets/14h.png.png)\n\n![image](assets/14i.png.png)\n\n![image](assets/14j.png.png)\n\n![image](assets/14k.png.png)\n\n![image](assets/14l.png.png)",
+   "stimulus_images": [
+    "assets/14a.png.png",
+    "assets/14b.png.png",
+    "assets/14c.png.png",
+    "assets/14d.png.png",
+    "assets/14e.png.png",
+    "assets/14f.png.png",
+    "assets/14g.png.png",
+    "assets/14h.png.png",
+    "assets/14i.png.png",
+    "assets/14j.png.png",
+    "assets/14k.png.png",
+    "assets/14l.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "uuid-q14-part1",
+     "part": "Question 14",
+     "marks_available": 8,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Assess the use of artificial intelligence in our society. Support your answer with information from the slideshow.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 8,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "8",
+       "criterion": "Makes an informed judgement about the use of artificial intelligence in our society, demonstrating comprehensive understanding of its use and effectsSupports answer with information from the slideshow"
+      },
+      {
+       "marks": "6–7",
+       "criterion": "Shows a broad understanding of the use of artificial intelligence and its advantages and disadvantagesIncludes some information from the slideshow"
+      },
+      {
+       "marks": "4–5",
+       "criterion": "Shows a sound understanding of the use of artificial intelligenceOutlines some of its advantages and/or disadvantages"
+      },
+      {
+       "marks": "2–3",
+       "criterion": "Shows some understanding of artificial intelligence"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Answers could include reference to the following:\n\n-   explore models of training Machine Learning (ML), including:\n    -   supervised learning\n    -   unsupervised learning\n    -   semi-supervised learning\n    -   reinforcement learning.\n-   investigate common applications of key Machine Learning (ML) algorithms, including:\n    -   data analysis and forecasting\n    -   virtual personal assistants\n    -   image recognition.\n-   assess the impact of automation on the individual, society and the environment, including:\n    -   safety of workers\n    -   people with disability\n    -   the nature and skills required for employment\n    -   production efficiency, waste and the environment\n    -   the economy and distribution of wealth.\n-   explore by implementation how patterns in human behaviour influence ML and AI software development, including:\n    -   psychological responses\n    -   patterns related to acute stress response\n    -   cultural protocols\n    -   belief systems.\n-   investigate the effect of human and data set source bias in the development of ML and AI solutions\n-   apply security features incorporated into software including data protection, security, privacy and regulatory compliance\n-   use and explain the ‘privacy by design’ approach in the development of software solutions, including:\n    -   proactive not reactive\n    -   embed privacy into design\n    -   respect for user privacy.\n-   evaluate the social, ethical, and legal issues and ramifications that affect people and enterprises resulting from the development and implementation of software, including:\n    -   employment\n    -   privacy\n    -   digital disruption.\n-   data mining\n-   streaming service management."
+    }
+   ]
+  }
+ ]
+}

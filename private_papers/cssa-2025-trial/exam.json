@@ -1,0 +1,2002 @@
+{
+ "exam": "CSSA 2025 Trial",
+ "private": true,
+ "source": "software.paper.is via the SEN Discord (personal study only)",
+ "duration_minutes": 150,
+ "total_available": 80,
+ "parts_total": 33,
+ "parts_answered": 0,
+ "parts_marked": 0,
+ "total_mark": null,
+ "questions": [
+  {
+   "number": 1,
+   "question_id": "8319fb86-9429-4d32-b778-13fd605b4e62",
+   "title": "2025 CSSA, Q1, Progressive Web Apps",
+   "topic": "2025 CSSA, Q1, Progressive Web Apps",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "416abc03-0938-4942-a53a-f03a7ef22a9e",
+     "part": "Question 1",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following best describes a Progressive Web App (PWA)?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "A type of website with no offline capabilities.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "A website that only supports desktop browsers.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "A mobile application that requires installation from an app store.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "A web app that uses modern web capabilities to deliver an app-like experience.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "question_id": "d0b7e45b-3084-4917-bd32-763ec96c0a83",
+   "title": "2025 CSSA, Q2, Logistic Regression ",
+   "topic": "2025 CSSA, Q2, Logistic Regression ",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "f639b43a-3340-4279-b849-e6ac70da44d4",
+     "part": "Question 2",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Fill in the missing word in the text box below.\n\n\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ Regression : Used for classification problems (e.g., spam detection).",
+     "prompt_images": [],
+     "question": {
+      "accepted_answers": [
+       "Logistic"
+      ]
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Logistic"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "question_id": "b3511e2f-2c78-4d51-9885-71b55335f9b7",
+   "title": "2025 CSSA, Q3, Software Dev. Life Cycle ",
+   "topic": "2025 CSSA, Q3, Software Dev. Life Cycle ",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "b5359b76-3f23-4fa6-bfe2-c2d06c7ed20d",
+     "part": "Question 3",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is the first step in the software development life cycle that impacts security?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Design",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Maintenance",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Requirements definition",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Testing",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "question_id": "28ec1149-f0e0-4f59-b123-d6648bdcaa91",
+   "title": "2025 CSSA, Q4, Social and Ethical use of Data ",
+   "topic": "2025 CSSA, Q4, Social and Ethical use of Data ",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "a5c976ac-4a76-455d-b87b-89777e617e51",
+     "part": "Question 4",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "An employee at an accounting firm accidentally sent a customer’s personal details to the wrong client. Although the data was not altered, it was exposed to someone who should not have access to it.  \n\nWhich security principle was primarily compromised in this situation?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Authorisation",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Availability",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Confidentiality",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Integrity",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "question_id": "28f3cb85-407f-483a-814f-14ca66ac50ae",
+   "title": "2025 CSSA, Q5, Cross-site Scripting ",
+   "topic": "2025 CSSA, Q5, Cross-site Scripting ",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "ae6908da-ef0d-4226-ba33-e0b893c9de27",
+     "part": "Question 5",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "An attacker creates the following URL and sends it to a victim: \n\n| ![Picture 10, Picture](assets/5.png.png) http://example.com/search?q=<script>alert('You have been hacked!');</script> |\n|---|\n\nWhen the victim clicks on the link, the server reflects the malicious script back into the search results page, and it executes in the victim’s browser, displaying a popup with the message \"You have been hacked!\" \n\nWhat type of vulnerability does this represent?",
+     "prompt_images": [
+      "assets/5.png.png"
+     ],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Cross-Site Request Forgery (CSRF)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Cross-Site Scripting (XSS)",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Invalid forwarding and redirecting",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "SQL Injection",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "question_id": "63b55ffb-26f8-478f-86d4-f5970a30395c",
+   "title": "2025 CSSA, Q6,  AI vs ML ",
+   "topic": "2025 CSSA, Q6,  AI vs ML ",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "d4c3e7f5-423f-4d2b-83c3-b2f5ee180057",
+     "part": "Question 6",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following best distinguishes artificial intelligence (AI) from machine learning (ML)?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "AI is a subset of ML.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "ML requires human input, while AI does not.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "ML focuses on hardware, while AI focuses on software.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "AI focuses on building systems that simulate human intelligence, while ML focuses on enabling machines to learn from data.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "question_id": "fbc97e17-ab23-4cc0-aa9c-183d54e70698",
+   "title": "2025 CSSA, Q7, Artificial Neural Networks ",
+   "topic": "2025 CSSA, Q7, Artificial Neural Networks ",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "![image](assets/7.png.png)",
+   "stimulus_images": [
+    "assets/7.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "46d5378e-bc3d-4816-9214-21212cb7b159",
+     "part": "Question 7",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "SORTING_TABLE",
+     "prompt": "The diagram in the Stimulus (left) represents an artificial neural network.   \n  \nPlace the Layers in the correct order that matches the diagram.\n\n**(Note: The top description will represent Layer #1.)**",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "version": 0,
+       "type": "SORTING_TABLE",
+       "settings": {
+        "allowPartialMark": false
+       },
+       "header": null,
+       "rows": [
+        {
+         "id": "293378a4-7d82-4cda-b090-2b5037c74b6b",
+         "cells": [
+          {
+           "text": "<p><span class=\"NormalTextRun SCXW5539107 BCX8\">Original data features for the network are processed.</span></p>"
+          }
+         ]
+        },
+        {
+         "id": "bc9d7476-c8ba-4b28-8293-0382e8d0bc7a",
+         "cells": [
+          {
+           "text": "<p><span class=\"NormalTextRun SCXW178124738 BCX8\">Transforms and processes data through weighted connections and activation functions.</span><span class=\"EOP SCXW178124738 BCX8\" data-ccp-props=\"{&quot;134245417&quot;:false,&quot;201341983&quot;:0,&quot;335559739&quot;:0,&quot;335559740&quot;:240}\">&nbsp;</span></p>"
+          }
+         ]
+        },
+        {
+         "id": "b3207361-23f5-4d26-a862-a203eb578dc9",
+         "cells": [
+          {
+           "text": "<p><span class=\"NormalTextRun SCXW126210118 BCX8\">Predictions are based on the input data and hidden layer transformations</span></p>"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "#1: Original data features for the network are processed.\n\n#2: Transforms and processes data through weighted connections and activation functions.\n\n#3: Predictions are based on the input data and hidden layer transformations."
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "question_id": "edb7ed1b-4c5f-4ccf-96c9-64432fa7dc94",
+   "title": "2025 CSSA, Q8, Client-side Programming ",
+   "topic": "2025 CSSA, Q8, Client-side Programming ",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "d77f014e-b6f7-4545-a185-aec9898e73f3",
+     "part": "Question 8",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which statement below is true about _client-side programming_?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "It interacts with the user interface on the browser.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "It handles data requests from a database such as records and fields.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "It manages server resources such as accounts, folders and files.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "It processes database searches and data queries on the back-end.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "question_id": "6cef9182-d492-4b7e-bfad-ffd119321473",
+   "title": "2025 CSSA, Q9, Legal and Ethical Issues",
+   "topic": "2025 CSSA, Q9, Legal and Ethical Issues",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "26d0e77a-ef17-4753-89f0-8b9a703091a8",
+     "part": "Question 9",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is a legal and ethical consideration related to the development of secure software?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Reducing the cost of development.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Meeting data privacy regulations.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Increasing the functionality of the software.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Developing software in multiple languages.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "question_id": "80ca9300-5477-423a-8f8d-de495500a5e7",
+   "title": "2025 CSSA, Q10, Algorithms used in Neural Networks",
+   "topic": "2025 CSSA, Q10, Algorithms used in Neural Networks",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "c6073687-c00a-4463-93ab-0752f77bc74e",
+     "part": "Question 10",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is a key technique used in virtual personal assistants like Siri or Alexa?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Decision trees",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Linear regression",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Logistic regression",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Neural networks",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "question_id": "92ead4fa-4e86-4920-a8f6-8701d22eef28",
+   "title": "2025 CSSA, Q11, Installation Methods ",
+   "topic": "2025 CSSA, Q11, Installation Methods ",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "43e96c20-6270-4951-b84d-12b1532f7eb9",
+     "part": "Question 11",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "New software has been developed to complete a task. Users of the new software have been asked to stop using the old software immediately and start to use the new software. \n\nWhat installation method is being used?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Direct cut over",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Parallel",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Phased",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Pilot",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "question_id": "2179da4f-b71c-431d-859a-99fb5b4d7f69",
+   "title": "2025 CSSA, Q12, Secure Design Features",
+   "topic": "2025 CSSA, Q12, Secure Design Features",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "85a96fe6-8608-432d-9ded-9e354b35de99",
+     "part": "Question 12",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "How do the capabilities and experience of end users influence the secure design features of software?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Less experienced users may require security features that are automated and simple to use.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Experienced users require fewer security measures because they are less likely to make errors.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "The security features of software should be identical for all users, regardless of their experience.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "All users should be given full control over advanced security settings to prevent any vulnerabilities.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "question_id": "2545c45e-59bf-488a-a13d-cf7e14fa4d4c",
+   "title": "2025 CSSA, Q13, HTTPS/SSL Encryption",
+   "topic": "2025 CSSA, Q13, HTTPS/SSL Encryption",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "7762def4-8e97-4a2d-b0a9-b68fb547a341",
+     "part": "Question 13",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SORTING_TABLE",
+     "prompt": "Place in the correct order the steps to describe how HTTPS/SSL encryption works when a user connects to a secure website.\n\n**(Note: The top description represents the first step of the HTTPS/SSL encryption process.)**",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "version": 0,
+       "type": "SORTING_TABLE",
+       "settings": {
+        "allowPartialMark": false
+       },
+       "header": null,
+       "rows": [
+        {
+         "id": "c9c32c19-86c0-444e-a580-e38cd9df824c",
+         "cells": [
+          {
+           "text": "<p><span data-contrast=\"auto\" xml:lang=\"EN-US\" lang=\"EN-US\" class=\"TextRun SCXW90101123 BCX8\"><span class=\"NormalTextRun SCXW90101123 BCX8\">The</span><span class=\"NormalTextRun SCXW90101123 BCX8\"> client and server agree on a shared encryption key</span></span><span class=\"NormalTextRun SCXW90101123 BCX8\">, which will be used to encrypt data during the session.</span></p>"
+          }
+         ]
+        },
+        {
+         "id": "4f872972-3d9e-4cf1-9657-faaf53b4c6fd",
+         "cells": [
+          {
+           "text": "<p><span data-contrast=\"none\" xml:lang=\"EN-US\" lang=\"EN-US\" class=\"TextRun SCXW57798551 BCX8\"><span class=\"NormalTextRun SCXW57798551 BCX8\">The client </span><span class=\"NormalTextRun SCXW57798551 BCX8\">initiates</span><span class=\"NormalTextRun SCXW57798551 BCX8\"> a connection request</span></span><span data-contrast=\"none\" xml:lang=\"EN-AU\" lang=\"EN-AU\" class=\"TextRun SCXW57798551 BCX8\"><span class=\"NormalTextRun SCXW57798551 BCX8\"> to the server by requesting an HTTPS connection</span><span class=\"NormalTextRun SCXW57798551 BCX8\">.</span></span><span class=\"EOP SCXW57798551 BCX8\" data-ccp-props=\"{&quot;335559738&quot;:120}\">&nbsp;</span></p>"
+          }
+         ]
+        },
+        {
+         "id": "a01c69b6-008e-4316-96da-a9782828a45d",
+         "cells": [
+          {
+           "text": "<p><span class=\"NormalTextRun SCXW171843519 BCX8\">The server sends its SSL certificate</span><span data-contrast=\"none\" xml:lang=\"EN-AU\" lang=\"EN-AU\" class=\"TextRun SCXW171843519 BCX8\"><span class=\"NormalTextRun SCXW171843519 BCX8\"> to the client, which </span><span class=\"NormalTextRun SCXW171843519 BCX8\">contains</span><span class=\"NormalTextRun SCXW171843519 BCX8\"> the server's public key and is verified by a trusted Certificate Authority (CA).</span></span><span class=\"EOP SCXW171843519 BCX8\" data-ccp-props=\"{&quot;201341983&quot;:0,&quot;335559739&quot;:0,&quot;335559740&quot;:240}\">&nbsp;</span></p>"
+          }
+         ]
+        },
+        {
+         "id": "e95d9111-69f6-419f-a066-0ee9ca23c6f3",
+         "cells": [
+          {
+           "text": "<p><span class=\"NormalTextRun SCXW95472454 BCX8\">The client and server use the encryption key</span><span class=\"NormalTextRun SCXW95472454 BCX8\"> to securely exchange data over the HTTPS connection.</span></p>"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Correctly orders the HTTPS/SSL encryption process"
+      },
+      {
+       "marks": "1",
+       "criterion": "Correctly orders at least 2 steps"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "question_id": "842a4285-18df-4c72-a845-c8bdc6c35dde",
+   "title": "2025 CSSA, Q14, Design Approaches",
+   "topic": "2025 CSSA, Q14, Design Approaches",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "8d504ebc-c765-4f98-a580-875a224f579a",
+     "part": "Question 14",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Explain the difference between the ‘**security by design**’ approach and the ‘**privacy by design**’ approach.",
+     "prompt_images": [],
+     "question": {
+      "word_limit": 90
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Demonstrates a good understanding of both approaches and explains the differences"
+      },
+      {
+       "marks": "2",
+       "criterion": "Demonstrates a good understanding of both approaches"
+      },
+      {
+       "marks": "1",
+       "criterion": "Demonstrates some understanding of either approach"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The 'security by design' approach integrates security measures throughout the software development process to protect against external threats like unauthorised access and data breaches. In contrast, 'privacy by design' ensures that user privacy is embedded into the design, focusing on minimising data collection, ensuring user control, and complying with privacy laws. While both aim to protect data, security by design is about preventing attacks, whereas privacy by design focuses on respecting users' privacy rights."
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "question_id": "5340231c-64ad-4224-a982-324b9d6fca83",
+   "title": "2025 CSSA, Q15, Security Concepts and Vulnerability Assessment",
+   "topic": "2025 CSSA, Q15, Security Concepts and Vulnerability Assessment",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A small café with five employees uses custom-built software to manage its point of sale (POS) system. The system has the following functions:  \n\n-   Record transactions and issue receipts to customers.  \n    \n\n-   Delete transactions.  \n    \n\n-   View daily sales data.  \n    \n\nCurrently, all employees have full access to all system functions. Recently, the manager has noticed that some transactions are being deleted throughout the day, with no way to track how or by whom these deletions occurred.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "32d3940c-ceb8-4378-b296-a2cecc5c6baa",
+     "part": "Question 15(a)",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Outline TWO fundamental security concepts in software design that could help the manager address this issue.",
+     "prompt_images": [],
+     "question": {
+      "word_limit": 90
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Provides a clear and detailed explanation of how a vulnerability assessment could manage the security of the system with reference to the scenario covering identification, evaluation, and action steps"
+      },
+      {
+       "marks": "1",
+       "criterion": "Outlines one relevant security concept or identifies two concepts with partial or unclear explanations"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "**Authorisation:** Implementing role-based access control would allow the manager to restrict certain functions, such as deleting transactions, to specific employees. This would limit access and reduce the likelihood of unauthorized transaction deletions.\n\n**Accountability:** Enabling audit logging within the system would allow the manager to track all actions taken by employees, including transaction deletions. This would provide a record of who performed specific actions and when, aiding in accountability."
+    },
+    {
+     "part_id": "703687e4-ee6b-4d0b-bc23-d8b5165b0057",
+     "part": "Question 15(b)",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Explain how conducting a vulnerability assessment could help improve the security of the POS system.",
+     "prompt_images": [],
+     "question": {
+      "word_limit": 90
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides a clear and detailed explanation of how a vulnerability assessment could manage the security of the system with reference to the scenario covering identification, evaluation, and action steps"
+      },
+      {
+       "marks": "2",
+       "criterion": "Describes the role of a vulnerability assessment with some detail"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides a basic description of a vulnerability assessment"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "A vulnerability assessment would help the café identify security weaknesses in the POS system by analysing its software, network, and user access settings. The assessment would evaluate potential risks, such as the lack of access controls or insufficient logging mechanisms. Based on the findings, the café could then implement changes, such as restricting access to sensitive functions and improving system monitoring, to prevent unauthorised actions and protect against future security threats."
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "question_id": "4b6ea796-23f1-44e8-902a-1dfd9d94113a",
+   "title": "2025 CSSA, Q16, Use of OOP ",
+   "topic": "2025 CSSA, Q16, Use of OOP ",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "c5f53edc-570d-434d-8d8d-863e911e1cd3",
+     "part": "Question 16",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Explain how an Object-Oriented Programming (OOP) approach can enhance the automation of machine learning models.",
+     "prompt_images": [],
+     "question": {
+      "word_limit": 90
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Explains OOP approach"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines OOP approach"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "OOP enhances automation by organising code into reusable classes and methods, which improves structure and maintainability. For example, each ML model (e.g., linear regression, neural network) can be represented as a class with specific methods for training, predicting, and updating. This modular approach allows developers to automate tasks like data processing, training, and deploying models without rewriting code, making it easier to manage, extend, and debug. OOP also allows different model classes to inherit properties, reducing redundancy and ensuring consistency across models."
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "question_id": "26d43c12-1e8a-49d6-b2d1-2d931022182c",
+   "title": "2025 CSSA, Q17, Web Protocols and Back-end Web Server description",
+   "topic": "2025 CSSA, Q17, Web Protocols and Back-end Web Server description",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A Web Developer has been approached to develop a website for a clothing company that requires an online ordering system.  \n\nThe system would allow users to: \n\n-   create an account,  \n    \n\n-   browse for clothing items,  \n    \n\n-   add items to a cart for checkout   \n    \n\n-   make payment for their purchases.  \n    \n\nThe order created would be sent to the warehouse for processing and update the clothing company’s inventory and stock.  \n\nDuring the ordering process, the user is notified of updates to their order, including payment received, order processed, order dispatched and delivery.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "bfb3a764-7032-4d42-97b1-04e3affcf606",
+     "part": "Question 17 (a)",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Select the protocols required for the data being transferred.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "HTTP",
+       "TCP/IP",
+       "SFTP"
+      ],
+      "rows": [
+       {
+        "statement": "Sending confirmation email for a created account",
+        "correct": [
+         "HTTP",
+         "TCP/IP"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Sending private customer data between internal severs",
+        "correct": [
+         "TCP/IP",
+         "SFTP"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Accessing the store&rsquo;s website",
+        "correct": [
+         "HTTP",
+         "TCP/IP"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Sending confirmation email for a created account",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Sending private customer data between internal severs",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Accessing the store&rsquo;s website",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Correctly selects all protocols"
+      },
+      {
+       "marks": "1",
+       "criterion": "Correctly selects ONE row of protocols"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": "Note: depending on interpretation, http may/may not be used to send/access email if the emails are access through a web browser",
+     "sample_answer": null
+    },
+    {
+     "part_id": "8f86dfb9-67b1-49ac-9e02-e8782db8d5a9",
+     "part": "Question 17 (b)",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Outline ONE collaborative practice back-end and front-end developers would need to engage to develop this website.",
+     "prompt_images": [],
+     "question": {
+      "word_limit": 60
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Outlines ONE collaborative practice back-end and front-end developers would need to engage to develop this website"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows an understanding of collaboration OR front-end/back-end developers"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Front-end Developers could meet with back-end developers to make sure that the interface they design for a product matches the data stored in the back-end server."
+    },
+    {
+     "part_id": "3e09da7e-8c2f-4b1b-8928-fcb9d345bd2f",
+     "part": "Question 17 (c) ",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Explain how CSS would be utilised by the ordering website for browsing the range of clothing that users can search.",
+     "prompt_images": [],
+     "question": {
+      "word_limit": 90
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Demonstrates a clear understanding of CSS and clearly explains effect of using CSS in this application"
+      },
+      {
+       "marks": "2",
+       "criterion": "Demonstrates a clear understanding of CSS  OR describes effect of using CSS in this application"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows an understanding of CSS"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "CSS or Cascading Style Sheets, allow developers to store the style of html tags in a single file. To display multiple shopping items, over multiple pages, it is important that each item is displayed in a consistent manner no matter the search query results. Therefore, CSS would allow for the same style to be applied to all pages of the website, for example how a division aligns an image and text of a product so that the user can quickly identify the items they are trying to search for on each page."
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "question_id": "3d6525d0-d938-43e3-8296-bc113a70c05a",
+   "title": "2025 CSSA, Q18,  Decision Tree with Test Data and Algorithm  ",
+   "topic": "2025 CSSA, Q18,  Decision Tree with Test Data and Algorithm  ",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Bruce’s Burgers offers half priced burgers if the customer has a loyalty card or is a university student. This discount doesn’t apply on public holidays. \n\nThe following test data has been developed to be used:\n\nThe customer has a loyalty card, and is a university student, and the day is Boxing Day (Public Holiday)",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "bff01195-eafc-45c6-b75b-b535ebc06e01",
+     "part": "Question 18 (a)",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "DRAWING_V2",
+     "prompt": "Draw a decision tree using the test data.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Constructs a substantially correct decision tree"
+      },
+      {
+       "marks": "1",
+       "criterion": "Constructs a partially correct decision tree"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![A diagram of a customer discount\nDescription automatically generated, Picture](assets/a18.png.png)",
+     "sample_answer_images": [
+      "assets/a18.png.png"
+     ]
+    },
+    {
+     "part_id": "76ba41a9-8e7c-43b4-a536-5beefcc08d02",
+     "part": "Question 18 (b)",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "PSEUDOCODE",
+     "prompt": "Referring to the stimulus create an algorithm to determine the price paid by a customer. The algorithm should take the required input, complete checks with necessary control structures and the result with meaningful output.",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "version": 0,
+       "type": "PSEUDOCODE"
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Provides a substantially correct algorithm including the following features:  \n\nAppropriate inputs  \n\nUse of control structures to complete checks  \n\nUse of meaningful outputs"
+      },
+      {
+       "marks": "3",
+       "criterion": "Provides a partially correct algorithm that address most features above"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a partially correct algorithm that address some features above"
+      },
+      {
+       "marks": "1",
+       "criterion": "Attempts an algorithm relating to the scenario"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "BEGIN  \n\nGET loyalty\\_card  \n\nGET student  \n\nGET day  \n\nSET Discount = NO  \n\nIF loyalty\\_card = True OR student = True THEN  \n\nIF day = Public Holiday THEN  \n\nDiscount = No \n\nELSE  \n\nDiscount = Yes  \n\nENDIF  \n\n IF Discount = Yes THEN  \n\nDISPLAY \"Customer can have a half priced burger\"  \n\nELSE  \n\nDISPLAY \"Customer must pay full price\"  \n\nENDIF \n\nENDIF  \n\nEND"
+    }
+   ]
+  },
+  {
+   "number": 19,
+   "question_id": "4ffeeae3-0e1c-48fa-b1c2-65ca619b0cbb",
+   "title": "2025 CSSA, Q19, SQL and ORM ",
+   "topic": "2025 CSSA, Q19, SQL and ORM ",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Consider the following table that represents a database named Customers for a customer rating system: \n\n| ID | Username | Premium Account | Rating |\n|---|---|---|---|\n| 1 | jkimble | False | 87.1 |\n| 2 | fishstick | True | 94.2 |\n| 3 | user123 | False | 78.5 |\n| 4 | student456 | True | 82.3 |\n| 5 | teacher789 | False | 90.0 |\n| 6 | admin321 | True | 95.7 |\n| 7 | learner234 | False | 81.2 |\n| 8 | member567 | True | 88.9 |\n| 9 | guest890 | False | 79.6 |\n| 10 | tester001 | True | 91.4 |",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "4e898d9e-33a6-4901-a0fa-e352a183f64d",
+     "part": "Question 19 (a)",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "SQL",
+     "prompt": "Write an SQL statement that will display only the Username and Rating of customers who have a Rating of 90.0 or higher",
+     "prompt_images": [],
+     "question": {
+      "dataset_setup_sql": "CREATE TABLE \"Customers\" (\n  \"ID\" INTEGER NOT NULL,\n  \"Username\" TEXT NOT NULL,\n  \"PremiumAccount\" BOOLEAN NOT NULL,\n  \"Rating\" FLOAT NOT NULL,\n  PRIMARY KEY(\"ID\" AUTOINCREMENT)\n);\n\nINSERT INTO \"Customers\" (\"ID\", \"Username\", \"PremiumAccount\", \"Rating\") VALUES (1, 'jkimble', FALSE, 87.1);\nINSERT INTO \"Customers\" (\"ID\", \"Username\", \"PremiumAccount\", \"Rating\") VALUES (2, 'fishstick', TRUE, 94.2);\nINSERT INTO \"Customers\" (\"ID\", \"Username\", \"PremiumAccount\", \"Rating\") VALUES (3, 'user123', FALSE, 78.5);\nINSERT INTO \"Customers\" (\"ID\", \"Username\", \"PremiumAccount\", \"Rating\") VALUES (4, 'student456', TRUE, 82.3);\nINSERT INTO \"Customers\" (\"ID\", \"Username\", \"PremiumAccount\", \"Rating\") VALUES (5, 'teacher789', FALSE, 90.0);\nINSERT INTO \"Customers\" (\"ID\", \"Username\", \"PremiumAccount\", \"Rating\") VALUES (6, 'admin321', TRUE, 95.7);\nINSERT INTO \"Customers\" (\"ID\", \"Username\", \"PremiumAccount\", \"Rating\") VALUES (7, 'learner234', FALSE, 81.2);\nINSERT INTO \"Customers\" (\"ID\", \"Username\", \"PremiumAccount\", \"Rating\") VALUES (8, 'member567', TRUE, 88.9);\nINSERT INTO \"Customers\" (\"ID\", \"Username\", \"PremiumAccount\", \"Rating\") VALUES (9, 'guest890', FALSE, 79.6);\nINSERT INTO \"Customers\" (\"ID\", \"Username\", \"PremiumAccount\", \"Rating\") VALUES (10, 'tester001', TRUE, 91.4);",
+      "starter_query": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1",
+       "criterion": "Constructs an SQL query that satisfies the requirements of the question"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "SELECT Username, Rating  \nFROM Customers  \nWHERE Rating >= 90.0;"
+    },
+    {
+     "part_id": "edb59340-0a6b-43cb-84c6-da980c7caab1",
+     "part": "Question 19 (b)",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "A developer has chosen to construct a web application utilising python as the programming language. \n\nDiscuss the options of using Object-Relational Mapping (ORM) and SQL to store the Customers’ data.",
+     "prompt_images": [],
+     "question": {
+      "word_limit": 120
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Provides advantages AND disadvantages of ORM AND SQL to address the scenario"
+      },
+      {
+       "marks": "3",
+       "criterion": "Provides advantages OR disadvantages of ORM AND SQL to address the scenario"
+      },
+      {
+       "marks": "2",
+       "criterion": "Describes ORM OR SQL"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows an understanding of ORM OR SQL"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "SQL allows a database to be constructed as a table with fields, and related SQL query syntax to interact with the data. This provides a very structured way to organise the data, which is easily queried with simple statements, although a developer may have to learn the syntax of these queries and learn a library that connects to an SQL database within in python. This could create a learning curve that impacts time of production as the SQL syntax is not native to the python programming language.  \n\nORM allows the developer to use an object-oriented model to interact with a database stored on a server. This is more in line with the python language as it can utilise the python syntax for object-oriented coding, with ORM commands being available in the python standard library, as well as many python web server libraries that have their own libraries. Unfortunately, there may be performance issues when implementing ORM, as requests need to be made over a server which can impact load times, and ORM typically being slower when dealing with complex queries."
+    }
+   ]
+  },
+  {
+   "number": 20,
+   "question_id": "60bada8c-8f83-4ba4-bf14-c92e1a21eaca",
+   "title": "2025 CSSA, Q20, Data Types and Algorithm for a function",
+   "topic": "2025 CSSA, Q20, Data Types and Algorithm for a function",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Tickets for international superstar Yat Yat Fast are on sale for her tour of Australia. All tickets are General Admission (GA). \n\n-    A GA ticket costs $100. \n\n-   A GA ticket and commemorative poster of Yat Yat Fast costs $150.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "1a789642-eb14-4653-b939-2cf3b97fcde6",
+     "part": "Question 20 (a)",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "A program needs be written for the purchasing of tickets. Justify the use of THREE different data types for variables used in this program.",
+     "prompt_images": [],
+     "question": {
+      "word_limit": 90
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides clear reasoning for THREE data types related to the scenario"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides reasoning for TWO data types OR states THREE data types related to the scenario"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides reasoning for ONE data type OR states TWO data types"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "An integer would be used for the total number of tickets purchased.  \n\n A float could be used for the cost of ticket.  \n\n A string could be used for the text to display the total cost with dollar symbols."
+    },
+    {
+     "part_id": "85a07797-020c-4fab-8a1c-c6368cd6184e",
+     "part": "Question 20 (b)",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Write an algorithm for the function totalCost(), that passes in parameters which calculates and displays the total cost.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Provides a substantially correct algorithm including the following features: \n\nAppropriate input data  \nUse of functions to calculate cost, that pass in parameters \nMeaningful outputs"
+      },
+      {
+       "marks": "3",
+       "criterion": "Provides a partially correct algorithm that address most features above"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a partially correct algorithm that address some features above"
+      },
+      {
+       "marks": "1",
+       "criterion": "Attempts an algorithm relating to the scenario"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "BEGIN Main  \n\nGET NumberofTickets  \n\nGET TicketType  \n\nTotal = TotalCost (NumberofTickets, TicketType,)  \n\nDISPLAY \"The total cost of the tickets: $\" & Total  \n\nEND Main  \n\nBEGIN TotalCost (NumberofTickets, TicketType,)  \n\nIF TicketType = \"GA\" THEN  \n\nTotal = NumberofTickets \\* 100  \n\nELSE  \n\nTotal = NumberofTickets \\* 150  \n\nENDIF  \n\n  RETURN Total  \n\nEND TotalCost"
+    }
+   ]
+  },
+  {
+   "number": 21,
+   "question_id": "b83cb50e-87ac-4c27-adcf-c566c545cf83",
+   "title": "2025 CSSA, Q21, Linear, Polynomial Regression and Interactive Web components",
+   "topic": "2025 CSSA, Q21, Linear, Polynomial Regression and Interactive Web components",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A retail clothes company, NickSales Ltd, wants to predict monthly sales for its products based on historical sales data, marketing spends, and seasonal trends. They decide to automate this process using Machine Learning (ML).  \n\n The data science team creates a software application in Python, using OOP principles to structure the ML models. They apply two different regression techniques:  \n\n1.  \\-Linear regression \n2.  \\-Polynomial regression",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "de891786-57cb-4d9a-866c-c4ab6d9021d4",
+     "part": "Question 21 (a)",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Distinguish between linear regression and polynomial regression for this scenario.",
+     "prompt_images": [],
+     "question": {
+      "word_limit": 90
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Describes some differences between linear and polynomial regression AND includes an example"
+      },
+      {
+       "marks": "2",
+       "criterion": "Identifies differences OR Outlines one difference between linear and polynomial regression OR provides an example"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Linear regression models the relationship between variables as a straight line, assuming a linear relationship.   \n\nPolynomial regression, however, fits a curved line by adding polynomial terms, which can capture more complex, nonlinear relationships between variables.   \n\n For instance, polynomial regression would be more suitable for predicting sales that show seasonal or cyclical patterns, where a linear model would fail to capture the natural peaks and troughs over time."
+    },
+    {
+     "part_id": "8f5da65f-c5da-4881-85e6-0d04773f9d62",
+     "part": "Question 21 (b)",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "The web system for NickSales Ltd operates using the following components:  \n\n-   User ordering their clothing items \n    \n\n-   Website processing the order \n    \n\n-   Updating the stock inventory/database\n    \n\nDescribe how these components interact to form an interactive web development system.",
+     "prompt_images": [],
+     "question": {
+      "word_limit": 90
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Designs models that address all of the components of: \n\nUser ordering their items \n\nWebsite processing the order \n\nUpdating the stock inventory/database"
+      },
+      {
+       "marks": "2",
+       "criterion": "Designs models that address TWO of the components of: \n\nUser ordering their items \n\nWebsite processing the order \n\nUpdating the stock inventory/database 3"
+      },
+      {
+       "marks": "1",
+       "criterion": "Designs a model that addresses a relevant component of the scenario"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Client side or front-end development would be required to collect the order from the user. This would involve creating a web page with inputs. These inputs could be dropdown menus, text entry for each product that is sold so that user can select what they want to order, typically written in html and JavaScript to interact and collect the user’s choices.  \n\nOnce collected, server side or back-end development would be required to process this order. This would be implemented on the server of Nicksales, and the code implemented would process the inputs of the sale, assign it to the customer account, calculate the costs of the sale, and requires the transaction to an external financial service. This is typically implemented with server-side code libraries like Flask.  \n\n The developer would also need to interact their system with a database. The sales for and order or the data about each customer account could be constructed in separate SQL tables, which would allow easy interaction for each system (front and back end) to retrieve the required data to process or collect a sale."
+    }
+   ]
+  },
+  {
+   "number": 22,
+   "question_id": "b0bdb503-23f7-4a5a-a159-6b0ac48669d3",
+   "title": "2025 CSSA, Q22, Modelling Tools and Create Python Function",
+   "topic": "2025 CSSA, Q22, Modelling Tools and Create Python Function",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "InstantPage is a new social media product that regularly updates the user with details of time spent using the app. InstantPage provides the time in minutes only. \n\n A program is to be created to convert the minutes into hours and minutes. \n\ne.g. 134 minutes = 2 hours 14 minutes.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "4d46f071-661a-41c8-a3a2-b2b031ebf6fa",
+     "part": "Question 22 (a)",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Select (by selecting the radio button below) the modelling tool that represent the subroutines and their relationships for the InstantPage app.",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Class diagram",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Gantt chart",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Structure chart",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Data flow diagram",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1",
+       "criterion": "Correctly selects the Modelling Tool"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    },
+    {
+     "part_id": "0fc8049d-8da9-4f5d-ab82-79eae6341c38",
+     "part": "Question 22 (b)",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "CODING",
+     "prompt": "Create a function, using Python, where the user enters the minutes and converts this time into the equivalent hours and minutes. The displayed time should be grammatically correct.",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Provides a substantially correct solution including all the following features: \n\nAppropriate inputs passed to the function  \nUse of function to perform appropriate calculations  \nAppropriate outputs  \nCorrect python syntax"
+      },
+      {
+       "marks": "3",
+       "criterion": "Provides a solution that shows understanding of most of the above features"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a solution that shows understanding of some features"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the requirement"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "def HoursAndMinutes(TotalMinutes):  \n\n    hour \\= TotalMinutes//60  \n\n    minute \\= TotalMinutes//60  \n\n    if hour < 1 and minute < 2:  \n\n        print(\"It has been converted to: \", minute, \" minute.\")  \n\n    elif hour < 2 and minute < 1:  \n\n        print(\"It has been converted to: \", hour, \" hour.\")  \n\n    elif hour < 2 and minute \\> 1:  \n\n        print(\"It has been converted to: \", hour, \" hour & \", minute, \" minutes.\")  \n\n    elif hour \\> 1 and minute < 2:  \n\n        print(\"It has been converted to: \", hour, \" hours & \", minute, \" minute.\")  \n\n    elif hour < 2 and minute < 2:  \n\n        print(\"It has been converted to: \", hour, \" hour & \", minute, \" minute.\")  \n\n    else:  \n\n        print(\"It has been converted to: \", hour, \" hours & \", minute, \" minutes.\")  \n\nTotalMinutes \\= int(input(\"Please enter minutes that you wish to convert to hours and minutes: \"))  \n\nHoursAndMinutes(TotalMinutes)"
+    }
+   ]
+  },
+  {
+   "number": 23,
+   "question_id": "d72eed36-9136-41b7-9de4-18bbae7b9a4d",
+   "title": "2025 CSSA, Q23, Stages of MLOps ",
+   "topic": "2025 CSSA, Q23, Stages of MLOps ",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "BJcomputing Solutions Inc. is a tech company specializing in predictive analytics for e-commerce. The company wants to improve customer experience by deploying a Machine Learning (ML) recommendation system that suggests products based on user behaviour. Their Data Science team has created a model with high accuracy, but they face challenges moving it efficiently into production and maintaining it as user data and behaviour patterns change.\n\n![image](assets/23.png.png)",
+   "stimulus_images": [
+    "assets/23.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "3bbf4324-8c64-419f-8645-e69023ac8ba3",
+     "part": "Question 23",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Analyse how the team could use the three stages of Machine Learning Operations (MLOps), as shown in the diagram in the stimulus (shown left).",
+     "prompt_images": [],
+     "question": {
+      "word_limit": 150
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Provides a thorough explanation of the use of the 3 areas Design, Model Development and Operation relating to the scenario"
+      },
+      {
+       "marks": "3",
+       "criterion": "Provides a sound explanation of the use of the 3 areas Design, Model Development and Operation relating to the scenario"
+      },
+      {
+       "marks": "2",
+       "criterion": "Shows a some understanding of most of the areas"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "**Design:**   \n\n\\- defining the business problem to be solved   \n\n\\- refactoring the business problem into a machine learning problem   \n\n\\- defining success metrics   \n\n\\- researching available data.   \n\n **Model development:**   \n\n\\- data wrangling   \n\n\\- feature engineering   \n\n\\- model training   \n\n\\- model testing and validation.   \n\n **Operations:**   \n\n\\- model deployment   \n\n\\- supporting operations/use  \n\n - monitoring model performance."
+    }
+   ]
+  },
+  {
+   "number": 24,
+   "question_id": "da0636a6-38a5-46b5-bced-44777ad7a0e0",
+   "title": "2025 CSSA, Q24, Create Python Program ",
+   "topic": "2025 CSSA, Q24, Create Python Program ",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "You have been asked by an emerging airline to develop a program to allocate Business and Economy Class seats for flights on board their new Airbus 380\\-800 planes. The current seat-booking system consists of a number of modules, including:  \n\n-   booking and seat allocation  \n    \n\n-   online payment  \n    \n\n-   ticket production  \n    \n\n-   printing of boarding passes. \n    \n\nThe new booking and seat allocation module needs to fulfil the flowing requirements: \n\n-   Ask the user for the class of tickets required.  \n    \n\n-   Ask the user for the number of tickets required. A maximum of 4 tickets can be purchased at one time. \n    \n\n-   If only one ticket is required, allocate the next unallocated seat.  \n    \n\n-   If more than one ticket is required, allocate seats next to each other in the same row. However, if the required seats cannot be found together, an appropriate message should be displayed and the booking process restarted.  \n    \n\n-   Output the allocated seat number(s).  \n    \n\nThe Business Class passengers are to be seated in 5 rows of 8 seats. The diagram below shows the seating plan represented as a 2-dimensional array. Column 0 contains the letters A to E. Row 0 contains the numbers 1 to 8. \n\nThe Economy Class passengers are to be seated in 15 rows of 10 seats. The diagram shows the seating plan represented as a 2-dimensional array. Column 0 contains the letters F to T. Row 0 contains the numbers 1 to 10.  \n\nAn ‘X’ indicates that the seat has already been allocated. For example, if four tickets are ordered in Economy Class, the seats G6, G7, G8 and G9 would be allocated.  \n\nBusiness Class \n\n|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |\n|---|---|---|---|---|---|---|---|---|\n| A | X | X | X | X |  |  |  |  |\n| B | X | X | X | X | X |  |  |  |\n| C | X | X | X | X | X | X | X |  |\n| D |  |  |  |  |  |  |  |  |\n| E |  |  |  |  |  |  |  |  |\n\nEconomy Class \n\n|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |\n|---|---|---|---|---|---|---|---|---|---|---|\n| F | X | X | X | X |  |  |  | X | X |  |\n| G | X | X | X | X | X |  |  |  |  |  |\n| H | X | X | X | X | X | X | X |  |  |  |\n| … |  |  |  |  |  |  |  |  |  |  |\n| T |  |  |  |  |  |  |  |  |  |  |",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "c141d17e-fb1c-4ff3-9592-a22adf8a244f",
+     "part": "Question 24",
+     "marks_available": 6,
+     "syllabus": "Software Engineering",
+     "answer_type": "CODING",
+     "prompt": "Develop a program, using Python, that performs the requirement of the booking and seat allocation module. It should use Functions where appropriate, allocating the occupied seats of each seating class.",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 6,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "6",
+       "criterion": "Provides a substantially correct solution including all of the following features: \n\naccepts input  \n\nsearches the array for appropriate seats  \n\nupdates the array \n\ndisplays allocated seats   \n\nprovides suitable messages"
+      },
+      {
+       "marks": "5",
+       "criterion": "Provides a solution that addresses most of the requirements"
+      },
+      {
+       "marks": "4",
+       "criterion": "Provides a solution that addresses some of the requirements"
+      },
+      {
+       "marks": "3",
+       "criterion": "Provides a solution that addresses an aspect of the requirements"
+      },
+      {
+       "marks": "2",
+       "criterion": "Attempts a solution of the requirements"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the requirements"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "def initialize\\_seating():  \n    \"\"\"  \n    Initialize the seating arrangements for both classes with the  \n    given “starting point” occupancy.  \n    \"\"\"  \n    # Business Class: rows A–E, seats 1–8  \n    business\\_class = \\[  \n        # A    1    2    3    4    5    6    7    8  \n        \\[ True, True, True, True, False, False, False, False \\],  # A  \n        \\[ True, True, True, True, True,  False, False, False \\],  # B  \n        \\[ True, True, True, True, True,  True,  True,  False \\],  # C  \n        \\[ False, False, False, False, False, False, False, False \\],  # D  \n        \\[ False, False, False, False, False, False, False, False \\],  # E  \n    \\]\n\n    # Economy Class: rows F–T, seats 1–10  \n    economy\\_class = \\[  \n        # F    1    2    3    4    5     6     7     8     9    10  \n        \\[ True, True, True, True, False, False, True,  True,  False, False \\],  # F  \n        \\[ True, True, True, True, True,  False, False, False, False, False \\],  # G  \n        \\[ True, True, True, True, True,  True,  True,  False, False, False \\],  # H  \n    \\] + \\[\\[False\\]\\*10 for \\_ in range(12)\\]  # rows I–T, all seats available\n\n    return business\\_class, economy\\_class\n\n  \ndef display\\_seating(seating, class\\_type):  \n    \"\"\"  \n    Print the seating chart for the given class.  \n    X = occupied, O = available  \n    \"\"\"  \n    print(f\"\\\\n{class\\_type} Class Seating Chart (X = occupied, O = available):\")  \n    for row in seating:  \n        print(\" \".join(\"X\" if seat else \"O\" for seat in row))  \n    print()\n\n  \ndef allocate\\_seats(seating, tickets):  \n    \"\"\"  \n    Try to allocate \\`tickets\\` seats in \\`seating\\`.  \n    Returns a list of (row\\_index, col\\_index) or None if allocation fails.  \n    \"\"\"  \n    rows, cols = len(seating), len(seating\\[0\\])\n\n    if tickets == 1:  \n        # single ticket → first available seat  \n        for i in range(rows):  \n            for j in range(cols):  \n                if not seating\\[i\\]\\[j\\]:  \n                    seating\\[i\\]\\[j\\] = True  \n                    return \\[(i, j)\\]  \n    else:  \n        # multiple tickets → look for adjacent seats  \n        for i in range(rows):  \n            for j in range(cols - tickets + 1):  \n                if all(not seating\\[i\\]\\[j+k\\] for k in range(tickets)):  \n                    for k in range(tickets):  \n                        seating\\[i\\]\\[j+k\\] = True  \n                    return \\[(i, j+k) for k in range(tickets)\\]  \n    return None\n\n  \ndef main():  \n    business\\_class, economy\\_class = initialize\\_seating()\n\n    # select class  \n    cls = input(\"Enter class (Business/Economy): \").strip().lower()  \n    if cls not in ('business', 'economy'):  \n        print(\"Invalid class. Exiting.\")  \n        return\n\n    seating = business\\_class if cls == 'business' else economy\\_class  \n    class\\_name = \"Business\" if cls == 'business' else \"Economy\"\n\n    # select ticket count  \n    try:  \n        t = int(input(\"Enter number of tickets (1–4): \"))  \n    except ValueError:  \n        print(\"Not a number. Exiting.\")  \n        return  \n    if not (1 <= t <= 4):  \n        print(\"Ticket count must be between 1 and 4. Exiting.\")  \n        return\n\n    # allocate and display updated chart  \n    result = allocate\\_seats(seating, t)  \n    if result is None:  \n        print(\"Cannot find seats together. Booking restarted.\")  \n    else:  \n        # map row indices back to letters for output  \n        row\\_letters = (  \n            \\['A','B','C','D','E'\\] if cls=='business'  \n            else \\[chr(ord('F')+i) for i in range(15)\\]  \n        )  \n        seats\\_str = \", \".join(  \n            f\"{row\\_letters\\[i\\]}{j+1}\" for i,j in result  \n        )  \n        print(f\"\\\\nAllocated seats: {seats\\_str}\")\n\n    display\\_seating(seating, class\\_name)\n\n  \nif \\_\\_name\\_\\_ == \"\\_\\_main\\_\\_\":  \n    main()"
+    }
+   ]
+  },
+  {
+   "number": 25,
+   "question_id": "8e069dba-3540-484d-b0d8-1094fea9b70b",
+   "title": "2025 CSSA, Q25, Social, Ethical & Legal Issues of Data Breach",
+   "topic": "2025 CSSA, Q25, Social, Ethical & Legal Issues of Data Breach",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "The following internal company memo was prepared for employees within a software development company. \n\n**(Note: There are 7 slides in the presentation. Use the arrow icons to move between slides. Clicking on the slide will display its contents in full screen mode.)**\n\n![image](assets/25-7.png.png)\n\n![image](assets/25-6.png.png)\n\n![image](assets/25-5.png.png)\n\n![image](assets/25-4.png.png)\n\n![image](assets/25-3.png.png)\n\n![image](assets/25-2.png.png)\n\n![image](assets/25-1.png.png)",
+   "stimulus_images": [
+    "assets/25-7.png.png",
+    "assets/25-6.png.png",
+    "assets/25-5.png.png",
+    "assets/25-4.png.png",
+    "assets/25-3.png.png",
+    "assets/25-2.png.png",
+    "assets/25-1.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "a8da9245-82d9-466d-ac1d-055824671fe5",
+     "part": "Question 25",
+     "marks_available": 8,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Evaluate the social, ethical and legal issues for both MetroWave and their clients resulting from the data breach incident.",
+     "prompt_images": [],
+     "question": {
+      "word_limit": 600
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 8,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "7 - 8",
+       "criterion": "Comprehensively evaluates the social, ethical AND legal issues resulting from the data breach. Makes continual reference to the stimulus and demonstrates an excellent understanding of how developing and implementing safe and secure software can affect people and enterprises"
+      },
+      {
+       "marks": "5 - 6",
+       "criterion": "Evaluates the social, ethical and legal issues resulting from the data breach. Referring to the stimulus and demonstrates a sound understanding of how developing and implementing safe and secure software can affect people and enterprises."
+      },
+      {
+       "marks": "3 - 4",
+       "criterion": "Attempts to evaluate social, ethical and legal issues resulting from the data breach. Makes some reference to the stimulus and demonstrates some understanding of how developing and implementing safe and secure software can affect people and enterprises."
+      },
+      {
+       "marks": "1 - 2",
+       "criterion": "Provides some relevant information about social, ethical or legal issues with reference to secure software."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The data breach in MetroWave’s internal CRM software raises significant social, ethical, and legal issues for both the company and its clients. Socially, the breach has damaged MetroWave’s reputation, as clients may no longer trust the company to securely manage sensitive data. This loss of trust can lead to digital disruption, where clients shift to competitors who claim better security practices, resulting in potential long-term financial losses and reduced client loyalty. Furthermore, the breach has affected employees, causing job insecurity, especially for those in the security and client support teams, and damaging overall morale due to the perceived mishandling of the situation.  \n\n Ethically, MetroWave has failed to uphold its responsibility to protect client privacy. The exposure of confidential business reports, financial data, and proprietary intellectual property (as highlighted in the slideshow) presents serious privacy violations. Clients rely on MetroWave to safeguard this information, and its failure to do so can lead to unethical consequences such as stolen intellectual property, which can be used by competitors to gain an unfair advantage, or the misuse of financial data that could lead to identity theft.  \n\n Legally, MetroWave faces severe ramifications. With potential lawsuits for negligence in data protection, the company could incur significant financial penalties. Furthermore, failure to comply with regulations such as the Privacy Act (1988) regarding data security could result in fines.  \n\n MetroWave must immediately rectify the security flaw in the API to regain some confidence with its existing customer base and prevent any further data leaks. MetroWave must also ensure its systems and policies are updated to prevent future incidents, thereby protecting both its clients’ rights and its standing in the marketplace."
+    }
+   ]
+  }
+ ]
+}

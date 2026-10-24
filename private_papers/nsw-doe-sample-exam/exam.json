@@ -1,0 +1,1747 @@
+{
+ "exam": "NSW DoE Sample Exam",
+ "private": true,
+ "source": "software.paper.is via the SEN Discord (personal study only)",
+ "duration_minutes": 150,
+ "total_available": 80,
+ "parts_total": 29,
+ "parts_answered": 0,
+ "parts_marked": 0,
+ "total_mark": null,
+ "questions": [
+  {
+   "number": 1,
+   "question_id": "11e40570-e2f6-481f-8014-97df1b9ead56",
+   "title": "Multiple Choice: PWA (Q1,DoE,2025)",
+   "topic": "Multiple Choice: PWA",
+   "label": "Q1",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "285ac5b5-b59e-4a8c-984d-2489912003a3",
+     "part": "Question 1",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is a key feature of progressive web apps (PWAs)?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Requires a constant internet connection",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Can be installed like native apps",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Only work in Internet Explorer",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Do not use JavaScript",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": "Identifies the correct answer",
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "question_id": "184b4e9a-f9ad-4c41-b3c5-bdc1a6ced995",
+   "title": "Multiple choice: SE Client side ( Q2, DoE,2025)",
+   "topic": "Multiple choice: SE Client side",
+   "label": "Q2",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "e0c96ce8-769f-478f-9714-31aa7df9019a",
+     "part": "Question 2",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which language is typically used for client-side programming?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "PHP",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Python",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "JavaScript",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "SQL",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1",
+       "criterion": "correct answer"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "question_id": "b2394828-9a25-4d74-82af-8aeae3c0dc04",
+   "title": "Multiple choice : Machine learning (Q3, DoE, 2025)",
+   "topic": "Multiple choice : Machine learning",
+   "label": "Q3",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "d20c5a9e-677a-49b8-829b-6034b6ac4634",
+     "part": "Question 3",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A common machine learning model for unsupervised machine learning is:",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Logistic regression",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Linear regression",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Neural network",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "K-Nearest Neighbour",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1",
+       "criterion": "correct answer"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "question_id": "f04bad80-3799-4e5a-8e5b-8616773573f8",
+   "title": "Complex table: Security (Q4, DoE,2025)",
+   "topic": "Complex table: Security",
+   "label": "Q4",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "520dc8d1-0894-429b-b94c-2ccea6be3872",
+     "part": "Question 4",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Match the correct defintion to the concept using the drop down list provided",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "Decryption",
+       "Digital Signature",
+       "Encryption",
+       "Hashing",
+       "Plain Text",
+       "SSL/TLS"
+      ],
+      "rows": [
+       {
+        "statement": "Converts encrypted data back into a readable format",
+        "correct": [
+         "Decryption"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Used to verify the authenticity and integrity of a message",
+        "correct": [
+         "Digital Signature"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Converts readable data into a coded format to protect privacy",
+        "correct": [
+         "Encryption"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Converts data into a fixed-length value that cannot be reversed",
+        "correct": [
+         "Hashing"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Data that has not been encrypted or protected",
+        "correct": [
+         "Plain Text"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Security protocols that enable encrypted communication over a network",
+        "correct": [
+         "SSL/TLS"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Converts encrypted data back into a readable format",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Used to verify the authenticity and integrity of a message",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Converts readable data into a coded format to protect privacy",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Converts data into a fixed-length value that cannot be reversed",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Data that has not been encrypted or protected",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Security protocols that enable encrypted communication over a network",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Correctly matches 5 or 6 concepts to their correct definitions"
+      },
+      {
+       "marks": "1",
+       "criterion": "Correctly matches at least 4 concepts"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "| Concept | Definition |\n|---|---|\n| Decryption | Converts encrypted data back into a readable format |\n| Digital Signature | Used to verify the authenticity and integrity of a message |\n| Encryption | Converts readable data into a coded format to protect privacy |\n| Hashing | Converts data into a fixed-length value that cannot be reversed |\n| Plain Text | Data that has not been encrypted or protected |\n| SSL/TLS | Security protocols that enable encrypted communication over a network |"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "question_id": "e3dd1b26-a59d-48aa-8543-60f66848e607",
+   "title": "Multiple choice: SE development approaches  (Q5, DoE,2025)",
+   "topic": "Multiple choice: SE development approaches",
+   "label": "Q5",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "c09e0809-12e8-4b6b-ab8f-5720859e99b2",
+     "part": "Question 5",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following best describes the Agile software development approach?\n\n_Choose as many answers as apply_",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "It produces code faster than the Waterfall approach",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "It uses strict progression of steps through its life cycle.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "It uses an iterative workflow.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "It uses a software program called 'Agile'.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1",
+       "criterion": "Identifies both descriptions correctly"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "question_id": "dadadfb1-eca6-4f06-9cfd-df7106c09aae",
+   "title": "Extended response: Version control (Q6, DoE,2025)",
+   "topic": "Extended response: Version control",
+   "label": "Q6",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "08d05813-72f8-49ec-a9fb-a674d304cd8a",
+     "part": "Question 6",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "List 3 reasons why a web development team might use version control in the development of a website?",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "1.  collaboration: Version control systems allow multiple developers to work on the same project simultaneously without overwriting each other's changes. This facilitates teamwork and helps manage contributions from different team members effectively.\n    \n2.  tracking changes: Version control provides a complete history of changes made to the codebase, allowing developers to track modifications over time. This makes it easy to identify when changes were made, by whom, and the reasons behind those changes.\n    \n3.  backup and recovery: With version control, developers can easily revert to previous versions of the code if something goes wrong. This ensures that there is a safety net in place, allowing the team to recover from mistakes or bugs introduced in the development process."
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "question_id": "86d5d4a1-6ea2-4d57-b6dc-ec27fbd89674",
+   "title": "Short answer: SE data input (Q7,DoE, 2025)",
+   "topic": "Short answer: SE data input",
+   "label": "Q7",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "f9991ea0-39ef-4872-a757-220448811b57",
+     "part": "Question 7",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Briefly describe the difference between input validation and input sanitisation as defensive data input handling practices, providing an example of each.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Describes validation and sanitation with appropriate examples."
+      },
+      {
+       "marks": "1",
+       "criterion": "Describes validation and sanitation with poorly chosen examples or no examples."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Input validation involves checking the data provided by users to ensure it meets specific criteria, eg ensuring a phone number is numeric.\n\nInput sanitation involves cleaning or altering the input data to remove or neutralise potentially harmful elements, eg SQL injection or XSS."
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "question_id": "f84ac374-cc0c-4183-b880-b5b265913d31",
+   "title": "Extended response: Front end and back end (Q8, DoE, 2025)",
+   "topic": "Extended response: Front end and back end",
+   "label": "Q8",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "85364e07-8560-4db6-a4be-76b02dd42240",
+     "part": "Question 8",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Discuss the differences between front-end and back-end web programming.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Clearly identifies and explains at least three key differences between front-end and back-end web programming. Demonstrates a strong understanding of the roles and technologies involved in both areas.Uses relevant examples or terminology to support the explanations."
+      },
+      {
+       "marks": "2",
+       "criterion": "Identifies and explains at least two key differences between front-end and back-end web programming. Shows a basic understanding of the roles and technologies, but may lack depth in explanation. Provides some examples or terminology, but they may not fully support the discussion."
+      },
+      {
+       "marks": "1",
+       "criterion": "Identifies only one difference or provides a vague explanation of the terms front-end and back-end. Lacks clarity and depth in understanding the roles and technologies involved. May include irrelevant information or examples that do not contribute to the discussion."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Front-end web programming refers to the development of the client side of a web application. It involves everything that users see and interact with in their web browsers. The primary focus is on user interface (UI) and user experience (UX).\n\nBack-end web programming refers to the server side of a web application. It involves the logic, database interactions, and server configuration that power the application behind the scenes."
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "question_id": "b8aa2142-7d95-4a8e-b685-6cd09761c300",
+   "title": "Complex table: SE Project work (Q9, DoE, 2025)",
+   "topic": "Complex table: SE Project work",
+   "label": "Q9",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "Tools and processes are used  by software engineers to generate solutions for clients based on their requirements.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "cdfb3581-d99e-449b-9c3b-3513ca1cb3c7",
+     "part": "Question 9",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Match the terms for these tools and processes to their definition.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "algorithm",
+       "data dictionary",
+       "quality assurance",
+       "source code",
+       "evaluation",
+       "storyboard"
+      ],
+      "rows": [
+       {
+        "statement": "A set of processes or rules to be followed to solve problems.",
+        "correct": [
+         "algorithm"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "A table which represents data items, their data types, format, size, and validation rules if they apply.",
+        "correct": [
+         "data dictionary"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Performance of tasks to ensure that developed software continues to meet requirements.",
+        "correct": [
+         "quality assurance"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "A set of instructions written in a programming language to perform specific tasks.",
+        "correct": [
+         "source code"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Checking if developed software meets requirements or specifications.",
+        "correct": [
+         "evaluation"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "A sequence of sketches or mock-ups to represent how users navigate through different screens.",
+        "correct": [
+         "storyboard"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "A set of processes or rules to be followed to solve problems.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "A table which represents data items, their data types, format, size, and validation rules if they apply.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Performance of tasks to ensure that developed software continues to meet requirements.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "A set of instructions written in a programming language to perform specific tasks.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Checking if developed software meets requirements or specifications.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "A sequence of sketches or mock-ups to represent how users navigate through different screens.",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Correctly matches all 6 terms and definitions"
+      },
+      {
+       "marks": "1",
+       "criterion": "Correctly matches  3 terms and definitions"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": "This criteria is based on a third of a mark per correct question.Teachers may need to adjust the final examination total should they use half marks.",
+     "sample_answer": "| **Term** | **Definition** |\n|---|---|\n| algorithm | A set of processes or rules to be followed to solve problems. |\n| data dictionary | A table which represents data items, their data types, format, size, and validation rules if they apply. |\n| quality assurance | Performance of tasks to ensure that developed software continues to meet requirements. |\n| source code | A set of instructions written in a programming language to perform specific tasks. |\n| evaluation | Checking if developed software meets requirements or specifications. |\n| storyboard | A sequence of sketches or mock-ups to represent how users navigate through different screens. |"
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "question_id": "a7153c4a-fdeb-4d56-be91-351472f598d6",
+   "title": "Multi choice: Software development ( Q10, DoE, 2025)",
+   "topic": "Multi choice: Software development",
+   "label": "Q10",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "There are many different algorithms available for encrypting data, each with different strengths and weaknesses.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "3c38c41c-6ddf-4047-9703-8a1b0ffd212a",
+     "part": "Question 10 (a)",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In which software development step would a software engineering team need to decide on the specific algorithm they will use?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Requirements Definition",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Design",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Development",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Integration",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "B. Design"
+    },
+    {
+     "part_id": "9ca5f7a7-c597-4312-aa52-4474896a6b06",
+     "part": "Question 10 (b)",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Hashing algorithms are used to create a unique representation of data. They have many uses in encryption and security.\n\nIdentify 3  essential features of a hashing algorithm.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Clearly identifies and explains three essential features of a hashing algorithm.\n\nEach feature is accurately described, demonstrating a strong understanding of how it relates to encryption and security.\n\nMay include relevant examples or implications of each feature."
+      },
+      {
+       "marks": "2",
+       "criterion": "Identifies and explains two essential features of a hashing algorithm.\n\nProvides reasonable descriptions but may lack depth or clarity in some areas.\n\nExamples or implications may be minimal or not entirely relevant."
+      },
+      {
+       "marks": "1",
+       "criterion": "Identifies only one essential feature of a hashing algorithm or provides vague descriptions of features. Lacks clarity and depth in understanding the implications of the identified feature(s).May include irrelevant information or fail to relate features to encryption and security."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Answers may include:\n\n\\-          One-way: It is infeasible to recover the original data from the hash.\n\n\\-          Fixed-size output: The hash value will always be the same fixed length.\n\n\\-          Deterministic: The same input will always produce the same hash output.\n\n\\-          Collision resistance: Good hashing algorithms should minimize collisions.\n\n\\-          Efficiency: Fast hashing functions have a wider set of uses"
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "question_id": "ca4dbbcd-d013-4805-8d3c-8765575601bc",
+   "title": "Multiple choice: SE Machine learning (Q11, DoE, 2025)",
+   "topic": "Multiple choice: SE Machine learning",
+   "label": "Q11",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "![](assets/11.png.png)",
+   "stimulus_images": [
+    "assets/11.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "ae3f5d1b-c91d-4e64-8fa2-9b59f67c22aa",
+     "part": "Question 11 (a)",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which Machine Learning model is most appropriate for predicting new values based on the data given in the  graph?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Decision tree",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Polynomial regression",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Linear regression",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "K Nearest Neighbour",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "1",
+       "criterion": "Identifies the correct answer"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    },
+    {
+     "part_id": "57a8bdb4-1df6-44cd-9abc-6a32bccb6dc3",
+     "part": "Question 11 (b)",
+     "marks_available": 5,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Explain why a Neural Network would not be the best choice of model for the training data and propose an alternative model.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 5,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "5",
+       "criterion": "Explains limitations for training or predicting simple curvilinear data with a Neural Network.\n\nShows a thorough understanding of Neural Networks."
+      },
+      {
+       "marks": "4",
+       "criterion": "Outlines 2 or 3 limitations of Neural Networks relating to simple data\n\nShows an understanding of Neural Networks"
+      },
+      {
+       "marks": "3",
+       "criterion": "Outlines 1 or 2 limitations of Neural Networks"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines some features of Neural Networks or the curvilinear form"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The dataset exhibits a straightforward curvilinear relationship between the feature and target variables, characteristic of polynomial data. For such cases, polynomial regression is an ideal modelling approach because it can efficiently and directly fit the data to a polynomial equation, providing both accuracy and interpretability. In contrast, employing a neural network for this task would be excessive, as these models are designed to handle much more complex relationships that go beyond simple polynomial patterns.\n\nNeural networks, by their nature, are complex and are optimised for learning patterns in complex data. When applied to this simple polynomial dataset, this increased complexity introduces a significant risk of overfitting. Rather than capturing the true underlying relationship, the neural network may instead learn to model random noise present in the data, which reduces the model’s ability to generalise to unseen data.\n\nTraining a neural network requires considerably more computational resources compared to simpler forms such as polynomial regression. Neural networks require iterative training cycles, which consume substantial memory and processing power, whereas polynomial regression can typically be solved with minimal computational effort. Therefore, for simple polynomial data, a Neural Network would be an unnecessary use of computational power compared to a less resource-intensive model, such as polynomial regression.\n\nAnswers could include:\n\n\\-          Overkill for Simplicity\n\n\\-          Risk of Overfitting\n\n\\-          Training Complexity\n\n\\-          Black box interpretability\n\n\\-          Unnecessary computational resources\n\n\\-          Environmental impact of such a complex model\n\n\\-          Complexity of implementation\n\n\\-          Potential for high bias between training data and unseen data\n\n\\-          Difficulty in a Neural network producing a polynomial form\n\n\\-          Variance between outputs\n\n\\-          Difficulties in interpretation"
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "question_id": "e2a97483-588b-4880-b749-1d982f5b1963",
+   "title": "Drawing answer: Class diagrams (Q12, DoE, 2025)",
+   "topic": "Drawing answer: Class diagrams",
+   "label": "Q12",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "An Australian aerospace startup is developing software to control its rockets from launch on Earth to space and to landing on other moons and planets.\n\nEach rocket must have:\n\n•    A rocket ID e.g. R20\n\n•    Launch site e.g. “Broome”\n\n•    Provider ID which identifies the company that made the payload e.g. P01\n\n•    The dry mass of the rocket, e.g. 2500kg.\n\n•    The wet mass of the rocket, e.g. 5250.50kg\n\n•    Target orbit, which describes the orbit the payload is to enter\n\n•    A release() command which will open up the payload doors and unclamp the satellite from the cargo bay.\n\nIn addition, each satellite must have:\n\n•    Satellite purpose, which describes the mission of the satellite\n\n•    Satellite targets, which describes what countries, regions or areas of the Earth or other planets or moons are to be monitored by the satellite\n\n•    A signal() command, which is used to establish and maintain communications control with the provider as indicated by the Provider ID.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "8c0ada6a-1f4d-45bd-b1fb-f62b7cd8d4ec",
+     "part": "Question 12",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "DRAWING_V2",
+     "prompt": "Create a class diagram for the rocket and satellite relationship described in the stimulus.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Clearly represents both the Rocket and Satellite classes with appropriate attributes and methods as outlined in the scenario.\n\nCorrectly illustrates the relationship between the Rocket and Satellite classes (e.g., association, composition)."
+      },
+      {
+       "marks": "2",
+       "criterion": "Represents both the Rocket and Satellite classes but may miss one or more attributes or methods. Indicates the relationship between the classes, but the type of relationship may be unclear or improperly represented. Uses some UML notation, but there may be minor errors in formatting or organisation. The diagram is somewhat clear but may lack detail or clarity in certain areas."
+      },
+      {
+       "marks": "1",
+       "criterion": "Represents only one of the classes (Rocket or Satellite) or provides vague representations of the attributes and methods. Fails to indicate the relationship between the classes or represents it inaccurately. Lacks proper UML notation and organisation, making the diagram difficult to understand.May include irrelevant information or fail to relate to the scenario effectively."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![](assets/a12.png.png)",
+     "sample_answer_images": [
+      "assets/a12.png.png"
+     ]
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "question_id": "1d2fa8fc-c7f8-4f33-812f-84bbfecd33e9",
+   "title": "SQL: Query ( Q13, DoE, 2025)",
+   "topic": "SQL: Query",
+   "label": "Q13",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "A local music store is using a database table called albums.\n\n| **albumID** | **albumName** | **format** | **albumprice** |\n|---|---|---|---|\n| A001 | Golden Hits | CD | 18.50 |\n| A002 | Live in Concert | Vinyl | 22.00 |\n| A003 | Acoustic Vibes | Digital | 15.00 |\n| A004 | Rock Legends | CD | 20.00 |\n| A005 | Chill Sessions | Vinyl | 25.00 |",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "c80beea0-f764-49eb-bd9b-fcf9cd05b9e8",
+     "part": "Question 13",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SQL",
+     "prompt": "Write a SQL query to show the output below. \n\n| albumName | albumPrice |\n|---|---|\n| Chill Sessions | 25.00 |\n| Live in Concert | 22.00 |",
+     "prompt_images": [],
+     "question": {
+      "dataset_setup_sql": "CREATE TABLE albums (\n    albumID     CHAR(4)      PRIMARY KEY,\n    albumname   VARCHAR(80)  NOT NULL,\n    format      VARCHAR(10)  NOT NULL,\n    albumprice  DECIMAL(5,2) NOT NULL\n);\n\nINSERT INTO albums (albumID, albumname, format, albumprice) VALUES\n('A001', 'Golden Hits', 'CD', 18.50),\n('A002', 'Live in Concert', 'Vinyl', 22.00),\n('A003', 'Acoustic Vibes', 'Digital', 15.00),\n('A004', 'Rock Legends', 'CD', 20.00),\n('A005', 'Chill Sessions', 'Vinyl', 25.00);\n\n",
+      "starter_query": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides a correct SQL query"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a SQL query that addresses some of the requirements."
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of SQL"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "SELECT albumname, albumprice\n\nFROM albums\n\nWHERE format = 'Vinyl'\n\nORDER BY albumprice DESC;"
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "question_id": "d8c1c72b-fea8-45cd-8848-78439458679e",
+   "title": "Code : Python Functions (Q14,DoE,2025)",
+   "topic": "Code : Python Functions",
+   "label": "Q14",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "Consider the following algorithm:\n\n| 1 2 3 4 5 6 7 8 9   10   11 12 13 14 15 16 17 18 19   20 21 22 23 24 25 26   27 28 29 30 31 32 32 34 | BEGIN checkLogin (username, password)     IF username <> \"\" OR password <> \"\" THEN         PRINT \"Username or password empty. \"         RETURN False     ENDIF     length=8     symbol=\\['#', '$', '! ', 'ˆ', '&', '\\[', '\\]'\\]     symbol\\_present=False     j=1     IF length of username < length OR       length of password < length THEN         PRINT \"Username or password is not long enough. \"         RETURN False     ENDIF     IF LEFT(username, 1) is character AND       LEFT(password, 1) is character THEN         WHILE symbol\\_present = False              IF LEFT(username, j) = Symbol\\[j\\] THEN                  Symbol\\_present = True              ELSE IF LEFT(password, j) = Symbol\\[j\\]                  Symbol\\_present = True              ELSE                  Symbol\\_present = False              END IF              j = j + 1         ENDWHILE     ELSE         PRINT \"No symbol present in the username or password.\"         RETURN False     ENDIF END checkLogin |\n|---|---|",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "044f3591-33cb-460a-a2ce-5cb023a3c1c6",
+     "part": "Question 14",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "CODING",
+     "prompt": "Write Python code that implements as the function _has\\_symbol(username, password, symbols)_ only the part of the above algorithm that checks whether either username or password contains a symbol from the given list of symbols and also prints a message if this is not satisfied.",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "&bull;    The solution fully implements the has_symbol() function with all required checks for symbol presence. \n&bull;    Well-structured code that uses subroutines effectively, enhancing readability and maintainability. \n&bull;    Provides clear feedback message for validation failure. \n&bull;    Coding practice includes consistent naming conventions, proper indentation, and necessary comments."
+      },
+      {
+       "marks": "3",
+       "criterion": "&bull;    The solution implements most of the required functionality but may have minor issues that slightly affect results.\n&bull;    Feedback message is present but may lack clarity. \n&bull;    May have minor inconsistencies in style or formatting."
+      },
+      {
+       "marks": "2",
+       "criterion": "&bull;    The solution implements some functionality with omissions or errors impacting overall results. \n&bull;    Provides minimal feedback to the user. \n&bull;    Inconsistent adherence to coding standards, naming, indentation, or lack of comments."
+      },
+      {
+       "marks": "1",
+       "criterion": "&bull;    Does not implement the required functionality or is fundamentally incorrect.\n&bull;    No effective use of subroutines, making the code difficult to follow.\n&bull;    Does not provide any user feedback nor error handling.\n&bull;    Unclear or unreadable code"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "def has\\_symbol(username, password, symbols):  \n    symbol\\_present = False  \n    for char in username + password:  # Concatenate both for checking  \n        if char in symbols:  \n            symbol\\_present = True  \n            break # Exits the loop when the first symbol is found, no need to iterate further  \n      \n    if not symbol\\_present:  \n        print(\"No symbol present in the username or password.\")  \n        return False  \n    else:  \n    return True  \nThis function checks if either the username or password contains any symbols from the provided symbols list. If no symbols are found, it prints a message and returns False; otherwise, it returns True."
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "question_id": "6e409faf-0d51-4b35-8eea-3ccd698632c1",
+   "title": "Extended response: ML and BPA (Q15, DoE, 2025)",
+   "topic": "Extended response: ML and BPA",
+   "label": "Q15",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "Click Shoe Warehouse is an online store for Australian-made shoes.\n\nThey want to know which of their shoe sizes and styles sell the best in each season.\n\nThey have prepared a spreadsheet with 10 years of monthly sales history, organised by style and size.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "10b9af84-cfa1-4341-91d0-4409f22f20d9",
+     "part": "Question 15",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Explain how Machine Learning and Business Process Automation can help ‘Click Shoe Warehouse’ achieve its goal.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Comprehensive explanation of how Machine Learning can analyse sales data to identify patterns in shoe sizes and styles for each season.\n\nDetailed understanding of how Business Process Automation can streamline data processes and improve efficiency.\n\nClear integration of Machine Learning and Automation, demonstrating how they work together to forecast trends and automate inventory adjustments.\n\nProvides specific, relevant examples of practical implications for Click Shoe Warehouse, such as optimising stock levels and improving marketing strategies."
+      },
+      {
+       "marks": "3",
+       "criterion": "Good explanation of how Machine Learning identifies patterns in sales data, but may lack some detail.\n\nDescribes how Business Process Automation improves efficiency, though with less depth.\n\nSome integration of Machine Learning and Automation concepts, showing partial understanding of their combined impact.\n\nOffers examples of practical implications, but they may be less specific or relevant."
+      },
+      {
+       "marks": "2",
+       "criterion": "Basic mention of Machine Learning with limited explanation of its role in analysing sales data.\n\nBrief or unclear description of Business Process Automation.\n\nMinimal integration of the two concepts; understanding of their combined impact is weak.\n\nProvides vague or general examples of implications for the business."
+      },
+      {
+       "marks": "1",
+       "criterion": "Inadequate or incorrect explanation of Machine Learning and its application.\n\nLittle to no mention or inaccurate depiction of Business Process Automation.\n\nNo integration of concepts; fails to demonstrate understanding of their relationship.\n\nLacks practical examples or fails to connect implications to Click Shoe Warehouse."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Machine Learning (ML) and Business Process Automation (BPA) can significantly enhance the operations and overall efficiency of Click Shoe Warehouse, helping the company achieve its goals in several ways:\n\nML algorithms can analyse customer behaviour and preferences to provide personalised product recommendations. By understanding past purchases and browsing habits, Click Shoe Warehouse can enhance customer experience and increase sales.\n\nML can predict demand for various shoe styles and sizes based on trends, seasonality, and historical data. This can help Click Shoe Warehouse optimise inventory levels, reduce stockouts, and minimise excess inventory.\n\nML models can analyse market trends, competitor pricing, and customer sensitivity to price changes. This enables Click Shoe Warehouse to set optimal prices that maximise profit margins while remaining competitive.\n\nBy using ML algorithms, the warehouse can segment customers based on their purchasing behaviour and demographics. This segmentation allows for targeted marketing campaigns that are more likely to resonate with specific customer groups.\n\nML can help identify unusual patterns in transaction data, enabling Click Shoe Warehouse to detect and prevent fraudulent activities, thereby protecting the business and its customers.\n\nAutomating the order fulfilment process can streamline operations, reduce human error, and speed up delivery times. BPA can manage order confirmations, invoicing, and shipping notifications efficiently.\n\nImplementing chatbots and automated response systems can enhance customer service by providing instant responses to queries regarding product availability, order status, and return policies. This improves customer satisfaction and reduces the workload on customer service representatives.\n\nBPA can automate communication with suppliers, track shipments, and manage procurement processes. This leads to a more efficient supply chain, ensuring that Click Shoe Warehouse maintains optimal stock levels and reduces lead times.\n\nAutomation tools can manage and execute marketing campaigns across multiple channels (email, social media, etc.). This ensures that marketing efforts are timely and consistent, while also allowing for data-driven adjustments based on performance metrics.\n\nBPA can streamline data collection and reporting processes, providing real-time insights into sales performance, customer behaviour, and operational efficiency. This data can inform strategic decisions and help Click Shoe Warehouse adapt to market changes quickly.\n\nBy integrating Machine Learning and Business Process Automation, Click Shoe Warehouse can enhance operational efficiency, improve customer satisfaction, and drive revenue growth. ML provides valuable insights and predictive capabilities, while BPA streamlines processes and reduces manual workload, allowing the company to focus on strategic initiatives and customer engagement. Together, these technologies can help Click Shoe Warehouse achieve its business goals effectively."
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "question_id": "d3d25098-71ae-4e51-bfb4-46ebcd4c5493",
+   "title": "Extended response: SE Passwords (Q16,DoE,2025)",
+   "topic": "Extended response: SE Passwords",
+   "label": "Q16",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "An online service wants to reduce the chances of user accounts being compromised by dictionary attacks. In this type of attack, an attacker uses a pre-defined list (often referred to as a \"dictionary\") of words, phrases, or common passwords to guess the victim’s password",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "e7d1931a-753c-4438-bdad-ed60bf186d25",
+     "part": "Question 16",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Describe TWO strategies they could implement to reduce this risk.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Explains how TWO relevant strategies harden accounts against dictionary attacks"
+      },
+      {
+       "marks": "3",
+       "criterion": "Explains how ONE relevant strategy would protect against dictionary attacks OR\n\nOutlines how TWO relevant strategies could be applied"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines relevant strategy(ies)"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The service could implement password complexity requirement that mandates special characters, length, etc to force users to use less vulnerable passwords.\n\nThe service could implement rate limiting to reduce the ease with which large numbers of passwords can be tried by an attacker. \n\n_Answers may also include:_\n\n\\-          _Implementing user training on providing complex passwords to improve password quality_\n\n\\-          _Using Multifactor authentication to thwart successful password guesses_\n\n_Examples of irrelevant suggestions include:_\n\n\\-          _Encouraging the use of different passwords across accounts_\n\n\\-          _Encrypting passwords in storage_"
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "question_id": "d8ec8eac-43ae-484a-9f6d-863c6f41d44f",
+   "title": "Extended response: SE HTML vs CMS (Q17, DoE, 2025)",
+   "topic": "Extended response: SE HTML vs CMS",
+   "label": "Q17",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "Web developers may choose to use HTML and CSS or a CMS.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "7f57379c-5968-4212-a61d-42fbeeefb3fd",
+     "part": "Question 17",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Explain why an experienced web developer would choose to use HTML and CSS while a beginner would use a CMS.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Provides a clear and coherent explanation of the differences between experienced developers and beginners in their choice of technology. Accurately describes the advantages of HTML and CSS for experienced developers, including control, flexibility, performance optimisation, and adherence to web standards. Clearly outlines the benefits of a CMS for beginners, such as user-friendliness, quick setup, built-in features, and support resources. Effectively compares and contrasts the two approaches, demonstrating an understanding of how the choice aligns with the user&rsquo;s experience level and project needs."
+      },
+      {
+       "marks": "3",
+       "criterion": "Offers a good explanation of the differences in technology choices but may lack some clarity. Describes some advantages of HTML and CSS for experienced developers, though with less detail. Outlines some benefits of a CMS for beginners but may miss certain aspects. Provides a comparison of the two approaches, but the analysis may not be fully developed."
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a basic explanation of the differences, with limited clarity. Mentions a few advantages of HTML and CSS for experienced developers but lacks depth .Mentions a few benefits of a CMS for beginners but lacks depth. Offers minimal comparison, with weak or unclear analysis."
+      },
+      {
+       "marks": "1",
+       "criterion": "Explanation of differences is inadequate or unclear. Fails to adequately describe the advantages of HTML and CSS for experienced developers. Fails to adequately describe the benefits of a CMS for beginners. Lacks comparative analysis or fails to connect the two perspectives."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The choice between using HTML and CSS versus a Content Management System (CMS) often hinges on the developer's experience level, project requirements, and desired control over the website's functionality and design. Here's an explanation of why an experienced web developer might prefer HTML and CSS, while a beginner might opt for a CMS:\n\nExperienced developers are comfortable writing HTML and CSS code, allowing them complete control over the website's layout, design, and functionality. They can create custom designs that can be tailored specifically to the needs of the project without being constrained by the templates or limitations of a CMS. By coding from scratch, experienced developers can optimise website performance by minimising excess code, optimising images, and implementing best practices for loading speeds. This can lead to faster websites and better user experiences. When working directly with HTML and CSS, developers can implement any design or feature without being limited by the structure of a CMS. This flexibility allows for more innovative and unique designs. Experienced developers typically have a strong understanding of web standards, accessibility, and responsive design principles. They can ensure that their code adheres to these standards, resulting in more robust and usable websites. Using HTML and CSS means that the developer is not dependent on third-party plugins or systems, which can sometimes introduce security vulnerabilities, compatibility issues, or bloat to the website. For experienced developers, working with raw code can provide opportunities to learn advanced techniques, frameworks, and programming languages, further enhancing their skill set.\n\nA Content Management System (CMS)typically has a user-friendly interface that allows beginners to create and manage content without needing to know how to code. This accessibility can be crucial for those who are just starting out. Beginners can quickly set up a website using a CMS, as many come with pre-built templates and themes. This allows for faster deployment without extensive technical knowledge. CMS platforms often come with built-in features such as SEO tools, social media integration, and analytics, which can be beneficial for beginners who may not know how to implement these features themselves. Popular CMS platforms have large communities, extensive documentation, and numerous tutorials available, making it easier for beginners to find help and resources. Beginners can concentrate on content creation and website management rather than on the technical aspects of web development. This can lead to a more immediate engagement with the website and its purpose. Many CMS solutions offer scalability, allowing beginners to start small and grow their website as needed. They also often handle updates and security patches, reducing the technical burden on the user.\n\nIn summary, experienced web developers may prefer using HTML and CSS for the control, flexibility, and performance optimisation it offers, allowing them to create unique and customised websites. In contrast, beginners often opt for a CMS due to its ease of use, quick setup, and built-in features, which enable them to focus on content creation and management without extensive technical knowledge. Each approach has its merits based on the developer's experience level and project needs."
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "question_id": "4c6e649a-27b2-4af5-ba9d-cbd8d52e40f5",
+   "title": "Extended response: ML and AI impacts (Q18, DoE, 2025)",
+   "topic": "Extended response: ML and AI impacts",
+   "label": "Q18",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "8c8be1f4-7d62-463f-a789-9a997c8d08aa",
+     "part": "Question 18",
+     "marks_available": 5,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Assess positive and negative impacts of machine learning and artificial intelligence on production efficiency, waste and the environment.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 5,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "5",
+       "criterion": "Elaborates both several positive and several negative potential impacts, providing a reasonable (more optimistic than cautious) balance between them"
+      },
+      {
+       "marks": "4",
+       "criterion": "Provides both several positive and several negative potential impacts, but does not elaborate them sufficiently"
+      },
+      {
+       "marks": "3",
+       "criterion": "Elaborates only several positive impacts without discussing negative ones\n\nOR \n\nElaborates only several negative impacts without discussing positive ones"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines only 1 positive AND 1 negative potential impact without elaborating"
+      },
+      {
+       "marks": "1",
+       "criterion": "Outlines only 1 positive OR 1 negative potential impact without elaborating"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "While AI and ML hold significant promise for enhancing the production efficiency and reduce waste that pollutes the environment, they also pose challenges that need to be addressed to ensure that benefits are maximised while minimising negative impacts on the environment and society.\n\n Potential positive impacts:\n\n-   Increased Production Efficiency – AI and ML can optimise manufacturing processes by analysing data and identifying inefficiencies. This leads to faster production times, reduced downtime, and more streamlined operations, ultimately maximising output.\n-   Waste Reduction – AI can help in minimising waste by predicting demand more accurately, leading to better inventory management. By aligning production closely with actual demand, manufacturers can reduce overproduction and excess inventory, which contributes to waste.\n-   Resource Optimisation – Machine learning algorithms can improve the use of materials by identifying the most efficient ways to utilise resources during production. This can lead to lower material costs and less waste, contributing positively to environmental sustainability.\n-   Predictive Maintenance – AI can monitor equipment performance and predict failures before they occur. This proactive approach to maintenance not only extends the lifespan of machinery but also decreases the likelihood of unexpected breakdowns, reducing waste and improving efficiency.Potential negative impacts: \n\n-   Energy Consumption – The implementation of AI systems can lead to significantly increased energy consumption, particularly if the infrastructure required to support these technologies is not energy efficient. This could counteract some environmental benefits.\n-   E-waste Generation – The rapid advancement of AI technologies may lead to shorter product lifespans for machinery and devices, contributing to increased electronic waste (e-waste) if not managed properly."
+    }
+   ]
+  },
+  {
+   "number": 19,
+   "question_id": "de150b09-75cb-4f24-b27a-9c5425eccd31",
+   "title": "Drawing answer: SE  UX/UI (Q19, DoE, 2025)",
+   "topic": "Drawing answer: SE  UX/UI",
+   "label": "Q19",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "A library management system allows users to register online. The registration form must collect user details and a secure PIN.\n\n•    PIN requirements:\n\n•    Exactly 4 numeric digits\n\n•    No repeated digits (e.g. 1123 is invalid)\n\n•    No letters or special characters",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "73650152-5f62-4ab3-b097-8f96e1b70aef",
+     "part": "Question 19 (a)",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "DRAWING_V2",
+     "prompt": "Design a user interface for registration. Label all form fields clearly.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides a user interface suitable for users to register with all form fields labelled, including input validation indicators"
+      },
+      {
+       "marks": "2",
+       "criterion": "Designs the user interface with some relevant features"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the problem"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![](assets/a19.png.png)",
+     "sample_answer_images": [
+      "assets/a19.png.png"
+     ]
+    },
+    {
+     "part_id": "310a6fe7-94fb-472d-a824-9896fff0c270",
+     "part": "Question 19 (b)",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Explain how accessibility considerations improve the usability of web forms for a wide range of users, including those with disabilities.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides a detailed explanation of multiple accessibility features and how they support users with specific needs. Uses correct terminology and relevant examples."
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines at least two accessibility features clearly, explaining how they help improve usability for users with disabilities."
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information about accessibility or usability in web forms"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Accessibility features improve web form usability by ensuring all users, including those with disabilities, can interact with the form effectively. For example, using properly associated <label> tags with each form input allows screen readers to announce the purpose of each field to visually impaired users. Adding aria-label or aria-described by attributes provides further context when standard labels aren’t sufficient.\n\nKeyboard navigation is another essential feature ensuring users can tab through fields and activate buttons without needing a mouse supports users with motor impairments. Additionally, maintaining high colour contrast between text and background helps users with low vision or colour blindness read form content more easily. These features collectively create an inclusive interface that complies with accessibility standards ."
+    }
+   ]
+  },
+  {
+   "number": 20,
+   "question_id": "3874ec36-5824-4b32-83de-953ddb36e56e",
+   "title": "Extended response: KNN algorithm (Q20, DoE, 2025)",
+   "topic": "Extended response: KNN algorithm",
+   "label": "Q20",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "65ebf6bd-a060-4a78-972a-3e966fea88d4",
+     "part": "Question 20",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Describe the K Nearest Neighbour (KNN) algorithm for regression, predicting y for a new data point using a training data set of x and y values given the K value parameter of 3.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Describes the KNN algorithm for regression, including distance, selection of K value and the prediction as the mean of the K features."
+      },
+      {
+       "marks": "3",
+       "criterion": "Outlines most of the KNN algorithm"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines some features of the KNN Algorithm"
+      },
+      {
+       "marks": "1",
+       "criterion": "Outlines some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The K-Nearest Neighbours (KNN) algorithm is a supervised learning technique that generates predictions based on labelled data. KNN is particularly effective for datasets characterized by a low coefficient of variation. The non-linear algorithm operates as follows:\n\n1    Distance Calculation: For a given query (new data point), KNN computes the Euclidean distance (i.e., the straight-line distance) between the query and each point in the training dataset.\n\n2.      Neighbour Selection: The algorithm identifies and sorts the training data points by their distance to the query, selecting the nearest K points (in this case, K=3).\n\n3.      Prediction: The predicted value for the query point is determined by calculating the mean of the target values of these K nearest neighbours.\n\n_Note: students can refer to any appropriate KNN distance measure, such as Euclidean, Manhattan, Minkowski, etc_"
+    }
+   ]
+  },
+  {
+   "number": 21,
+   "question_id": "16887f40-cc04-4256-bbc9-bc53d9a019e3",
+   "title": "Code/Short answer: Stubs (Q21,DoE,2025)",
+   "topic": "Code/Short answer: Stubs",
+   "label": "Q21",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "![](assets/21.png.png)",
+   "stimulus_images": [
+    "assets/21.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "dabff157-6398-4c6e-b736-1c3b7de1e046",
+     "part": "Question 21 (a)",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "CODING",
+     "prompt": "The algorithm flowchart shown describes a stub for a login function.\n\nImplement this stub in python code.",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    },
+    {
+     "part_id": "4edfc3a5-dc7c-46b2-8782-19d984ec6215",
+     "part": "Question 21 (b)",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "One simple test has been provided below.\n\nProvide at least TWO more tests that could be used, with a comment justifying the use of each one.\n\n\\# Test cases\n\nIF login(\"user1\", \"pass123\") == \"Login successful\" THEN\n\nPRINT \"Test case 1 passed\"\n\nELSE\n\nPRINT \"Test case 1 failed\"",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Answers could include\n\n\\-          Two incorrect parameters\n\n\\-          One incorrect and one correct parameter\n\n\\-          Empty strings\n\n\\-          Wrong number of parameters\n\nEg:\n\nassert login(\"user1\", \"wrongpass\") \\== \"Login failed\", \"Test case 2 failed\"\n\nassert login(\"wronguser\", \"pass123\") \\== \"Login failed\", \"Test case 3 failed\"\n\nassert login(\"\", \"\") \\== \"Login failed\", \"Test case 4 failed\""
+    },
+    {
+     "part_id": "3ea9ccec-d9bb-4252-aaa0-40232d6060ae",
+     "part": "Question 21 (c)",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "You are tasked with writing an error message to return to users in situations where their login attempt fails. This could happen when the password is entered incorrectly or when the username is incorrect.\n\nWhat should you consider when creating these messages?",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Identifies two considerations, including one related to security."
+      },
+      {
+       "marks": "1",
+       "criterion": "Identifies one security consideration OR\n\nIdentifies TWO non-security considerations"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Answers could include:\n\n\\-          Limit exposure of information (eg That username does not exist)\n\n\\-          Provide friendly and non-threatening messaging\n\n\\-          Ensure the message is helpful (eg a password reset link)."
+    }
+   ]
+  },
+  {
+   "number": 22,
+   "question_id": "4aa48409-4a9f-4e4f-9795-337edb3c7cd7",
+   "title": "Extended response: Communications (Q22, DoE, 2025)",
+   "topic": "Extended response: Communications",
+   "label": "Q22",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "An Australian toy manufacturing company has recently been established, with offices around the country.\n\nToy manufacturing is subject to strict environmental, workplace health and safety, national and international regulatory frameworks, enforced by the agency AusToy.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "80c3cd47-6314-4373-8e4e-b9281970a3c5",
+     "part": "Question 22 (a)",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Explain communications issues that may arise due to stakeholders being located all over the country.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "The response clearly identifies and explains multiple communication issues that may arise due to the geographical distribution of stakeholders.\n\nExplanations are directly relevant to the context of the toy manufacturing company and its regulatory environment.\n\nDemonstrates a strong understanding of the implications of the identified issues, including potential impacts on project collaboration, decision-making, or compliance."
+      },
+      {
+       "marks": "2",
+       "criterion": "The response identifies and explains some communication issues related to stakeholder distribution, but may lack some detail.\n\nProvides explanations that are generally relevant to the context, though some points may be less directly connected.\n\nShows a moderate understanding of the implications, with some analysis of potential impacts on the company."
+      },
+      {
+       "marks": "1",
+       "criterion": "The response identifies at least one communication issue, but explanations are limited or unclear.\n\nRelevance to the context of the toy manufacturing company is weak or not clearly established.\n\nDemonstrates a basic understanding of the implications, but lacks depth in analysis or connection to broader impacts."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": "Students may respoond and be awarded marks for any of the following:\n\nAustralia has multiple time zones, which can complicate scheduling meetings or collaborative work sessions. For instance, coordinating a meeting between stakeholders in Sydney and Perth may require careful planning to accommodate different working hours. This can lead to delays in decision-making and project timelines.\n\nDifferent regions may have distinct cultural norms, communication styles, and business practices. Stakeholders from various backgrounds may interpret messages differently, leading to misunderstandings or misinterpretations. This can impact teamwork and the overall effectiveness of communication.\n\nWhile technology facilitates communication, not all stakeholders may have equal access to high-speed internet or the latest communication tools, particularly in remote areas. This can lead to frustration and hinder effective collaboration if some team members struggle to participate fully in meetings or discussions.\n\nPhysical separation can make it challenging to build relationships and rapport among stakeholders. Face-to-face interactions often foster trust and understanding, which can be harder to achieve through virtual communication. This isolation can result in a lack of engagement and team cohesion.\n\nWith multiple communication channels (emails, messaging platforms, video calls), there is a risk of information overload, where stakeholders may miss important updates or context. Conversely, miscommunication can occur when information is not conveyed clearly, leading to confusion about project requirements or expectations.\n\nGiven the strict regulatory frameworks the company must adhere to, communication regarding compliance issues may become complicated. Different stakeholders may have varying levels of understanding or interpretation of these regulations, which can lead to inconsistencies in implementation or reporting.\n\nGathering feedback from stakeholders who are geographically dispersed can be challenging. Delays in feedback can slow down project progress and may result in a lack of alignment on project goals and deliverables. It is essential to establish clear channels and timelines for feedback to mitigate this issue.",
+     "sample_answer": "The geographical distribution of stakeholders in the toy manufacturing company can lead to various communication challenges, including time zone differences, cultural variations, technology access issues, and the complexities of regulatory compliance. Addressing these issues proactively through effective communication strategies and tools is vital for fostering collaboration and ensuring project success."
+    },
+    {
+     "part_id": "31fe1445-843e-499e-9012-3f9d0acb1fd4",
+     "part": "Question 22 (b)",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Compare and contrast Hybrid (also called WAgile) and Waterfall software development methodologies in developing software to control the manufacturing of their toys.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "The response clearly identifies and describes both WAgile and Waterfall methodologies, including key characteristics of each.\nEffectively compares and contrasts the advantages and disadvantages of both methodologies, providing relevant insights for the context of toy manufacturing.\nDemonstrates a strong understanding of how the methodologies apply to the specific context of toy manufacturing, offering a well-reasoned conclusion on which methodology may be more suitable based on the company's needs."
+      },
+      {
+       "marks": "1",
+       "criterion": "The response identifies and describes both WAgile and Waterfall methodologies, but may lack some detail.\nProvides a comparison of the advantages and disadvantages, though some insights may be less relevant to the context.\nShows a moderate understanding of the application to toy manufacturing, with a conclusion that is somewhat reasoned but not fully developed."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": "_Students may be awarded marks for any of the following:_\n\n**Waterfall methodology**\n\n**Description**: the waterfall methodology is a linear and sequential approach to software development. It consists of distinct phases: requirements gathering, design, implementation, testing, deployment, and maintenance. Each phase must be completed before moving on to the next.\n\n**Advantages**:\n\n-   **Clear structure**: the waterfall model provides a clear framework and timeline, making it easy to manage and track progress.\n-   **Well-defined requirements**: since the requirements are gathered upfront, there is less ambiguity about what needs to be developed, which can be beneficial in regulated environments like toy manufacturing.\n-   **Documentation**: each phase produces documentation, which can be useful for compliance and reference purposes, especially regarding regulatory requirements.\n\n**Disadvantages**:\n\n-   **Inflexibility**: once a phase is completed, making changes can be difficult and costly. This can be a significant drawback in a fast-paced manufacturing environment where requirements may evolve.\n-   **Late testing**: testing occurs after development, which can lead to the discovery of major issues late in the process, potentially affecting production timelines.\n\n**Wagile methodology**\n\n**Description**:  \nwagile is a hybrid approach that combines elements of agile and waterfall methodologies. It focuses on flexibility and iterative development while still providing some structure. Wagile allows for incremental progress and regular feedback throughout the development process.\n\n**Advantages**:\n\n-   **Flexibility**: wagile allows for changes and adjustments to be made throughout the development process, accommodating new requirements or feedback from stakeholders.\n-   **Frequent iterations**: the iterative nature allows for regular testing and feedback, which can lead to higher quality software that better meets the needs of the manufacturing process.\n-   **Collaboration**: wagile promotes collaboration among stakeholders, helping to ensure that the software aligns with the evolving needs of the toy manufacturing operations and regulatory frameworks.\n\n**Disadvantages**:\n\n-   **Less predictable**: the flexibility of wagile can make it harder to predict timelines and budgets, which may pose challenges for project management.\n-   **Potential for scope creep**: the ability to make changes throughout the process can lead to scope creep if not managed properly, potentially affecting the project's focus.\n\n**Comparison**\n\n-   **Structure vs. Flexibility**: waterfall is structured and sequential, making it straightforward but inflexible. In contrast, wagile provides flexibility and adaptability, which can be beneficial in a dynamic manufacturing environment.\n-   **Testing timing**: waterfall conducts testing after development, while wagile incorporates testing throughout the process, allowing for quicker identification of issues.\n-   **Stakeholder involvement**: wagile encourages ongoing stakeholder interaction and feedback, whereas waterfall may limit stakeholder involvement to the initial requirements phase.",
+     "sample_answer": "In developing software for controlling toy manufacturing, the choice between WAgile and Waterfall methodologies depends on the company's specific needs. If the manufacturing process requires strict adherence to regulations and well-defined requirements, Waterfall may be more suitable. However, if the company values flexibility and the ability to adapt to changing needs, WAgile could provide a better framework for success by fostering collaboration and iterative improvements."
+    }
+   ]
+  },
+  {
+   "number": 23,
+   "question_id": "bfb6b9de-8f98-4c04-b7d4-f5a95c9eecee",
+   "title": "Extended response: Security ( Q23, DoE,2025)",
+   "topic": "Extended response: Security",
+   "label": "Q23",
+   "kind": "DoE",
+   "source": "2025",
+   "copyright": null,
+   "stimulus": "A popular social media platform has recently suffered a cross-site scripting (XSS) attack, leading to significant user data breaches and a loss of public trust.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "05fe5231-6407-4137-88ae-e2de6ca3a2c6",
+     "part": "Question 23",
+     "marks_available": 8,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Discuss the ethical, legal, and technical ramifications for both users and the enterprise stemming from such a security breach.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 8,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "8",
+       "criterion": "Discusses ethical, legal and technical ramifications for both users and the enterprise."
+      },
+      {
+       "marks": "6-7",
+       "criterion": "Outlines ethical, legal AND technical ramifications for both the user AND the enterprise"
+      },
+      {
+       "marks": "5-4",
+       "criterion": "Outlines ethical, legal AND technical ramifications for the user OR the enterprise"
+      },
+      {
+       "marks": "2-3",
+       "criterion": "Shows some understanding of ethical OR legal ramifications for either users OR the enterprise."
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "A security breach has ethical ramifications for users, as it compromises their privacy and can lead to identity theft. Legally, users may have grounds for lawsuits if their data is mishandled.\n\nFor the enterprise, the legal implications include potential fines and penalties for violating data protection laws. Ethically, the enterprise must take responsibility for protecting user data, and failing to do so can harm its reputation and customer relationships.\n\nAnswers may include:\n\n\\-          For users:\n\no   Ethical (Violation of Privacy, Loss of autonomy and control of own data, Psychological harm including stress, reputational damage)\n\no   Legal (Risk of identity theft, possible compensation)\n\n\\-          For enterprises:\n\no   Breach of trust, failed duty of care – reputational damage\n\no   Legal (Data Protection eg Privacy Act and GDPR leading to fines, mandatory breach notifications, regulator investigation; civil liability; contractual breaches; criminal liability\n\no   Operational disruptions"
+    }
+   ]
+  }
+ ]
+}

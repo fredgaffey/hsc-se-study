@@ -1,0 +1,1266 @@
+{
+ "exam": "North Sydney Boys Trial",
+ "private": true,
+ "source": "software.paper.is via the SEN Discord (personal study only)",
+ "duration_minutes": 95,
+ "total_available": 50,
+ "parts_total": 18,
+ "parts_answered": 0,
+ "parts_marked": 0,
+ "total_mark": null,
+ "questions": [
+  {
+   "number": 1,
+   "question_id": "q1",
+   "title": "Question 1",
+   "topic": "Question 1",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q1-0-f3d49c6e",
+     "part": "Question 1",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A part of an application with a GUI requires from the user to answer several questions. For one type of question there are several correct responses, and the user must select all the correct ones from a set of five options. Which screen element would be best suited for this type of question?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Radio buttons",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Command buttons",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Checkboxes",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "List box",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "question_id": "q2",
+   "title": "Question 2",
+   "topic": "Question 2",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q2-0-0c00eec2",
+     "part": "Question 2",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "SORTING_TABLE",
+     "prompt": "Order the 4 steps in the model development part of MLOps.",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "type": "SORTING_TABLE",
+       "rows": [
+        {
+         "cells": [
+          {
+           "text": "Model training"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "text": "Data wrangling (preparation)"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "text": "Model testing and validation"
+          }
+         ]
+        },
+        {
+         "cells": [
+          {
+           "text": "Feature engineering"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "1.  Data wrangling\n2.  Feature engineering\n3.  Model training\n4.  Model testing and validation"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "question_id": "q3",
+   "title": "Question 3",
+   "topic": "Question 3",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q3-0-a35c789b",
+     "part": "Question 3",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following best describes metadata?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "The primary content of a document or file",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Descriptive information about data that helps to organise, find, and understand it",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "A summary of the given data that highlights its main statistics",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Encrypted data that is primarily used in social networking software like Facebook",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "question_id": "q4",
+   "title": "Question 4",
+   "topic": "Question 4",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q4-0-3fd5c06b",
+     "part": "Question 4",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "How can SQL code be improved to prevent SQL injection attacks?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "By using user input directly in the SQL query with no sanitisation",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "By using dynamic SQL queries that concatenate user input directly into the query",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "By using only stored procedures with no parameterisation",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "By implementing prepared statements with parameterised queries",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "question_id": "q5",
+   "title": "Question 5",
+   "topic": "Question 5",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q5-0-2f3b44ac",
+     "part": "Question 5",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which features of OOP can be seen in the following Python code?\n\n```\nclass Person:\n  def __init__(self, fname, lname):\n    self.__firstname = fname\n    self.__lastname = lname  \n  def printname(self):\n    print(self.__firstname,self.__lastname.upper(), end=\"\")\n  def greet(self):\n    print(\"G’day \", end=\"\")\n    self.printname()\n    print()\n\nclass Student(Person):\n  def __init__(self, fname, lname, sid, gradyear):\n    super().__init__(fname, lname)\n    self.__studentID = sid\n    self.graduationyear = gradyear\n  def greet(self):\n    self.printname()\n    print(\", welcome to the Class of\", self.graduationyear)\n```",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Encapsulation",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Inheritance",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Instantiation",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Polymorphism",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "question_id": "q6",
+   "title": "Question 6",
+   "topic": "Question 6",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q6-0-1f0295a2",
+     "part": "Question 6",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Complete the text below by selecting 1 word for each provided space.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "Configuration",
+       "Data",
+       "Exception",
+       "Identity",
+       "Memory",
+       "Session"
+      ],
+      "rows": [
+       {
+        "statement": "______________ management catches unexpected problems in a program, helping to achieve a smooth recovery.",
+        "correct": [
+         "Exception"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "______________ management helps keep track of user interactions with a website/application.",
+        "correct": [
+         "Session"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "______________ management helps ensure that computer’s storage space is used wisely.",
+        "correct": [
+         "Memory"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "______________ management catches unexpected problems in a program, helping to achieve a smooth recovery.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "______________ management helps keep track of user interactions with a website/application.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "______________ management helps ensure that computer’s storage space is used wisely.",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "question_id": "q7",
+   "title": "Question 7",
+   "topic": "Question 7",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q7-0-29d4ae17",
+     "part": "Question 7",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following machine learning models are NOT suitable for a classification problem?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Decision tree",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Neural network",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Linear regression",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Logistic regression",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "E",
+        "text": "K-nearest neighbours (KNN)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "F",
+        "text": "Polynomial regression",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C",
+       "F"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "question_id": "q8",
+   "title": "Question 8",
+   "topic": "Question 8",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q8-0-b71f2ddd",
+     "part": "Question 8",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "For each of the given descriptions, indicate the most suitable network protocol.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "SFTP",
+       "POP 3",
+       "IP",
+       "HTTPS",
+       "SMTP",
+       "IMAP",
+       "TCP",
+       "TLS"
+      ],
+      "rows": [
+       {
+        "statement": "Sending email messages from a client to a server or between servers.",
+        "correct": [
+         "SMTP"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Addressing and routing data packets between devices on a network.",
+        "correct": [
+         "IP"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Retrieving and managing emails directly on a mail server, allowing access from multiple devices.",
+        "correct": [
+         "IMAP"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Ensuring reliable, ordered and error-checked delivery of data packets between devices.",
+        "correct": [
+         "TCP"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Securely exchanging encrypted website data between a web browser and a web server.",
+        "correct": [
+         "HTTPS"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Encrypting data transmitted over a network to ensure secure communication and protect against eavesdropping and tampering.",
+        "correct": [
+         "TLS"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Downloading emails from a mail server to a local client, typically deleting them from the server.",
+        "correct": [
+         "POP 3"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Transferring files over a secure shell connection.",
+        "correct": [
+         "SFTP"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Sending email messages from a client to a server or between servers.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Addressing and routing data packets between devices on a network.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Retrieving and managing emails directly on a mail server, allowing access from multiple devices.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Ensuring reliable, ordered and error-checked delivery of data packets between devices.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Securely exchanging encrypted website data between a web browser and a web server.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Encrypting data transmitted over a network to ensure secure communication and protect against eavesdropping and tampering.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Downloading emails from a mail server to a local client, typically deleting them from the server.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Transferring files over a secure shell connection.",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "question_id": "q9",
+   "title": "Question 9",
+   "topic": "Question 9",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "BEGIN AverageListOfNumbers\n\taverage = -1\n\tarrayOfNumbers = GetNumbers()\n\tIF number of items in arrayOfNumbers != 0 THEN\n\t\taverage = CalculateAverage(arrayOfNumbers)\n\t\tPrintAverageToScreen(average)\n\tELSE\n\t\tPRINT \"No numbers entered\"\n\tEND IF\nEND AverageListOfNumbers",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q9-0-268d9432",
+     "part": "Question 9",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "DRAWING_V2",
+     "prompt": "Draw a structure chart to represent the AverageListOfNumbers algorithm given above.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Correct structure chart representing this algorithm"
+      },
+      {
+       "marks": "3",
+       "criterion": "Substantially correct structure chart representing this algorithm, with some minor errors or omissions"
+      },
+      {
+       "marks": "2",
+       "criterion": "An attempt at constructing a structure chart to represent this algorithm"
+      },
+      {
+       "marks": "1",
+       "criterion": "An attempt at constructing a structure chart"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![A structure chart representing the algorithm is shown.](img/nsb/a9.png)  \n\nIn this diagram, the “diamond” (rotated square) with 2 lines going from the same vertex denotes OPTIONAL execution of BOTH CalculateAverage and PrintAverageToScreen subprograms (either BOTH of them are executed or NONE of them is executed). This is NOT a choice between executing either 1 of these 2 subprorams (a choice would be indicated by having the 2 lines coming from 2 different vertices of the “diamond”). The built-in commands like PRINT/DISPLAY and GET/INPUT are NOT shown on a structure chart."
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "question_id": "q10",
+   "title": "Question 10",
+   "topic": "Question 10",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "BEGIN AverageListOfNumbers\n\taverage = -1\n\tarrayOfNumbers = GetNumbers()\n\tIF number of items in arrayOfNumbers != 0 THEN\n\t\taverage = CalculateAverage(arrayOfNumbers)\n\t\tPrintAverageToScreen(average)\n\tELSE\n\t\tPRINT \"No numbers entered\"\n\tEND IF\nEND AverageListOfNumbers",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q10-0-2bdca266",
+     "part": "Question 10",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "PSEUDOCODE",
+     "prompt": "For the AverageListOfNumbers algorithm given above, write pseudocode for the function CalculateAverage(arrayOfNumbers). Assume that arrayOfNumbers contains only numbers. However, check whether arrayOfNumbers is empty, so that your function CalculateAverage(arrayOfNumbers) can be also reused in other contexts.",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "type": "PSEUDOCODE"
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Substantially correct algorithm"
+      },
+      {
+       "marks": "2",
+       "criterion": "Partially correct algorithm, with some errors or omissions"
+      },
+      {
+       "marks": "1",
+       "criterion": "An attempt at writing an algorithm to meet the requirements"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nBEGIN CalculateAverage(arrayOfNumbers)\n  count = LENGTH(arrayOfNumbers)\n  IF count > 0 THEN\n    total = 0\n    FOR i = 1 TO count STEP 1 REM Assumes indexing from 1\n      total = total + arrayOfNumbers[i]\n    NEXT i\n    RETURN total / count\n  ELSE\n    RETURN Null REM No value; impossible to calculate average\n  END IF\nEND CalculateAverage\n```"
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "question_id": "q11",
+   "title": "Question 11",
+   "topic": "Question 11",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q11-0-a02294b7",
+     "part": "Question 11",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Explain how the capabilities of end users influence the secure design features of software.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Explains causal relationships between capabilities of end users and the secure design features of software"
+      },
+      {
+       "marks": "2",
+       "criterion": "Discusses capabilities of end users relevant for secure design features of software"
+      },
+      {
+       "marks": "1",
+       "criterion": "Identifies a capability of end users relevant for secure design features of software"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Capabilities of end users, such as their technical proficiency, security awareness and accessibility requirements, significantly impact the design features of software. They influence the user interface, accessibility options, customisation preferences and security settings. Developers must consider the capabilities of end users to create secure, usable, and effective software. (Additionally, they should provide appropriate documentation, training, and support to users with different capabilities.)\n\n1.  **Technical Proficiency:** End users have diverse levels of technical expertise, from beginners to advanced users. Software needs to be designed with intuitive interfaces and security settings (e.g. built-in prompts for secure actions) for less tech-savvy users, while providing advanced features for those who need them and can use them without introducing vulnerabilities.\n2.  **Security Awareness:** Users' understanding of security threats and security practices differs greatly. Software needs to account for the varying levels of security awareness among its users and mitigate risks associated with less security-conscious users. Commonly, this includes providing secure defaults (e.g. requiring multi-factor authentication by default), restricting unnecessary user permissions and displaying clear security prompts. Software designers often need to balance security enhancements with user experience, ensuring that security measures are as seamless as possible to encourage compliance and reduce the likelihood of users bypassing security for convenience.\n3.  **Accessibility requirements:** End users may have different accessibility requirements, influencing how security features are implemented. For instance, software design must ensure that security measures (e.g. multi-factor authentication) are accessible to users with disabilities, ensuring that security does not come at the cost of usability."
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "question_id": "q12",
+   "title": "Question 12",
+   "topic": "Question 12",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q12-0-54c211b3",
+     "part": "Question 12",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Describe what a template engine in web development is and how it works.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Describes both what a template engine is AND how it works"
+      },
+      {
+       "marks": "2",
+       "criterion": "Describes either what a template engine is OR how it works"
+      },
+      {
+       "marks": "1",
+       "criterion": "States a feature of a template engine"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "A template engine (a.k.a. templating engine) is used to rapidly and easily build web applications and dynamic HTML pages. It leverages HTML/JavaScript templates (some are pre-made but configurable, others can be written by designers) that contain placeholders, including variables, loops iterating over collections and conditionals. Different template engines (e.g. EJS, Pug, Handlebars, etc.) use different notations (syntaxes) to describe their templates and placeholders. When the web application is running, the template engine on the web server replaces the variables/placeholders in the used template file with actual values, then sends this dynamically customised HTML web page content to the client (which never sees the used templates). Templates also enable fast rendering of server-side data that needs to be passed to the application. By using a template engine, developers can separate HTML presentation structure from the application logic, making the code cleaner and easier to maintain. Designers can work on templates while developers focus on the backend logic."
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "question_id": "q13",
+   "title": "Question 13",
+   "topic": "Question 13",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q13-0-26f305fa",
+     "part": "Question 13",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "DRAWING_V2",
+     "prompt": "Draw a decision tree (resulting from machine learning) for decisions whether a person should be accepted into a software engineering student club meeting. A female is always accepted. Other persons are accepted only if they study Software Engineering or are proficient in C.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Substantially correct decision tree"
+      },
+      {
+       "marks": "2",
+       "criterion": "Partially correct decision tree, with some errors or omissions"
+      },
+      {
+       "marks": "1",
+       "criterion": "An attempt at drawing a decision tree to meet the requirements"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![A decision tree is shown. The first node asks 'Female?'. The 'Yes' branch leads to 'Accept!'. The 'No' branch leads to a node asking 'Studies Software Engineering?'. The 'Yes' branch leads to 'Accept!'. The 'No' branch leads to a node asking 'Proficient in C?'. The 'Yes' branch leads to 'Accept!'. The 'No' branch leads to 'Do NOT accept!'.](img/nsb/a13.png)"
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "question_id": "q14",
+   "title": "Question 14",
+   "topic": "Question 14",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q14-0-58faeceb",
+     "part": "Question 14",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Compare and contrast cross-site scripting (XSS) and cross-site request forgery (CSRF).",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Discusses at least 2 similarities AND at least 2 differences between XSS and CSRF"
+      },
+      {
+       "marks": "2",
+       "criterion": "Discusses either ONLY similarities OR ONLY differences between XSS and CSRF\nOR\nOutlines a similarity AND a difference between XSS and CSRF"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some correct information about XSS or CSRF"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "**Similarities between XSS and CSRF include:**\n\n1.  Both XSS and CSRF are vulnerabilities that specifically target web applications.\n2.  Both attacks rely on exploiting the trust that users and web applications have, particularly the inherent trust a website has in its users and their browsers.\n3.  Both vulnerabilities can lead to client-side consequences, affecting what a user can see or do on a web application.\n4.  Both XSS and CSRF can lead to serious consequences, including access to sensitive information, data breaches, account hijacking, and website defacement.\n\n**Differences between XSS and CSRF include:**\n\n1.  **Different focus:** While XSS primarily targets the user's browser and client-side security, CSRF primarily targets the server and authentication mechanisms.\n2.  **Different attack mechanisms (vectors):** XSS involves injecting malicious scripts (typically JavaScript) into a website, which then executes in the user's browser when they visit the compromised page. Contrary, CSRF involves an attacker crafting a malicious link or form that, when clicked or submitted by the unsuspecting user, sends a request to the target website as if it were from the user themselves.\n3.  **Different data handing:** In XSS the attacker can potentially read the response of the malicious script's execution and extract data to their own server. In CSRF, the attacker can only send requests, but they cannot directly receive the responses from the target website.\n4.  **Different session requirement:** XSS can be successful regardless of the user's session status (authenticated or not), but CSRF requires the user to have an active session with the targeted website."
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "question_id": "7a2b5a08-0e9a-4f84-9b18-8f6a6f38db20",
+   "title": "2025 CSSA, Fam_Q15,   SQL",
+   "topic": "2025 CSSA, Fam_Q15,   SQL",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "fa4b1c1f-fc6a-4f54-bf17-39d51c53c317",
+     "part": "Question 15",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SQL",
+     "prompt": "An online business is planning to use a database to keep track of its products. The contents of the **Products** table during testing are shown below:\n\n| ProductID | ProductName | ProductPrice |\n|---|---|---|\n| P001 | The Plant (DVD) | 28.00 |\n| P002 | Discovery 1 and 2 (DVD) | 26.98 |\n| P003 | Travel 1 and 2 (Blu-Ray) | 22.00 |\n| P004 | The Best Movie (DVD) | 19.98 |\n| P005 | Celebration (DVD) | 12.00 |\n\nAfter executing a SQL query, the following results were obtained:\n\n| ProductName | ProductPrice |\n|---|---|\n| Celebration (DVD) | 12.00 |\n| The Best Movie (DVD) | 19.98 |\n| Travel 1 and 2 (Blu-Ray) | 22.00 |\n\nWrite the SQL **SELECT** query that produced the above results.",
+     "prompt_images": [],
+     "question": {
+      "dataset_setup_sql": "CREATE TABLE Products (\n  ProductID TEXT PRIMARY KEY,\n  ProductName TEXT NOT NULL,\n  ProductPrice REAL NOT NULL\n);\n\nINSERT INTO Products (ProductID, ProductName, ProductPrice) VALUES\n('P001','The Plant (DVD)',28.00),\n('P002','Discovery 1 and 2 (DVD)',26.98),\n('P003','Travel 1 and 2 (Blu-Ray)',22.00),\n('P004','The Best Movie (DVD)',19.98),\n('P005','Celebration (DVD)',12.00);",
+      "starter_query": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Substantially correct SQL SELECT statement"
+      },
+      {
+       "marks": "2",
+       "criterion": "Partially correct SQL select statement, with some errors or omissions"
+      },
+      {
+       "marks": "1",
+       "criterion": "An attempt at writing a SQL SELECT statement to meet the requirements"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nSELECT ProductName, ProductPrice\nFROM Products\nWHERE ProductPrice <= 22.00\nORDER BY ProductPrice ASC;\n```\n\n  \n\n_An alternative sample answer:_\n\n```\nSELECT ProductName, ProductPrice\nFROM Products\nWHERE ProductPrice <= 22.00\nORDER BY ProductName ASC;\n```"
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "question_id": "q16",
+   "title": "Question 16",
+   "topic": "Question 16",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "An ISBN is the International Standard Book Number, a globally unique number to identify books. This is usually printed above the barcode on the back cover of most books.\n\nThe last (i.e. the 13th) digit in a 13-digit ISBN (International Standard Book Number) is known as the \"check digit\". The check digit is calculated in the following way:\n\n-   Each of the other 12 digits of the ISBN from left to right is multiplied alternately by 1 or 3. This means that the first digit is multiplied by 1, the second by 3, the third by 1, the fourth by 3, etc.\n-   The results are added together and then divided by 10.\n-   The remainder of this division is subtracted from 10 to give the check digit.\n-   If the check digit is 10 then it is replaced with 0 – this ensures that the check digit is always a single digit.\n\nFor example, in an ISBN of **9780980874921** the last digit (in this case 1) is the check digit. However, we should re-calculate that check digit to ensure that the ISBN has not been entered incorrectly.\n\n(9×1) + (7×3) + (8×1) + (0×3) + (9×1) + (8×3) + (0×1) + (8×3) + (7×1) + (4×3) + (9×1) + (2×3) = 129.\n\nThen, 129 ÷ 10 = 12 remainder 9. Therefore, the check digit is 10 - 9 = 1. In this case the ISBN is valid as our calculated value of 1 matches the provided check digit.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q16-0-15c0480c",
+     "part": "Question 16",
+     "marks_available": 5,
+     "syllabus": null,
+     "answer_type": "CODING",
+     "prompt": "In Python, write the function `checkDiqitOK(isbn_str)` that takes a 13-digit ISBN as the string `isbn_str` and returns True or False indicating whether the ISBN is valid in terms of its check digit. Assume that the provided string `isbn_str` always contains 13 digits – do NOT check whether there are fewer/more digits and do NOT check whether some of the characters are not digits. Do NOT write the main program nor any other subprogram calling `checkDiqitOK(isbn_str)`.\n\n**Hints:**\n\n-   The 13-digit ISBN is provided as a string, so conversion of individual characters into integer digits is needed for the calculations.\n-   You can use Python’s `%` operator to calculate the remainder of a division.",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 5,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "5",
+       "criterion": "Correct Python program that includes ALL of the following 5 features:Loops through each ISBN digit (except the last) and works out the sum of digitsCorrectly distinguishes between digits to multiply by 3 and add vs those to just addCorrectly calculates the check digitPerforms a check to see whether the check digit is 10 and replaces it with 0Compares the calculated check digit to the last digit of the entered ISBN and returns True if they match (correct check digit) or False if they do not (incorrect check digit)"
+      },
+      {
+       "marks": "4",
+       "criterion": "Substantially correct Python program that includes at least 4 of the above features"
+      },
+      {
+       "marks": "3",
+       "criterion": "A sound attempt at the Python program that includes at least 3 of the above features"
+      },
+      {
+       "marks": "2",
+       "criterion": "An attempt at writing the Python program that includes at least 2 of the above features"
+      },
+      {
+       "marks": "1",
+       "criterion": "An attempt at writing the Python program that includes at least 1 of the above features"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\n#Checks whether the check digit of an ISBN is valid\ndef checkDigitOK(isbn_str): #assumes a string with 13 digits provided\n  sumOfDigits = 0 #accumulator for the sum of digits\n  for i in range(12): #loops thru the first 12 digits but not the last/13th\n    #1st digit has Python index 0 (even); 2nd digit has index 1 (odd), etc.\n    if i % 2 == 0: #an even Python index, the digit is multiplied by 1\n      sumOfDigits = sumOfDigits + int(isbn_str[i]) * 1\n    else: #an odd Python index, the digit is multiplied by 3\n      sumOfDigits = sumOfDigits + int(isbn_str[i]) * 3\n  sumModulo = sumOfDigits % 10 #calculates the remainder of division by 10\n  checkDigit = 10 - sumModulo #calculates the check digit\n  if checkDigit == 10: #the special case; checkDigit must have only 1 digit\n    checkDigit = 0\n  #Checking whether the provided ISBN contains the correct check digit\n  if int(isbn_str[-1]) == checkDigit: #last element is at Python index -1\n    return True\n  else:\n    return False\n```\n\n  \n\n_An alternative sample answer:_\n\n```\n#Checks whether the check digit of an ISBN is valid\ndef checkDigitOK(isbn_str): #assumes a string with 13 digits provided\n  sumOfDigits = 0 #accumulator for the sum of digits\n  #the first 12 digits of ISBN contain 6 groups of 2 digits:\n  # the 1st of these 2 digits is multiplied by 1\n  # the 2nd of these 2 digits is multiplied by 3\n  for i in range(6):\n    sumOfDigits = sumOfDigits + int(isbn_str[2*i]) * 1\n    sumOfDigits = sumOfDigits + int(isbn_str[2*i+1]) * 3\n  sumModulo = sumOfDigits % 10 #calculates the remainder of division by 10\n  checkDigit = 10 - sumModulo #calculates the check digit\n  if checkDigit == 10: #the special case; checkDigit must have only 1 digit\n    checkDigit = 0\n  #Checking whether the provided ISBN contains the correct check digit\n  if int(isbn_str[12]) == checkDigit: #last/13th digit is at Python index 12\n    return True\n  else:\n    return False\n```"
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "question_id": "q17",
+   "title": "Question 17",
+   "topic": "Question 17",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Your team is developing the secure PWA ‘nAIs Skin Check PWA’. Using this app, a user first uploads images of their skin moles, personal information (e.g. name, phone number, email, …), demographic information (e.g. age, gender, occupation, …) and medical history. Then, the app uses machine learning / artificial intelligence to determine and show on the screen the probability of melanoma (dangerous skin cancer) in the given skin mole images.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q17-0-7516ed13",
+     "part": "Question 17",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Discuss how the 3 main principles of the ‘privacy by design’ approach should be applied in the development of the ‘nAIs Skin Check PWA’ app.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Discusses applying on the given scenario of 3 of the main principles of 'privacy by design'"
+      },
+      {
+       "marks": "2",
+       "criterion": "Discusses applying on the given scenario of 1 or 2 of the main principles of ‘privacy by design'\nOR\nOutlines 2 or 3 of the main principles of ‘privacy by design'"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of 'privacy by design'\nOR\nOutlines 1 of the main principles of 'privacy by design'"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The 'privacy by design' is built around the 7 main principles: Proactive not reactive; Privacy as a default setting; Privacy embedded into design; Full functionality; End-to-end security; Visibility and transparency; and Respect for user privacy. From these 7, our Software Engineering syllabus emphasises only #1, #3 and #7 so their application on the given ‘nAIs Skin Check PWA' app scenario is discussed here.\n\n**Proactive not reactive approach** is about anticipating risks and preventing privacy-invasive events before they occur. In the ‘nAIs Skin Check PWA' app scenario, the personal and medical information (possibly also some of the demographic information) is personally identifiable information (PII) that must be kept private and protected. It can be anticipated that this sensitive information could be compromised on the client side, transport over the Internet or the server side. Therefore, all information provided by a user should be protected (e.g. encrypted) in transport over the Internet and any client-side and server-side handling, including storage. This is protection in transit, in use and rest.\n\n**Embed privacy into design** is about ensuring that privacy becomes one of the core functions of any system or service. In the ‘nAIs Skin Check PWA' app scenario, this means the app's design must include the decisions to protect all user's information in transport/storage/handling, not storing any user information (neither on the server nor on the client) after a user is shown the probability of melanoma in the given images, and not providing any user information to any 3rd party.\n\n**Respect for user privacy** is about keeping the interest of individuals paramount for any system or service, e.g. by offering strong privacy defaults and user-friendly options, as well as ensuring appropriate notices are given. In the ‘nAIs Skin Check PWA' app scenario, the default protection of all user information in transit/rest/use, the default server-side and client-side secure deletion/destruction of all user information, and the default of not providing of any user information to any 3rd party are strong with respect to user privacy."
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "question_id": "q18",
+   "title": "Question 18",
+   "topic": "Question 18",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Your team is developing the secure PWA ‘nAIs Skin Check PWA’. Using this app, a user first uploads images of their skin moles, personal information (e.g. name, phone number, email, …), demographic information (e.g. age, gender, occupation, …) and medical history. Then, the app uses machine learning / artificial intelligence to determine and show on the screen the probability of melanoma (dangerous skin cancer) in the given skin mole images.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "q18-0-0695952b",
+     "part": "Question 18",
+     "marks_available": 8,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Explain, illustrate on examples from the ‘nAIs Skin Check PWA’ scenario and evaluate strategies that your software development team should use to manage security of programming code, including: code review, SAST, DAST, vulnerability assessment, penetration testing.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 8,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "8",
+       "criterion": "Explains and evaluates all 5 listed strategies for managing security of programming code AND supports this with examples from the given scenario"
+      },
+      {
+       "marks": "7",
+       "criterion": "Explains and evaluates some of the 5 listed strategies for managing security of programming code (while only discussing the others OR explaining them but without evaluating them OR explaining & evaluating them but with errors) AND supports this with examples from the given scenario"
+      },
+      {
+       "marks": "6",
+       "criterion": "Discusses all 5 listed strategies for managing security of programming code AND supports this discussion with examples from the given scenario"
+      },
+      {
+       "marks": "5",
+       "criterion": "Discusses some of 5 listed strategies for managing security of programming code (while only outlining the others or discussing them but with errors) AND supports this discussion with examples from the given scenario"
+      },
+      {
+       "marks": "4",
+       "criterion": "Correctly outlines all 5 listed strategies for managing security of programming code"
+      },
+      {
+       "marks": "3",
+       "criterion": "Correctly outlines some of the 5 listed strategies for managing security of programming code"
+      },
+      {
+       "marks": "2",
+       "criterion": "Shows some understanding of strategies for managing security of programming code"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "**Code review**, Static Application Security Testing (SAST), Dynamic Application Security Testing (DAST), vulnerability assessments, and penetration testing are all valuable strategies for managing the security of programming code, but they serve different purposes and are most effective when used in combination.\n\n**Code review** is a manual (or partially automated) process of systematically examining source code to identify security flaws, logic errors, other mistakes or quality issues, and adherence to coding standards. In the ‘nAIs Skin Check PWA' app scenario, this would mean that some team members systematically review code written by other team members and provide improvement feedback. Code review encourages knowledge sharing, catches vulnerabilities and bugs early in the development cycle, reduces the cost of remediation, and enhances both code quality and security. Its limitations include: can be time-consuming and may not identify all runtime vulnerabilities.\n\n**Static Application Security Testing (SAST)** is a white-box testing method that analyses source code for security vulnerabilities without executing the program. In the ‘nAIs Skin Check PWA' app scenario, some team members would use SAST tools to perform SAST on the app's code without executing it. SAST can identify vulnerabilities (such as SQL injection, buffer overflows, insecure APIs) early in the development process. Its limitations include producing false positives and not detecting runtime-specific vulnerabilities.\n\n**Dynamic Application Security Testing (DAST)** is a black-box testing method that runs software and analyses its behaviour (e.g. when exposed to simulated attacks) to find vulnerabilities that are only apparent during runtime. In the scenario, team members would use DAST tools to test the running app with simulated attacks. DAST identifies real-world runtime vulnerabilities and can find issues related to configuration and runtime environments. Its limitations include occurring later in the development cycle and being more time-consuming than SAST.\n\n**Vulnerability assessment** is a systematic process of identifying, quantifying, classifying and prioritizing security vulnerabilities in an application. In the ‘nAIs Skin Check PWA' app scenario, team members would use appropriate tools to systematically scan for, identify and prioritise security vulnerabilities in the app. It provides a comprehensive overview of vulnerabilities and helps prioritise remediation efforts. Its limitations include not identifying all vulnerabilities and becoming outdated quickly if not performed regularly.\n\n**Penetration testing** is performing simulated real-world attacks on a system to identify vulnerabilities that can be exploited. In the scenario, external hired white-hat hackers would perform simulated attacks on the running app. It provides a realistic real-world assessment of the security posture and identifies vulnerabilities that may not be detected by other methods. Its limitations include being time-consuming, resource-intensive and expensive, and it is a point-in-time assessment.\n\nIncorporating a combination of these strategies provides a robust approach to managing code security. By integrating these methods into the software development lifecycle, the ‘nAIs Skin Check PWA' app team can significantly enhance their security posture and reduce the risk of vulnerabilities being exploited."
+    }
+   ]
+  }
+ ]
+}

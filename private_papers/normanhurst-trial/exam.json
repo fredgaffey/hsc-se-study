@@ -1,0 +1,1893 @@
+{
+ "exam": "Normanhurst Trial",
+ "private": true,
+ "source": "software.paper.is via the SEN Discord (personal study only)",
+ "duration_minutes": 150,
+ "total_available": 80,
+ "parts_total": 29,
+ "parts_answered": 0,
+ "parts_marked": 0,
+ "total_mark": null,
+ "questions": [
+  {
+   "number": 1,
+   "question_id": "afcecb99-a7a1-4e19-9b6a-25ca48870dbe",
+   "title": "SE: Selection - Project phases",
+   "topic": "SE: Selection - Project phases",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "e7af62e6-f72e-4526-8ac9-d00dd977dc93",
+     "part": "Question 1",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Match each task with the correct software project phase.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "Identifying and defining",
+       "Research and planning",
+       "Producing and implementing",
+       "Testing and evaluating"
+      ],
+      "rows": [
+       {
+        "statement": "Analyse requirements",
+        "correct": [
+         "Identifying and defining"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Choose lifecycle model",
+        "correct": [
+         "Research and planning"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Investigate tools & brainstorm",
+        "correct": [
+         "Research and planning"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Optimise compiled code",
+        "correct": [
+         "Producing and implementing"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Research social / ethical issues",
+        "correct": [
+         "Research and planning"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Write source code",
+        "correct": [
+         "Producing and implementing"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Compare expected vs actual output",
+        "correct": [
+         "Testing and evaluating"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Draft algorithms & documentation",
+        "correct": [
+         "Producing and implementing"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Analyse requirements",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Choose lifecycle model",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Investigate tools & brainstorm",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Optimise compiled code",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Research social / ethical issues",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Write source code",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Compare expected vs actual output",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Draft algorithms & documentation",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "7-8 correct"
+      },
+      {
+       "marks": "2",
+       "criterion": "4-6 correct"
+      },
+      {
+       "marks": "1",
+       "criterion": "1-3 correct"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "question_id": "63fbf485-ec2f-46e8-8818-4e4168fc88b4",
+   "title": "SE: MC - Regression Model",
+   "topic": "SE: MC - Regression Model",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "c3962a6b-34ad-40ff-8670-9a7631c01105",
+     "part": "Question 2",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A real estate agency wants to build a model to predict whether a house is likely to be sold  \nwithin 60 days based on features such as its price, location score, number of bedrooms, and  \nage. Based on the scenario above, which regression model is most appropriate, and why?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Linear regression, because it can handle multiple input features and will predict the number of days it takes to sell the house.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Polynomial regression, because housing data often involves curved relationships between price and location.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Logistic regression, because the goal is to classify whether a house will be sold within a specific time frame.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Polynomial regression, because the number of bedrooms and age of the house are discrete variables requiring non-linear models.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "question_id": "3430b57f-1c85-444f-b18f-eb68cd4739e1",
+   "title": "SE: MC - Implementation Method",
+   "topic": "SE: MC - Implementation Method",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "d96f6843-a7e4-40dd-8340-84ab06412fe1",
+     "part": "Question 3",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A new payroll system is first switched on for only the HR department, then gradually for other departments once stability is confirmed. Which implementation strategy is this?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Direct",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Phased",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Parallel",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Pilot",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "question_id": "4dbf3e27-5bb8-47aa-aeab-078a1609dc39",
+   "title": "SE: MC - Email Protocols",
+   "topic": "SE: MC - Email Protocols",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "25084293-79e2-48cf-9337-1e2b47277924",
+     "part": "Question 4",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "An email client downloads messages from a mail server while leaving copies on the server. Which protocol is used for this purpose?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "SMTP",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "IMAP",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "FTP",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "POP3",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "question_id": "26a586ac-9a75-40fb-88f4-1d40ab3dbcab",
+   "title": "SE: MCM - Sandboxing",
+   "topic": "SE: MCM - Sandboxing",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "dad6006d-b583-491c-aff5-860f777d286b",
+     "part": "Question 5",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What are the benefits of using sandboxing in software development or deployment?\n\n{Multiple items may be selected).",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Replaces the need for authentication by isolating users",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Isolates untrusted code",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Enables controlled testing",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Reduces the need for secure coding practices in application development",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "E",
+        "text": "Reduces the risk of security vulnerabilities affecting other parts of the system",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "F",
+        "text": "Improves execution speed by isolating software from operating system processes",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "G",
+        "text": "Protects live data during development and training",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B",
+       "C",
+       "E",
+       "G"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "question_id": "80ed7881-e7d6-4fd6-9b64-58170a1f7e0c",
+   "title": "SE: MC - Automation Social",
+   "topic": "SE: MC - Automation Social",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "3f50d3dc-4069-4229-958d-b7efc92c1b46",
+     "part": "Question 6",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is the most effective approach to ensuring that automation benefits society as a  \nwhole?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Allow market forces to guide the adoption of automation, trusting that economic growth will naturally lead to broader societal benefits.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Prioritise technological advancement and productivity gains, with social concerns addressed only after implementation.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Encourage collaboration between policymakers, educators, and businesses to promote inclusivity, skill development, and sustainability.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Limit the use of automation to industries with low employment rates.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "question_id": "e8fb6ee9-b64b-43b5-8118-0f077afa4171",
+   "title": "SE:MC - Type of Attack",
+   "topic": "SE:MC - Type of Attack",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "defd869d-3670-47e6-a5b8-bcd5b0acec83",
+     "part": "Question 7",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A user logs into their bank's website, which allows money transfers via a button. A hacker  \nsends the user a malicious email containing a link. When the user clicks the link, a money  \ntransfer request is executed without their knowledge.\n\nWhat type of attack is this?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Cross-Site Request Forgery (CSRF)",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Cross-Site Scripting (XSS)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Denial of Service (DoS)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "SQL Injection",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "question_id": "97dff43c-ad32-4964-a023-ba7ba7924365",
+   "title": "SE: MCM - CSS",
+   "topic": "SE: MCM - CSS",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "51a8f341-bdd7-46bc-b0e4-e3591d7775e7",
+     "part": "Question 8",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Consider the following CSS code.\n\n  \nbody {  \n    background-color: #00ff00;  \n    color: #ff0000;  \n    margin: 10px;  \n    font-family: Aptos, bold;  \n}  \nh1 {  \n    color: #000000;  \n    text-align: left;  \n}  \np {  \n    font-size: 18px;  \n}  \n  \nWhich of the following is true for pages styled using the above CSS code?\n\n{Multiple items may be selected).",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Paragraph text is displayed in white",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "All heading text {h1, h2, etc.) will be black",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "The color property in the body overrides the h1 text color",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Only the h1 heading text is left-aligned",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "E",
+        "text": "The background of the page is green",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "F",
+        "text": "All fonts will be bold if Aptos is not available",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "G",
+        "text": "Body text is hard against the left side of the screen",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "H",
+        "text": "Text within <p> tags will be red",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "I",
+        "text": "All text will be in a font size of 18 pixels",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D",
+       "E",
+       "F",
+       "H"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "question_id": "ad0aa1b0-d121-4686-836e-b72f18faafc3",
+   "title": "SE: MC - Q11 DoE 2025",
+   "topic": "SE: MC - Q11 DoE 2025",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "041dee95-f133-4e75-9534-38a7e33f1a21",
+     "part": "Question 9",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "![](assets/9.png.png)\n\nWhich Machine Learning model is most appropriate for predicting new values based on the data given in the graph?",
+     "prompt_images": [
+      "assets/9.png.png"
+     ],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Decision tree",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Polynomial regression",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Linear regression",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "K Nearest Neighbour",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "question_id": "4ae677d0-2933-427d-979c-c2772c3f489b",
+   "title": "SE: MC - Q10 DoE 2025",
+   "topic": "SE: MC - Q10 DoE 2025",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "There are many different algorithms available for encrypting data, each with different strengths and weaknesses.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "2e10d570-8ecd-4376-9bfa-df9580ba8ec7",
+     "part": "Question 10 (a)",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In which software development step would a software engineering team need to decide on the specific algorithm they will use?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Requirements Definition",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Design",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Development",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Integration",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    },
+    {
+     "part_id": "2fca534b-2f65-43e2-9c15-27584ab020df",
+     "part": "Question 10 (b)",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Hashing algorithms are used to create a unique representation of data. They have many uses in encryption and security.\n\nIdentify 3 essential features of a hashing algorithm.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "question_id": "012d919c-8e98-4cb8-a59a-b71d15db8ebb",
+   "title": "SE: MC - Q2 DoE 2025",
+   "topic": "SE: MC - Q2 DoE 2025",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "0c4e1a6e-daf7-4656-a957-0d03ff1563bc",
+     "part": "Question 11",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which language is typically used for client-side programming?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "PHP",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Python",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "JavaScript",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "SQL",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "question_id": "b6cbb19a-9261-4abd-a58b-4bb17898711a",
+   "title": "SE: MC - Q3 DoE 2025",
+   "topic": "SE: MC - Q3 DoE 2025",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "45fd60d8-893b-40f4-83b2-0abe396ffec4",
+     "part": "Question 12",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A common machine learning model for unsupervised machine learning is:",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Logistic regression",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Linear regression",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Neural network",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "K-Nearest Neighbour",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "question_id": "f033298f-aab7-4e08-b750-73a11fa20f6a",
+   "title": "SE: Class Diagram (4)",
+   "topic": "SE: Class Diagram",
+   "label": "4",
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "8c2a7c56-33fc-423e-a0bd-27921720cde3",
+     "part": "Question 13",
+     "marks_available": 5,
+     "syllabus": "Software Engineering",
+     "answer_type": "DRAWING_V2",
+     "prompt": "A school library lets students reserve items online and collect them from smart lockers. If an item is returned late, a late fee is recorded on the reservation. Staff can waive this fee. The system treats all people as Users with a role (Student or Staff).\n\nDraw a class diagram using no more than four classes (use exactly these four):\n\n-   User (represents both students and staff)\n-   Item\n-   Reservation\n-   Locker",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 5,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "5",
+       "criterion": "Develops a substantially correct class diagram with correct notation"
+      },
+      {
+       "marks": "4",
+       "criterion": "Develops a mostly correct class diagrams with one significant omission or minor errors"
+      },
+      {
+       "marks": "3",
+       "criterion": "Develops a class diagram with some logical inaccuracies or omissions in detail"
+      },
+      {
+       "marks": "2",
+       "criterion": "Develops a partial class diagram"
+      },
+      {
+       "marks": "1",
+       "criterion": "Demonstrates some understanding of a class diagram"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![](assets/a13.png.png)",
+     "sample_answer_images": [
+      "assets/a13.png.png"
+     ]
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "question_id": "560e14c9-648b-479b-9e69-cd7497c8403a",
+   "title": "SE: Structure (4)",
+   "topic": "SE: Structure",
+   "label": "4",
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "4fd54ba6-c160-4f59-b10d-87820794d112",
+     "part": "Question 14",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "DRAWING_V2",
+     "prompt": "Consider the following algorithm below written for a music program.\n\nBEGIN Main  \n    REPEAT  \n        GET choice  \n        CASEWHERE choice is:  \n            \"Search\": song = Search()  \n            \"Add to Playlist\": AddToPlaylist(song, playlist)  \n            \"Play playlist\": PlaySongs(playlist)  \n        ENDCASE  \n     UNTIL software is closed  \nEND Main\n\nDraw a structure chart that represents the music program.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Provides a structure chart that correctly addresses:\n\nThe hierarchy of modules\nRepetition\nChoice between modules\nParameters passed"
+      },
+      {
+       "marks": "3",
+       "criterion": "Provides a structure chart that addresses THREE of the requirements"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a structure chart that addresses TWO of the requirements"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides a structure chart that addresses ONE of the requirements"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![](assets/a14.png.png)",
+     "sample_answer_images": [
+      "assets/a14.png.png"
+     ]
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "question_id": "8f1ac2c7-1949-404e-9ca6-253fe530e303",
+   "title": "SE: DFD0 (3)",
+   "topic": "SE: DFD0",
+   "label": "3",
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "97f4dc12-aeda-4c64-b009-37da482d0627",
+     "part": "Question 15",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "DRAWING_V2",
+     "prompt": "A high school canteen app lets students pre-order lunch, pay digitally, and pick up via QR code. The system integrates with a payment gateway and a menu/inventory database.\n\n  \nDraw a Level 0 data flow diagram for the “Smart Canteen System”.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Develops a substantially correct Level 0 DFD"
+      },
+      {
+       "marks": "2",
+       "criterion": "Develops a mostly correct Level 0 DFD with some errors"
+      },
+      {
+       "marks": "1",
+       "criterion": "Demonstrates some understanding of a Level 0 DFD"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "question_id": "99b50a14-8729-45a3-9eed-64a8c978a719",
+   "title": "SE: OOP Code (7)",
+   "topic": "SE: OOP Code",
+   "label": "7",
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "5b56eca0-bf25-4e93-a899-7cc43887bcbb",
+     "part": "Question 16",
+     "marks_available": 7,
+     "syllabus": "Software Engineering",
+     "answer_type": "CODING",
+     "prompt": "Create a class called Vehicle with a constructor that takes in the make, model and year.\n\nThe class should have methods get\\_make(), get\\_model(), and get\\_year() that return the respective values.\n\nCreate two classes, Car and Truck, that inherit from Vehicle.\n\nThe Car class should have an additional method get\\_type() that returns “Car” and the Truck class should have an additional method get\\_type() that returns “Truck”.\n\nCreate instances of both classes and call the methods to display the values.",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 7,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "7",
+       "criterion": "Produces a compilable correct algorithm to meet all requirements:\n\nOOP Syntax\nCorrect class/method names and attributes\nConstructor\nMethods\nInheritance\nPolymorphism\nObject instantiation\nDisplay output"
+      },
+      {
+       "marks": "6",
+       "criterion": "Produces an algorithm which completes at least 6 of the listed steps."
+      },
+      {
+       "marks": "5",
+       "criterion": "Produces an algorithm which completes at least 5 of the listed steps."
+      },
+      {
+       "marks": "4",
+       "criterion": "Produces an algorithm which completes at least 4 of the listed steps."
+      },
+      {
+       "marks": "3",
+       "criterion": "Produces an algorithm which completes at least 3 of the listed steps."
+      },
+      {
+       "marks": "2",
+       "criterion": "Produces an algorithm which completes at least 2 of the listed steps."
+      },
+      {
+       "marks": "1",
+       "criterion": "Produces an algorithm which completes at least 1 of the listed steps."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "class Vehicle:  \n    def \\_\\_init\\_\\_(self, make, model, year):  \n        self.\\_make = make  \n        self.\\_model = model  \n        self.\\_year = year\n\n    def get\\_make(self):  \n        return self.\\_make\n\n    def get\\_model(self):  \n        return self.\\_model\n\n    def get\\_year(self):  \n        return self.\\_year\n\n  \nclass Car(Vehicle):  \n    def get\\_type(self):  \n        return \"Car\"\n\n  \nclass Truck(Vehicle):  \n    def get\\_type(self):  \n        return \"Truck\"\n\n  \n\\# Create instances  \nmy\\_car = Car(\"Toyota\", \"Corolla\", 2022)  \nmy\\_truck = Truck(\"Ford\", \"Ranger\", 2021)\n\n\\# Display values  \nfor vehicle in (my\\_car, my\\_truck):  \n    print(f\"Type: {vehicle.get\\_type()}\")  \n    print(f\"Make: {vehicle.get\\_make()}\")  \n    print(f\"Model: {vehicle.get\\_model()}\")  \n    print(f\"Year: {vehicle.get\\_year()}\")  \n    print(\"-\" \\* 30)"
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "question_id": "bfefc435-7448-42da-b6a5-a3b3f71a405e",
+   "title": "SE: Code (6)",
+   "topic": "SE: Code",
+   "label": "6",
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "993c6b74-9735-4376-802a-7ef5351b2751",
+     "part": "Question 17",
+     "marks_available": 6,
+     "syllabus": "Software Engineering",
+     "answer_type": "CODING",
+     "prompt": "The K-Nearest Neighbours (KNN) algorithm is used to classify a new data point by comparing it to existing classified/labelled data points. It calculates the Euclidean distance between the new data point (shown as a question mark on the chart below) and every other point in the training data. It then counts the labels of the k closest points. The most common label among these neighbours is the predicted label assigned to the new point.\n\n![KNN Image](assets/17.png.png)\n\nWrite an algorithm for a function called **knn**. It is passed:\n\n-   newPoint: the x and y coordinates of the point to classify as A, B, C or D\n-   tData: an array of x and y coordinates for all labelled points\n-   tlabels: an array of strings with the label A, B, C or D for each known point\n-   k: an integer\n\nYou may use the following pre-defined functions in your algorithm:\n\n-   distance(p1, p2): returns the Euclidian distance between two (x, y) points.  \n    _eg. distance(\\[x1, y1\\], \\[x2,y2\\])_\n-   sort(pairlist): sorts an array of \\[distance, label\\] pairs in ascending order by distance\n-   mode(array): returns the label that occurs most frequently in an array\n\nYour algorithm should return the predicted label for the new data point.",
+     "prompt_images": [
+      "assets/17.png.png"
+     ],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 6,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "6",
+       "criterion": "Produces a substantially correct algorithm which:\n&bull; Accepts the correct parameters and returns the label\n&bull; Calculates distance between the test point and all training points\n&bull; Selects the k closest points\n&bull; Extracts labels and determines the most common label\n&bull; Uses provided helper functions appropriately and efficiently"
+      },
+      {
+       "marks": "5",
+       "criterion": "Produces an algorithm which completes at least four of the listed steps with minor errors."
+      },
+      {
+       "marks": "4",
+       "criterion": "Produces an algorithm which completes at least three of the listed steps but contains errors."
+      },
+      {
+       "marks": "3",
+       "criterion": "Produces an algorithm which completes at least two of the listed steps but contains errors."
+      },
+      {
+       "marks": "2",
+       "criterion": "Produces an algorithm which attempts some of the listed steps, but with significant errors."
+      },
+      {
+       "marks": "1",
+       "criterion": "Makes an attempt at an algorithm which relates to the question."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "def knn(newPoint, tData, tlabels, k):  \n    distances = \\[\\]  \n    FOR i = 0 TO length of tData STEP 1  \n        d = distance(newPoint, tData\\[i\\])  \n        append \\[d, tlabels\\[i\\]\\] to distances  \n    NEXT i  \n    distances= sort(distances)\n\n    nearest=\\[\\]  \n    FOR i = 0 TO k - 1 STEP 1  \n        append distances\\[i\\]\\[1\\] to nearest  \n    NEXT i\n\n    label = mode(nearest)  \n    return label\n\n  \nThe above pseudocode uses Python-like syntax to specify arrays as lists. There is no direction in course specifications, so given Python is now specified we presume such syntax is preferred or at least will be equally acceptable to HSC examiners."
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "question_id": "0f1bdf53-ac56-4f9f-9649-f1cb191fcd82",
+   "title": "SE: SA - CIA (4)",
+   "topic": "SE: SA - CIA",
+   "label": "4",
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "34649ee2-5600-46e4-913b-c7da71731f8b",
+     "part": "Question 18",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "The school’s submission portal stores assessment files behind API endpoints such as  \n`/api/submissions/{classCode}/{studentId}/{filename}`.  \nWhile uploading, a student notices in the browser’s Network tab that the `studentId` in the URL is sequential. By changing this value, they can download other students’ files (the server does not re-check ownership). The portal also lets students re-upload a file with the same name via `PUT /api/submissions`, which silently overwrites the existing file. Finally, the portal accepts a client-supplied `submittedAt` timestamp that is not validated server-side, allowing students to backdate uploads after the deadline.\n\nDescribe how confidentiality, accountability and integrity has been compromised in this  \nscenario.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Clearly describes how confidentiality, accountability and integrity has been compromised."
+      },
+      {
+       "marks": "3",
+       "criterion": "Describes how confidentiality, accountability and integrity has been compromised."
+      },
+      {
+       "marks": "2",
+       "criterion": "Describes how TWO of confidentiality, accountability and integrity has been compromised."
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides a response with some relevance to compromised confidentiality, accountability or\nintegrity."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "-   **Confidentiality:** Other students’ work is exposed through broken access control, changing `studentId` grants unauthorised read access to private files.\n    \n-   **Integrity:** The overwrite on PUT lets a student alter or replace a prior submission (even a graded one) and the unvalidated `submittedAt` allows backdating, so stored records no longer reliably reflect the true content or time.\n    \n-   **Accountability:** With no versioning or immutable audit trail, the system cannot prove who changed what and when; accepting client timestamps undermines non-repudiation.\n    \n-   **Synthesis/impact:** Together, these flaws break the CIA goals of the system, private work is leaked, records can be tampered with, and actions aren’t traceable, requiring server-side authorisation checks, server-generated timestamps, and write-once versioning to remediate."
+    }
+   ]
+  },
+  {
+   "number": 19,
+   "question_id": "f031bfda-24f7-453a-a23d-c0bba9271538",
+   "title": "SE: Code (4)",
+   "topic": "SE: Code",
+   "label": "4",
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "b5d022ff-6e65-4579-b0fd-e591e98301ab",
+     "part": "Question 19",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "CODING",
+     "prompt": "In the 20 x 20 grid below, four numbers along a row have been marked in red.\n\n08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08  \n49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00  \n81 49 31 73 55 79 14 **29 93 71 40** 67 53 88 30 03 49 13 36 65  \n52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91  \n22 31 16 71 51 67 63 89 41 92 36 54 22 40 40 28 66 33 13 80  \n24 47 32 60 99 03 45 02 44 75 33 53 78 36 84 20 35 17 12 50  \n32 98 81 28 64 23 67 10 26 38 40 67 59 54 70 66 18 38 64 70  \n67 26 20 68 02 62 12 20 95 63 94 39 63 08 40 91 66 49 94 21  \n24 55 58 05 66 73 99 26 97 17 78 78 96 83 14 88 34 89 63 72  \n21 36 23 09 75 00 76 44 20 45 35 14 00 61 33 97 34 31 33 95  \n78 17 53 28 22 75 31 67 15 94 03 80 04 62 16 14 09 53 56 92  \n16 39 05 42 96 35 31 47 55 58 88 24 00 17 54 24 36 29 85 57  \n86 56 00 48 35 71 89 07 05 44 44 37 44 60 21 58 51 54 17 58  \n19 80 81 68 05 94 47 69 28 73 92 13 86 52 17 77 04 89 55 40  \n04 52 08 83 97 35 99 16 07 97 57 32 16 26 26 79 33 27 98 66  \n88 36 68 87 57 62 20 72 03 46 33 67 46 55 12 32 63 93 53 69  \n04 42 16 73 38 25 39 11 24 94 72 18 08 46 29 32 40 62 76 36  \n20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16  \n20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54  \n01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48\n\nThe product of these numbers is 7,759,480.\n\nWrite a function in Python called 'GreatestProduct' which takes in a 2D array (20 x 20) and returns the greatest product of four adjacent numbers in the same direction (up, down, left, or right).",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Writes a correct algorithm to satisfy the problem requirements"
+      },
+      {
+       "marks": "3",
+       "criterion": "Writes a mostly correct algorithm to satisfy the problem requirements with minor errors"
+      },
+      {
+       "marks": "2",
+       "criterion": "Writes an algorithm to satisfy some problem requirements"
+      },
+      {
+       "marks": "1",
+       "criterion": "Demonatrates some understanding of an algorithm to solve a problem"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "def GreatestProduct(grid):  \n    GRID\\_SIZE   = 20      # rows and columns  \n    RUN\\_LENGTH  = 4       # how many consecutive numbers to multiply  \n    max\\_product = 0\n\n    for row in range(GRID\\_SIZE):  \n        for col in range(GRID\\_SIZE):\n\n            # ---- horizontal product (to the right) ----  \n            if col <= GRID\\_SIZE - RUN\\_LENGTH:  \n                product = 1  \n                for offset in range(RUN\\_LENGTH):  \n                    product \\*= grid\\[row\\]\\[col + offset\\]  \n                max\\_product = max(max\\_product, product)\n\n            # ---- vertical product (downwards) ----  \n            if row <= GRID\\_SIZE - RUN\\_LENGTH:  \n                product = 1  \n                for offset in range(RUN\\_LENGTH):  \n                    product \\*= grid\\[row + offset\\]\\[col\\]  \n                max\\_product = max(max\\_product, product)\n\n    return max\\_product"
+    }
+   ]
+  },
+  {
+   "number": 20,
+   "question_id": "f0d377a2-71ba-4180-90ae-79a8cac35b80",
+   "title": "SE: SA - validation/sanitation (2) Q7 DoE 2025",
+   "topic": "SE: SA - validation/sanitation (2) Q7 DoE 2025",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "93e7ccff-e8c6-48b8-b8b6-879aba3d6106",
+     "part": "Question 20",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Briefly describe the difference between input validation and input sanitisation as defensive data input handling practices, providing an example of each.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Describes validation and sanitation with appropriate examples."
+      },
+      {
+       "marks": "1",
+       "criterion": "Describes validation and sanitation with poorly chosen examples or no examples."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Input validation involves checking the data provided by users to ensure it meets specific criteria, eg ensuring a phone number is numeric.\n\nInput sanitation involves cleaning or altering the input data to remove or neutralise potentially harmful elements, eg SQL injection or XSS."
+    }
+   ]
+  },
+  {
+   "number": 21,
+   "question_id": "e69a9128-716f-4c8d-a184-31963ad3cc25",
+   "title": "SE: SA - ML & BPA (4) Q15 DoE 2025",
+   "topic": "SE: SA - ML & BPA (4) Q15 DoE 2025",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "eae785eb-1c03-4059-9e5e-885d7f92db13",
+     "part": "Question 21",
+     "marks_available": 4,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Click Shoe Warehouse is an online store for Australian-made shoes.\n\nThey want to know which of their shoe sizes and styles sell the best in each season.\n\nThey have prepared a spreadsheet with 10 years of monthly sales history, organised by style and size. \n\nExplain how Machine Learning and Business Process Automation can help ‘Click Shoe Warehouse’ achieve its goal.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Comprehensive explanation of how Machine Learning can analyse sales data to identify patterns in shoe sizes and styles for each season.\n\nDetailed understanding of how Business Process Automation can streamline data processes and improve efficiency.\n\nClear integration of Machine Learning and Automation, demonstrating how they work together to forecast trends and automate inventory adjustments.\n\nProvides specific, relevant examples of practical implications for Click Shoe Warehouse, such as optimising stock levels and improving marketing strategies."
+      },
+      {
+       "marks": "3",
+       "criterion": "Good explanation of how Machine Learning identifies patterns in sales data, but may lack some detail.\n\nDescribes how Business Process Automation improves efficiency, though with less depth.\n\nSome integration of Machine Learning and Automation concepts, showing partial understanding of their combined impact.\n\nOffers examples of practical implications, but they may be less specific or relevant."
+      },
+      {
+       "marks": "2",
+       "criterion": "Basic mention of Machine Learning with limited explanation of its role in analysing sales data.\n\nBrief or unclear description of Business Process Automation.\n\nMinimal integration of the two concepts; understanding of their combined impact is weak.\n\nProvides vague or general examples of implications for the business."
+      },
+      {
+       "marks": "1",
+       "criterion": "Inadequate or incorrect explanation of Machine Learning and its application.\n\nLittle to no mention or inaccurate depiction of Business Process Automation.\n\nNo integration of concepts; fails to demonstrate understanding of their relationship.\n\nLacks practical examples or fails to connect implications to Click Shoe Warehouse."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Machine Learning (ML) and Business Process Automation (BPA) can significantly enhance the operations and overall efficiency of Click Shoe Warehouse, helping the company achieve its goals in several ways:\n\nML algorithms can analyse customer behaviour and preferences to provide personalised product recommendations. By understanding past purchases and browsing habits, Click Shoe Warehouse can enhance customer experience and increase sales.\n\nML can predict demand for various shoe styles and sizes based on trends, seasonality, and historical data. This can help Click Shoe Warehouse optimise inventory levels, reduce stockouts, and minimise excess inventory.\n\nML models can analyse market trends, competitor pricing, and customer sensitivity to price changes. This enables Click Shoe Warehouse to set optimal prices that maximise profit margins while remaining competitive.\n\nBy using ML algorithms, the warehouse can segment customers based on their purchasing behaviour and demographics. This segmentation allows for targeted marketing campaigns that are more likely to resonate with specific customer groups.\n\nML can help identify unusual patterns in transaction data, enabling Click Shoe Warehouse to detect and prevent fraudulent activities, thereby protecting the business and its customers.\n\nAutomating the order fulfilment process can streamline operations, reduce human error, and speed up delivery times. BPA can manage order confirmations, invoicing, and shipping notifications efficiently.\n\nImplementing chatbots and automated response systems can enhance customer service by providing instant responses to queries regarding product availability, order status, and return policies. This improves customer satisfaction and reduces the workload on customer service representatives.\n\nBPA can automate communication with suppliers, track shipments, and manage procurement processes. This leads to a more efficient supply chain, ensuring that Click Shoe Warehouse maintains optimal stock levels and reduces lead times.\n\nAutomation tools can manage and execute marketing campaigns across multiple channels (email, social media, etc.). This ensures that marketing efforts are timely and consistent, while also allowing for data-driven adjustments based on performance metrics.\n\nBPA can streamline data collection and reporting processes, providing real-time insights into sales performance, customer behaviour, and operational efficiency. This data can inform strategic decisions and help Click Shoe Warehouse adapt to market changes quickly.\n\nBy integrating Machine Learning and Business Process Automation, Click Shoe Warehouse can enhance operational efficiency, improve customer satisfaction, and drive revenue growth. ML provides valuable insights and predictive capabilities, while BPA streamlines processes and reduces manual workload, allowing the company to focus on strategic initiatives and customer engagement. Together, these technologies can help Click Shoe Warehouse achieve its business goals effectively."
+    }
+   ]
+  },
+  {
+   "number": 22,
+   "question_id": "4338c96e-941d-4037-aaea-d4f7171b7c42",
+   "title": "SE: SA - ML and AI impacts (5) Q18 DoE 2025",
+   "topic": "SE: SA - ML and AI impacts (5) Q18 DoE 2025",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "99b23378-54ac-4bec-8a2a-7f3ce28049e6",
+     "part": "Question 22",
+     "marks_available": 5,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Assess positive and negative impacts of machine learning and artificial intelligence on production efficiency, waste and the environment.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 5,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "5",
+       "criterion": "Elaborates both several positive and several negative potential impacts, providing a reasonable (more optimistic than cautious) balance between them"
+      },
+      {
+       "marks": "4",
+       "criterion": "Provides both several positive and several negative potential impacts, but does not elaborate them sufficiently"
+      },
+      {
+       "marks": "3",
+       "criterion": "Elaborates only several positive impacts without discussing negative ones\n\nOR\n\nElaborates only several negative impacts without discussing positive ones"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines only 1 positive AND 1 negative potential impact without elaborating"
+      },
+      {
+       "marks": "1",
+       "criterion": "Outlines only 1 positive OR 1 negative potential impact without elaborating"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "While AI and ML hold significant promise for enhancing the production efficiency and reduce waste that pollutes the environment, they also pose challenges that need to be addressed to ensure that benefits are maximised while minimising negative impacts on the environment and society.\n\n Potential positive impacts:\n\n-   Increased Production Efficiency – AI and ML can optimise manufacturing processes by analysing data and identifying inefficiencies. This leads to faster production times, reduced downtime, and more streamlined operations, ultimately maximising output.\n-   Waste Reduction – AI can help in minimising waste by predicting demand more accurately, leading to better inventory management. By aligning production closely with actual demand, manufacturers can reduce overproduction and excess inventory, which contributes to waste.\n-   Resource Optimisation – Machine learning algorithms can improve the use of materials by identifying the most efficient ways to utilise resources during production. This can lead to lower material costs and less waste, contributing positively to environmental sustainability.\n-   Predictive Maintenance – AI can monitor equipment performance and predict failures before they occur. This proactive approach to maintenance not only extends the lifespan of machinery but also decreases the likelihood of unexpected breakdowns, reducing waste and improving efficiency.Potential negative impacts: \n\n-   Energy Consumption – The implementation of AI systems can lead to significantly increased energy consumption, particularly if the infrastructure required to support these technologies is not energy efficient. This could counteract some environmental benefits.\n-   E-waste Generation – The rapid advancement of AI technologies may lead to shorter product lifespans for machinery and devices, contributing to increased electronic waste (e-waste) if not managed properly."
+    }
+   ]
+  },
+  {
+   "number": 23,
+   "question_id": "a3ccdeea-6e04-4ee5-bb05-b4e722bca985",
+   "title": "SE: SA - Stubs (5) Q21 DoE 2025",
+   "topic": "SE: SA - Stubs (5) Q21 DoE 2025",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "![](assets/23.png.png)",
+   "stimulus_images": [
+    "assets/23.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "07aed05a-d856-428c-aceb-e61f7484aceb",
+     "part": "Question 23 (a)",
+     "marks_available": 1,
+     "syllabus": "Software Engineering",
+     "answer_type": "CODING",
+     "prompt": "The algorithm flowchart shown describes a stub for a login function.\n\nImplement this stub in python code.",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    },
+    {
+     "part_id": "6b90bd8b-b093-4fda-a8b5-0effa49fdb0b",
+     "part": "Question 23 (b)",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "One simple test has been provided below.\n\nProvide at least TWO more tests that could be used, with a comment justifying the use of each one.\n\n\\# Test cases  \n  \nIF login(\"user1\", \"pass123\") == \"Login successful\" THEN  \n  \n       PRINT \"Test case 1 passed\"  \n  \nELSE  \n  \n       PRINT \"Test case 1 failed\"",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Answers could include\n\n\\-          Two incorrect parameters\n\n\\-          One incorrect and one correct parameter\n\n\\-          Empty strings\n\n\\-          Wrong number of parameters\n\nEg:\n\nassert login(\"user1\", \"wrongpass\") \\== \"Login failed\", \"Test case 2 failed\"\n\nassert login(\"wronguser\", \"pass123\") \\== \"Login failed\", \"Test case 3 failed\"\n\nassert login(\"\", \"\") \\== \"Login failed\", \"Test case 4 failed\""
+    },
+    {
+     "part_id": "9ef1c845-14f1-4951-8823-9d37317c6145",
+     "part": "Question 23 (c)",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "You are tasked with writing an error message to return to users in situations where their login attempt fails. This could happen when the password is entered incorrectly or when the username is incorrect.\n\nWhat should you consider when creating these messages?",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Identifies two considerations, including one related to security."
+      },
+      {
+       "marks": "1",
+       "criterion": "Identifies one security consideration OR\n\nIdentifies TWO non-security considerations"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Answers could include:\n\n\\-          Limit exposure of information (eg That username does not exist)\n\n\\-          Provide friendly and non-threatening messaging\n\n\\-          Ensure the message is helpful (eg a password reset link)."
+    }
+   ]
+  },
+  {
+   "number": 24,
+   "question_id": "b1500577-9205-4deb-985a-29f682cbb79f",
+   "title": "SE: SA - Communications (5) Q22 DoE 2025",
+   "topic": "SE: SA - Communications (5) Q22 DoE 2025",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "An Australian toy manufacturing company has recently been established, with offices around the country.\n\nToy manufacturing is subject to strict environmental, workplace health and safety, national and international regulatory frameworks, enforced by the agency AusToy.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "78608ffa-f3cb-4abd-9288-f45fe16b4eba",
+     "part": "Question 24 (a)",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": null,
+     "prompt": "Explain communications issues that may arise due to stakeholders being located all over the country.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "The response clearly identifies and explains multiple communication issues that may arise due to the geographical distribution of stakeholders.\n\nExplanations are directly relevant to the context of the toy manufacturing company and its regulatory environment.\n\nDemonstrates a strong understanding of the implications of the identified issues, including potential impacts on project collaboration, decision-making, or compliance."
+      },
+      {
+       "marks": "2",
+       "criterion": "The response identifies and explains some communication issues related to stakeholder distribution, but may lack some detail.\n\nProvides explanations that are generally relevant to the context, though some points may be less directly connected.\n\nShows a moderate understanding of the implications, with some analysis of potential impacts on the company."
+      },
+      {
+       "marks": "1",
+       "criterion": "The response identifies at least one communication issue, but explanations are limited or unclear.\n\nRelevance to the context of the toy manufacturing company is weak or not clearly established.\n\nDemonstrates a basic understanding of the implications, but lacks depth in analysis or connection to broader impacts."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": "Students may respoond and be awarded marks for any of the following:\n\nAustralia has multiple time zones, which can complicate scheduling meetings or collaborative work sessions. For instance, coordinating a meeting between stakeholders in Sydney and Perth may require careful planning to accommodate different working hours. This can lead to delays in decision-making and project timelines.\n\nDifferent regions may have distinct cultural norms, communication styles, and business practices. Stakeholders from various backgrounds may interpret messages differently, leading to misunderstandings or misinterpretations. This can impact teamwork and the overall effectiveness of communication.\n\nWhile technology facilitates communication, not all stakeholders may have equal access to high-speed internet or the latest communication tools, particularly in remote areas. This can lead to frustration and hinder effective collaboration if some team members struggle to participate fully in meetings or discussions.\n\nPhysical separation can make it challenging to build relationships and rapport among stakeholders. Face-to-face interactions often foster trust and understanding, which can be harder to achieve through virtual communication. This isolation can result in a lack of engagement and team cohesion.\n\nWith multiple communication channels (emails, messaging platforms, video calls), there is a risk of information overload, where stakeholders may miss important updates or context. Conversely, miscommunication can occur when information is not conveyed clearly, leading to confusion about project requirements or expectations.\n\nGiven the strict regulatory frameworks the company must adhere to, communication regarding compliance issues may become complicated. Different stakeholders may have varying levels of understanding or interpretation of these regulations, which can lead to inconsistencies in implementation or reporting.\n\nGathering feedback from stakeholders who are geographically dispersed can be challenging. Delays in feedback can slow down project progress and may result in a lack of alignment on project goals and deliverables. It is essential to establish clear channels and timelines for feedback to mitigate this issue.",
+     "sample_answer": "The geographical distribution of stakeholders in the toy manufacturing company can lead to various communication challenges, including time zone differences, cultural variations, technology access issues, and the complexities of regulatory compliance. Addressing these issues proactively through effective communication strategies and tools is vital for fostering collaboration and ensuring project success."
+    },
+    {
+     "part_id": "b18c7f72-90c5-400b-90f5-74ea67697c86",
+     "part": "Question 24 (b)",
+     "marks_available": 2,
+     "syllabus": "Software Engineering",
+     "answer_type": "SHORT",
+     "prompt": "Compare and contrast Hybrid (also called WAgile) and Waterfall software development methodologies in developing software to control the manufacturing of their toys.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "The response clearly identifies and describes both WAgile and Waterfall methodologies, including key characteristics of each.\nEffectively compares and contrasts the advantages and disadvantages of both methodologies, providing relevant insights for the context of toy manufacturing.\nDemonstrates a strong understanding of how the methodologies apply to the specific context of toy manufacturing, offering a well-reasoned conclusion on which methodology may be more suitable based on the company's needs."
+      },
+      {
+       "marks": "1",
+       "criterion": "The response identifies and describes both WAgile and Waterfall methodologies, but may lack some detail.\nProvides a comparison of the advantages and disadvantages, though some insights may be less relevant to the context.\nShows a moderate understanding of the application to toy manufacturing, with a conclusion that is somewhat reasoned but not fully developed."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": "_Students may be awarded marks for any of the following:_\n\n**Waterfall methodology**\n\n**Description**: the waterfall methodology is a linear and sequential approach to software development. It consists of distinct phases: requirements gathering, design, implementation, testing, deployment, and maintenance. Each phase must be completed before moving on to the next.\n\n**Advantages**:\n\n-   **Clear structure**: the waterfall model provides a clear framework and timeline, making it easy to manage and track progress.\n-   **Well-defined requirements**: since the requirements are gathered upfront, there is less ambiguity about what needs to be developed, which can be beneficial in regulated environments like toy manufacturing.\n-   **Documentation**: each phase produces documentation, which can be useful for compliance and reference purposes, especially regarding regulatory requirements.\n\n**Disadvantages**:\n\n-   **Inflexibility**: once a phase is completed, making changes can be difficult and costly. This can be a significant drawback in a fast-paced manufacturing environment where requirements may evolve.\n-   **Late testing**: testing occurs after development, which can lead to the discovery of major issues late in the process, potentially affecting production timelines.\n\n**Wagile methodology**\n\n**Description**:  \nwagile is a hybrid approach that combines elements of agile and waterfall methodologies. It focuses on flexibility and iterative development while still providing some structure. Wagile allows for incremental progress and regular feedback throughout the development process.\n\n**Advantages**:\n\n-   **Flexibility**: wagile allows for changes and adjustments to be made throughout the development process, accommodating new requirements or feedback from stakeholders.\n-   **Frequent iterations**: the iterative nature allows for regular testing and feedback, which can lead to higher quality software that better meets the needs of the manufacturing process.\n-   **Collaboration**: wagile promotes collaboration among stakeholders, helping to ensure that the software aligns with the evolving needs of the toy manufacturing operations and regulatory frameworks.\n\n**Disadvantages**:\n\n-   **Less predictable**: the flexibility of wagile can make it harder to predict timelines and budgets, which may pose challenges for project management.\n-   **Potential for scope creep**: the ability to make changes throughout the process can lead to scope creep if not managed properly, potentially affecting the project's focus.\n\n**Comparison**\n\n-   **Structure vs. Flexibility**: waterfall is structured and sequential, making it straightforward but inflexible. In contrast, wagile provides flexibility and adaptability, which can be beneficial in a dynamic manufacturing environment.\n-   **Testing timing**: waterfall conducts testing after development, while wagile incorporates testing throughout the process, allowing for quicker identification of issues.\n-   **Stakeholder involvement**: wagile encourages ongoing stakeholder interaction and feedback, whereas waterfall may limit stakeholder involvement to the initial requirements phase.",
+     "sample_answer": "In developing software for controlling toy manufacturing, the choice between WAgile and Waterfall methodologies depends on the company's specific needs. If the manufacturing process requires strict adherence to regulations and well-defined requirements, Waterfall may be more suitable. However, if the company values flexibility and the ability to adapt to changing needs, WAgile could provide a better framework for success by fostering collaboration and iterative improvements."
+    }
+   ]
+  },
+  {
+   "number": 25,
+   "question_id": "fe849825-ef43-4e12-9c81-718094bf1dec",
+   "title": "SE: SQL Library (3)",
+   "topic": "SE: SQL Library",
+   "label": "3",
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "![](assets/25.png.png)",
+   "stimulus_images": [
+    "assets/25.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "9935f0b4-2585-4aad-91a0-fc93c206832c",
+     "part": "Question 25",
+     "marks_available": 3,
+     "syllabus": "Software Engineering",
+     "answer_type": "SQL",
+     "prompt": "A public library stores book details. Management needs a report showing all books published after 2015, listed from the newest title to the oldest.  \n  \nWrite SQL to output this data, meeting the criteria above.",
+     "prompt_images": [],
+     "question": {
+      "dataset_setup_sql": "CREATE TABLE Books (\n  book_id        INTEGER PRIMARY KEY,\n  title          TEXT,\n  author         TEXT,\n  published_year INTEGER\n);\n\nINSERT INTO Books VALUES\n  (1, 'Clean Code',          'Robert Martin', 2008),\n  (2, 'Educated',            'Tara Westover', 2018),\n  (3, 'Project Hail Mary',   'Andy Weir',     2021),\n  (4, 'The Pragmatic Prog.', 'Thomas Hunt',   1999);",
+      "starter_query": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Writes correct SQL code, addressing the criteria"
+      },
+      {
+       "marks": "2",
+       "criterion": "Writes SQL code, addressing most of criteria"
+      },
+      {
+       "marks": "1",
+       "criterion": "Demonstrates some understanding of SQL"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "SELECT title, author  \nFROM   Books  \nWHERE  published\\_year > 2015  \nORDER  BY published\\_year DESC;"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2153 @@
+{
+ "exam": "Merewether Trial",
+ "private": true,
+ "source": "software.paper.is via the SEN Discord (personal study only)",
+ "duration_minutes": 150,
+ "total_available": 80,
+ "parts_total": 32,
+ "parts_answered": 0,
+ "parts_marked": 0,
+ "total_mark": null,
+ "questions": [
+  {
+   "number": 1,
+   "question_id": "e0281087-6ddf-475a-816f-6ed3eb440c99",
+   "title": "MHSTrial2025 - Question 1",
+   "topic": "MHSTrial2025 - Question 1",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "0a6b1e3d-ac3d-4146-9873-55c38148881a",
+     "part": "Question 1",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "The \"Privacy be Design\" approach is defined as:",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Features added after software is released to lock down sotred data.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Improvements to processing reliability made after a security breach.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Modifications made following user feedback on interface inefficiencies.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Buliding software with data protection measures integrated from the outset of a project.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "question_id": "ad39adb9-d23c-4a95-8567-6de180ccdad2",
+   "title": "MHSTrial2025 - Question 2",
+   "topic": "MHSTrial2025 - Question 2",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "59bf1ba1-0869-455a-b08b-8dcb41740d81",
+     "part": "Question 2",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Email clients send mail using which protocol?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "SMTP",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "IMAP",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "FTP",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "POP3",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "question_id": "628d9c86-a52e-4488-b4fb-674043f8c45e",
+   "title": "MHSTrial2025 - Question 3",
+   "topic": "MHSTrial2025 - Question 3",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "3504cd2a-185b-4637-9d12-b68e83f6cd12",
+     "part": "Question 3",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is the most effective approach for ensuring that automation benefits society as a whole?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Allow market forces to guide the adoption of automation, trusting that economic growth will naturally lead to broader societal benefits.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Priorotise technological advancement and productivity gains, with social concerns addressed only after implementation.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Encourage collaboration between policymakers, educators, and businesses to promote inclusivity, skill development, and sustainability.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Limit the use of automation to industries with low employment rates.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "question_id": "eee2b76a-481a-4bfd-bb70-e7e58f2e9fb5",
+   "title": "MHSTrial2025 - Question 4",
+   "topic": "MHSTrial2025 - Question 4",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "0dc644f8-7d20-4e02-afd3-51ef9e2df29c",
+     "part": "Question 4",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A new software application is introduced by initially running the program with only a few of its modules active. After confirming that these modules function correctly, the remaining components are gradually activated.\n\nWhat type of implementation method does this scenario describe?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Direct",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Phased",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Parallel",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Pilot",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "question_id": "f3edb117-2054-460a-9819-3a3e540ad0cd",
+   "title": "MHSTrial2025 - Question 5",
+   "topic": "MHSTrial2025 - Question 5",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "![](assets/5.png.png)",
+   "stimulus_images": [
+    "assets/5.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "89847653-a1d6-4b23-a4ae-6e55350322f5",
+     "part": "Question 5",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "The code sample stimulus is written using which coding langauge?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Python",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "HTML",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "JSON",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "CSS",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "question_id": "01a73773-5c89-4e55-8c63-42bd6d157191",
+   "title": "MHSTrial2025 - Question 6",
+   "topic": "MHSTrial2025 - Question 6",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "7b42275c-6f32-40bd-8efe-272ac9b9ab64",
+     "part": "Question 6",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A user logs into their bank's website, which allows money transfer via a button. A hacker sends the user a malicious email containing a link. When the user clicks the link, a money transfer request is executed without their knowledge.\n\nWhat type of attack is this?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Cross-Site Request Forgery (CSRF)",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Cross-Site Scripting (XSS)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Denial of Service (DoS)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "SQL Injection",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "question_id": "8b44f623-b9af-4ebd-8590-0b5a5f1a3b3b",
+   "title": "MHSTrial2025 - Question 7",
+   "topic": "MHSTrial2025 - Question 7",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "![](assets/7.png.png)",
+   "stimulus_images": [
+    "assets/7.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "e27b1108-afe5-4710-963d-a810bcc220e8",
+     "part": "Question 7",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Using the excerpt from the Data Dictionary stimulus, how many bytes of storage are required to store the FirstName attribute?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "9",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "30",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "6",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "25",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "question_id": "d8cec4df-e167-4dd5-affe-6f27bffd7eaa",
+   "title": "MHSTrial2025 - Question 8",
+   "topic": "MHSTrial2025 - Question 8",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "cdbef07b-4514-45c4-aa3f-0cdfb5cb26ff",
+     "part": "Question 8",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following statements accurately describes the use of Gantt charts in software development?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Gantt charts can only be used when implementing an WAgile software development approach.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Gantt charts are useful for identifying a broad range of likely software bugs and errors present in code.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Gantt charts provide a visual representation of the sub-tasks in the software development process.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Gantt charts are useful for scheduling individual development tasks and personnel, not overall project timelines.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "question_id": "e8812541-2914-42bc-a88a-5a0cb3c3dddc",
+   "title": "MHSTrial2025 - Question 9",
+   "topic": "MHSTrial2025 - Question 9",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "1a96d1cb-7010-4092-a54c-37d76ef184ae",
+     "part": "Question 9",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A programmer wishes to iterate through an array of an unknown length. Which control structure syntax would be most helpful?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "WHILE&hellip; ENDWHILE",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "IF&hellip; ENDIF",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "FOR&hellip; NEXT",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "CASEWHERE&hellip; ENDCASE",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "question_id": "2d5ad20d-632e-452b-a9c5-70b40c0896b8",
+   "title": "MHSTrial2025 - Question 10",
+   "topic": "MHSTrial2025 - Question 10",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "a19a60ad-e5a1-4d5f-a5f9-0b271f404c4c",
+     "part": "Question 10",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A computerised testing application is being developed. For one type of question the user must select all the correct answers from a total of 5 possible answers.\n\nWhich screen element would be best to use for this type of question?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Checkbox",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Radio button",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Command button",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Text area",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "question_id": "c28e7a5c-230a-4a47-8443-a11719f7fb97",
+   "title": "MHSTrial2025 - Question 11",
+   "topic": "MHSTrial2025 - Question 11",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "BEGIN MainProgram  \n      a = 1  \n      b = 2\n\n      IF b > 1 THEN  \n            WHILE a < 4  \n                  DoThings()  \n                  a = a + 1  \n            ENDWHILE  \n      ENDIF\n\n      PRINT a, b  \nEND MainProgram",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "bee71391-ef34-46a0-b2f2-794bff21859a",
+     "part": "Question 11",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Using the pseudocode stimulus, which of the following structure charts most accurately represents the algorithm?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": null,
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": null,
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": null,
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": null,
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "question_id": "f632f82d-7276-4f62-8f86-41d7790fa753",
+   "title": "MHSTrial2025 - Question 12",
+   "topic": "MHSTrial2025 - Question 12",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "BEGIN AgeDetermination(age)\n\n      CASEWHERE age <=\n\n            1: AgeDetermination = “Infant”\n\n            4: AgeDetermination = “Toddler”\n\n            12: AgeDetermination = “Child”\n\n            18: AgeDetermination = “Teenager”\n\n            OTHERWISE: AgeDetermination = “Adult”\n\n      ENDCASE\n\n      RETURN AgeDetermination\n\nEND AgeDetermination",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "06789028-017d-4d67-a8a4-021b147487da",
+     "part": "Question 12",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Using the pseudocode stimulus, if an age of 19 is input by a user, what AgeDetermination should be returned?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Infant",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Child",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Teenager",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Adult",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "question_id": "199243eb-c869-41cf-9567-f8f949fd0e69",
+   "title": "MHSTrial2025 - Question 13",
+   "topic": "MHSTrial2025 - Question 13",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "e6b87585-20e9-4720-b2c3-443e6b7f3705",
+     "part": "Question 13",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Wordle is an online daily word challenge where users have six chances to guess a 5 letter word. Susan has the second and third letters of today’s word but not the other three. Being particularly resourceful, she has access to a database that contains every 5 letter word in the English language. Susan’s known two letters are “RO”. Which SQL wildcard statement will help Susan narrow her guesses?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "*RO*",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "?RO?",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "?RO*",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "*RO?",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "question_id": "01c1e841-4559-45e6-8352-bc9233f7f253",
+   "title": "MHSTrial2025 - Question 14",
+   "topic": "MHSTrial2025 - Question 14",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "1e8e4dd2-de6c-4e12-891c-5e85851a754f",
+     "part": "Question 14",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A weather application uses a HTTP GET request to safely and securely retrieve forecast data from an external weather service.\n\nWhich statement best describes this interaction?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "The weather application sends raw database queries directly to the weather service.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "The weather application requests structured data from the weather service&rsquo;s API.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "The weather application directly reads sensor values from the weather station&rsquo;s hardware.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "The weather service automatically pushes new data to the weather application every minute without a request.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "question_id": "e9454353-88c6-4e9a-b5d4-4f8940266c70",
+   "title": "MHSTrial2025 - Question 15",
+   "topic": "MHSTrial2025 - Question 15",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "e8f116c2-2395-4822-bf08-5ce6191da799",
+     "part": "Question 15",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is **NOT** a bias mitigation strategy that developers can include in the implementation of Machine Learning and Artificual Intelligence solutions?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Implement fairness metrics to evaluate whether models treat all groups equitably.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Ensure that datasets are collected from a wide range of sources and populations to capture diverse perspectives and experiences.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Choose specific datasets that reflect the preferences or experiences of developers and data scientists.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Conduct regular audits of datasets and models including testing models on different demographic groups.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "question_id": "c1cab4dc-e0ef-4998-8b02-7cc59b639526",
+   "title": "MHSTrial2025 - Question 16",
+   "topic": "MHSTrial2025 - Question 16",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "7f12da1d-92bf-4e5f-b498-866495820ae5",
+     "part": "Question 16",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Acceptance testing can be defined as?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Testing that ensures each function of the software application operates in accordance with the specified requirements.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Testing that involves releasing software to a limited audience outside of the development team.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Testing that examines how software performs under a large volume of data.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Testing that determines whether the software meets the agreed-upon criteria for delivery and is ready for release.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "question_id": "9d7df27c-f943-420a-bd0d-ac53389a5451",
+   "title": "MHSTrial2025 - Question 17",
+   "topic": "MHSTrial2025 - Question 17",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "![](assets/17.png.png)",
+   "stimulus_images": [
+    "assets/17.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "e199706f-63aa-4085-8c65-68e8113eadf1",
+     "part": "Question 17",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Using the Class Diagram stimulus, which of the following statements is true?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Person inherits from Student and Parent",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "A student must study 1 or more subjects",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "A subject must have 1 or more students",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Student inherits from Subject",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "question_id": "5cb1c669-22ac-494c-8e21-1e20890ad8fc",
+   "title": "MHSTrial2025 - Question 18",
+   "topic": "MHSTrial2025 - Question 18",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "e92ff487-8cdd-4161-96ed-9005df10b335",
+     "part": "Question 18",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is **NOT** a key concept in understanding secure software design?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Availability",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Application",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Integrity",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Accountability",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 19,
+   "question_id": "bfecf3b1-d2a1-4ef8-8d2e-8bf27c1cdb64",
+   "title": "MHSTrial2025 - Question 19",
+   "topic": "MHSTrial2025 - Question 19",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "c10e142b-80d8-402d-a1ea-0fedbabf99ba",
+     "part": "Question 19",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "The following statement describes which specific Internet technology?\n\n**\"The header contains source and destination IP addresses. The actual data comes next for information or message exhange. The last component is the footer.\"**",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Data packet",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Securty certificate",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Internet Uniform Resource Locator (URL)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Flask database",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 20,
+   "question_id": "7c3e20c9-4ab9-40b3-a6f8-c5a0c898c5ef",
+   "title": "MHSTrial2025 - Question 20",
+   "topic": "MHSTrial2025 - Question 20",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "from django.db import models\n\nclass MusicTrack(models.Model):  \ntitle = models.CharField(max\\_length=100)  \nartist = models.CharField(max\\_length=50)  \ngenre = models.CharField(max\\_length=50)  \nrelease\\_date = models.DateField()",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "4fd3ee3a-7c83-4e57-823b-bf267e6b300f",
+     "part": "Question 20",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Using the Object-Relational Mapping (ORM) stimulus, the code to retrieve all 'Pop' tracks would be?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "pop_tracks = MusicTrack.objects.filter(genre='Pop')",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "pop_tracks = genre.objects.filter(MusicTrack='Pop')",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "MusicTrack.objects.filter(genre='Pop') = pop_tracks",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "pop_tracks == genre.objects.filter(MusicTrack='Pop')",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 21,
+   "question_id": "0691b0ed-4413-4822-ad5c-ccfc8f20415d",
+   "title": "MHSTrial2025 - Question 21",
+   "topic": "MHSTrial2025 - Question 21",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "BEGIN AverageListOfNumbers\n\n      average = -1\n\n      arrayOfNumbers = GetNumbers\n\n      IF number of items in arrayOfNumbers <> 0 THEN\n\n            average = CalculateAverage(arrayOfNumbers)\n\n            PrintAverageToScreen(average)\n\n      ELSE\n\n            PRINT “No numbers entered”\n\n      ENDIF\n\nEND AverageListOfNumbers",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "5b44e74e-d9be-41b3-a224-bb84dcdaa1b3",
+     "part": "Question 21",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "DRAWING_V2",
+     "prompt": "Using the stimulus material, construct a structure chart to represent this algorithm.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Students construct a fully correct structure chart for the given algorithm"
+      },
+      {
+       "marks": "3",
+       "criterion": "Students construct a mostly correct structure chart for the given algorithm"
+      },
+      {
+       "marks": "2",
+       "criterion": "Students construct a structure chart with some correct components for the given algorithm"
+      },
+      {
+       "marks": "1",
+       "criterion": "Students attempt to create a structure chart"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![](img/merewether/a21.png)"
+    }
+   ]
+  },
+  {
+   "number": 22,
+   "question_id": "712b1881-cac5-477b-9c90-5086fb0683a2",
+   "title": "MHSTrial2025 - Question 22",
+   "topic": "MHSTrial2025 - Question 22",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "cd47046f-47eb-44d7-8acc-e3dad474a34c",
+     "part": "Question 22",
+     "marks_available": 6,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Explain the three types of machine learning.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 6,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "6",
+       "criterion": "Students correctly explain the three types of machine learning"
+      },
+      {
+       "marks": "4-5",
+       "criterion": "Students correctly explain two types of machine learning"
+      },
+      {
+       "marks": "2-3",
+       "criterion": "Students correctly describe the three types of machine learning"
+      },
+      {
+       "marks": "1",
+       "criterion": "Students correctly identify types of machine learning"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The three main types of machine learning are supervised learning, unsupervised learning, and deep learning.\n\n  \n\nSupervised learning occurs when an algorithm is trained on labelled data, where both the input and the correct output are provided. The system learns patterns by comparing its predictions with the known answers and adjusting to improve accuracy. This approach is commonly used in applications such as spam email detection, handwriting recognition, and medical diagnosis, where large sets of labelled examples are available.\n\n  \n\nUnsupervised learning works with unlabelled data, meaning the algorithm must identify hidden patterns or relationships without predefined answers. It is typically used for clustering, grouping, or anomaly detection. For example, businesses use unsupervised learning to segment customers into different market groups or streaming platforms use it to suggest similar movies based on viewing history. Unlike supervised learning, there is no “correct” output provided.\n\n  \n\nDeep learning is a specialised form of machine learning that uses artificial neural networks with many layers (“deep” networks) to process data. These networks can automatically learn features from raw inputs, making them highly effective for tasks involving complex, unstructured data such as images, speech, or video. For example, deep learning powers facial recognition systems, natural language processing (such as virtual assistants), and autonomous vehicles. Deep learning requires large datasets and significant computing power but achieves high accuracy in solving complex problems."
+    }
+   ]
+  },
+  {
+   "number": 23,
+   "question_id": "f6576620-3dad-469a-8562-54ace389c004",
+   "title": "MHSTrial2025 - Question 23",
+   "topic": "MHSTrial2025 - Question 23",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "![](assets/23.png.png)",
+   "stimulus_images": [
+    "assets/23.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "24b5962f-8c46-4861-9477-b9f9e79eac49",
+     "part": "Question 23",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Using the structure chart stimulus, write a possible pseudocode algorithm for the FindItem routine.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Students construct a fully correct pseudocode algorithm for the FindItem routine"
+      },
+      {
+       "marks": "2",
+       "criterion": "Students construct a somewhat correct pseudocode algorithm for the FindItem routine or a fully correct routine using Python rather than pseudocode"
+      },
+      {
+       "marks": "1",
+       "criterion": "Students attempt to construct a pseudocode algorithm for the FindItem routine"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nBEGIN FindItem(ItemID)\n    Found = ItemExists(ItemID)\n    IF Found THEN\n        Location = CheckLocation(ItemID)\n    ENDIF\n    RETURN Location\nEND\n```"
+    }
+   ]
+  },
+  {
+   "number": 24,
+   "question_id": "5975ca72-eb63-42eb-acea-b4092a490876",
+   "title": "MHSTrial2025 - Question 24",
+   "topic": "MHSTrial2025 - Question 24",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "73c7ddb4-62b4-46bc-895a-da3d004b14f8",
+     "part": "Question 24",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Discuss the role and importance of programmed data backup and version control when producing and implementing code.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Students correctly discuss the role and importance of programmed data backup and version control when producing and implementing code, providing definitions and examples"
+      },
+      {
+       "marks": "3",
+       "criterion": "Students correctly discuss the role and importance of programmed data backup and version control"
+      },
+      {
+       "marks": "2",
+       "criterion": "Students correctly identify the role and importance of programmed data backup and version control"
+      },
+      {
+       "marks": "1",
+       "criterion": "Students correctly identify the role and importance of programmed data backup or version control"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Programmed data backup refers to the automated process of regularly saving copies of code and project files so they can be restored if data is lost or corrupted. This is important because it protects against hardware failure, accidental deletion, or cyber-attacks, ensuring that critical work is not permanently lost. For example, cloud-based backups such as Google Drive or automated server backups allow developers to recover previous versions of source code after a system crash.\n\n  \n\nVersion control is a system that tracks changes to code over time, allowing multiple developers to collaborate while maintaining a record of modifications. Its importance lies in preventing conflicts, enabling rollbacks to earlier versions if errors occur, and supporting collaborative workflows. Tools such as Git and GitHub provide branching, merging, and commit history features that make large-scale software development efficient and reliable."
+    }
+   ]
+  },
+  {
+   "number": 25,
+   "question_id": "3c71a987-c072-41a5-872d-d1b982a590d5",
+   "title": "MHSTrial2025 - Question 25",
+   "topic": "MHSTrial2025 - Question 25",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A library management system allows users to register online.\n\nThe registration form must collect user details, a secure PIN and confirm the user's identity via a preferred notification method.\n\nThe PIN requirements are:\n\n-   Exactly 4 numeric digits\n-   No repeated digits (e.g. 1123 or 1231 is invalid)\n-   No letters or special character",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "8c31677e-4afc-4b79-95fa-c66565be108c",
+     "part": "Question 25",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "DRAWING_V2",
+     "prompt": "Using the information in the stimulus, construct a user interface design for registration. Label all form fields clearly.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Students construct a fully correct user interface for use in registration, including labels for all fields"
+      },
+      {
+       "marks": "3",
+       "criterion": "Students construct a fully correct user interface for use in registration"
+      },
+      {
+       "marks": "2",
+       "criterion": "Students construct a mostly correct user interface for use in registration"
+      },
+      {
+       "marks": "1",
+       "criterion": "Students attempt to construct a user interface for use in registration"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![](img/merewether/a25.png)"
+    }
+   ]
+  },
+  {
+   "number": 26,
+   "question_id": "03330e90-0e4e-404b-9c61-69c84d84fda0",
+   "title": "MHSTrial2025 - Question 26",
+   "topic": "MHSTrial2025 - Question 26",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A hospital requires software to manage their operating theatre bookings. The new software should have the following features:\n\n-   Details of each patient’s operation are entered from a digital booking card supplied by a surgeon’s team. Details include the patient details (first name, surname, age, weight(kgs)), name of the surgeon (surname), type of operation (internal or external), date of the operation, and the times the operating theatre will be required ('morning' or 'afternoon')\n-   The software will check if the theatre is available at those times ('morning' or 'afternoon') and display an appropriate message\n-   At the start of each day a printout is generated for each surgeon’s team showing the list of operations they have scheduled for that day",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "0e8bd363-4cc6-44cc-b371-8021ac61b5ad",
+     "part": "Question 26",
+     "marks_available": 8,
+     "syllabus": null,
+     "answer_type": "CODING",
+     "prompt": "Using the stimulus information, synthesise a Python program that captures all required information for a patient's operation and outputs a confirmation receipt to the user. The program should include simple error checking and validation.",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 8,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "8",
+       "criterion": "Students construct a substantially correct algorithm that includes:Correct use Python syntaxCaptures all required informationUses error checkingUses validationPrints all required information from the confirmation receiptUses sound intrinsic documentationInterprets without error"
+      },
+      {
+       "marks": "6-7",
+       "criterion": "Students construct a correct algorithm with many of the features above"
+      },
+      {
+       "marks": "4-5",
+       "criterion": "Students construct a correct algorithm with some of the features above"
+      },
+      {
+       "marks": "3-2",
+       "criterion": "Students construct a correct algorithm with few of the features above"
+      },
+      {
+       "marks": "1",
+       "criterion": "Students construct an algorithm that shows some understanding of the problem"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nfname = input(\"Enter patient's first name: \")\nsname = input(\"Enter patient's surname: \")\n\nage = input(\"Enter age: \")\nwhile not age.isdigit():\n    age = input(\"Invalid, enter a number for age: \")\nage = int(age)\n\nweight = input(\"Enter weight (kgs): \")\nwhile not weight.isdigit():\n    weight = input(\"Invalid, enter a number for weight: \")\nweight = int(weight)\n\nsurgeon = input(\"Enter surgeon's surname: \")\n\nop_type = input(\"Type of operation (internal/external): \").lower()\nwhile op_type not in [\"internal\", \"external\"]:\n    op_type = input(\"Invalid, enter internal or external: \")\n\ndate = input(\"Enter date (DD/MM/YYYY): \")\n\ntime = input(\"Enter time (morning/afternoon): \").lower()\nwhile time not in [\"morning\", \"afternoon\"]:\n    time = input(\"Invalid, enter morning or afternoon: \")\n\nbooked = False\nif booked:\n    print(\"Theatre not available, please reschedule.\")\nelse:\n    print(\"\\n-- Confirmation Receipt --\")\n    print(\"Patient:\", fname, sname)\n    print(\"Age:\", age, \"Weight:\", weight, \"kg\")\n    print(\"Surgeon:\", surgeon)\n    print(\"Operation:\", op_type)\n    print(\"Date:\", date, \"Time:\", time)\n    print(\"Booking successful.\")\n```"
+    }
+   ]
+  },
+  {
+   "number": 27,
+   "question_id": "48a2d0dc-0fc0-4998-a94c-67c319de3ad7",
+   "title": "MHSTrial2025 - Question 27",
+   "topic": "MHSTrial2025 - Question 27",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "812f85aa-e408-4f35-8e65-f88a226ccbdb",
+     "part": "Question 27",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Contrast live and simulated testing in the creation of a software solution.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Students correctly contrast live and simulated testing"
+      },
+      {
+       "marks": "2",
+       "criterion": "Students correctly describe live and simulated testing"
+      },
+      {
+       "marks": "1",
+       "criterion": "Students identify properties of live or simulated testing"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Live testing is the process of evaluating software in its actual operating environment with real users, data, and hardware. It provides accurate feedback on performance, usability, and reliability but carries risks if errors affect end-users.\n\n  \n\nSimulated testing, by contrast, uses controlled environments or models to imitate real-world conditions without exposing the system to actual users or data. It allows developers to test safely, repeat scenarios, and detect issues early before deployment."
+    }
+   ]
+  },
+  {
+   "number": 28,
+   "question_id": "b514bd09-3f3c-4f8a-8532-002b4c9c9e00",
+   "title": "MHSTrial2025 - Question 28",
+   "topic": "MHSTrial2025 - Question 28",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A new parking payment software system is being developed that will allow carpark users to purchase a ticket with their credit card. Carpark users will enter their vehicle numberplate details via the parking payment software system along with their credit card details. Once a successful transaction is completed, the parking details are stored in a database and a ticket receipt is printed. The receipt is placed on the car’s dashboard so it is visible to carpark officials.\n\nThe current version of the proposed payment system database utilises a flat-file structure in a ‘Transaction’ table:\n\n![](assets/28.png.png)",
+   "stimulus_images": [
+    "assets/28.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "6ab95d75-eac7-41db-a881-feca8f78d182",
+     "part": "Question 28",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Using the stimulus material, synthesise an SQL statement that could be used to query the following details from the stored data:\n\nAll vehicles that parked in space 1A on or before 10/04/25 and whose payee was a Visa card holder.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Students synthesise a fully correct SQL statement for the for the given scenario"
+      },
+      {
+       "marks": "2",
+       "criterion": "Students synthesise a somewhat correct SQL statement for the for the given scenario"
+      },
+      {
+       "marks": "1",
+       "criterion": "Students attempt to create an SQL statement"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nSELECT Transaction.VehicleRegistrationNumber, Transaction.DateOfPark\nFROM Transaction\nWHERE Transaction.ParkingSpace = “1A” AND\n    Transaction.DateOfPark <= 10/04/25 AND\n    Transaction.CardPaymentType = “Visa”\nORDERBY Transaction.DateOfPark DESCENDING\n```"
+    }
+   ]
+  },
+  {
+   "number": 29,
+   "question_id": "ab8c376a-c81a-4bba-9c63-f0e0e9cba1bf",
+   "title": "MHSTrial2025 - Question 29",
+   "topic": "MHSTrial2025 - Question 29",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "d1cb9fc6-f397-4c78-b710-c8f788b62d02",
+     "part": "Question 29",
+     "marks_available": 8,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Assess the impact of automation on the individual, society and the environment.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 8,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "8",
+       "criterion": "Students correctly assess the impact of automation on the individual, society and the environment"
+      },
+      {
+       "marks": "6-7",
+       "criterion": "Students correctly assess the impact of automation on two of the three areas above"
+      },
+      {
+       "marks": "4-5",
+       "criterion": "Students correctly outline the impact of automation on two of the areas above"
+      },
+      {
+       "marks": "3-2",
+       "criterion": "Students correctly outline the impact of automation on one of the areas above"
+      },
+      {
+       "marks": "1",
+       "criterion": "Students correctly describe automation"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "The impact of automation can be assessed at the level of the individual, society, and the environment, with both benefits and drawbacks evident.\n\n  \n\nFor the individual, automation often increases efficiency by removing repetitive tasks, freeing workers to focus on creative or analytical roles. For example, software engineers use automated testing to reduce manual errors and save time. However, automation can also cause job displacement, particularly in industries such as manufacturing or retail, where machines replace human labour. Individuals may require retraining or upskilling to remain employable, creating both opportunities and challenges.\n\n  \n\nAt the level of society, automation contributes to economic growth by enabling mass production and lowering costs. It improves access to goods and services, such as self-service checkouts and automated banking systems, which increase convenience. Yet it can also widen social inequality if certain groups lose employment while others benefit from higher productivity. The shift towards automation may also raise ethical concerns, such as the reduction of human interaction in services like healthcare or customer support.\n\n  \n\nFor the environment, automation can reduce waste and improve sustainability when systems are designed for efficiency. For instance, automated energy management in smart buildings lowers electricity consumption, while precision agriculture reduces fertiliser and water use. On the other hand, widespread automation can increase energy demand, particularly with large-scale data centres and robotics manufacturing, potentially contributing to carbon emissions if not powered by renewable sources."
+    }
+   ]
+  },
+  {
+   "number": 30,
+   "question_id": "9ca0c873-e1cd-42be-ab68-6e64680c1f96",
+   "title": "MHSTrial2025 - Question 30",
+   "topic": "MHSTrial2025 - Question 30",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "5f40f26f-b7a5-4add-aab6-a8d99e3f3a8c",
+     "part": "Question 30",
+     "marks_available": 8,
+     "syllabus": null,
+     "answer_type": "CODING",
+     "prompt": "A program is required to compare the marks of two HSC students studying Software Engineering.\n\nSynthesise a Python program that will:\n\n-   Capture four assessment marks for each student out of 20, 20, 30 and 30 respectively (marks will be awarded for more complex data structures and error checking/validation)\n-   Output the course total out of 100 for each student\n-   Output the course average for each student\n-   Identify and output which student has achieved the highest total mark from the completion of all four assessments",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 8,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "8",
+       "criterion": "Students construct a substantially correct algorithm that includes:Correct use Python syntaxCaptures all required informationUses complex data structures [1D array or greater]Uses error checkingUses data validation or masking to capture correct valuesPrints all required information regarding totals, average and highest markUses sound intrinsic documentationInterprets without error"
+      },
+      {
+       "marks": "6-7",
+       "criterion": "Students construct a correct algorithm with many of the features above"
+      },
+      {
+       "marks": "4-5",
+       "criterion": "Students construct a correct algorithm with some of the features above"
+      },
+      {
+       "marks": "3-2",
+       "criterion": "Students construct a correct algorithm with few of the features above"
+      },
+      {
+       "marks": "1",
+       "criterion": "Students construct an algorithm that shows some understanding of the problem"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\ndef capture_student_marks(student_name):\n    max_marks = [20, 20, 30, 30]\n    student_marks = []\n    for index, max_mark in enumerate(max_marks):\n        mark = input(f\"Enter mark {index+1} for {student_name} (out of {max_mark}): \")\n        while not mark.isdigit() or int(mark) < 0 or int(mark) > max_mark:\n            mark = input(f\"Invalid entry, enter a number between 0 and {max_mark}: \")\n        student_marks.append(int(mark))\n    return student_marks\n\nstudent1_marks = capture_student_marks(\"Student 1\")\nstudent2_marks = capture_student_marks(\"Student 2\")\n\nstudent1_total = sum(student1_marks)\nstudent2_total = sum(student2_marks)\n\nstudent1_average = student1_total / len(student1_marks)\nstudent2_average = student2_total / len(student2_marks)\n\nprint(\"\\n-- Results --\")\nprint(f\"Student 1 - Total:\", student1_total, \"/100 Average:\", student1_average)\nprint(f\"Student 2 - Total:\", student2_total, \"/100 Average:\", student2_average)\n\nif student1_total > student2_total:\n    print(\"Highest total achieved by: Student 1\")\nelif student2_total > student1_total:\n    print(\"Highest total achieved by: Student 2\")\nelse:\n    print(\"Both students achieved the same total\")\n```"
+    }
+   ]
+  },
+  {
+   "number": 31,
+   "question_id": "335193f7-b919-40e5-804b-8e0ecae28308",
+   "title": "MHSTrial2025 - Question 31",
+   "topic": "MHSTrial2025 - Question 31",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "98fd679c-2d8f-4cae-b3f1-39ef88d44251",
+     "part": "Question 31",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Recommend ways in which accessibility features can be implemented into web content to assist a wide range of users, including those with disabilities.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Students correctly recommend ways in which accessibility features can be implemented into web content to assist a wide range of users, including those with disabilities"
+      },
+      {
+       "marks": "3",
+       "criterion": "Students correctly recommend ways in which accessibility features can be implemented into web content to assist users"
+      },
+      {
+       "marks": "2",
+       "criterion": "Students correctly identify recommend accessibility features for users"
+      },
+      {
+       "marks": "1",
+       "criterion": "Students correctly identify accessibility features"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Accessibility features can be implemented into web content to support a wide range of users. Adding alt text for images allows screen readers to describe visual content to people with vision impairments. Keyboard navigation ensures that users who cannot operate a mouse can move through menus and links using only the keyboard. Providing high colour contrast and options for resizable text assists users with low vision or colour blindness. Finally, adding captions and transcripts for audio and video content supports users with hearing impairments and also benefits those in sound-sensitive environments."
+    }
+   ]
+  },
+  {
+   "number": 32,
+   "question_id": "3474fb5b-6fd0-4eb1-8f2d-da0a72910946",
+   "title": "MHSTrial2025 - Question 32",
+   "topic": "MHSTrial2025 - Question 32",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "0d40841e-90d4-4d1f-9777-1c138c5e9d86",
+     "part": "Question 32",
+     "marks_available": 5,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Describe web Content Management Systems (CMS) and justify why an experienced web developer would choose to use HTML, CSS and JavaScript while a beginner would use a CMS.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 5,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "5",
+       "criterion": "Students correctly describe CMS and justify use differences between experienced and beginner programmers based on the properties of the provided technologies"
+      },
+      {
+       "marks": "4",
+       "criterion": "Students correctly describe CMS and justify use differences between experienced and beginner programmers"
+      },
+      {
+       "marks": "3",
+       "criterion": "Students correctly describe CMS and identify differences between experienced and beginner programmers"
+      },
+      {
+       "marks": "2",
+       "criterion": "Students correctly justify use differences between experienced and beginner programmers"
+      },
+      {
+       "marks": "1",
+       "criterion": "Students describe experienced and beginner programmers"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "A Content Management System (CMS) is software that enables users to create, manage, and publish digital content such as websites without needing to build everything from scratch. Popular examples include WordPress, Joomla, and Drupal. CMS platforms typically provide templates, drag-and-drop interfaces, and plugin systems to extend functionality.\n\n  \n\nFor beginner programmers, CMS tools are valuable because they offer pre-designed templates, WYSIWYG (What You See Is What You Get) editors, and simple plugin installations. These features allow beginners to build functional websites quickly without requiring deep coding knowledge. The emphasis is on ease of use and reducing complexity.\n\n  \n\nFor experienced programmers, CMS tools are used differently. They can customise themes through direct editing of HTML, CSS, and JavaScript, develop custom plugins, and optimise databases for performance and scalability. Experienced developers leverage the flexibility of a CMS to integrate APIs, ensure security, and meet specific client requirements that go beyond the default tools.\n\n  \n\nThe difference arises from the properties of CMS technologies: their user-friendly interfaces support beginners in creating basic sites, while their open, extensible architecture enables experts to create highly customised, secure, and scalable solutions. This justifies why CMS platforms meet the needs of both novice and advanced users but in very different ways."
+    }
+   ]
+  }
+ ]
+}

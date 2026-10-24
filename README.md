@@ -83,6 +83,7 @@ questions (pick modules, number of questions and question types; it marks itself
 |---|---|
 | `exam-app/` | Offline exam app styled like NESA's online HSC exam. Sit any Gradeo paper or a PDF paper with a timer, reading time, rest breaks (pauses the timer), flagging, spell-check off. Answers autosave to `papers/attempts/`. |
 | `gradeo_out/exams/` | Every Gradeo paper: questions, images, videos, marking criteria, rubrics, sample answers. `exam.md` is the readable version, `exam.json` the data. Start at `gradeo_out/INDEX.md`. Includes my answers, marks and Sir's feedback. |
+| `private_papers/` | **12 trial papers** (CSSA 2025, Normanhurst, Merewether, Girraween, North Sydney Boys, Independent, NSW SE, DoE, NESA sample and familiarisation, CSSA familiarisation, a prelim paper) with answer keys and criteria where available. Sit them in the exam app under **Trial papers**. **Keep this repo private: don't share these papers further.** |
 | `papers/` | NESA Sample HSC Exam (PDF/DOCX). `papers/marking/` has the official marking guidelines for it and for the 2025 HSC, plus the 2025 full-mark sample answers. |
 | `practice/QUEUE.md` | 115 written questions from every paper, ordered for practice (extended responses and legal/ethical first). Answers are in `practice/key.json` — don't peek. |
 | `worksheets/` | SQL, schema, data dictionary, DFD, decision tree, UI/UX and network diagram questions with answers, plus course notes. |

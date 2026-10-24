@@ -1,0 +1,2015 @@
+{
+ "exam": "Girraween Trial",
+ "private": true,
+ "source": "software.paper.is via the SEN Discord (personal study only)",
+ "duration_minutes": 150,
+ "total_available": 80,
+ "parts_total": 34,
+ "parts_answered": 0,
+ "parts_marked": 0,
+ "total_mark": null,
+ "questions": [
+  {
+   "number": 1,
+   "question_id": "c1a9e8b7-3d4f-4a6e-8f2c-1b9d0a7c6d5e",
+   "title": "Q1 OOP Concepts",
+   "topic": "Q1 OOP Concepts",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p1a9e8b7-3d4f-4a6e-8f2c-1b9d0a7c6d5e",
+     "part": "Question 1",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following concepts in object-oriented programming refers to the mechanism where you can to derive a class from another class for a hierarchy of classes that share a set of attributes and methods.",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Inheritance",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Abstraction",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Polymorphism",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Encapsulation",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "question_id": "d2b0f9c8-4e5a-4b7d-9a3e-2c8e1b8d7a6f",
+   "title": "Q2 Modelling Classes",
+   "topic": "Q2 Modelling Classes",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p2b0f9c8-4e5a-4b7d-9a3e-2c8e1b8d7a6f",
+     "part": "Question 2",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "The preferred diagram for modelling classes is",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Universal Modelling Language",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Context diagram",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Class Data flow diagram",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Class models",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "question_id": "e3c1a0d9-5f6b-4c8e-8b4f-3d9f2c9e8b7a",
+   "title": "Q3 Mechatronic Testing",
+   "topic": "Q3 Mechatronic Testing",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p3c1a0d9-5f6b-4c8e-8b4f-3d9f2c9e8b7a",
+     "part": "Question 3",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which type of testing is extensively used when developing mechatronic solutions.",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Unit testing",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Grey box testing",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Black box testing",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Oscilloscope testing",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "question_id": "f4d2b1ea-6a7c-4d9f-9c5a-4ea03dafa98b",
+   "title": "Q4 Flowchart Issue",
+   "topic": "Q4 Flowchart Issue",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "![image](assets/4.png.png)",
+   "stimulus_images": [
+    "assets/4.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "p4d2b1ea-6a7c-4d9f-9c5a-4ea03dafa98b",
+     "part": "Question 4",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is the most significant issue with this flowchart?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "There is an endless loop",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "The condition should be a <= 1",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "The variable 'a' is the incorrect data type",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "A non-standard control structure is used",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "question_id": "a5e3c2fb-7b8d-4ea0-ad6b-5fb14eb0ba9c",
+   "title": "Q5 DFD Symbol",
+   "topic": "Q5 DFD Symbol",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "What does a rectangle symbol represent when used in a data flow diagram?",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p5e3c2fb-7b8d-4ea0-ad6b-5fb14eb0ba9c",
+     "part": "Question 5",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": null,
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "A data store",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "A subroutine",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "An external entity",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "A manual process",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "question_id": "b6f4d30c-8c9e-4fb1-be7c-60c25fc1cbad",
+   "title": "Q6 Mechatronic Programming Pattern",
+   "topic": "Q6 Mechatronic Programming Pattern",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Consider the following programming pattern common in mechatronics:\n\n```\nsetup() # runs once\n   code...\n\nloop() # infinite loop\n   code...\n```",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p6f4d30c-8c9e-4fb1-be7c-60c25fc1cbad",
+     "part": "Question 6",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which statement explains why this programming pattern is common?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "As the loop allows for repetitive system design.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "So the hardware can be configured before the software implementation.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Because it is a requirement of the IDE.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "As the loop needs to happen after setup.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "question_id": "c7a5e41d-9da0-40c2-bf8d-71d360d2dbd0",
+   "title": "Q7 Algorithm Analysis",
+   "topic": "Q7 Algorithm Analysis",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Consider the following algorithm. The array arrAge contains 50 elements and is indexed from 0.\n\n```\n1 BEGIN\n2   sumOfAges = 0\n3   FOR index = 0 TO 50 STEP 1\n4     sumOfAges = sumOfAges + arrAge(i)\n5   NEXT index\n6   averageAge = sumOfAges/numItems\n7 END\n```",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p7a5e41d-9da0-40c2-bf8d-71d360d2dbd0",
+     "part": "Question 7a",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What control structure is used in the algorithm?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Multiway loop",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Post-test loop",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Counted loop",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Pre-test loop",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    },
+    {
+     "part_id": "q7b6f52e-0eb1-41d3-c09e-82e471e3ece1",
+     "part": "Question 7b",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "When coded and executed an error occurs. Which of the following best describes this error?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Logic error",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Syntax error",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Parsing error",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Runtime error",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "question_id": "d8b6f52e-0eb1-41d3-c09e-82e471e3ece1",
+   "title": "Q8 Software Requirements Document",
+   "topic": "Q8 Software Requirements Document",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p8b6f52e-0eb1-41d3-c09e-82e471e3ece1",
+     "part": "Question 8",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Identify the appropriate headings for a 'software requirements' document.",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Software document",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Test data",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Functional requirements",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Non functional requirements",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "question_id": "a9b1c2d3-e4f5-4a6b-8c7d-9e0f1a2b3c4d",
+   "title": "Q9 Linear Regression",
+   "topic": "Q9 Linear Regression",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p9b1c2d3-e4f5-4a6b-8c7d-9e0f1a2b3c4d",
+     "part": "Question 9",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In linear regression, what is the primary goal of the model?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "To predict the value of a dependent variable based on one or more independent variables",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "To classify data into distinct categories",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "To cluster similar data points together",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "To minimize the number of features in the dataset",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "question_id": "b0c2d3e4-f5a6-4b7c-8d8e-0f1a2b3c4d5e",
+   "title": "Q10 Polynomial Regression",
+   "topic": "Q10 Polynomial Regression",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p0c2d3e4-f5a6-4b7c-8d8e-0f1a2b3c4d5e",
+     "part": "Question 10",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What type of relationship does polynomial regression model?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Non-linear relationships between variables",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Only linear relationships",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Random relationships without any pattern",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Only relationships involving three variables",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "question_id": "c1d3e4f5-a6b7-4c8d-9e9f-1a2b3c4d5e6f",
+   "title": "Q11 Neural Networks",
+   "topic": "Q11 Neural Networks",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p1d3e4f5-a6b7-4c8d-9e9f-1a2b3c4d5e6f",
+     "part": "Question 11",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is a key advantage of using neural networks?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "They can learn complex patterns from large amounts of data",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "They require less data than traditional models",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "They are always faster than other algorithms",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "They do not require any tuning of parameters",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "question_id": "d2e4f5a6-b7c8-4d9e-9f0a-2b3c4d5e6f7a",
+   "title": "Q12 Decision Tree",
+   "topic": "Q12 Decision Tree",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p2e4f5a6-b7c8-4d9e-9f0a-2b3c4d5e6f7a",
+     "part": "Question 12",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In a decision tree, what do leaf nodes primarily represent?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "They are used for splitting the data",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "The concept of different levels of the tree.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "They represent the decision points in the tree.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "They are the final output or classification.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "question_id": "e3f5a6b7-c8d9-4e0f-a01b-3c4d5e6f7a8b",
+   "title": "Q13 Supervised Learning",
+   "topic": "Q13 Supervised Learning",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p3f5a6b7-c8d9-4e0f-a01b-3c4d5e6f7a8b",
+     "part": "Question 13",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is an example of supervised learning?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Classification of emails as spam or not spam",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Clustering customer segments",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Market basket analysis",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Anomaly detection in network traffic",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "question_id": "f4a6b7c8-d9e0-4f1a-b12c-4d5e6f7a8b9c",
+   "title": "Q14 Mechatronics Learning",
+   "topic": "Q14 Mechatronics Learning",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p4a6b7c8-d9e0-4f1a-b12c-4d5e6f7a8b9c",
+     "part": "Question 14",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In mechatronics, which technique would you use to group similar sensor readings without prior labels?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Supervised learning",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Unsupervised learning",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Reinforcement learning",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Deep learning",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "question_id": "a5b7c8d9-e0f1-4a2b-c23d-5e6f7a8b9c0d",
+   "title": "Q15 Email Protocol",
+   "topic": "Q15 Email Protocol",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p5b7c8d9-e0f1-4a2b-c23d-5e6f7a8b9c0d",
+     "part": "Question 15",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Email clients send mail using which protocol?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "SMTP",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "POP3",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "IMAP",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "FTP",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "question_id": "b6c8d9e0-f1a2-4b3c-d34e-6f7a8b9c0d1e",
+   "title": "Q16 Context Diagram",
+   "topic": "Q16 Context Diagram",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "The following context diagram describes a food ordering app.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p6c8d9e0-f1a2-4b3c-d34e-6f7a8b9c0d1e",
+     "part": "Question 16",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Based on the diagram, which statements are correct?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Food outlets, Customers and Financial Institutions are sub-modules or sub-programs",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "This is a level 0 data flow diagram",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Food Ordering App is an external entity that interacts with the system",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Food outlets, Customers and Financial Institutions are external entities",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "E",
+        "text": "The Food Ordering App sends the Order Details to the Food Outlet before the Transaction Status is received",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "question_id": "c7d9e0f1-a2b3-4c4d-e45f-7a8b9c0d1e2f",
+   "title": "Q17 CSRF Attack",
+   "topic": "Q17 CSRF Attack",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p7d9e0f1-a2b3-4c4d-e45f-7a8b9c0d1e2f",
+     "part": "Question 17",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A user logs into their bank's website, which allows money transfers via a button. A hacker sends the user a malicious email containing a link. When the user clicks the link, a money transfer request is executed without their knowledge. What type of attack is this?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Cross-Site Request Forgery (CSRF)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Cross-Site Scripting (XSS)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Denial of Service (DoS)",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "SQL Injection",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": []
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "question_id": "e9c7063f-1fc2-42e4-d1af-93f582f4fdf2",
+   "title": "Q18 Debugging Tools",
+   "topic": "Q18 Debugging Tools",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p9c7063f-1fc2-42e4-d1af-93f582f4fdf2",
+     "part": "Question 18",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Match the debugging tool with the definition.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "An intentional stopping or pausing place in a program.",
+       "Executing code one instruction or line at a time.",
+       "Translate the entire code at once, displaying all syntax errors in a list.",
+       "Inserting in the source code statements that print the content of variables or notifying events have occurred."
+      ],
+      "rows": [
+       {
+        "statement": "Breakpoint",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Single line step",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Compiler",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Debugging output statements",
+        "correct": [],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Breakpoint",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Single line step",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Compiler",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Debugging output statements",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 19,
+   "question_id": "fa081740-20d3-43f5-e2b0-a40693050ef3",
+   "title": "Q19 Authentication vs Authorisation",
+   "topic": "Q19 Authentication vs Authorisation",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "pa081740-20d3-43f5-e2b0-a40693050ef3",
+     "part": "Question 19",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Distinguish between authentication and authorisation.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 20,
+   "question_id": "0b192851-31e4-4406-f3c1-b517a4161f04",
+   "title": "Q20 Race Condition",
+   "topic": "Q20 Race Condition",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "The Python code below defines a function that allows a user to purchase an item.\n\n  \n\n```\nimport threading\nlock = threading.Lock()\ndef purchase_item(user_id, item_id):\n  with lock:\n    if inventory[item_id] > 0:\n      inventory[item_id] = 0\n      confirm_purchase(user_id, item_id)\n```",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "pb192851-31e4-4406-f3c1-b517a4161f04",
+     "part": "Question 20",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Explain what a race condition is and how it could affect the purchase\\_item function if no lock was implemented.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 21,
+   "question_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+   "title": "Q21 Security Compromise Scenario",
+   "topic": "Q21 Security Compromise Scenario",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+     "part": "Question 21",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "A school's online portal allows students to upload assessment files. Recently, a student discovered that by modifying the URL, they could access and download other students' submitted files. It was also found that students could re-upload their work multiple times, overwriting previous submissions without detection even after the due date.\n\nDescribe how confidentiality, accountability and integrity has been compromised in this scenario.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 22,
+   "question_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+   "title": "Q22 Collaboration in Software Engineering",
+   "topic": "Q22 Collaboration in Software Engineering",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+     "part": "Question 22",
+     "marks_available": 6,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Discuss the benefits of collaboration in software engineering.\n\nIn your response:\n\n-   Highlight at least three key advantages that effective collaboration can bring to a software development project.\n-   Provide an example of a collaboration tool and explain how it facilitates collaboration among developers.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 6,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 23,
+   "question_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f",
+   "title": "Q23 PWA UI/UX Design",
+   "topic": "Q23 PWA UI/UX Design",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f",
+     "part": "Question 23",
+     "marks_available": 6,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "You have been tasked with designing and developing a Progressive Web App (PWA) aimed at enhancing the accessibility and inclusivity of educational resources for infants school students.\n\nOutline how you would address the following key design principles when creating the user interface (UI) and user experience (UX) of your PWA.\n\n-   Font selection and typography\n-   Colour schemes and contrast\n-   The use of audio and video elements\n-   Navigation design",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 6,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 24,
+   "question_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a",
+   "title": "Q24 Supervised vs Unsupervised Learning",
+   "topic": "Q24 Supervised vs Unsupervised Learning",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a",
+     "part": "Question 24",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Compare and contrast between supervised and unsupervised learning. Give a real world example for each.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 25,
+   "question_id": "1c2a3962-42f5-4517-04d2-c628b5272015",
+   "title": "Q25 Algorithm Analysis",
+   "topic": "Q25 Algorithm Analysis",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "For the algorithm\n\n```\n1 START myFunction (array[])\n2   SET num = array[0]\n3   FOR index = 0 TO 4 STEP 1\n4     IF array[index] > num\n5       num = array[index]\n6     ENDIF\n7   NEXT index\n8   PRINT num\n9 END myFunction\n```",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "pc2a3962-42f5-4517-04d2-c628b5272015",
+     "part": "Question 25",
+     "marks_available": 8,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "a) Outline the purpose of the algorithm.\n\nb) There is an error in the algorithm. Perform a Desk check of the algorithm assuming the passed in array is \\[1, 6, 19, 3\\] and identify the line and type of error.\n\nc) Identify and outline three improvements you can make to this algorithm.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 8,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 26,
+   "question_id": "2d3b4a73-5306-4628-15e3-d739c6383126",
+   "title": "Q26 Class Diagram OOP",
+   "topic": "Q26 Class Diagram OOP",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "![image](assets/26.png.png)\n\nBased on the provided class diagram for Student Management System discuss the relationships and key principles of Object-Oriented Programming (OOP) that are demonstrated. Your answer should specifically address:\n\n1.  **Inheritance:** Identify an example of inheritance and explain its purpose.\n2.  **Encapsulation:** Describe how encapsulation is applied within the classes, referencing attributes and methods.\n3.  **Composition or Aggregation:** Explain the relationship between the classes. Justify your answer.",
+   "stimulus_images": [
+    "assets/26.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "pd3b4a73-5306-4628-15e3-d739c6383126",
+     "part": "Question 26",
+     "marks_available": 5,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": null,
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 5,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 27,
+   "question_id": "a1b2c3d4-e5f6-4a7b-8c9d-1e2f3a4b5c6d",
+   "title": "Q27 Code Snippet Matching",
+   "topic": "Q27 Code Snippet Matching",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p1b2c3d4-e5f6-4a7b-8c9d-1e2f3a4b5c6d",
+     "part": "Question 27",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Match the code snippet with its type.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "Machine code",
+       "General purpose or high level programming language",
+       "Assembly language",
+       "Operand or register/data"
+      ],
+      "rows": [
+       {
+        "statement": "01101010",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "int myInt = 8;",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "MOV r24, 8",
+        "correct": [],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "r4, 29",
+        "correct": [],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "01101010",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "int myInt = 8;",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "MOV r24, 8",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "r4, 29",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 28,
+   "question_id": "3e4c5b84-6417-4739-26f4-e84ad7494237",
+   "title": "Q28a SQL Errors",
+   "topic": "Q28a SQL Errors",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "pe4c5b84-6417-4739-26f4-e84ad7494237",
+     "part": "Question 28a",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Identify the error in the following SQL query and provide the correct version: `SELECT * FROM users WHERE age = '20';`",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 29,
+   "question_id": "4f5d6c95-7528-484a-3705-f95be85a5348",
+   "title": "Q28b SQL Errors",
+   "topic": "Q28b SQL Errors",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "pf5d6c95-7528-484a-3705-f95be85a5348",
+     "part": "Question 28b",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Fix the syntax error in the following SQL statement: `INSERT INTO students VALUES (1, 'John', 'Doe',);`",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 30,
+   "question_id": "b2c3d4e5-f6a7-4b8c-9d0e-2f3a4b5c6d7e",
+   "title": "Q28c SQL Error",
+   "topic": "Q28c SQL Error",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p2c3d4e5-f6a7-4b8c-9d0e-2f3a4b5c6d7e",
+     "part": "Question 28c",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "What is wrong with this SQL query? `UPDATE products SET price = '19.99' WHERE id = 5;`",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 31,
+   "question_id": "c3d4e5f6-a7b8-4c9d-0e1f-3a4b5c6d7e8f",
+   "title": "Q28d SQL Error",
+   "topic": "Q28d SQL Error",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p3d4e5f6-a7b8-4c9d-0e1f-3a4b5c6d7e8f",
+     "part": "Question 28d",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Identify the mistake in this SQL statement: `SELECT name, age FROM employees WHERE age > '30';`",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 32,
+   "question_id": "d4e5f6a7-b8c9-4d0e-1f2a-4b5c6d7e8f9a",
+   "title": "Q29 K-Nearest Neighbours Algorithm",
+   "topic": "Q29 K-Nearest Neighbours Algorithm",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "The K-Nearest Neighbours (KNN) algorithm is used to classify a new data point by comparing it to existing classified/labelled data points. It calculates the Euclidean distance between the new data point (shown as a question mark on the chart below) and every other point in the training data. It then counts the labels of the k closest points. The most common label among these neighbours is the predicted label assigned to the new point.\n\n![image](assets/29.png.png)",
+   "stimulus_images": [
+    "assets/29.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "p4e5f6a7-b8c9-4d0e-1f2a-4b5c6d7e8f9a",
+     "part": "Question 29",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "PSEUDOCODE",
+     "prompt": "Write a pseudocode algorithm for a function called knn. It is passed:\n\n-   **newPoint:** the x and y coordinates of the point to classify as A, B, C or D\n-   **tData:** an array of x and y coordinates for all labelled points\n-   **tLabels:** an array of strings with the label A, B, C or D for each known point\n-   **k:** an integer\n\n  \n\nYou may use the following pre-defined functions in your algorithm:\n\n-   **distance(p1, p2):** returns the Euclidean distance between two (x, y) points\n-   **sort(pairlist):** sorts an array of \\[distance, label\\] pairs in ascending order by distance\n-   **mode(array):** returns the label that occurs most frequently in an array\n\n  \n\nYour algorithm should return the predicted label for the new data point.",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "type": "PSEUDOCODE"
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 33,
+   "question_id": "e5f6a7b8-c9d0-4e1f-2a3b-5c6d7e8f9a0b",
+   "title": "Q30 Python Banding Program",
+   "topic": "Q30 Python Banding Program",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Your friends have asked you for a simple program to convert their results to a band where:\n\n-   Band 6 = 90 - 100 marks.\n-   Band 5 = 80 - 89 marks.\n-   Band 4 = 70 - 79 marks.\n-   Band 3 = 60 - 69 marks.\n-   Band 2 = 50 - 59 marks.\n-   Band 1 = 0 - 49 marks.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "p5f6a7b8-c9d0-4e1f-2a3b-5c6d7e8f9a0b",
+     "part": "Question 30",
+     "marks_available": 8,
+     "syllabus": null,
+     "answer_type": "CODING",
+     "prompt": "Write a Python CLI program where students input their grade for atleast 4 different subjects and the program outputs:\n\n-   a Band for each subject along with subject name\n-   calculate the average or overall marks and Band\n-   print the average/overall marks and band.\n\nYour program must demonstrate efficient logic, validations where applicable, intrinsic documentation, loop/repitition for multiple students.\n\nAttach your program to this question.",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 8,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  }
+ ]
+}

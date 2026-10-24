@@ -1,0 +1,2003 @@
+{
+ "exam": "NESA HSC Sample Exam",
+ "private": true,
+ "source": "software.paper.is via the SEN Discord (personal study only)",
+ "duration_minutes": 150,
+ "total_available": 80,
+ "parts_total": 32,
+ "parts_answered": 0,
+ "parts_marked": 0,
+ "total_mark": null,
+ "questions": [
+  {
+   "number": 1,
+   "question_id": "hsc_q1",
+   "title": "HSC SE 2025, Q1, Requirements Definition",
+   "topic": "HSC SE 2025, Q1, Requirements Definition",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q1_p1",
+     "part": "Question 1",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following should take place during the requirements definition step when developing a software solution?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Identifying algorithms to be used",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Documenting security vulnerabilities",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Identifying potential security threats in the software",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Documenting the needs and constraints of the software",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "question_id": "hsc_q2",
+   "title": "HSC SE 2025, Q2, SMTP Protocol",
+   "topic": "HSC SE 2025, Q2, SMTP Protocol",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q2_p1",
+     "part": "Question 2",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following best describes SMTP?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "A protocol for email transmission",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "A set of rules to securely transfer files across a network",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "A set of rules for securing communication between computers",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "A protocol used for synchronising communication across networks",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "question_id": "hsc_q3",
+   "title": "HSC SE 2025, Q3, Client Data Security",
+   "topic": "HSC SE 2025, Q3, Client Data Security",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A company conducts all of its consultations with its clients via its website.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q3_p1",
+     "part": "Question 3",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is the best way for the company to maintain the security of its clients' data?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Implement data encryption",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Ensure that the software is user-friendly",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Focus on software that incorporates metadata",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Use software that allows for easy data integration with other platforms",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "question_id": "hsc_q4",
+   "title": "HSC SE 2025, Q4, Collaboration Benefits",
+   "topic": "HSC SE 2025, Q4, Collaboration Benefits",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q4_p1",
+     "part": "Question 4",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following are benefits of collaborating with others when developing software solutions? (More than one may be selected.)",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Privacy is improved.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Security of data is increased.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Intellectual property is protected.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Different points of view can be considered.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "E",
+        "text": "Tasks can be delegated to those with expertise.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D",
+       "E"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "question_id": "hsc_q5",
+   "title": "HSC SE 2025, Q5, System Implementation Methods",
+   "topic": "HSC SE 2025, Q5, System Implementation Methods",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q5_p1",
+     "part": "Question 5",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "New systems can be implemented in a number of different ways. Match the implementation methods to their characteristics by selecting the corresponding option in each row.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "Direct",
+       "Parallel",
+       "Phased",
+       "Pilot"
+      ],
+      "rows": [
+       {
+        "statement": "The new system runs immediately with no delay.",
+        "correct": [
+         "Direct"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "The new system gradually replaces the old system.",
+        "correct": [
+         "Phased"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "The new system and the old system run at the same time.",
+        "correct": [
+         "Parallel"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "The new system is trialled with a small group of users and then implemented entirely when ready.",
+        "correct": [
+         "Pilot"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "The new system runs immediately with no delay.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "The new system gradually replaces the old system.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "The new system and the old system run at the same time.",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "The new system is trialled with a small group of users and then implemented entirely when ready.",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "question_id": "hsc_q6",
+   "title": "HSC SE 2025, Q6, Framework Selection",
+   "topic": "HSC SE 2025, Q6, Framework Selection",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A company is creating a new online application.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q6_p1",
+     "part": "Question 6",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is the least important consideration when choosing an open-source front-end web framework for the new application?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Popularity of the framework on social media",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Quality of existing framework documentation",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "Knowledge of the framework within the company's development team",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "Compatibility of the framework with the company's existing technology",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "question_id": "hsc_q7",
+   "title": "HSC SE 2025, Q7, Python to Pseudocode",
+   "topic": "HSC SE 2025, Q7, Python to Pseudocode",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Consider the following Python code.\n\n```\nfor index in range(n):\n    print(index)\n```",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q7_p1",
+     "part": "Question 7",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Select the correct option to complete the equivalent pseudocode.\n\n```\nFOR index = ...\n    DISPLAY index\nNEXT index\n```",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "1 TO n",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "0 TO n-1",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "1 TO n-1",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "0 TO n",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "question_id": "hsc_q8",
+   "title": "HSC SE 2025, Q8, SAST vs DAST",
+   "topic": "HSC SE 2025, Q8, SAST vs DAST",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "The strategies listed below can be used to test the security of a web application that contains a database.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q8_p1",
+     "part": "Question 8",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Classify each strategy as EITHER static application security testing (SAST) OR dynamic application security testing (DAST).",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "Static Application Security Testing (SAST)",
+       "Dynamic Application Security Testing (DAST)"
+      ],
+      "rows": [
+       {
+        "statement": "Simulate attacks on the web application",
+        "correct": [
+         "Dynamic Application Security Testing (DAST)"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Check the way SQL queries are constructed",
+        "correct": [
+         "Static Application Security Testing (SAST)"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Test the database's web interface for vulnerabilities",
+        "correct": [
+         "Dynamic Application Security Testing (DAST)"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Test the web application used to interact with the database when it is running",
+        "correct": [
+         "Dynamic Application Security Testing (DAST)"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Analyse the code for connecting to the database to identify security vulnerabilities",
+        "correct": [
+         "Static Application Security Testing (SAST)"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Simulate attacks on the web application",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Check the way SQL queries are constructed",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Test the database's web interface for vulnerabilities",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Test the web application used to interact with the database when it is running",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Analyse the code for connecting to the database to identify security vulnerabilities",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "question_id": "hsc_q9",
+   "title": "HSC SE 2025, Q9, Algorithm Ordering",
+   "topic": "HSC SE 2025, Q9, Algorithm Ordering",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Place the following steps of a number guessing game algorithm in the correct order by dragging the steps into position.\n\nBEGIN GuessingGame\n\nSet guess = -1\n\n...\n\nEND GuessingGame",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q9_p1",
+     "part": "Question 9",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SORTING_TABLE",
+     "prompt": null,
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "type": "SORTING_TABLE",
+       "rows": [
+        {
+         "id": "q9_r1",
+         "cells": [
+          {
+           "text": "Display \"Guess a number between 0 and 100:\""
+          }
+         ]
+        },
+        {
+         "id": "q9_r2",
+         "cells": [
+          {
+           "text": "Display \"Well Done\""
+          }
+         ]
+        },
+        {
+         "id": "q9_r3",
+         "cells": [
+          {
+           "text": "Set number = random integer between 0 and 100"
+          }
+         ]
+        },
+        {
+         "id": "q9_r4",
+         "cells": [
+          {
+           "text": "ENDWHILE"
+          }
+         ]
+        },
+        {
+         "id": "q9_r5",
+         "cells": [
+          {
+           "text": "WHILE guess <> number"
+          }
+         ]
+        },
+        {
+         "id": "q9_r6",
+         "cells": [
+          {
+           "text": "Get guess"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "-   Set number = random integer between 0 and 100\n-   WHILE guess <> number\n-   Display \"Guess a number between 0 and 100:\"\n-   Get guess\n-   ENDWHILE\n-   Display \"Well Done\""
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "question_id": "hsc_q10",
+   "title": "HSC SE 2025, Q10, Structure Chart Analysis",
+   "topic": "HSC SE 2025, Q10, Structure Chart Analysis",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "This structure chart describes an online ordering system for a café.\n\n![image](assets/10.png.png)",
+   "stimulus_images": [
+    "assets/10.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "hsc_q10_p1",
+     "part": "Question 10",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following statements are TRUE about this structure chart? (More than one may be selected.)",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Confirm cart is Boolean.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Order number is a control variable.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "A valid loyalty account is not required for online ordering.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "The order cannot be displayed until the cart is confirmed.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "E",
+        "text": "A choice is repeatedly offered between Browse menu and Add items to order.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "D",
+       "E"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "question_id": "hsc_q11",
+   "title": "HSC SE 2025, Q11, Algorithm Testing",
+   "topic": "HSC SE 2025, Q11, Algorithm Testing",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Consider the following algorithm.\n\n```\nBEGIN responsiveScreen\n  Get ScreenSize\n  IF ScreenSize >= 1024 THEN\n    Viewport = 'Desktop'\n  ELSEIF ScreenSize >= 768 THEN\n    Viewport = 'Tablet'\n  ELSE\n    Viewport = 'Phone'\n  ENDIF\n  Display \"Display set to \", Viewport\nEND responsiveScreen\n```",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q11_p1",
+     "part": "Question 11",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Provide a set of 5 test data that will thoroughly test the algorithm. Include the expected outputs and reasons for inclusion. You may assume that all input data are valid. Please format your answer like a table.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "• Provides a set of test data that will thoroughly test the algorithm\n• Includes expected outputs and reasons for inclusion"
+      },
+      {
+       "marks": "2",
+       "criterion": "• Provides a set of test data that tests most of the boundaries and paths\n• Includes the relevant expected outputs and reasons for inclusion"
+      },
+      {
+       "marks": "1",
+       "criterion": "• Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "| Test data (ScreenSize) | Expected output (Viewport) | Reason for inclusion |\n|---|---|---|\n| 1024 | Desktop | Boundary check |\n| 768 | Tablet | Boundary check |\n| 100 | Phone | Below lowest screen size check |\n| 850 | Tablet | Between Tablet and Desktop |\n| 2000 | Desktop | Above highest screen size check |"
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "question_id": "hsc_q12",
+   "title": "HSC SE 2025, Q12, Web Development",
+   "topic": "HSC SE 2025, Q12, Web Development",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q12_p1",
+     "part": "Question 12 (a)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Explain how a web developer could test a website for cross-platform compatibility.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Explains how a developer could test a website for cross-platform compatibility"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines how to test a website for cross-platform compatibility\nOR\nIdentifies strategies to test a website for cross-platform compatibility"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "A web developer can use browser developer tools. These tools, built into most modern browsers, allow developers to simulate how their website looks and behaves on different devices and screen sizes. By using these tools, developers can identify and fix any issues related to cross-platform compatibility, ensuring that the website works well across a variety of devices and browsers.\n\n  \n\n**Answers could include:**\n\n-   The use of online tools built specifically for testing cross-platform compatibility\n-   Conducting manual testing on different devices and browsers can help identify any remaining issues\n-   The developer could validate the website's code using the W3C Markup Validation Service to ensure it meets the web standards."
+    },
+    {
+     "part_id": "hsc_q12_p2",
+     "part": "Question 12 (b)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Explain how the load time of a web page can be improved using a progressive web app (PWA).",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Explains how the load time of a web page can be improved using a progressive web app (PWA)"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines some features of a progressive web app (PWA)\nand/or\nissues affecting load time"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "A progressive web app (PWA) can improve load times by pre-caching important resources, allowing files such as image-gallery.js and video-gallery.js to be loaded into memory or cache while the rest of the page loads. PWAs also use service workers to cache resources, ensuring faster load times on repeat visits and offline functionality. Background synchronisation and background fetching can update content in the background, so users see the latest information without slowing down the initial load."
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "question_id": "hsc_q13",
+   "title": "HSC SE 2025, Q13, Data Transfer Protocols",
+   "topic": "HSC SE 2025, Q13, Data Transfer Protocols",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q13_p1",
+     "part": "Question 13",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Describe the function of protocols in the transfer of data. In your answer, refer to a specific web protocol.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Describes the function of protocols in the transfer of data, with reference to a specific web protocol"
+      },
+      {
+       "marks": "2",
+       "criterion": "Describes the function of protocols in the transfer of data\nOR\nProvides an example of a web protocol and its use"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Protocols are important in data transfer as they establish rules for communication between devices connected to a network, such as the internet. HTTP (Hypertext Transfer Protocol) enables browsers to request web content from servers, which respond with the requested data. The protocol defines the structure of requests and the response so that data transfer can occur.\n\n  \n\n**Answers could include:**\n\n-   TCP/IP\n-   DNS\n-   FTP, SFTP\n-   SSL, TLS\n-   SMTP, POP 3, IMAP\n-   Data packets."
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "question_id": "hsc_q14",
+   "title": "HSC SE 2025, Q14, Pseudocode Algorithm",
+   "topic": "HSC SE 2025, Q14, Pseudocode Algorithm",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "PseudoPizza creates and sells custom-designed pizzas.\n\nThe price of a small pizza is $10. The following costs are added, depending on the size of the pizza base and the number of toppings chosen.\n\n-   Medium size: $2\n-   Large size: $4\n-   Each topping: $1.50\n\nAn algorithm is needed to calculate the cost of pizzas ordered for a customer. The algorithm should calculate and display the cost of each pizza and the total cost of the order.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q14_p1",
+     "part": "Question 14",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "PSEUDOCODE",
+     "prompt": "Write the algorithm using pseudocode. Include at least one subroutine in your answer. You may assume that all inputs are valid.",
+     "prompt_images": [],
+     "question": {
+      "raw_parameters": {
+       "type": "PSEUDOCODE"
+      }
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides substantially correct pseudocode\nIncludes at least ONE subroutine"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides pseudocode that addresses some of the requirements"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the problem"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nBEGIN main\n  Get num_pizzas\n  total_cost = 0\n  FOR i = 1 TO num_pizzas\n    Get pizza_size\n    Get num_toppings\n    cost_per_pizza = calculate_pizza_cost(pizza_size, num_toppings)\n    DISPLAY cost_per_pizza\n    total_cost = total_cost + cost_per_pizza\n  NEXT i\n  DISPLAY total_cost\nEND main\n\nBEGIN calculate_pizza_cost(size, num_toppings)\n  base_price = 10\n  topping_price = 1.5\n  IF size = \"Medium\" THEN\n    base_price = base_price + 2\n  ELSEIF size = \"Large\" THEN\n    base_price = base_price + 4\n  ENDIF\n  pizza_cost = base_price + num_toppings * topping_price\n  RETURN pizza_cost\nEND calculate_pizza_cost\n```"
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "question_id": "hsc_q15",
+   "title": "HSC SE 2025, Q15, Machine Learning in Data Analysis",
+   "topic": "HSC SE 2025, Q15, Machine Learning in Data Analysis",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q15_p1",
+     "part": "Question 15",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Describe how machine learning algorithms can be used in data analysis.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Describes how machine learning algorithms can be used in data analysis"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines some features of machine learning algorithms relevant to data analysis"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Machine learning algorithms can be trained with a subset of the data to automatically identify patterns and trends within large datasets. The algorithms can handle complex relationships and nonlinearities present in the data allowing for efficient and comprehensive analysis. Machine learning can also be used for predictions and forecasting. These models can learn from new data over time, continuously improving their analysis and predictive accuracy and performance."
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "question_id": "hsc_q16",
+   "title": "HSC SE 2025, Q16, CSS Debugging",
+   "topic": "HSC SE 2025, Q16, CSS Debugging",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A developer added a cascading style sheet (CSS) to their company's website.\n\n  \n\nThe developer had expected the HTML code to display Image 1, but Image 2 is being displayed.\n\n![image](assets/16.png.png)\n\n**index.html**\n\n```\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <title>Welcome to Software</title>\n  <link rel=\"stylesheet\" href=\"main.css\">\n</head>\n<body>\n  <h1>Software</h1>\n  <p><span id=\"se_items\">Software</span> includes code.</p>\n</body>\n</html>\n```\n\n  \n**main.css**\n\n```\nbody {\n  font-family: Arial;\n}\nh1 {\n  font-weight: bold;\n  text-align: center;\n}\n#se_item {\n  font-style: italic;\n  font-weight: bold;\n}\n```",
+   "stimulus_images": [
+    "assets/16.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "hsc_q16_p1",
+     "part": "Question 16 (a)",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Referring to the code, what is the cause of the problem?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Font family is missing.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "Attribute of <p> has not been defined.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "main.css has not been correctly referenced.",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "The id \"se_item\" has not been correctly referenced.",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    },
+    {
+     "part_id": "hsc_q16_p2",
+     "part": "Question 16 (b)",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Outline TWO benefits of adding CSS to the company's website.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Outlines TWO benefits of adding CSS to the company's website"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "It can provide the same look and feel across the company’s websites for consistency and ease of use. Separate html and CSS code can allow developers to work independently on files."
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "question_id": "hsc_q17",
+   "title": "HSC SE 2025, Q17, SQL Query",
+   "topic": "HSC SE 2025, Q17, SQL Query",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A shop uses an online database for recording its stock. The database contains a Products table and a Suppliers table. The prices are in dollars and the masses are in grams. The shop wants to identify all the products with a mass of at least 50 grams that are produced by Yumtreats.\n\n![image](assets/17.png.png)",
+   "stimulus_images": [
+    "assets/17.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "hsc_q17_p1",
+     "part": "Question 17",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SQL",
+     "prompt": "Write an SQL query to display the product names and supplier names, in descending order by product name.",
+     "prompt_images": [],
+     "question": {
+      "dataset_setup_sql": "CREATE TABLE Suppliers (SupplierID TEXT PRIMARY KEY, Name TEXT); CREATE TABLE Products (ProductID TEXT PRIMARY KEY, Name TEXT, Price REAL, Mass INTEGER, Producer TEXT, Quantity INTEGER, SupplierID TEXT, FOREIGN KEY(SupplierID) REFERENCES Suppliers(SupplierID)); INSERT INTO Suppliers VALUES ('SID001', 'The Lolly Pop'), ('SID002', 'Sugar Rush Hour'), ('SID003', 'Sweet Retreat'); INSERT INTO Products VALUES ('PID001', 'TruffleSway', 1.00, 30, 'Yumtreats', 100, 'SID001'), ('PID002', 'PeanutPop', 1.00, 35, 'Yumtreats', 500, 'SID002'), ('PID003', 'Carameluxe', 2.20, 50, 'Yumtreats', 100, 'SID003'), ('PID004', 'BerryBlend', 1.25, 50, 'Yumtreats', 8, 'SID001'), ('PID005', 'Chocolate Cascade', 1.25, 52, 'Yumtreats', 50, 'SID002'), ('PID006', 'Hazelnut Symphony', 2.50, 50, 'Sugaryum', 0, 'SID003'), ('PID007', 'Caramel Delight', 2.50, 40, 'Treatopia', 20, 'SID002'), ('PID008', 'ChocoGlow', 2.50, 55, 'Treatopia', 95, 'SID002');",
+      "starter_query": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides a correct SQL query"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a SQL query that addresses some of the requirements"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of SQL"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nSELECT Products.Name AS 'Product', Suppliers.Name AS 'Supplier'\nFROM Products, Suppliers\nWHERE Products.SupplierID = Suppliers.SupplierID\nAND Products.Producer = 'Yumtreats'\nAND Products.Mass >= 50\nORDER BY Products.Name DESC\n```"
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "question_id": "hsc_q18",
+   "title": "HSC SE 2025, Q18, Input Validation",
+   "topic": "HSC SE 2025, Q18, Input Validation",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "An online site requires its users to create accounts. Each username must satisfy the following rules:\n\n1.  It must be at least 8 characters long.\n2.  It must start with an uppercase letter.\n3.  The second last character must be a lowercase letter.\n4.  The last character must be numeric.\n\nAn example of a valid username is NESA24s3.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q18_p1",
+     "part": "Question 18 (a)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Explain how defensive data input handling practices can be implemented for this website.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Explains how defensive data input handling practices can be implemented for the website"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines some features of data input handling practices"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Data sanitisation using client-side scripting can clean the data and remove dangerous input. Input validation on the client-side can check that entered data meets all of the requirements before getting processed by the server. Errors generated by data not meeting rules can be shown to the user."
+    },
+    {
+     "part_id": "hsc_q18_p2",
+     "part": "Question 18 (b)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "CODING",
+     "prompt": "Write a function with Python that will check whether a username satisfies the rules.",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": "# Write your code here"
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides a correct function in Python to check whether a username satisfies the rules"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a partially correct function in Python to check the username"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the problem and Python programming"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\ndef validate_username(username):\n  valid = True\n  # length check\n  if len(username) < 8:\n    valid = False\n  elif (not username[0].isupper()):\n    valid = False\n  elif (not username[-2].islower()):\n    valid = False\n  elif (not username[-1].isdigit()):\n    valid = False\n  return valid\n```"
+    }
+   ]
+  },
+  {
+   "number": 19,
+   "question_id": "hsc_q19",
+   "title": "HSC SE 2025, Q19, Authentication and Authorisation",
+   "topic": "HSC SE 2025, Q19, Authentication and Authorisation",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "An app is being developed for use in a school. It will allow teachers to upload and assign work, and track student homework. Students can download work and upload their completed responses for marking.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q19_p1",
+     "part": "Question 19",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Explain how authentication and authorisation could be applied to this app.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Explains how authentication and authorisation could be applied to the app"
+      },
+      {
+       "marks": "3",
+       "criterion": "Explains how authentication or authorisation could be applied to the app\nOROutlines how authentication and authorisation could be applied to the app"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines some features of authentication and/or authorisation"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Authentication ensures that only staff and students with valid usernames and passwords, which should be encrypted in storage (eg using hashing), can access the app. Authorisation controls access to specific features of the app based on user roles or groups. Teachers may have permissions to upload, assign and track homework, while students can only download tasks and upload completed work. By organising users into specific roles or groups, the app restricts access to appropriate functionality, ensuring that each user can only perform actions relevant to their role or group."
+    }
+   ]
+  },
+  {
+   "number": 20,
+   "question_id": "hsc_q20",
+   "title": "HSC SE 2025, Q20, Decision Tree",
+   "topic": "HSC SE 2025, Q20, Decision Tree",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "Consider the following decision tree of a trained machine learning model that determines whether to purchase a mobile phone.\n\n![image](assets/20.png.png)",
+   "stimulus_images": [
+    "assets/20.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "hsc_q20_p1",
+     "part": "Question 20 (a)",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "OBJECTIVE_RESPONSE",
+     "prompt": "Using the decision tree, determine the outcome of each of the following situations.",
+     "prompt_images": [],
+     "question": {
+      "columns": [
+       "Buy",
+       "Do not buy"
+      ],
+      "rows": [
+       {
+        "statement": "Memory = 256 GB, AI Assistant = Yes, Accessory inclusions = No",
+        "correct": [
+         "Buy"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Memory = 128 GB, AI Assistant = No, Accessory inclusions = Yes",
+        "correct": [
+         "Buy"
+        ],
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Foldable = Yes, AI Assistant = No, Accessory inclusions = No",
+        "correct": [
+         "Buy"
+        ],
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "rows": [
+       {
+        "statement": "Memory = 256 GB, AI Assistant = Yes, Accessory inclusions = No",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Memory = 128 GB, AI Assistant = No, Accessory inclusions = Yes",
+        "yours": [],
+        "right": null
+       },
+       {
+        "statement": "Foldable = Yes, AI Assistant = No, Accessory inclusions = No",
+        "yours": [],
+        "right": null
+       }
+      ]
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    },
+    {
+     "part_id": "hsc_q20_p2",
+     "part": "Question 20 (b)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "DRAWING_V2",
+     "prompt": "The decision tree can be simplified without compromising its logic. Redraw the decision tree to reduce the number of branches.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Draws a correctly simplified decision tree"
+      },
+      {
+       "marks": "2",
+       "criterion": "Draws a simplified decision tree with most of the logic"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the requirement"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![A simplified decision tree is shown.](assets/a20.png.png)",
+     "sample_answer_images": [
+      "assets/a20.png.png"
+     ]
+    }
+   ]
+  },
+  {
+   "number": 21,
+   "question_id": "hsc_q21",
+   "title": "HSC SE 2025, Q21, 2D Arrays and Python",
+   "topic": "HSC SE 2025, Q21, 2D Arrays and Python",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "At a school, each student studies five subjects. The school timetable has five periods each day, and each period is allocated to a different subject. The subjects shift to a different period each day so that each subject will appear in all five periods during the week. An example of a student timetable is shown below.\n\n![image](assets/21.png.png)",
+   "stimulus_images": [
+    "assets/21.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "hsc_q21_p1",
+     "part": "Question 21 (a)",
+     "marks_available": 1,
+     "syllabus": null,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "If the timetable is stored as a 2D array, what is the correct Python snippet for accessing the subject that is on Monday Period 3?",
+     "prompt_images": [],
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "timetable[2][0]",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "B",
+        "text": "timetable[0][2]",
+        "image": null,
+        "correct": true,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "C",
+        "text": "timetable[3][1]",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       },
+       {
+        "letter": "D",
+        "text": "timetable[1][3]",
+        "image": null,
+        "correct": false,
+        "chosen_by_you": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "your_response": {
+      "answered": false,
+      "chosen_letters": []
+     },
+     "result": {
+      "mark": null,
+      "available": 1,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": null
+    },
+    {
+     "part_id": "hsc_q21_p2",
+     "part": "Question 21 (b)",
+     "marks_available": 5,
+     "syllabus": null,
+     "answer_type": "CODING",
+     "prompt": "In this example, the student studies English, Software, Drama, Science and Sport. From Monday to Friday, English is held in Period 1, Period 2, Period 3, Period 4 and Period 5. Software is held in Period 2, Period 3, Period 4, Period 5 and then Period 1. A similar pattern can be observed for the other subjects.\n\nYou are required to write a Python program to print out the timetable in the following format:\n\n  \n\nMonday  \n  Period 1: English  \n  Period 2: Software  \n  Period 3: Drama  \n  Period 4: Science  \n  Period 5: Sport  \nand so on...\n\n  \n\nStart your program with `subjects = [\"English\", \"Software\", \"Drama\", \"Science\", \"Sport\"]`\n\nDifferent students may study different subjects.\n\nThe program will be used by different students to print out their timetable by changing the subjects listed in the first line of code.",
+     "prompt_images": [],
+     "question": {
+      "language": "PYTHON",
+      "starter_code": "subjects = [\"English\", \"Software\", \"Drama\", \"Science\", \"Sport\"]\n\n# Write your Python program using subroutines.\n"
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 5,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "5",
+       "criterion": "Provides a substantially correct Python program that addresses the following requirements:Places each subject in the correct periodDisplays all 5 days of the timetableProvides a solution with appropriate subroutinesProgrammatically builds the timetable"
+      },
+      {
+       "marks": "4",
+       "criterion": "Provides a Python program that addresses most of the requirements"
+      },
+      {
+       "marks": "3",
+       "criterion": "Provides Python code that addresses some of the requirements"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides Python code that addresses a requirement"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the problem"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nsubjects = [\"English\", \"Software\", \"Drama\", \"Science\", \"Art\"]\nNUM_DAYS = 5\nNUM_PERIODS = 5\nDAYS_OF_WEEK = [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\",\n\"Friday\"]\n\ndef create_timetable(subjects):\n  timetable = []\n  for day in range(NUM_DAYS):\n    periods = []\n    for period in range(NUM_PERIODS):\n      periods.append(subjects[(period - day) % NUM_PERIODS])\n    timetable.append(periods)\n  return timetable\n\ndef print_timetable(timetable):\n  print()\n  for day in range(NUM_DAYS):\n    print(f\"{DAYS_OF_WEEK[day]}\")\n    for period in range(NUM_PERIODS):\n      print(f\"\\tPeriod {period+1}: {timetable[day][period]}\")\n  print()\n\ntimetable = create_timetable(subjects)\nprint_timetable(timetable)\n```"
+    }
+   ]
+  },
+  {
+   "number": 22,
+   "question_id": "hsc_q22",
+   "title": "HSC SE 2025, Q22, SQL and Race Conditions",
+   "topic": "HSC SE 2025, Q22, SQL and Race Conditions",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "An online relational database is used to keep track of students at a coding club. The contents of the Students table are shown.\n\n![image](assets/22.png.png)",
+   "stimulus_images": [
+    "assets/22.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "hsc_q22_p1",
+     "part": "Question 22 (a)",
+     "marks_available": 2,
+     "syllabus": null,
+     "answer_type": "SQL",
+     "prompt": "Write an SQL query to generate the number of students at each level.",
+     "prompt_images": [],
+     "question": {
+      "dataset_setup_sql": "CREATE TABLE Students (StudentID TEXT, FirstName TEXT, Surname TEXT, Attended INTEGER, Level TEXT); INSERT INTO Students VALUES ('Student1', 'John', 'Doe', 5, 'Beginner'), ('Student2', 'Jane', 'Smith', 4, 'Intermediate'), ('Student3', 'David', 'Kim', 3, 'Beginner'), ('Student4', 'Sarah', 'Lee', 2, 'Expert'), ('Student5', 'Emma', 'Wilson', 1, 'Beginner'), ('Student6', 'Michael', 'Johnson', 0, 'Intermediate'), ('Student7', 'Olivia', 'Davis', 2, 'Beginner'), ('Student8', 'Ethan', 'Martinez', 3, 'Intermediate'), ('Student9', 'Sophia', 'Choi', 4, 'Expert'), ('Student10', 'Noah', 'Moore', 5, 'Beginner'), ('Student11', 'Isabella', 'Garcia', 1, 'Intermediate'), ('Student12', 'Liam', 'Vo', 2, 'Expert');",
+      "starter_query": null
+     },
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 2,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Correctly completes the SQL query"
+      },
+      {
+       "marks": "1",
+       "criterion": "Correctly completes part of the SQL query"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "```\nSELECT Level, COUNT(Level)\nFROM Students\nGROUP BY Level\n```"
+    },
+    {
+     "part_id": "hsc_q22_p2",
+     "part": "Question 22 (b)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Race conditions have been identified as a potential issue for this database. Provide an example of when a race condition may occur in this scenario and outline how secure code could be implemented to prevent it.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides an example of when a race condition may occur in this scenarioOutlines how secure code could be implemented to prevent it"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines some features of race conditions"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "With multiple teachers potentially accessing the database at the same time, race conditions can allow malicious users to gain unauthorised access. Authentication could be used to restrict access to the database, and code can be written to use atomic transactions and database locks to time the reading and writing of data."
+    }
+   ]
+  },
+  {
+   "number": 23,
+   "question_id": "hsc_q23",
+   "title": "HSC SE 2025, Q23, Machine Learning Concepts",
+   "topic": "HSC SE 2025, Q23, Machine Learning Concepts",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": null,
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q23_p1",
+     "part": "Question 23 (a)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "How can the effects of human bias be minimised when training machine learning algorithms?",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Shows thorough understanding of how the effects of human bias on the training of machine learning algorithms can be minimised"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines some effects of human bias on machine learning\nOROutlines some features of the training of machine learning algorithms"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Training data is initially selected by humans, who may unintentionally introduce their own biases. To minimise this, ensure that training data is representative of the problem the ML model will address. Reviewing data by individuals from diverse backgrounds could identify and reduce potential biases, ensuring fairer and accurate model performance."
+    },
+    {
+     "part_id": "hsc_q23_p2",
+     "part": "Question 23 (b)",
+     "marks_available": 3,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Compare linear regression and K-nearest neighbour.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 3,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Compares linear regression and K-nearest neighbour"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines features of linear regression and/or K-nearest neighbour"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "Linear regression and K-nearest neighbours (KNN) are both supervised learning algorithms that make predictions from labelled data. The key difference is how they handle data: linear regression assumes a linear relationship between input features and the target variable, while KNN makes predictions based on the closest ‘K’ training examples, allowing it to handle more complex, non-linear patterns. However, KNN can be more computationally expensive than linear regression and is usually slower."
+    }
+   ]
+  },
+  {
+   "number": 24,
+   "question_id": "hsc_q24",
+   "title": "HSC SE 2025, Q24, Class Diagram",
+   "topic": "HSC SE 2025, Q24, Class Diagram",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A train company wants a class diagram that models the relationship between long-distance train trips and passengers.  \n  \n**The long-distance train has:**\n\n-   a unique trip identifier (eg AL456)\n-   a model code for the train engine (eg E67) and a model code (eg P9754) for each of the passenger cars\n-   two different areas ('Standard' and 'Executive'). The Executive area has 20 seats and there are 400 seats in the Standard area.\n\n**Each passenger:**\n\n-   has contact details including an email address and phone number\n-   purchases a 'Standard' or 'Executive' ticket and is given a seat number (eg 25D)\n-   may be a frequent traveller.",
+   "stimulus_images": [],
+   "parts": [
+    {
+     "part_id": "hsc_q24_p1",
+     "part": "Question 24",
+     "marks_available": 4,
+     "syllabus": null,
+     "answer_type": "DRAWING_V2",
+     "prompt": "Create a class diagram for the train company.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 4,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Creates a substantially correct class diagram that includes suitable classes with attributes, and methods showing inheritance, relationships and multiplicity"
+      },
+      {
+       "marks": "3",
+       "criterion": "Creates a class diagram that represents most features of the system"
+      },
+      {
+       "marks": "2",
+       "criterion": "Creates a class diagram with some features of the system"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides a diagram that shows some understanding of the scenario"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "![A class diagram is shown.](assets/a24.png.png)",
+     "sample_answer_images": [
+      "assets/a24.png.png"
+     ]
+    }
+   ]
+  },
+  {
+   "number": 25,
+   "question_id": "hsc_q25",
+   "title": "HSC SE 2025, Q25, Security Enhancements",
+   "topic": "HSC SE 2025, Q25, Security Enhancements",
+   "label": null,
+   "kind": null,
+   "source": null,
+   "copyright": null,
+   "stimulus": "A telecommunications company had a recent security breach which prompted a review to improve the security of its systems. It has contracted QuidantCon to propose security enhancements to its systems. Please review QuidantCon's Proposal in the slider below.\n\n![image](assets/25a.png.png)\n\n![image](assets/25b.png.png)\n\n![image](assets/25c.png.png)",
+   "stimulus_images": [
+    "assets/25a.png.png",
+    "assets/25b.png.png",
+    "assets/25c.png.png"
+   ],
+   "parts": [
+    {
+     "part_id": "hsc_q25_p1",
+     "part": "Question 25",
+     "marks_available": 8,
+     "syllabus": null,
+     "answer_type": "SHORT",
+     "prompt": "Discuss QuidantCon's proposal for security enhancements to the company's systems.",
+     "prompt_images": [],
+     "question": {},
+     "your_response": {
+      "answered": false
+     },
+     "result": {
+      "mark": null,
+      "available": 8,
+      "not_submitted": true,
+      "automarked": null,
+      "feedback": []
+     },
+     "marking_criteria": [
+      {
+       "marks": "8",
+       "criterion": "Discusses the proposal for security enhancements to the company’s systems, with reference to machine learning (ML) in DevOps, robotic process automation (RPA) and business process automation (BPA) from the slideshow"
+      },
+      {
+       "marks": "6–7",
+       "criterion": "Outlines advantages and disadvantages of the proposal, with reference to at least TWO of these areas: machine learning (ML) in DevOps, robotic process automation (RPA), business process automation (BPA)"
+      },
+      {
+       "marks": "4–5",
+       "criterion": "Outlines some advantages and/or disadvantages of the proposal, with reference to machine learning (ML) in DevOps and/or robotic process automation (RPA) and/or business process automation (BPA)"
+      },
+      {
+       "marks": "2–3",
+       "criterion": "Shows some understanding of the features of the proposal"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "sample_answer": "QuidantCon's proposal for the company suggests leveraging machine learning (ML) and automation to bolster security measures. One key benefit is the automation of security testing and vulnerability scanning, facilitated by integrating ML-powered tools into the DevOps pipeline. This approach ensures continuous security testing and provides rapid feedback to developers, allowing for early detection of security issues and reducing the risk of vulnerabilities being exploited. The frequent and automated testing improves the overall security position and enhances compliance with industry standards. Additionally, ML algorithms can analyse vast amounts of data to detect patterns and anomalies, which is crucial for proactive threat identification. This capability enables the company to identify security risks proactively, learn from past incidents, and predict future attacks, thereby enhancing their overall security measures.\n\nQuidantCon's proposal for the company also raises some concerns. One key issue is the need for high-quality data for ML algorithms to work effectively. If the data is inconsistent or incomplete, the ML models may not perform well, leading to false positives or missed threats. Another concern is the complexity of implementing ML solutions, which can be challenging and may require specialised skills and training. This complexity could result in integration challenges, higher costs, and delays. Additionally, ML systems can be biased, potentially affecting security decisions. Security and privacy are also critical, as handling sensitive data requires protection against unauthorised access and breaches. These concerns emphasise the need for a careful and balanced approach when considering ML and automation in security practices.\n\n  \n\n**Answers could include:**\n\n-   Automation of security testing and vulnerability scanning:\n    -   Automation of security testing including the use software tools to automatically test the security of an application or system\n    -   Conducting scans for vulnerabilities, misconfigurations, and potential threats\n    -   Automation helps in detecting security issues early in the development lifecycle, reducing the risk of vulnerabilities being exploited\n    -   Automation also enables more frequent testing, improving overall security posture and compliance with security standards\n    -   Integration of automation into the DevOps pipeline, allowing for continuous security testing and rapid feedback to developers.\n-   Use of machine learning powered tools to enhance security practices:\n    -   Machine learning helps in identifying security risks by analysing vast amounts of data to detect patterns and anomalies that may indicate a potential threat\n    -   Machine learning algorithms can learn from past security incidents and use this knowledge to predict and prevent future attacks\n    -   Machine learning can automate the analysis of security logs and events, providing real time insights\n    -   Machine learning can assist in automating incident response in RPA, enabling faster and more effective mitigation of security risks.\n-   Safe and efficient operation of Robotic Process Automation (RPA) bots:\n    -   Machine learning algorithms for real-time detection and response to security threats\n    -   Machine learning algorithms can continuously monitor RPA bot behaviour to detect any anomalies or deviations from normal operation\n    -   By analysing data on bot performance and interactions, machine learning can identify potential security threats or operational issues\n    -   Machine learning can optimise the performance of RPA bots by identifying areas for improvement and suggesting enhancements.\n-   Protection of Business Process Automation workflows from cyber threats\n    -   Machine learning algorithms can analyse BPA workflows to identify potential vulnerabilities\n    -   By continuously monitoring BPA processes, machine learning can detect and respond to cyber threats in real-time\n    -   Machine learning can automate the implementation of security controls and policies\n    -   Machine learning can enhance BPA workflows by predicting and preventing potential security breaches.\n-   Additional benefits of machine learning in security:\n    -   Improved efficiency and accuracy in detecting security threats\n    -   Enhanced ability to respond to security incidents in real-time\n    -   Ensuring security and compliance while automating business processes.\n-   Disadvantages of ML in Security:\n    -   Complexity and learning curve\n    -   Dependency on data quality\n    -   Potential for bias\n    -   Security and privacy concerns\n    -   Integration challenges\n    -   Cost considerations."
+    }
+   ]
+  }
+ ]
+}

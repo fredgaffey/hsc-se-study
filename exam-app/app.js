@@ -954,6 +954,11 @@ async function runSql(p, query, out) {
 }
 
 const drawApis = {};
+// NESA's own Software Engineering shape library (process, data store, external entity, data flow,
+// structure-chart data/control pointers, sub-program, decision, repetition, class boxes, flowchart shapes),
+// extracted from the HSC familiarisation app's drawing tool.
+let nesaLibrary = null;
+const loadNesaLibrary = () => nesaLibrary ||= fetch('/nesa/se-library.excalidrawlib').then(r => r.json()).then(j => j.libraryItems || []).catch(() => []);
 async function mountDrawing(p, i, a) {
   try { await loadExcalidraw(); } catch { const h = document.getElementById(`draw-${i}`); if (h) h.innerHTML = '<p class="drawing-msg">Could not load the drawing tool (needs internet).</p>'; return; }
   const host = document.getElementById(`draw-${i}`);
@@ -978,10 +983,11 @@ async function mountDrawing(p, i, a) {
       save();
     }, 2500);
   };
+  const libraryItems = await loadNesaLibrary();
   const root = ReactDOM.createRoot(host);
   drawRoots.push(root);
   root.render(React.createElement(ExcalidrawLib.Excalidraw, {
-    initialData: { elements: a.elements || [], files: a.files || {}, appState: { viewBackgroundColor: '#ffffff' } },
+    initialData: { elements: a.elements || [], files: a.files || {}, libraryItems, appState: { viewBackgroundColor: '#ffffff', openSidebar: { name: 'default', tab: 'library' } } },
     excalidrawAPI: api => { drawApis[p.part_id] = api; },
     onChange,
   }));

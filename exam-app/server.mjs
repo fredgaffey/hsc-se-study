@@ -229,7 +229,8 @@ function serveFile(req, res, file) {
     res.writeHead(206, { 'content-type': type, 'content-range': `bytes ${start}-${end}/${size}`, 'accept-ranges': 'bytes', 'content-length': end - start + 1 });
     return fs.createReadStream(file, { start, end }).pipe(res);
   }
-  res.writeHead(200, { 'content-type': type, 'content-length': size, 'accept-ranges': 'bytes' });
+  const noCache = /\.(html|js|css|excalidrawlib)$/i.test(file) ? { 'cache-control': 'no-cache' } : {};   // always pick up app updates
+  res.writeHead(200, { 'content-type': type, 'content-length': size, 'accept-ranges': 'bytes', ...noCache });
   fs.createReadStream(file).pipe(res);
 }
 

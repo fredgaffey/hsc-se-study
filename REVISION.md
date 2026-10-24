@@ -41,9 +41,19 @@ conversation, and update the Progress log and Open questions at the end of it.**
 - Take a rest break **just before the extended responses**, so I start them fresh.
 - All practice is typed, under exam-like conditions.
 
+### What NESA full-mark answers actually look like (2025 HSC official samples, read 24 Oct)
+- **Short:** 3-mark answers about 40–95 words; 5-mark 110–190; 6-mark about 280–300. **About 25–30 words per mark.**
+- **Spelling is NOT penalised:** full-mark answers contain "notafications", "encorperate", "malcious",
+  "Sever-side", "alogirthm", "do to"… and still got full marks. Content earns the marks.
+- Plain paragraphs, no dot points. Every point tied to the scenario. "This is because… For example…
+  Furthermore… However…" Longer answers: explain the concept, apply it, then impact/judgement.
+- Code/SQL marked on working, not polish (short plain Python got 3/3; two different SQL queries both full).
+- Class diagram: parent class created to remove repeated attributes, every attribute has a type.
+
 ### Word and time targets (from Trial Exam 1 sample answers)
 - Whole trial exam: **~1,690 sample-answer words**, nearly all in the written questions (1,645 words, 47 marks).
-- **About 35 words per mark:** 3 marks ≈ 100 words · 4 marks ≈ 140 words · 10 marks ≈ 350+ words
+- Teacher sample answers ≈ 35 words/mark, but **NESA full-mark answers ≈ 25–30 words/mark** (aim for that):
+  3 marks ≈ 75–90 words · 4 marks ≈ 100–120 · 6 marks ≈ 170–300 · 10 marks ≈ 300+
   (the 669-word sample is probably longer than needed).
 - **Time: about 2 minutes per mark** (150 min / 78 marks). 3 marks ≈ 6 min · 4 marks ≈ 8 min · 10 marks ≈ 20 min.
 - In that trial my 3-mark answers were about the right length (avg 67 words, 12/21 marks). I lost most on
@@ -240,6 +250,7 @@ accessibility, privacy, security, information, development, efficiency, metadata
 
 *(newest first: date — what was done — score/result — what to fix next)*
 
+- **24 Oct** — Read NESA 2025 full-mark samples: answers are shorter than assumed (~25–30 words/mark) and spelling isn't penalised.
 - **24 Oct** — Fair blind test with 4 fresh agents: with key 48/48 within 1 mark; no key 47/48.
 - **24 Oct** — Blind-marking test: Claude within 1 mark on 14/14 answers. MC analysis: content mostly solid; gaps in SDLC definitions.
 - **24 Oct** — Cloned the canvas repo: found the NESA sample exam + official marking guidelines, the 2025 HSC marking guidelines, SQL/diagram worksheets and 499 quiz questions.

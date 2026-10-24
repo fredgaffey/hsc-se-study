@@ -36,7 +36,26 @@ folder and run `npm install` then `npm start`.
 
 ### Exam app: sit papers like the real online HSC
 
-*Being finished — will be added here shortly. Until then `npm start` runs the other two apps.*
+Styled and laid out like NESA's online HSC exam app: question number bar with ticks and flags,
+FLAG / HIGHLIGHT / FONT SIZE / COLOUR / INFO toolbar, stimulus on the left and answer on the right,
+reading time, **Take a break** (pauses the timer), word counts, and NESA's finish window.
+Every Gradeo paper in this repo is in the menu, plus any PDF you drop into `papers/`.
+Python questions run in the browser, SQL questions run against the question's own data, and drawing
+questions use Excalidraw (the same tool NESA uses). Spell-check is off, as in the real exam.
+
+When you finish, your answers are saved to `papers/attempts/<name>.md`, ready to mark yourself
+against `gradeo_out/exams/<paper>/exam.md` or to give to Claude with `skills/hsc-marking`.
+
+| | |
+|---|---|
+| ![Start screen](docs/screenshots/exam-02-begin.png) | ![Question with stimulus](docs/screenshots/exam-08-q20-stimulus.png) |
+| ![Python question with Run](docs/screenshots/exam-12-python-run.png) | ![Drawing question](docs/screenshots/exam-26-drawing.png) |
+| ![Rest break](docs/screenshots/exam-13-rest-break.png) | ![Finish window](docs/screenshots/exam-20-finish-confirm.png) |
+
+**The real 2025 HSC paper:** NESA's own familiarisation app at https://fam.hsconline.nesa.nsw.edu.au/
+lets you sit the actual 2025 HSC Software Engineering paper in the real exam interface. Mark it with
+`papers/marking/2025 HSC - Marking Guidelines (official).pdf` (don't open the full-mark samples
+until you've sat it).
 
 ### SQL trainer: 13 tasks on the course specification's database
 

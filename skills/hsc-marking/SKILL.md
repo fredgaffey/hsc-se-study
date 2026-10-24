@@ -43,6 +43,23 @@ These were learned by comparing blind marks with the teacher's marks. Apply them
   Full sentences are expected.
 - **Blank or headings-only extended responses get 0**, even with a promising first sentence.
 
+## What NESA itself awards full marks for (2025 HSC official full-mark samples)
+
+Use these as the reference point for "full marks", especially when there is no guideline.
+
+- **Length is modest.** Full-mark 3-mark answers run about 40–95 words; 5-mark about 110–190; 6-mark
+  about 280–300 (~25–30 words per mark). Don't hold back marks because an answer is short if every
+  required part is there and developed.
+- **Spelling and grammar are not penalised.** Full-mark samples contain many misspellings and run-on
+  sentences. Never deduct for them.
+- Full-mark answers address **every part the question names** (e.g. "ONE positive and ONE negative",
+  "TWO ways", "with reference to the video"), each **tied to the scenario**, in plain paragraphs.
+- Longer answers: the concept is explained (how it works), then applied to the scenario, then an impact
+  or judgement. "Discuss" answers include at least one point from the other side.
+- **Code and SQL: marked on producing the required result.** Minimal, unpolished code that meets every
+  requirement gets full marks; small differences in approach (quote style, slightly broader filter) are fine.
+- Class diagrams: inheritance shown, redundant attributes moved to a parent class, attributes typed.
+
 ## Default bands when there is no marking guideline
 
 Roughly one developed, correct, relevant point per mark.

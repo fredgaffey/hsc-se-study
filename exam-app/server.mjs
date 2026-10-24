@@ -244,6 +244,11 @@ http.createServer(async (req, res) => {
     if (p === '/vendor/marked.js') return serveFile(req, res, path.join(ROOT, 'node_modules/marked/lib/marked.umd.js'));
     if (p.startsWith('/exams/')) { const [folder, ...rest] = p.slice(7).split('/'); return serveFile(req, res, safeJoin(examDir(folder), rest.join('/'))); }
     if (p.startsWith('/papers/')) return serveFile(req, res, safeJoin(PAPERS, p.slice(8)));
+    if (p === '/api/report' && req.method === 'POST') {   // "Report a problem" notes for Claude
+      const r = JSON.parse(await readBody(req));
+      fs.appendFileSync(path.join(PAPERS, 'reports.jsonl'), JSON.stringify(r) + '\n');
+      return send(res, 200, { ok: true });
+    }
     if (p === '/api/check') {   // live marking: the key for ONE question, fetched only after the student locks their answer
       const e = readExam(url.searchParams.get('folder') || '');
       const part = e.questions.flatMap(q => q.parts).find(x => x.part_id === url.searchParams.get('part'));

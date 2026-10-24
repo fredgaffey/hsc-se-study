@@ -81,7 +81,7 @@ const restInfo = (per, readingMs, durationMinutes) => {
   return a == null ? 'Rest breaks – unlimited (practice setting)' : `Rest breaks – ${words(a)} in total (${per} minutes per 30 minutes of exam time), up to ${Math.floor(a / REST_MIN_MS)} break${Math.floor(a / REST_MIN_MS) === 1 ? '' : 's'}; each break uses at least 5 minutes, even if you return early`;
 };
 const hasAllowance = () => attempt.rest && attempt.rest.allowanceMs != null;
-const restChargedMs = () => (attempt.pauses || []).reduce((t, p) => t + (p.end ? Math.max(p.end - p.start, REST_MIN_MS) : Date.now() - p.start), 0);
+const restChargedMs = () => (attempt.pauses || []).filter(p => p.kind !== 'report').reduce((t, p) => t + (p.end ? Math.max(p.end - p.start, REST_MIN_MS) : Date.now() - p.start), 0);
 const restLeftMs = () => hasAllowance() ? attempt.rest.allowanceMs - restChargedMs() : Infinity;
 const canRest = () => !hasAllowance() || restLeftMs() >= REST_MIN_MS;
 const writingLeft = () => attempt.readingMs + attempt.durationMinutes * 60000 - usedMs();
@@ -377,6 +377,7 @@ function chromeHtml(title, { nav = true, flag = true, highlight = true } = {}) {
       <span id="save-state" class="save-state"></span>
       <div class="header-test-break" id="break-box"><button class="nsw-button nsw-button--dark" id="pause" name="break">Take a break <i aria-hidden="true" class="fa fa-angle-right"></i></button><span id="rest-left"></span></div>
       ${exam?.drill ? '<button class="nsw-button nsw-button--dark" id="finish-drill" style="margin-right:12px">Finish drill <i class="fas fa-check"></i></button>' : ''}
+      <button class="nsw-button nsw-button--white" id="report-btn" style="margin-right:12px" title="Pauses the timer (doesn't use rest time)">Report a problem ⏸</button>
       <div class="header-test-subtitle" id="timer"></div>
     </div></div></header>
     <div class="nav-bar"><div class="margin-wrapper"><div class="nav-bar-inner">
@@ -398,7 +399,41 @@ function startClock() {
   document.body.dataset.reading = ui.wasReading ? '1' : '0';
   clearInterval(tick); tick = setInterval(updateTimer, 500); updateTimer();
   document.getElementById('pause').onclick = pause;
-  if (isPaused()) showBreakScreen();
+  // a report-pause left open by a reload just ends; a real break shows the break screen
+  const open = (attempt.pauses || []).find(p => !p.end);
+  if (open?.kind === 'report') { open.end = Date.now(); save(true); }
+  else if (isPaused()) showBreakScreen();
+}
+
+// ---- "Report a problem": pause the clock (no rest allowance used) and send Claude a note ----
+document.addEventListener('click', e => { if (e.target.closest('#report-btn')) openReport(); });
+function openReport() {
+  if (!attempt || attempt.submittedAt || isPaused()) return;
+  const pz = { start: Date.now(), kind: 'report' };
+  attempt.pauses = [...(attempt.pauses || []), pz];
+  save(true);
+  const g = groups[attempt.current];
+  const where = attempt.mode === 'pdf' ? 'PDF paper' : `Question ${g?.q.number ?? '?'}`;
+  const m = openModal(`<h2>Report a problem</h2><p>The timer is paused. Rest time isn't used.</p>
+    <p class="muted">${esc(attempt.title)} · ${esc(where)}</p>
+    <textarea id="report-text" rows="5" style="width:100%;font:inherit;padding:8px" placeholder="What's broken or confusing? e.g. the library shapes don't show, the image is missing, the key looks wrong…" ${NO_SPELL}></textarea>
+    <div style="display:flex;gap:12px;justify-content:center;margin-top:14px">
+      <button class="nsw-button nsw-button--dark" id="report-send">Send to Claude and resume</button>
+      <button class="nsw-button nsw-button--white" id="report-cancel">Resume without sending</button></div>`);
+  $('#report-text', m).focus();
+  const resume = () => { pz.end = Date.now(); closeModal(); save(true); updateTimer(); };
+  $('#report-cancel', m).onclick = resume;
+  $('#report-send', m).onclick = async () => {
+    const text = $('#report-text', m).value.trim();
+    if (text) {
+      try {
+        await fetch('/api/report', { method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ attempt: attempt.id, title: attempt.title, folder: attempt.folder, where, question: g?.q.number ?? null, text, at: new Date().toISOString() }) });
+      } catch {}
+      (attempt.reports ||= []).push({ where, text, at: new Date().toISOString() });
+    }
+    resume();
+  };
 }
 
 // ---------- home (menu) ----------

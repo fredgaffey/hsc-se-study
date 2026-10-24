@@ -83,7 +83,29 @@ const restLeftMs = () => hasAllowance() ? attempt.rest.allowanceMs - restCharged
 const canRest = () => !hasAllowance() || restLeftMs() >= REST_MIN_MS;
 const writingLeft = () => attempt.readingMs + attempt.durationMinutes * 60000 - usedMs();
 
+// Per-question timing: time on screen (not during reading or breaks), visits, and typing per part.
+function trackTime() {
+  const now = Date.now(), last = ui.lastTick || now;
+  ui.lastTick = now;
+  if (!attempt || attempt.submittedAt || attempt.mode !== 'structured' || !groups.length || isPaused() || inReading()) return;
+  const T = attempt.timing ||= { q: {}, p: {}, awayMs: 0 };
+  const dt = Math.min(now - last, 2000);
+  if (document.hidden) { T.awayMs += dt; return; }
+  const key = String(groups[attempt.current]?.q.number);
+  const q = T.q[key] ||= { ms: 0, visits: 0, firstSeenMs: workMs() };
+  if (T.lastKey !== key) { q.visits++; T.lastKey = key; }
+  q.ms += dt;
+  if (now - (ui.lastTimingSave || 0) > 15000) { ui.lastTimingSave = now; save(); }
+}
+const workMs = () => Math.max(0, usedMs() - (attempt.readingMs || 0));
+function noteTyping(partId) {
+  const T = attempt.timing ||= { q: {}, p: {}, awayMs: 0 };
+  const p = T.p[partId] ||= { firstMs: workMs(), edits: 0 };
+  p.lastMs = workMs(); p.edits++;
+}
+
 function updateTimer() {
+  trackTime();
   if (!attempt || attempt.submittedAt) return;
   const el = document.getElementById('timer');
   if (!el) return;
@@ -655,7 +677,7 @@ function renderQuestion() {
 function bindItem(p, i, el, reading) {
   const s = p.question;
   const a = attempt.answers[p.part_id] || {};
-  const set = v => { attempt.answers[p.part_id] = { ...(attempt.answers[p.part_id] || {}), ...v, overtime: !!attempt.timeUpAt || undefined }; save(); renderNav(); };
+  const set = v => { attempt.answers[p.part_id] = { ...(attempt.answers[p.part_id] || {}), ...v, overtime: !!attempt.timeUpAt || undefined }; noteTyping(p.part_id); save(); renderNav(); };
 
   $$('[data-act]', el).forEach(b => b.onclick = () => itemAction(b.dataset.act, p, i, el));
   $$('[data-opt]', el).forEach(inp => inp.onchange = () => {
@@ -880,6 +902,7 @@ async function finishExam() {
   closeModal();
   const m = openModal(`<p>The exam is now finished.</p><p id="submit-status">Submitting responses. Please wait.</p>
     <button class="nsw-button nsw-button--dark" id="close-exam" style="margin:auto;display:block" disabled>CLOSE</button>`);
+  trackTime();
   attempt.submittedAt = new Date().toISOString();
   attempt.timeUsedMs = Math.max(0, usedMs() - attempt.readingMs);
   clearInterval(tick);

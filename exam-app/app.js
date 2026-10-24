@@ -282,7 +282,16 @@ function timeUpModal() {
   $('#tu-cont', m).onclick = closeModal;
 }
 
+// Drills (questions from Claude): one click to finish, straight back to the menu.
+function finishDrill() {
+  const unatt = groups.filter(g => !groupAnswered(g)).length;
+  if (unatt && !confirm(`${unatt} question${unatt === 1 ? ' is' : 's are'} unanswered. Finish anyway?`)) return;
+  finishExam();
+}
+document.addEventListener('click', e => { if (e.target.closest('#finish-drill')) finishDrill(); });
+
 function finishModal() {
+  if (exam?.drill && attempt?.mode === 'structured') return finishDrill();
   const unatt = attempt.mode === 'pdf' ? (attempt.written || []).filter(w => !(w.text || '').trim()).length : groups.filter(g => !groupAnswered(g)).length;
   const flagged = attempt.mode === 'pdf' ? 0 : groups.filter(isFlagged).length;
   const left = writingLeft();
@@ -352,6 +361,7 @@ function chromeHtml(title, { nav = true, flag = true, highlight = true } = {}) {
       <div class="header-test-title">${esc(title)}</div>
       <span id="save-state" class="save-state"></span>
       <div class="header-test-break" id="break-box"><button class="nsw-button nsw-button--dark" id="pause" name="break">Take a break <i aria-hidden="true" class="fa fa-angle-right"></i></button><span id="rest-left"></span></div>
+      ${exam?.drill ? '<button class="nsw-button nsw-button--dark" id="finish-drill" style="margin-right:12px">Finish drill <i class="fas fa-check"></i></button>' : ''}
       <div class="header-test-subtitle" id="timer"></div>
     </div></div></header>
     <div class="nav-bar"><div class="margin-wrapper"><div class="nav-bar-inner">
@@ -922,6 +932,7 @@ async function finishExam() {
   clearInterval(tick);
   await doSave();
   const ok = !$('#save-state')?.textContent;
+  if (ok && exam?.drill) { closeModal(); home(); return; }
   $('#submit-status', m).innerHTML = ok ? 'Your responses have been submitted.' : '<strong>Your responses could not be saved. Check the server is running, then click CLOSE to retry.</strong>';
   const btn = $('#close-exam', m);
   btn.disabled = false;

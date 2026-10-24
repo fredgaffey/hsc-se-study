@@ -94,7 +94,8 @@ function writingFlow(log) {
     sen.text += c.ch; sen.ms += c.gap; sen.del += c.del; if (c.gap >= PAUSE) sen.pauses++;
     if (/\s/.test(c.ch)) { if (w) { words.push(w); sen.words++; w = null; } }
     else {
-      if (!w) w = { text: '', typeMs: 0, pauseBefore: c.gap >= PAUSE ? c.gap : 0, del: 0 };
+      if (!w) w = { text: '', typeMs: 0, pause: 0, mid: false, del: 0 };
+      if (c.gap >= PAUSE && c.gap > w.pause) { w.pause = c.gap; w.mid = w.text.length > 0; }
       w.text += c.ch; w.del += c.del; if (c.gap < PAUSE && !c.pasted) w.typeMs += c.gap;
     }
     if (/[.!?]/.test(c.ch) && /\s|$/.test(chars[i + 1]?.ch ?? '') || c.ch === '\n') { if (w) { words.push(w); sen.words++; w = null; } endSentence(); }
@@ -115,8 +116,8 @@ function flowMd(log, label) {
     `Typing ${m(f.totalMs)} from first to last keystroke · ${m(f.pauseMs)} of that in pauses of 5 s or more · ${f.dels} characters deleted.`, '',
     '| # | Sentence (start) | Time | Words | Words/min | Pauses ≥5 s | Backspaces |', '|---|---|---|---|---|---|---|'];
   f.sentences.forEach((x, i) => L.push(`| ${i + 1} | ${x.text.trim().slice(0, 45).replace(/\|/g, '/')}… | ${m(x.ms)} | ${x.words} | ${x.ms ? Math.round(x.words / (x.ms / 60000)) : '–'} | ${x.pauses} | ${x.del} |`));
-  const pauses = f.words.filter(w => w.pauseBefore).sort((a, b) => b.pauseBefore - a.pauseBefore).slice(0, 6);
-  if (pauses.length) L.push('', '**Longest pauses** (then typed): ' + pauses.map(w => `${sec(w.pauseBefore)} → “${clean(w.text)}”`).join(' · '));
+  const pauses = f.words.filter(w => w.pause).sort((a, b) => b.pause - a.pause).slice(0, 6);
+  if (pauses.length) L.push('', '**Longest pauses**: ' + pauses.map(w => `${sec(w.pause)} ${w.mid ? 'in the middle of' : 'before'} “${clean(w.text)}”`).join(' · '));
   const fixes = f.words.filter(w => w.del >= 2).sort((a, b) => b.del - a.del).slice(0, 8);
   if (fixes.length) L.push('', '**Most-corrected words** (backspaces): ' + fixes.map(w => `“${clean(w.text)}” ${w.del}`).join(' · '));
   const slow = f.words.filter(w => clean(w.text).length >= 4 && w.typeMs).map(w => ({ ...w, per: w.typeMs / clean(w.text).length }))

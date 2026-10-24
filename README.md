@@ -110,6 +110,8 @@ Output goes to `gradeo_out/`. Papers you've submitted but whose results haven't 
 
 ## Tips that actually moved marks
 
+**Print [`sentence-starters.pdf`](sentence-starters.pdf)**: one page with the sentence starters, question words, how much to write and a checklist.
+
 - About **35 words per mark** and **2 minutes per mark**. Never leave a question blank.
 - "Explain" = point → *this is because* → *for example* → *as a result*, linked to the scenario.
 - Full sentences, not dot points, even for "identify".

@@ -230,6 +230,18 @@ function openModal(html, { large = false, closable = false } = {}) {
   return c;
 }
 function closeModal() { document.getElementById('modal')?.remove(); }
+// In-page yes/no question. Browser confirm() is unreliable: it is silently dismissed whenever
+// automation (e.g. a DevTools/Playwright connection) is attached to Chrome.
+function askConfirm(message, yes = 'Yes', no = 'Cancel') {
+  return new Promise(resolve => {
+    const m = openModal(`<p>${esc(message)}</p><div class="modal-actions" style="display:flex;gap:12px;justify-content:center;margin-top:16px">
+      <button class="nsw-button nsw-button--dark" id="ask-yes">${esc(yes)}</button>
+      <button class="nsw-button nsw-button--white" id="ask-no">${esc(no)}</button></div>`);
+    $('#ask-yes', m).onclick = () => { closeModal(); resolve(true); };
+    $('#ask-no', m).onclick = () => { closeModal(); resolve(false); };
+    $('#ask-yes', m).focus();
+  });
+}
 
 function infoModal() {
   const timed = attempt && !attempt.submittedAt;
@@ -283,9 +295,9 @@ function timeUpModal() {
 }
 
 // Drills (questions from Claude): one click to finish, straight back to the menu.
-function finishDrill() {
+async function finishDrill() {
   const unatt = groups.filter(g => !groupAnswered(g)).length;
-  if (unatt && !confirm(`${unatt} question${unatt === 1 ? ' is' : 's are'} unanswered. Finish anyway?`)) return;
+  if (unatt && !(await askConfirm(`${unatt} question${unatt === 1 ? ' is' : 's are'} unanswered. Finish anyway?`, 'Finish drill', 'Keep going'))) return;
   finishExam();
 }
 document.addEventListener('click', e => { if (e.target.closest('#finish-drill')) finishDrill(); });
@@ -390,8 +402,8 @@ function startClock() {
 async function home() {
   exam = null; attempt = null; groups = []; clearInterval(tick); closeModal();
   const [{ exams, pdfs, drills = [] }, attempts] = await Promise.all([api('/api/exams'), api('/api/attempts')]);
-  const fresh = exams.filter(e => !e.sat), sat = exams.filter(e => e.sat);
-  const prefs = { reading: 10, targets: true, restPer: 5, ...store.get('nesa:prefs', {}) };
+  const priv = exams.filter(e => e.private), fresh = exams.filter(e => !e.sat && !e.private), sat = exams.filter(e => e.sat && !e.private);
+  const prefs = { reading: 10, targets: true, restPer: 5, live: false, ...store.get('nesa:prefs', {}) };
   const examRow = e => `<div class="exam-row"><button class="nsw-button nsw-button--dark" data-start="${esc(e.folder)}">${esc(e.exam)}</button>
       <span class="meta">${e.marks} marks · ${e.minutes ? e.minutes + ' min' : 'untimed'} · ${e.parts} parts${e.sat ? '<span class="tag">sat before</span>' : ''}</span></div>`;
   const unsub = attempts.filter(a => !a.submittedAt), subm = attempts.filter(a => a.submittedAt);
@@ -404,7 +416,8 @@ async function home() {
         ${unsub.length ? `<h2>Resume</h2>${unsub.map(a => `<div class="exam-row"><button class="nsw-button nsw-button--dark" data-resume="${esc(a.id)}">${esc(a.title)}</button><span class="meta">started ${new Date(a.startedAt).toLocaleString()}</span></div>`).join('')}` : ''}
         ${drills.filter(d => !d.done).length ? `<h2${unsub.length ? ' class="small"' : ''}>From Claude</h2>${drills.filter(d => !d.done).map(examRow).join('')}` : ''}
         ${drills.some(d => d.done) ? `<details><summary>Finished questions from Claude (${drills.filter(d => d.done).length})</summary>${drills.filter(d => d.done).map(examRow).join('')}</details>` : ''}
-        <h2${unsub.length || drills.length ? ' class="small"' : ''}>Exported Gradeo papers – not sat yet</h2>
+        ${priv.length ? `<h2 class="small">Trial papers (private)</h2>${priv.map(examRow).join('')}` : ''}
+        <h2${unsub.length || drills.length || priv.length ? ' class="small"' : ''}>Exported Gradeo papers – not sat yet</h2>
         ${fresh.map(examRow).join('') || '<p>None</p>'}
         <details><summary>Papers you've sat before (${sat.length})</summary>${sat.map(examRow).join('')}</details>
         <h2 class="small">PDF papers</h2>
@@ -419,6 +432,7 @@ async function home() {
         <div class="settings-row"><label>Reading time <input class="field" type="number" id="reading" value="${prefs.reading}" min="0" max="15"> min</label></div>
         <div class="settings-row"><label>Rest breaks <input class="field" type="number" id="rest-per" value="${prefs.restPer}" min="0" max="30"> min per 30 min of exam time</label></div>
         <p class="muted" style="margin-top:-.5em">Each break uses at least 5 minutes of rest time, even if you come back early. Counted on reading + working time, e.g. the HSC Software Engineering exam (10 min reading + 2 h 20 min working = 2 h 30 min) gives 25 minutes, so up to 5 breaks. Set 0 for unlimited breaks.</p>
+        <div class="settings-row"><label><input type="checkbox" id="live" ${prefs.live ? 'checked' : ''}> Check answers as I go on papers too (shows the answer and explanation after each question; drills always do this)</label></div>
         <div class="settings-row"><label><input type="checkbox" id="targets" ${prefs.targets ? 'checked' : ''}> Show word guides under answer boxes (~35 words per mark, shown as “0 / 105 words”)</label></div>
         <p>The exam screens follow NESA's HSC online exam: question numbers across the top, FLAG / HIGHLIGHT / FONT SIZE / COLOUR / INFO toolbar, “Time left” at the top right, <b>Take a break</b> to pause the timer, and <b>Exit exam</b> on the last question to finish.</p>
         <p>Spell-check is off in every answer box, as in the real exam. Answers autosave to <code>papers/attempts/</code>; when you finish, an answers file is written for marking.</p>
@@ -429,8 +443,8 @@ async function home() {
   </div>`;
   renderToolbar({ font: true, colour: true, info: false });
   const settings = () => {
-    const s = { readingMs: Math.max(0, +document.getElementById('reading').value || 0) * 60000, showTargets: document.getElementById('targets').checked, restPer: Math.max(0, +document.getElementById('rest-per').value || 0) };
-    store.set('nesa:prefs', { reading: s.readingMs / 60000, targets: s.showTargets, restPer: s.restPer });
+    const s = { readingMs: Math.max(0, +document.getElementById('reading').value || 0) * 60000, showTargets: document.getElementById('targets').checked, restPer: Math.max(0, +document.getElementById('rest-per').value || 0), liveMark: document.getElementById('live').checked };
+    store.set('nesa:prefs', { reading: s.readingMs / 60000, targets: s.showTargets, restPer: s.restPer, live: s.liveMark });
     return s;
   };
   $$('[data-start]').forEach(b => b.onclick = () => startStructured(b.dataset.start, settings()));
@@ -495,7 +509,7 @@ async function startStructured(folder, settings) {
       attempt = { id: `${stamp()}_${slug(exam.exam)}`, mode: 'structured', folder, title: exam.exam, startedAt: new Date().toISOString(),
         durationMinutes, readingMs: settings.readingMs, showTargets: settings.showTargets,
         rest: { perHalfHour: settings.restPer, allowanceMs: restAllowanceMs(settings.restPer, settings.readingMs, durationMinutes) },
-        pauses: [], answers: {}, flags: {}, current: 0, navByQuestion: true };
+        pauses: [], answers: {}, flags: {}, current: 0, navByQuestion: true, liveMark: !!exam.drill || !!settings.liveMark };
       save(true);
       runStructured();
     },
@@ -503,6 +517,7 @@ async function startStructured(folder, settings) {
 }
 
 function runStructured() {
+  if (attempt.liveMark == null) attempt.liveMark = !!exam.drill;
   groups = exam.questions.map((q, idx) => ({ q, idx }));
   if (!attempt.navByQuestion) { // older attempts stored the part index
     const flat = []; exam.questions.forEach((q, qi) => q.parts.forEach(() => flat.push(qi)));
@@ -610,6 +625,7 @@ function withMarks(prompt, marks) {
 const isPython = p => p.type === 'CODING' && (!p.question.language || /py/i.test(p.question.language)) && !/pseudo-?code/i.test(p.prompt || '');
 
 function itemControlHtml(p, i, reading) {
+  reading = reading || !!attempt.checked?.[p.part_id];   // a checked answer is locked like reading time
   const s = p.question, a = attempt.answers[p.part_id] || {}, dis = reading ? 'disabled' : '';
   const base = `/exams/${encodeURIComponent(exam.folder)}/`;
   switch (p.type) {
@@ -676,7 +692,7 @@ function renderQuestion() {
   const items = q.parts.map((p, i) => `<div class="feature left-stripe item${ui.hidden[p.part_id] ? ' item-hidden' : ''}" data-i="${i}">
       <div class="item-header">${itemButtons(p, i, multi)}
         <div class="item-question hl" data-hl="prompt-${i}">${multi ? `<div class="q-sub"><span class="q-label">${esc(partLabel(p))}</span><div class="q-text">${md(withMarks(p.prompt, p.marks))}</div></div>` : md(p.prompt)}</div></div>
-      <div class="item-control type-${p.type === 'SHORT' || !p.type ? 'short' : p.type.toLowerCase()}">${itemControlHtml(p, i, reading)}</div></div>`).join('');
+      <div class="item-control type-${p.type === 'SHORT' || !p.type ? 'short' : p.type.toLowerCase()}">${itemControlHtml(p, i, reading)}</div>${attempt.liveMark && !reading ? liveHtml(p, i) : ''}${notesHtml(p)}</div>`).join('');
   const last = idx === groups.length - 1;
   const actions = `<div class="action-bar-wrapper"><div class="action-bar">
       <button class="nsw-button nsw-button--dark-outline" id="prev" ${idx === 0 ? 'disabled' : ''}><i class="fa fa-angle-left left-side"></i>Previous question</button>
@@ -695,10 +711,100 @@ function renderQuestion() {
   q.parts.forEach((p, i) => bindItem(p, i, $(`.item[data-i="${i}"]`, content), reading));
 }
 
+// ---- live marking: Check answer → key, explanation, strategy → Accept ----
+const liveCache = {};
+function liveHtml(p, i) {
+  const ck = attempt.checked?.[p.part_id];
+  if (!ck) return `<div class="live-check"><button type="button" class="nsw-button nsw-button--dark live-btn" data-live="check">Check answer <i class="fas fa-check"></i></button></div>`;
+  return `<div class="live-check live-done ${ck.correct === true ? 'is-right' : ck.correct === false ? 'is-wrong' : ''}" id="live-${i}"><p class="live-loading">Loading…</p></div>`;
+}
+async function fetchKey(p) {
+  return liveCache[p.part_id] ||= await api(`/api/check?folder=${encodeURIComponent(exam.folder)}&part=${encodeURIComponent(p.part_id)}`);
+}
+function bindLive(p, i, el) {
+  const btn = $('[data-live="check"]', el);
+  if (btn) btn.onclick = async () => {
+    const a = attempt.answers[p.part_id] || {};
+    const empty = p.type === 'MULTI_CHOICE' ? !(a.letters || []).length : p.type === 'OBJECTIVE_RESPONSE' ? !(a.rows || []).some(Boolean) : !(a.text || '').trim();
+    if (empty && !(await askConfirm('You haven’t answered yet. Check anyway? Your answer will be locked.', 'Check anyway', 'Keep answering'))) return;
+    const key = await fetchKey(p);
+    let correct = null;
+    if (p.type === 'MULTI_CHOICE' && key.correct_letters) correct = [...(a.letters || [])].sort().join() === [...key.correct_letters].sort().join();
+    if (p.type === 'OBJECTIVE_RESPONSE' && key.rows) correct = key.rows.every((r, ri) => r.correct.includes(a.rows?.[ri]));
+    (attempt.checked ||= {})[p.part_id] = { atMs: workMs(), correct };
+    save(); renderNav(); renderQuestion();
+  };
+  const box = $(`#live-${i}`, el);
+  if (box) fetchKey(p).then(key => fillLive(p, i, el, box, key)).catch(() => { box.innerHTML = '<p>Could not load the answer. Is the server running?</p>'; });
+}
+function fillLive(p, i, el, box, key) {
+  const ck = attempt.checked[p.part_id], a = attempt.answers[p.part_id] || {}, ex = key.explanation || {};
+  const yours = a.letters || [];
+  if (p.type === 'MULTI_CHOICE' && key.correct_letters) $$('[data-opt]', el).forEach(inp => {
+    const L = inp.dataset.opt, tr = inp.closest('tr');
+    tr.classList.toggle('opt-correct', key.correct_letters.includes(L));
+    tr.classList.toggle('opt-wrong', yours.includes(L) && !key.correct_letters.includes(L));
+  });
+  if (p.type === 'OBJECTIVE_RESPONSE' && key.rows) $$('[data-or]', el).forEach(inp => {
+    const ok = key.rows[+inp.dataset.or].correct.includes(inp.value);
+    inp.closest('td').classList.toggle('opt-correct', ok);
+    inp.closest('td').classList.toggle('opt-wrong', inp.checked && !ok);
+  });
+  const H = [];
+  if (ck.correct === true) H.push(`<p class="live-verdict">✅ Correct</p>`);
+  else if (ck.correct === false) H.push(`<p class="live-verdict">❌ Not quite. The answer is <b>${esc((key.correct_letters || []).join(', ') || 'shown in green')}</b>.</p>`);
+  else H.push('<p class="live-verdict">Compare your answer with the marking criteria and sample answer below.</p>');
+  if (ex.key_check && ex.key_check !== 'ok') H.push(`<p class="live-warn">⚠ The answer key may be ${esc(ex.key_check)}: ${esc(ex.key_note || '')}</p>`);
+  if (ex.correct) H.push(`<p><b>Why:</b> ${esc(ex.correct)}</p>`);
+  if (ck.correct === false && ex.options) {
+    const show = [...new Set([...yours, ...(key.correct_letters || [])])].sort();
+    H.push('<ul class="live-opts">' + show.map(L => ex.options[L] ? `<li><b>${esc(L)}</b> ${yours.includes(L) ? '(your choice)' : '(correct)'}: ${esc(ex.options[L])}</li>` : '').join('') + '</ul>');
+  }
+  if (ck.correct === false && ex.strategy) H.push(`<p class="live-strategy"><b>Strategy:</b> ${esc(ex.strategy)}</p>`);
+  if (ck.correct === false && !ex.correct && p.type === 'MULTI_CHOICE') H.push('<p class="muted">No written explanation for this one yet; add a note below if you want one.</p>');
+  if (key.criteria?.length) H.push('<p><b>Marking criteria</b></p><ul>' + key.criteria.map(c => `<li>[${esc(c.marks ?? '')}] ${esc(c.criterion)}</li>`).join('') + '</ul>');
+  if (key.rubric) H.push(`<div><b>Marking rubric</b>${md(key.rubric)}</div>`);
+  if (key.guidance) H.push(`<div><b>Marking guidance</b>${md(key.guidance)}</div>`);
+  if (key.sample_answer && p.type !== 'MULTI_CHOICE') H.push(`<div class="live-sample"><b>Sample answer</b>${md(key.sample_answer)}</div>`);
+  const last = attempt.current === groups.length - 1 && i === groups[attempt.current].q.parts.length - 1;
+  H.push(`<button type="button" class="nsw-button nsw-button--dark" data-live="accept">${last ? 'Accept and finish' : 'Accept'} <i class="fa fa-angle-right"></i></button>`);
+  box.innerHTML = H.join('');
+  $('[data-live="accept"]', box).onclick = () => {
+    const q = groups[attempt.current].q;
+    if (i < q.parts.length - 1) return $(`.item[data-i="${i + 1}"]`)?.scrollIntoView({ behavior: 'smooth' });
+    if (attempt.current < groups.length - 1) return go(attempt.current + 1);
+    return exam.drill ? finishDrill() : finishModal();
+  };
+}
+
+// "Notes for Claude": quick self-assessment tags + free text per question. Not part of the answer.
+const NOTE_TAGS = ['Guessed', 'Not sure', 'Confused between options', "Didn't understand the question", "Haven't learnt this", 'Key looks wrong'];
+function notesHtml(p) {
+  const n = attempt.notes?.[p.part_id] || {};
+  return `<details class="claude-notes"${n.text || n.tags?.length ? ' open' : ''}><summary>Notes for Claude <span>(not part of the exam)</span></summary>
+    <div class="note-tags">${NOTE_TAGS.map(t => `<button type="button" class="note-tag${n.tags?.includes(t) ? ' on' : ''}" data-tag="${esc(t)}">${esc(t)}</button>`).join('')}</div>
+    <input type="text" class="note-text" placeholder="e.g. mixed up B and C, forgot what DAST means…" value="${esc(n.text || '')}" ${NO_SPELL}></details>`;
+}
+function bindNotes(p, el) {
+  const box = $('.claude-notes', el);
+  if (!box) return;
+  const get = () => (attempt.notes ||= {})[p.part_id] ||= { tags: [], text: '' };
+  $$('.note-tag', box).forEach(b => b.onclick = () => {
+    const n = get(), t = b.dataset.tag;
+    n.tags = n.tags.includes(t) ? n.tags.filter(x => x !== t) : [...n.tags, t];
+    b.classList.toggle('on', n.tags.includes(t));
+    save();
+  });
+  $('.note-text', box).oninput = e => { get().text = e.target.value; save(); };
+}
+
 function bindItem(p, i, el, reading) {
+  bindNotes(p, el);
+  bindLive(p, i, el);
   const s = p.question;
   const a = attempt.answers[p.part_id] || {};
   const set = v => {
+    if (attempt.checked?.[p.part_id]) return;   // locked after live checking
     if ('text' in v) logKeys(p.part_id, attempt.answers[p.part_id]?.text ?? (s.starter_code || s.starter_query || ''), v.text ?? '');
     attempt.answers[p.part_id] = { ...(attempt.answers[p.part_id] || {}), ...v, overtime: !!attempt.timeUpAt || undefined }; noteTyping(p.part_id); save(); renderNav();
   };
@@ -772,7 +878,7 @@ function bindCke(ta, el) {
       const out = lines.map((l, k) => off ? l.replace(re, '') : (cmd === 'bullet' ? '• ' : `${k + 1}. `) + l.replace(/^(• |\d+\. )/, '')).join('\n');
       ta.setSelectionRange(st, en); insertText(ta, out);
     } else if (cmd === 'cut' || cmd === 'copy') document.execCommand(cmd);
-    else if (cmd === 'paste') { try { insertText(ta, await navigator.clipboard.readText()); } catch { alert('Use command-V (Mac) or control-V (Windows) to paste.'); } }
+    else if (cmd === 'paste') { try { insertText(ta, await navigator.clipboard.readText()); } catch { openModal('<p>Use command-V (Mac) or control-V (Windows) to paste.</p>', { closable: true }); } }
     else if (cmd === 'undo' || cmd === 'redo') document.execCommand(cmd);
     else if (cmd === 'special') {
       $('.special-chars')?.remove();
@@ -792,7 +898,7 @@ function bindCke(ta, el) {
 // per-item buttons: hide/show, Full screen, Run (Python / SQL), Reset DB, Reset drawing
 const sqlDbs = {};
 let pyodideP = null, sqlP = null;
-function itemAction(act, p, i, el) {
+async function itemAction(act, p, i, el) {
   if (act === 'hide') { ui.hidden[p.part_id] = !ui.hidden[p.part_id]; el.classList.toggle('item-hidden', ui.hidden[p.part_id]); $('[data-act="hide"]', el).innerHTML = ui.hidden[p.part_id] ? 'show <i class="fas fa-angle-down"></i>' : 'hide <i class="fas fa-angle-up"></i>'; return; }
   if (act === 'full') {
     const on = el.classList.toggle('item-fullscreen');
@@ -804,7 +910,7 @@ function itemAction(act, p, i, el) {
   if (act === 'run-sql') return runSql(p, $(`#ta-${i}`, el).value, $(`#out-${i}`, el));
   if (act === 'reset-db') { delete sqlDbs[p.part_id]; $(`#out-${i}`, el).textContent = 'Database reset. No results to display'; return; }
   if (act === 'reset-draw') {
-    if (inReading() || !confirm('Clear your drawing for this question?')) return;
+    if (inReading() || !(await askConfirm('Clear your drawing for this question?', 'Clear drawing'))) return;
     const api = drawApis[p.part_id];
     if (api) api.updateScene({ elements: [] });
   }
@@ -1018,7 +1124,7 @@ function renderPdfAnswers() {
       label.oninput = () => { w.label = label.value; save(); };
       marks.oninput = () => { w.marks = +marks.value || null; upd(); save(); };
       ta.addEventListener('input', () => { w.text = ta.value; if (attempt.timeUpAt) w.overtime = true; upd(); autoGrow(ta); save(); });
-      $('.wblock-head button', d).onclick = () => { if ((w.text || '').trim() && !confirm('Delete this answer?')) return; attempt.written.splice(i, 1); save(); draw(); };
+      $('.wblock-head button', d).onclick = async () => { if ((w.text || '').trim() && !(await askConfirm('Delete this answer?', 'Delete'))) return; attempt.written.splice(i, 1); save(); draw(); };
       list.appendChild(d);
       autoGrow(ta); bindCke(ta, d);
     });

@@ -24,6 +24,26 @@ const LETTERS = 'ABCDEFGHIJ';
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
 
 const spec = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
+
+// ---- validation: refuse broken questions (scraping artefacts, missing keys) ----
+const problems = [];
+spec.questions.forEach((q, qi) => q.parts.forEach((p, pi) => {
+  const where = `Q${qi + 1}${q.parts.length > 1 ? String.fromCharCode(97 + pi) : ''} (${q.title || ''})`;
+  if (/\bAnswer,\s/.test(p.prompt || '')) problems.push(`${where}: an option is pasted into the question text ("Answer, …")`);
+  if (p.type === 'MULTI_CHOICE') {
+    const texts = (p.options || []).map(o => String(o ?? '').trim());
+    if (texts.some(t => !t || /^\(?no answer\)?$/i.test(t))) problems.push(`${where}: blank or "(no answer)" option`);
+    if (new Set(texts.map(t => t.toLowerCase())).size < texts.length) problems.push(`${where}: duplicate options`);
+    if (texts.length < 3) problems.push(`${where}: only ${texts.length} options`);
+    if (!(p.correct || []).length) problems.push(`${where}: no correct option marked`);
+    if ((p.correct || []).some(L => 'ABCDEFGHIJ'.indexOf(L) >= texts.length)) problems.push(`${where}: correct letter beyond the options`);
+  }
+  if (!String(p.prompt || '').trim()) problems.push(`${where}: empty question text`);
+}));
+if (problems.length) {
+  console.error(`Refusing to create "${spec.title}": ${problems.length} problem(s)\n  - ` + problems.join('\n  - '));
+  process.exit(1);
+}
 const now = new Date();
 const name = `${now.toISOString().slice(0, 16).replace(/[-:T]/g, '')}-${slug(spec.title)}`;
 
@@ -51,6 +71,7 @@ const questions = spec.questions.map((q, qi) => ({
       marking_criteria: p.criteria || null,
       marking_rubric: null,
       marking_guidance: p.guidance || null,
+      syllabus: p.syllabus || null,   // syllabus point ID(s), e.g. "SSA-4" (kept server-side)
       sample_answer: p.sample || null,
       result: { mark: null, feedback: [] },
       your_response: { answered: false },

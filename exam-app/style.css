@@ -342,3 +342,26 @@ body.colours-modified .feature { background-image: linear-gradient(rgba(0,0,0,.0
   .info-content { column-count: 1; }
   .begin-grid { flex-direction: column; }
 }
+
+/* Notes for Claude (practice only, not part of the exam) */
+.claude-notes { margin-top: 12px; border: 1px dashed #b9c0cc; border-radius: 6px; padding: 6px 10px; background: #fafbfc; font-size: 14px; }
+.claude-notes summary { cursor: pointer; color: #22272b; font-weight: 600; }
+.claude-notes summary span { font-weight: 400; color: #6d7079; }
+.note-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.note-tag { border: 1px solid #b9c0cc; background: #fff; border-radius: 999px; padding: 3px 10px; font-size: 13px; cursor: pointer; color: #22272b; }
+.note-tag.on { background: #002664; border-color: #002664; color: #fff; }
+.note-text { width: 100%; padding: 6px 8px; border: 1px solid #b9c0cc; border-radius: 4px; font: inherit; font-size: 14px; }
+
+/* Live marking */
+.live-check { margin-top: 12px; }
+.live-done { border-left: 4px solid #6d7079; background: #f4f4f7; padding: 10px 14px; border-radius: 4px; }
+.live-done.is-right { border-left-color: #008a07; background: #e5f6e6; }
+.live-done.is-wrong { border-left-color: #b81237; background: #fbe8ec; }
+.live-verdict { font-weight: 700; font-size: 1.05em; margin: 0 0 6px; }
+.live-warn { color: #941b00; font-weight: 600; }
+.live-strategy { background: #fff; border: 1px solid #cdd3d6; border-radius: 4px; padding: 6px 10px; }
+.live-opts { margin: 6px 0; padding-left: 20px; }
+.live-sample { background: #fff; border: 1px solid #cdd3d6; border-radius: 4px; padding: 6px 10px; margin: 8px 0; }
+tr.opt-correct td, td.opt-correct { background: #dbfadf !important; }
+tr.opt-wrong td, td.opt-wrong { background: #ffe6ea !important; }
+tr.opt-correct td.acell::after { content: " ✓ correct answer"; color: #008a07; font-weight: 700; }

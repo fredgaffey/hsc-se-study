@@ -1,0 +1,301 @@
+{
+ "id": "20261024-0343_Sweep_1_Secure_Software_Architecture",
+ "mode": "structured",
+ "folder": "drill:202610240339-sweep-1-secure-software-architecture",
+ "title": "Sweep 1 - Secure Software Architecture",
+ "startedAt": "2026-10-24T03:43:03.973Z",
+ "durationMinutes": 20,
+ "readingMs": 0,
+ "showTargets": true,
+ "rest": {
+  "perHalfHour": 5,
+  "allowanceMs": 0
+ },
+ "pauses": [],
+ "answers": {
+  "bdf8f081-689e-4f60-a9fe-5e82537903c5": {
+   "letters": [
+    "B"
+   ]
+  },
+  "6c3840c5-91c9-4e6d-9614-e83cf9b5cd14": {
+   "letters": [
+    "A"
+   ]
+  },
+  "060bedae-7d2a-47aa-9dbc-c5cab4a27617": {
+   "letters": [
+    "A"
+   ]
+  },
+  "2024cae6-5ddb-4cf6-838a-c1cf954098ab": {
+   "letters": [
+    "C"
+   ]
+  },
+  "0fdd45b6-f0ab-4203-a920-e25a390ab70c": {
+   "letters": [
+    "C"
+   ]
+  },
+  "d4b08a75-80cb-449b-ac29-18859f5ae99f": {
+   "letters": [
+    "D"
+   ]
+  },
+  "ccfdfc4c-0aed-41d8-a58e-3e818feabfac": {
+   "letters": [
+    "C"
+   ]
+  },
+  "ea8f9b62-4fdd-4a64-9bd4-13ebc3418eb0": {
+   "letters": [
+    "D"
+   ]
+  },
+  "aa0a821a-d6ea-4d3d-bf6e-d25f21671017": {
+   "letters": [
+    "D"
+   ]
+  },
+  "fccea0c6-7a5d-4627-9276-a143ea05131a": {
+   "letters": [
+    "A"
+   ]
+  },
+  "cda2e691-daf1-4212-90d0-ff62a0fb9a9f": {
+   "letters": [
+    "A"
+   ]
+  },
+  "c843eff6-decd-468a-a84c-5520d2a891b0": {
+   "letters": [
+    "B"
+   ]
+  },
+  "926f6f79-ac7e-4439-9477-75f774c1cd64": {
+   "letters": [
+    "B"
+   ]
+  },
+  "ef63eb3e-04c3-4f80-b34e-06a1894b2676": {
+   "letters": [
+    "D"
+   ]
+  },
+  "44bd16c0-8efa-4633-83ec-e5d76a24b96b": {
+   "letters": [
+    "B"
+   ]
+  },
+  "e0ccc44b-cabe-4480-92af-2023dcd98280": {
+   "letters": [
+    "B"
+   ]
+  }
+ },
+ "flags": {},
+ "current": 22,
+ "navByQuestion": true,
+ "timing": {
+  "q": {
+   "1": {
+    "ms": 24001,
+    "visits": 1,
+    "firstSeenMs": 12
+   },
+   "2": {
+    "ms": 11500,
+    "visits": 1,
+    "firstSeenMs": 24513
+   },
+   "3": {
+    "ms": 21999,
+    "visits": 1,
+    "firstSeenMs": 36013
+   },
+   "4": {
+    "ms": 23001,
+    "visits": 1,
+    "firstSeenMs": 58014
+   },
+   "5": {
+    "ms": 17001,
+    "visits": 1,
+    "firstSeenMs": 81013
+   },
+   "6": {
+    "ms": 9999,
+    "visits": 1,
+    "firstSeenMs": 98013
+   },
+   "7": {
+    "ms": 198501,
+    "visits": 1,
+    "firstSeenMs": 108013
+   },
+   "8": {
+    "ms": 9500,
+    "visits": 1,
+    "firstSeenMs": 311513
+   },
+   "9": {
+    "ms": 13501,
+    "visits": 1,
+    "firstSeenMs": 321014
+   },
+   "10": {
+    "ms": 18500,
+    "visits": 1,
+    "firstSeenMs": 334514
+   },
+   "11": {
+    "ms": 6000,
+    "visits": 1,
+    "firstSeenMs": 353014
+   },
+   "12": {
+    "ms": 7500,
+    "visits": 1,
+    "firstSeenMs": 359018
+   },
+   "13": {
+    "ms": 28500,
+    "visits": 1,
+    "firstSeenMs": 366515
+   },
+   "14": {
+    "ms": 15001,
+    "visits": 1,
+    "firstSeenMs": 395015
+   },
+   "15": {
+    "ms": 52089,
+    "visits": 1,
+    "firstSeenMs": 410014
+   },
+   "16": {
+    "ms": 41002,
+    "visits": 1,
+    "firstSeenMs": 462105
+   },
+   "17": {
+    "ms": 208005,
+    "visits": 1,
+    "firstSeenMs": 503106
+   },
+   "18": {
+    "ms": 3000,
+    "visits": 2,
+    "firstSeenMs": 309014
+   },
+   "19": {
+    "ms": 499,
+    "visits": 1,
+    "firstSeenMs": 308513
+   },
+   "21": {
+    "ms": 1001,
+    "visits": 2,
+    "firstSeenMs": 308014
+   },
+   "22": {
+    "ms": 999,
+    "visits": 2,
+    "firstSeenMs": 307513
+   },
+   "23": {
+    "ms": 96580,
+    "visits": 2,
+    "firstSeenMs": 306514
+   }
+  },
+  "p": {
+   "bdf8f081-689e-4f60-a9fe-5e82537903c5": {
+    "firstMs": 21580,
+    "edits": 1,
+    "lastMs": 21580
+   },
+   "6c3840c5-91c9-4e6d-9614-e83cf9b5cd14": {
+    "firstMs": 35058,
+    "edits": 1,
+    "lastMs": 35058
+   },
+   "060bedae-7d2a-47aa-9dbc-c5cab4a27617": {
+    "firstMs": 56808,
+    "edits": 1,
+    "lastMs": 56808
+   },
+   "2024cae6-5ddb-4cf6-838a-c1cf954098ab": {
+    "firstMs": 63583,
+    "edits": 1,
+    "lastMs": 63583
+   },
+   "0fdd45b6-f0ab-4203-a920-e25a390ab70c": {
+    "firstMs": 95933,
+    "edits": 1,
+    "lastMs": 95933
+   },
+   "d4b08a75-80cb-449b-ac29-18859f5ae99f": {
+    "firstMs": 105733,
+    "edits": 1,
+    "lastMs": 105733
+   },
+   "ccfdfc4c-0aed-41d8-a58e-3e818feabfac": {
+    "firstMs": 110616,
+    "edits": 1,
+    "lastMs": 110616
+   },
+   "ea8f9b62-4fdd-4a64-9bd4-13ebc3418eb0": {
+    "firstMs": 319916,
+    "edits": 1,
+    "lastMs": 319916
+   },
+   "aa0a821a-d6ea-4d3d-bf6e-d25f21671017": {
+    "firstMs": 333603,
+    "edits": 1,
+    "lastMs": 333603
+   },
+   "fccea0c6-7a5d-4627-9276-a143ea05131a": {
+    "firstMs": 352078,
+    "edits": 1,
+    "lastMs": 352078
+   },
+   "cda2e691-daf1-4212-90d0-ff62a0fb9a9f": {
+    "firstMs": 357511,
+    "edits": 1,
+    "lastMs": 357511
+   },
+   "c843eff6-decd-468a-a84c-5520d2a891b0": {
+    "firstMs": 360111,
+    "edits": 2,
+    "lastMs": 363858
+   },
+   "926f6f79-ac7e-4439-9477-75f774c1cd64": {
+    "firstMs": 375332,
+    "edits": 2,
+    "lastMs": 383261
+   },
+   "ef63eb3e-04c3-4f80-b34e-06a1894b2676": {
+    "firstMs": 408883,
+    "edits": 1,
+    "lastMs": 408883
+   },
+   "44bd16c0-8efa-4633-83ec-e5d76a24b96b": {
+    "firstMs": 411682,
+    "edits": 1,
+    "lastMs": 411682
+   },
+   "e0ccc44b-cabe-4480-92af-2023dcd98280": {
+    "firstMs": 500281,
+    "edits": 1,
+    "lastMs": 500281
+   }
+  },
+  "awayMs": 0,
+  "lastKey": "23"
+ },
+ "timeUsedMs": 810884,
+ "savedAt": "2026-10-24T03:56:34.861Z",
+ "submittedAt": "2026-10-24T03:56:34.857Z"
+}

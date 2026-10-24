@@ -22,7 +22,9 @@ const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.
 
 const DRILLS = path.join(ROOT, 'papers', 'drills');
 // "drill:<name>" = a one-off question set Claude wrote into papers/drills/<name>/exam.json
-const examDir = folder => folder.startsWith('drill:') ? path.join(DRILLS, path.basename(folder.slice(6))) : path.join(EXAMS, path.basename(folder));
+const PRIVATE = path.join(ROOT, 'private_papers');   // personal-study papers; never published
+const examDir = folder => folder.startsWith('drill:') ? path.join(DRILLS, path.basename(folder.slice(6)))
+  : folder.startsWith('private:') ? path.join(PRIVATE, path.basename(folder.slice(8))) : path.join(EXAMS, path.basename(folder));
 const readExam = folder => JSON.parse(fs.readFileSync(path.join(examDir(folder), 'exam.json'), 'utf8'));
 
 // Remove everything that would give the answer away.
@@ -52,6 +54,12 @@ function listExams() {
       const e = readExam(folder);
       if (/\bY11\b/.test(e.exam)) continue; // Year 11 papers excluded (not relevant to the HSC)
       out.push({ folder, exam: e.exam, marks: e.total_available, minutes: e.duration_minutes, parts: e.parts_total, sat: e.parts_answered > 0 });
+    } catch {}
+  }
+  if (fs.existsSync(PRIVATE)) for (const name of fs.readdirSync(PRIVATE)) {
+    try {
+      const e = readExam('private:' + name);
+      out.push({ folder: 'private:' + name, exam: e.exam, marks: e.total_available, minutes: e.duration_minutes, parts: e.parts_total, sat: false, private: true });
     } catch {}
   }
   return out.sort((a, b) => b.marks - a.marks || a.exam.localeCompare(b.exam));
@@ -167,9 +175,17 @@ function attemptMd(a) {
         const t = ans?.text ?? '';
         L.push('', '**Your answer:**', '', p.answer_type === 'SHORT' ? (t ? t.split('\n').map(l => '> ' + l).join('\n') : '_(blank)_') : fence(t), '', `*${wc(t)} words*`);
       }
+      const ck = a.checked?.[p.part_id];
+      if (ck) L.push('', `🔎 Checked live (answer locked): ${ck.correct === true ? 'correct' : ck.correct === false ? 'incorrect' : 'self-marked'}`);
+      const n = a.notes?.[p.part_id];
+      if (n && (n.tags?.length || n.text?.trim())) L.push('', `📝 **Your notes:** ${[...(n.tags || []), n.text?.trim() ? `“${n.text.trim()}”` : ''].filter(Boolean).join(' · ')}`);
     }
   }
   L.splice(3, 0, `- Auto-marked (MC + objective response): **${auto}/${autoMax}**. Written answers: to be marked by Claude.`);
+  const noteCounts = {};
+  for (const n of Object.values(a.notes || {})) for (const t of n.tags || []) noteCounts[t] = (noteCounts[t] || 0) + 1;
+  const noted = Object.values(a.notes || {}).filter(n => n.tags?.length || n.text?.trim()).length;
+  if (noted) L.splice(4, 0, `- 📝 Notes on ${noted} question${noted === 1 ? '' : 's'}: ${Object.entries(noteCounts).map(([t, c]) => `${t} ×${c}`).join(', ') || 'text only'}`);
   const T = a.timing;
   if (T?.q) {
     const m = ms => ms == null ? '–' : `${Math.floor(ms / 60000)}:${String(Math.round(ms / 1000) % 60).padStart(2, '0')}`;
@@ -225,8 +241,22 @@ http.createServer(async (req, res) => {
     if (p === '/app.js' || p === '/style.css') return serveFile(req, res, path.join(APP, p.slice(1)));
     if (p.startsWith('/nesa/')) return serveFile(req, res, safeJoin(path.join(APP, 'nesa'), p.slice(6))); // NESA-look fonts/icons (local copies)
     if (p === '/vendor/marked.js') return serveFile(req, res, path.join(ROOT, 'node_modules/marked/lib/marked.umd.js'));
-    if (p.startsWith('/exams/')) return serveFile(req, res, safeJoin(EXAMS, p.slice(7)));
+    if (p.startsWith('/exams/')) { const [folder, ...rest] = p.slice(7).split('/'); return serveFile(req, res, safeJoin(examDir(folder), rest.join('/'))); }
     if (p.startsWith('/papers/')) return serveFile(req, res, safeJoin(PAPERS, p.slice(8)));
+    if (p === '/api/check') {   // live marking: the key for ONE question, fetched only after the student locks their answer
+      const e = readExam(url.searchParams.get('folder') || '');
+      const part = e.questions.flatMap(q => q.parts).find(x => x.part_id === url.searchParams.get('part'));
+      if (!part) return send(res, 404, { error: 'no such question' });
+      const s = part.question || {};
+      return send(res, 200, {
+        type: part.answer_type,
+        correct_letters: s.correct_letters || null,
+        rows: s.rows ? s.rows.map(r => ({ correct: r.correct })) : null,
+        explanation: part.explanation || null,
+        criteria: part.marking_criteria || null, rubric: part.marking_rubric || null,
+        guidance: part.marking_guidance || null, sample_answer: part.sample_answer || null,
+      });
+    }
     if (p === '/api/exams') return send(res, 200, { exams: listExams(), drills: listDrills(), pdfs: fs.readdirSync(PAPERS).filter(f => f.toLowerCase().endsWith('.pdf')) });
     if (p.startsWith('/api/exam/')) { const folder = p.slice(10); const e = readExam(folder); return send(res, 200, sanitize({ ...e, folder })); }
     if (p === '/api/attempts') {

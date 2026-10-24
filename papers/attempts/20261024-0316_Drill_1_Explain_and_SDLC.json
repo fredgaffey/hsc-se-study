@@ -1,0 +1,44 @@
+{
+ "id": "20261024-0316_Drill_1_Explain_and_SDLC",
+ "mode": "structured",
+ "folder": "drill:202610240315-drill-1-explain-and-sdlc",
+ "title": "Drill 1 - Explain and SDLC",
+ "startedAt": "2026-10-24T03:16:23.671Z",
+ "durationMinutes": 18,
+ "readingMs": 0,
+ "showTargets": true,
+ "rest": {
+  "perHalfHour": 5,
+  "allowanceMs": 0
+ },
+ "pauses": [],
+ "answers": {
+  "d4818a01-60bb-475d-9df0-19c2f26b50b4": {
+   "text": "The chalanges with balancing usabily with secrity is that as you make a product more useable there is a larger atack surfes. ie moving from a staktic fount end that is stored localy to having a datbase then hagving to deal with the chanlanges of CSRF, XSS, and SQL enjection.\n\nBut these chanalnfges can be mitigated by secure developemnt pracisis such as good defuault and data minimiation. Haging good deafault will allow the nontecnical users to to have secure defaut enfryption settings and force them to have a seurre passowd ie 12 char 1 cap spical carter and numbers. This can help protect them from bure force atacs. \nAutenticating user is chanlanging but with paskeys this allow apps to be more secuer with also improving the user experince. But this comes that the cost of when sigin in on a new device anoying 2FA."
+  },
+  "13abbd79-823f-4ff3-93ac-f380223fff87": {
+   "letters": [
+    "D"
+   ]
+  },
+  "b31f0c1c-a8e3-42c1-9f78-2060cf894d4c": {
+   "letters": [
+    "C"
+   ]
+  },
+  "2a0dde9f-b270-4c51-9d9c-b78e9ed6d88b": {
+   "letters": [
+    "A"
+   ]
+  },
+  "0217f5b9-78ba-40ee-9287-251cc4105150": {
+   "text": "This is becaus of the pricipl of least trust. The server can't trust the fount end as this can be controed and minulated but running raw JS in the conlole (one of many ways) this could allow that the user could pay for 1 item but aculaty receve 10 this could lead to abus. This is why server side validation is allways importatn as it stop a milious user from exployting and taking advantage of the site."
+  }
+ },
+ "flags": {},
+ "current": 4,
+ "navByQuestion": true,
+ "timeUsedMs": 522585,
+ "submittedAt": "2026-10-24T03:25:06.256Z",
+ "savedAt": "2026-10-24T03:25:06.260Z"
+}

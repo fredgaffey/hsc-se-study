@@ -105,6 +105,34 @@ About 20–25 min per short answer, about 40 min per extended response. Roughly 
 
 ---
 
+## How to write NESA responses (lesson, 24 Oct)
+
+**The marker asks:** (1) did you do what the question word asked? (2) did you cover every part the question
+names (TWO / both sides / scenario)? Spelling and grammar are NOT marked.
+
+| Word | Write |
+|---|---|
+| Identify | name it, in a sentence |
+| Outline | one sentence per main feature |
+| Describe | what it is + how it looks/behaves |
+| **Explain** | point → **because** → **for example** → **as a result** (why/how, not just what) |
+| Compare | both things, same features, side by side |
+| Discuss | positives AND negatives, developed (*However…*) |
+| Analyse | parts → effect of each → which matters most |
+| Evaluate / Assess | strengths + weaknesses → **"Overall…"** judgement |
+| Justify | position → reasons with evidence |
+
+**Length:** ~25–30 words/mark. 2–3 marks = 60–90 words · 4–5 = 100–150 · 6 = 170–300 · 8–10 = 280–350+.
+
+**The four moves:** concept → why/how → example in the question's context → effect.
+(Metadata example: my 2/3 answer became 3/3 just by reordering into these four moves.)
+
+**8–10 markers:** plan 2 min (verb, every named part, one example each) → opening that answers directly
+(judgement now if "evaluate") → 3 body paragraphs (point, cause → effect, scenario example) → "Overall… because…".
+
+**My checklist:** concept named before examples · every point linked to the scenario · every named part
+covered · sentences not dot points · no blanks · no wrong central claim.
+
 ## 1. Where marks are lost (from 123 marked Gradeo parts, 24 Oct)
 
 | Question type | Score |
@@ -187,42 +215,51 @@ Source: `~/canvas` (github.com/fredgaffey/canvas, my own site sen.pebnum.com). R
 - `~/canvas/app/data/questions.json`: 499 Year 12 quiz questions with answer keys
   (Web 227, Secure Software Architecture 152, Automation 120); `~/canvas/app/pages/`: 105 Year 12 lessons incl. a 16-lesson Exam Revision module
 
-## 3. Plan (revised 24 Oct: one full paper per day)
+## Extra papers & resources (24 Oct)
+In the exam app's PDF list (answers in `papers/marking/` where they exist):
+- 2025 NSW DoE Sample Trial (answers ✓) · MikeTeachesTech Practice Exam 1 (answers ✓) and Exam 2 (answers ✓)
+- NESA Familiarisation Questions (marking guidelines ✓) · 2025 Independent SE Trial (AceHSC, scan, no answers)
+- 2026 TH Software Tuition Trial (no answers)
+- `~/hsc-se-resources`: MikeTeachesTech (CC BY-NC): revision notes for every Year 12 section + 160 practice
+  questions with answers. Found via the SEN Discord.
+- Not reachable without login: Studocu trials (Bonnyrigg, Castle Hill, Aquinas, Macquarie Fields), Scribd 2025 trial.
+  Gradeo has two 2025 trials the teacher could assign. See `papers/found/SOURCES.md`.
 
-Fresh full papers: **2025 HSC (official)** · **SEN Holiday Practise 2026** (81 marks / 145 min, full key) ·
-**CSSA SE 2025** (80 / 150, key locked) · **TrialExamRevisionTest3 timed** (81 / 150, key locked).
-If sitting on Gradeo: **type written answers in a plain text file as I go** (answers lock after submitting until released).
-Save files to `papers/`.
+## Syllabus sweep (started 24 Oct)
+- Tracker: `syllabus-tracker.md` (66 Year 12 content points: SSA 17, WEB 21, AUTO 11, PROJ 17).
+- **Sat:** one sweep drill per module (quick recall, every point) → mark points ✅ / 🟡 / ❌ → mini-lesson on gaps.
+  Sweep 1 (SSA) ready in the app.
+- **Sun:** exam-style questions one at a time, gaps (❌ then 🟡) first.
+- Weakest areas by marks (24 Oct): SQL 27% · legal/social/ethical 38% · secure architecture 58% · web attacks 63%.
 
-### Sat 24 Oct
-- [ ] Afternoon: **Holiday Practise 2026**, timed (145 min)
-- [ ] Evening: Claude marks it (blanks + long answers first); SQL lesson 1 if energy allows
+## 3. Plan (revised Sat 24 Oct afternoon): diagrams, SQL, pseudocode, gaps, extended responses
+
+| Topic | How | Tools |
+|---|---|---|
+| Diagrams (DFD, structure chart, class, storyboard, decision tree, data dictionary, flowchart) | Learn the official NESA symbols, then draw each and compare with a worked answer | Course specs pp. 5–14 · `worksheets/` · exam app drawing (same tool as NESA) |
+| SQL (from zero) | One concept → one task → instant check | SQL trainer http://localhost:5050 (13 tasks) · SQL worksheets |
+| Pseudocode | NESA keywords → write algorithms → linter | Course specs pp. 14–21 · `skills/hsc-pseudocode` linter |
+| Content gaps | Quick sweeps; lessons only for 🟡/❌ | Sweeps 2 & 3 · MikeTeachesTech notes (`~/hsc-se-resources`) |
+| Extended responses | One per day with the full loop + those inside papers | Exam app (live marking, timing) · question bank · sentence-starter sheet |
+
+### Sat 24 Oct (now → ~9pm)
+- [ ] SQL 1 (45 min): trainer tasks 1–7 (SELECT, WHERE, ORDER BY, LIKE, NESA word operators)
+- [ ] Diagrams 1 (60 min): DFD + structure chart symbols → draw DFD worksheet → check answer
+- [ ] Pseudocode (45 min): course-spec syntax → write 3 algorithms → linter
+- [ ] Finish Sweep 1b + one extended response with live marking (45 min)
 
 ### Sun 25 Oct
-- [ ] Morning: SQL lesson 2 (60–90 min) + one 8-marker using the full loop (#4 Intellectual Property)
-- [ ] Afternoon: **2025 HSC paper**, timed (download the paper and NESA marking guidelines to `papers/` first)
-- [ ] Evening: mark it against the NESA marking guidelines
+- [ ] SQL 2 (45 min): tasks 8–13 (COUNT/SUM/AVG, GROUP BY, joins) + one HSC SQL question from the bank
+- [ ] Diagrams 2 (60 min): class diagrams (types!), storyboards, decision trees, data dictionaries (worksheets)
+- [ ] Afternoon: **2025 HSC paper** in NESA's familiarisation app, timed 2 h 30 → mark with official guidelines
+- [ ] Evening (light): Sweeps 2 & 3 → mini-lessons only on ❌
 
 ### Mon 26 Oct
-- [ ] Morning: **one** paper: **NESA Sample HSC Exam** (official marking guidelines), in the exam app's PDF mode. Not two; too tiring the day before.
-- [ ] Afternoon: fix list from the papers: one 8-marker rewrite, SQL review, 5 min spelling drill. **Stop by about 5pm.**
+- [ ] Morning: one paper timed (DoE Sample Trial or NESA sample exam) → mark
+- [ ] Afternoon: fix list from both papers · one extended response · SQL + pseudocode re-drill · **stop by ~5pm**
 
 ### Tue 27 Oct, exam morning
-- [ ] Skim section 2 and the key terms. Nothing new.
-
-### 8-marker shape
-1. Plan (2 min): circle the verb; 3 points, one example each.
-2. Opening (1–2 sentences): answer directly; for "evaluate", give the judgement now.
-3. Three paragraphs: Point → This is because → For example → As a result → (evaluate:) "This is effective/limited because…"
-4. Closing (1–2 sentences): overall judgement. About 280 words, 16 min.
-
-### SQL (starting from zero)
-- Use `worksheets/SQL 1/2` and the Schema worksheets (question first, then answer PDF)
-- [ ] SELECT, WHERE, ORDER BY
-- [ ] COUNT / SUM / AVG, GROUP BY, HAVING
-- [ ] JOINs
-- [ ] INSERT, UPDATE, DELETE
-- [ ] SQL injection and parameterised queries (security angle)
+- [ ] Sentence-starter sheet + diagram symbols only. Nothing new.
 
 ## 4. Unused practice material (never attempted)
 
@@ -250,6 +287,7 @@ accessibility, privacy, security, information, development, efficiency, metadata
 
 *(newest first: date — what was done — score/result — what to fix next)*
 
+- **24 Oct** — Lesson: how to write NESA responses (question words, four moves, templates). Next: practice #9.
 - **24 Oct** — Read NESA 2025 full-mark samples: answers are shorter than assumed (~25–30 words/mark) and spelling isn't penalised.
 - **24 Oct** — Fair blind test with 4 fresh agents: with key 48/48 within 1 mark; no key 47/48.
 - **24 Oct** — Blind-marking test: Claude within 1 mark on 14/14 answers. MC analysis: content mostly solid; gaps in SDLC definitions.

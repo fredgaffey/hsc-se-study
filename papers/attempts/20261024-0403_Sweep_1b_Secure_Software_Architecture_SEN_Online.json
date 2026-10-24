@@ -1,0 +1,310 @@
+{
+ "id": "20261024-0403_Sweep_1b_Secure_Software_Architecture_SEN_Online",
+ "mode": "structured",
+ "folder": "drill:202610240353-sweep-1b-secure-software-architecture-se",
+ "title": "Sweep 1b - Secure Software Architecture (SEN Online)",
+ "startedAt": "2026-10-24T04:03:01.274Z",
+ "durationMinutes": 25,
+ "readingMs": 0,
+ "showTargets": true,
+ "rest": {
+  "perHalfHour": 5,
+  "allowanceMs": 0
+ },
+ "pauses": [],
+ "answers": {
+  "39f1606e-1469-41ae-8664-bb49b2f6b98d": {
+   "letters": [
+    "A",
+    "B"
+   ]
+  },
+  "137e03dd-f368-42d7-8452-8954045390fc": {
+   "letters": [
+    "B"
+   ]
+  },
+  "14624dc6-3769-4167-99a5-82c7c9d1e37f": {
+   "letters": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  "a3ae8fa7-5d7e-4f50-958a-08c876c1845c": {
+   "letters": [
+    "B"
+   ]
+  },
+  "bf0cb536-60c8-4a1f-8834-50924e630c0d": {
+   "letters": [
+    "B",
+    "C"
+   ]
+  },
+  "8bdf949f-b7b6-4700-b7f8-1705dd265272": {
+   "letters": [
+    "A"
+   ]
+  },
+  "2b426be1-bef0-4737-a724-b838298db837": {
+   "letters": [
+    "D"
+   ]
+  },
+  "be068bee-e212-4a58-a49c-cdc777f0e46e": {
+   "letters": [
+    "B"
+   ]
+  },
+  "bbe5a1d8-9685-4cfe-96c7-0316e69eb43c": {
+   "letters": [
+    "A",
+    "C",
+    "D"
+   ]
+  },
+  "25af11de-d2fe-4b13-abb3-15e2a043deb6": {
+   "letters": [
+    "A"
+   ]
+  },
+  "6737c6f9-d2b5-4fb1-9e24-34b772169d58": {
+   "letters": [
+    "A"
+   ]
+  },
+  "11324a9f-2a0d-4f59-b985-32d0a044e930": {
+   "letters": [
+    "D"
+   ]
+  }
+ },
+ "flags": {},
+ "current": 12,
+ "navByQuestion": true,
+ "timing": {
+  "q": {
+   "1": {
+    "ms": 19502,
+    "visits": 1,
+    "firstSeenMs": 10
+   },
+   "2": {
+    "ms": 48002,
+    "visits": 2,
+    "firstSeenMs": 20011
+   },
+   "3": {
+    "ms": 165003,
+    "visits": 2,
+    "firstSeenMs": 67513
+   },
+   "4": {
+    "ms": 12002,
+    "visits": 2,
+    "firstSeenMs": 233404
+   },
+   "5": {
+    "ms": 19501,
+    "visits": 1,
+    "firstSeenMs": 247904
+   },
+   "6": {
+    "ms": 30501,
+    "visits": 1,
+    "firstSeenMs": 267405
+   },
+   "7": {
+    "ms": 15501,
+    "visits": 1,
+    "firstSeenMs": 297905
+   },
+   "8": {
+    "ms": 12999,
+    "visits": 1,
+    "firstSeenMs": 313407
+   },
+   "9": {
+    "ms": 59502,
+    "visits": 1,
+    "firstSeenMs": 326407
+   },
+   "10": {
+    "ms": 46002,
+    "visits": 1,
+    "firstSeenMs": 385909
+   },
+   "11": {
+    "ms": 7000,
+    "visits": 1,
+    "firstSeenMs": 431909
+   },
+   "12": {
+    "ms": 6000,
+    "visits": 1,
+    "firstSeenMs": 438910
+   },
+   "13": {
+    "ms": 1000353,
+    "visits": 1,
+    "firstSeenMs": 444910
+   }
+  },
+  "p": {
+   "39f1606e-1469-41ae-8664-bb49b2f6b98d": {
+    "firstMs": 14873,
+    "edits": 4,
+    "lastMs": 17850
+   },
+   "137e03dd-f368-42d7-8452-8954045390fc": {
+    "firstMs": 55668,
+    "edits": 3,
+    "lastMs": 64801
+   },
+   "14624dc6-3769-4167-99a5-82c7c9d1e37f": {
+    "firstMs": 159461,
+    "edits": 8,
+    "lastMs": 237151
+   },
+   "a3ae8fa7-5d7e-4f50-958a-08c876c1845c": {
+    "firstMs": 246594,
+    "edits": 1,
+    "lastMs": 246594
+   },
+   "bf0cb536-60c8-4a1f-8834-50924e630c0d": {
+    "firstMs": 255618,
+    "edits": 2,
+    "lastMs": 262772
+   },
+   "8bdf949f-b7b6-4700-b7f8-1705dd265272": {
+    "firstMs": 296452,
+    "edits": 1,
+    "lastMs": 296452
+   },
+   "2b426be1-bef0-4737-a724-b838298db837": {
+    "firstMs": 308257,
+    "edits": 2,
+    "lastMs": 311444
+   },
+   "be068bee-e212-4a58-a49c-cdc777f0e46e": {
+    "firstMs": 321583,
+    "edits": 1,
+    "lastMs": 321583
+   },
+   "bbe5a1d8-9685-4cfe-96c7-0316e69eb43c": {
+    "firstMs": 380162,
+    "edits": 3,
+    "lastMs": 383171
+   },
+   "25af11de-d2fe-4b13-abb3-15e2a043deb6": {
+    "firstMs": 427038,
+    "edits": 1,
+    "lastMs": 427038
+   },
+   "6737c6f9-d2b5-4fb1-9e24-34b772169d58": {
+    "firstMs": 437897,
+    "edits": 1,
+    "lastMs": 437897
+   },
+   "11324a9f-2a0d-4f59-b985-32d0a044e930": {
+    "firstMs": 443672,
+    "edits": 1,
+    "lastMs": 443672
+   }
+  },
+  "awayMs": 55894,
+  "lastKey": "13"
+ },
+ "timeUsedMs": 1500657,
+ "savedAt": "2026-10-24T04:28:01.945Z",
+ "notes": {
+  "14624dc6-3769-4167-99a5-82c7c9d1e37f": {
+   "tags": [],
+   "text": ""
+  },
+  "bf0cb536-60c8-4a1f-8834-50924e630c0d": {
+   "tags": [
+    "Not sure"
+   ],
+   "text": ""
+  },
+  "25af11de-d2fe-4b13-abb3-15e2a043deb6": {
+   "tags": [
+    "Confused between options"
+   ],
+   "text": "a,b all seem important"
+  }
+ },
+ "timeUpAt": "2026-10-24T04:28:01.932Z",
+ "answersAtTimeUp": {
+  "39f1606e-1469-41ae-8664-bb49b2f6b98d": {
+   "letters": [
+    "A",
+    "B"
+   ]
+  },
+  "137e03dd-f368-42d7-8452-8954045390fc": {
+   "letters": [
+    "B"
+   ]
+  },
+  "14624dc6-3769-4167-99a5-82c7c9d1e37f": {
+   "letters": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  "a3ae8fa7-5d7e-4f50-958a-08c876c1845c": {
+   "letters": [
+    "B"
+   ]
+  },
+  "bf0cb536-60c8-4a1f-8834-50924e630c0d": {
+   "letters": [
+    "B",
+    "C"
+   ]
+  },
+  "8bdf949f-b7b6-4700-b7f8-1705dd265272": {
+   "letters": [
+    "A"
+   ]
+  },
+  "2b426be1-bef0-4737-a724-b838298db837": {
+   "letters": [
+    "D"
+   ]
+  },
+  "be068bee-e212-4a58-a49c-cdc777f0e46e": {
+   "letters": [
+    "B"
+   ]
+  },
+  "bbe5a1d8-9685-4cfe-96c7-0316e69eb43c": {
+   "letters": [
+    "A",
+    "C",
+    "D"
+   ]
+  },
+  "25af11de-d2fe-4b13-abb3-15e2a043deb6": {
+   "letters": [
+    "A"
+   ]
+  },
+  "6737c6f9-d2b5-4fb1-9e24-34b772169d58": {
+   "letters": [
+    "A"
+   ]
+  },
+  "11324a9f-2a0d-4f59-b985-32d0a044e930": {
+   "letters": [
+    "D"
+   ]
+  }
+ }
+}

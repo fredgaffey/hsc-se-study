@@ -1,0 +1,44 @@
+{
+ "id": "20261024-0328_Drill_1b_Rewrite_usability_vs_security",
+ "mode": "structured",
+ "folder": "drill:202610240326-drill-1b-rewrite-usability-vs-security",
+ "title": "Drill 1b - Rewrite usability vs security",
+ "startedAt": "2026-10-24T03:28:39.964Z",
+ "durationMinutes": 8,
+ "readingMs": 0,
+ "showTargets": true,
+ "rest": {
+  "perHalfHour": 5,
+  "allowanceMs": 0
+ },
+ "pauses": [],
+ "answers": {
+  "a9a6bdd3-d4e6-48c1-8f18-4cc0416ed0a7": {
+   "text": "As you make a product more secure it adds friction because there are more checks in place to autenticate you and validate data server side and this leads to that sofwhere becoming less usable. As you add secrity feture like RBAC this can lead to you not being able to see everyting unless you have pemetion to see it. \nTo slove this developer try and make them as minimlay invasie as posible. For example if is session is acive dont make them resigin in. Or if use passkeys inseda of email/SMS based MFA. This will allow you to keep the same amount ot secrity but while reducing frection and increacing usabilty."
+  }
+ },
+ "flags": {},
+ "current": 0,
+ "navByQuestion": true,
+ "timing": {
+  "q": {
+   "1": {
+    "ms": 347757,
+    "visits": 1,
+    "firstSeenMs": 25
+   }
+  },
+  "p": {
+   "a9a6bdd3-d4e6-48c1-8f18-4cc0416ed0a7": {
+    "firstMs": 12984,
+    "edits": 1210,
+    "lastMs": 337734
+   }
+  },
+  "awayMs": 0,
+  "lastKey": "1"
+ },
+ "timeUsedMs": 347782,
+ "submittedAt": "2026-10-24T03:34:27.746Z",
+ "savedAt": "2026-10-24T03:34:27.749Z"
+}

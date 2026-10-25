@@ -1,0 +1,49 @@
+{
+ "id": "20261025050532-be91d2",
+ "at": "2026-10-25T05:05:32.019Z",
+ "attempt": "20261025-0442_Pseudocode_1b_magic_square",
+ "folder": "drill:202610250315-pseudocode-1b-magic-square",
+ "exam": "Pseudocode 1b - magic square",
+ "question": 1,
+ "part_id": "9f8a9633-20a8-4882-8474-7aa46a1d0919",
+ "marks": 5,
+ "type": "CODING",
+ "prompt": "Write an algorithm in pseudocode for a function which, when passed a 2D array of integers called “square”, will return True if the square is “magic” and False otherwise.",
+ "answer": {
+  "text": "# square(ROW,COUMB)\n\nBEGIN get_row_sum(square, row)\n   n = the with\n   i = 1\n   sum = 0\n    WHILE i <= n\n        sum += square(row,i)\n        i += 1\n    ENDWHILE\n    RETRUN sum\nEND get_row_sum(square, row)\n\nBEGIN get_col_sum(square, col)\n   n = the hight\n   i = 1\n   sum = 0\n    WHILE i <= n\n        sum += square(i,col)\n        i += 1\n    ENDWHILE\n    RETRUN sum\nEND get_col_sum(square, col)\n\nBEGIN get_dia_sum(square)\n   h = the hight\n   w = the with\n\n   i = 1\n   sum = 0\n   rev_sum = 0\n\n    WHILE i <= n\n        sum += square(0+n,h-n)\n        rev_sum += square(w-n,0+n)\n        i += 1\n    ENDWHILE\n    RETRUN sum, rev_sum\nEND get_dia_sum(square)        \n\nBEGIN is_magic(square)\n    magic_value = get_dia_sum(square)(1)\n    IF magic_value not get_dia_sum(square)(2) THEN \n        RETRUN false\n    ENDIF\n\n    n = get then with and hight of the square\n    i = 1\n    \n    val_s = ()\n    WHILE i > n\n        IF get_col_sum(square, n) != get_row_sum(square, n):\n            RETRUN false\n        ENDIF\n        j = 0\n        WHILE i <= j \n            val_s.append(i,j)\n            j += 1\n        ENDWHILE\n        i += 1\n    ENDWHILE\n    i = 1\n\n    WHILE i = sort(val_s)(i) OR i >= n\n        i =+ 1\n    ENDWHILE\n    IF i = n*2\n        RETURN true\n    RETURN false\nEND is_magic(square)\n\n\n        \n        \n    \n\n    \n        "
+ },
+ "drawing_png": null,
+ "time_ms": null,
+ "key": {
+  "criteria": [
+   {
+    "marks": "5",
+    "criterion": "Creates a substantially correct algorithm, using NESA&rsquo;s format for pseudocode, which attempts all of the following:\n\nChecks the size of the 2D array\n\nIterates through the 2D array\n\nCalculates the sum for each row and column\n\nCalculates the sum for each diagonal\n\nReturns true if all sums are equal\n\nReturns false otherwise"
+   },
+   {
+    "marks": "4",
+    "criterion": "Creates an algorithm in pseudocode which attempts at least four of the above criteria."
+   },
+   {
+    "marks": "3",
+    "criterion": "Creates an algorithm, or language-specific code, which attempts at least three of the above criteria."
+   },
+   {
+    "marks": "2",
+    "criterion": "Creates an algorithm or code which includes some of the required logic for two or more of the above criteria."
+   },
+   {
+    "marks": "1",
+    "criterion": "Creates an algorithm or code which addresses some part of the question."
+   }
+  ],
+  "rubric": null,
+  "guidance": "![](assets/c9b59de4-d43e-4394-bcba-c8a2200cc2fe.png)\n\n![](assets/1c9e4b65-c996-4666-9c93-c835ebe4ce99.png)",
+  "sample_answer": null
+ },
+ "result": {
+  "mark": 4,
+  "feedback": "**4/5.** Big improvement: you attempted every part, and the subroutine structure is exactly right. A strict marker might give 3 because of the logic bugs below.\n\n✅ `get_row_sum` and `get_col_sum` are **correct**: they start at 1, use `<= n`, increment, and RETURN.\n✅ You call subroutines and wrote them out. You RETURN false early, and return true at the end.\n\n❌ **Bugs (loop boundaries again):**\n1. `WHILE i > n` **never runs**. It should be `WHILE i <= n`.\n2. Inside that loop you pass `n`, not `i`, so it checks the same row every time. Also, compare every row and column sum against `magic_value`, not row *i* against column *i*.\n3. Diagonals: the loop uses `n`, which isn't defined, and `square(0+n, h-n)` doesn't move. Use `square(i, i)` and `square(i, n + 1 - i)`.\n4. A function **RETURNs one value**, so `RETURN sum, rev_sum` won't work. Write two functions, or pass a `which` parameter.\n5. You never check that the **width equals the height** (first criterion).\n\n⚠ **Python-isms:** `+=`, `!=`, `:` after IF, `.append()`, `sort()`, `RETRUN`. Use `sum = sum + x`, `<>` or \"not equal to\", and plain English for lists.\n\n**Fixed main (the 1..n² check is optional for the marks):**\n```\nBEGIN is_magic(square)\n    n = number of rows in square\n    IF number of columns in square <> n THEN\n        RETURN False\n    ENDIF\n    magic = get_row_sum(square, 1)\n    diag1 = 0\n    diag2 = 0\n    FOR i = 1 TO n\n        IF get_row_sum(square, i) <> magic OR get_col_sum(square, i) <> magic THEN\n            RETURN False\n        ENDIF\n        diag1 = diag1 + square(i, i)\n        diag2 = diag2 + square(i, n + 1 - i)\n    NEXT i\n    IF diag1 <> magic OR diag2 <> magic THEN\n        RETURN False\n    ENDIF\n    RETURN True\nEND is_magic(square)\n```\n",
+  "at": "2026-10-25T05:06:04.923Z"
+ }
+}

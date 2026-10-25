@@ -299,6 +299,8 @@ accessibility, privacy, security, information, development, efficiency, metadata
 
 *(newest first: date — what was done — score/result — what to fix next)*
 
+- **25 Oct** — Magic square (ITE Y11, 5). **4/5** (was blank). Row/col subroutines correct. Bugs: WHILE i > n never
+  runs, passed n not i, diagonal indices, RETURN two values, no width = height check; Python-isms (+=, !=, append).
 - **25 Oct** — Drill 2 (legal/social + SDLC). 11 min of 22, **8/11**. MC 4/4 (integration vs system, SAST, method tailoring:
   guessed). Automation 'analyse' 2/4: one point each side, 50 words; needs both + and − per side (energy use, e-waste;
   productivity vs inequality) and a judgement. Diverse teams 2/3 (Claude live mark): one stage only, 'averaging' idea.

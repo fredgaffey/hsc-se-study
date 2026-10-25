@@ -25,7 +25,8 @@ const pauseSummary = pz => {   // rest breaks vs clock stops for "Report a probl
   const rest = pz.filter(p => !p.kind), other = pz.filter(p => p.kind);
   return `Rest breaks: ${rest.length} (${mins(rest)} min)` + (other.length ? ` · Clock stopped for reports/marking: ${other.length} (${mins(other)} min)` : '');
 };
-const markSummary = m => ({ id: m.id, part_id: m.part_id, marks: m.marks, result: m.result });
+const markSummary = m => ({ id: m.id, part_id: m.part_id, marks: m.marks, result: m.result, chat: !!m.chat, thread: m.thread || [] });
+const pushMark = m => { const msg = `data: ${JSON.stringify(markSummary(m))}\n\n`; for (const c of markClients) if (c.attempt === m.attempt) c.res.write(msg); };
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
   '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.gif': 'image/gif', '.svg': 'image/svg+xml', '.webp': 'image/webp',
@@ -278,10 +279,10 @@ http.createServer(async (req, res) => {
         part_id: r.part_id, marks: part.marks_available, type: part.answer_type, prompt: part.prompt,
         answer: r.answer, drawing_png: fs.existsSync(png) ? png : null, time_ms: r.time_ms,
         key: { criteria: part.marking_criteria, rubric: part.marking_rubric, guidance: part.marking_guidance, sample_answer: part.sample_answer, correct_letters: part.question?.correct_letters },
-        result: null,
+        result: null, chat: !!r.chat, thread: [],
       };
       fs.writeFileSync(path.join(MARKS, id + '.json'), JSON.stringify(reqObj, null, 1));
-      fs.appendFileSync(path.join(PAPERS, 'mark_requests.jsonl'), JSON.stringify({ id, attempt: r.attempt, exam: e.exam, question: r.question }) + '\n');
+      if (!r.chat) fs.appendFileSync(path.join(PAPERS, 'mark_requests.jsonl'), JSON.stringify({ id, attempt: r.attempt, exam: e.exam, question: r.question }) + '\n');
       return send(res, 200, { id });
     }
     if (p.startsWith('/api/claude-mark/') && p.endsWith('/result') && req.method === 'POST') {   // Claude posts { mark, feedback }
@@ -294,6 +295,18 @@ http.createServer(async (req, res) => {
       const msg = `data: ${JSON.stringify(markSummary(m))}\n\n`;
       for (const c of markClients) if (c.attempt === m.attempt) c.res.write(msg);
       return send(res, 200, { ok: true, pushed: [...markClients].filter(c => c.attempt === m.attempt).length });
+    }
+    if (p.startsWith('/api/claude-mark/') && p.endsWith('/message') && req.method === 'POST') {   // dialog: { from: 'student'|'claude', text }
+      const id = path.basename(p.slice(17, -8));
+      const file = path.join(MARKS, id + '.json');
+      if (!fs.existsSync(file)) return send(res, 404, {});
+      const m = JSON.parse(fs.readFileSync(file, 'utf8'));
+      const msg = JSON.parse(await readBody(req));
+      (m.thread ||= []).push({ from: msg.from === 'claude' ? 'claude' : 'student', text: String(msg.text || ''), at: new Date().toISOString() });
+      fs.writeFileSync(file, JSON.stringify(m, null, 1));
+      if (msg.from !== 'claude') fs.appendFileSync(path.join(PAPERS, 'mark_requests.jsonl'), JSON.stringify({ id, attempt: m.attempt, exam: m.exam, question: m.question, reply: true }) + '\n');
+      pushMark(m);
+      return send(res, 200, { ok: true });
     }
     if (p === '/api/claude-mark/events') {   // SSE stream for one attempt: sends existing results, then new ones as they arrive
       const attemptId = url.searchParams.get('attempt') || '';

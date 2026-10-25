@@ -826,12 +826,53 @@ function openMarkStream() {
   markStream.attemptId = attempt.id;
   markStream.onmessage = ev => {
     const m = JSON.parse(ev.data);
-    if (!m.result) return;
-    const fresh = !claudeMarks[m.id]?.result;
+    const fresh = !!m.result && !claudeMarks[m.id]?.result;
     claudeMarks[m.id] = m;
+    renderThread(m.id);
+    if (!m.result) return;
     const pz = (attempt.pauses || []).find(z => !z.end && z.kind === 'marking' && (z.req ? z.req === m.id : z.part_id === m.part_id));
     if (pz) { pz.end = Date.now(); closeModal(); save(true); updateTimer(); }
     if (fresh && groups[attempt.current]?.q.parts.some(p => p.part_id === m.part_id)) renderQuestion();
+  };
+}
+// ---- dialog with Claude about one question (after checking or marking) ----
+const chatId = p => attempt.checked?.[p.part_id]?.claude || attempt.chat?.[p.part_id] || null;
+function threadHtml(id) {
+  const t = claudeMarks[id]?.thread || [];
+  const waiting = t.length && t[t.length - 1].from === 'student';
+  return t.map(x => `<div class="chat-msg chat-${x.from}"><b>${x.from === 'claude' ? 'Claude' : 'You'}:</b>${md(x.text)}</div>`).join('')
+    + (waiting ? '<p class="muted">⏳ Waiting for Claude…</p>' : '');
+}
+function renderThread(id) {
+  const box = document.querySelector(`[data-thread="${id}"]`);
+  if (box) box.innerHTML = threadHtml(id);
+}
+function chatHtml(p) {
+  const id = chatId(p);
+  return `<div class="chat"><p><b>Talk to Claude about this question</b></p>
+    <div class="chat-thread" ${id ? `data-thread="${esc(id)}"` : ''}>${id ? threadHtml(id) : ''}</div>
+    <textarea class="chat-input" rows="2" placeholder="e.g. Why isn't my answer worth 4? / I think the key is wrong because…" ${NO_SPELL}>${esc(ui.chatDraft?.[p.part_id] || '')}</textarea>
+    <button type="button" class="nsw-button nsw-button--dark-outline" data-live="chat">Send to Claude</button></div>`;
+}
+function bindChat(p, box) {
+  const ta = $('.chat-input', box), btn = $('[data-live="chat"]', box);
+  if (!ta || !btn) return;
+  if (chatId(p)) openMarkStream();   // load an earlier conversation
+  ta.oninput = () => { (ui.chatDraft ||= {})[p.part_id] = ta.value; };
+  btn.onclick = async () => {
+    const text = ta.value.trim();
+    if (!text) return ta.focus();
+    btn.disabled = true;
+    let id = chatId(p);
+    if (!id) {   // checked with the key only: open a chat-only request (no mark wanted)
+      const r = await api('/api/claude-mark', { attempt: attempt.id, folder: attempt.folder, part_id: p.part_id, chat: true,
+        question: groups[attempt.current].q.number, answer: attempt.answers[p.part_id] || {} });
+      id = (attempt.chat ||= {})[p.part_id] = r.id; save(true);
+      $('.chat-thread', box).dataset.thread = id;
+    }
+    openMarkStream();
+    await api(`/api/claude-mark/${id}/message`, { from: 'student', text });
+    ta.value = ''; ui.chatDraft[p.part_id] = ''; btn.disabled = false;
   };
 }
 function liveHtml(p, i) {
@@ -914,6 +955,7 @@ function fillLive(p, i, el, box, key) {
     <button type="button" class="nsw-button nsw-button--dark-outline" data-live="hide">Hide feedback</button>
     <button type="button" class="nsw-button nsw-button--dark-outline" data-live="edit">Edit answer <i class="fas fa-pen"></i></button></div>`);
   const hidden = ui.hideFb?.[p.part_id];
+  H.push(chatHtml(p));
   box.innerHTML = hidden
     ? `${verdict}<div class="live-actions"><button type="button" class="nsw-button nsw-button--dark-outline" data-live="show">Show feedback</button>
         <button type="button" class="nsw-button nsw-button--dark-outline" data-live="edit">Edit answer <i class="fas fa-pen"></i></button></div>`
@@ -929,6 +971,7 @@ function fillLive(p, i, el, box, key) {
     save(true); renderNav(); renderQuestion();
   };
   if (hidden) return;
+  bindChat(p, box);
   $('[data-live="accept"]', box).onclick = () => {
     const q = groups[attempt.current].q;
     if (i < q.parts.length - 1) return $(`.item[data-i="${i + 1}"]`)?.scrollIntoView({ behavior: 'smooth' });

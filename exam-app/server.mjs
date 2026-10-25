@@ -205,7 +205,7 @@ function attemptMd(a) {
   if (T?.q) {
     const m = ms => ms == null ? '–' : `${Math.floor(ms / 60000)}:${String(Math.round(ms / 1000) % 60).padStart(2, '0')}`;
     L.push('', '---', '', '## Timing', '', 'Time on each question (on screen; reading time and breaks excluded). Target ≈ 2 min per mark.', '',
-      '| Q | Marks | Time | Target | Visits | Started typing after | Words | Words/min |', '|---|---|---|---|---|---|---|---|');
+      '| Q | Marks | Time | Target | Your plan | Visits | Started typing after | Words | Words/min |', '|---|---|---|---|---|---|---|---|---|');
     for (const q of e.questions) {
       const t = T.q[String(q.number)] || {};
       const marks = q.parts.reduce((n, p) => n + (p.marks_available || 0), 0);
@@ -213,7 +213,7 @@ function attemptMd(a) {
       const firsts = q.parts.map(p => T.p?.[p.part_id]?.firstMs).filter(v => v != null);
       const start = firsts.length && t.firstSeenMs != null ? Math.min(...firsts) - t.firstSeenMs : null;
       const flag = t.ms > marks * 2 * 60000 * 1.5 ? ' ⚠ long' : '';
-      L.push(`| ${q.number} | ${marks} | ${m(t.ms)}${flag} | ${m(marks * 120000)} | ${t.visits ?? 0} | ${m(start)} | ${words || '–'} | ${words && t.ms ? (words / (t.ms / 60000)).toFixed(0) : '–'} |`);
+      L.push(`| ${q.number} | ${marks} | ${m(t.ms)}${flag} | ${m(marks * 120000)} | ${a.qBudget?.[q.number] ? m(a.qBudget[q.number].ms) : '–'} | ${t.visits ?? 0} | ${m(start)} | ${words || '–'} | ${words && t.ms ? (words / (t.ms / 60000)).toFixed(0) : '–'} |`);
     }
     if (T.awayMs > 5000) L.push('', `Time with the exam window in the background: ${m(T.awayMs)}.`);
   }

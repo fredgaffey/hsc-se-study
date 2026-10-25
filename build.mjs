@@ -64,7 +64,19 @@ function makeExamContext(dir) {
     filter: 'table',
     replacement: (_, node) => {
       const kids = (n, tags) => { const o = []; (function walk(x) { for (const c of [...x.childNodes]) { if (tags.includes(c.nodeName)) o.push(c); else if (c.nodeType === 1 && c.nodeName !== 'TABLE') walk(c); } })(n); return o; };
-      const rows = kids(node, ['TR']).map(tr => kids(tr, ['TD', 'TH'])
+      // A one-row table of [line numbers | code] (Word-pasted algorithms): turn it into a numbered code block.
+      const trs = kids(node, ['TR']), cells = trs.length === 1 ? kids(trs[0], ['TD', 'TH']) : [];
+      const ent = t => t.replace(/&nbsp;/g, ' ').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&');
+      const paras = c => kids(c, ['P']).flatMap(p => ent((p.innerHTML || '').replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, ''))
+        .replace(/\u00a0/g, ' ').split('\n').map(l => l.replace(/\s+$/, '')));
+      if (cells.length === 2 && paras(cells[0]).length > 2 && paras(cells[0]).every(t => /^\s*\d*\s*$/.test(t))) {
+        const code = paras(cells[1]), nums = paras(cells[0]).map(t => t.trim()).filter(Boolean);
+        while (code.length && !code[code.length - 1].trim()) code.pop();
+        const first = +nums[0] || 1;   // number sequentially from the paper's first line number (papers have typos like '32 32 34')
+        const n = i => String(first + i).padStart(2);
+        return '\n\n```text\n' + code.map((l, i) => `${n(i)}  ${l}`).join('\n') + '\n```\n\n';
+      }
+      const rows = trs.map(tr => kids(tr, ['TD', 'TH'])
         .map(c => td.turndown(c.innerHTML).replace(/\n+/g, ' ').replace(/\|/g, '\\|').trim()));
       if (!rows.length) return '';
       const w = Math.max(...rows.map(r => r.length));

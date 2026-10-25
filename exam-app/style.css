@@ -365,3 +365,4 @@ body.colours-modified .feature { background-image: linear-gradient(rgba(0,0,0,.0
 tr.opt-correct td, td.opt-correct { background: #dbfadf !important; }
 tr.opt-wrong td, td.opt-wrong { background: #ffe6ea !important; }
 tr.opt-correct td.acell::after { content: " ✓ correct answer"; color: #008a07; font-weight: 700; }
+.claude-mark { border-left: 4px solid #146cfd; padding: 4px 10px; margin-bottom: 10px; background: #f2f6ff; }

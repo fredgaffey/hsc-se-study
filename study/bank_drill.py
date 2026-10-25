@@ -28,6 +28,8 @@ for i in ids:
             'criteria': x.get('criteria'), 'guidance': '\n\n'.join(filter(None, [x.get('guidance'), x.get('rubric')])) or None,
             'sample': x.get('sample_answer'), 'syllabus': (x.get('syllabus') or [None])[0],
             'source': f"{x.get('origin')} · {x.get('source_paper') or x.get('source')}"}
+    if t == 'CODING' and 'python' not in (x.get('prompt') or '').lower():
+        part['language'] = 'PSEUDOCODE'   # "algorithm" questions are pseudocode in this course; Python only when named
     if t == 'MULTI_CHOICE':
         part['options'] = [o.get('text') or (f"![]({o['image']})" if o.get('image') else None) for o in x.get('options') or []]
         part['correct'] = [chr(65 + k) for k, o in enumerate(x.get('options') or []) if o.get('correct')]

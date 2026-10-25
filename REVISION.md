@@ -263,6 +263,7 @@ Mark each the same evening; fix list feeds the next morning's drills.
 - [ ] Evening (light): Sweeps 2 & 3 → mini-lessons only on ❌
 
 ### Mon 26 Oct
+- **Drills are ONE question at a time from now on** (asked 25 Oct): one-question drill → mark → next.
 - [ ] **First thing (~20 min): SQL spaced repetition.** Claude builds "SQL 4": redo every SQL question lost marks on
       today (SQL 2 Q1–Q4 + SQL 1 misses) + 3–4 unused ones (MTT Q15, CSSA Familiarisation, NESA Fam Q2, TH join bug,
       Girraween errors) + trainer exercises 11 and 13 from memory (all 13 done Sun).
@@ -298,6 +299,15 @@ accessibility, privacy, security, information, development, efficiency, metadata
 
 *(newest first: date — what was done — score/result — what to fix next)*
 
+- **25 Oct** — Pseudocode 1 (NESA Fam Q8, NESA Sample Q14, CSSA Fam Q9, ITE Y11 magic square). 27 min, **7/15**.
+  Q1 2/3: fixed the comparison and <=, missed Found = FALSE, OR→AND, Index never incremented (infinite loop).
+  Q2 2/3: good subroutine + loop, but 'each topping' = a NUMBER of toppings (did yes/no); 14 min.
+  Q3 3/4: WHILE index < 5 skips game 5. Q4 0/5 blank (stuck 7 min).
+  Patterns: loop boundaries (< vs <=, >90) and loop hygiene (initialise, increment). Next: magic square walkthrough;
+  every loop: check start value, end condition, increment.
+- **25 Oct** — Flowcharts 1. 10 min, **5/6** (login stub skipped: low-value question, not counted). MC 3/3 (incl. Y11 control structures, Girraween endless loop).
+  Drawing 2/3: DISPLAY drawn as a subprogram box (needs parallelogram),
+  no END terminator, and > 90 instead of >= 90. Fix: copy conditions character for character.
 - **25 Oct** — SQL 5 (Claude-written). 19 min, **11/14**. Used the `-- requirement` comments: Q1, Q3, Q5 full marks.
   Q2 2/4: comment list missed 'on a TV', and wrote DESC under a comment saying LOW to HIGH → do a final
   check of the query against the comments. Q4 1/2: AND before OR (harder than HSC).

@@ -770,9 +770,26 @@ function renderQuestion() {
 
 // ---- live marking: Check answer → key, explanation, strategy → Accept ----
 const liveCache = {};
+// Claude's marks arrive over Server-Sent Events (one stream per attempt); results are kept by part_id.
+const claudeMarks = {};
+let markStream = null;
+function openMarkStream() {
+  if (!attempt || markStream?.attemptId === attempt.id) return;
+  markStream?.close();
+  markStream = new EventSource(`/api/claude-mark/events?attempt=${encodeURIComponent(attempt.id)}`);
+  markStream.attemptId = attempt.id;
+  markStream.onmessage = ev => {
+    const m = JSON.parse(ev.data);
+    if (!m.result) return;
+    const fresh = !claudeMarks[m.part_id]?.result;
+    claudeMarks[m.part_id] = m;
+    if (fresh && groups[attempt.current]?.q.parts.some(p => p.part_id === m.part_id)) renderQuestion();
+  };
+}
 function liveHtml(p, i) {
   const ck = attempt.checked?.[p.part_id];
-  if (!ck) return `<div class="live-check"><button type="button" class="nsw-button nsw-button--dark live-btn" data-live="check">Check answer <i class="fas fa-check"></i></button></div>`;
+  const askBtn = p.type === 'MULTI_CHOICE' || p.type === 'OBJECTIVE_RESPONSE' ? '' : ` <button type="button" class="nsw-button nsw-button--dark-outline live-btn" data-live="claude">Ask Claude to mark <i class="fas fa-user-check"></i></button>`;
+  if (!ck) return `<div class="live-check"><button type="button" class="nsw-button nsw-button--dark live-btn" data-live="check">Check answer <i class="fas fa-check"></i></button>${askBtn}</div>`;
   return `<div class="live-check live-done ${ck.correct === true ? 'is-right' : ck.correct === false ? 'is-wrong' : ''}" id="live-${i}"><p class="live-loading">Loading…</p></div>`;
 }
 async function fetchKey(p) {
@@ -791,8 +808,22 @@ function bindLive(p, i, el) {
     (attempt.checked ||= {})[p.part_id] = { atMs: workMs(), correct };
     save(); renderNav(); renderQuestion();
   };
+  const ask = $('[data-live="claude"]', el);
+  if (ask) ask.onclick = async () => {
+    const a = attempt.answers[p.part_id] || {};
+    if (p.type !== 'DRAWING_V2' && !(a.text || '').trim() && !(await askConfirm('You haven’t answered yet. Ask Claude anyway? Your answer will be locked.', 'Ask anyway', 'Keep answering'))) return;
+    ask.disabled = true; ask.textContent = 'Sending…';
+    clearTimeout(saveTimer); await new Promise(r => setTimeout(r, 400)); await doSave();   // make sure the drawing PNG is on disk
+    const r = await api('/api/claude-mark', { attempt: attempt.id, folder: attempt.folder, part_id: p.part_id,
+      question: groups[attempt.current].q.number, answer: a, time_ms: attempt.qTime?.[p.part_id] ?? null });
+    (attempt.checked ||= {})[p.part_id] = { atMs: workMs(), correct: null, claude: r.id };
+    save(); openMarkStream(); renderNav(); renderQuestion();
+  };
   const box = $(`#live-${i}`, el);
-  if (box) fetchKey(p).then(key => fillLive(p, i, el, box, key)).catch(() => { box.innerHTML = '<p>Could not load the answer. Is the server running?</p>'; });
+  if (box && attempt.checked[p.part_id]?.claude && !claudeMarks[p.part_id]?.result) {
+    openMarkStream();
+    box.innerHTML = '<p class="live-verdict">⏳ Sent to Claude, waiting for a mark…</p><p class="muted">The mark appears here by itself. You can keep working on other questions.</p>';
+  } else if (box) fetchKey(p).then(key => fillLive(p, i, el, box, key)).catch(() => { box.innerHTML = '<p>Could not load the answer. Is the server running?</p>'; });
 }
 function fillLive(p, i, el, box, key) {
   const ck = attempt.checked[p.part_id], a = attempt.answers[p.part_id] || {}, ex = key.explanation || {};
@@ -808,7 +839,9 @@ function fillLive(p, i, el, box, key) {
     inp.closest('td').classList.toggle('opt-wrong', inp.checked && !ok);
   });
   const H = [];
-  if (ck.correct === true) H.push(`<p class="live-verdict">✅ Correct</p>`);
+  const cm = claudeMarks[p.part_id]?.result;
+  if (cm) H.push(`<div class="claude-mark"><p class="live-verdict">Claude: ${esc(cm.mark)}/${esc(p.marks)}</p>${md(cm.feedback || '')}</div>`);
+  if (cm) {} else if (ck.correct === true) H.push(`<p class="live-verdict">✅ Correct</p>`);
   else if (ck.correct === false) H.push(`<p class="live-verdict">❌ Not quite. The answer is <b>${esc((key.correct_letters || []).join(', ') || 'shown in green')}</b>.</p>`);
   else H.push('<p class="live-verdict">Compare your answer with the marking criteria and sample answer below.</p>');
   if (ex.key_check && ex.key_check !== 'ok') H.push(`<p class="live-warn">⚠ The answer key may be ${esc(ex.key_check)}: ${esc(ex.key_note || '')}</p>`);

@@ -20,7 +20,7 @@
      "answer_type": "CODING",
      "prompt": "Copy the algorithm into the space below and modify the algorithm logic so that it achieves its intended purpose.\n\nBEGIN Search (SearchItem) Set LastIndex to the number of elements in ItemArray Index = 1 WHILE Found = FALSE OR Index < LastIndex IF Index = SearchItem THEN Found = TRUE ENDIF ENDWHILE IF Found = TRUE THEN Display 'Position', Index ELSE Display 'Not found' ENDIF END Search",
      "question": {
-      "language": "PYTHON"
+      "language": "PSEUDOCODE"
      },
      "marking_criteria": [
       {
@@ -62,7 +62,7 @@
      "answer_type": "CODING",
      "prompt": "Write the algorithm using pseudocode. Include at least one subroutine in your answer. You may assume that all inputs are valid.",
      "question": {
-      "language": "PYTHON"
+      "language": "PSEUDOCODE"
      },
      "marking_criteria": [
       {
@@ -104,7 +104,7 @@
      "answer_type": "CODING",
      "prompt": "Below is an array that displays the scores of four players from five games of cricket.\n\n|  | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|\n| 1 | 2 | 144 | 5 | 5 |\n| 2 | 3 | 92 | 23 | 20 |\n| 3 | 61 | 0 | 11 | 0 |\n| 4 | 0 | 211 | 58 | 4 |\n| 5 | 5 | 80 | 1 | 0 |\n\nScores(1, 2) = 144 represents the score in Game 1 by Player 2.\n\nWrite an algorithm that will allow the user to calculate the total of a selected player for the five matches.",
      "question": {
-      "language": "PYTHON"
+      "language": "PSEUDOCODE"
      },
      "marking_criteria": [
       {
@@ -150,7 +150,7 @@
      "answer_type": "CODING",
      "prompt": "Write an algorithm in pseudocode for a function which, when passed a 2D array of integers called \u201csquare\u201d, will return True if the square is \u201cmagic\u201d and False otherwise.",
      "question": {
-      "language": "PYTHON"
+      "language": "PSEUDOCODE"
      },
      "marking_criteria": [
       {

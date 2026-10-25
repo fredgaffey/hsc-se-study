@@ -1,0 +1,62 @@
+{
+ "exam": "Pseudocode 1b - magic square",
+ "drill": true,
+ "created": "2026-10-25T03:15:20.300Z",
+ "duration_minutes": 12,
+ "reading_minutes": 0,
+ "total_available": 5,
+ "parts_total": 1,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "Pseudocode Algorithm (Question 20, ITE 2024 Y11)",
+   "stimulus": "A ‘magic square’ is a grid with a width and height of n, containing the numbers from 1 to n2. Each row, column, and diagonal adds up to the same sum. For example, in the grid below n is 3; the grid contains the numbers 1-9, and every row, column, and diagonal adds up to 15.\n\n![](assets/0b61efb6-d02d-49bb-bd76-ca64a38b107c.png)",
+   "parts": [
+    {
+     "part_id": "9f8a9633-20a8-4882-8474-7aa46a1d0919",
+     "part": "Part A",
+     "marks_available": 5,
+     "answer_type": "CODING",
+     "prompt": "Write an algorithm in pseudocode for a function which, when passed a 2D array of integers called “square”, will return True if the square is “magic” and False otherwise.",
+     "question": {
+      "language": "PSEUDOCODE"
+     },
+     "marking_criteria": [
+      {
+       "marks": "5",
+       "criterion": "Creates a substantially correct algorithm, using NESA&rsquo;s format for pseudocode, which attempts all of the following:\n\nChecks the size of the 2D array\n\nIterates through the 2D array\n\nCalculates the sum for each row and column\n\nCalculates the sum for each diagonal\n\nReturns true if all sums are equal\n\nReturns false otherwise"
+      },
+      {
+       "marks": "4",
+       "criterion": "Creates an algorithm in pseudocode which attempts at least four of the above criteria."
+      },
+      {
+       "marks": "3",
+       "criterion": "Creates an algorithm, or language-specific code, which attempts at least three of the above criteria."
+      },
+      {
+       "marks": "2",
+       "criterion": "Creates an algorithm or code which includes some of the required logic for two or more of the above criteria."
+      },
+      {
+       "marks": "1",
+       "criterion": "Creates an algorithm or code which addresses some part of the question."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": "![](assets/c9b59de4-d43e-4394-bcba-c8a2200cc2fe.png)\n\n![](assets/1c9e4b65-c996-4666-9c93-c835ebe4ce99.png)",
+     "syllabus": "PROJ-15",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

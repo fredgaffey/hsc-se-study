@@ -12,8 +12,15 @@ const APP = path.join(ROOT, 'exam-app');
 const EXAMS = path.join(ROOT, 'gradeo_out', 'exams');
 const PAPERS = path.join(ROOT, 'papers');
 const ATTEMPTS = path.join(PAPERS, 'attempts');
+const MARKS = path.join(PAPERS, 'claude_marks');   // one file per "Ask Claude to mark" request (+ its result)
 const PORT = +process.env.PORT || 7788;
 fs.mkdirSync(ATTEMPTS, { recursive: true });
+fs.mkdirSync(MARKS, { recursive: true });
+
+const markClients = new Set();   // open SSE streams: { attempt, res }
+const marksFor = attemptId => fs.readdirSync(MARKS).filter(f => f.endsWith('.json'))
+  .map(f => JSON.parse(fs.readFileSync(path.join(MARKS, f), 'utf8'))).filter(m => m.attempt === attemptId);
+const markSummary = m => ({ id: m.id, part_id: m.part_id, marks: m.marks, result: m.result });
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
   '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.gif': 'image/gif', '.svg': 'image/svg+xml', '.webp': 'image/webp',
@@ -248,6 +255,47 @@ http.createServer(async (req, res) => {
       const r = JSON.parse(await readBody(req));
       fs.appendFileSync(path.join(PAPERS, 'reports.jsonl'), JSON.stringify(r) + '\n');
       return send(res, 200, { ok: true });
+    }
+    // "Ask Claude to mark": the page posts one answer; Claude (watching mark_requests.jsonl) posts the mark back;
+    // results are pushed to open pages with Server-Sent Events.
+    if (p === '/api/claude-mark' && req.method === 'POST') {
+      const r = JSON.parse(await readBody(req));
+      const e = readExam(r.folder || '');
+      const part = e.questions.flatMap(q => q.parts).find(x => x.part_id === r.part_id);
+      if (!part) return send(res, 404, { error: 'no such question' });
+      const id = `${new Date().toISOString().replace(/[-:.TZ]/g, '').slice(0, 14)}-${crypto.randomUUID().slice(0, 6)}`;
+      const png = path.join(ATTEMPTS, `${r.attempt}_${r.part_id}.png`);
+      const reqObj = {
+        id, at: new Date().toISOString(), attempt: r.attempt, folder: r.folder, exam: e.exam, question: r.question,
+        part_id: r.part_id, marks: part.marks_available, type: part.answer_type, prompt: part.prompt,
+        answer: r.answer, drawing_png: fs.existsSync(png) ? png : null, time_ms: r.time_ms,
+        key: { criteria: part.marking_criteria, rubric: part.marking_rubric, guidance: part.marking_guidance, sample_answer: part.sample_answer, correct_letters: part.question?.correct_letters },
+        result: null,
+      };
+      fs.writeFileSync(path.join(MARKS, id + '.json'), JSON.stringify(reqObj, null, 1));
+      fs.appendFileSync(path.join(PAPERS, 'mark_requests.jsonl'), JSON.stringify({ id, attempt: r.attempt, exam: e.exam, question: r.question }) + '\n');
+      return send(res, 200, { id });
+    }
+    if (p.startsWith('/api/claude-mark/') && p.endsWith('/result') && req.method === 'POST') {   // Claude posts { mark, feedback }
+      const id = path.basename(p.slice(17, -7));
+      const file = path.join(MARKS, id + '.json');
+      if (!fs.existsSync(file)) return send(res, 404, {});
+      const m = JSON.parse(fs.readFileSync(file, 'utf8'));
+      m.result = { ...JSON.parse(await readBody(req)), at: new Date().toISOString() };
+      fs.writeFileSync(file, JSON.stringify(m, null, 1));
+      const msg = `data: ${JSON.stringify(markSummary(m))}\n\n`;
+      for (const c of markClients) if (c.attempt === m.attempt) c.res.write(msg);
+      return send(res, 200, { ok: true, pushed: [...markClients].filter(c => c.attempt === m.attempt).length });
+    }
+    if (p === '/api/claude-mark/events') {   // SSE stream for one attempt: sends existing results, then new ones as they arrive
+      const attemptId = url.searchParams.get('attempt') || '';
+      res.writeHead(200, { 'content-type': 'text/event-stream', 'cache-control': 'no-cache', connection: 'keep-alive' });
+      for (const m of marksFor(attemptId)) res.write(`data: ${JSON.stringify(markSummary(m))}\n\n`);
+      const c = { attempt: attemptId, res };
+      markClients.add(c);
+      const ping = setInterval(() => res.write(': ping\n\n'), 25000);
+      req.on('close', () => { clearInterval(ping); markClients.delete(c); });
+      return;
     }
     if (p === '/api/check') {   // live marking: the key for ONE question, fetched only after the student locks their answer
       const e = readExam(url.searchParams.get('folder') || '');

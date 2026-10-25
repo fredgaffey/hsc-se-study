@@ -114,7 +114,8 @@ function trackTime() {
   const dt = Math.min(now - last, 2000);
   if (document.hidden) { T.awayMs += dt; return; }
   const key = String(groups[attempt.current]?.q.number);
-  if (groups[attempt.current]?.q.parts.every(p => attempt.checked?.[p.part_id])) return;   // done: reading feedback isn't answer time
+  if (groups[attempt.current]?.q.parts.every(p => attempt.checked?.[p.part_id])) return;
+  if (exam?.drill && attempt.qBudget?.[groups[attempt.current]?.q.number] == null) return;   // still planning   // done: reading feedback isn't answer time
   const q = T.q[key] ||= { ms: 0, visits: 0, firstSeenMs: workMs() };
   if (T.lastKey !== key) { q.visits++; T.lastKey = key; }
   q.ms += dt;
@@ -151,8 +152,11 @@ function updateTimer() {
   if (exam?.drill && !reading && g) {
     // drills: count down the current question (2 min per mark, NESA pace incl. reading), not the whole drill
     const qMarks = g.q.parts.reduce((t, p) => t + (p.marks || 0), 0);
-    const qLeft = qMarks * Q_MS_PER_MARK - (attempt.timing?.q[String(g.q.number)]?.ms || 0);
+    const bud = attempt.qBudget?.[g.q.number];
+    if (!bud) { el.innerHTML = '<i class="far fa-clock"></i> Plan your time'; } else {
+    const qLeft = bud.ms - (attempt.timing?.q[String(g.q.number)]?.ms || 0);
     el.innerHTML = `<i class="far fa-clock"></i> ${qLeft < 0 ? `<span class="q-over">Question overtime: ${hms(-qLeft)}</span>` : 'Question time left: ' + hms(qLeft)}`;
+    }
   } else
   el.innerHTML = `<i class="far fa-clock"></i> ${reading ? 'Reading time left: ' + hms(attempt.readingMs - used) : left < 0 ? 'Overtime: ' + hms(-left) : 'Time left: ' + hms(left)}`;
   const rl = document.getElementById('rest-left'), bb = document.getElementById('break-box');
@@ -756,6 +760,28 @@ function renderQuestion() {
   const total = q.parts.reduce((t, p) => t + (p.marks || 0), 0);
   const multi = q.parts.length > 1;
   const title = `<div class="item-title"><h3>Question ${esc(q.number)} ${marksText(total)}</h3></div>`;
+  const budgets = attempt.qBudget ||= {};
+  if (exam?.drill && !reading && budgets[q.number] == null && !q.parts.every(p => attempt.checked?.[p.part_id])) {
+    content.innerHTML = `<div class="feature left-stripe item plan-time"><h3>Question ${esc(q.number)}: ${total} mark${total === 1 ? '' : 's'}</h3>
+      <p>Plan your time before you see the question. How many minutes will you give it?</p>
+      <p><input type="number" id="plan-min" min="0.5" max="60" step="0.5" inputmode="decimal" style="width:6em;font:inherit;padding:6px"> minutes
+      <button class="nsw-button nsw-button--dark" id="plan-start">Start question <i class="fa fa-angle-right"></i></button></p></div>`;
+    const inp = $('#plan-min', content), go_ = () => {
+      const v = parseFloat(inp.value);
+      if (!(v > 0)) { inp.focus(); return; }
+      budgets[q.number] = { ms: Math.round(v * 60000), paceMs: total * Q_MS_PER_MARK };
+      save(true); renderQuestion(); updateTimer();
+    };
+    $('#plan-start', content).onclick = go_;
+    inp.onkeydown = e => { if (e.key === 'Enter') go_(); };
+    inp.focus();
+    return;
+  }
+  const bud = budgets[q.number];
+  const planNote = exam?.drill && bud ? (() => {
+    const diff = Math.round((bud.ms - bud.paceMs) / 60000 * 2) / 2;
+    return `<p class="plan-note">You planned <b>${bud.ms / 60000} min</b>. Exam pace for ${total} mark${total === 1 ? '' : 's'} is <b>${bud.paceMs / 60000} min</b> (2 min per mark)${diff === 0 ? ': spot on.' : diff > 0 ? `: ${diff} min more than pace.` : `: ${-diff} min less than pace.`}</p>`;
+  })() : '';
   const items = q.parts.map((p, i) => `<div class="feature left-stripe item${ui.hidden[p.part_id] ? ' item-hidden' : ''}" data-i="${i}">
       <div class="item-header">${itemButtons(p, i, multi)}
         <div class="item-question hl" data-hl="prompt-${i}">${multi ? `<div class="q-sub"><span class="q-label">${esc(partLabel(p))}</span><div class="q-text">${md(withMarks(p.prompt, p.marks))}</div></div>` : md(p.prompt)}</div></div>
@@ -767,8 +793,8 @@ function renderQuestion() {
     </div></div>`;
   const wide = q.parts.some(p => ['CODING', 'SQL', 'DRAWING_V2', 'RICH_TABLE'].includes(p.type));
   content.innerHTML = q.stimulus
-    ? `<div class="item-group-wrapper item-group-two-col${wide ? ' bigger-right' : ''}"><div class="col col-left">${title}<div class="itemgroup-intro hl" data-hl="stim">${md(q.stimulus)}</div></div><div class="col col-right">${items}${actions}</div></div>`
-    : `<div class="item-group-wrapper item-group-one-col">${title}${items}${actions}</div>`;
+    ? `<div class="item-group-wrapper item-group-two-col${wide ? ' bigger-right' : ''}"><div class="col col-left">${title}${planNote}<div class="itemgroup-intro hl" data-hl="stim">${md(q.stimulus)}</div></div><div class="col col-right">${items}${actions}</div></div>`
+    : `<div class="item-group-wrapper item-group-one-col">${title}${planNote}${items}${actions}</div>`;
   restoreHighlights(content);
   $$('.col, .item-group-one-col', content).forEach(c => c.scrollTop = 0);
 

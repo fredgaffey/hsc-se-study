@@ -1,0 +1,56 @@
+{
+ "exam": "Redo - automation analyse (4)",
+ "drill": true,
+ "created": "2026-10-25T04:41:37.383Z",
+ "duration_minutes": 10,
+ "reading_minutes": 0,
+ "total_available": 4,
+ "parts_total": 1,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "Impact of automation",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "7205df35-de3b-4546-9d05-d6398e512d30",
+     "part": "Part A",
+     "marks_available": 4,
+     "answer_type": "SHORT",
+     "prompt": "Analyse the environmental and economic implications of increased automation in industrial production.",
+     "question": {},
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Succinctly analyses the environmental and economic implications of increased automation in industrial production."
+      },
+      {
+       "marks": "3",
+       "criterion": "Describes the environmental and economic implications of increased automation in industrial production."
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines the environmental and economic implications of increased automation in industrial production."
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": null,
+     "sample_answer": "The environmental implications of increased automation include potential increases in energy consumption and ecological impacts due to the production and disposal of automated technologies. Although automation can boost production efficiency and reduce waste, the energy required for operation and the life cycle of the technologies must be managed sustainably. Economically, while automation drives productivity and growth, it also risks exacerbating wealth inequality by predominantly benefiting capital owners and highly skilled workers. This unequal distribution of wealth challenges sustainable development goals, which include reducing inequality and promoting inclusive economic growth. To counteract these effects, policies focusing on wealth redistribution, environmental regulations, and promoting equal access to education and training in new technologies are necessary to ensure a fair and sustainable future.",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

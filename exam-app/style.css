@@ -370,3 +370,5 @@ tr.opt-correct td.acell::after { content: " ✓ correct answer"; color: #008a07;
 .live-prev { margin-top: 10px; }
 .live-prev-item { border-left: 3px solid #ccc; padding-left: 8px; margin: 6px 0; }
 .q-over { color: #d7153a; font-weight: 700; }
+.plan-time h3 { margin-top: 0; }
+.plan-note { background: #f2f6ff; border-left: 4px solid #146cfd; padding: 4px 10px; margin: 0 0 10px; }

@@ -1,0 +1,84 @@
+{
+ "id": "20261025-0442_Pseudocode_1b_magic_square",
+ "mode": "structured",
+ "folder": "drill:202610250315-pseudocode-1b-magic-square",
+ "title": "Pseudocode 1b - magic square",
+ "startedAt": "2026-10-25T04:42:40.078Z",
+ "durationMinutes": 12,
+ "readingMs": 0,
+ "showTargets": true,
+ "rest": {
+  "perHalfHour": 5,
+  "allowanceMs": 0
+ },
+ "pauses": [],
+ "answers": {
+  "9f8a9633-20a8-4882-8474-7aa46a1d0919": {
+   "text": "BEGIN "
+  }
+ },
+ "flags": {},
+ "current": 0,
+ "navByQuestion": true,
+ "liveMark": true,
+ "timing": {
+  "q": {
+   "1": {
+    "ms": 8500,
+    "visits": 1,
+    "firstSeenMs": 16
+   }
+  },
+  "p": {
+   "9f8a9633-20a8-4882-8474-7aa46a1d0919": {
+    "firstMs": 6590,
+    "edits": 6,
+    "lastMs": 8257
+   }
+  },
+  "awayMs": 0,
+  "lastKey": "1"
+ },
+ "timeUsedMs": 8516,
+ "keylog": {
+  "9f8a9633-20a8-4882-8474-7aa46a1d0919": [
+   [
+    6590,
+    0,
+    0,
+    "B"
+   ],
+   [
+    7471,
+    1,
+    0,
+    "E"
+   ],
+   [
+    7935,
+    2,
+    0,
+    "G"
+   ],
+   [
+    8018,
+    3,
+    0,
+    "I"
+   ],
+   [
+    8068,
+    4,
+    0,
+    "N"
+   ],
+   [
+    8257,
+    5,
+    0,
+    " "
+   ]
+  ]
+ },
+ "savedAt": "2026-10-25T04:42:49.039Z"
+}

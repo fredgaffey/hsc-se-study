@@ -1,0 +1,59 @@
+184|OUT|1|
+185|OUT|1|
+186|SSA-13,SSA-10|3|
+187|SSA-10,WEB-7|3|
+188|SSA-12,PROJ-21|1|
+189|PROJ-15|2|FOR loop is a counted loop; key 'pre-test loop' is acceptable only because no counted-loop option is offered
+190|SSA-10|3|
+191|SSA-10|3|
+192|SSA-10|2|
+193|PROJ-15,SSA-6|3|
+194|OUT|1|
+195|OUT|1|
+196|SSA-11|3|
+197|SSA-11,WEB-3|3|
+198|SSA-13,SSA-11|3|
+199|SSA-11,SSA-4|3|
+200|PROJ-20,WEB-21|2|
+201|SSA-12|2|
+202|SSA-4|2|
+203|Y11|1|
+204|OUT|1|
+205|PROJ-15|2|
+206|Y11|1|
+207|Y11|1|
+208|SSA-12|3|
+209|PROJ-21|2|
+210|SSA-12|3|
+211|OUT|1|
+212|PROJ-15|3|
+213|PROJ-15|3|
+214|PROJ-15|2|
+215|PROJ-15|3|
+216|SSA-13|3|
+217|SSA-13|3|
+218|Y11|1|
+219|SSA-13|3|
+220|Y11|1|
+221|PROJ-2|3|
+222|PROJ-15|2|
+223|SSA-13|3|4-mark and 3-mark criteria are identical
+224|Y11|1|marking criteria refer to a 'Floor Manager' subclass, not the Sales Assistant asked for
+225|SSA-14|3|=multi-select item (choose TWO); two keyed answers is intended
+226|SSA-14|3|
+227|SSA-14|3|
+228|SSA-14,SSA-13|3|
+229|SSA-15|3|
+230|PROJ-19|2|
+231|SSA-15,SSA-9|3|
+232|SSA-4|3|
+233|SSA-16|3|=multi-select item (choose TWO); two keyed answers is intended
+234|SSA-17|3|
+235|SSA-17|2|
+236|AUTO-11,SSA-17|2|
+237|SSA-17|2|
+238|SSA-17|2|
+239|OUT|1|
+240|OUT|1|
+241|SSA-17,SSA-5|2|
+242|SSA-17|3|

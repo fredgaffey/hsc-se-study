@@ -1,0 +1,7 @@
+WHILE condition is true
+    process
+ENDWHILE
+
+REPEAT
+    process
+UNTIL condition is true

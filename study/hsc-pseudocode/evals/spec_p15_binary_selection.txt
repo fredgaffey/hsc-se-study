@@ -1,0 +1,9 @@
+IF condition THEN
+    process 1
+ENDIF
+
+IF condition THEN
+    process 2
+ELSE
+    process 1
+ENDIF

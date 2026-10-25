@@ -1,0 +1,2430 @@
+﻿1) Read from pages 24-27 of the resource booklet. 
+2) Describe the following applications of web programming: 
+ 
+* interactive websites/webpages 
+* e-commerce 
+* progressive web apps (PWAs) 
+3) Login into Ed using the supplied link. 
+4) Complete the Hypertext module under Programming for the Web - Part 1. 
+ 
+Describe:  
+ 
+* Interactive websites/webpages: 
+ 
+Interactive websites are webpages which require user interaction for must functionalities to achieve their job. They usually do not require an account but sometimes they're best experienced with one. They save certain data as cache but it usually is not enough for it to be relaunched or used without mediocre internet since it would be very slow and choppy. 
+
+An example of an interactive website is YouTube. YouTube uses cache to provide you with suggestions even if you're not logged in but the cache stored is not enough to actually use the app without an internet connection. It is best experienced with an account since it unlocks many features but have no problems being used without an account since you still receive a tailored for you page after some time. 
+ 
+* E-com sites 
+ 
+E-commerce websites are websites which sell goods on the internet. They make use of cache to save carts and usually are best experienced when a user creates an account. They require certain physical information to complete their jobs successfully like your location and use cookies to provide you with items you're most likely to purchase (This last part is in some websites, they usually have their own algorithm). 
+ 
+An example of an E-com site would be Amazon. Amazon makes use of cache to save carts and past searches even if you're not logged in but locks out many features if you do not have an account (such as following certain sellers or subscribing to special memberships, or even participating in certain deals or discounts!).  
+ 
+ 
+* Progressive Web Apps (PWAs) 
+ 
+PWAs are flexible, adaptive and responsive websites. They come with a primitive model which can suit almost any browser and fit all modern screen sizes and resolutions. PWAs also save much of their required information in the form of cache and so can be loaded up quickly and easily without requiring internet to load previously visited pages. They can work surprisingly well with bad or jittery internet connections! 
+ 
+ 
+ 
+Comparison 
+	Interactive Site 
+	E-com Sites 
+	PWAs 
+	Primary Goal 
+	User Engagement, Interaction with content 
+	Facilitate Trade of products 
+	Provide app-like experiences via browser 
+	Offline Access 
+	No 
+	No 
+	Yes  
+(Via Cache) 
+	Main Tech 
+	HTML, CSS, JavaScript, AJAX 
+	Similar to interactive sites but for backend transactions 
+	Service workers, Cache, web app Manifest, JavaScript 
+	Installable 
+	No 
+	No 
+	Yes (Installable without app store) 
+	Examples 
+	Facebook, Khan Academy 
+	Amazon, Ebay, Kogan 
+	Twitter Lite, Uber, Starbucks 
+	 
+
+
+Investigate and practise how data is transferred on the internet 
+ 
+Data Packets 
+A Packet's Tale. How Does the Internet Work? (3:29) 
+ 
+  
+
+. 
+* Computers ask for a copy of the webpage to access including the sites IP address in the form of a packet. Internet goes through regional wires and networks until it reaches an internet hub. 
+* Fiber optic cables help internet travel through the world 
+* When the server reads the request it sends a packet back to the requesting device. If a site is too big it might send multiple packets 
+* If data transfer is too congested or high in traffic, sites can be pulverised into smaller packets and it can take multiple routes and spread out but reaches its final destination where they are reassembled 
+* The packets are sent through multiple hubs which check the validity of the packet request before letting them continue their journey 
+ 
+When a computer or similar device attempts to access a website on the internet, a request is put forward with the device's IP address attached. The request is sent in the form of a small packet containing the device's information and it travels through fiber optic cables until it reaches an internet hub.  
+At the internet hub the request packet is linked to the direction of the server/site attempting to be accessed, when that destination is reached another packet (or if the site/server is too big to be sent as one packet, Packets) is sent towards the requesting device with its own IP address.  
+If a big site's packet is broken into multiple packets, they make take different routes to reach the same requesting device when there is traffic. 
+ 
+IP addresses 
+IP addresses explained (3:32) 
+ 
+  
+
+ 
+* Represent where you live on the internet, and are required to send and receive data on the internet, it an identifier. 
+* The destination address is the server attempting to be accessed, source is the device attempting to access the destination 
+* IP addresses are an entirely unique series of numbers. 
+* An IP address has 36 possible 1s and 0s and is made of 4 8-bit binary numbers and so there are 4,294,967,296 possible addresses available for use on the internet 
+* NAT (modems), is a fix for running out of IP addresses. It takes multiple addresses from inside your network and merges them into one and allows them access to the internet.  
+ 
+IP addresses are unique identifiers built into every device which can connect into the internet. An IP is required for transfer of packets between devices and servers and for devices to be able to access websites. The destination server can only return a packet or data to the source of the connection if it has an IP address 
+Since the number of IP addresses in the world is limited, NAT's have been put in use to maximise the use of every IP address. A NAT acts like a mail man delivering packets to a group of IP's within its own Network 
+ 
+Domain System Name (DNS) 
+DNS Explained in 100 Seconds (2:15) 
+ 
+  
+
+ 
+* It hosts domain names on the internet and links it to an IP address. This system later translates human readable domain names into an IP address 
+* It attempts to look for server cache when first connecting, 
+ 
+Steps: 
+1. User inputting domain name into browser 
+2. Browsers sends a DNS query to a resolver provided by an ISP too lookup the DNS, DNS lookup. 
+3. DNS resolver receives the query and checks cache to see if it has the requested domain's IP. If it is located, the IP address will be sent directly to the device if not it continues to search for it 
+4. Recursive query is when the resolver queries the root DNS server, which hold info about top-level domains (like .com, .net , .org and so on) 
+5. Top-Level domain (TLD) server is reached when the root server directs to the appropriate TLD server. The TLD server holds the most up-to-date info about the domain including its IP. 
+6. Authoritative name server (ANS) are contacted by the resolver for the specific domain. This server holds the latest info about the domain 
+7. The ANS responds to the resolver with the requested IP address. 
+ 
+Explain the following concepts related to data transfer on the internet: 
+* data packets 
+* internet protocol (IP) addresses, including IPv4 
+* domain name systems (DNS) 
+3) Read the information in the resource booklet from page 29-32 and add any extra or missing information. 
+ 
+
+
+Pages: 34-36 in Teacher Support Resource 
+
+Investigate and describe the function of web protocols and their ports 
+1) Define the term protocol 
+ 
+A protocol is a set of rules/restrictions/limitations for transferring data 
+ 
+2) Provide a 1 sentence definition of the following protocols: 
+ 
+* HTTP, HTTPS: These protocols protect visiting websites by encrypting and encoding the connection and data being transferred 
+ 
+* TCP/IP: Enables network communication over large distances and the method of data transfer. 
+ 
+* DNS: Translates domain names into IP addresses to allow  browsers to find and connect to websites. 
+ 
+* FTP, SFTP: Are responsible for file transfer from one host to another and uploading/downloading files between computers 
+ 
+* SSL, TLS: Secure an internet connection through data encryption between sender and received and also encrypts communication between websites and servers. 
+ 
+* SMTP, POP 3, IMAP: Regulate email delivery and access, allowing users to access emails wherever they are and and allowing them to download emails from a server. 
+ 
+ 
+ 
+3) Complete the following table in your OneNote file: 
+Protocol 
+	Function 
+	Port 
+	HTTP 
+	encoding and transporting information between a client (such as a web browser) and a web server 
+	80 
+	HTTPS 
+	encrypts the website visitor's connection and hides cookies, URLs and other types of sensitive metadata. 
+	443 
+	TCP/IP 
+	defines how devices should transmit data between them and enables communication over networks and large distances. 
+	unique number ranging from 0 to 65535 
+	DNS 
+	turns domain names into IP addresses, which allow browsers to get to websites and other internet resources.  
+	53 
+	FTP 
+	transfer of files from one host to another over a TCP-based network, such as the Internet. 
+	Command port: 21 
+Data port: 20 
+	SFTP 
+	uploading or downloading files between a local computer and a remote one 
+	22 
+	SSL 
+	securing an internet connection by encrypting data sent between a website and a browser 
+	443 
+	TLS 
+	encrypting the communication between web applications and servers 
+	443 
+	SMTP 
+	to deliver e-mail messages over the Internet 
+	587 
+	IMAP 
+	allows you to access your email wherever you are, from any device.  
+	143 
+	POP3 
+	supports one-way email synchronization, only allowing users to download emails from a server to a client 
+	non-encrypted port: 110 and 
+port: 995 
+	 
+4) Complete the Networking module on ED. 
+ 
+
+
+Investigate the effect of big data on web architecture 
+What is big data? 
+Big data refers to extremely large and complex datasets that cannot be easily managed, processed or analysed using traditional data processing tools or methods. 
+The term ‘big data’ encompasses not only the volume of data but also its velocity, variety, veracity and value. 
+ 
+1) use the following words to complete the cloze passage on definitions. 
+  
+Keywords: diverse, convergence, value, volumes, velocity, challenges, varying, opportunities 
+Big data represents the [1] volumes of large [2] Varying of data, high [3] velocity  of data generation, [4] diverse data types, [5] Convergence data quality, and the potential to derive [6] value from data analytics. It poses both [7] Challenges and [8] Opportunities  for organisations seeking to harness the power of data to gain competitive advantage and drive business success. 
+What is web architecture? 
+Web architecture refers to the structure, components, and principles underlying the design and workings of web-based systems and applications. It includes the software, hardware, protocols, standards, and technologies that enable the functioning of websites, web services and web applications. 
+  
+  
+Key components of web architecture include: 
+1. Client-side components 
+1.1 Web browsers: software applications that retrieve, render, and display web content to users. 
+1.2 Client-side scripting languages (for example, JavaScript): used to enhance interactivity and functionality within webpages. 
+1.3 User interfaces (UI): design elements and layouts that enable users to interact with web applications. 
+1. Server-side components 
+2.1 Web servers: software programs that host and serve web content in response to client requests. 
+2.2 Application servers: middleware that provides runtime environments for executing server-side scripts and applications. 
+2.3 Databases: systems for storing and managing structured data used by web applications. 
+1. Networking infrastructure 
+3.1 Internet protocols (for example, HTTP, HTTPS, TCP/IP): standards governing communication between clients and servers over the internet. 
+3.2 Domain Name System (DNS): translates domain names into IP addresses, facilitating web address resolution. 
+3.3 Content delivery networks (CDNs): distributed networks of servers that deliver web content to users based on their geographic location, improving performance and reliability. 
+1. Data formats and protocols 
+4.1 Hypertext markup language (HTML), cascading style sheets (CSS), JavaScript (JS): standard languages for creating and styling web content. 
+4.2 Representational state transfer (REST), Simple object access protocol (SOAP): protocols for exchanging data between web services and clients. 
+4.3 XML, JSON: data interchange formats commonly used for transmitting structured data over the web. 
+1. Security mechanisms 
+5.1 Secure Sockets Layer (SSL)/Transport Layer Security (TLS): protocols for encrypting data transmitted between clients and servers, ensuring confidentiality and integrity. 
+5.2 Authentication and authorisation mechanisms: techniques for verifying the identity of users and controlling access to web resources. 
+5.3 Firewalls, intrusion detection systems (IDS), and other security measures: protect web applications from unauthorised access, attacks and data breaches. 
+ 
+ 
+2) Scenario: you have been requested to design the graphics for a new software engineering textbook. In your one note document sketch a diagram to represent web architecture that includes all key components. 
+* The diagram should indicate how each component is related to the others. 
+* Share this diagram with the class for peer assessment. 
+* Compare the diagram with online depictions and explain any differences. 
+* Teams modify and improve the diagrams by using Lucidchart or flowcharts and icons (Word) to create a finished poster. 
+ 
+3) Define the following terms as they relate to the effect of big data on web architecture: 
+* data mining 
+The collection of hidden data through analysing general data trends 
+* Metadata 
+Data about data and is just information that defines and describes data 
+* streaming service management 
+Instantaneous Real-time data analysis to develop trends and pattern regarding data. 
+ 
+ 
+ 
+4) Read this article on Big Data. Big Data.docx and summarise it. 
+ 
+Increasing reliance on Big data and the internet 
+ 
+Since 2016 phone usage was high. Due to covid-19, interaction with mobile phones increased dramatically. 
+ 
+Covid-19 forced more internet dependence and moved many delivery apps to sites and applications 
+ 
+Average Australians spend 5.5 hours on their phone daily. 
+  
+Our collective reliance on data infrastructure and our participation in the 
+digital economy are forming the backbone of new economic, political, and 
+social power – what is called in “the big data landscape” 
+Constant Data collection 
+ 
+The big data landscape has embedded new structures for unprecedented 
+collection, aggregation and analysis of data about every aspect of our 
+lives. This data tells who we are and can provide updates about many aspects of our lives. 
+ 
+The data collection occurs within companies which monetizes user data for ad services or suggestion algorithms.  
+ 
+Surveillance capacity 
+ 
+Big data democratises capabilities for targeting and surveillance – functions that were previously performed by nation states.  the ability to derive insight from it – largely resides in the private sector.  
+ 
+enormous national security implications of near-complete data coverage 
+of human lives are underappreciated in policy and public commentary.  
+ 
+During Covid-19 Surveillence grew and is currently on the rise this takes the form of comprehensive surveillance, including worker location, physiological signs, time on tasks and performance management – as well as algorithmic payment and firing. 
+ 
+Israeli Spyware (pegasus has also been used to surveille on many important figures) 
+ 
+Private Exploitation of Ubiquitous Technology 
+ 
+big tech companies that successfully capitalised on data abundance, are the new oligarchies and are increasingly controlling the capabilities essential for a functioning society. 
+ 
+Since virtually all information is now 
+controlled or goes through these large companies, at some level, it 
+fundamentally changes the security landscape for government and has 
+created new power dynamics 
+ 
+Lack of regulation 
+ 
+Many of Australia’s regulatory approaches necessarily look at single aspects of 
+the big data landscape, such as the ACCC’s inquiry into digital ad services.  
+ 
+Many of Australia’s regulatory approaches necessarily look at single aspects of 
+the big data landscape, such as the ACCC’s inquiry into digital ad services.  
+
+
+Investigate and explain the role of the World Wide Web Consortium (W3C) in the development of applications for the web 
+Watch  Tim Berners-Lee: How This Guy Invented the World Wide Web 30 Years Ago (5:56)Links to an external site. 
+ 
+  
+
+. 
+Investigate and explain the role of the World Wide Web Consortium (W3C)Links to an external site. in the development of applications for the web. 
+Including: Web Accessibility Initiative (WAI), internationalisation, web security, privacy, machine-readable data 
+  
+Web Accessibility Initiative (WAI) 
+Students building PWAs will benefit from WAI guidelines by ensuring that they are accessible to users with disabilities. Implementing WCAG recommendations ensures that PWAs are perceivable, operable, understandable and robust for all users, including those with visual, auditory, physical, speech, cognitive and neurological disabilities. Accessible PWAs improve usability and inclusivity, leading to a better user experience for all users. 
+1)  Jigsaw activityLinks to an external site. – ‘Web Accessibility’ 
+Assign students into home groups (A , B, C, and so on) of 3. 
+Number each student 1, 2, 3 and 4. 
+* Students numbered 1 form into an expert group that will create a webpage on: 
+* Writing for Web AccessibilityLinks to an external site. 
+* Students numbered 2 form into an expert group that will create a webpage on: 
+* Designing for Web AccessibilityLinks to an external site. 
+* Students numbered 3 form into an expert group that will create a webpage on: 
+* Developing for Web AccessibilityLinks to an external site. 
+* Students numbered 4 are in charge of setting up the home page, collating and linking the html files from the other groups and hosting the site (Github?) 
+  
+Each group creates a webpage using HTML on the tips they have researched and group 4 is in charge of collating and providing a link to the class. 
+  
+Click the link below to see the class work. 
+https://talha-talha2.github.io/W3C-Notes/Links to an external site. 
+  
+Internationalisation 
+W3C's Internationalization (I18n)Links to an external site. standards help developers create PWAs that support multilingual content and accommodate diverse cultural conventions. By following I18n guidelines, developers can ensure that PWAs are localised and adapted to different languages and regions, catering to a global audience. This enhances the accessibility and usability of PWAs for users worldwide. 
+2) try out the Internationalization CheckerLinks to an external site. on a number of different websites you are familiar with by pasting their URLs into the checker. 
+Take a screen shot of the results for any that are flagged. 
+Internationalization Checker results 
+	 
+ 
+ 
+ 
+ 
+Web security 
+Security is crucial for PWAs to protect users' data and ensure safe browsing experiences. W3C's standards for web security, such as HTTPS, CSP, CORS and secure authentication mechanisms, help developers build secure PWAs that mitigate common security threats, including XSS, CSRF and injection attacks. By adhering to W3C's security standards, developers can instill trust and confidence in their PWAs This encourages the use of the PWA. 
+3) Define HTTPS, CSP, CORS and secure authentication mechanisms. 
+ 
+Hyper Text Transfer Protocol Secure (HTTPS) - HTTPS is the secure successor of HTTP, which is the primary protocol used to send data between a web browser and a website. HTTPS is encrypted in order to increase security of data transfer. 
+ 
+Content Security Policy (CSP) - CSP is a security standard for web apps which allows developers to restrict the loading of resources and adds an additional layer of security 
+  
+Cross-origin resource sharing (Cors) - Cors is a W3C standard, it allows servers to explicitly allow certain cross-origin requests () while rejecting others. Cors allows a server to relax the same-origin policy and is safer and more flexible than earlier techniques. 
+ 
+Secure authentication mechanisms (SAM) - Authentication is the verification of a user's identity. Users are usually validated through certificates or hardware tokens. Secure authentication mechanisms are secondary and additional mechanisms such as multi-factor authentication or bio-metric authentication and are used to increase the security of an account and website. 
+ 
+Privacy 
+Privacy is a concern for all software engineers. This is especially the case when developing PWAs because of the sensitive data they handle, such as user preferences, location information and personal data. 
+W3C has privacy standards and guidelines that developers can follow to design PWAs that respect users' privacy rights and comply with regulatory requirements. Software engineers can include features like browser privacy controls, user consent mechanisms and secure data handling practices to build PWAs that prioritize user trust and privacy protection. 
+Machine-readable data 
+Developers building PWAs can use W3C standards for representing and exchanging machine-readable data. This enhances interoperability and automation by making it easier to understand and process by search engines, web crawlers and other applications. Being machine readable makes the PWAs content easier to discover and access. This makes it more visible and effective on the web. 
+4) : in the space below summarise the role of the World Wide Web Consortium (W3C)Links to an external site. in the development of applications for the web. 
+ 
+ 
+
+
+ 
+Model elements that form a web development system 
+1) Describe your use of the following in the development of your PWA (Assessment Task 1) 
+* client-side (front-end) web programming 
+ 
+Client side programming made up the entirety of the assessment task, through front-end programming I made the template of my site, the pages, the designs, the buttons, links, references, and functions by using HTML, JavaScript, and CSS 
+ 
+* server-side (back-end) web programming 
+ 
+The Server side programming was used to link my HTML page and its JavaScript with the fire-store database a  
+ 
+* interfacing with databases that are based on Structured Query Language (SQL) or non-SQL 
+ 
+SQL was a major part of my assessment but was not a part that I interacted with, instead my database was managed by fire-store which uses SQL to interact with databases. 
+ 
+2) Define server-side programming and list examples of back-end languages and frameworks. 
+ Server side programming is all the code that is only visible, editable, and readable by the programmers, the back end usually runs server functions and executes certain operation using front end user inputs. Examples of back end languages are SQL, which interacts with databases through its link to the frontend of the website 
+	  
+3) Using the space below describe the 2 main types of databases used in programming for the web and provide an example of each. 
+ 
+The two main database types are: 
+
+Relational: A relational database is a type of database that stores and provides access to data points that are related to one another. 
+ 
+NoSQL:   
+
+
+ 
+Investigate cascading style sheets (CSS) and its impact on the design of a web application 
+Explain the use of CSS in relation to the PWA tutorial we did in class OR your PWA (Assessment Task 1). Include the following in your response: 
+ 
+* consistency of appearance 
+ 
+* flexibility with browsers or display devices 
+ 
+* CSS maintenance tools 
+ 
+ 
+
+
+Investigate the reasons for version control and apply it when developing web application 
+ 
+1) Identify an example of a version control system, suitable for supporting the version management of a software application while it is being developed. 
+ 
+Unreal Engine or Unity version control autosaves project progress over time and saves them as different versions of the same project. Version control also allows multiple developers to work on a single project simultaneously  
+ 
+2) Outline the features of the version control system you identified, that support version control. 
+ 
+The features of These game engine's version control that makes them effective is their ability to Autosave updates done to project files and saving these are keeping version IDs with date and time of autosave.  
+ 
+ 
+ 
+
+
+Explore the types and significance of code libraries for front-end web development 
+ 
+1) Define a code library. 
+ 
+A code library is a storage for common, recurring code components and utilities to be reused. They reduce development time and ensure consistency in design and behavior across different parts of the web app and code. 
+ 
+2) Use the support document provided to you in class and define these: 
+ 
+* component based architecture 
+ 
+Component-based architecture is a framework for building software based on reusable parts. Each component contains well-defined functionality into a binary unit that is stored in a library and then dropped into an application without modifying other components. 
+ 
+* template engine 
+ 
+Template engines are used when you want to rapidly build web applications that are split into different components. Templates also enable fast rendering. When you build a server-side application with a template engine, the template engine replaces the variables in a template file with actual values, and displays this value to the client. This makes it easier to quickly build our application. 
+ 
+3) Identify the code libraries you used to develop your PWA and describe their use in your PWA. 
+ 
+I used a custom code library for my site design to maintain the same style across all pages and so there was repetition throughout my CSS files and I used many of them as general classes which I'd later edit more to give a deeper look. 
+ 
+I believe I did import code libraries such as google fonts, awesome-icons, and some others which I can't remember. 
+
+
+Explain the use and development of open-source software in relation to web development 
+Explain the use and development of open-source software in relation to web development 
+Activity : students visit and read A Brief History of Open SourceLinks to an external site.. 
+ 
+1) Using research and references from the history of open source, explain the use and development of open-source software in relation to web development. Write the explanation in the space provided below. 
+ 
+Web development makes use of many open source materials including web server software like Nginx and Apache which are used by 60% of the world's companies. 
+ 
+GNU (which evolved into modern Linux) was developed to counter closed source software and has been adopted by many web servers as their operating system due to its stability and performance. 
+ 
+The reason for the use of open source software is that it is easy to keep updated and can easily be customised and personalised to suit the user's needs. 
+
+
+Investigate methods to support and manage the load times of web pages/applications 
+Investigate methods to support and manage the load times of webpages/applications 
+ 
+Activity: Why is it important to manage load times of webpages/applications? Answer in the space below. 
+ 
+ It is important to minimise page load times to improve user experience, and increase responsiveness of the website. It also makes the site seem more polished and trustworthy since time and effort were put into its optimisation. 
+	 
+Activity: What are some of the methods to manage load times of webpages/applications? Answer in the space below. 
+ 
+ To minimise page load times we can: 
+ 
+* Allow for site caching so that the site and its recurring 
+ 
+* Increase code efficiency by removing unnecessary code, comments, and white space which also decreases page size 
+ 
+* Image compression decrease file page size since it allows for images to be more compressed in exchange for a lower resolution, most devices don't have high viewing resolution anyways 
+ 
+* Before the server sends the webpage to the user, it should compress the compressible text files (HTML, CSS, JavaScript) 
+ 
+* Make images load only when they are required to appear on screen, this makes initial loading faster and then spreads out the loading time as milliseconds across the page instead of one long wait as the page is being loaded 
+ 
+
+
+ 
+ 
+Research, experiment with and evaluate the prevalence and use of web content management systems (CMS) 
+Research, experiment with and evaluate the prevalence and use of web content management systems (CMS) 
+ 
+Activity: What is a web content management system (CMS)? Answer in the space provided. 
+ 
+A web content management system is a service that allows users to design and later host their own sites as a subdomain of a major CMS provider. They allow users to setup sites without needing any knowledge on PWA development or knowing how to program in HTML, CSS, or Javascript. 
+ 
+They host the site for the user and use a building block style of site development 
+ 
+Activity: research and evaluate the prevalence and use of web content management systems (CMS). Identify the most popular CMS platforms and their market share. Answer in the space provided. 
+ 
+The most popular: 
+ 
+Wordpress – 62.7% 
+Shopify – 6.4% 
+Wix – 3.9% 
+SquareSpace – 3.0% 
+Joomla – 2.4% 
+ 
+The reasons for popularity of some over others is that they  
+
+
+Assess the contribution of back-end web development to the success of a web application 
+Using the flipped classroom approachLinks to an external site., students watchBackend web development – a complete overview (12:57)Links to an external site. 
+for homework. 
+Teacher note: This comprehensive description of back-end web development goes beyond the requirement of the syllabus. It could be used as an extension or to provide students with insight into the processes they may use in developing a major project based around programming for the web. 
+Front end vs back end 
+Activity : complete the table according to the video description. 
+Front end 
+	Back end 
+	All the visuals and graphics visible to a user on the webpage 
+	The back-end is what saves, processes, and manages data. It takes the responsibility of understanding and acting upon valid requests by users sent through the front-end 
+	Activity 51: using the online shopping scenario from the video, describe what a server is. Answer in the space provided. 
+ 
+ A server is hardware such as a computer that hosts and deals with the site being hosted, the requests that come, processing of requests, the transfer of data, and the storing of data and they are the corner stones of any functional website 
+	 
+Activity : explain why a back-end programming language is needed. Answer in the space provided. 
+ 
+ A Back-end programming language is needed because computers require a method of interpreting user interactions. Back-end programming languages don't have many conditions but all require to be able to run the computer in a way that allows it to receive input messages, process events, and provide response messages which turns the computer into a server. 
+	  
+Activity : describe what a back-end framework does and provide examples. Answer in the space provided. 
+ 
+ A back-end framework acts as a base for the site to be built on, they're used because they make the process of website creating much more linear and much easier since they also provide better environments and suggestions for back-end related jobs. 
+	 
+Activity : explain what a package manager does and provide examples. Answer in the space provided. 
+ 
+ A Package manager is a collection of processes and functions which come pre-built into an environment. Package managers automates the process of installing, upgrading, configuring, and removing stuff off a server's hardware and also assist in the processing of the programming language. They also come with an array of tools that allow for faster production of sites 
+	 
+Activity : What is the role of the database in the Amazon scenario? Answer in the space provided. 
+ 
+ The role of the database in the amazon scenario is to store information regarding items on sale, temporarily holds requests then provides a response to the server itself after the server processes it.  
+	 
+Activity  explain the request response cycle in the Amazon scenario? Answer in the space provided. 
+ 
+ The user sends a request to do something on the site through the front-end which is taken over the internet to the back-end server which processes it and does what it reads on the database then sends the response back through the internet and to the front-end 
+	 
+Activity : explain API’s (application programming interface) using the Amazon scenario. Answer in the space provided. 
+ 
+Different types of requests allowed by the back-end are called APIs, The API is an important concept in the back-end. The back-end filters what requests are allowed and what are not. A get/order request will retrieve the order history from the database and send it back as a response. 
+
+At the Top of an API, the request type is shown, and the URL path. This describes where the request is headed and its type. All requests sent to the Amazon domain are redirected to their servers. 
+	 
+Activity : Unplugged activity 
+Students form small teams to role-play the processes involved in Alice shopping online – Mapping out a request 
+Activity : extension activity – students complete notetaking for the remainder of the videoBackend web development – a complete overview (12:57) 
+and research the following: 
+* REST API 
+* Cloud computing and IaaS (Infrastructure as a Service) 
+* 7VMs and Load Balancers 
+* PaaS (Platform as a Service) 
+* Microservices 
+* SaaS (Software as a Service) 
+* additional technologies. 
+ 
+ 
+ 
+Teacher note: software engineering teachers could approach their TSO’s or computer coordinators for an old laptop to recycle into a web server. A desktop or microcontroller (for example, raspberry pi) could also be used. Assuming an old laptop is used and running Windows, XAMPP could be installed which would provide a webserver, PHP and SQL. Node.js can then be installed as well. 
+The learning experience by establishing a web server could inform students considering extending on the Programming for the web focus area for their major projects. They will deepen their knowledge of the ‘plumbing’ and coding required at both front and back ends of the web. 
+Please refer to Appendix 2 – web server guide. 
+ 
+
+
+ 
+Observe and describe the back-end process used to manage a web request 
+Including: role of webserver software, web framework, objects, libraries, databases 
+Observing and describing the back-end process used to manage a web request involves understanding the roles of various components such as web server software, web framework objects, libraries and databases. 
+ 
+Activity : research and provide an overview of the back-end process to manage a web request including the role of the web server, web framework, objects, libraries and databases. Answer in the space provided. 
+  
+The User sends the web server a request through the front-end, the request is directed from the domain on the world wide web and towards the domain holder's server, The server's web-framework processes the request and routes it to its corresponding library/database to handle the request logic. Once the library receives the valid request, it processes it and then performs the task. Databases are queried (usually in a language like SQL) to edit/read/write data as requested  which allows the back-end to generate a response which returns back to the user. 
+  
+Activity : web server software is responsible for receiving incoming HTTP requests from clients (browsers or applications) and forwarding them to the appropriate components for processing. Study the following code. 
+// Import required modules 
+const express = require('express'); 
+// Create an instance of Express.js 
+const app = express(); 
+// Define a route to handle incoming HTTP GET requests 
+app.get('/', (req, res) => { 
+        // Send a plain text response to the client 
+        res.send('Hello, world!'); 
+}); 
+// Start the server and listen on port 3000 
+app.listen(3000, () => { 
+        console.log('Server is running on http://localhost:3000'); 
+}); 
+ 
+In the space below, describe what this code does. 
+ 
+Express module is imported, providing functionalities for web server development and handling of requests and responses. Using Express() an instance of Express.js is made. App.get() is a method which defines the route specifying that it should handle HTTP GET requests to the root URL ("/"). When a request is received, the provided callback function is executed. Inside the callback function, the res.send() method is used to send a plain text response ("HELLO WORLD") back to the user. The server started by calling the app.listen() method, specifying the port number (3000) on which the server should listen for incoming connections. This web server will respond with "Hello, world!" To any HTTP GET requests it receives on the root URL (http://localhost:3000/). 
+	
+
+ 
+ 
+ 
+ 
+ 
+Develop a web application using an appropriate scripting language with shell scripts to make files and directories, and searching for text in a text file 
+When developing a web application that involves creating files and directories, as well as searching for text in text files using shell scripts, a suitable scripting language to use is Bash (Bourne Again Shell). 
+ 
+Bash is a widely used shell scripting language in Unix-based systems like Linux and macOS, offering file manipulation, directory operations and text processing. 
+ 
+Bash provides a rich set of commands and utilities for creating files and directories, moving, copying, and deleting files, as well as setting permissions and ownership. Commands like mkdir for creating directories, touch for creating files, mv for moving files, cp for copying files, and rm for deleting files are commonly used in Bash scripts. Bash offers powerful text processing capabilities, allowing you to search for specific text patterns in files, extract data, and manipulate text content. Commands like grep for searching text in files based on patterns, sed for text substitution and manipulation, and awk for text processing and reporting are commonly used for text processing tasks. 
+ 
+Bash enables seamless integration with system commands and utilities, enabling developers to combine shell commands with file operations and text processing within the script. Developers can execute system commands, capture their output and process the data using Bash scripting. 
+Bash scripts are portable across Unix-based systems, making them a versatile choice for automating tasks and system administration across different environments. 
+ 
+Activity : use Git Bash to experiment with scripting. 
+Refer to Initialize Node.js application in the PWA in Appendix 1. 
+Git Bash is a command-line terminal application that provides a Unix-like environment on Windows systems. 
+ 
+Activity : homework – watch Bash Scripting Tutorial for Beginners (47:56) 
+ 
+  
+
+for more #BASH knowledge. 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+Describe how collaborative work practices between front-end and back-end developers improve the development of a web solution 
+ 
+Activity: Describe how collaborative work practices between front-end and back-end developers improve the development of a web solution 
+ 
+Collaboration between front-end and back-end developers improves the development of the web-solution through allowing for high levels of code consistnecy to be maintained amongst the project and so a more integrated project which runs better and has less unnecessary code. It allows for Quality control and Testing since front-end and back-end developers can work together and test how their produced code acts in relation to the other team's code. It would allow for Sha  
+ 
+Activity : Think-Pair-ShareLinks to an external site. a description of each of the collaborative work practices shown on the tiles above. 
+  
+
+
+
+
+Describe the benefits of developing secure software 
+Read pages 35 - 43 of the teacher support resource. 
+ 
+Answer the following question: 
+1) Describe the benefits of developing secure software. Include: 
+* Data protection 
+* minimizing data attacks and vulnerabilities 
+ 
+There are many benefits for developing secure software, these benefits range from prevention of data breaches which increases data protection, to maintaining customer trust and business continuity. 
+ 
+Developing secure software makes data breaches a rarer occurrence as the implemented security measures protect sensitive information and reduce the risk of their exposure, this minimisation of cyber threats means that there is a lower likelihood of vulnerabilities to appear and a low chance for them to be exploited by threat actors, attacks such as malware infections, and ransomware incidents won't be possible if the software is built on a safe and highly secure base. Maintainance of secure software increases customer trust in the company allowing for business to grow, and allows for constant business continuity which reduces the risk of downtime and financial loss while keeping the company reputable. Having strong software security early on allows for cost savings as the security system must only be maintained but saves possible socio-economic losses resulting from vulnerability exploitation and thus provides a competitive advantage by differentiating the company from others who care more about profit margins and less about the security of their software and their users further promoting the company's reputation. 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+Interpret and apply fundamental software development steps to develop secure code 
+1) Provide a 1 sentence definition of the following steps in software development: 
+ 
+* requirements definition 
+ 
+Defining what the software is required to be able to achieve and accomplish. 
+ 
+* determining specifications 
+ 
+Determining what the software solutions must be able to do and the tools it should have access to achieve its decided goal. 
+ 
+* Design 
+ 
+Drafting up a general idea of how the software solution should look and feel and how it should act. 
+ 
+* Development 
+ 
+Creating the modules of the software solution usually somewhat independent of each other for testing purposes. This is the phase where the software is developed and engineered in. 
+ 
+* Integration 
+ 
+Uniting and unifying all the developed modules of the software solution so that they can work together in unisen. 
+ 
+* testing and debugging 
+ 
+Testing the software solution to find any possible issues, errors or bugs and then debugging eachone of them by testing and attempting different possible solutions after identifying the erorr. 
+ 
+* Installation 
+ 
+Installing the software solution and releasing it for use. 
+ 
+* Maintenance 
+ 
+Maintaining the operation and operability of the software solution after it being released and put in use. 
+ 
+
+
+ 
+Describe how the capabilities and experience of end users influence the secure design features of software 
+ 
+1) Suggest ways in which the capabilities and experience of end users can influence the secure design features of the software project. 
+ 
+Include comment on the following: 
+* User-friendly authentication:  
+* Role-based access control:  
+* Training and awareness:  
+* User feedback and testing: 
+* Simplified security controls:  
+ 
+ 
+ 
+The capabilities and experience of end-users can influence the secure design features of the software project as it adapts to the users' needs. After User feedback and testing developers get a gauge of their users' abilities and technical capacities allowing them to tweak the User-interface and security threshold to better adapt to the users' feedback, usually software tailored to less tech savvy users has a higher security threshold sometimes even forcing personal questions and Multi-factor Authentication. In cases where users are less tech savvy it also happens that simplified security controls are implemented to allow for easier access and a better User-experience. User-friendly authentication is an important part of the user-experience, and should be implemented based on the capabilities and expected tech savviness of the end-users, Usually, all user authentication should be user friendly but in some cases, with some incredibly important data and software, it is crucial to sacrifice some user-experience and user-interface beauty to maximise security and ensure powerful access controls are in place. Role-based access controls are a basic yet important concept, Users should only be provided data that they will need for their operations and experience on the software. Users shouldn't be provided with more data than they need to minimise the effects of careless user behavior or hacking of lower access users hence protecting more important data's confidentiality and integrity. Training and awareness for users is crucial and allows more safety for the software and the data behind it, with appropriate training, a better user-experience can be provided while not compromising on data security. 
+
+
+Explore fundamental software design security concepts when developing programming code 
+ 
+ 
+Complete the following Table: 
+Security concept 
+	What it is 
+	Why is it important 
+	How to ensure it 
+	Confidentiality 
+	Ensures that sensitive information is encrypted and securely stored to prevent unauthorized access. 
+	It is important since it maintains user privacy by protecting user data from unauthorised access and so keeps a high level of trust 
+	The implementation of secure protocols (HTTPS) and Encrypting data  
+	Integrity 
+	 Keeping data safe from unauthorised tampering and alteration. 
+	Ensures that data remains accurate, consistent, and trustworthy throughout its lifecycle. 
+	Encryption protects data integrity during its transmission,  Implementation of checksums and digital signatures and even hash functions detects and prevents data tampering. 
+	Availability 
+	Ensures system services and resources are accessible to users who are authorized when needed 
+	This ensures business continuity, and maintains user satisfaction through prevention of downtime. 
+	·                Design with redundancy, load balancing, and disaster recovery mechanisms 
+·                Regularly monitor system performance and address potential issues proactively 
+	Authentication 
+	Verifies the identity of users before granting access to the system. 
+	Prevents unauthorised access and ensures that logging in with an account is only restricted to the acocunt's owner 
+	Implementation of authentication mechanisms and use of secure protocols for authentication. 
+	Authorisation 
+	 Enforces access control mechanisms to determine user permissions and restrict access based on roles 
+	Prevents unauthorised activities and protects sensitive data from being accessed by unauthorised users. 
+	By reviewing and updating user permission and implementing role-based access.  
+	Accountability 
+	Logging and Auditing mechanisms allow activity tracking and monitoring of security events 
+	Traceability and responsibility are created and so incidents and breaches are trackable 
+	·                Maintain logs of user actions, access attempts, and security events 
+·                Regularly review audit logs and investigate any suspicious activities 
+	 
+
+
+ 
+ 
+Apply security features incorporated into software including data protection, security, privacy and regulatory compliance 
+ 
+ 
+ 
+ 
+Security feature 
+	Application 
+	My Summary  
+	Data protection 
+	☐ Implement secure password hashing using strong algorithms like Bcrypt to protect user passwords stored in the database. 
+ 
+☐ Encrypt sensitive data at rest and in transit using encryption protocols (for example, TLS) to prevent unauthorised access to data. 
+ 
+☐ Ensure data minimisation by collecting only necessary user information and implementing data retention policies to limit data storage. 
+	 Data protection is the implementation of algorithms that change the nature of the data into something only readable by authorized personnel such as hashing and normalizing practices such as data encryption to prevent unauthorized access to data.  
+ 
+It also requires the minimization of maintained data by only keeping necessary data. 
+	Security measures 
+	☐ Implement input validation and sanitisation techniques to prevent common vulnerabilities like SQL injection and cross-site scripting (XSS). 
+ 
+☐ Use parameterised queries and prepared statements to protect against SQL injection attacks on the database. 
+ 
+☐ Employ secure coding practices to mitigate security risks, such as input validation, output encoding, and error handling. 
+	Security measures discussing the use of pre-prepared statements and parameters that only take certain data types to mitigate possible attacks by injecting SQL code,  Employing healthy coding hygiene 
+ and practices such as validating inputs and handling errors increases security. 
+ 
+It also is important to delete any unnecessary data which may lead to breaches through data sanitization. 
+	Privacy protection 
+	☐ Develop a privacy policy that clearly outlines how user data is collected, used and protected within the PWA. 
+ 
+☐ Obtain user consent for data processing activities and provide transparency on how user data is handled. 
+ 
+☐ Implement privacy-enhancing technologies (PETs) like anonymisation and pseudonymisation to protect user privacy. 
+	 Privacy protection revolves around the implementation of policies which outline data collection, and use to maintain data credibility and integrity. It requires user consent for data use and transparency with how data is used. 
+ 
+Implementing anonymization practices like using initials and customizable usernames protects user privacy, and using pseudonyms protects user data in databases. 
+	Regulatory compliance 
+	☐ Align security measures with regulatory requirements such as the Privacy Act 1988 in Australia to ensure compliance with data protection laws. 
+ 
+☐ Implement mechanisms to facilitate user data rights, such as the right to access, rectify and delete personal data. 
+ 
+☐ Conduct regular security audits and assessments to ensure compliance with industry standards and regulations. 
+	 Complying with security measures and regulations such as the privacy acts keeps credibility, and conducting security audits regularly is part of compliance with standards.  
+ 
+Implementing mechanisms that filter access to data and delete unnecessary personal data also provide user data rights and comply to regulations. 
+	User authentication and authorisation 
+	☐ Implement strong user authentication mechanisms, such as multi-factor authentication (2FA) with Google Authenticator, to enhance login security. 
+ 
+☐ Enforce access controls and authorization mechanisms to restrict user privileges based on roles and permissions. 
+ 
+☐ Monitor and log user access and activities to maintain accountability and traceability. 
+	 User authentication is verification of the user logging in is who they claim while  and is protected through Multi-factor authentication and monitoring and logging user access. 
+ 
+user authorization is providing them access to data and permissions based on their role and requirements, usually done with privilege based systems and requires account logs for tracing account activity. 
+	 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+Use and explain the contribution of cryptography and sandboxing to the ‘security by design’ approach in the development of software solutions 
+ 
+Using the Teacher resource booklet read from pages 72-75. 
+ 
+ 
+1) Define the term Cryptography 
+ 
+Cryptography is the digital encoding of information so that only certain recipients with decryption keys can access it and read it. Cryptography utilizes ciphers to encrypt and decrypt and implements algorithms 
+ 
+2) Define the Term Sandboxing 
+ 
+Sandboxing is the isolation of certain segments of code into an isolated environment for testing of certain code changes and the exploitation of possible vulnerabilities without affecting the main system. It is effective against newly appearing "zero-day" threats that might not be detected by regular security filters. 
+ 
+3) Investigate and try to use some common sandboxing tools. Use screen shots to document your findings. 
+ 
+ 
+ 4) Visit the following site: https://www.cyber.gov.au/resources-business-and-government/governance-and-user-education/secure-by-designLinks to an external site. 
+ 
+ 
+5) Describe the term Security by Design. 
+ 
+Security by design is a development approach, that makes security the main idea and core of the software rather than an addition, it uses security controls and integrates them into the software's design phase. It focuses on the creation of inherently secure systems that would need less additional security measures. 
+ 
+It is important since it establishes the software's security, moves away from more vulnerable design and reduces the need for patches later. 
+ 
+6) Explain the contribution of cryptography and sandboxing to the 'security by design' approach in the development of solutions. 
+ 
+The implementation of cryptography into a software's core, alongside sandboxing will allow for a high quality of security by design. Cryptographic algorithms being built into a software allows for safe transit of information back and forth, and increases confidentiality and integrity since even if the data is intercepted it is very difficult to decrypt and decipher keeping the data safe, and once it reaches its required target, it will be decipher for them. Sandboxing also allow for the testing of different algorithms and techniques for security, while avoiding any vulnerabilities from updating software since the updates can be done in a sandbox version and tested out extensively with different variations of security testing before being rolled out, this also increases reliability and resilience of software. 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+Use and explain the ‘privacy by design’ approach in the development of software solutions 
+1) Visit the Office of the Australian Information Commissioner and read about 'privacy by design' 
+ 
+ 
+Privacy by design | OAIC 
+ 
+ 
+2) Describe what is meant by 'privacy by design'. In your description include comment on the following: 
+* proactive not reactive approach 
+* embed privacy into design 
+* respect for user privacy 
+ 
+Privacy by design is a development philosophy that revolves around privacy as its number one goal, and providing a confidential user experience with high levels of data privacy and integrity. Usually software following this design tend to respect user privacy, they have transparent data privacy policy, only collect required and necessary data, and go through with data sanitisation to clear out unnecessary data. Since they embed privacy into design by having the software's design focus on maintaining privacy through good security practices and quality authorisation and authentication mechanisms. They adopt a proactive and not a reactive approach which means that they search, and test their software for any possible vulnerabilities that can lead to data leaks, breaches of regulations or can threaten user privacy, part of this is high software security to maintain data confidentiality and integrity. Sometimes, this can all come at the expense of other aspects of the software such as its user experience, or user interface. 
+ 
+ 
+3) Visit the Information and Privacy Commission. 
+ 
+Fact Sheet - Privacy by design. 
+ 
+ 
+4) Read and summarise the fact sheet above. 
+  
+The key principles 
+Privacy by design is built around seven key principles[1]: 
+  
+1. Proactive not reactive, preventative not remedial 
+  
+Take a proactive approach, anticipating risks and preventing privacy-invasive events before they occur. 
+  
+2. Privacy as a default setting 
+  
+Automatically protect personal information in IT systems and business practices as the default. 
+  
+3. Privacy embedded into design 
+  
+Embed privacy into the design of any systems, services, products and business practices. You should ensure that privacy becomes one of the core functions of any system or service. 
+  
+4. Full functionality: positive-sum not zero-sum 
+  
+Incorporate all legitimate interests and objectives in a ‘win-win’ manner, not through a ‘zero-sum’ (either/or) approach. This will avoid unnecessary trade-offs, such as privacy versus security, demonstrating that it is possible to have both. 
+  
+5. End-to-end security – full lifecycle protection 
+  
+Put in place strong security measures throughout the ‘lifecycle’ of the information involved. Process personal information securely and then destroy it securely when you no longer need it.  
+  
+6. Visibility and transparency – keep it open 
+  
+Ensure that whatever business practice or technology you use operates according to the stated promises and objectives and is independently verifiable. Make people fully aware of the personal information being collected, and for what purpose.     
+  
+7. Respect for user privacy – keep it user centric 
+  
+Keep the interest of individuals paramount in the design and implementation of any system or service. You can do this by offering strong privacy defaults and user-friendly options, as well as ensuring appropriate notice is given. 
+  
+Privacy by design has become an internationally accepted framework for protecting privacy.  It has also been incorporated into Article 25 of the European Union General Data Protection Regulation (GDPR), which has made “data protection by design and default” a mandatory requirement in the European Union and the United Kingdom. 
+
+
+ 
+Test and evaluate the security and resilience of software by determining vulnerabilities, hardening systems, handling breaches, maintaining business continuity and conducting disaster recovery 
+1) Watch the video on how Equifax was hacked. 
+How Equifax was Hacked. 
+ 
+
+
+2) Investigate the use of the following vulnerability scanning tools used to identify security weaknesses: 
+* OpenVAS. (Open Vulnerability Assessment Scanner): open-source vulnerability scanner for comprehensive vulnerability assessment in networks and web applications. 
+ 
+* Nexpose. Community Edition: free vulnerability scanner by Rapid7 for detecting vulnerabilities, misconfigurations, and exposures in systems and networks. 
+ 
+* Nmap. (Network Mapper): versatile network scanning tool for vulnerability scanning, network discovery, and security auditing to identify open ports, services, and potential vulnerabilities. 
+ 
+* OWASP ZAP. (Zed Attack Proxy): open-source web application security scanner by OWASP for detecting security vulnerabilities in web applications, including injection flaws, broken authentication, and insecure direct object references. 
+ 
+3) Visit the Australian Signals Directorate: 
+Guidelines for system hardening | Cyber.gov.auLinks to an external site. 
+ 
+ 
+4) Describe some of the best ways to handle breaches and maintain business continuity. 
+ 
+ 
+Best ways to handle breaches are:  
+
+1. Being proactive by not allowing breaches to occur, this is usually done through having automated protection, good firewalls, reliable anti-virus software and monitoring traffic to detect any unusual traffic if it arises 
+ 
+2. Using network scanning software often to identify possible open ports, and potential vulnerabilities. 
+ 
+3. In case of browser based apps (PWAs) it is necessary to use web app security scanners to detect possible vulnerabilities in the website such as injection flaws and broken authentication. 
+ 
+4. Searching for possible misconfigurations and exposures in systems and networks 
+ 
+ 
+If an attack has already taken place, the best way to handle it is to monitor possible changes in traffic to shut down any affected/accessed modules/servers/databases and then proceeding to deal with the breach itself according to playbook instructions. Usually this would affect continuity in the short-term but save money, and reputation and over the long-term the business is still safe and protected. 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+Design, develop and implement code using defensive data input handling practices, including input validation, sanitisation and error handling 
+1) Setup Visual Studio Code to be able to code in Python. If you have any problems with this setup you can use the Python IDLE. 
+Input Validation 
+2) Enter the following Code: 
+username = input("Enter your username: ") 
+print("Welcome, " + username) 
+  
+age = int(input("Enter your age: "))  # No validation 
+print("You are", age, "years old.") 
+ 
+ 
+3) Run the program, Screen shot the code and add it to your OneNote. 
+4) In OneNote answer the following questions. 
+* What happens if the user enters a non-integer for age? An error crashes the app 
+* Can an attacker manipulate input to crash the program? Yes, they can and they can also force errors in the code or lead to DDOS by overloading the app. 
+5) Can you modify the code to implement input validation using regular expressions and data type checks? 
+In your improved code research ad make use of the following: 
+* Type Checking: Ensure data types match expectations. 
+* Range Checking: Limit input values. 
+* Format Checking: Use regex for structured inputs (emails, phone numbers). 
+* Screen shot your improved code and paste this into your One Note document. 
+ 
+ 
+ 
+6) In One Note describe how your improved code will assist with input validation. Include comment on what happens when you input special characters in the username and how recursion may help in validation. 
+ 
+I made the code check for unwanted characters or invalid characters and used the errors to create an exception to redirect the user from a possible crash to redoing the function with a comment provided to them by the software. 
+ 
+Sanitisation 
+1) Enter the following code: 
+import sqlite3 
+  
+conn = sqlite3.connect(':memory:') 
+cursor = conn.cursor() 
+cursor.execute("CREATE TABLE users (username TEXT, password TEXT)") 
+  
+# Unsafe SQL query 
+username = input("Enter username: ") 
+query = f"SELECT * FROM users WHERE username = '{username}'" 
+cursor.execute(query)  # Vulnerable to SQL injection! 
+  
+# Secure way using parameterized queries 
+safe_query = "SELECT * FROM users WHERE username = ?" 
+cursor.execute(safe_query, (username,)) 
+2) Snip and paste your code into One Note online 
+3) In One Note discuss why is the first query dangerous? 
+ 
+The first query does not check the input provided by the user for the username tab and does not ensure that it exists in the database, this means that a threat-actor can put in whatever he wants and it ends up going to the query variable where it is instantly executed with the unsafe username inputted. 
+ 
+4) In One Note describe how parameterized querying prevent attacks? 
+ 
+Adding parameters to a query ensures that the code is untampered with since it limits the cases that the threat-actor can mess with inputs (like in the unsafe query's username), adding parameters also ensure that anything entered is valid and accepted and will not cause any issues in the long run or affect how the code runs (for example a username with symbols on SQL might cause issues) 
+ 
+5) Using the code in this example explain what is meant by an SQL injection. 
+ 
+An SQL injection is when a line of code is added by a threat-actor in an input function that is not well protected. The Threat-actor inserts the code in the input and since it is unprotected, that code can be executed through the program itself, the reason it is called an injection is that the threat-actor injects the SQL code into the input function provided. 
+ 
+Error Handling 
+1) Enter the following code into python: 
+try: 
+        num = int(input("Enter a number: ")) 
+        print(f"Square of {num} is {num ** 2}") 
+except ValueError: 
+        print("Error: Please enter a valid number.") 
+except Exception as e: 
+        print(f"Unexpected error: {e}") 
+2) Snip the code and add it to your One Note document. 
+3) What happens if a user enter text instead of a number? 
+ 
+A generic error message is provided, asking them to provide a valid number. 
+ 
+4) How can generic exception handling be risky? 
+ 
+ Generic error messages are not good for debugging, since they can be covering up for an untackled dangerous error by providing the same message as a generic error would, it also makes it harder for developers to pin-point what the error was and solving it. And also Vague error messages provide a bad UX 
+ 
+5) Edit this code to improve its use of error handling. Copy and paste your annotated code into your One Note document. 
+ 
+ 
+Extension 
+  
+Objective: 
+Students will apply all learned techniques to build a secure system. 
+Requirements: 
+* Collect user data (username, email, password). 
+* Validate input. 
+* Sanitize input before saving. 
+* Implement error handling. 
+Starter Code: 
+python 
+CopyEdit 
+import re 
+  
+def validate_username(username): 
+        return username.isalnum() 
+  
+def validate_email(email): 
+        return re.match(r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$", email) 
+  
+def get_username(): 
+        username = input("Enter your username: ") 
+        if validate_username(username): 
+            return username 
+        print("Invalid username. Use only letters and numbers.") 
+        return get_username() 
+  
+def get_email(): 
+        email = input("Enter your email: ") 
+        if validate_email(email): 
+            return email 
+        print("Invalid email format.") 
+        return get_email() 
+  
+username = get_username() 
+email = get_email() 
+print(f"User registered successfully: {username}, {email}") 
+ 
+ 
+Checklist 
+Correct input validation and sanitization 
+Effective error handling 
+Secure coding practices (e.g., parameterized queries if using a database) 
+ 
+ 
+My Response: 
+ 
+ 
+import re  
+ 
+
+   
+ 
+
+def validate_username(username):  
+ 
+
+    return username.isalnum()  
+ 
+
+def validate_pass(pw):  
+ 
+
+    return pw.isalnum()  
+ 
+
+   
+ 
+
+def validate_email(email):  
+ 
+
+    return re.match(r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$", email)  
+ 
+
+
+def get_pw():  
+ 
+
+    pw = input("Enter your password: ")  
+ 
+
+    if validate_pass(pw):  
+ 
+
+        return pw  
+ 
+
+    print("Invalid password. Use only letters and numbers.")  
+ 
+
+    return get_pw()  
+   
+ 
+
+def get_username():  
+ 
+
+    username = input("Enter your username: ")  
+ 
+
+    if validate_username(username):  
+ 
+
+        return username  
+ 
+
+    print("Invalid username. Use only letters and numbers.")  
+ 
+
+    return get_username()  
+ 
+
+   
+ 
+
+def get_email():  
+ 
+
+    email = input("Enter your email: ")  
+ 
+
+    if validate_email(email):  
+ 
+
+        return email  
+ 
+
+    print("Invalid email format.")  
+ 
+
+    return get_email()  
+ 
+
+   
+ 
+
+username = get_username()  
+ 
+
+email = get_email()  
+ 
+
+pw = get_pw() 
+ 
+
+print(f"User registered successfully: {username}, {email}")  
+ 
+
+
+def login(): 
+    while True: 
+         
+        lg = input("Would you like to login? Y/N: ") 
+        lg = lg.upper() 
+         
+         
+         
+        if lg == "Y": 
+            usertry = input("Please enter your username/email: ") 
+            pwtry = input("Enter your Password: ") 
+            if usertry == username or usertry == email and pwtry == pw: 
+                print(f"Welcome {username}, you have logged in!") 
+                exit() 
+            else: 
+                print("Username/Email or Password are incorrect!") 
+                login() 
+        if lg == "N": 
+            exit() 
+        else: 
+            print("Please respond with Y or N") 
+            login() 
+login() 
+ 
+ 
+
+
+ 
+ 
+ 
+Apply and evaluate strategies used by software developers to manage the security of programming code 
+Define the following terms used by software developers to manage the security of programming code: 
+ 
+* code review 
+ 
+a process where developers examine each other's code  to provide feedback and make sure it follows standards 
+ 
+* static application security testing (SAST) 
+ 
+Analysing a software's source code for potential vulnerabilities and make it less susceptible to attacks 
+ 
+* dynamic application security testing (DAST) 
+ 
+Testing an already running software by simulating attacks similar to threat actors, to find security vulnerabilities without accessing the software's source code 
+ 
+* vulnerability assessment 
+ 
+Identifying and examining software to identify vulnerabilities or exploitable flaws, and reporting them. Usually automated using third-party security tools. 
+ 
+* penetration testing 
+ 
+Simulating a real-world cyberattack on a system or software to identify vulnerabilities exploitable by threat-actors. Usually done in controlled environments and as part of proactive security to fix weaknesses before they are exploited by real threat-actors. 
+ 
+ 
+ 
+
+
+Design, develop and implement code considering efficient execution for the user 
+
+
+ 
+
+
+ 
+
+
+1) In Python implement the following code: 
+
+
+ 
+
+
+1 
+2 
+3 
+5 
+6 
+7 
+8 
+def 
+number_generator (n) : 
+for i in range(n): 
+yield i # Yields one value at a time instead of storing all in memory 
+# Efficient iteration without storing all numbers in memory 
+for num in 
+print(num) 
+ 
+
+
+2) Describe how this may improve efficiency in relation to the execution of the code for the end user. 
+
+
+ 
+
+
+The code may improve efficiency since it is executed one by one and uses resources to pull each line of code independently instead of having to get them all and executing them at the same time. 
+
+
+ 
+
+
+Since it spreads the task over small chunks it is more efficient and less resource intensive. 
+
+
+ 
+
+
+3) Define the term  session management and exception management as they relate to efficient execution for the user. 
+
+
+ 
+
+
+Session management is a security process that tracks and manages a user's interactions with a website or application. It can be used to improve efficiency by controlling the load present on the system at once, if people can be logged in even when they aren't active it would hog server and software resources. 
+
+
+ 
+
+
+Exception management refers to the practice of handling errors or unexpected events that occur during program execution by using mechanisms like "try-catch" blocks to catch these exceptions and provide appropriate responses, preventing the program from crashing. This increases efficiency since it provides the software a solution for all possible events and inputs that allows it to always provide expected outcomes. 
+
+
+ 
+
+
+4) In python research and implement code that could demonstrate session management and exception management. 
+
+
+ 
+
+
+This code is an example of exception management: 
+
+
+ 
+
+
+ 
+
+
+It is exception management since it allows the program to react to occurring errors and exceptions due to inputs without crashing, instead it reacts expectedly. 
+
+
+ 
+
+
+This code is an example of session management: 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+5) In the example below identify the type of management being used (memory, session or exception). Justify your response. 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+
+Design, develop and implement secure code to minimise vulnerabilities in user action controls 
+ 
+ 
+ 
+ 
+1) Read from pages 106 - 108 in the teacher support resource 
+2) In your own words provide a two sentence definition of the following: 
+* broken authentication and session management 
+ 
+Broken authentication is a security vulnerability in a system where attackers can easily impersonate legitimate users by compromising their passwords, session tokens, or other user account information, essentially allowing them to gain access to a system without proper authorization 
+ 
+Session management, is software control of a user's session/logged-in time on the software to ensure safety and decrease load. 
+ 
+* cross-site scripting (XSS) and cross-site request forgery (CSRF) 
+ 
+Cross-Site Scripting is a type of security vulnerability that can be found in some web applications. XSS attacks enable attackers to inject client-side scripts into web pages viewed by other users.  
+ 
+Cross-Site Request Forgery (XSRF) is a web security vulnerability that allows an attacker to trick a user into performing actions on a website they are logged into, without their knowledge or consent 
+ 
+* invalid forwarding and redirecting 
+ 
+Invalid forwarding is a vulnerability where a web application redirects users to a URL specified by untrusted input without proper validation, potentially leading to phishing or other malicious attack 
+ 
+Redirecting is to deliberately send a user or data request from one location (like a URL on a website) to a different location and rerouting them. 
+ 
+* race conditions 
+ 
+Race conditions occur when the outcome of a program depends on the exact timing or sequence of events happening concurrently, often involving multiple threads accessing shared data, leading to unpredictable and potentially erroneous results if not properly managed with synchronization mechanisms 
+ 
+ 
+3) Copy and paste the following code. Run the Code. 
+4) Can you explain the vulnerability in relation to session management? 
+ 
+Vulnerability: 
+ 
+The code does not provide any form of session management and is fairly simple regarding session controls. Users can stay logged on for as long as they wish which can be a security risk as they won't have any auto-log out and also slows down system processes. 
+ 
+Code: 
+from flask import Flask, request, session, redirect 
+app = Flask(__name__) 
+app.secret_key = 'simple_secret_key' 
+@app.route('/login', methods=['POST', 'GET']) 
+def login(): 
+        if request.method == 'POST': 
+           session['user'] = request.form['username']  # Simple session handling, no expiration 
+           return redirect('/dashboard') 
+        return '''<form method="post"> 
+                   Username: <input type="text" name="username"> 
+                   <input type="submit" value="Login"> 
+                 </form>''' 
+@app.route('/dashboard') 
+def dashboard(): 
+        if 'user' in session: 
+           return f"Welcome, {session['user']}!" 
+        return redirect('/login') 
+if __name__ == '__main__': 
+        app.run(debug=True) 
+ 
+ 
+5) Identify the difference in the 2 code fragments 
+ 
+The second one uses the escape command. .Escape replaces every unsafe character with an escape sequence that tells the browser it should interpret the character as text and not as a special character  
+ 
+6) Describe the change to the second code fragment that has been implemented to prevent cross site scripting (XSS). 
+ 
+Since the escape function will force all user inputs to be interpreted as string text and not as code, it avoids the threat of user's injecting code through input forms to be executed instead of the expected input which in this case is a username, 
+ 
+7) Examine the following code fragment 
+ 
+ 
+8) Identify the difference in the 2 code fragments. 
+ 
+The second code fragment,  validates the redirection of the url to ensure that it is safe by using .netloc. Netloc contains the network location - which includes the domain itself (and subdomain if present), the port number, along with an optional credentials in form of username:password. 
+ 
+9) Describe the change in the second code fragment to avoid invalid forwarding and redirecting. 
+ 
+The second code fragment,  validates the redirection of the url to ensure that it is safe by using .netloc. This makes it safe for users to be redirected and avoids the possibility of them being victims of invalid forwarding and redirection. 
+ 
+ 
+10) Examine the following code fragment. 
+ 
+ 
+11) Describe the difference  in the code fragments and how this may assist with race conditions and minimising vulnerabilities. 
+ 
+The difference between the fragments is that the second fragment actually ensures compatibility with multiple user inputs occurring at once to evade the occurrence of race conditions by adding a lock which controls counter modification. 
+ 
+ 
+ 
+
+ 
+
+
+ 
+ 
+Apply and describe the benefits of collaboration to develop safe and secure software 
+ 
+1) Describe the benefits of collaboration to develop safe and secure software. In your response include comment of the following: 
+* considering various points of view 
+* delegating tasks based on expertise 
+* quality of the solution 
+ 
+ 
+ 
+Collaboration on software solutions can benefits software security principles and security development. By Considering varying points of view the software development team can cover many different bases and tackle many possible vulnerabilities that might have been overlooked or forgotten without collaborative thinking, these points of view arise from different ways of thinking, specializations, and expertise. This allows the group to better delegate tasks based on expertise allowing for a higher quality execution and better vulnerability resolution, while also minimising the time required to address these exploitable vulnerabilities. Since skilled developers are assigned to what they do best, they can provide a higher quality of software solution over a shorter time. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+Investigate and explain the benefits to an enterprise of the implementation of safe and secure development practices 
+1) Explain the benefits to an enterprise of implementing safe and secure development practices. In your response include comment on the following: 
+* improved products or services 
+* influence on future software development 
+* improved work practices 
+* productivity 
+* business interactivity 
+ 
+ 
+ 
+Benefits of implementing safe and secure development practices are many. It allows for improved products and services by increasing the quality and security of the software solution. It would have a great influence on future development since it provides a safe and trusted fundamental base to continue developing the software solution. This also allow for improved work practices as trainings and security measures allow employees to avoid becoming exploitable vulnerabilities. This increased protection would boost productivity since business continuity would go on, which would positively reflect on business interactivity by continuing the business and keeping its servers stable and continuously active. 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Evaluate the social, ethical and legal issues and ramifications that affect people and enterprises resulting from the development and implementation of safe and secure software 
+ 
+1) Evaluate the social, ethical and legal issues and ramifications that affect people and enterprises resulting from the development and implementation of safe and secure software. In your response include comment on the following: 
+* employment 
+* data security 
+* privacy 
+* copyright 
+* intellectual property 
+* digital disruption 
+ 
+The social, ethical and legal implications and ramifications that affect people and enterprises as a result of software security are many and can be major. A major impact of software security would be data security, more secure software, hardware, and networks being implemented ensures that stored data is always safe and protected from external threats and tampering maintaining its integrity, availability and confidentiality for both the enterprise and its clientele/users as if data is breached it can lead to tampering and possible ransomware ruining the enterprise's reputation, costing them money, and popularity while having its users feel less secure and exploitable.  This protects the enterprise and its users from digital disruptions and maintains business continuity, availability and accessibility, which would result in a growing popularity in the enterprise and user trust. The enterprise's ability to maintain user privacy also plays a major part in its reputation and failure to maintain user or employee privacy would lead to legal implications and lawsuits and could also lead to bigger social engineering attacks and ransomware attacks, maintaining confidentiality is key for an enterprise to maintain a good image of itself. The use of Intellectual property for an enterprise can either be licensed or unlicensed and can even be original where the enterprise itself pioneered in a certain field or created something not previously thought of, in the case of pioneering, this would increase the enterprise's popularity and customer trust while using unlicensed Intellectual property may lead to lawsuits and possible loss of trust by customers, some intellectual property is public under copyright laws while others are heavily restricted and regulated. An enterprise's use of patents and licenses protects it from any copyright violations while also protecting its own right to maintaining its own creations and intellectual property, an enterprise utilising none licensed copyright restricted items can lead to big lawsuits and could lead to loss of deals and partners in the future due to their unethical business practices.  
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+ 
+ 
+ 
+Investigate how machine learning (ML) supports automation through the use of DevOps, robotic process automation (RPA) and business process automation (BPA) 
+Activity 1: students watchMachine Learning Explained in 100 Seconds (2:34)Links to an external site. 
+ 
+  
+
+andWhat is Machine Learning? (2:19)Links to an external site. 
+ 
+  
+
+before responding to the questions below. 
+1. Provide a definition of machine learning in the space provided. 
+Machine learning is the utilisation of  computer algorithims and data to allow a computer to process and understand a certain issue and through trial and error in attempting to solve it, find the solution to solving this error. 
+	2. 
+Provide an explanation of how machine learning works using the keywords: data, algorithms, training and testing in the space provided below. 
+Machine learning is the use of Computer algorithms to train computers to achieve certain goals and missions through trial and error by analysing data and then testing their knowledge and outcomes and comparing them to the expected final outcome to further tweak its process. 
+	3. Provide a description of the main types of machine learning in the space provided. 
+ There are three types of machine learning: 
+
+        1. Supervised Learning 
+ 
+ 
+ 
+   2. Unsupervised Learning 
+ 
+ 
+ 
+   3. Reinforcement Learning 
+ 
+ 
+ 
+ 
+	   4. 
+Provide a description of where machine learning is applied in the space provided. 
+ Machine learning is applied in many fields which would benefit from autonomous processes or computer assistance. Since machine learning can reach a point where it analyses situations and events and predictivel y reacts to the input it analysis it can be used to assist people with disabilities, in making self-driving cars which analyse camera input data to ensure safety and even to solve incredibly complex mathematical equations as it learns how to solve math like important researchers and professors, and much more. 
+	5. Identify some of the challenges in using machine learning in the space provided. 
+ Machine learning largely depends on analysing input data and reacting according to predictive nature  
+ 
+
+	 
+
+
+
+
+ 
+ 
+Explore models of training ML 
+1) Describe the different models of training ML. In your response include comment on: 
+ 
+      * supervised learning 
+ 
+ 
+ 
+An example of supervised learning is providing the ML algorithim labelled images to be categorised, memorised and have their patterns picked up such as labelled images of cats and dogs. 
+ 
+      * unsupervised learning 
+ 
+ 
+An example of Unsupervised learning is providing ML algorithims unlabelled images to be picked up and categorised using pattern recognition 
+ 
+      * semi-supervised learning 
+ 
+ 
+An example of semi-supervised is providing an ML algorithm some information and labelled images to base its ideas off and then having it continue doing this on its own  
+ 
+ 
+      * reinforcement learning 
+ 
+ 
+An example of this would be having an ML algorithim repeat a task or play a game and be rewarded or penalised based on its behaviours so that it can understand what should and shouldn't be done. 
+ 
+2) Investigate https://teachablemachine.withgoogle.com/Links to an external site. 
+ 
+
+
+ 
+Investigate common applications of key ML algorithms 
+1) Investigate and describe common applications of key ML algorithms. Include comment on: 
+ 
+      * data analysis and forecasting 
+ 
+Data analysis in machine learning uses input data to recognise trends in certain goods and items and forecast their changes with assumed and expected trends and patterns. This can be seen in businesses tracking the popularity of certain item and their sale over time. 
+ 
+      * virtual personal assistants 
+ 
+Virtual personal assistants can assist people by picking up trends in their behavior to act accordingly to the user's needs, or notifying them of important information. VPAs such as siri or google assistant can be used to set notifications, or ask for information and they pick up patterns of usage and even in their map applications can change routes depending on how often the user drives in certain areas or with certain road filters on. 
+ 
+      * image recognition 
+ 
+Machine learning Image recognition systems use cameras to pick up patterns in images or unique images and categorise them. A common application of image recognition would be within the medical field where Medical Imaging can pick up patterns and trends in patient images and scans and assist in diagnosing diseases through image analysis. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+Research models used by software engineers to design and analyse ML 
+1) Investigate the use of the following to design and analyse ML: 
+ 
+      * decision trees 
+ 
+Decision trees are predictive models represented as a tree-like flow diagram where nodes represent decisions or testing for conditions, and each branch is a possible outcome. Decision trees have a somewhat uniform structure and decision-making processes. They provide a clear, visual way to represent complex decision-making logic, making them easy to understand and interpret. In analysis, they offer insights into how a model arrives at a prediction, which can be crucial for debugging, explainability, and identifying influential features 
+ 
+      * neural networks (Artificial Neural Networks - ANN) 
+ 
+Neural networks (are inspired by the human brain) are a type of machine learning process that teaches computers to process data in a way that is inspired by the human brain. It consists of interconnected nodes called neurons which are organised in layers that process and transmit data. These networks are used in many tasks especially in deep learning where they are used to identify complex patterns in data. Data is transmitted between nodes using a feed forward. Neural networks rely on training data, and have a cost function which should be minimised. Convolutional neural networks are another types. 
+ 
+2) In your own words describe how decision trees and neural networks could be used to design and analyse ML. 
+ 
+can be used for both designing and analyzing ML models. They are valuable for structuring algorithms, visualizing decision-making processes, and understanding feature importance. The tree structure provides a clear path for understanding how a model arrives at a prediction, making it easier to explain the model's decisions to non-technical stakeholders. The visual nature of decision trees allows for easier debugging of model predictions, by tracing the decision path that led to a specific outcome. By examining the splits in the tree, one can determine the importance of different features in driving the model's predictions. Decision trees can be used to validate the results of more complex models, by comparing the predictions of the tree with the predictions of the complex model.  
+ 
+Neural networks can be used to build complex models for tasks like pattern recognition, image processing, and natural language processing. Through learning from data, neural networks improve their performance and grow to adapt for their designated application. they can analyze image data to identify objects, classify them, and even generate new images. They can also analyze text data to understand sentiment, translate languages, and generate human-like text. Neural networks are particularly effective at learning and adapting to new data, allowing them to continuously improve their performance. This adaptability is crucial for applications where real-time analysis and prediction are needed, such as in autonomous vehicles or fraud detection.  
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+Describe types of algorithms associated with ML 
+1) Describe types of algorithms associated with ML including: 
+ 
+      * linear regression 
+ 
+Linear regression algorithms are used to predict values in a continuous range. Linear regression is an algorithm modelling relationships between independent and dependent variables. Its simplicity, interpretability, and efficiency makes it a popular.  
+ 
+      * logistic regression 
+ 
+It is used to generate predictions for categorical data (colour, gender, job) rather than numerical continuous data (height, weight, speed) 
+ 
+Logistic regression is a technique for prediction generation for categorical data rather than continuous numerical data. Logistic regression is ideal for binary classification problems, determining the probability of data entries belonging to one of two categories. For example, classifying animals as 'cat' or 'not a cat' based on distinguishing features (whiskers, 4 legs, claws). Here, data is represented as categorical features which are kept as binary values (0 = False, 1 =  True). Logistic regression utilizes the logistic (sigmoid) function to map input features to a probability between 0 and 1. 
+ 
+ 
+ 
+      * K-nearest Neighbour (K-NN or KNN) 
+ 
+KNN algorithms are a simple method used in machine learning to classify data through looking at data points closest to a new point and deciding which group it belongs to. It uses labelled data (data with known answers) to make predictions, KNN is non-parametric (meaning it doesn't make any assumptions about the data distribution), when new data points require classification, KNN finds the closest points (neighbors) which is considered the 'K', then it searches through the groups of these neighbors and assigns the new data point to a group it most belongs to. KNN can be used to predict continuous values (regression), it is most commonly used for task classification, where the goal is to assign data points to a specific category based on their features. 
+ 
+ 
+2) Read through and summarise the information below form the course specification document. 
+ 
+ 
+  
+ 
+
+
+ 
+ 
+Significance and impact of ML and AI 
+Assess the impact of automation on the individual, society and the environment including: 
+      * safety of workers 
+ 
+Automation reduces the need for humans in hazardous environments, increasing workplace safety. However, it can also introduce new risks if systems fail or are poorly maintained. It removes people from dangerous tasks, such as heavy lifting or exposure to toxic substances, improving occupational health. but, can also result in complacency or overreliance on machines, leading to new safety concerns if systems malfunction. 
+ 
+      * people with disability 
+ 
+Automation can enhance accessibility through assistive technologies, allowing greater participation in the workforce and society. Advanced software and automated systems like screen readers or robotic assistants allow individuals with disabilities to work and participate by enhancing communication, mobility, and independence. This inclusion promotes equal access in education and the workforce. Automation may lead to reduced job opportunities and may decrease the job pool for people with disabilities. 
+ 
+      * the nature and skills required for employment 
+ 
+Routine jobs are declining, while demand for technical and problem-solving skills is increasing. This shift necessitates continual learning and adaptation. Jobs that involve repetition or manual labor are increasingly handled by machines. This shift creates demand for roles involving system design, data analysis, and technical maintenance, requiring a workforce skilled in STEM and digital literacy. This will also increase skill requirements for jobs and widen skill gaps leading to those with less educational access and less training being left behind 
+ 
+      * production efficiency, waste and the environment 
+ 
+Automated systems can optimise resource use, reduce waste, and lower emissions, but they can also lead to overproduction and electronic waste if not managed responsibly. Automation boosts production speed and accuracy, which can lower resource consumption and cut back on manufacturing errors. Still, it can contribute to environmental challenges if automation increases energy use or leads to fast-consumption cycles and tech waste. 
+ 
+      * the economy and distribution of wealth 
+ 
+While automation boosts economic output, the financial gains are often unevenly distributed, potentially widening income inequality unless policies ensure equitable access to opportunities. While businesses benefit from automation through lower costs and higher output, workers displaced by machines may struggle to adapt, deepening social inequalities. Strategic policies and upskilling initiatives are crucial to ensure fairer wealth distribution and economic stability. This does not mean that freelancers and independent developers of low and middle socio-economic status cannot partake in the use of AI and increase their income through the development, creation, and/or implementation of AI tools into their work and services. 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+Design develop and apply ML regression models using an OOP to predict numeric values 
+1) Define the following: 
+      * linear regression 
+ 
+a statistical method used to model the relationship between two variables by fitting a straight line to the data. It's commonly used to predict a dependent variable (like price or temperature) based on the value of an independent variable. The line of best fit is found using the least squares method. 
+ 
+      * polynomial regression 
+ 
+an extension of linear regression where the relationship between variables is modeled using a polynomial function (such as a parabola or cubic curve). It’s used when the data shows a curved trend that a straight line can’t accurately represent. 
+ 
+      * logistic regression 
+ 
+ 
+used for classification problems, not prediction of continuous values. It estimates the probability of a binary outcome (like yes/no, pass/fail, or win/lose) based on one or more input variables. The result is transformed using a logistic function to keep the output between 0 and 1. 
+ 
+2) Watch the following video on linear regression 
+Linear Regression in 2 minutes 
+ 
+  
+
+3) Attempt the following code fragment in Python: 
+ 
+4) Read and summarise the information on Polynormal regression on page 94 of your booklet. 
+ 
+It is an extension of simpler linear regression that allows modelling of relationships between non-linear variables. Hence, it utilises curved lines to fit the data. This makes it more capable of capturing complex patterns. 
+ 
+5) Describe in your own words two examples from page 95 and 96. 
+ 
+Economic indicators such as the relationship between interest rates and investment levels could use polynomial regression since it may not be linear in terms of returns and investments. 
+ 
+Health data and medical experimentation data such as medicinal dosage versus effectiveness or amount of a substance in the body over time. They are non-linear as varying dosages can drastically effect effectiveness and other factors making it better with polynomial regression 
+ 
+6) Read through and summarise the information on page 97 and 98. 
+ 
+ 
+ 
+7) Describe how you would design develop and apply ML regression models using an OOP to predict numeric values 
+ 
+
+
+ 
+ 
+ 
+Explore by implementation how patterns in human behavior influence ML and AI software development 
+ 
+1) Describe how patterns in human behavior influence ML and AI software development. In your response refer to: 
+ 
+      * psychological responses 
+      * patterns related to acute stress response 
+      * cultural protocols 
+      * belief systems 
+ 
+Patterns in human behavior influence Machine learning by changing the perception and understanding of the system and changing its knowledge base and what it learns regarding certain things. Human behavior influences Artificial intelligence through the implementation of certain rules, laws, and biases within its responses, or development and/or tailoring responses and perceptions. Psychological responses of humans and their psychological behaviors can influence Machine learning by giving outlier behaviors and interactions to the system's database, and to AI . Developers should consider how users will interact with AI systems, this can be done through understanding user biases and preferences to facilitate navigation and comprehension of the system. Machine Learning systems can be trained to recognise user interaction patters, behaviours and preferences, which allows for UX to be personalised. This can assist in content curation and reccomendation such as the case with netflix and youtube. Psycological factors such as transparency, explainability, and perceived reliability can influence user acceptance of ML and AI systems. AI can be used to predict human interactions and behaviours based on previously collected data. Human behaviours differ depending on their mental and emotional states, this means that developers must consider patterns related to acute stress response, for example, a system for high stress situations should aim to minimise its cognitive load on the user and keep itself clear, and concise while maintaining easy accessiblity to its information and the system itself. AI systems can provide real-time feedback and suggestions which enhances situational awareness of users and assists in making informed decisions rapidly. Understanding stress responses also allows developers to create adaptive systems that change their behavior based on the user's emotional state. Developers must also consider the cultural background and societal behaviours and implement cultural protocols, This is due to the effects cultural differences can have on user inputs and data collections, representation and interpretation. Datasets would also need to be representative of the cultural diversity of users and avoid biases and adapt to Cultural preferences. Developers should also attempt to align their system's beliefs and ethical values with the general belief system of its user base. Developers must also regonise that beliefs can introduce biase into training data and that these biases require to be understood and addressed to attain a fair and equitable algorithim that does not perpetuate inequality or stereotypes. It's also important to understand that users are more likely to trust AI systems which reflect their beliefs and values and consider how belief systems can influence user perceptions of transparency, accountability, and moral implications of system decisions. 
+ 
+ 
+
+
+
+
+
+
+
+
+A database stores data relating to a particular subject. For example, you can have a database storing all the information on staff in a company.  
+Databases store data as a collection of relations (tables). There are usually relationships between these relations in the database. 
+Below is an example of a shopping database. 
+ barcode 
+9056326666 
+9185006544 
+8715355558 
+9688447561 
+8808456733 
+products 
+item 
+pineapples 
+avocados 
+grapes 
+apples 
+strawberries 
+cost 
+3.99 
+2.75 
+9.99 
+6.99 
+2.75 
+pnang 
+each 
+each 
+per kg 
+per kg 
+each 
+id 
+1 
+2 
+3 
+4 
+5 
+firstname 
+Stephen 
+Alison 
+Mahnaz 
+William 
+Wilson 
+customers 
+lastname 
+Tierney 
+Wong 
+Montazerolghaem 
+Zhi 
+Chen 
+postcode 
+5178 
+5483 
+1342 
+5227 
+8016 
+id 
+1 
+2 
+1 
+1 
+4 
+transactions 
+barcode 
+9056326666 
+8715355558 
+8808456733 
+8715355558 
+9688447561 
+quantity 
+2 
+1.2 
+3 
+0.78 
+0.43  
+
+In this database, we have 3 tables.  
+      * The customers table tells us about the customers that come to the shop 
+      * The products table tells us about the items that the shop is selling 
+      * The transactions table tells us which customers have bought which items, and how much they have purchased. 
+Querying a Database 
+To extract information from a database we construct a query. 
+A query is an instruction that tells the database what to do. For example, we can get a database to display a table, or we can tell the database to add new data. 
+To give our instructions to the database in a way it can understand, we need to formulate our query with a particular structure. For this, we will be using SQL (Structured Query Language). Like Python, SQL has its own rules for how you should write commands. 
+Here is an example of a query that displays the customers table.  
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+SELECT * 
+FROM customers; 
+ 
+
+ 
+
+
+
+
+The SELECT statement 
+When you want to see information stored inside the database, you will need to use the SELECT command. 
+The * allows you to select all of the columns.  
+SELECT *  
+You will also need to tell the database which table you're interested in. To do this, you will use the FROM keyword. 
+SELECT * FROM table; 
+To end a query, you will need to use a semicolon ;. This will become important when we combine multiple queries! 
+Let's look at an example. 
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+SELECT * 
+FROM customers; 
+Image upload failed. Please try again
+This query selects all the columns from the customers table and shows us the results. 
+SELECT columns 
+We have already seen that we can view all the columns in our database using SELECT *. 
+But what if we don't need to see all of the columns? Or what if our database had so many columns that it isn't practical to see all the columns at once? 
+Well the SELECT command allows us to specify which columns we are interested in.  
+SELECT attribute_1, attribute_2, ... FROM table; 
+Here is an example which selects only the firstname and lastname columns from our customers table. 
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+SELECT firstname, lastname 
+FROM customers; 
+ 
+
+ 
+
+
+
+
+WHERE clause 
+Sometimes we only want to select rows from our dataset which meet a particular criteria. For example, we might only want to look at customers with a postcodes greater than 8000, or were an item costs more than $2.00. 
+To select rows based on a particular criteria, we use the WHERE clause. The WHERE clause comes after the SELECT and FROM statements. 
+The structure of the WHERE clause is as follows: 
+WHERE condition; 
+In SQL we can compare values using the following operators: 
+      * < less than 
+      * > greater than 
+      * <= less than or equal to 
+      * >= greater than or equal to 
+      * = check values are equal 
+      * != check values are not equal 
+Note that we use a single = sign for comparisons in SQL. 
+Here is an example. 
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+3 
+SELECT * 
+FROM customers 
+WHERE lastname = 'Montazerolghaem'; 
+Image upload failed. Please try again
+Note! You might want to click the square button on the right of the code toolbar to make the example full screen before you run it. 
+We can also construct WHERE statements using multiple conditions using the keywords AND and OR separating each criterion. 
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+3 
+SELECT * 
+FROM customers 
+WHERE id < 10 AND postcode > 8000; 
+ 
+
+ 
+
+
+
+
+INSERT INTO a table 
+To update a database, you may need to add new records to a table. To add a record, you need to specify the attribute names and the corresponding record values. 
+We use the following structure: 
+INSERT INTO table (attribute_1, attibute_2, attribute_3, ...) VALUES (value_1, value_2, value_3, ...); 
+Below is an example of inserting a new customer into the database. We then create a second query to check the new values have been inserted. We use a ; at the end of each query. 
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+3 
+4 
+5 
+INSERT INTO customers (id, firstname, lastname, postcode) 
+VALUES (24, 'David', 'Sweeney', 2367); 
+SELECT * 
+FROM customers; 
+ 
+You are also able to insert more than one person at a time by separating the records by a comma. 
+INSERT INTO table (attribute_1, attribute_2, attribute_3, ...) VALUES (values_for_record_1), (values_for_record_2), ... ; 
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+INSERT INTO customers (id, firstname, lastname, postcode) 
+VALUES 
+    (25, 'Jayant', 'Khatkar', 2202), 
+    (26, 'Jack', 'Sice', 4200); 
+SELECT * 
+FROM customers; 
+ 
+
+ 
+
+
+
+
+Sometimes we want to modify a record that already exists in our database.  
+For example, one of our customers might move to a new house. Then we would have to update their postcode.  
+To perform an UPDATE we need to SET new values and we also need to specify a criteria to identify records WHERE we will make our changes. 
+UPDATE table SET attribute_1 = value_1, attribute_2 = value_2, ... WHERE condition;  
+Example: 
+We can update our customers table to change Wilson's postcode. We also show the updated record. 
+ id 
+1 
+2 
+3 
+4 
+5 
+firstname 
+Stephen 
+Alison 
+Mahnaz 
+William 
+Wilson 
+customers 
+lastname 
+Tierney 
+Wong 
+Montazerolghaem 
+Zhi 
+Chen 
+postcode 
+5178 
+5483 
+1342 
+5227 
+8016  
+
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+UPDATE customers 
+SET postcode = 6289 
+WHERE id = 5; 
+SELECT * 
+FROM customers 
+WHERE id = 5; 
+Image upload failed. Please try again
+Primary Key 
+You will have noticed that the condition we chose was id = 5, but equally, we could have used firstname = 'Wilson'. 
+The difference is that id is the primary key (it's marked in the diagram by the underline). This means that no two records can have the same id. It is possible for multiple records to have 'Wilson' as the firstname, in which case we would be updating the postcodes of every record where firstname = 'Wilson'. 
+ 
+
+
+
+
+There are times when you might need to DELETE a record. To do this, you need to specify which table you are deleting FROM and you will also need to specify a criteria to identify WHERE to find the records to delete. 
+DELETE FROM table WHERE condition; 
+For example, if one of our customers has decided to shop at a different place, we might want to delete them from our customers table.  
+Here is an example where we DELETE Alison from our customers table.  
+We also show the updated table. 
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+3 
+4 
+5 
+DELETE FROM customers 
+WHERE id = 2; -- id = 2 is Alison Wong 
+SELECT * 
+FROM customers; 
+ 
+
+ 
+
+
+
+
+ 
+A relationship is a connection between relations, i.e. tables. For example, we can add a transactions table to relate our customers and products table. The first record of our transactions table tells us that Stephen has purchased 2 pineapples. 
+ barcode 
+9056326666 
+9185006544 
+8715355558 
+9688447561 
+8808456733 
+products 
+item 
+pineapples 
+avocados 
+grapes 
+apples 
+strawberries 
+cost 
+3.99 
+2.75 
+9.99 
+6.99 
+2.75 
+pnang 
+each 
+each 
+per kg 
+per kg 
+each 
+id 
+1 
+2 
+3 
+4 
+5 
+firstname 
+Stephen 
+Alison 
+Mahnaz 
+William 
+Wilson 
+customers 
+lastname 
+Tierney 
+Wong 
+Montazerolghaem 
+Zhi 
+Chen 
+postcode 
+5178 
+5483 
+1342 
+5227 
+8016 
+id 
+1 
+2 
+1 
+1 
+4 
+transactions 
+barcode 
+9056326666 
+8715355558 
+8808456733 
+8715355558 
+9688447561 
+quantity 
+2 
+1.2 
+3 
+0.78 
+0.43  
+
+Sometimes it can be useful to combine data from multiple tables. To merge two tables together, we use a JOIN. We will also need to specify which column in the two tables need to match and for that we use the ON keyword. 
+SELECT table.attribute_1, table.attribute_2, ... FROM table_1 JOIN table_2 ON table_1.attribute = table_2.attribute; 
+Example: 
+In this example we have a table called students and a table called marks. 
+ student id 
+0000 
+2222 
+3333 
+4444 
+5555 
+6666 
+7777 
+8888 
+9999 
+students 
+firstname 
+Lyndon 
+Eileen 
+Ardi 
+Nick 
+James 
+Maryam 
+Joshua 
+Andy 
+Andre 
+Lucinda 
+lastname 
+Zhang 
+Wang 
+Mirzaei 
+Nguyen 
+Leung 
+Montazerolghaem 
+Pritchard 
+Wang 
+Nunes 
+Lilley 
+id 
+0000 
+2222 
+5555 
+6666 
+7777 
+9999 
+1010 
+firstname 
+Lyndon 
+Eileen 
+Ardi 
+Maryam 
+Joshua 
+Ziteng 
+Luci 
+Daniel 
+ark 
+lastname 
+Zhang 
+Wang 
+Mirzaei 
+Montazerolghaem 
+Pritchard 
+Wang 
+Lilley 
+Hey 
+exam mark 
+76 
+77 
+68 
+87 
+82 
+93 
+89 
+62  
+
+We can merge these tables by matching the student_id and the id attributes. 
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+3 
+4 
+SELECT * 
+FROM students 
+JOIN marks 
+ON students.student_id = marks.id; 
+Image upload failed. Please try again
+If you run the code above you'll find that the JOIN will return a new table that looks like this: 
+We take all the columns from both tables, and we keep only the people that appear in both tables. For this reason, this operation is also called an INNER JOIN.  
+Image upload failed. Please try again
+When performing the JOIN we had to match ON the id columns between the two tables, but we also had to specify the table first so we know which table the column, i.e. the attribute, came from.  
+In general, to identify a column we use the following format: 
+table.attribute 
+Since it can be exhausting to type out the table name again and again, we can give the tables an alias (think of this as a nickname) by specifying the alias after the table name. 
+table alias 
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+3 
+4 
+SELECT * 
+FROM students s 
+JOIN marks m 
+ON s.student_id = m.id; 
+Image upload failed. Please try again
+Here, we use the alias s for the students table and m for the marks table. 
+You will have noticed that some of the columns/attributes are repeated. This is because we used SELECT * so we see all of the columns across both tables. 
+We can reduce the number of columns with our SELECT statement, but don't forget we need to label our columns by table.attribute! 
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+3 
+4 
+SELECT students.student_id, students.firstname, students.lastname, marks.exam_mark 
+FROM students 
+JOIN marks 
+ON students.student_id = marks.id; 
+Image upload failed. Please try again
+In this case, we take all the attributes from the students table but only the exam_mark attribute from the marks table. 
+To make this nicer, we can use aliases instead!  
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+3 
+4 
+SELECT s.student_id, s.firstname, s.lastname, m.exam_mark 
+FROM students s 
+JOIN marks m 
+ON s.student_id = m.id; 
+ 
+
+ 
+
+
+
+
+ORDER BY column 
+It is often useful to sort a table of data by a given column. For example, you might want to sort a dataset by date to put events into a chronological order.  
+To sort rows in SQL we use the ORDER BY keyword. This comes after your SELECT, FROM and WHERE statements. By default, we sort in ascending order, but if you want to be explicit you can use the keyword ASC. To sort in descending order we can use the keyword DESC. 
+The structure of an ORDER BY statement is: 
+ORDER BY attribute ASC|DESC; 
+ 
+
+
+
+
+If you have a large dataset, it is impractical to display all the rows in the dataset. To do this in SQL, we use the LIMIT keyword to specify how many rows we would like to display. 
+The LIMIT clause comes after the SELECT, FROM, WHERE and ORDER BY clauses.  
+LIMIT number_of_rows; 
+ 
+
+
+
+
+You may have noticed that SQL is not as fussy as other languages such as Python.  
+SQL does not care about: 
+      * Letter capitalisations 
+      * New lines 
+      * Indentation 
+For example, these two queries are equivalent. 
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+3 
+4 
+5 
+SELECT item, cost 
+FROM products 
+WHERE pricing = 'each' AND cost < 3.00 
+ORDER BY item 
+LIMIT 2; 
+Image upload failed. Please try again
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+select iTEm, cOst from ProDuctS where pricing = 'each' and cost < 3.00 order by itEm limit 2; 
+Image upload failed. Please try again
+Which one is easier to read? 
+General SQL convention is to start clauses on new lines, and to capitalise keywords. 
+A good programming practice is to make sure that your code is readable so that it is easier for you and for other people to understand. It also makes it easier to identify mistakes (bugs) in your code! 
+Comments 
+When you are writing code, it's always good to have comments! Comments are there to improve the readability of your code and are ignored by the computer.  
+To add a comment in SQL we use --. 
+-- This is a comment 
+You can use the -- to add comments to the ends of lines in your SQL queries. 
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+3 
+SELECT firstname 
+FROM customers 
+ORDER BY firstname; -- default ascending order 
+Sometimes you might want to add longer comments. In SQL we use /* to begin the comment and */ to end the comment. 
+For example, we can write a description of our customers table in SQL. 
+MYSQL 
+1 
+2 
+3 
+4 
+5 
+6 
+/* The customers table stores the following attributes: 
+        - id 
+        - first_name 
+        - last_name 
+        - postcode 
+*/ 
+ 
+
+ 
+
+
+
+
+GROUP BY attribute 
+It can often be useful to group data by a particular attribute. For example, consider the following table. 
+ class 
+0000 
+2222 
+5555 
+6666 
+7777 
+9999 
+1010 
+firstname 
+Lyndon 
+Eileen 
+Ardi 
+Maryam 
+Joshua 
+Ziteng 
+Luci 
+Daniel 
+marks 
+lastname 
+Zhang 
+Wang 
+Mirzaei 
+Montazerolghaem 
+Pritchard 
+Wang 
+Lilley 
+Hey 
+exam mark 
+76 
+77 
+68 
+87 
+82 
+93 
+89 
+62  
+
+Let's suppose we want to see how students performed on the exam BY class. In this case, there are two classes, class A and class B. What we can do, is GROUP BY class. The structure of a GROUP BY statement: 
+GROUP BY attribute; 
+The GROUP BY clause goes after a WHERE clause. 
+We then need to provide a function that summarises information about each group. The functions we can use are: 
+      * COUNT() 
+      * MAX() 
+      * MIN() 
+      * SUM() 
+      * AVG() 
+This whole process can be summarised by the figure below. 
+These functions go in the SELECT statement. Here is an example. 
+Run 
+SchemaQuery 
+POSTGRES 
+1 
+2 
+3 
+SELECT AVG(exam_mark), class 
+FROM marks 
+GROUP BY class 
+ 
+
+ 
+
+
+
+
+
+
+Begin Let/Set For If Else Or And Then End 
+CaseWhere
+Case
+Where
+Repeat
+While
+Until
+Endif
+Endwhile
+Add
+In
+return
+call

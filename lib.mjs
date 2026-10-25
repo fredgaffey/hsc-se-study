@@ -3,7 +3,13 @@ export async function gradeoPage() {
   const b = await connect();
   const ctx = b.contexts()[0];
   let pg = ctx.pages().find(p => p.url().startsWith('https://platform.gradeo.com.au/'));
-  if (!pg) { pg = await ctx.newPage(); await pg.goto('https://platform.gradeo.com.au/', { waitUntil: 'networkidle' }); }
+  if (!pg) {
+    pg = await ctx.newPage();
+    await pg.goto('https://platform.gradeo.com.au/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+    // Gradeo never goes network-idle (analytics); wait for the login token instead.
+    await pg.waitForFunction(() => Object.keys(localStorage).some(k => k.startsWith('@@auth0spajs@@') && k.includes('api.portal.gradeo.com.au')), null, { timeout: 120000 })
+      .catch(() => console.log('No Gradeo login found in that tab yet: log in to platform.gradeo.com.au in Chrome.'));
+  }
   return { b, ctx, pg };
 }
 export const api = (pg, path) => pg.evaluate(async p => {

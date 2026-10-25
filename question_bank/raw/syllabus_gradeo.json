@@ -1,0 +1,664 @@
+{
+ "id": "d1a54432-597e-4e3c-a5c6-ad7a134726e4",
+ "title": "Software Engineering",
+ "description": "Software Engineering Stage 6 Syllabus 2022",
+ "gradeFrom": 12,
+ "gradeTo": 12,
+ "coverageLabel": null,
+ "curriculumCode": null,
+ "curriculumVersion": null,
+ "gradingScaleName": null,
+ "publishedYear": null,
+ "publishedDate": null,
+ "jurisdiction": {
+  "id": "58c4dd02-8091-4797-aeae-d4c81cea5058",
+  "name": "NSW"
+ },
+ "publisher": {
+  "id": "8ceb90e5-1510-49ef-8906-c533afc25276",
+  "name": "NESA",
+  "isPremium": true,
+  "isAIGenerated": false,
+  "isChangeable": true,
+  "jurisdiction": null,
+  "logoFile": null
+ },
+ "subject": {
+  "id": "f2ed0842-93f5-4bf1-b861-027571647203",
+  "name": "Software Engineering"
+ },
+ "bands": [
+  {
+   "id": "0dd4a947-034d-4bb6-846d-b00817aee3dc",
+   "description": "Demonstrates extensive knowledge and understanding of the application of data, hardware, and software systems in developing software solutions to real-world problems. Analyses, synthesises, and effectively uses complex data and information. Demonstrates extensive knowledge and understanding of the legal, social, and ethical implications of software engineering solutions and their impact on individuals, society, and the environment. Demonstrates innovative and extensive technical skills in the practice of software programming. Demonstrates extensive skills to initiate, plan, and conduct a highly organised software engineering project. Communicates in a sophisticated, coherent, succinct, and logical manner using extensive terminology appropriately.",
+   "label": "Band 6",
+   "displayIndex": 0
+  },
+  {
+   "id": "d48b51b8-7f70-4d46-91cf-95b7bf902f0c",
+   "description": "Demonstrates thorough knowledge and understanding of the application of data, hardware, and software systems in developing software solutions to real-world problems. Analyses and effectively uses complex data and information. Demonstrates thorough knowledge and understanding of the legal, social, and ethical implications of software engineering solutions and their impact on individuals, society, and the environment. Demonstrates thorough technical skills in the practice of software programming. Demonstrates high-level skills to initiate, plan, and conduct a highly organised software engineering project. Communicates in a coherent, succinct, and logical manner using appropriate terminology.",
+   "label": "Band 5",
+   "displayIndex": 1
+  },
+  {
+   "id": "266e22f1-3f8a-4fbd-95bd-e7a6221d1c65",
+   "description": "Demonstrates sound knowledge and understanding of the application of data, hardware, and software systems in developing software solutions to real-world problems. Examines and effectively uses data and information. Demonstrates sound knowledge and understanding of the legal, social, and ethical implications of software engineering solutions and their impact on individuals, society, and the environment. Demonstrates an ability to implement sound technical skills in software programming. Demonstrates sound skills to initiate, plan, and conduct a software engineering project. Communicates in a clear and organised manner using appropriate terminology.",
+   "label": "Band 4",
+   "displayIndex": 2
+  },
+  {
+   "id": "b87d71ee-5ae9-43f7-a1f5-feec3f1db295",
+   "description": "Demonstrates basic knowledge and understanding of the application of data, hardware, and software systems in developing software solutions to real-world problems. Uses data and information. Demonstrates basic knowledge and understanding of the legal, social, and ethical implications of software engineering solutions and their impact on individuals, society, and the environment. Displays basic accuracy and skills in software programming. Demonstrates some skills to initiate, plan, and conduct a software engineering project. Communicates in a descriptive manner using basic terminology.",
+   "label": "Band 3",
+   "displayIndex": 3
+  },
+  {
+   "id": "3c88ff15-6f03-42c3-aaf8-5a045c3b1241",
+   "description": "Demonstrates elementary knowledge and understanding of the application of data, hardware, and software systems in developing software solutions to real-world problems. Identifies and organises data and information. Demonstrates limited knowledge and understanding of the legal, social, and ethical implications of software engineering solutions and their impact on individuals, society, and the environment. Displays limited skill in software programming. Demonstrates elementary skills to plan and/or develop a software engineering project. Communicates simple ideas using limited terminology.",
+   "label": "Band 2",
+   "displayIndex": 4
+  },
+  {
+   "id": "ff5782ee-ae79-421d-b07d-c55c2accd060",
+   "description": "No description.",
+   "label": "Band 1",
+   "displayIndex": 5
+  }
+ ],
+ "outcomes": [
+  {
+   "id": "10d250f1-b45a-44c3-96b5-942f2657212e",
+   "title": "SE-12-01",
+   "description": "Justifies methods used to plan, develop and engineer software solutions."
+  },
+  {
+   "id": "3ba282bc-0f27-450a-a19d-8ced1f2196d9",
+   "title": "SE-12-02",
+   "description": "Applies structural elements to develop programming code."
+  },
+  {
+   "id": "dcef6a21-eee4-49d1-aa3d-429cdf127cdc",
+   "title": "SE-12-03",
+   "description": "Analyses how current hardware, software, and emerging technologies influence the development of software engineering solutions."
+  },
+  {
+   "id": "d37b0608-71dc-40b5-9bdd-791cd53903ee",
+   "title": "SE-12-04",
+   "description": "Evaluates practices to safely and securely collect, use and store data."
+  },
+  {
+   "id": "880073ce-5d0d-42bf-8c8c-3fc3d64646df",
+   "title": "SE-12-05",
+   "description": "Explains the social, ethical, and legal implications of software engineering on the individual, society, and the environment."
+  },
+  {
+   "id": "62083f53-20d4-4148-9a06-ef580b3b6dd0",
+   "title": "SE-12-06",
+   "description": "Justifies the selection and use of tools and resources to design, develop, manage, and evaluate software."
+  },
+  {
+   "id": "858fde69-da06-440b-8093-01c934aebcfa",
+   "title": "SE-12-07",
+   "description": "Designs, develops, and implements safe and secure programming solutions."
+  },
+  {
+   "id": "24905e55-24a5-4f09-955e-24f0475394ee",
+   "title": "SE-12-08",
+   "description": "Tests and evaluates language structures to refine code."
+  },
+  {
+   "id": "72cda872-f70a-431a-a485-a9d3f0712ea1",
+   "title": "SE-12-09",
+   "description": "Applies methods to manage and document the development of a software project."
+  }
+ ],
+ "topics": [
+  {
+   "id": "a45d4626-6ce7-44bc-b6a2-d0fcaeea9412",
+   "title": "Secure Software Architecture",
+   "displayIndex": 0,
+   "selectionType": null,
+   "tags": null,
+   "subtopics": [
+    {
+     "id": "41765a96-79ec-4935-9f86-5bdc7260709b",
+     "title": "Designing Software",
+     "items": [
+      {
+       "id": "5e6fa39d-dbf6-4eb8-94ee-e19c9065e8ac",
+       "text": "Describe the benefits of developing secure software, including data protection and minimising cyber attacks and vulnerabilities.",
+       "displayIndex": 0,
+       "parentId": null
+      },
+      {
+       "id": "b562d8b9-1106-40cf-9fcb-0c68d47b52bd",
+       "text": "Interpret and apply fundamental software development steps to develop secure code, including requirements definition, determining specifications, design, development, integration, testing, debugging, installation, and maintenance.",
+       "displayIndex": 1,
+       "parentId": null
+      },
+      {
+       "id": "9f818cbf-1ccf-4575-8acf-26a44afe6984",
+       "text": "Describe how the capabilities and experience of end users influence the secure design features of software.",
+       "displayIndex": 2,
+       "parentId": null
+      }
+     ]
+    },
+    {
+     "id": "07c5c11b-d8f6-401d-ac93-0e1b7ca1a1d1",
+     "title": "Developing Secure Code",
+     "items": [
+      {
+       "id": "05cdf40e-3a8e-433c-a037-031e9e6ff7d6",
+       "text": "Explore fundamental software design security concepts such as confidentiality, integrity, availability, authentication, authorisation, and accountability.",
+       "displayIndex": 0,
+       "parentId": null
+      },
+      {
+       "id": "12d801c9-e1d9-479f-af60-ea05497a29cc",
+       "text": "Apply security features incorporated into software, including data protection, security, privacy, and regulatory compliance.",
+       "displayIndex": 1,
+       "parentId": null
+      },
+      {
+       "id": "737b0a0e-2ec2-4ea4-b8dc-4d77fe070539",
+       "text": "Use and explain the contribution of cryptography and sandboxing to the 'security by design' approach in the development of software solutions.",
+       "displayIndex": 2,
+       "parentId": null
+      },
+      {
+       "id": "8396603f-df7e-4c16-a182-9e769e71d3f1",
+       "text": "Use and explain the 'privacy by design' approach in software development, embedding privacy into design, and respecting user privacy.",
+       "displayIndex": 3,
+       "parentId": null
+      },
+      {
+       "id": "33c34ad8-a0fa-43a7-ac15-6ee23f28cb3f",
+       "text": "Test and evaluate software security and resilience by determining vulnerabilities, hardening systems, handling breaches, maintaining business continuity, and conducting disaster recovery.",
+       "displayIndex": 4,
+       "parentId": null
+      },
+      {
+       "id": "238635f0-916a-4e61-b47f-d07ba71f438a",
+       "text": "Apply and evaluate strategies used by software developers to manage the security of programming code, including code review, static application security testing (SAST), dynamic application security testing (DAST), vulnerability assessment, and penetration testing.",
+       "displayIndex": 5,
+       "parentId": null
+      },
+      {
+       "id": "1d656214-cb39-4959-8632-2a94338572d8",
+       "text": "Design, develop, and implement code using defensive data input handling practices, including input validation, sanitisation, and error handling.",
+       "displayIndex": 6,
+       "parentId": null
+      },
+      {
+       "id": "5c1f0ff4-225a-4190-81c1-fa8b555a07b5",
+       "text": "Design, develop, and implement a safe application programming interface (API) to minimise software vulnerabilities.",
+       "displayIndex": 7,
+       "parentId": null
+      },
+      {
+       "id": "f5c2d965-abaf-49f3-987c-2913bdbb33dd",
+       "text": "Design, develop, and implement code considering efficient execution for the user, including memory management, session management, and exception management.",
+       "displayIndex": 8,
+       "parentId": null
+      },
+      {
+       "id": "83ad930c-f5a8-42b4-946d-005ea544c17c",
+       "text": "Design, develop, and implement secure code to minimise vulnerabilities in user action controls, including broken authentication, cross-site scripting (XSS), cross-site request forgery (CSRF), invalid forwarding and redirecting, and race conditions.",
+       "displayIndex": 9,
+       "parentId": null
+      },
+      {
+       "id": "6e9ea2cd-1ff7-4382-a7ae-a10f11d59494",
+       "text": "Design, develop, and implement secure code to protect user file and hardware vulnerabilities from file attacks and side-channel attacks.",
+       "displayIndex": 10,
+       "parentId": null
+      }
+     ]
+    },
+    {
+     "id": "f688e948-0754-41f7-8f81-79e0c3a0e473",
+     "title": "Impact of Safe and Secure Software Development",
+     "items": [
+      {
+       "id": "aed1fb0d-105c-463b-8a9b-abd62f8ad436",
+       "text": "Apply and describe the benefits of collaboration to develop safe and secure software, considering various points of view, delegating tasks based on expertise, and improving the quality of the solution.",
+       "displayIndex": 0,
+       "parentId": null
+      },
+      {
+       "id": "78d678df-fd9e-4164-8390-4fb7243f81a8",
+       "text": "Investigate and explain the benefits to an enterprise of the implementation of safe and secure development practices, including improved products or services, influence on future software development, improved work practices, productivity, and business interactivity.",
+       "displayIndex": 1,
+       "parentId": null
+      },
+      {
+       "id": "218361aa-1cb5-4b5b-b3c3-ecbb658a7962",
+       "text": "Evaluate the social, ethical, and legal issues and ramifications that affect people and enterprises resulting from the development and implementation of safe and secure software, including employment, data security, privacy, copyright, intellectual property, and digital disruption.",
+       "displayIndex": 2,
+       "parentId": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dc9286c4-6091-4305-9bcf-522e1c1080e7",
+   "title": "Programming for the Web",
+   "displayIndex": 1,
+   "selectionType": null,
+   "tags": null,
+   "subtopics": [
+    {
+     "id": "dd5a8b49-794c-4b9f-86f7-d1ec6c0a41e8",
+     "title": "Data Transmission Using the Web",
+     "items": [
+      {
+       "id": "65eeb45b-35c0-42b2-9ec8-8b31e35ddce9",
+       "text": "Explore the applications of web programming, including interactive websites/webpages, e-commerce, and progressive web apps (PWAs).",
+       "displayIndex": 0,
+       "parentId": null
+      },
+      {
+       "id": "37ee0a8b-1c6f-4ba4-9360-31d5c8741c91",
+       "text": "Investigate how data is transferred on the internet, including data packets, internet protocol (IP) addresses, including IPv4, and domain name systems (DNS).",
+       "displayIndex": 1,
+       "parentId": null
+      },
+      {
+       "id": "4db9c4e9-2d32-4b5c-8bbd-d122ab62d049",
+       "text": "Investigate and describe the function of web protocols and their ports, including HTTP, HTTPS, TCP/IP, DNS, FTP, SFTP, SSL, TLS, SMTP, POP 3, and IMAP.",
+       "displayIndex": 2,
+       "parentId": null
+      },
+      {
+       "id": "a4e48919-9737-40da-a1cd-0f5638bade9c",
+       "text": "Explain the processes for securing the web, including Secure Sockets Layer (SSL) certificates, encryption algorithms, encryption keys, plain text and cipher text, authentication and authorisation, hash values, and digital signatures.",
+       "displayIndex": 3,
+       "parentId": null
+      },
+      {
+       "id": "1f14c677-a443-424c-bbdf-cd5e3bc82261",
+       "text": "Investigate the effect of big data on web architecture, including data mining, metadata, and streaming service management.",
+       "displayIndex": 4,
+       "parentId": null
+      }
+     ]
+    },
+    {
+     "id": "dd054126-4515-4373-b96f-75402f2452b7",
+     "title": "Designing Web Applications",
+     "items": [
+      {
+       "id": "7ad4d853-3859-465e-9a67-eaf117025595",
+       "text": "Investigate and explain the role of the World Wide Web Consortium (W3C) in the development of applications for the web, including Web Accessibility Initiative (WAI), internationalisation, web security, privacy, and machine-readable data.",
+       "displayIndex": 0,
+       "parentId": null
+      },
+      {
+       "id": "f5aae0d9-5886-4ec5-8a26-884da3deb938",
+       "text": "Model elements that form a web development system, including client-side (front-end) web programming, server-side (back-end) web programming, and interfacing with databases based on Structured Query Language (SQL) or non-SQL.",
+       "displayIndex": 1,
+       "parentId": null
+      },
+      {
+       "id": "c305931b-bd48-43cb-9a54-47e91de7aceb",
+       "text": "Explore and explain the influence of a web browser on web development, including the use of developer (dev) tools.",
+       "displayIndex": 2,
+       "parentId": null
+      },
+      {
+       "id": "a44a719d-102e-4df4-9975-5f1714eb6ff8",
+       "text": "Investigate cascading style sheets (CSS) and their impact on the design of a web application, including consistency of appearance, flexibility with browsers or display devices, and CSS maintenance tools.",
+       "displayIndex": 3,
+       "parentId": null
+      },
+      {
+       "id": "233158f6-c672-4a51-93f0-900c228857ad",
+       "text": "Investigate the reasons for version control and apply it when developing web applications.",
+       "displayIndex": 4,
+       "parentId": null
+      },
+      {
+       "id": "02ae7c49-d169-4301-ad78-1500f32ac10b",
+       "text": "Explore the types and significance of code libraries for front-end web development, including frameworks that control complex web applications, template engines, and predesigned CSS classes.",
+       "displayIndex": 5,
+       "parentId": null
+      },
+      {
+       "id": "20d4d4a6-b77b-4bbd-b17a-753a4c3cd434",
+       "text": "Explain the use and development of open-source software in relation to web development.",
+       "displayIndex": 6,
+       "parentId": null
+      },
+      {
+       "id": "a7ed48aa-2f48-412c-99e3-f480b7fcf931",
+       "text": "Investigate methods to support and manage the load times of web pages/applications.",
+       "displayIndex": 7,
+       "parentId": null
+      },
+      {
+       "id": "f3e92a52-a99f-4f9c-adff-129261bc50ec",
+       "text": "Research, experiment with, and evaluate the prevalence and use of web content management systems (CMS).",
+       "displayIndex": 8,
+       "parentId": null
+      },
+      {
+       "id": "59a85b80-f634-4e75-816f-1b5711257258",
+       "text": "Assess the contribution of back-end web development to the success of a web application.",
+       "displayIndex": 9,
+       "parentId": null
+      },
+      {
+       "id": "86a89309-213d-47ce-9cee-a9dfc4b8ae4a",
+       "text": "Observe and describe the back-end process used to manage a web request, including the role of webserver software, web frameworks, objects, libraries, and databases.",
+       "displayIndex": 10,
+       "parentId": null
+      },
+      {
+       "id": "29c4fb8c-3ad6-42c2-8c56-8ec93c6e33c5",
+       "text": "Develop a web application using an appropriate scripting language with shell scripts to make files and directories, and searching for text in a text file.",
+       "displayIndex": 11,
+       "parentId": null
+      },
+      {
+       "id": "efdfe454-d267-4e2b-af4e-0d2d4f832350",
+       "text": "Apply a web-based database and construct a script that executes SQL, including selecting fields, incorporating \u2018group by,\u2019 common SQL queries, constraints using the WHERE keyword, and table joins.",
+       "displayIndex": 12,
+       "parentId": null
+      },
+      {
+       "id": "67b6af17-4dac-43c6-9b84-9a3190050782",
+       "text": "Compare Object-Relational Mapping (ORM) to SQL.",
+       "displayIndex": 13,
+       "parentId": null
+      },
+      {
+       "id": "c752a5d3-3e96-4900-a7a3-7f4a20f71b56",
+       "text": "Describe how collaborative work practices between front-end and back-end developers improve the development of a web solution.",
+       "displayIndex": 14,
+       "parentId": null
+      },
+      {
+       "id": "9da3d4ab-535f-485d-844c-b62695ce78d0",
+       "text": "Design, develop, and implement a progressive web app (PWA), including the application of design and user interface (UI) and user experience (UX) principles of font, colour, audio, video, and navigation, and a UI that considers accessibility and inclusivity.",
+       "displayIndex": 15,
+       "parentId": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d75b51a8-dc28-4cb8-9a78-a0c2ceb18b0f",
+   "title": "Software Automation",
+   "displayIndex": 2,
+   "selectionType": null,
+   "tags": null,
+   "subtopics": [
+    {
+     "id": "7f16da58-013d-4ed1-809e-e0fe02349458",
+     "title": "Algorithms in Machine Learning",
+     "items": [
+      {
+       "id": "83603d37-4a4a-4c9d-8023-88fa9b792382",
+       "text": "Investigate how machine learning (ML) supports automation through the use of DevOps, robotic process automation (RPA), and business process automation (BPA).",
+       "displayIndex": 0,
+       "parentId": null
+      },
+      {
+       "id": "d2bb7da1-7938-4458-8840-87f3881eddb3",
+       "text": "Distinguish between artificial intelligence (AI) and ML.",
+       "displayIndex": 1,
+       "parentId": null
+      },
+      {
+       "id": "087e4674-b39e-4984-8850-09b15cdd2551",
+       "text": "Explore models of training ML, including supervised learning, unsupervised learning, semi-supervised learning, and reinforcement learning.",
+       "displayIndex": 2,
+       "parentId": null
+      },
+      {
+       "id": "b1ce25e7-89e9-45e1-97f8-dfb7b502293a",
+       "text": "Investigate common applications of key ML algorithms, including data analysis and forecasting, virtual personal assistants, and image recognition.",
+       "displayIndex": 3,
+       "parentId": null
+      },
+      {
+       "id": "394a4d34-5971-4092-974b-f90024a4ed42",
+       "text": "Research models used by software engineers to design and analyse ML, including decision trees and neural networks.",
+       "displayIndex": 4,
+       "parentId": null
+      },
+      {
+       "id": "8137833b-1522-4052-9e6b-527d5066b089",
+       "text": "Describe types of algorithms associated with ML, including linear regression, logistic regression, and K-nearest neighbour.",
+       "displayIndex": 5,
+       "parentId": null
+      }
+     ]
+    },
+    {
+     "id": "44f54160-e575-4ea6-88b0-4b6941480473",
+     "title": "Programming for Automation",
+     "items": [
+      {
+       "id": "8346398a-770a-4902-b445-533080befaef",
+       "text": "Design, develop, and apply ML regression models using an object-oriented programming (OOP) approach to predict numeric values, including linear regression, polynomial regression, and logistic regression.",
+       "displayIndex": 0,
+       "parentId": null
+      },
+      {
+       "id": "c5430cbe-8748-48a6-a867-fbbfdf8bdf1a",
+       "text": "Apply neural network models using an OOP approach to make predictions.",
+       "displayIndex": 1,
+       "parentId": null
+      }
+     ]
+    },
+    {
+     "id": "6e2a4c96-aa01-4e8a-a78d-d26e13af5fba",
+     "title": "Significance and Impact of ML and AI",
+     "items": [
+      {
+       "id": "70b3076a-7596-4998-96a9-4ea94de2b26e",
+       "text": "Assess the impact of automation on individuals, society, and the environment, including safety of workers, people with disabilities, the nature and skills required for employment, production efficiency, waste, and the environment.",
+       "displayIndex": 0,
+       "parentId": null
+      },
+      {
+       "id": "ec23f4f7-cfa2-416e-8596-882c8502c42e",
+       "text": "Explore how patterns in human behaviour influence ML and AI software development, including psychological responses, patterns related to acute stress response, cultural protocols, and belief systems.",
+       "displayIndex": 1,
+       "parentId": null
+      },
+      {
+       "id": "8daebb93-40dc-492e-8c34-23753daaddbe",
+       "text": "Investigate the effect of human and dataset source bias in the development of ML and AI solutions.",
+       "displayIndex": 2,
+       "parentId": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "36d3695c-0bfb-42fc-960e-59e5ff103fb7",
+   "title": "Software Engineering Project",
+   "displayIndex": 3,
+   "selectionType": null,
+   "tags": null,
+   "subtopics": [
+    {
+     "id": "1c979db8-b3ef-4a1a-bcaa-f5ebe8268617",
+     "title": "Identifying and Defining",
+     "items": [
+      {
+       "id": "51cac098-a973-4e2e-b737-ee3daf4a4463",
+       "text": "Define and analyse the requirements of a problem, including demonstrating need(s) or opportunities, assessing scheduling and financial feasibility, generating requirements including functionality and performance, defining data structures and data types, and defining boundaries.",
+       "displayIndex": 0,
+       "parentId": null
+      },
+      {
+       "id": "dc50e737-637b-4f82-9070-0fe354a4866f",
+       "text": "Explore tools used to develop ideas and generate solutions, including brainstorming, mind-mapping, and storyboards.",
+       "displayIndex": 1,
+       "parentId": null
+      },
+      {
+       "id": "30c27bb1-a41d-4d43-bea6-19ed73405b66",
+       "text": "Investigate types of software implementation methods, including direct, phased, parallel, and pilot.",
+       "displayIndex": 2,
+       "parentId": null
+      }
+     ]
+    },
+    {
+     "id": "542010fc-1f65-4619-b24f-fc6b3aa7fc0c",
+     "title": "Research and Planning",
+     "items": [
+      {
+       "id": "df751da2-4b12-4e22-8967-2ec7ab6fd858",
+       "text": "Research and use the Waterfall software development approach, including the logical progression of steps used throughout the life cycle, advantages and disadvantages, and the scale and types of developments.",
+       "displayIndex": 0,
+       "parentId": null
+      },
+      {
+       "id": "ab56aef4-a3d3-4332-8e51-3b0869079c44",
+       "text": "Research and use the Agile software development approach, including the rate of developing a final solution, method tailoring, iteration workflow, and scale and types of developments.",
+       "displayIndex": 1,
+       "parentId": null
+      },
+      {
+       "id": "74f16668-1f32-4bc5-9f93-e0d7137d9052",
+       "text": "Research the WAgile software development approach, including understanding it as a hybrid model and analysing 'when' and 'how' intervention is applied during the development life cycle.",
+       "displayIndex": 2,
+       "parentId": null
+      },
+      {
+       "id": "97fd0373-e78a-4406-8a8b-b02fca4de26f",
+       "text": "Apply project management to plan and conduct the development and implementation of a project and software engineering solution, including scheduling and tracking using a software tool (e.g., Gantt charts) and using collaboration tools.",
+       "displayIndex": 3,
+       "parentId": null
+      },
+      {
+       "id": "35d54351-8e4c-4791-a5f5-9a65d4385003",
+       "text": "Explore social and ethical issues associated with project work, including working individually, collaboratively, and responding to stakeholders.",
+       "displayIndex": 4,
+       "parentId": null
+      },
+      {
+       "id": "f7e7542e-7774-41d3-8b44-4b30a39d28c7",
+       "text": "Explore communication issues associated with project work, including involving and empowering the client, enabling feedback, and negotiating.",
+       "displayIndex": 5,
+       "parentId": null
+      },
+      {
+       "id": "f1876b1f-9370-42bb-abc9-6f67f0ba648d",
+       "text": "Investigate how software engineering solutions are quality assured, including defining criteria on which quality will be judged, ensuring requirements are met using a continual checking process, and addressing compliance and legislative requirements.",
+       "displayIndex": 6,
+       "parentId": null
+      },
+      {
+       "id": "2e311d42-5ee3-4684-acaf-9165d6e620ee",
+       "text": "Demonstrate the use of modelling tools.",
+       "displayIndex": 7,
+       "parentId": null
+      },
+      {
+       "id": "89db2287-0a74-4c59-984b-80ff75b5255e",
+       "text": "Explain the contribution of back-end engineering to the success and ease of software development, including technology used, error handling, interfacing with the front-end, and security engineering.",
+       "displayIndex": 8,
+       "parentId": null
+      }
+     ]
+    },
+    {
+     "id": "579e1577-2ec7-4c61-bd31-7f401d3edb66",
+     "title": "Producing and Implementing",
+     "items": [
+      {
+       "id": "f71e6901-4f93-4a2a-b242-8b941d5b3c9a",
+       "text": "Design, construct, and implement a solution to a software problem using appropriate development approach(es).",
+       "displayIndex": 0,
+       "parentId": null
+      },
+      {
+       "id": "e04cc32f-ca7f-4447-b4fa-b71a130545be",
+       "text": "Present a software engineering solution using presentation software.",
+       "displayIndex": 1,
+       "parentId": null
+      },
+      {
+       "id": "618cf6b8-7619-47a3-9d11-395eb2d761be",
+       "text": "Develop, construct, and document algorithms.",
+       "displayIndex": 2,
+       "parentId": null
+      },
+      {
+       "id": "b1db3336-6e75-4a7b-869f-3f3722915592",
+       "text": "Allocate resources to support the development of a software engineering solution.",
+       "displayIndex": 3,
+       "parentId": null
+      },
+      {
+       "id": "400b105b-9b50-4fbc-8a2e-b158c79c2515",
+       "text": "Demonstrate the use of programmed data backup.",
+       "displayIndex": 4,
+       "parentId": null
+      },
+      {
+       "id": "1e53c61d-17e3-4746-aab2-364766e86d7d",
+       "text": "Implement version control when developing a software engineering solution.",
+       "displayIndex": 5,
+       "parentId": null
+      },
+      {
+       "id": "a1e04764-0e95-4035-bc4f-3bfd488be8e2",
+       "text": "Explore strategies to respond to difficulties when developing a software engineering solution, including looking for a solution online, collaborating with peers, and outsourcing.",
+       "displayIndex": 6,
+       "parentId": null
+      },
+      {
+       "id": "2ee0fc1c-02b0-4350-9859-9f2cba1fac27",
+       "text": "Propose an additional innovative solution using a prototype and user interface (UI) design.",
+       "displayIndex": 7,
+       "parentId": null
+      }
+     ]
+    },
+    {
+     "id": "eac1830a-8db2-4975-a823-fc23df1916b5",
+     "title": "Testing and Evaluating",
+     "items": [
+      {
+       "id": "366aa2b1-318d-450b-a14b-1105bcb0a166",
+       "text": "Apply methodologies to test and evaluate code, including path and boundary testing.",
+       "displayIndex": 0,
+       "parentId": null
+      },
+      {
+       "id": "1c9eb96d-ae8c-4974-8a6a-0b64d1d4ea99",
+       "text": "Use a language-dependent code optimisation technique.",
+       "displayIndex": 1,
+       "parentId": null
+      },
+      {
+       "id": "f985691b-10cb-4e04-b6c2-54bec933a45e",
+       "text": "Analyse and respond to feedback.",
+       "displayIndex": 2,
+       "parentId": null
+      },
+      {
+       "id": "af5f29d3-c845-4956-a29d-42839b1a4aca",
+       "text": "Evaluate the effectiveness of a software engineering solution, including developing a report to synthesise feedback, developing a test plan, testing data used/generated based on path and boundary testing, and comparing actual output with expected output.",
+       "displayIndex": 3,
+       "parentId": null
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "topicsToOutcomes": []
+}

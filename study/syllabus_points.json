@@ -1,0 +1,644 @@
+[
+ {
+  "id": "SSA-1",
+  "text": "Describe the benefits of developing secure software",
+  "subs": [
+   "data protection",
+   "minimising cyber attacks and vulnerabilities"
+  ],
+  "sec": "Designing software"
+ },
+ {
+  "id": "SSA-2",
+  "text": "Interpret and apply fundamental software development steps to develop secure code",
+  "subs": [
+   "requirements definition",
+   "determining specifications",
+   "design",
+   "development",
+   "integration",
+   "testing and debugging",
+   "installation",
+   "maintenance"
+  ],
+  "sec": "Designing software"
+ },
+ {
+  "id": "SSA-3",
+  "text": "Describe how the capabilities and experience of end users influence the secure design features of software",
+  "subs": [],
+  "sec": "Designing software"
+ },
+ {
+  "id": "SSA-4",
+  "text": "Explore fundamental software design security concepts when developing programming code",
+  "subs": [
+   "confidentiality",
+   "integrity",
+   "availability",
+   "authentication",
+   "authorisation",
+   "accountability"
+  ],
+  "sec": "Developing secure code"
+ },
+ {
+  "id": "SSA-5",
+  "text": "Apply security features incorporated into software including data protection, security, privacy and regulatory compliance",
+  "subs": [],
+  "sec": "Developing secure code"
+ },
+ {
+  "id": "SSA-6",
+  "text": "Use and explain the contribution of cryptography and sandboxing to the \u2018security by design\u2019 approach in the development of software solutions",
+  "subs": [],
+  "sec": "Developing secure code"
+ },
+ {
+  "id": "SSA-7",
+  "text": "Use and explain the \u2018privacy by design\u2019 approach in the development of software solutions",
+  "subs": [
+   "proactive not reactive approach",
+   "embed privacy into design",
+   "respect for user privacy"
+  ],
+  "sec": "Developing secure code"
+ },
+ {
+  "id": "SSA-8",
+  "text": "Test and evaluate the security and resilience of software by determining vulnerabilities, hardening systems, handling breaches, maintaining business continuity and conducting disaster recovery",
+  "subs": [],
+  "sec": "Developing secure code"
+ },
+ {
+  "id": "SSA-9",
+  "text": "Apply and evaluate strategies used by software developers to manage the security of programming code",
+  "subs": [
+   "code review",
+   "static application security testing (SAST)",
+   "dynamic application security testing (DAST)",
+   "vulnerability assessment",
+   "penetration testing"
+  ],
+  "sec": "Developing secure code"
+ },
+ {
+  "id": "SSA-10",
+  "text": "Design, develop and implement code using defensive data input handling practices, including input validation, sanitisation and error handling",
+  "subs": [],
+  "sec": "Developing secure code"
+ },
+ {
+  "id": "SSA-11",
+  "text": "Design, develop and implement a safe application programming interface (API) to minimise software vulnerabilities",
+  "subs": [],
+  "sec": "Developing secure code"
+ },
+ {
+  "id": "SSA-12",
+  "text": "Design, develop and implement code considering efficient execution for the user",
+  "subs": [
+   "memory management",
+   "session management",
+   "exception management"
+  ],
+  "sec": "Developing secure code"
+ },
+ {
+  "id": "SSA-13",
+  "text": "Design, develop and implement secure code to minimise vulnerabilities in user action controls",
+  "subs": [
+   "broken authentication and session management",
+   "cross-site scripting (XSS) and cross-site request forgery (CSRF)",
+   "invalid forwarding and redirecting",
+   "race conditions"
+  ],
+  "sec": "Developing secure code"
+ },
+ {
+  "id": "SSA-14",
+  "text": "Design, develop and implement secure code to protect user file and hardware vulnerabilities from file attacks and side channel attacks",
+  "subs": [],
+  "sec": "Developing secure code"
+ },
+ {
+  "id": "SSA-15",
+  "text": "Apply and describe the benefits of collaboration to develop safe and secure software",
+  "subs": [
+   "considering various points of view",
+   "delegating tasks based on expertise",
+   "quality of the solution"
+  ],
+  "sec": "Impact of safe and secure software development"
+ },
+ {
+  "id": "SSA-16",
+  "text": "Investigate and explain the benefits to an enterprise of the implementation of safe and secure development practices",
+  "subs": [
+   "improved products or services",
+   "influence on future software development",
+   "improved work practices",
+   "productivity",
+   "business interactivity"
+  ],
+  "sec": "Impact of safe and secure software development"
+ },
+ {
+  "id": "SSA-17",
+  "text": "Evaluate the social, ethical and legal issues and ramifications that affect people and enterprises resulting from the development and implementation of safe and secure software",
+  "subs": [
+   "employment",
+   "data security",
+   "privacy",
+   "copyright",
+   "intellectual property",
+   "digital disruption"
+  ],
+  "sec": "Impact of safe and secure software development"
+ },
+ {
+  "id": "WEB-1",
+  "text": "Explore the applications of web programming",
+  "subs": [
+   "interactive website/webpages",
+   "e-commerce",
+   "progressive web apps (PWAs)"
+  ],
+  "sec": "Data transmission using the web"
+ },
+ {
+  "id": "WEB-2",
+  "text": "Investigate and practise how data is transferred on the internet",
+  "subs": [
+   "data packets",
+   "internet protocol (IP) addresses, including IPv4",
+   "domain name systems (DNS)"
+  ],
+  "sec": "Data transmission using the web"
+ },
+ {
+  "id": "WEB-3",
+  "text": "Investigate and describe the function of web protocols and their ports",
+  "subs": [
+   "HTTP, HTTPS",
+   "TCP/IP",
+   "DNS",
+   "FTP, SFTP",
+   "SSL, TLS",
+   "SMTP, POP 3, IMAP"
+  ],
+  "sec": "Data transmission using the web"
+ },
+ {
+  "id": "WEB-4",
+  "text": "Explain the processes for securing the web",
+  "subs": [
+   "Secure Sockets Layer (SSL) certificates",
+   "encryption algorithms",
+   "encryption keys",
+   "plain text and cipher text",
+   "authentication and authorisation",
+   "hash values",
+   "digital signatures"
+  ],
+  "sec": "Data transmission using the web"
+ },
+ {
+  "id": "WEB-5",
+  "text": "Investigate the effect of big data on web architecture",
+  "subs": [
+   "data mining",
+   "metadata",
+   "streaming service management"
+  ],
+  "sec": "Data transmission using the web"
+ },
+ {
+  "id": "WEB-6",
+  "text": "Investigate and explain the role of the World Wide Web Consortium (W3C) in the development of applications for the web",
+  "subs": [
+   "Web Accessibility Initiative (WAI)",
+   "internationalisation",
+   "web security",
+   "privacy",
+   "machine-readable data"
+  ],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-7",
+  "text": "Model elements that form a web development system",
+  "subs": [
+   "client-side (front-end) web programming",
+   "server-side (back-end) web programming",
+   "interfacing with databases that are based on Structured Query Language (SQL) or non- SQL"
+  ],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-8",
+  "text": "Explore and explain the influence of a web browser on web development, including the use of developer (dev) tools",
+  "subs": [],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-9",
+  "text": "Investigate cascading style sheets (CSS) and its impact on the design of a web application",
+  "subs": [
+   "consistency of appearance",
+   "flexibility with browsers or display devices",
+   "CSS maintenance tools"
+  ],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-10",
+  "text": "Investigate the reasons for version control and apply it when developing web application",
+  "subs": [],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-11",
+  "text": "Explore the types and significance of code libraries for front-end web development",
+  "subs": [
+   "frameworks that control complex web applications",
+   "template engines",
+   "predesigned CSS classes"
+  ],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-12",
+  "text": "Explain the use and development of open-source software in relation to web development",
+  "subs": [],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-13",
+  "text": "Investigate methods to support and manage the load times of web pages/applications",
+  "subs": [],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-14",
+  "text": "Research, experiment with and evaluate the prevalence and use of web content management systems (CMS)",
+  "subs": [],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-15",
+  "text": "Assess the contribution of back-end web development to the success of a web application",
+  "subs": [],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-16",
+  "text": "Observe and describe the back-end process used to manage a web request",
+  "subs": [
+   "role of webserver software",
+   "web framework",
+   "objects",
+   "libraries",
+   "databases"
+  ],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-17",
+  "text": "Develop a web application using an appropriate scripting language with shell scripts to make files and directories, and searching for text in a text file",
+  "subs": [],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-18",
+  "text": "Apply a web-based database and construct script that executes SQL",
+  "subs": [
+   "selecting fields",
+   "incorporating \u2018group by\u2019",
+   "common SQL queries",
+   "constraints using WHERE keyword",
+   "table joins"
+  ],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-19",
+  "text": "Compare Object-Relational Mapping (ORM) to SQL",
+  "subs": [],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-20",
+  "text": "Describe how collaborative work practices between front-end and back-end developers improve the development of a web solution",
+  "subs": [],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "WEB-21",
+  "text": "Design, develop and implement a progressive web app (PWA)",
+  "subs": [
+   "the application of design and user interface (UI) and user experience (UX) principles of font, colour, audio, video and navigation",
+   "a UI that considers accessibility and inclusivity"
+  ],
+  "sec": "Designing web applications"
+ },
+ {
+  "id": "AUTO-1",
+  "text": "Investigate how machine learning (ML) supports automation through the use of DevOps, robotic process automation (RPA) and business process automation (BPA)",
+  "subs": [],
+  "sec": "Algorithms in machine learning"
+ },
+ {
+  "id": "AUTO-2",
+  "text": "Distinguish between artificial intelligence (AI) and ML",
+  "subs": [],
+  "sec": "Algorithms in machine learning"
+ },
+ {
+  "id": "AUTO-3",
+  "text": "Explore models of training ML",
+  "subs": [
+   "supervised learning",
+   "unsupervised learning",
+   "semi-supervised learning",
+   "reinforcement learning"
+  ],
+  "sec": "Algorithms in machine learning"
+ },
+ {
+  "id": "AUTO-4",
+  "text": "Investigate common applications of key ML algorithms",
+  "subs": [
+   "data analysis and forecasting",
+   "virtual personal assistants",
+   "image recognition"
+  ],
+  "sec": "Algorithms in machine learning"
+ },
+ {
+  "id": "AUTO-5",
+  "text": "Research models used by software engineers to design and analyse ML",
+  "subs": [
+   "decision trees",
+   "neural networks"
+  ],
+  "sec": "Algorithms in machine learning"
+ },
+ {
+  "id": "AUTO-6",
+  "text": "Describe types of algorithms associated with ML",
+  "subs": [
+   "linear regression",
+   "logistic regression",
+   "K-nearest neighbour"
+  ],
+  "sec": "Algorithms in machine learning"
+ },
+ {
+  "id": "AUTO-7",
+  "text": "Design, develop and apply ML regression models using an OOP to predict numeric values",
+  "subs": [
+   "linear regression",
+   "polynomial regression",
+   "logistic regression"
+  ],
+  "sec": "Programming for automation"
+ },
+ {
+  "id": "AUTO-8",
+  "text": "Apply neural network models using an OOP to make predictions",
+  "subs": [],
+  "sec": "Programming for automation"
+ },
+ {
+  "id": "AUTO-9",
+  "text": "Assess the impact of automation on the individual, society and the environment",
+  "subs": [
+   "safety of workers",
+   "people with disability",
+   "the nature and skills required for employment",
+   "production efficiency, waste and the environment",
+   "the economy and distribution of wealth"
+  ],
+  "sec": "Significance and impact of ML and AI"
+ },
+ {
+  "id": "AUTO-10",
+  "text": "Explore by implementation how patterns in human behaviour influence ML and AI software development",
+  "subs": [
+   "psychological responses",
+   "patterns related to acute stress response",
+   "cultural protocols",
+   "belief systems"
+  ],
+  "sec": "Significance and impact of ML and AI"
+ },
+ {
+  "id": "AUTO-11",
+  "text": "Investigate the effect of human and dataset source bias in the development of ML and AI solutions",
+  "subs": [],
+  "sec": "Significance and impact of ML and AI"
+ },
+ {
+  "id": "PROJ-1",
+  "text": "Define and analyse the requirements of a problem",
+  "subs": [
+   "demonstrating need(s) or opportunities",
+   "assessing scheduling and financial feasibility",
+   "generating requirements including functionality and performance",
+   "defining data structures and data types",
+   "defining boundaries"
+  ],
+  "sec": "Identifying and defining"
+ },
+ {
+  "id": "PROJ-2",
+  "text": "Explore tools used to develop ideas and generate solutions",
+  "subs": [
+   "brainstorming, mind-mapping and storyboards",
+   "data dictionaries, including selecting appropriate data types",
+   "algorithm design",
+   "code generation",
+   "testing and debugging",
+   "installation",
+   "maintenance"
+  ],
+  "sec": "Identifying and defining"
+ },
+ {
+  "id": "PROJ-3",
+  "text": "Investigate types of software implementation methods",
+  "subs": [
+   "direct",
+   "phased",
+   "parallel",
+   "pilot"
+  ],
+  "sec": "Identifying and defining"
+ },
+ {
+  "id": "PROJ-4",
+  "text": "Research and use the Waterfall software development approach",
+  "subs": [
+   "logical progression of steps used throughout the life cycle",
+   "stages of \u2018falling water\u2019",
+   "advantages and disadvantages",
+   "scale and types of developments"
+  ],
+  "sec": "Research and planning"
+ },
+ {
+  "id": "PROJ-5",
+  "text": "Research and use the Agile software development approach",
+  "subs": [
+   "rate of developing a final solution",
+   "method tailoring",
+   "iteration workflow",
+   "scale and types of developments"
+  ],
+  "sec": "Research and planning"
+ },
+ {
+  "id": "PROJ-6",
+  "text": "Research the WAgile software development approach",
+  "subs": [
+   "understanding it is a hybrid model",
+   "analysis of the \u2018when\u2019 and \u2018how\u2019 intervention is applied during the development life cycle",
+   "scale and types of developments"
+  ],
+  "sec": "Research and planning"
+ },
+ {
+  "id": "PROJ-7",
+  "text": "Apply project management to plan and conduct the development and implementation of a project and software engineering solution",
+  "subs": [
+   "scheduling and tracking using a software tool, including Gantt charts",
+   "using collaboration tools"
+  ],
+  "sec": "Research and planning"
+ },
+ {
+  "id": "PROJ-8",
+  "text": "Explore social and ethical issues associated with project work, including working individually, collaboratively and responding to stakeholders",
+  "subs": [],
+  "sec": "Research and planning"
+ },
+ {
+  "id": "PROJ-9",
+  "text": "Explore communication issues associated with project work",
+  "subs": [
+   "involving and empowering the client",
+   "enabling feedback",
+   "negotiating"
+  ],
+  "sec": "Research and planning"
+ },
+ {
+  "id": "PROJ-10",
+  "text": "Investigate how software engineering solutions are quality assured",
+  "subs": [
+   "defining criteria on which quality will be judged",
+   "ensuring requirements are met using a continual checking process",
+   "addressing compliance and legislative requirements"
+  ],
+  "sec": "Research and planning"
+ },
+ {
+  "id": "PROJ-11",
+  "text": "Demonstrate the use of modelling tools",
+  "subs": [],
+  "sec": "Research and planning"
+ },
+ {
+  "id": "PROJ-12",
+  "text": "Explain the contribution of back-end engineering to the success and ease of software development",
+  "subs": [
+   "technology used",
+   "error handling",
+   "interfacing with front end",
+   "security engineering"
+  ],
+  "sec": "Research and planning"
+ },
+ {
+  "id": "PROJ-13",
+  "text": "Design, construct and implement a solution to a software problem using appropriate development approach(es)",
+  "subs": [],
+  "sec": "Producing and implementing"
+ },
+ {
+  "id": "PROJ-14",
+  "text": "Present a software engineering solution using presentation software",
+  "subs": [],
+  "sec": "Producing and implementing"
+ },
+ {
+  "id": "PROJ-15",
+  "text": "Develop, construct and document algorithms",
+  "subs": [],
+  "sec": "Producing and implementing"
+ },
+ {
+  "id": "PROJ-16",
+  "text": "Allocate resources to support the development of a software engineering solution",
+  "subs": [],
+  "sec": "Producing and implementing"
+ },
+ {
+  "id": "PROJ-17",
+  "text": "Demonstrate the use of programmed data backup",
+  "subs": [],
+  "sec": "Producing and implementing"
+ },
+ {
+  "text": "Implement version control when developing a software engineering solution",
+  "subs": [],
+  "id": "PROJ-18",
+  "sec": null
+ },
+ {
+  "text": "Explore strategies to respond to difficulties when developing a software engineering solution",
+  "subs": [
+   "looking for a solution online",
+   "collaboration with peers",
+   "outsourcing"
+  ],
+  "id": "PROJ-19",
+  "sec": null
+ },
+ {
+  "text": "Propose an additional innovative solution using a prototype and user interface (UI) design",
+  "subs": [],
+  "id": "PROJ-20",
+  "sec": null
+ },
+ {
+  "text": "Apply methodologies to test and evaluate code",
+  "subs": [],
+  "id": "PROJ-21",
+  "sec": null
+ },
+ {
+  "text": "Use a language-dependent code optimisation technique",
+  "subs": [],
+  "id": "PROJ-22",
+  "sec": null
+ },
+ {
+  "text": "Analyse and respond to feedback",
+  "subs": [],
+  "id": "PROJ-23",
+  "sec": null
+ },
+ {
+  "text": "Evaluate the effectiveness of a software engineering solution",
+  "subs": [
+   "developing a report to synthesise feedback",
+   "developing a test plan",
+   "testing data used/generated based on path and boundary testing",
+   "comparing actual output with expected output"
+  ],
+  "id": "PROJ-24",
+  "sec": null
+ }
+]

@@ -27,9 +27,11 @@ const fixMojibake = s => { const t = Buffer.from(s, 'latin1').toString('utf8'); 
 // ---------- assets ----------
 // Every exam keeps its own assets/ folder so each exam folder is self-contained.
 const assetCache = new Map(); // url -> {buf, ext}
+export let ASSET_BASE = null;   // set by importers whose content uses site-relative image paths
+export const setAssetBase = b => { ASSET_BASE = b; };
 async function download(url) {
   if (assetCache.has(url)) return assetCache.get(url);
-  const r = await fetch(url);
+  const r = await fetch(url.startsWith('/') && ASSET_BASE ? ASSET_BASE + url : url);
   if (!r.ok) throw new Error(`${r.status} ${url}`);
   const ct = r.headers.get('content-type') || '';
   const ext = { 'image/png': '.png', 'image/jpeg': '.jpg', 'image/gif': '.gif', 'image/svg+xml': '.svg', 'image/webp': '.webp', 'application/pdf': '.pdf', 'video/mp4': '.mp4', 'video/webm': '.webm', 'video/quicktime': '.mov' }[ct.split(';')[0]] || '';
@@ -78,7 +80,7 @@ function makeExamContext(dir) {
       const src = (m[0].match(/src="(https?:[^"]+)"/i) || [])[1];
       html = html.replace(m[0], src ? `<p><a href="${await asset(src)}">▶ VIDEO (open this file)</a></p>` : '<p>(video missing)</p>');
     }
-    const urls = [...html.matchAll(/<img[^>]+src="([^"]+)"/gi)].map(m => m[1]).filter(u => /^https?:/.test(u));
+    const urls = [...html.matchAll(/<img[^>]+src="([^"]+)"/gi)].map(m => m[1]).filter(u => /^https?:/.test(u) || (ASSET_BASE && u.startsWith("/")));
     const map = {};
     for (const u of urls) map[u] = await asset(u);
     let h = html;
@@ -317,6 +319,10 @@ function examMd(e) {
 }
 
 // ---------- main ----------
+export { buildPart, contentCollection, makeExamContext, parseTitle, examMd };
+if (import.meta.url === `file://${process.argv[1]}`) await main();
+
+async function main() {
 const sessions = JSON.parse(fs.readFileSync(path.join(RAW, '_sessions.json'), 'utf8'));
 const only = process.argv[2] ? new RegExp(process.argv[2], 'i') : null;
 if (!only) fs.rmSync(EXAMS, { recursive: true, force: true });
@@ -407,3 +413,4 @@ if (!only) {
   fs.writeFileSync(path.join(OUT, 'INDEX.md'), L.join('\n') + '\n');
 }
 console.log(`Done: ${all.length} exams built.`);
+}

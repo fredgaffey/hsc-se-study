@@ -1,0 +1,16 @@
+# This file has deliberate errors for testing the linter
+
+begin ProcessData
+    LET counter = 0
+    set name = "Fred"
+    IF counter > 5
+        display "Too many"
+    
+    while counter < 10
+        set counter = counter + 1
+    endwhile
+
+    result = calculate(rate=10, hours=5)
+    display user.name
+
+end ProcessData

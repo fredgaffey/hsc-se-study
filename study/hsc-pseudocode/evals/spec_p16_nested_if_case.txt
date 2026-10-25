@@ -1,0 +1,15 @@
+IF condition A THEN
+    process 1
+ELSEIF condition B THEN
+    process 2
+ELSEIF condition C THEN
+    process 3
+ELSE
+    process 4
+ENDIF
+
+CASEWHERE expression evaluates to
+    choice a: process a
+    choice b: process b
+    OTHERWISE: default process
+END CASE

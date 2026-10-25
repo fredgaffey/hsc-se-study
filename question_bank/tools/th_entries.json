@@ -1,0 +1,1204 @@
+[
+ {
+  "id": "th-i01",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q1",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 1",
+  "part": "Question 1",
+  "stimulus": null,
+  "prompt": "What is a key feature of progressive web apps (PWAs)?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Require a constant Internet connection",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "Can be installed like native apps",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "C",
+    "text": "Only work in Internet Explorer",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Do not use JavaScript",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i02",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q2",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 2",
+  "part": "Question 2",
+  "stimulus": null,
+  "prompt": "Which language is typically used for client-side programming?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "SQL",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "PHP",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Python",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "JavaScript",
+    "image": null,
+    "correct": true
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i03",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q3",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 3",
+  "part": "Question 3",
+  "stimulus": null,
+  "prompt": "Which record types map a hostname to an IPv4 or IPv6 address?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "MX and SRV",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "NS and SOA",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "A and AAAA",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "D",
+    "text": "CNAME and TXT",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i04",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q4",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 4",
+  "part": "Question 4",
+  "stimulus": null,
+  "prompt": "Which protocol and default port does HTTPS use?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "HTTP over UDP, port 80",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "HTTP over TLS on TCP, port 443",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "C",
+    "text": "TLS over UDP, port 443",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "HTTP over TCP, port 80",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i05",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q5",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 5",
+  "part": "Question 5",
+  "stimulus": null,
+  "prompt": "Which is true about TCP vs UDP?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "TCP establishes a connection and guarantees ordered delivery; UDP does not",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "B",
+    "text": "Both TCP and UDP use handshakes",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Both TCP and UDP retransmit lost packets by default",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "UDP guarantees delivery and ordering; TCP does not",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i06",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q6",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 6",
+  "part": "Question 6",
+  "stimulus": null,
+  "prompt": "What does TLS primarily provide?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Confidentiality, integrity, authentication",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "B",
+    "text": "Compression, routing, congestion control",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Name resolution, caching, negative responses",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Load balancing, multiplexing, prioritisation",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i07",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q7",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 7",
+  "part": "Question 7",
+  "stimulus": null,
+  "prompt": "Place these in the correct order for a first HTTPS request with a cold DNS cache: DNS resolution, TCP handshake, TLS handshake, HTTP request.",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "TCP handshake, DNS resolution, HTTP request, TLS handshake",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "HTTP request, TCP handshake, TLS handshake, DNS resolution",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "DNS resolution, TCP handshake, TLS handshake, HTTP request",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "D",
+    "text": "TLS handshake, DNS resolution, HTTP request, TCP handshake",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i08",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q8",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 8",
+  "part": "Question 8",
+  "stimulus": null,
+  "prompt": "Which of the following is an INDIRECT cost of a security breach?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Customer churn and reputation damage",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "B",
+    "text": "Customer notification expenses",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Incident response and forensics",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Legal fees and regulatory fines",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i09",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q9",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 9",
+  "part": "Question 9",
+  "stimulus": null,
+  "prompt": "Which of the following is a business benefit of strong security, beyond simply \"avoiding attacks\"?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "It always slows down every feature with no other benefit",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "It removes the need for regulatory compliance",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "It has no effect on customer behaviour",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "It can build customer trust and act as a market differentiator",
+    "image": null,
+    "correct": true
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i10",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q10",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 10",
+  "part": "Question 10",
+  "stimulus": null,
+  "prompt": "A weak password policy that allows \"password123\" as a valid password is an example of which type of security failure?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Process failure",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "B",
+    "text": "Human failure",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Not a security failure",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Technical failure",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "medium",
+  "issues": [
+   "key (A, process failure) is Claude's: a policy that permits weak passwords is a process failure, but B (human failure) is arguable"
+  ]
+ },
+ {
+  "id": "th-i11",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q11",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 11",
+  "part": "Question 11",
+  "stimulus": null,
+  "prompt": "Which STRIDE category describes an attacker gaining higher access than they were intended to have?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Spoofing",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "Repudiation",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Elevation of privilege",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "D",
+    "text": "Denial of service",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i12",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q12",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 12",
+  "part": "Question 12",
+  "stimulus": null,
+  "prompt": "Roughly how much more expensive is it, on average, to fix a security flaw in production compared to preventing it at the design phase?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "There is no meaningful difference",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "About 5 times",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "About 15 times",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "About 48 times",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "issues": [
+   "no key: the paper has no marking guidelines and the cost multiple depends on an unnamed source (commonly quoted figures are 6x/15x/100x), so no option was marked correct"
+  ]
+ },
+ {
+  "id": "th-i13",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q13",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 13",
+  "part": "Question 13",
+  "stimulus": null,
+  "prompt": "Which STRIDE category describes an attacker pretending to be someone else?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Elevation of privilege",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "Spoofing",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "C",
+    "text": "Tampering",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Information disclosure",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i14",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q14",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 14",
+  "part": "Question 14",
+  "stimulus": null,
+  "prompt": "What does the \"security-usability paradox\" describe?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Usability has no relationship to security",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "Users always prefer the most secure option available",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Security and usability always improve together",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Overly difficult security controls often get bypassed, creating new vulnerabilities",
+    "image": null,
+    "correct": true
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i15",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q15",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 15",
+  "part": "Question 15",
+  "stimulus": null,
+  "prompt": "Which statement correctly describes the relationship between AI and ML?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "ML is a subset of AI",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "B",
+    "text": "AI is a subset of ML",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "AI and ML are exactly the same thing",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "AI and ML are unrelated, separate fields",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i16",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q16",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 16",
+  "part": "Question 16",
+  "stimulus": null,
+  "prompt": "Which of the following is an example of AI that is NOT machine learning?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "A spam filter that learns from labelled examples",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "A recommendation system trained on user data",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "A rule-based expert system with hand-coded decision rules",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "D",
+    "text": "An image classifier trained on thousands of photos",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i17",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q17",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 17",
+  "part": "Question 17",
+  "stimulus": null,
+  "prompt": "Which type of automation focuses on redesigning and optimising an entire end-to-end business process, often integrating multiple systems?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "RPA",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "BPA",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "C",
+    "text": "Manual processing",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "None of the above",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i18",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q18",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 18",
+  "part": "Question 18",
+  "stimulus": null,
+  "prompt": "Which ML training paradigm uses ONLY labelled data, where every example has a known correct answer?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "None of the above",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "Unsupervised learning",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Supervised learning",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "D",
+    "text": "Reinforcement learning",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-i19",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section I Q19",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section I Question 19",
+  "part": "Question 19",
+  "stimulus": null,
+  "prompt": "Which ML training paradigm is most suitable for grouping customers into segments based on purchasing behaviour, with no predefined \"correct\" groups?",
+  "marks": 1,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "MULTI_CHOICE",
+  "options": [
+   {
+    "letter": "A",
+    "text": "Reinforcement learning",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "None of the above",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Supervised learning",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Unsupervised learning",
+    "image": null,
+    "correct": true
+   }
+  ],
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-ii01",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section II Q1",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section II Question 1",
+  "part": "Question 1",
+  "stimulus": null,
+  "prompt": "Trace through the SQL query below and explain exactly what it returns, describing the effect of each clause in order.\n\n```sql\nSELECT category_id, COUNT(*)\nFROM posts\nWHERE published = 1\nGROUP BY category_id;\n```",
+  "marks": 3,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": false,
+  "sample_answer": "FROM posts selects the table; WHERE published = 1 keeps only published rows; GROUP BY category_id groups the remaining rows by category; SELECT returns one row per category_id with COUNT(*), the number of published posts in that category.",
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-ii02",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section II Q2",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section II Question 2",
+  "part": "Question 2",
+  "stimulus": null,
+  "prompt": "The query below is intended to join every post to its author’s username, but it contains a syntax error. Identify the error and rewrite the query correctly.\n\n```sql\nSELECT users.username, posts.title\nFROM users\nINNER JOIN posts WHERE users.id = posts.author_id;\n```",
+  "marks": 3,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": false,
+  "sample_answer": "The INNER JOIN has no ON clause (WHERE cannot supply the join condition). Corrected: SELECT users.username, posts.title FROM users INNER JOIN posts ON users.id = posts.author_id;",
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-ii03",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section II Q3",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section II Question 3",
+  "part": "Question 3",
+  "stimulus": null,
+  "prompt": "Explain why DNS primarily uses UDP, but sometimes switches to using TCP instead. Give ONE specific reason TCP is used.",
+  "marks": 2,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": false,
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ },
+ {
+  "id": "th-ii04",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section II Q4",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section II Question 4",
+  "part": "Question 4",
+  "stimulus": null,
+  "prompt": "List the THREE security guarantees TLS provides, and briefly explain what each one means in the context of a user logging into an online banking site.",
+  "marks": 3,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": false,
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ },
+ {
+  "id": "th-ii05",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section II Q5",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section II Question 5",
+  "part": "Question 5",
+  "stimulus": null,
+  "prompt": "The Python code below builds a login query. Identify the vulnerability, and state exactly what a malicious user could type into \"username\" to bypass the password check entirely.\n\n```python\nquery = \"SELECT * FROM users WHERE username = '\" + username + \"' AND password = '\" + password + \"'\"\ncursor.execute(query)\n```",
+  "marks": 3,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": false,
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ },
+ {
+  "id": "th-ii06",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section II Q6",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section II Question 6",
+  "part": "Question 6",
+  "stimulus": null,
+  "prompt": "The Flask endpoint below has a security flaw. Identify it, naming the specific security principle it violates, and describe the fix.\n\n```python\n@app.route(\"/api/orders/<order_id>\")\ndef get_order(order_id):\n    order = db.get_order(order_id)\n    return jsonify(order)\n```",
+  "marks": 3,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": false,
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ },
+ {
+  "id": "th-ii07",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section II Q7",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section II Question 7",
+  "part": "Question 7",
+  "stimulus": null,
+  "prompt": "The Flask route below transfers money but is vulnerable to CSRF. Identify what is missing, and rewrite the route to fix it.\n\n```python\n@app.route(\"/transfer\", methods=[\"POST\"])\ndef transfer_money():\n    amount = request.form[\"amount\"]\n    to_account = request.form[\"to_account\"]\n    process_transfer(current_user, to_account, amount)\n    return \"Transfer complete\"\n```",
+  "marks": 3,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": false,
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ },
+ {
+  "id": "th-ii08",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section II Q8",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section II Question 8",
+  "part": "Question 8",
+  "stimulus": null,
+  "prompt": "A vulnerability is rated likelihood 2/5 and impact 5/5. Calculate the risk score and identify which risk-response category it falls into.",
+  "marks": 2,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": false,
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ },
+ {
+  "id": "th-ii09",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section II Q9",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section II Question 9",
+  "part": "Question 9",
+  "stimulus": null,
+  "prompt": "Classify the following as a technical, process or human security failure, explaining your reasoning: an employee clicks a link in a phishing email and enters their company password on a fake login page.",
+  "marks": 3,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": false,
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ },
+ {
+  "id": "th-ii10",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section II Q10",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section II Question 10",
+  "part": "Question 10",
+  "stimulus": null,
+  "prompt": "Trace the function below for an email where contains_urgent = True, sender = \"colleague\", has_deadline = True. State the exact return value, and list the sequence of branches taken.\n\n```python\ndef classify_email(email):\n    if email[\"contains_urgent\"]:\n        if email[\"sender\"] == \"boss\":\n            if email[\"has_deadline\"]:\n                return \"High priority\"\n            else:\n                return \"Medium priority\"\n        else:\n            return \"Medium priority\"\n    else:\n        return \"Low priority\"\n```",
+  "marks": 3,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": false,
+  "sample_answer": "Returns \"Medium priority\". Branches: contains_urgent is True (take the outer if); sender == \"boss\" is False (take the inner else); has_deadline is never tested.",
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-ii11",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section II Q11",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section II Question 11",
+  "part": "Question 11",
+  "stimulus": null,
+  "prompt": "Trace the predict() method below for a Perceptron object where weights = [0.5, -0.2], bias = 0.1, using the step activation function (output 1 if z ≥ 0, else 0). Calculate z and state the returned output for inputs = [4, 3].\n\n```python\ndef activate(self, z):\n    return 1 if z >= 0 else 0\n\ndef predict(self, inputs):\n    z = sum(w * x for w, x in zip(self.weights, inputs)) + self.bias\n    return self.activate(z)\n```",
+  "marks": 3,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": false,
+  "sample_answer": "z = 0.5*4 + (-0.2)*3 + 0.1 = 2.0 - 0.6 + 0.1 = 1.5. Since 1.5 >= 0 the step function returns 1.",
+  "key_source": "claude",
+  "key_confidence": "high"
+ },
+ {
+  "id": "th-ii12",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section II Q12",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section II Question 12",
+  "part": "Question 12",
+  "stimulus": null,
+  "prompt": "Explain what RPA is, using the phrase \"simulates user actions\" in your answer.",
+  "marks": 2,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": false,
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ },
+ {
+  "id": "th-iii01",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section III Q1",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section III Question 1",
+  "part": "Question 1",
+  "stimulus": null,
+  "prompt": "A company is building a live video-conferencing feature into their web application. Recommend whether the underlying transport should use TCP or UDP, and justify your answer using at least TWO specific characteristics of the chosen protocol.",
+  "marks": 4,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": true,
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ },
+ {
+  "id": "th-iii02",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section III Q2",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section III Question 2",
+  "part": "Question 2",
+  "stimulus": null,
+  "prompt": "Explain TWO reasons a development team should use HTTPS instead of plain HTTP for their web application, even if the application does not process payments.",
+  "marks": 4,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": true,
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ },
+ {
+  "id": "th-iii03",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section III Q3",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section III Question 3",
+  "part": "Question 3",
+  "stimulus": null,
+  "prompt": "The Python function below is vulnerable to SQL injection. Rewrite it using a parameterised query so it is safe.\n\n```python\ndef find_user(username):\n    query = \"SELECT * FROM users WHERE username = '\" + username + \"'\"\n    return cursor.execute(query).fetchone()\n```",
+  "marks": 4,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "CODING",
+  "extended": false,
+  "language": "PYTHON",
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ },
+ {
+  "id": "th-iii04",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section III Q4",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section III Question 4",
+  "part": "Question 4",
+  "stimulus": null,
+  "prompt": "Using the risk = likelihood × impact model, explain why a company should sometimes invest more in preventing a LOW-likelihood risk than a HIGH-likelihood one, using a specific example.",
+  "marks": 4,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": true,
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ },
+ {
+  "id": "th-iii05",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section III Q5",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section III Question 5",
+  "part": "Question 5",
+  "stimulus": null,
+  "prompt": "The train_one() method below is missing its weight and bias update logic. Complete the method so it correctly implements the perceptron learning rule: wᵢ = wᵢ + α(target − prediction) × xᵢ, and the equivalent update for the bias.\n\n```python\nclass Perceptron:\n    def __init__(self, num_inputs, learning_rate=0.1):\n        self.weights = [0.0] * num_inputs\n        self.bias = 0.0\n        self.lr = learning_rate\n\n    def predict(self, inputs):\n        z = sum(w * x for w, x in zip(self.weights, inputs)) + self.bias\n        return 1 if z >= 0 else 0\n\n    def train_one(self, inputs, target):\n        prediction = self.predict(inputs)\n        # TODO: update self.weights and self.bias here\n        pass\n```",
+  "marks": 5,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "CODING",
+  "extended": false,
+  "language": "PYTHON",
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ },
+ {
+  "id": "th-iii06",
+  "origin": "TH Software Tuition",
+  "reserved": false,
+  "source": "TH Software Tuition 2026 SE Trial (papers/2026 TH Software Tuition SE Trial.pdf) Section III Q6",
+  "source_paper": "TH Software Tuition 2026 SE Trial",
+  "publisher": "TH Software Tuition",
+  "question_title": "TH Trial Section III Question 6",
+  "part": "Question 6",
+  "stimulus": null,
+  "prompt": "Choose ONE concept from Programming for the Web, ONE from Secure Software Architecture, and ONE from Software Automation studied this year, and explain how they connect to a single, unifying idea: that good software engineering requires deliberately weighing trade-offs using specific, named factors rather than following one \"default\" answer. Use a specific example from each strand.",
+  "marks": 6,
+  "images": [],
+  "_paper": "th-trial",
+  "answer_type": "SHORT",
+  "extended": true,
+  "issues": [
+   "no marking guidelines or sample answer in the source paper"
+  ]
+ }
+]

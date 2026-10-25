@@ -5,8 +5,3 @@ __pycache__/
 .DS_Store
 *.tmp.*
 
-# private, never publish
-discord_inbox/
-question_bank/
-papers/found/
-papers/reports.jsonl

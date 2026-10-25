@@ -1,0 +1,2686 @@
+[
+ {
+  "id": "nesa-fam-q1",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q1",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 1",
+  "part": "Question 1",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "prompt": "Place the following software development steps in the correct order.\n\n- Design\n- Installation\n- Maintenance\n- Development\n- Testing and debugging\n- Determining specifications",
+  "answer_type": "SORTING",
+  "marks": 1,
+  "sorting": {
+   "items": [
+    "Design",
+    "Installation",
+    "Maintenance",
+    "Development",
+    "Testing and debugging",
+    "Determining specifications"
+   ],
+   "correct_order": [
+    "Determining specifications",
+    "Design",
+    "Development",
+    "Testing and debugging",
+    "Installation",
+    "Maintenance"
+   ]
+  },
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Places all six steps in the correct order"
+   }
+  ],
+  "sample_answer": "Determining specifications → Design → Development → Testing and debugging → Installation → Maintenance",
+  "key_confidence": "high",
+  "syllabus": [
+   "SSA-2"
+  ]
+ },
+ {
+  "id": "nesa-fam-q2",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q2",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 2",
+  "part": "Question 2",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "An online business is planning to use a database to keep track of its products. The contents of the Products table during testing are shown.\n\n**Products**\n\n| ProductID | ProductName | ProductPrice |\n|---|---|---|\n| P001 | The Plant (DVD) | 28.00 |\n| P002 | Discovery 1 and 2 (DVD) | 26.98 |\n| P003 | Travel 1 and 2 (Blu-Ray) | 22.00 |\n| P004 | The Best Movie (DVD) | 19.98 |\n| P005 | Celebration (DVD) | 12.00 |\n\nAfter executing a SQL query, the following results were obtained.\n\n| ProductName | ProductPrice |\n|---|---|\n| Discovery 1 and 2 (DVD) | 26.98 |\n| The Plant (DVD) | 28.00 |\n| Travel 1 and 2 (Blu-Ray) | 22.00 |",
+  "prompt": "Select the correct item from each dropdown menu to show how the results were obtained.\n\n`SELECT [1] , [2]`  \n`FROM [3]`  \n`WHERE [4] [5] [6]`  \n`ORDER BY [7] [8]`",
+  "answer_type": "DROPDOWN",
+  "marks": 3,
+  "dropdowns": [
+   {
+    "label": "1 (SELECT)",
+    "options": [
+     "Products",
+     "ProductID",
+     "ProductName",
+     "ProductPrice"
+    ],
+    "correct": [
+     "ProductName"
+    ]
+   },
+   {
+    "label": "2 (SELECT)",
+    "options": [
+     "Products",
+     "ProductID",
+     "ProductName",
+     "ProductPrice"
+    ],
+    "correct": [
+     "ProductPrice"
+    ]
+   },
+   {
+    "label": "3 (FROM)",
+    "options": [
+     "Products",
+     "ProductID",
+     "ProductName",
+     "ProductPrice"
+    ],
+    "correct": [
+     "Products"
+    ]
+   },
+   {
+    "label": "4 (WHERE field)",
+    "options": [
+     "Products",
+     "ProductID",
+     "ProductName",
+     "ProductPrice"
+    ],
+    "correct": [
+     "ProductPrice"
+    ]
+   },
+   {
+    "label": "5 (operator)",
+    "options": [
+     "<",
+     "=",
+     ">=",
+     "<=",
+     "<>"
+    ],
+    "correct": [
+     ">="
+    ]
+   },
+   {
+    "label": "6 (value)",
+    "options": [
+     "12.00",
+     "19.98",
+     "22.00",
+     "26.98",
+     "28.00"
+    ],
+    "correct": [
+     "22.00"
+    ]
+   },
+   {
+    "label": "7 (ORDER BY)",
+    "options": [
+     "Products",
+     "ProductID",
+     "ProductName",
+     "ProductPrice"
+    ],
+    "correct": [
+     "ProductName"
+    ]
+   },
+   {
+    "label": "8 (direction)",
+    "options": [
+     "ASC",
+     "DESC"
+    ],
+    "correct": [
+     "ASC"
+    ]
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Selects the correct fields, table, condition and ordering"
+   },
+   {
+    "marks": "2",
+    "criterion": "Mostly correct (e.g. correct condition but incorrect ordering)"
+   },
+   {
+    "marks": "1",
+    "criterion": "Some correct selections"
+   }
+  ],
+  "sample_answer": "SELECT ProductName, ProductPrice FROM Products WHERE ProductPrice >= 22.00 ORDER BY ProductName ASC  (the results are in alphabetical order of name, and include the 22.00 product)",
+  "key_confidence": "high",
+  "syllabus": [
+   "WEB-18"
+  ]
+ },
+ {
+  "id": "nesa-fam-q3",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q3",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 3",
+  "part": "Question 3",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "prompt": "Match each of the features to the relevant protocol(s).",
+  "answer_type": "OBJECTIVE_RESPONSE",
+  "marks": 2,
+  "objective": {
+   "columns": [
+    "POP3",
+    "SMTP",
+    "IMAP"
+   ],
+   "multi_select_per_row": true,
+   "rows": [
+    {
+     "statement": "Commonly used for sending email",
+     "correct": [
+      "SMTP"
+     ]
+    },
+    {
+     "statement": "Commonly used for receiving email",
+     "correct": [
+      "POP3",
+      "IMAP"
+     ]
+    },
+    {
+     "statement": "Allows email to synchronise across devices",
+     "correct": [
+      "IMAP"
+     ]
+    },
+    {
+     "statement": "Server deletes messages when they are downloaded and opened",
+     "correct": [
+      "POP3"
+     ]
+    }
+   ]
+  },
+  "criteria": [
+   {
+    "marks": "2",
+    "criterion": "Correctly matches all features"
+   },
+   {
+    "marks": "1",
+    "criterion": "Correctly matches at least two features"
+   }
+  ],
+  "key_confidence": "high",
+  "syllabus": [
+   "WEB-3"
+  ]
+ },
+ {
+  "id": "nesa-fam-q4",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q4",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 4",
+  "part": "Question 4",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/fam_Q4s-1.png",
+   "assets/fam_Q4s-1.svg"
+  ],
+  "stimulus": "This structure chart describes a hotel booking system.\n\n![](assets/fam_Q4s-1.png)",
+  "prompt": "Select the items that are TRUE about this structure chart. (Multiple items may be selected.)",
+  "answer_type": "MULTI_SELECT",
+  "marks": 2,
+  "options": [
+   {
+    "letter": "A",
+    "text": "**Booking made** is a flag.",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "B",
+    "text": "**Login** is the first module called.",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "C",
+    "text": "**Booking ID** may only be true or false.",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "**Display new bookings** may not be executed.",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "E",
+    "text": "Members do not need to log in to browse hotels.",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "F",
+    "text": "A choice is continually offered between **Browse hotels** and **Book**.",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "G",
+    "text": "**Login** calls **Enter member details and validate** when Member ID is set to true.",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "2",
+    "criterion": "Selects all TRUE statements and no FALSE statements"
+   },
+   {
+    "marks": "1",
+    "criterion": "Selects at least two TRUE statements with at most one error"
+   }
+  ],
+  "sample_answer": "TRUE: Booking made is a flag (filled circle = control parameter); Login is called first (modules execute left to right); Display new bookings may not be executed (diamond = selection); a choice is continually offered between Browse hotels and Book (diamond inside the \"Until done\" loop).\nFALSE: Booking ID is a data parameter (open circle), not a flag; Login is always called before Browse hotels, so members must log in; Login repeats Enter member details and validate until Valid is true — Member ID is data, not a Boolean.",
+  "key_confidence": "medium-high (no official key; standard structure-chart conventions assumed)",
+  "syllabus": [
+   "PROJ-11"
+  ]
+ },
+ {
+  "id": "nesa-fam-q5",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q5",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 5",
+  "part": "Question 5",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "Consider the following algorithm.\n\n```\nBEGIN determineGrade\n    get Mark\n    CASEWHERE Mark\n        >=80 : Grade = \"H\"\n        >=50 : Grade = \"P\"\n        OTHERWISE : Grade = \"N\"\n    ENDCASE\n    print Grade\nEnd determineGrade\n```",
+  "prompt": "Use the following table to provide a set of test data that will thoroughly test the algorithm. Include the expected outputs and reasons for inclusion. You may assume that all input data are valid.\n\n| Test data (Mark) | Expected output (Grade) | Reason for inclusion |\n|---|---|---|\n| | | |\n| | | |\n| | | |\n| | | |\n| | | |",
+  "answer_type": "RICH_TABLE",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Provides test data covering each path and the boundaries (79/80 and 49/50) with correct expected outputs and reasons"
+   },
+   {
+    "marks": "2",
+    "criterion": "Provides test data covering each path with correct expected outputs, OR boundary data with some reasons"
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides some appropriate test data or expected outputs"
+   }
+  ],
+  "sample_answer": "| Mark | Grade | Reason |\n|---|---|---|\n| 90 | H | Typical value in the H range |\n| 80 | H | Boundary: lowest mark that gives H |\n| 79 | P | Boundary: highest mark below H |\n| 50 | P | Boundary: lowest mark that gives P |\n| 49 | N | Boundary: highest mark that gives N (OTHERWISE path) |",
+  "key_confidence": "high",
+  "syllabus": [
+   "PROJ-24",
+   "PROJ-21"
+  ]
+ },
+ {
+  "id": "nesa-fam-q6",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q6",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 6",
+  "part": "Question 6",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "A new operating system is to be developed for a mobile phone. The operating system needs to allow users to install a variety of third-party applications such as social media applications and games on the phone.",
+  "prompt": "Discuss the use of *sandboxing* in this operating system.",
+  "answer_type": "SHORT",
+  "marks": 3,
+  "word_limit": 70,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Discusses advantages AND disadvantages/limitations of sandboxing third-party apps in this operating system"
+   },
+   {
+    "marks": "2",
+    "criterion": "Outlines how sandboxing works in the OS and a benefit OR limitation"
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides some relevant information about sandboxing"
+   }
+  ],
+  "sample_answer": "Sandboxing runs each third-party app in an isolated environment with its own storage and only the permissions it is granted, so a malicious or buggy game cannot read other apps' data or damage the operating system, protecting users' privacy and system stability. However, isolation adds memory and processing overhead on a resource-limited phone, and apps that legitimately need to share data (e.g. a social media app accessing photos) need extra permission mechanisms, which adds complexity and can frustrate users if permissions are too restrictive.",
+  "key_confidence": "high",
+  "syllabus": [
+   "SSA-6"
+  ]
+ },
+ {
+  "id": "nesa-fam-q7a",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q7a",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 7a",
+  "part": "Question 7 (a)",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/fam_SEFAM07S.png"
+  ],
+  "stimulus": "Consider the following decision tree of a trained machine learning model that determines whether to purchase a vehicle.\n\n![](assets/fam_SEFAM07S.png)",
+  "prompt": "Using the decision tree, determine the outcome of each of the following situations.",
+  "answer_type": "OBJECTIVE_RESPONSE",
+  "marks": 1,
+  "objective": {
+   "columns": [
+    "Buy",
+    "Do not buy"
+   ],
+   "rows": [
+    {
+     "statement": "Mileage = 8000 km, Colour = Silver, Optional Accessories = No",
+     "correct": [
+      "Buy"
+     ]
+    },
+    {
+     "statement": "Mileage = 11 000 km, Colour = Red, Optional Accessories = Yes",
+     "correct": [
+      "Buy"
+     ]
+    },
+    {
+     "statement": "Type = SUV, Colour = Red, Optional Accessories = No",
+     "correct": [
+      "Buy"
+     ]
+    }
+   ]
+  },
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Correct outcome for all three situations"
+   }
+  ],
+  "sample_answer": "All three are Buy: 8000 km silver → Buy (whether or not it is an SUV); 11 000 km with accessories → Buy (SUV or not); any SUV → Buy.",
+  "key_confidence": "high",
+  "syllabus": [
+   "AUTO-5"
+  ]
+ },
+ {
+  "id": "nesa-fam-q7b",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q7b",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 7b",
+  "part": "Question 7 (b)",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/fam_SEFAM07S.png"
+  ],
+  "stimulus": "Consider the following decision tree of a trained machine learning model that determines whether to purchase a vehicle.\n\n![](assets/fam_SEFAM07S.png)",
+  "prompt": "The decision tree can be simplified without compromising its logic. Redraw the decision tree to reduce the number of branches.",
+  "answer_type": "DRAWING",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Draws a correct simplified tree with Type = SUV tested first (SUV → Buy), then mileage, with the Colour and Optional Accessories tests on the correct branches"
+   },
+   {
+    "marks": "2",
+    "criterion": "Draws a simplified tree with minor errors"
+   },
+   {
+    "marks": "1",
+    "criterion": "Shows some understanding of simplifying the tree"
+   }
+  ],
+  "sample_answer": "Type = SUV?\n- Yes → Buy\n- No → Mileage < 10 000 km?\n  - Yes → Colour = Silver? (Yes → Buy; No → Do not buy)\n  - No → Optional Accessories? (Yes → Buy; No → Do not buy)\n\nBoth original Type = SUV nodes lead to Buy on Yes, so Type can be tested once at the root (8 branches instead of 10).",
+  "key_confidence": "high",
+  "syllabus": [
+   "AUTO-5",
+   "PROJ-11"
+  ]
+ },
+ {
+  "id": "nesa-fam-q8",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q8",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 8",
+  "part": "Question 8",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "The following subroutine is intended to search an array for an item and output the position of that item in the array. There are several mistakes in the algorithm.\n\n```\nBEGIN Search (SearchItem)\n    Set LastIndex to the number of elements in ItemArray\n    Index = 1\n    WHILE Found = FALSE OR Index < LastIndex\n        IF Index = SearchItem THEN\n            Found = TRUE\n        ENDIF\n    ENDWHILE\n    IF Found = TRUE THEN\n        Display 'Position', Index\n    ELSE\n        Display 'Not found'\n    ENDIF\nEND Search\n```",
+  "prompt": "Copy the algorithm into the space below and modify the algorithm logic so that it achieves its intended purpose. The array is called ItemArray and it is indexed from 1.",
+  "answer_type": "SHORT",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Corrects all errors: initialises Found, uses AND and <= in the loop condition, compares ItemArray(Index) with SearchItem, increments Index"
+   },
+   {
+    "marks": "2",
+    "criterion": "Corrects most of the errors"
+   },
+   {
+    "marks": "1",
+    "criterion": "Corrects one error"
+   }
+  ],
+  "sample_answer": "```\nBEGIN Search (SearchItem)\n    Set LastIndex to the number of elements in ItemArray\n    Index = 1\n    Found = FALSE\n    WHILE Found = FALSE AND Index <= LastIndex\n        IF ItemArray[Index] = SearchItem THEN\n            Found = TRUE\n        ELSE\n            Index = Index + 1\n        ENDIF\n    ENDWHILE\n    IF Found = TRUE THEN\n        Display 'Position', Index\n    ELSE\n        Display 'Not found'\n    ENDIF\nEND Search\n```",
+  "key_confidence": "high",
+  "syllabus": [
+   "PROJ-15"
+  ]
+ },
+ {
+  "id": "nesa-fam-q9a",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q9a",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 9a",
+  "part": "Question 9 (a)",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "An online store allows users to register for an account using their name, phone number and date of birth. Users must also create a username and password.\n\nEach username must satisfy these rules.\n\n- There must be no more than 8 characters.\n- Only uppercase and lowercase letters are accepted.\n- The character “<” is not allowed, to prevent attempts at injecting code through the username.",
+  "prompt": "Design a user interface for registering an account. Clearly label all features.",
+  "answer_type": "DRAWING",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Designs a clear, labelled registration screen with all required fields, appropriate input controls (e.g. date picker) and guidance on the username rules / feedback"
+   },
+   {
+    "marks": "2",
+    "criterion": "Designs a screen with most required fields and some labels"
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides a basic screen layout"
+   }
+  ],
+  "sample_answer": "Labelled screen \"Create account\": text boxes for Name, Phone number (numeric keypad/format hint), Date of birth (date picker), Username (with hint \"max 8 letters, A–Z/a–z only\"),\nPassword and Confirm password (masked, show/hide toggle, strength meter); inline error messages next to invalid fields; Register button (disabled until valid) and Cancel/Back link; consistent fonts and colours, logical top-to-bottom tab order.",
+  "key_confidence": "high",
+  "syllabus": [
+   "WEB-21",
+   "PROJ-20"
+  ]
+ },
+ {
+  "id": "nesa-fam-q9b",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q9b",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 9b",
+  "part": "Question 9 (b)",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "An online store allows users to register for an account using their name, phone number and date of birth. Users must also create a username and password.\n\nEach username must satisfy these rules.\n\n- There must be no more than 8 characters.\n- Only uppercase and lowercase letters are accepted.\n- The character “<” is not allowed, to prevent attempts at injecting code through the username.",
+  "prompt": "Write a function in Python that will check whether a username satisfies the rules.",
+  "answer_type": "CODING",
+  "language": "PYTHON",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Correct function that checks length ≤ 8 and that every character is an upper/lowercase letter, returning a correct result"
+   },
+   {
+    "marks": "2",
+    "criterion": "Function checks most rules correctly"
+   },
+   {
+    "marks": "1",
+    "criterion": "Shows some understanding of the problem or Python"
+   }
+  ],
+  "sample_answer": "```python\ndef valid_username(username):\n    if len(username) == 0 or len(username) > 8:\n        return False\n    for ch in username:\n        if not ('a' <= ch <= 'z' or 'A' <= ch <= 'Z'):   # also rejects '<'\n            return False\n    return True\n```",
+  "key_confidence": "high",
+  "syllabus": [
+   "SSA-10",
+   "PROJ-15"
+  ]
+ },
+ {
+  "id": "nesa-fam-q10",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q10",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 10",
+  "part": "Question 10",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "Consider the following source code for a web page.\n\n```html\n<html>\n<body>\n<link rel=\"stylesheet\" href=\"style3.css\"/>\n<script src=\"image-gallery.js\"/><!--this script is slow to load-->\n<link rel=\"stylesheet\" href=\"styles1.css\"/>\n<link rel=\"stylesheet\" href=\"styles2.css\"/>\n<h1>My Awesome Website!</h1>\n<p>I hope you like my website, I spent a lot of time designing it.</p>\n<h2>Photos from my holiday</h2>\n<img src=\"holiday1_4000x3000.jpg\" width=\"640\" height=\"480\"/>\n<img src=\"holiday2_4000x3000.jpg\" width=\"640\" height=\"480\"/>\n<img src=\"holiday3_4000x3000.jpg\" width=\"640\" height=\"480\"/>\n<img src=\"holiday4_4000x3000.jpg\" width=\"640\" height=\"480\"/>\n</body>\n</html>\n```",
+  "prompt": "The web page is loading too slowly. Explain how the load time of this page can be improved.",
+  "answer_type": "SHORT",
+  "marks": 4,
+  "word_limit": 90,
+  "criteria": [
+   {
+    "marks": "4",
+    "criterion": "Explains at least two relevant improvements related to the code (e.g. image sizes, script loading, combining/minifying CSS) and why each reduces load time"
+   },
+   {
+    "marks": "3",
+    "criterion": "Explains one improvement and outlines another"
+   },
+   {
+    "marks": "2",
+    "criterion": "Outlines one or more improvements"
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides some relevant information"
+   }
+  ],
+  "sample_answer": "The images are 4000×3000 but displayed at 640×480, so resizing/compressing them to the display size (or using lazy loading) greatly reduces the data downloaded. The slow image-gallery.js script blocks rendering because it is loaded before the content; moving it to the end of the body or adding async/defer lets the text display first. The three stylesheets could be combined and minified into one file in the <head>, reducing the number of HTTP requests, and caching/CDNs would speed repeat visits.",
+  "key_confidence": "high",
+  "syllabus": [
+   "WEB-13"
+  ]
+ },
+ {
+  "id": "nesa-fam-q11a",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q11a",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 11a",
+  "part": "Question 11 (a)",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/fam_SEFAM11S.png"
+  ],
+  "stimulus": "Bob is testing a website for vulnerability. The website allows the user to add their name at the end of the URL and prints their name on the webpage.\n\nIn addition to his name, Bob has added some code to the URL and the following is displayed.\n\n![](assets/fam_SEFAM11S.png)\n\n(The URL is `localhost:8080/Bob<script>alert(\"Is this supposed to happen\")</script>`; the page shows \"Hello, Bob.\" and an alert box \"Is this supposed to happen?\")",
+  "prompt": "What type of vulnerability is being demonstrated?",
+  "answer_type": "MULTI_CHOICE",
+  "marks": 1,
+  "options": [
+   {
+    "letter": "A",
+    "text": "Invalid redirecting",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "Cross site scripting",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "C",
+    "text": "Broken authentication",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Cross site request forgery",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "key_confidence": "high",
+  "syllabus": [
+   "SSA-13"
+  ]
+ },
+ {
+  "id": "nesa-fam-q11b",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q11b",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 11b",
+  "part": "Question 11 (b)",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/fam_SEFAM11S.png"
+  ],
+  "stimulus": "Bob is testing a website for vulnerability. The website allows the user to add their name at the end of the URL and prints their name on the webpage.\n\nIn addition to his name, Bob has added some code to the URL and the following is displayed.\n\n![](assets/fam_SEFAM11S.png)\n\n(The URL is `localhost:8080/Bob<script>alert(\"Is this supposed to happen\")</script>`; the page shows \"Hello, Bob.\" and an alert box \"Is this supposed to happen?\")",
+  "prompt": "Explain ONE way to minimise this vulnerability.",
+  "answer_type": "SHORT",
+  "marks": 2,
+  "word_limit": 35,
+  "criteria": [
+   {
+    "marks": "2",
+    "criterion": "Explains a relevant way to minimise XSS and how it prevents the script running"
+   },
+   {
+    "marks": "1",
+    "criterion": "Identifies a relevant way"
+   }
+  ],
+  "sample_answer": "Sanitise/encode user input before displaying it: characters such as < and > are escaped (e.g. &lt;script&gt;), so the browser displays the text instead of executing it as a script.",
+  "key_confidence": "high",
+  "syllabus": [
+   "SSA-13",
+   "SSA-10"
+  ]
+ },
+ {
+  "id": "nesa-fam-q12a",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q12a",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 12a",
+  "part": "Question 12 (a)",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "An online business is planning to use a database to keep track of its products, customers and orders. The contents of the Products, Customers and Orders tables during testing are shown.\n\n**Products**\n\n| ProductID | ProductName | ProductPrice |\n|---|---|---|\n| P001 | The Plant (DVD) | 28.00 |\n| P002 | Discovery 1 and 2 (DVD) | 26.98 |\n| P003 | Travel 1 and 2 (Blu-Ray) | 22.00 |\n| P004 | The Best Movie (DVD) | 19.98 |\n| P005 | Celebration (DVD) | 12.00 |\n\n**Customers**\n\n| CustID | CustName | CustEmail |\n|---|---|---|\n| C001 | Nicky Singh | N.Singh@nesa.edu.au |\n| C002 | Casey He | C.He@bos.edu.au |\n| C003 | Ash Lee | A.Lee@bosnsw.edu |\n| C004 | Kim Smith | K.Smith@nesa.edu.au |\n| C005 | Pat Alvardo | P.Alvardo@bos.edu.au |\n\n**Orders**\n\n| OrderID | CustID | ProductID | OrderQuantity |\n|---|---|---|---|\n| T001 | C001 | P004 | 2 |\n| T002 | C004 | P005 | 1 |\n| T003 | C002 | P003 | 1 |\n| T004 | C001 | P002 | 2 |\n| T005 | C005 | P002 | 2 |",
+  "prompt": "The following SQL query is run to test the database.\n\n```sql\nSELECT ProductName, ProductPrice\nFROM Products\nWHERE ProductPrice > 22.00\nORDER BY ProductPrice ASC\n```\n\nFill in the table below with the result of running the SQL query. You may not need to use all the rows or columns. (4 rows × 3 columns provided)",
+  "answer_type": "RICH_TABLE",
+  "marks": 2,
+  "criteria": [
+   {
+    "marks": "2",
+    "criterion": "Correct rows, columns and order"
+   },
+   {
+    "marks": "1",
+    "criterion": "Correct rows OR correct order with minor error"
+   }
+  ],
+  "sample_answer": "| ProductName | ProductPrice |\n|---|---|\n| Discovery 1 and 2 (DVD) | 26.98 |\n| The Plant (DVD) | 28.00 |\n\n(22.00 is excluded because the condition is > not >=.)",
+  "key_confidence": "high",
+  "syllabus": [
+   "WEB-18"
+  ]
+ },
+ {
+  "id": "nesa-fam-q12b",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q12b",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 12b",
+  "part": "Question 12 (b)",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "An online business is planning to use a database to keep track of its products, customers and orders. The contents of the Products, Customers and Orders tables during testing are shown.\n\n**Products**\n\n| ProductID | ProductName | ProductPrice |\n|---|---|---|\n| P001 | The Plant (DVD) | 28.00 |\n| P002 | Discovery 1 and 2 (DVD) | 26.98 |\n| P003 | Travel 1 and 2 (Blu-Ray) | 22.00 |\n| P004 | The Best Movie (DVD) | 19.98 |\n| P005 | Celebration (DVD) | 12.00 |\n\n**Customers**\n\n| CustID | CustName | CustEmail |\n|---|---|---|\n| C001 | Nicky Singh | N.Singh@nesa.edu.au |\n| C002 | Casey He | C.He@bos.edu.au |\n| C003 | Ash Lee | A.Lee@bosnsw.edu |\n| C004 | Kim Smith | K.Smith@nesa.edu.au |\n| C005 | Pat Alvardo | P.Alvardo@bos.edu.au |\n\n**Orders**\n\n| OrderID | CustID | ProductID | OrderQuantity |\n|---|---|---|---|\n| T001 | C001 | P004 | 2 |\n| T002 | C004 | P005 | 1 |\n| T003 | C002 | P003 | 1 |\n| T004 | C001 | P002 | 2 |\n| T005 | C005 | P002 | 2 |",
+  "prompt": "The contents of the Orders table need to be displayed as follows.\n\n| Customer | Product | Quantity |\n|---|---|---|\n| Nicky Singh | The Best Movie (DVD) | 2 |\n| Kim Smith | Celebration (DVD) | 1 |\n| Casey He | Travel 1 and 2 (Blu-Ray) | 1 |\n| Nicky Singh | Discovery 1 and 2 (DVD) | 2 |\n| Pat Alvardo | Discovery 1 and 2 (DVD) | 2 |\n\nWrite a SQL query that can produce this result.",
+  "answer_type": "SQL",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Correct query joining all three tables with the correct join conditions and column names/aliases"
+   },
+   {
+    "marks": "2",
+    "criterion": "Query joins the tables with minor errors"
+   },
+   {
+    "marks": "1",
+    "criterion": "Shows some understanding of SQL"
+   }
+  ],
+  "sample_answer": "```sql\nSELECT Customers.CustName AS Customer, Products.ProductName AS Product, Orders.OrderQuantity AS Quantity\nFROM Orders\nJOIN Customers ON Orders.CustID = Customers.CustID\nJOIN Products ON Orders.ProductID = Products.ProductID\nORDER BY Orders.OrderID;\n```",
+  "key_confidence": "high",
+  "syllabus": [
+   "WEB-18"
+  ]
+ },
+ {
+  "id": "nesa-fam-q13",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q13",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 13",
+  "part": "Question 13",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "In a computer game, each player has 10 rounds and the maximum score for each round is 5. The score for each round is equal to the number of points, except when bonus points are assigned. Every time a player scores 5, the score from the next round is added as bonus points. If a player scores 5 in the last round, they get 10 points.\n\nA player's scores and corresponding points for a full game are shown.\n\n| Round | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |\n|---|---|---|---|---|---|---|---|---|---|---|\n| Score | 3 | 5 | 5 | 2 | 1 | 4 | 0 | 1 | 4 | 5 |\n| Points | 3 | 10 | 7 | 2 | 1 | 4 | 0 | 1 | 4 | 10 |",
+  "prompt": "Write a program in Python that will:\n\n- display the player's scores and corresponding points\n- calculate and display the total points for the player, taking into account the bonuses.\n\nStart your program with: `scores = [3,5,5,2,1,4,0,1,4,5]`\n\nThe output of the program should match the following:\n\n```\nRound Score Points\n1     3     3\n2     5     10\n3     5     7\n4     2     2\n5     1     1\n6     4     4\n7     0     0\n8     1     1\n9     4     4\n10    5     10\nTOTAL POINTS: 42\n```",
+  "answer_type": "CODING",
+  "language": "PYTHON",
+  "marks": 6,
+  "criteria": [
+   {
+    "marks": "6",
+    "criterion": "Correct program: loops through all rounds, applies the bonus rule (including the last round), displays round/score/points in the required format and the correct total"
+   },
+   {
+    "marks": "5",
+    "criterion": "Substantially correct program with a minor error"
+   },
+   {
+    "marks": "4",
+    "criterion": "Program applies the bonus rule with some errors, OR correct output without the last-round rule"
+   },
+   {
+    "marks": "3",
+    "criterion": "Program displays scores and calculates a total without correct bonuses"
+   },
+   {
+    "marks": "2",
+    "criterion": "Some correct Python relevant to the problem"
+   },
+   {
+    "marks": "1",
+    "criterion": "Shows some understanding of the problem"
+   }
+  ],
+  "sample_answer": "```python\nscores = [3,5,5,2,1,4,0,1,4,5]\ntotal = 0\nprint('Round', 'Score', 'Points')\nfor i in range(len(scores)):\n    points = scores[i]\n    if scores[i] == 5:\n        if i == len(scores) - 1:\n            points = 10\n        else:\n            points = scores[i] + scores[i + 1]\n    total = total + points\n    print(i + 1, scores[i], points)\nprint('TOTAL POINTS:', total)\n```",
+  "key_confidence": "high",
+  "syllabus": [
+   "PROJ-15",
+   "PROJ-13"
+  ]
+ },
+ {
+  "id": "nesa-fam-q14",
+  "origin": "NESA",
+  "reserved": false,
+  "source": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025) Q14",
+  "source_paper": "NESA HSC Software Engineering Familiarisation Questions (updated 30/01/2025)",
+  "publisher": "NESA",
+  "question_title": "Familiarisation Question 14",
+  "part": "Question 14",
+  "key_source": "claude",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/fam_SEFAM17S1.png",
+   "assets/fam_SEFAM17S2.png",
+   "assets/fam_SEFAM17S3.png",
+   "assets/fam_SEFAM17S4.png",
+   "assets/fam_SEFAM17S5.png",
+   "assets/fam_SEFAM17S6.png",
+   "assets/fam_SEFAM17S7.png",
+   "assets/fam_SEFAM17S8.png",
+   "assets/fam_SEFAM17S9.png",
+   "assets/fam_SEFAM17S10.png",
+   "assets/fam_SEFAM17S11.png",
+   "assets/fam_SEFAM17S12.png"
+  ],
+  "stimulus": "The following slideshow was prepared by a student as part of a research project.\n\n![slide 1](assets/fam_SEFAM17S1.png) ![slide 2](assets/fam_SEFAM17S2.png) ![slide 3](assets/fam_SEFAM17S3.png) ![slide 4](assets/fam_SEFAM17S4.png) ![slide 5](assets/fam_SEFAM17S5.png) ![slide 6](assets/fam_SEFAM17S6.png) ![slide 7](assets/fam_SEFAM17S7.png) ![slide 8](assets/fam_SEFAM17S8.png) ![slide 9](assets/fam_SEFAM17S9.png) ![slide 10](assets/fam_SEFAM17S10.png) ![slide 11](assets/fam_SEFAM17S11.png) ![slide 12](assets/fam_SEFAM17S12.png)\n\nSlide text (summary): \"How many times have you interacted with artificial intelligence this week?\"; \"How many decisions have been made about YOU this week by artificial intelligence?\"; \"AI can notice patterns in enormous data sets that are beyond the ability of human perception to detect. AI technology can make even ordinary and seemingly trivial data valuable.\"; \"AI can facilitate decision-making and improve productivity.\"; AI is used in social media, weather forecasting, recommendation systems in e-commerce, video sharing and streaming, entertainment websites, virtual personal assistants, image recognition; \"AI robots can take on risky or boring tasks\", \"AI medical assistants can diagnose diseases based on patients' symptoms\", \"Chatbots can answer customer service questions\", \"AI can even filter out hostile activities to protect cyber security\"; algorithms decide social media feeds, credit scores, what products to buy, what to binge watch, whether a person gets a job interview, how much people pay for home or car insurance; how machines learn: supervised, unsupervised, semi-supervised, reinforcement learning; \"AI needs LARGE amounts of training data. Big data is the raw material that fuels AI algorithms and models.\"; how they learn about us: social media, shopping history, online surveys, internet browsing history and preference, everyday interactions with technology; \"What will our future relationship with AI be?\"",
+  "prompt": "Assess the use of artificial intelligence in our society. Support your answer with information from the slideshow.",
+  "answer_type": "SHORT",
+  "extended": true,
+  "marks": 8,
+  "word_limit": 300,
+  "criteria": [
+   {
+    "marks": "8",
+    "criterion": "Makes an informed judgement about the use of AI in society, weighing benefits and drawbacks/risks, well supported by relevant information from the slideshow"
+   },
+   {
+    "marks": "6–7",
+    "criterion": "Assesses the use of AI with reference to benefits and drawbacks, supported by information from the slideshow"
+   },
+   {
+    "marks": "4–5",
+    "criterion": "Describes benefits and/or drawbacks of AI with some reference to the slideshow"
+   },
+   {
+    "marks": "2–3",
+    "criterion": "Outlines some uses or impacts of AI"
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides some relevant information"
+   }
+  ],
+  "sample_answer": "AI is now embedded in everyday life — social media feeds, recommendation systems, streaming, weather forecasting and virtual assistants — and on balance it is highly beneficial but carries significant risks that must be managed. Its main strength is detecting patterns in enormous data sets beyond human perception, which improves decision-making and productivity: medical assistants diagnose diseases from symptoms, robots take on risky or boring tasks (improving worker safety), chatbots answer customer service questions around the clock, and AI filters hostile activity to protect cyber security. However, the slideshow notes that AI needs LARGE amounts of training data harvested from our social media, shopping and browsing history and online surveys, raising privacy concerns about how \"ordinary and seemingly trivial\" personal data is collected and used. More seriously, algorithms now make high-stakes decisions about people — credit scores, insurance prices and whether a person gets a job interview — often without transparency. If the training data reflects human or dataset bias, these decisions can be unfair and hard to challenge. Overall, AI's benefits to productivity, health and safety are substantial, but its use is only appropriate where data is collected with consent, models are tested for bias, and humans remain accountable for decisions that significantly affect people's lives.",
+  "key_confidence": "high",
+  "syllabus": [
+   "AUTO-9",
+   "AUTO-11"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q1",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q1",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 1",
+  "part": "Question 1",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": null,
+  "prompt": "A streaming platform updated its content suggestion algorithm for users. A group of users was upgraded to the new algorithm, and feedback was collected before replacing the algorithm for all users.\n\nWhich implementation method was used?",
+  "answer_type": "MULTI_CHOICE",
+  "marks": 1,
+  "options": [
+   {
+    "letter": "A",
+    "text": "Pilot",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "B",
+    "text": "Direct",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Phased",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Parallel",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Identifies the correct answer"
+   }
+  ],
+  "syllabus": [
+   "PROJ-3"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q3",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q3",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 3",
+  "part": "Question 3",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/hsc25_SEN25Q03.png"
+  ],
+  "stimulus": "An image recognition program uses machine learning (ML) to recognise letters. It is trained using a range of images of handwritten letters. Each of the images below is labelled with the letter B when training the program.\n\n![](assets/hsc25_SEN25Q03.png)",
+  "prompt": "What model of ML training is used to train this software?",
+  "answer_type": "MULTI_CHOICE",
+  "marks": 1,
+  "options": [
+   {
+    "letter": "A",
+    "text": "Supervised learning",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "B",
+    "text": "Unsupervised learning",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Reinforcement learning",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Semi-supervised learning",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Identifies the correct answer"
+   }
+  ],
+  "syllabus": [
+   "AUTO-3"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q4",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q4",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 4",
+  "part": "Question 4",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "Fragment 1 and Fragment 2 are Python code that achieve the same purpose.\n\n**Fragment 1**\n```python\nnumbers = [1, 2, 3, 4, 5]\ntotal = 0\nfor num in numbers:\n    total += num\nprint(total)\n```\n\n**Fragment 2**\n```python\nnumbers = [1, 2, 3, 4, 5]\nprint(sum(numbers))\n```",
+  "prompt": "Fragment 2 is an example of",
+  "answer_type": "MULTI_CHOICE",
+  "marks": 1,
+  "options": [
+   {
+    "letter": "A",
+    "text": "recursive code.",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "list comprehensions.",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "language-dependent code optimisation.",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "D",
+    "text": "using a hash table to create shorter solutions.",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Identifies the correct answer"
+   }
+  ],
+  "syllabus": [
+   "PROJ-22"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q5",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q5",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 5",
+  "part": "Question 5",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": null,
+  "prompt": "What is a potential vulnerability of an application programming interface (API)?",
+  "answer_type": "MULTI_CHOICE",
+  "marks": 1,
+  "options": [
+   {
+    "letter": "A",
+    "text": "Excess load times",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "Biases in machine learning",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Exposure of more data than intended",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "D",
+    "text": "Inappropriate use of screen elements",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Identifies the correct answer"
+   }
+  ],
+  "syllabus": [
+   "SSA-11"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q6",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q6",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 6",
+  "part": "Question 6",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": null,
+  "prompt": "Which of the following is a function of TLS?",
+  "answer_type": "MULTI_CHOICE",
+  "marks": 1,
+  "options": [
+   {
+    "letter": "A",
+    "text": "Delivering packets between hosts on the internet",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "Dropping malformed packets before they reach a host computer",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Adding headers to data packets containing authentication information",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Ensuring that parties exchanging information are who they claim to be",
+    "image": null,
+    "correct": true
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Identifies the correct answer"
+   }
+  ],
+  "syllabus": [
+   "WEB-3",
+   "WEB-4"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q7",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q7",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 7",
+  "part": "Question 7",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "Consider the following cascading style sheet (CSS) code fragment for a website.\n\n```css\nbody {\n    font-size: 100%;\n    font-style: italic;\n    line-height: 1.8;\n    font-weight: normal;\n}\nh1 {\n    text-align: center;\n    font-style: normal;\n    font-size: 250%;\n    letter-spacing: 5px;\n    background-color: rgb(0, 0, 100);\n    color: white;\n    font-weight: 900;\n    border: 3px solid green;\n}\n```",
+  "prompt": "Which of the following best describes the appearance of the heading on the website?",
+  "answer_type": "MULTI_CHOICE",
+  "marks": 1,
+  "options": [
+   {
+    "letter": "A",
+    "text": "White background, black text, green border",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "Centre aligned, italic, increased letter spacing",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Blue background, white text, border around the heading",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "D",
+    "text": "Left aligned, bold, and 2.5 times larger than the rest of the page",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Identifies the correct answer"
+   }
+  ],
+  "syllabus": [
+   "WEB-9"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q8",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q8",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 8",
+  "part": "Question 8",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": null,
+  "prompt": "File locking prevents multiple users from editing a file at the same time. When a shared file is opened by a user, file locking ensures that only this user can make changes to the file while it is locked.\n\nWhich of the following does file locking minimise?",
+  "answer_type": "MULTI_CHOICE",
+  "marks": 1,
+  "options": [
+   {
+    "letter": "A",
+    "text": "Race conditions",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "B",
+    "text": "Invalid redirection",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Cross-site scripting",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Authentication issues",
+    "image": null,
+    "correct": false
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Identifies the correct answer"
+   }
+  ],
+  "syllabus": [
+   "SSA-13"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q2",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q2",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 2",
+  "part": "Question 2",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "prompt": "Complete the statement by selecting the correct term from each dropdown menu.\n\nThe [1] approach typically requires extensive documentation, while the [2] approach often emphasises working software over documentation.",
+  "answer_type": "DROPDOWN",
+  "marks": 1,
+  "dropdowns": [
+   {
+    "label": "1",
+    "options": [
+     "Agile",
+     "Waterfall",
+     "WAgile"
+    ],
+    "correct": [
+     "Waterfall"
+    ]
+   },
+   {
+    "label": "2",
+    "options": [
+     "Agile",
+     "Waterfall",
+     "WAgile"
+    ],
+    "correct": [
+     "Agile"
+    ]
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Identifies the correct item from each dropdown"
+   }
+  ],
+  "syllabus": [
+   "PROJ-4",
+   "PROJ-5"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q9",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q9",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 9",
+  "part": "Question 9",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "prompt": "Two approaches that can be used when programming databases for use in web applications are Object-Relational Mapping (ORM) and Structured Query Language (SQL).\n\nMatch each characteristic to the appropriate approach.",
+  "answer_type": "OBJECTIVE_RESPONSE",
+  "marks": 1,
+  "objective": {
+   "columns": [
+    "Object-Relational Mapping (ORM)",
+    "Structured Query Language (SQL)"
+   ],
+   "multi_select_per_row": true,
+   "rows": [
+    {
+     "statement": "Code is focused on object manipulation",
+     "correct": [
+      "Object-Relational Mapping (ORM)"
+     ]
+    },
+    {
+     "statement": "Tables can be joined to enhance searching",
+     "correct": [
+      "Object-Relational Mapping (ORM)",
+      "Structured Query Language (SQL)"
+     ]
+    },
+    {
+     "statement": "Programmers can choose the language used to access the database",
+     "correct": [
+      "Object-Relational Mapping (ORM)"
+     ]
+    }
+   ]
+  },
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Correctly matches each characteristic to the appropriate approach"
+   }
+  ],
+  "syllabus": [
+   "WEB-19"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q10",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q10",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 10",
+  "part": "Question 10",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "prompt": "Which of the following are goals of regulatory compliance in relation to software development?\n\nSelect all that apply.",
+  "answer_type": "MULTI_SELECT",
+  "marks": 1,
+  "options": [
+   {
+    "letter": "A",
+    "text": "Limiting the need for software updates",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "B",
+    "text": "Protecting sensitive data from unauthorised access",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "C",
+    "text": "Allowing developers to bypass security features when needed",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Reducing the testing time required during software development",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "E",
+    "text": "Ensuring software applications meet legal and industry standards",
+    "image": null,
+    "correct": true
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Identifies ALL the correct items"
+   }
+  ],
+  "syllabus": [
+   "SSA-5"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q11",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q11",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 11",
+  "part": "Question 11",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "prompt": "Which of the following are key principles of DevOps?\n\nSelect all that apply.",
+  "answer_type": "MULTI_SELECT",
+  "marks": 1,
+  "options": [
+   {
+    "letter": "A",
+    "text": "Rapid feedback",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "B",
+    "text": "Freedom from bias",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "C",
+    "text": "Procedural fairness",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Automation of repetitive tasks",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "E",
+    "text": "Collaboration and shared ownership",
+    "image": null,
+    "correct": true
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Identifies ALL the correct items"
+   }
+  ],
+  "syllabus": [
+   "AUTO-1"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q12",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q12",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 12",
+  "part": "Question 12",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "prompt": "For which of the following situations would logistic regression be used when training a machine learning model to make predictions?\n\nSelect all that apply.",
+  "answer_type": "MULTI_SELECT",
+  "marks": 2,
+  "options": [
+   {
+    "letter": "A",
+    "text": "Identifying whether a received email is spam",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "B",
+    "text": "Determining the outcome of a two-party election",
+    "image": null,
+    "correct": true
+   },
+   {
+    "letter": "C",
+    "text": "Calculating house prices based on size of the land",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "D",
+    "text": "Investigating the relationship between height and weight",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "E",
+    "text": "Estimating the rate at which a contagious illness will spread",
+    "image": null,
+    "correct": false
+   },
+   {
+    "letter": "F",
+    "text": "Working out if someone will be admitted to a university course",
+    "image": null,
+    "correct": true
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "2",
+    "criterion": "Identifies true or false correctly for all SIX check boxes"
+   },
+   {
+    "marks": "1",
+    "criterion": "Identifies true or false correctly for FOUR of the six checkboxes"
+   }
+  ],
+  "syllabus": [
+   "AUTO-6"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q13",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q13",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 13",
+  "part": "Question 13",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "prompt": "A software developer plans to use static application security testing (SAST) and dynamic application security testing (DAST) to check an application that is being developed.\n\nFor each strategy, choose the most appropriate stage in software development for it to be applied. Indicate whether access to source code is required.",
+  "answer_type": "DROPDOWN",
+  "marks": 2,
+  "dropdowns": [
+   {
+    "label": "SAST – timing",
+    "options": [
+     "Testing and evaluating",
+     "Identifying and defining",
+     "Researching and planning",
+     "Producing and implementing"
+    ],
+    "correct": [
+     "Producing and implementing"
+    ]
+   },
+   {
+    "label": "SAST – access to source code",
+    "options": [
+     "Yes",
+     "No"
+    ],
+    "correct": [
+     "Yes"
+    ]
+   },
+   {
+    "label": "DAST – timing",
+    "options": [
+     "Testing and evaluating",
+     "Identifying and defining",
+     "Researching and planning",
+     "Producing and implementing"
+    ],
+    "correct": [
+     "Testing and evaluating"
+    ]
+   },
+   {
+    "label": "DAST – access to source code",
+    "options": [
+     "Yes",
+     "No"
+    ],
+    "correct": [
+     "No"
+    ]
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "2",
+    "criterion": "Correctly identifies the timing and source code access for each strategy"
+   },
+   {
+    "marks": "1",
+    "criterion": "Correctly identifies the timing and source code access for ONE strategy OR correctly identifies the timing for each strategy"
+   }
+  ],
+  "syllabus": [
+   "SSA-9"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q14",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q14",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 14",
+  "part": "Question 14",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "Consider this code fragment.\n\n```\nFOR index = 5 TO 3\n    word[index] = word[index-2]\nNEXT index\n```\n\nThe array, word, contains the following data.\n\n| index | 1 | 2 | 3 | 4 | 5 |\n|---|---|---|---|---|---|\n| word[index] | S | M | A | R | T |",
+  "prompt": "Select the correct item from each dropdown menu to show the contents of the array after the code is run. (Five dropdowns, one per element; options A, M, R, S, T.)",
+  "answer_type": "DROPDOWN",
+  "marks": 1,
+  "dropdowns": [
+   {
+    "label": "word[1]",
+    "options": [
+     "A",
+     "M",
+     "R",
+     "S",
+     "T"
+    ],
+    "correct": [
+     "S"
+    ]
+   },
+   {
+    "label": "word[2]",
+    "options": [
+     "A",
+     "M",
+     "R",
+     "S",
+     "T"
+    ],
+    "correct": [
+     "M"
+    ]
+   },
+   {
+    "label": "word[3]",
+    "options": [
+     "A",
+     "M",
+     "R",
+     "S",
+     "T"
+    ],
+    "correct": [
+     "S"
+    ]
+   },
+   {
+    "label": "word[4]",
+    "options": [
+     "A",
+     "M",
+     "R",
+     "S",
+     "T"
+    ],
+    "correct": [
+     "M"
+    ]
+   },
+   {
+    "label": "word[5]",
+    "options": [
+     "A",
+     "M",
+     "R",
+     "S",
+     "T"
+    ],
+    "correct": [
+     "A"
+    ]
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "1",
+    "criterion": "Identifies the correct item from each dropdown"
+   }
+  ],
+  "syllabus": [
+   "PROJ-15"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q15a",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q15a",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 15a",
+  "part": "Question 15 (a)",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "A computer game is being developed.",
+  "prompt": "Part of a data dictionary for the computer game is shown. Select the correct entries to complete the data dictionary.\n\n| Variable | Data type | Format for display | Size in bytes | Description | Example |\n|---|---|---|---|---|---|\n| PlayerId | [1] | NXXXXN | [2] | Identifies player | [3] |\n| PlayerName | [4] | XX...XX | 15 | Player name | Nat Kim |\n| Level | [5] | NN | 1 | Level of player | 27 |\n| OnMission | [6] | X | 1 bit | Y or N | Y |\n| LastSave | Date and Time | [7] | 12 | Time last saved 24-hour time | 13:45:21.221 |",
+  "answer_type": "DROPDOWN",
+  "marks": 3,
+  "dropdowns": [
+   {
+    "label": "1 PlayerId data type",
+    "options": [
+     "Array",
+     "Boolean",
+     "Integer",
+     "String"
+    ],
+    "correct": [
+     "String"
+    ]
+   },
+   {
+    "label": "2 PlayerId size",
+    "options": [
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "correct": [
+     "6"
+    ]
+   },
+   {
+    "label": "3 PlayerId example",
+    "options": [
+     "NATHAN",
+     "2ATHA2",
+     "NATH22",
+     "N2222N"
+    ],
+    "correct": [
+     "2ATHA2"
+    ]
+   },
+   {
+    "label": "4 PlayerName data type",
+    "options": [
+     "Array",
+     "Boolean",
+     "Integer",
+     "String"
+    ],
+    "correct": [
+     "String"
+    ]
+   },
+   {
+    "label": "5 Level data type",
+    "options": [
+     "Array",
+     "Boolean",
+     "Integer",
+     "String"
+    ],
+    "correct": [
+     "Integer"
+    ]
+   },
+   {
+    "label": "6 OnMission data type",
+    "options": [
+     "Array",
+     "Boolean",
+     "Integer",
+     "String"
+    ],
+    "correct": [
+     "Boolean"
+    ]
+   },
+   {
+    "label": "7 LastSave format",
+    "options": [
+     "hhmmss.sss",
+     "hh:mm:ss.sss",
+     "hh:mm:ss",
+     "ss:mm:hh.hhh"
+    ],
+    "correct": [
+     "hh:mm:ss.sss"
+    ]
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Correctly completes ALL the dropdowns"
+   },
+   {
+    "marks": "2",
+    "criterion": "Correctly completes FIVE dropdowns"
+   },
+   {
+    "marks": "1",
+    "criterion": "Correctly completes THREE dropdowns"
+   }
+  ],
+  "syllabus": [
+   "PROJ-2"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q15b",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q15b",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 15b",
+  "part": "Question 15 (b)",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "A computer game is being developed.",
+  "prompt": "While this game is being developed, there are persistent issues with the code. Outline TWO software debugging tools that can be used to identify these logic errors.",
+  "answer_type": "SHORT",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Outlines TWO relevant software debugging tools"
+   },
+   {
+    "marks": "2",
+    "criterion": "Outlines ONE relevant software debugging tool OR identifies TWO relevant software debugging tools"
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides some relevant information"
+   }
+  ],
+  "sample_answer": "Breakpoints can be added to specific lines of code to halt program execution, allowing the programmer to check the value of specific variables or to step through the program line by line. Debugging output statements can be added to the code to indicate that a certain section of code has been reached or to show the contents of a variable.",
+  "sample_answer_images": [],
+  "syllabus": [
+   "PROJ-21"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q16a",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q16a",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 16a",
+  "part": "Question 16 (a)",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/hsc25_fullmark_002.png"
+  ],
+  "stimulus": "A weather app is to be designed to display real-time updates such as:\n\n-   rain commencing within the next 10 minutes\n-   weather event warnings and warning cancellations\n-   location specific weather conditions.",
+  "prompt": "Compare the use of a progressive web app (PWA) with an interactive website, for delivering this weather app. (3 marks)",
+  "answer_type": "SHORT",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Compares the use of a PWA with an interactive website for the weather app"
+   },
+   {
+    "marks": "2",
+    "criterion": "Outlines features of a PWA and/or an interactive website"
+   },
+   {
+    "marks": "1",
+    "criterion": "Identifies a feature of a PWA or an interactive website"
+   }
+  ],
+  "sample_answer": "Both PWAs and interactive websites are platform-independent, allowing users to access the app on any device with a browser. PWAs can pre-cache updates to enable offline updates when a stable internet connection is not available but may not provide real time updates for the most recent changes to weather or warnings. Meanwhile, interactive websites require a constant internet connection to provide any updates.\n\nAnswers could include: Some PWAs prompt for initial installation or setup which might deter some users.\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_002.png)",
+  "sample_answer_images": [
+   "assets/hsc25_fullmark_002.png"
+  ],
+  "syllabus": [
+   "WEB-1",
+   "WEB-21"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q16b",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q16b",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 16b",
+  "part": "Question 16 (b)",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/hsc25_fullmark_003.png"
+  ],
+  "stimulus": "A weather app is to be designed to display real-time updates such as:\n\n-   rain commencing within the next 10 minutes\n-   weather event warnings and warning cancellations\n-   location specific weather conditions.",
+  "prompt": "Outline TWO ways, other than the use of a PWA, to minimise the load time of this weather app. (3 marks)",
+  "answer_type": "SHORT",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Outlines TWO ways, other than the use of a PWA, to minimise the load time of the weather app"
+   },
+   {
+    "marks": "2",
+    "criterion": "Outlines ONE way, other than the use of a PWA, to minimise load time OR identifies TWO ways"
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides some relevant information"
+   }
+  ],
+  "sample_answer": "One way would be to provide the option to select lower resolution images or text only display. Another way would be to utilise caching as this would provide high speed access to commonly requested weather data.\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_003.png)",
+  "sample_answer_images": [
+   "assets/hsc25_fullmark_003.png"
+  ],
+  "syllabus": [
+   "WEB-13"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q16c",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q16c",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 16c",
+  "part": "Question 16 (c)",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/hsc25_fullmark_004.png"
+  ],
+  "stimulus": "A weather app is to be designed to display real-time updates such as:\n\n-   rain commencing within the next 10 minutes\n-   weather event warnings and warning cancellations\n-   location specific weather conditions.",
+  "prompt": "Describe ONE way that the ‘privacy by design’ approach could be implemented in this weather app. (3 marks)",
+  "answer_type": "SHORT",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Describes ONE way that the 'privacy by design' approach could be implemented in the weather app"
+   },
+   {
+    "marks": "2",
+    "criterion": "Outlines ONE feature of the 'privacy by design' approach"
+   },
+   {
+    "marks": "1",
+    "criterion": "Identifies a feature of the 'privacy by design' approach"
+   }
+  ],
+  "sample_answer": "Embedded within the design of the weather app would be a process for regularly deleting identifiable data. For example, the app would likely record a person's live location to deliver relevant weather details. The privacy by design approach would incorporate a regular process to delete these locations from cache.\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_004.png)",
+  "sample_answer_images": [
+   "assets/hsc25_fullmark_004.png"
+  ],
+  "syllabus": [
+   "SSA-7"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q17",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q17",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 17",
+  "part": "Question 17",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "An algorithm is required by a school to rate the risk of a location for school excursions.\n\nA teacher completes a 10-question survey to assess potential hazards for the location. Each question is given a score from 1 (low) to 5 (high), and the scores are stored in a 10-element integer array called _Risks_.\n\nThe scores for each question are added to give a total risk score.\n\nThe excursion risk is rated as:\n\n-   Low (total less than 20)\n-   Medium (total between 20 – 35)\n-   High (total above 35).",
+  "prompt": "Using pseudocode, with a repeat-until loop, write an algorithm to determine the excursion risk rating for a location. You can assume that the scores for the 10 questions are already stored in the array _Risks_.",
+  "answer_type": "SHORT",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Provides a substantially correct pseudocode algorithm"
+   },
+   {
+    "marks": "2",
+    "criterion": "Provides a pseudocode algorithm that addresses some aspects of the problem"
+   },
+   {
+    "marks": "1",
+    "criterion": "Shows some understanding of the problem or pseudocode"
+   }
+  ],
+  "sample_answer": "```\nBEGIN RiskRating\n    Total = 0\n    index = 0\n    REPEAT\n        Total = Total + Risks[index]\n        index = index + 1\n    UNTIL index = 10\n    IF Total > 35 THEN\n        Rating = \"High\"\n    ELSE\n        IF Total < 20 THEN\n            Rating = \"Low\"\n        ELSE\n            Rating = \"Medium\"\n        ENDIF\n    ENDIF\n    Display Rating\nEND RiskRating\n```\n\n(The guidelines also accept a CASEWHERE or ELSEIF version of the selection.)",
+  "sample_answer_images": [],
+  "syllabus": [
+   "PROJ-15"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q18",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q18",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 18",
+  "part": "Question 18",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/hsc25_fullmark_005.png"
+  ],
+  "stimulus": "A streaming service has exclusive rights to broadcast a live event each Sunday afternoon.",
+  "prompt": "Explain how the streaming service can use metadata and data mining to prevent technical difficulties during the broadcast of this weekly event.",
+  "answer_type": "SHORT",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Explains how metadata and data mining can be used to prevent technical difficulties during the broadcast of the live event"
+   },
+   {
+    "marks": "2",
+    "criterion": "Outlines how metadata AND/OR data mining can be used to prevent broadcast technical difficulties"
+   },
+   {
+    "marks": "1",
+    "criterion": "Identifies a feature of metadata or data mining"
+   }
+  ],
+  "sample_answer": "Metadata describes the content, structure and meaning of raw data, enabling more effective, accurate and efficient data mining. Data mining identifies user preferences and viewing patterns from large datasets, helping streaming services personalise recommendations and identify times of predicted high demand. Streaming service management uses this along with real-time user data to balance server loads and deliver smooth playback experiences.\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_005.png)",
+  "sample_answer_images": [
+   "assets/hsc25_fullmark_005.png"
+  ],
+  "syllabus": [
+   "WEB-5"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q19",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q19",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 19",
+  "part": "Question 19",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/hsc25_fullmark_006.png",
+   "assets/hsc25_fullmark_007.png"
+  ],
+  "stimulus": "In an organisation, temporary passwords are automatically generated for new user accounts. Each password is created from the first three letters of the username followed by ‘123’.\n\nFor example, the username ‘NESA’ will have the password ‘NES123’.\n\nWhen a user logs in for the first time, they are asked for their username and password. They receive a welcome message or an error message, depending on whether the password entered follows the rules of new user accounts.",
+  "prompt": "Write a Python program that asks a new user for their username and password, and then checks whether the password rule has been followed.",
+  "answer_type": "CODING",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Provides correct code for the problem"
+   },
+   {
+    "marks": "2",
+    "criterion": "Provides partially correct code that includes a correct selection structure OR password creation"
+   },
+   {
+    "marks": "1",
+    "criterion": "Shows some understanding of the scenario and Python programming"
+   }
+  ],
+  "sample_answer": "```python\nuName = input('What is your username?')\npassword = input('What is your password?')\npasswordP1 = uName[:3]\npasswordP1 = passwordP1 + '123'\nif passwordP1 == password:\n    print('Welcome!')\nelse:\n    print('Incorrect password entered')\n```\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_006.png) ![](assets/hsc25_fullmark_007.png)",
+  "sample_answer_images": [
+   "assets/hsc25_fullmark_006.png",
+   "assets/hsc25_fullmark_007.png"
+  ],
+  "syllabus": [
+   "SSA-10",
+   "PROJ-15"
+  ],
+  "language": "PYTHON"
+ },
+ {
+  "id": "nesa-hsc2025-q20",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q20",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 20",
+  "part": "Question 20",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/hsc25_fullmark_008.png"
+  ],
+  "stimulus": null,
+  "prompt": "Describe how session management can affect the efficiency of code execution for the user.",
+  "answer_type": "SHORT",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Describes how session management can affect code execution efficiency"
+   },
+   {
+    "marks": "2",
+    "criterion": "Identifies some features of session management"
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides some relevant information"
+   }
+  ],
+  "sample_answer": "Efficient session management limits memory consumption by restricting session data size and lifetime. Excessive reading, writing or storing large objects increases input/output operations and slows code execution for the user. Removing sessions when they are no longer required is essential to prevent unnecessary resource consumption.\n\nAnswers could include:\n- Reducing database and network bottlenecks – frequent access to session stores, especially in distributed environments, can cause latency\n- Preventing memory leaks – poor session handling, particularly in server-side storage, can lead to memory leaks, triggering more frequent garbage collection and degrading performance.\n- Enabling scalable, responsive systems – asynchronous or lazy cleanup can further optimise execution.\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_008.png)",
+  "sample_answer_images": [
+   "assets/hsc25_fullmark_008.png"
+  ],
+  "syllabus": [
+   "SSA-12"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q21",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q21",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 21",
+  "part": "Question 21",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/hsc25_fullmark_010.png",
+   "assets/hsc25_fullmark_011.png"
+  ],
+  "stimulus": "Below is the _Issues_ table for a technical support company. FixTime, in minutes, is the time taken to complete each job.\n\n| JobID | Issue | Response | FixTime | Category | Status |\n| --- | --- | --- | --- | --- | --- |\n| 0001 | Cannot connect to the internet | Clear cache | 22 | Software | Pending |\n| 0002 | Installation failure | Reinstall the printer drivers | 76 | Hardware | Pending |\n| 0004 | Forgot password | Reset password | 97 | Software | Resolved |\n| 0005 | Installation failure | Follow the installation guide | 110 | Hardware | Escalated |\n| 0009 | Blue screen error | Run a system diagnostic test | 120 | Software | Pending |\n| 0011 | Installation failure | Verify email settings | 45 | Software | Escalated |",
+  "prompt": "Construct a SQL query that displays:\n\n- the number of pending software jobs\n- the number of pending hardware jobs\n- the number of escalated software jobs\n- the number of escalated hardware jobs\n\nList the results in order from the highest to lowest, based on the number of jobs.",
+  "answer_type": "SQL",
+  "marks": 4,
+  "criteria": [
+   {
+    "marks": "4",
+    "criterion": "Provides a correct SQL query that extracts 'Pending' and 'Escalated' jobs for the 'Software' and 'Hardware' categories, counts the jobs for each status in each category, and outputs results in descending order"
+   },
+   {
+    "marks": "3",
+    "criterion": "Provides an SQL query that addresses most of the requirements of the problem"
+   },
+   {
+    "marks": "2",
+    "criterion": "Provides an SQL query that shows some understanding of the problem"
+   },
+   {
+    "marks": "1",
+    "criterion": "Shows some understanding of SQL or the problem"
+   }
+  ],
+  "sample_answer": "```sql\nSELECT Category, Status, COUNT(JobID) AS Jobs\nFROM Issues\nWHERE (Status = 'Pending' OR Status = 'Escalated')\nGROUP BY Status, Category\nORDER BY Jobs DESC\n```\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_010.png) ![](assets/hsc25_fullmark_011.png)",
+  "sample_answer_images": [
+   "assets/hsc25_fullmark_010.png",
+   "assets/hsc25_fullmark_011.png"
+  ],
+  "syllabus": [
+   "WEB-18"
+  ],
+  "dataset_setup_sql": "CREATE TABLE Issues (JobID TEXT, Issue TEXT, Response TEXT, FixTime INT, Category TEXT, Status TEXT); INSERT INTO Issues VALUES ('0001', 'Cannot connect to the internet', 'Clear cache', 22, 'Software', 'Pending'); INSERT INTO Issues VALUES ('0002', 'Installation failure', 'Reinstall the printer drivers', 76, 'Hardware', 'Pending'); INSERT INTO Issues VALUES ('0004', 'Forgot password', 'Reset password', 97, 'Software', 'Resolved'); INSERT INTO Issues VALUES ('0005', 'Installation failure', 'Follow the installation guide', 110, 'Hardware', 'Escalated'); INSERT INTO Issues VALUES ('0009', 'Blue screen error', 'Run a system diagnostic test', 120, 'Software', 'Pending'); INSERT INTO Issues VALUES ('0011', 'Installation failure', 'Verify email settings', 45, 'Software', 'Escalated');"
+ },
+ {
+  "id": "nesa-hsc2025-q22",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q22",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 22",
+  "part": "Question 22",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/hsc25_fullmark_013.png"
+  ],
+  "stimulus": "An animal classification tool is to be developed. The classes to be used are shown below.\n\n| Mammal |\n| --- |\n| Colour |\n| Size |\n| Birth type |\n| Number of teeth |\n\n| Reptile |\n| --- |\n| Colour |\n| Size |\n| Scale type |\n| Tongue type |\n\n| Whale |\n| --- |\n| Colour |\n| Size |\n| Birth type |\n| Number of teeth |\n| Blowhole type |\n| Migration location |\n\n| Dog |\n| --- |\n| Colour |\n| Size |\n| Birth type |\n| Number of teeth |\n| Breed |\n| Fur |",
+  "prompt": "Construct a class diagram that shows inheritance and removes redundant attributes for each class. Additional classes may be included if required.\n\nYou do NOT need to show the nature of the relationships between the classes.",
+  "answer_type": "DRAWING",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Constructs a correct class diagram that shows inheritance and removes redundant attributes from each class"
+   },
+   {
+    "marks": "2",
+    "criterion": "Constructs a class diagram that shows some understanding of the problem"
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides some relevant information"
+   }
+  ],
+  "sample_answer": "Official sample (diagram), in text form:\n- **Animal**: Colour, Size\n  - **Reptile** (inherits Animal): Scale type, Tongue type\n  - **Mammal** (inherits Animal): Birth type, Number of teeth\n    - **Dog** (inherits Mammal): Breed, Fur\n    - **Whale** (inherits Mammal): Blowhole type, Migration location\nInheritance arrows point from each subclass to its superclass.\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_013.png)",
+  "sample_answer_images": [
+   "assets/hsc25_fullmark_013.png"
+  ],
+  "syllabus": [
+   "PROJ-11"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q23a",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q23a",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 23a",
+  "part": "Question 23 (a)",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/hsc25_fullmark_014.png"
+  ],
+  "stimulus": "A food delivery service offers prepackaged meals tailored to different dietary preferences, for example, vegetarian and gluten-free. It has developed a website for customers to place orders. The website is ready for testing and feedback.\n\nThe website includes:\n\n-   a menu that dynamically updates based on meal availability\n-   user accounts where customers can track deliveries and manage subscriptions\n-   a backend that processes orders and payments, updates stock and communicates with the delivery team.",
+  "prompt": "Outline potential social and ethical issues associated with the use of this website. (3 marks)",
+  "answer_type": "SHORT",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Outlines relevant social and ethical issues"
+   },
+   {
+    "marks": "2",
+    "criterion": "Outlines ONE relevant social or ethical issue OR identifies relevant social and/or ethical issues"
+   },
+   {
+    "marks": "1",
+    "criterion": "Identifies ONE relevant social or ethical issue"
+   }
+  ],
+  "sample_answer": "The website will need to ensure payment and address data is appropriately secured and accessible only to authorised personnel. It also needs to ensure that pages can be viewed in a wide variety of languages and that the information about dishes displayed is accurate and representative of the product.\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_014.png)",
+  "sample_answer_images": [
+   "assets/hsc25_fullmark_014.png"
+  ],
+  "syllabus": [
+   "SSA-17"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q23b",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q23b",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 23b",
+  "part": "Question 23 (b)",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/hsc25_fullmark_015.png"
+  ],
+  "stimulus": "A food delivery service offers prepackaged meals tailored to different dietary preferences, for example, vegetarian and gluten-free. It has developed a website for customers to place orders. The website is ready for testing and feedback.\n\nThe website includes:\n\n-   a menu that dynamically updates based on meal availability\n-   user accounts where customers can track deliveries and manage subscriptions\n-   a backend that processes orders and payments, updates stock and communicates with the delivery team.",
+  "prompt": "Explain why server-side web programming would be needed to develop this website. Support your answer with examples from the website.",
+  "answer_type": "SHORT",
+  "marks": 3,
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Explains why server-side web programming is needed to develop the website with examples from the scenario"
+   },
+   {
+    "marks": "2",
+    "criterion": "Outlines some features of server-side web programming for developing the website with examples from the scenario"
+   },
+   {
+    "marks": "1",
+    "criterion": "Identifies a feature of server-side web programming and/or providing relevant examples from the scenario"
+   }
+  ],
+  "sample_answer": "Server-side development will need to be used to provide dynamic information to the front-end (website). There are many dynamic aspects to the website, including the menu which changes along with subscription information and order tracking information. Server-side scripting will need to be written to read the relevant information from storage (most likely, a database) and then provide this information to the front-end.\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_015.png)",
+  "sample_answer_images": [
+   "assets/hsc25_fullmark_015.png"
+  ],
+  "syllabus": [
+   "WEB-7",
+   "WEB-15"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q23c",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q23c",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 23c",
+  "part": "Question 23 (c)",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "A food delivery service offers prepackaged meals tailored to different dietary preferences, for example, vegetarian and gluten-free. It has developed a website for customers to place orders. The website is ready for testing and feedback.\n\nThe website includes:\n\n-   a menu that dynamically updates based on meal availability\n-   user accounts where customers can track deliveries and manage subscriptions\n-   a backend that processes orders and payments, updates stock and communicates with the delivery team.",
+  "prompt": "Security features have been included in the design of the website. Choose the fundamental security concept that matches each of the security features.\n\n1. The system verifies that the total price displayed matches the actual total after items are added to the cart.\n2. The backend ensures the website remains accessible during peak order times.\n3. The system logs all user actions, such as changes to subscriptions or delivery addresses.\n4. User payment details, such as credit card numbers, are encrypted during transactions.\n5. A user with a basic account can place orders but cannot access admin features.",
+  "answer_type": "DROPDOWN",
+  "marks": 3,
+  "dropdowns": [
+   {
+    "label": "The system verifies that the total price displayed matches the actual total after items are added to the cart.",
+    "options": [
+     "integrity",
+     "availability",
+     "authorisation",
+     "accountability",
+     "confidentiality",
+     "authentication"
+    ],
+    "correct": [
+     "integrity"
+    ]
+   },
+   {
+    "label": "The backend ensures the website remains accessible during peak order times.",
+    "options": [
+     "integrity",
+     "availability",
+     "authorisation",
+     "accountability",
+     "confidentiality",
+     "authentication"
+    ],
+    "correct": [
+     "availability"
+    ]
+   },
+   {
+    "label": "The system logs all user actions, such as changes to subscriptions or delivery addresses.",
+    "options": [
+     "integrity",
+     "availability",
+     "authorisation",
+     "accountability",
+     "confidentiality",
+     "authentication"
+    ],
+    "correct": [
+     "accountability"
+    ]
+   },
+   {
+    "label": "User payment details, such as credit card numbers, are encrypted during transactions.",
+    "options": [
+     "integrity",
+     "availability",
+     "authorisation",
+     "accountability",
+     "confidentiality",
+     "authentication"
+    ],
+    "correct": [
+     "confidentiality"
+    ]
+   },
+   {
+    "label": "A user with a basic account can place orders but cannot access admin features.",
+    "options": [
+     "integrity",
+     "availability",
+     "authorisation",
+     "accountability",
+     "confidentiality",
+     "authentication"
+    ],
+    "correct": [
+     "authorisation"
+    ]
+   }
+  ],
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Provides the correct response for ALL items"
+   },
+   {
+    "marks": "2",
+    "criterion": "Provides the correct response for THREE items"
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides the correct response for ONE item"
+   }
+  ],
+  "syllabus": [
+   "SSA-4"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q24",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q24",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 24",
+  "part": "Question 24",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/hsc25_fullmark_016.png",
+   "assets/hsc25_fullmark_017.png"
+  ],
+  "stimulus": "A construction company introduces a safety monitoring system that uses artificial intelligence. Cameras and wearable sensors track worker movements and environmental conditions. The system detects unsafe behaviours through artificial intelligence, such as:\n\n-   standing too close to operating machinery\n-   entering restricted zones\n-   failure to wear personal protective equipment (PPE).\n\nAlerts are sent in real-time to site supervisors, and long-term data is stored for further analysis.",
+  "prompt": "Discuss the possible impact of this monitoring system on workers.",
+  "answer_type": "SHORT",
+  "marks": 5,
+  "criteria": [
+   {
+    "marks": "5",
+    "criterion": "Provides a comprehensive discussion of the impact of the safety monitoring system on workers with reference to the scenario"
+   },
+   {
+    "marks": "4",
+    "criterion": "Outlines both positive and negative ways, that the safety monitoring system can affect workers"
+   },
+   {
+    "marks": "3",
+    "criterion": "Outlines some ways that the safety monitoring system can affect workers"
+   },
+   {
+    "marks": "2",
+    "criterion": "Outlines ONE way that the safety monitoring system can affect workers OR identifies some ways that the safety monitoring system can affect workers"
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides some relevant information"
+   }
+  ],
+  "sample_answer": "The AI monitoring system can improve safety on site by reducing human error through real-time alerts and remote monitoring. It can also help supervisors track workers' compliance with PPE requirements and identify risky behaviours, potentially preventing accidents. However, some workers might feel their privacy is invaded, especially if the wearables continue monitoring during breaks or in private areas like bathrooms. There's also a risk of the system misidentifying safe behaviour as unsafe, leading to unnecessary alerts or stress which could cause distractions at critical times. Additionally, the long-term data collection could be used to improve training, but workers may worry about how the data is stored or used.\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_016.png) ![](assets/hsc25_fullmark_017.png)",
+  "sample_answer_images": [
+   "assets/hsc25_fullmark_016.png",
+   "assets/hsc25_fullmark_017.png"
+  ],
+  "syllabus": [
+   "AUTO-9"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q25",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q25",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 25",
+  "part": "Question 25",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [
+   "assets/hsc25_fullmark_018.png"
+  ],
+  "stimulus": "An airline introduces a virtual personal assistant as an initial support contact point for cancelled flights, missed connections, or lost luggage. The virtual personal assistant uses a neural network to:\n\n-   analyse support queries to direct customers to the appropriate department\n-   recommend appropriate tone and wording to be used by the human customer support representative\n-   assess data such as support turnaround time, customer ratings, and repeat contacts.",
+  "prompt": "Explain how the neural network supports the virtual personal assistant. Include ONE positive and ONE negative impact of using the virtual personal assistant.",
+  "answer_type": "SHORT",
+  "marks": 5,
+  "criteria": [
+   {
+    "marks": "5",
+    "criterion": "Explains how the neural network supports the virtual personal assistant; includes one positive AND one negative impact of using the virtual personal assistant"
+   },
+   {
+    "marks": "4",
+    "criterion": "Explains how the neural network supports the virtual personal assistant OR outlines how the neural network supports the assistant and includes one positive AND one negative impact"
+   },
+   {
+    "marks": "3",
+    "criterion": "Outlines features of neural network AND/OR impacts of using the virtual personal assistant"
+   },
+   {
+    "marks": "2",
+    "criterion": "Outlines a feature of neural network OR an impact of using the virtual personal assistant OR identifies features of neural network AND/OR impacts"
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides some relevant information"
+   }
+  ],
+  "sample_answer": "Neural networks recognise natural language patterns to categorise common support queries, such as lost luggage, and use nodes to assist with processing. They assess language tone to gauge frustration or urgency, allowing the virtual personal assistant to recommend specific phrasing for customer service staff. For instance, calming language may be suggested for distressed customers. By tracking customer ratings and turnaround times, the neural network uses weightings to refine recommendations to prioritise high-frequency queries or improve suggestions for poorly rated interactions. While this system streamlines support processes and improves response accuracy, it may also impact the role of customer service staff. As the neural network learns from interactions, staff may rely more on its recommendations, potentially reducing their familiarity with emerging query trends or response strategies. Customers may come to expect faster, more precise service, raising the standard for human interactions.\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_018.png)",
+  "sample_answer_images": [
+   "assets/hsc25_fullmark_018.png"
+  ],
+  "syllabus": [
+   "AUTO-5",
+   "AUTO-4"
+  ]
+ },
+ {
+  "id": "nesa-hsc2025-q26",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q26",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 26",
+  "part": "Question 26",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 3,
+  "issues": [],
+  "images": [],
+  "stimulus": "As part of a computer game, a program is needed to randomly place 15 diamonds on a 5 × 5 grid. Once the locations of the diamonds have been generated, the program outputs the 5 × 5 grid, with the location of each diamond signified by an ‘X’.\n\nAn example of the output required is shown below.\n\n```\n| X |   | X |   | X |\n|   | X |   |   | X |\n|   | X | X | X |   |\n| X |   | X |   |   |\n| X | X | X | X | X |\n```",
+  "prompt": "Using Python, write a program that achieves this task.",
+  "answer_type": "CODING",
+  "marks": 5,
+  "criteria": [
+   {
+    "marks": "5",
+    "criterion": "Provides a correct python program that addresses the following requirements: creates a list of unique randomly generated numbers; processes the generated list correctly; uses selection and looping structures; provides correctly formatted output; uses inbuilt python functions"
+   },
+   {
+    "marks": "4",
+    "criterion": "Provides a substantially correct python program that addresses most of the requirements"
+   },
+   {
+    "marks": "3",
+    "criterion": "Provides a python program that addresses some of the requirements"
+   },
+   {
+    "marks": "2",
+    "criterion": "Provides a python program that addresses one requirement"
+   },
+   {
+    "marks": "1",
+    "criterion": "Shows some understanding of the problem"
+   }
+  ],
+  "sample_answer": "```python\nimport random\n\nrandList = []\nfor x in range(15):\n    nextInt = random.randint(1,25)\n    while nextInt in randList:\n        nextInt = random.randint(1,25)\n    randList.append(nextInt)\n\npos = 0\nwhile pos < 25:\n    if pos in randList:\n        print (\"| X\", end=\" \")\n    else:\n        print (\"| \", end=\" \")\n    pos = pos + 1\n    if (pos % 5 == 0):\n        print(\"| \\n\")\n```",
+  "sample_answer_images": [],
+  "syllabus": [
+   "PROJ-13",
+   "PROJ-15"
+  ],
+  "language": "PYTHON"
+ },
+ {
+  "id": "nesa-hsc2025-q27",
+  "origin": "NESA",
+  "reserved": true,
+  "source": "RESERVED – 2025 HSC (unseen until Sunday) — 2025 HSC Software Engineering Q27",
+  "source_paper": "2025 HSC Software Engineering",
+  "publisher": "NESA",
+  "question_title": "2025 HSC Question 27",
+  "part": "Question 27",
+  "key_source": "NESA 2025 HSC Marking Guidelines (official)",
+  "quality": 2,
+  "issues": [
+   "video stimulus not available (copyright); answer from general knowledge"
+  ],
+  "images": [
+   "assets/hsc25_fullmark_020.png",
+   "assets/hsc25_fullmark_021.png"
+  ],
+  "stimulus": "Watch the video, and then answer the question. (The video is not available online: \"Due to copyright restrictions, this material cannot be displayed until permission has been obtained.\")",
+  "prompt": "Explain how human bias could affect the usefulness of artificial intelligence (AI) solutions. Support your answer with reference to the video.",
+  "answer_type": "SHORT",
+  "marks": 6,
+  "criteria": [
+   {
+    "marks": "6",
+    "criterion": "Explains how human bias could affect the usefulness of AI solutions; supports answer with reference to the video"
+   },
+   {
+    "marks": "5",
+    "criterion": "Describes how human bias could affect the usefulness of AI solutions; refers to a scenario(s) in the video"
+   },
+   {
+    "marks": "4",
+    "criterion": "Outlines how human bias could affect AI solutions; refers to the video"
+   },
+   {
+    "marks": "2–3",
+    "criterion": "Identifies some sources/examples of human bias AND/OR identifies effects of human bias on AI solutions AND/OR outlines how AI learns"
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides some relevant information"
+   }
+  ],
+  "sample_answer": "AI develops its ability by analysing vast amounts of data. The quality of these data can be influenced by human bias, and in turn, affect the usefulness of AI solutions.\n\nHuman bias may be explicit or implicit. Explicit biases are intentional. For example, a researcher may favour male physicists and only collect pictures of male physicists for training an AI solution, as shown in the video. Implicit biases operate unconsciously and may be shaped by social and cultural factors. Whether the bias was explicit or implicit, the choice of male physicists would suggest to the AI solution that physicists are male.\n\nHuman bias can occur in various stages of the development of AI solutions. As shown in the photo library example, training data needs to be diverse and representative, otherwise AI solutions may produce inaccurate or unhelpful responses. The process of labelling training data may also introduce biases as people may have different interpretations of the same data. The video shows that if most people draw shoes in particular ways, certain types of shoes will not be recognised as a shoe.\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_020.png) ![](assets/hsc25_fullmark_021.png)",
+  "sample_answer_images": [
+   "assets/hsc25_fullmark_020.png",
+   "assets/hsc25_fullmark_021.png"
+  ],
+  "syllabus": [
+   "AUTO-11"
+  ]
+ }
+]

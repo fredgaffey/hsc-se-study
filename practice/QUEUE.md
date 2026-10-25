@@ -118,7 +118,7 @@ Evaluate the efficacy of the above dashboard in achieving its goal. Consider the
 
 Outline the social and ethical issues that the developer needs to take into account when developing this app
 
-### ⬜ #9 · End User Influence (SA, TKS 2025) — 4 marks · 8 min · ~140 words
+### ✅ #9 · End User Influence (SA, TKS 2025) — 4 marks · 8 min · ~140 words **4/4**
 <sub>id `6a0f5b` · new</sub>
 
 Explain the challenges of balancing usability with security in software design, and suggest ways developers can address these challenges.

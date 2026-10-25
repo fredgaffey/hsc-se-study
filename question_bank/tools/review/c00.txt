@@ -1,0 +1,60 @@
+0|SSA-4,WEB-4|2|row 'prevents unauthorised users from accessing data' is ambiguous: role-based access control also fits (key says Encryption)
+1|Y11|1|
+2|SSA-4|2|marking criteria (2-mark band) refers to a vulnerability assessment - copy/paste error
+3|OUT|1|
+4|OUT|1|
+5|Y11|1|
+6|SSA-9,SSA-8|3|
+7|PROJ-2|2|
+8|OUT|1|
+9|SSA-17|2|
+10|Y11|1|
+11|WEB-21,PROJ-20|2|
+12|SSA-2|2|
+13|Y11|1|
+14|OUT|1|
+15|SSA-2|3|
+16|OUT|1|
+17|OUT|1|
+18|OUT|1|
+19|Y11|1|
+20|OUT|1|
+21|Y11|1|
+22|OUT|1|
+23|OUT|1|
+24|PROJ-2|1|key debatable: storing a 2-digit year is arguably an inappropriate data type/format (B) rather than data structure (C)
+25|Y11|1|
+26|OUT|1|
+27|OUT|1|
+28|PROJ-24|2|
+29|PROJ-1,WEB-13|2|marks (1) do not match the 2-mark criteria
+30|Y11|1|
+31|OUT|1|
+32|Y11|1|
+33|Y11|1|
+34|Y11|1|
+35|OUT|1|
+36|OUT|1|
+37|PROJ-15|2|
+38|OUT|1|
+39|OUT|1|
+40|OUT|1|
+41|OUT|1|
+42|OUT|1|
+43|PROJ-15|3|
+44|PROJ-2|3|
+45|Y11|1|marking criteria incomplete
+46|PROJ-15|3|
+47|Y11|1|
+48|OUT|1|
+49|OUT|1|
+50|OUT|1|marking criteria are placeholders ('XYZ', 'ABC')
+51|PROJ-1|2|
+52|OUT|1|
+53|PROJ-15|3|
+54|OUT|1|
+55|OUT|1|
+56|Y11|1|
+57|PROJ-1|2|key debatable (communication issues are relevant when identifying client needs)
+58|PROJ-16|2|
+59|Y11|1|

@@ -1,0 +1,2860 @@
+{
+ "exam": "Sweep 2 - Programming for the Web (SEN Online)",
+ "drill": true,
+ "created": "2026-10-24T03:53:00.776Z",
+ "duration_minutes": 38,
+ "reading_minutes": 0,
+ "total_available": 42,
+ "parts_total": 42,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "2.1 Web Programming Applications",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "92abb503-d210-486b-b0e1-b50087325ac9",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Select all that apply: Which benefits are provided by Progressive Web Apps (PWAs)?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Push notifications",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Fast loading speeds",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Offline functionality",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-1",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "PWAs are websites that act like apps. They can send push notifications, load fast (thanks to caching) and work offline.",
+      "options": {
+       "A": "Right. PWAs can send push notifications.",
+       "B": "Right. Cached files make them load fast.",
+       "C": "Right. Service workers let them work offline."
+      },
+      "strategy": "'Select all' means judging each option on its own. Sometimes all are right.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "2.1 Web Programming Applications",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "0e02c07b-1dfc-41c5-9c44-0a2da98c6d05",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A small business wants to build a platform where customers can browse products and receive order notifications. However, they cannot afford a native mobile app. Which solution should they choose?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Build a Progressive Web App",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Use a static website",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Build an interactive Flask-based website",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Develop a mobile app",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-1",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "A PWA is cheaper than a native app but can still send notifications. That meets both needs.",
+      "options": {
+       "A": "Right. App-like features, including notifications, at website cost.",
+       "B": "Wrong. A static site can't send order notifications.",
+       "C": "Wrong. A normal Flask website can't send push notifications to the device.",
+       "D": "Wrong. They can't afford a native mobile app."
+      },
+      "strategy": "Match every detail in the scenario: low cost AND notifications. Only one option meets both.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "2.2 Data Transfer",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "c80d8d80-ce12-4399-a065-7d8d00c68c6f",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Select all components of a data packet: (Select all that apply.)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Header",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Payload",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Trailer",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-2",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "A packet has a header (addresses and info), a payload (the actual data) and a trailer (error checking).",
+      "options": {
+       "A": "Right. The header holds source, destination and order.",
+       "B": "Right. The payload is the data being sent.",
+       "C": "Right. The trailer marks the end and checks for errors."
+      },
+      "strategy": "'Select all' means judging each option. Remember the three parts: start, middle, end.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "2.2 Data Transfer",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "f6f01d8b-dc87-4de0-ae59-21a60222fe89",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which type of DNS query expects the DNS server to return the correct IP address or an error message?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Iterative Query",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Direct Query",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Non-Recursive Query",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Recursive Query",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-2",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "In a recursive query, the DNS server must do all the work and return the IP address or an error.",
+      "options": {
+       "A": "Wrong. In an iterative query the server may just point you to another server.",
+       "B": "Wrong. 'Direct query' is not a DNS query type.",
+       "C": "Wrong. A non-recursive query is answered only from what the server already knows.",
+       "D": "Right. The server returns the full answer or an error."
+      },
+      "strategy": "Match the detail 'answer or an error' to the definition. Cross out made-up terms like 'Direct Query'.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "2.3 Web Protocols",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "ad5994d9-5795-4481-8f04-64e9bd9a2f42",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which protocol is responsible for translating domain names like www.example.com Links to an external site. into IP addresses?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "HTTP",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "SMTP",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "FTP",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "DNS",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-3",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "DNS (Domain Name System) turns names like example.com into IP addresses.",
+      "options": {
+       "A": "Wrong. HTTP transfers web pages.",
+       "B": "Wrong. SMTP sends email.",
+       "C": "Wrong. FTP transfers files.",
+       "D": "Right. DNS is the internet's phone book."
+      },
+      "strategy": "Spot the keyword: 'domain names' matches Domain Name System.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "2.3 Web Protocols",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "c78898cd-e986-48f8-b16c-d285e7b17944",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following protocols is responsible for retrieving emails from a mail server to a local device?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "POP3",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "IMAP",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "DNS",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "SMTP",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-3",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "POP3 downloads emails from the server to your device.",
+      "options": {
+       "A": "Right. POP3 downloads mail to the local device.",
+       "B": "Marked wrong by the key. But IMAP also retrieves email. It keeps it synced on the server too.",
+       "C": "Wrong. DNS finds IP addresses.",
+       "D": "Wrong. SMTP sends email. It doesn't retrieve it."
+      },
+      "strategy": "Separate send (SMTP) from receive (POP3, IMAP). If two options fit, pick the one closest to the exact words: 'to a local device' = POP3.",
+      "key_check": "debatable",
+      "key_note": "IMAP (B) also retrieves email from a mail server. POP3 is the better match for 'to a local device' because it downloads and usually removes mail from the server. But IMAP is not wrong."
+     }
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "2.4 Securing the Web",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "6cfe820d-bb73-4030-acf7-1f47e2f1a49b",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A software developer needs to ensure that their distributed software is secure and untampered. What process should they use to verify the software’s authenticity?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Apply a symmetric encryption key.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Encrypt the software with AES.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Use a digital signature.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Generate a hash with MD5.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-4",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "A digital signature proves who made the software and that it hasn't been changed.",
+      "options": {
+       "A": "Wrong. A symmetric key hides data. It doesn't prove who sent it.",
+       "B": "Wrong. AES encryption keeps data secret but doesn't prove the author.",
+       "C": "Right. Signatures give authenticity and integrity.",
+       "D": "Wrong. A hash checks for changes but not who made it. MD5 is also weak now."
+      },
+      "strategy": "Match the keyword: 'authenticity' (who made it) = digital signature.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "2.4 Securing the Web",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "e63bb11a-140f-4587-bc09-ccf3e93eb0d2",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which encryption algorithm is known for using the same key for both encryption and decryption?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "RSA",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "SHA-256",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "EEC",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "AES",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-4",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "AES is symmetric encryption: the same key locks and unlocks the data.",
+      "options": {
+       "A": "Wrong. RSA is asymmetric: it uses a public and private key pair.",
+       "B": "Wrong. SHA-256 is a hash, not encryption. It can't be decrypted.",
+       "C": "Wrong. 'EEC' is likely ECC (elliptic curve). That is asymmetric.",
+       "D": "Right. AES uses one shared key."
+      },
+      "strategy": "Sort the options into groups: symmetric, asymmetric, hashing. Then pick from the right group.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "title": "2.5 Big Data",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "e0de972f-505c-44f7-9ef2-ba1bf5080ff6",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following are common data mining techniques? (Select all that apply)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Clustering",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Regression",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Normalisation",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Classification",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-5",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Data mining finds patterns. Clustering, regression and classification are mining techniques.",
+      "options": {
+       "A": "Right. Clustering groups similar data.",
+       "B": "Right. Regression predicts number values.",
+       "C": "Wrong. Normalisation cleans or scales data before mining. It is not mining itself.",
+       "D": "Right. Classification sorts data into labelled groups."
+      },
+      "strategy": "'Select all' means judging each option. Ask: does it find patterns, or just prepare the data?",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "title": "2.5 Big Data",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "2e5b3a28-d161-4fcc-aa09-d6f3b458db3f",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which data mining technique is used to discover relationships between variables, such as identifying products frequently bought together?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Classification",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Regression",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Association",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Clustering",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-5",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Association finds items that often go together, like 'people who buy bread also buy butter'.",
+      "options": {
+       "A": "Wrong. Classification sorts data into known groups.",
+       "B": "Wrong. Regression predicts a number.",
+       "C": "Right. Association finds relationships like 'bought together'.",
+       "D": "Wrong. Clustering groups similar items but doesn't find 'bought together' rules."
+      },
+      "strategy": "Match the example: 'frequently bought together' = association.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "title": "2.6 World Wide Web Consortium",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "d3c96631-b692-4592-bbe9-9bba2c28c045",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is the purpose of the Web Content Accessibility Guidelines (WCAG) developed by the W3C?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "To standardise the access of web pages and web content",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "To provide a framework for making web content more accessible",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "To enhance machine-readable data interoperability",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "To define security protocols for web applications",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-6",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "WCAG gives a set of guidelines for making web content accessible to people with disabilities.",
+      "options": {
+       "A": "Wrong. Close, but WCAG is about accessibility, not 'access' in general.",
+       "B": "Right. It's a framework for accessible web content.",
+       "C": "Wrong. That describes RDF / the semantic web.",
+       "D": "Wrong. WCAG is not about security."
+      },
+      "strategy": "Use the name: Web Content Accessibility Guidelines. The answer should say 'accessible'.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "title": "2.6 World Wide Web Consortium",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "a47124ed-80d7-4255-bd32-41a692ec702f",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which W3C standard is specifically designed to help developers create accessible rich internet applications?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "RDF",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "CSP",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "WAI-ARIA",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "WCAG",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-6",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "WAI-ARIA adds labels and roles to dynamic page parts so screen readers can understand them.",
+      "options": {
+       "A": "Wrong. RDF describes data for machines.",
+       "B": "Wrong. CSP (Content Security Policy) is a security standard.",
+       "C": "Right. ARIA = Accessible Rich Internet Applications.",
+       "D": "Wrong. WCAG is general guidelines, not built for rich apps."
+      },
+      "strategy": "Expand the acronym. ARIA spells out the exact words in the question.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "title": "2.7 Web Elements",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "db9b8153-baef-41a3-8849-b71fd1b9d5cb",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What type of database uses tables to store data and is based on Structured Query Language (SQL)?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Relational Database",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "NoSQL Database",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Flat File Database",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "SQL Database",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-7",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "A relational database stores data in linked tables and uses SQL.",
+      "options": {
+       "A": "Right. Tables plus SQL = relational.",
+       "B": "Wrong. NoSQL databases often don't use tables or SQL.",
+       "C": "Wrong. A flat file is one simple table with no SQL.",
+       "D": "Wrong. 'SQL database' is an informal name, not the correct type name."
+      },
+      "strategy": "Pick the proper technical term over an informal nickname.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "title": "2.7 Web Elements",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "f1e4a72a-b93d-4f4b-82f6-220bba1f0790",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In a web development system, what is the primary role of the server-side (back-end)?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Styling the website with CSS",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Designing the website layout",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Creating interactive elements with JavaScript",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Managing data storage and application logic",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-7",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "The back-end runs on the server. It stores data and runs the app's logic.",
+      "options": {
+       "A": "Wrong. CSS styling is front-end.",
+       "B": "Wrong. Layout design is front-end.",
+       "C": "Wrong. JavaScript interactivity in the browser is front-end.",
+       "D": "Right. Data and logic happen on the server."
+      },
+      "strategy": "Three options are front-end jobs. The odd one out is the back-end answer.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "title": "2.8 Web Browsers",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "ff23edd2-4421-4e6a-b94b-4df1dfce0134",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Why is it important for developers to test their web applications across different browsers?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "To reduce the cost of development",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "To decrease the application's loading speed",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "To maintain consistent appearance and functionality",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "To ensure the application uses the latest browser features",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-8",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Browsers can show pages differently. Testing in each one keeps the look and function the same.",
+      "options": {
+       "A": "Wrong. Extra testing adds cost.",
+       "B": "Wrong. You never want slower loading.",
+       "C": "Right. Consistency across browsers is the goal.",
+       "D": "Wrong. New features may not work in every browser."
+      },
+      "strategy": "Rule out options that are bad outcomes ('decrease loading speed' means slower).",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "title": "2.8 Web Browsers",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "89be36ec-9238-4882-8de4-ac7b3d2d8d09",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is the primary purpose of the Console Panel in browser developer tools?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Monitor network requests",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Manage local storage and cookies",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Run and debug JavaScript code",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Inspect and modify HTML and CSS",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-8",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "The Console panel lets you run JavaScript and see errors and log messages.",
+      "options": {
+       "A": "Wrong. That's the Network panel.",
+       "B": "Wrong. That's the Application (or Storage) panel.",
+       "C": "Right. The Console runs and debugs JavaScript.",
+       "D": "Wrong. That's the Elements panel."
+      },
+      "strategy": "Each option is a different DevTools panel. Match the panel name to its job.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "title": "2.9 Cascading Style Sheets",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "58d646bb-a824-4205-ab06-b59a990f0c35",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which feature of CSS allows developers to define values like colours and spacing to ensure consistency across a web application?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "CSS Media Queries",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "CSS Preprocessors",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "CSS Variables",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Flexbox",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-9",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "CSS variables store values like colours once, then reuse them everywhere for consistency.",
+      "options": {
+       "A": "Wrong. Media queries change styles for screen sizes.",
+       "B": "Wrong. Preprocessors (like Sass) have variables too, but they are not a built-in CSS feature.",
+       "C": "Right. e.g. --main-colour: blue; used across the site.",
+       "D": "Wrong. Flexbox is for layout."
+      },
+      "strategy": "Spot the keyword: 'define values' matches variables.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "title": "2.9 Cascading Style Sheets",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "0cab7c8e-c57f-4871-9033-d2817ce315cc",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which CSS methodology helps in writing scalable and maintainable CSS by following a component-based approach?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Block, Element, Modifier",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Grid Layout",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Semantic HTML",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Inline Styling",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-9",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "BEM (Block, Element, Modifier) is a naming method that splits CSS into reusable components.",
+      "options": {
+       "A": "Right. BEM is a component-based CSS method.",
+       "B": "Wrong. Grid is a layout tool, not a methodology.",
+       "C": "Wrong. Semantic HTML is about meaningful tags, not CSS.",
+       "D": "Wrong. Inline styling is hard to maintain."
+      },
+      "strategy": "The question says 'methodology'. Only one option is a way of organising CSS.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 19,
+   "title": "2.10 Version Control",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "aa021958-e81c-449b-b77b-b34ef53215ee",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which Git feature allows developers to work on new features without affecting the main codebase?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Merge",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Push",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Commit",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Branch",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-10",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "A branch is a separate copy of the code where you can build a feature safely.",
+      "options": {
+       "A": "Wrong. Merge joins a branch back into main.",
+       "B": "Wrong. Push uploads commits to a remote.",
+       "C": "Wrong. Commit saves a snapshot of changes.",
+       "D": "Right. Branches keep new work apart from main."
+      },
+      "strategy": "Match the detail: 'without affecting main' = working apart = branch.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 20,
+   "title": "2.10 Version Control",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "7654bc4a-4ba3-4675-a1ec-ce1ed5e2087b",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is the primary purpose of version control in web application development?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "To create graphic assets",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "To track and manage changes to code",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "To design user interfaces",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "To optimise website performance",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-10",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Version control tracks every change to code, so you can see history and undo mistakes.",
+      "options": {
+       "A": "Wrong. Graphics are made with design tools.",
+       "B": "Right. Tracking and managing code changes.",
+       "C": "Wrong. UI design is a different job.",
+       "D": "Wrong. Not about performance."
+      },
+      "strategy": "Use the name: 'version' control = managing versions (changes).",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 21,
+   "title": "2.11 Code Libraries",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "a7fe21a2-6b87-46f9-97f2-378032716edf",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Why is it beneficial for developers to use a code library instead of writing custom code from scratch?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "It allows for greater creativity in coding",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "It increases the complexity of the project",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "It speeds up development and reduces errors",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "It limits the options for customisation",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-11",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Libraries hold tested code you can reuse. This saves time and cuts bugs.",
+      "options": {
+       "A": "Wrong. Libraries don't mainly add creativity.",
+       "B": "Wrong. That's a downside, not a benefit.",
+       "C": "Right. Faster development, fewer errors.",
+       "D": "Wrong. That's a downside, not a benefit."
+      },
+      "strategy": "The question asks 'why is it beneficial'. Cross out the negatives.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 22,
+   "title": "2.11 Code Libraries",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "ceb02031-c219-4b94-ad14-5eef68358478",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following best describes a common use case for code libraries in front-end development?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Encrypting sensitive user information",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Creating user interfaces and managing state",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Configuring databases for applications",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Writing backend server code",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-11",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Front-end libraries like React help build user interfaces and manage state (the data the page shows).",
+      "options": {
+       "A": "Wrong. Encrypting user data is mainly a back-end job.",
+       "B": "Right. UI and state are front-end tasks.",
+       "C": "Wrong. Database setup is back-end.",
+       "D": "Wrong. Server code is back-end."
+      },
+      "strategy": "The question says 'front-end'. Rule out every back-end task.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 23,
+   "title": "2.12 Open-Source Software",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "d298f103-1a5a-4646-b840-0639e54ea44b",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is NOT a benefit of using open-source software in web development?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Proprietary control over code",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Free access to software",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Community-driven development",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Modifiable code",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-12",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Open source code is free and anyone can change it. 'Proprietary control' means one owner controls it, which is the opposite.",
+      "options": {
+       "A": "Right answer (NOT a benefit). Proprietary means closed and owned.",
+       "B": "Wrong choice. Free access is a benefit.",
+       "C": "Wrong choice. Community development is a benefit.",
+       "D": "Wrong choice. Being able to modify code is a benefit."
+      },
+      "strategy": "In a NOT question, look for the word that clashes with the topic. 'Proprietary' is the opposite of open source.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 24,
+   "title": "2.12 Open-Source Software",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "b7d1231c-49db-4524-a280-deacd18a3cdc",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which open-source version control system is widely used in web development to track changes in code?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Git",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "CVS",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Mercurial",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Subversion",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-12",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Git is the most widely used version control system in web development.",
+      "options": {
+       "A": "Right. Git (used with GitHub) is the standard.",
+       "B": "Wrong. CVS is open source but old and rarely used now.",
+       "C": "Wrong. Mercurial is open source but much less common.",
+       "D": "Wrong. Subversion is open source but less common now."
+      },
+      "strategy": "All options are open source. The deciding word is 'widely used'.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 25,
+   "title": "2.13 Managing Load Times",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "22706422-d51b-4974-9580-6119bb542693",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What does the term \"minification\" refer to in the context of web development?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Removing unnecessary characters from code",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Adding comments for code clarity",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Increasing file sizes to improve performance",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Compressing images for faster load times",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-13",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Minification removes spaces, line breaks and comments from code. The file gets smaller and loads faster.",
+      "options": {
+       "A": "Right. It strips characters the computer doesn't need.",
+       "B": "Wrong. Comments are removed, not added.",
+       "C": "Wrong. Bigger files load slower.",
+       "D": "Wrong. That's image compression, not minification."
+      },
+      "strategy": "Use the word: 'mini' = make smaller. Rule out anything that adds.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 26,
+   "title": "2.13 Managing Load Times",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "3020483c-b729-4fea-b5b0-7ec067700691",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following factors can significantly impact web page load times?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Font style",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Text colour choices",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Image size and format",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Background music",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-13",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Large images are often the biggest files on a page. Their size and format strongly affect load time.",
+      "options": {
+       "A": "Wrong. Font style has little effect (unless loading many web fonts).",
+       "B": "Wrong. Colours don't change load time.",
+       "C": "Right. Big, uncompressed images slow pages a lot.",
+       "D": "Wrong. Rare on modern sites, and not the common cause."
+      },
+      "strategy": "Look for the word 'significantly'. Pick the option with the biggest effect.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 27,
+   "title": "2.14 Content Management System",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "31ebed8a-b705-4fa6-b520-6b1d3444e287",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which key feature of a CMS allows content creators to collaborate effectively by defining roles and permissions?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Plugins and Extensions",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "User Management",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Content Organisation",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Themes and Templates",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-14",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "User management lets a CMS set roles (like editor or admin) and permissions for each person.",
+      "options": {
+       "A": "Wrong. Plugins add extra features.",
+       "B": "Right. Roles and permissions are user management.",
+       "C": "Wrong. Content organisation sorts pages and posts.",
+       "D": "Wrong. Themes change how the site looks."
+      },
+      "strategy": "Spot the keyword: 'roles and permissions' are about users.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 28,
+   "title": "2.14 Content Management System",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "0de484a0-8cb3-498f-973d-9d59f32fc92a",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which feature of a CMS is most directly related to defining the visual appearance of a website?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Content Organisation",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Themes and Templates",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Plugins and Extensions",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "User Management",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-14",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Themes and templates control how a CMS site looks.",
+      "options": {
+       "A": "Wrong. Content organisation is about structure, not looks.",
+       "B": "Right. Themes set the visual style.",
+       "C": "Wrong. Plugins add features.",
+       "D": "Wrong. User management controls who can do what."
+      },
+      "strategy": "Spot the keyword: 'visual appearance' = theme.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 29,
+   "title": "2.15 Backend Development",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "ac0c8674-3194-4be2-94ef-112afcb9b918",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following are components of back-end development? (Select all that apply)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Security mechanisms",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "APIs",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Server",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Database",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "C",
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-15",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "The back-end includes the server, database, APIs and security. All four are part of it.",
+      "options": {
+       "A": "Right. Security like login checks runs on the back-end.",
+       "B": "Right. APIs connect the front-end to the back-end.",
+       "C": "Right. The server runs the back-end code.",
+       "D": "Right. The database stores the data."
+      },
+      "strategy": "'Select all' means judging each option. Ask: does this run on the server side?",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 30,
+   "title": "2.15 Backend Development",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "aac1761b-34ee-4b2b-8045-518b9cb79d48",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Select all security responsibilities of back-end development: (Select all that apply.)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Encrypting sensitive data",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Securing APIs",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Authenticating users",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-15",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "The back-end must protect data, secure its APIs and check who users are.",
+      "options": {
+       "A": "Right. Sensitive data must be encrypted.",
+       "B": "Right. APIs need protection from misuse.",
+       "C": "Right. Login checks must happen on the server."
+      },
+      "strategy": "'Select all' means judging each option. All three are server-side security jobs.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 31,
+   "title": "2.16 Web Requests",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "bc3a97ac-f28f-4f2a-a18a-5455a1d75cbb",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A developer needs to fetch a user’s data using an ORM. Which of the following represents the correct approach?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "db.run_query(\"get user\")",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "user = User.objects.get(id=1)",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "SELECT * FROM users WHERE id=1",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "db.users.find({ id: 1 })",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-16",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "An ORM lets you use objects and methods in code instead of writing SQL. 'User.objects.get(id=1)' does this.",
+      "options": {
+       "A": "Wrong. Not a real ORM method. It's just a made-up command.",
+       "B": "Right. Uses a class (User) and a method. This is Django ORM style.",
+       "C": "Wrong. This is raw SQL, not ORM.",
+       "D": "Wrong. This is a MongoDB (NoSQL) query, not a relational ORM."
+      },
+      "strategy": "Look for the option that uses a class and a method. ORM = objects, not SQL text. (In Flask-SQLAlchemy it would look like db.session.get(User, 1).)",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 32,
+   "title": "2.16 Web Requests",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "11059b39-ba7c-4e56-b9be-985d10707bed",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is a typical responsibility of a web framework in handling a web request?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Serving static content such as images or CSS.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Managing database connection pools.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Handling routing and processing requests.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Storing data permanently in the database.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-16",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "A web framework (like Flask) decides which function handles each URL (routing) and processes the request.",
+      "options": {
+       "A": "Wrong. Static files are often served by the web server, not the framework's main job.",
+       "B": "Wrong. Connection pools are handled by the database driver or ORM.",
+       "C": "Right. Routing and request handling is the framework's core job.",
+       "D": "Wrong. The database stores data, not the framework."
+      },
+      "strategy": "Pick the most typical job, not one it can sometimes do. Think of Flask's @app.route.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 33,
+   "title": "2.17 Scripting Languages",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "c67fb122-8dcd-4c29-ac86-aac90ab2ff0c",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following tasks can be automated with a shell script in web development?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Automating front-end form validation",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Creating directories and backing up log files",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Managing user session states in a browser",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Designing a mobile-responsive layout",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-17",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Shell scripts automate file and system jobs, like making folders and backing up logs.",
+      "options": {
+       "A": "Wrong. Form validation runs in the browser with JavaScript or on the server.",
+       "B": "Right. File and folder tasks suit shell scripts.",
+       "C": "Wrong. Session state is handled by the web app.",
+       "D": "Wrong. Layout is done with HTML and CSS."
+      },
+      "strategy": "Shell scripts run on the system, not in the browser. Rule out browser tasks.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 34,
+   "title": "2.17 Scripting Languages",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "2b2b1bb3-5c61-45d7-acb1-4ec272f68435",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is the purpose of the #!/bin/bash line at the start of a shell script?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "It ensures the script is interpreted by Bash",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "It prevents the script from executing on the server",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "It comments out the first line of the script",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "It adds debugging information to the script",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-17",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "The '#!/bin/bash' line (called a shebang) tells the system to run the script with Bash.",
+      "options": {
+       "A": "Right. It picks the interpreter.",
+       "B": "Wrong. It helps the script run. It doesn't stop it.",
+       "C": "Wrong. It starts with # but it is special, not just a comment.",
+       "D": "Wrong. It adds no debugging info."
+      },
+      "strategy": "Notice the word 'bash' in the line itself. It points to the answer.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 35,
+   "title": "2.18 Web-Based Databases",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "80cb0433-784f-4b8c-8581-d43bb85b4828",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What does the following SQL query do? SELECT department COUNT(*) FROM employees GROUP BY department;",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Returns the number of employees in each department",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Counts all employees with the same salary",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Groups employees by their last name",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Selects the first name and last name of all employees",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-18",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "GROUP BY department makes one group per department. COUNT(*) counts the rows in each group.",
+      "options": {
+       "A": "Right. Number of employees per department.",
+       "B": "Wrong. Salary isn't in the query.",
+       "C": "Wrong. Last name isn't in the query.",
+       "D": "Wrong. Names aren't selected."
+      },
+      "strategy": "Rule out options that mention columns not in the query. (Real SQL needs a comma: SELECT department, COUNT(*).)",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 36,
+   "title": "2.18 Web-Based Databases",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "f2b94689-a4ff-4a92-b990-6d0b68f502a8",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following SQL commands is used to retrieve data from a database?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "UPDATE",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "SELECT",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "DELETE",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "INSERT",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-18",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "SELECT reads (retrieves) data from a database.",
+      "options": {
+       "A": "Wrong. UPDATE changes existing data.",
+       "B": "Right. SELECT gets data.",
+       "C": "Wrong. DELETE removes data.",
+       "D": "Wrong. INSERT adds new data."
+      },
+      "strategy": "Match each command to its job. Only one reads without changing anything.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 37,
+   "title": "2.19 Object-Relational Mapping",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "28f8d6e8-6904-4884-a178-3218743ccdf6",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In which scenario would it be more appropriate to use SQL rather than ORM?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "When database-specific features are required",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Rapid prototyping of a CRUD-heavy application",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Switching between multiple database systems",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "When the project is mainly focused on automated database interactions",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-19",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Raw SQL is better when you need special features of one database that the ORM can't do.",
+      "options": {
+       "A": "Right. ORMs hide database-specific features.",
+       "B": "Wrong. Rapid CRUD prototyping is where ORM shines.",
+       "C": "Wrong. ORM makes switching databases easier.",
+       "D": "Wrong. ORM is good at routine database tasks."
+      },
+      "strategy": "Three options are ORM strengths. The odd one out is the SQL case.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 38,
+   "title": "2.19 Object-Relational Mapping",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "ba519837-6c1c-4181-b959-ee386b99dbc8",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which factor contributes to ORM’s lower performance compared to SQL?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Incompatibility with multiple databases",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Abstraction layer that generates SQL automatically",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Lack of support for CRUD operations",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "ORM's inability to execute SQL queries",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-19",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "The ORM adds an extra layer that turns your code into SQL. That extra step can make it slower.",
+      "options": {
+       "A": "Wrong. ORMs usually work with many databases.",
+       "B": "Right. The abstraction layer adds overhead.",
+       "C": "Wrong. ORMs fully support CRUD.",
+       "D": "Wrong. ORMs do run SQL, they generate it."
+      },
+      "strategy": "Rule out options that are simply false facts. Only one gives a real cause of slowness.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 39,
+   "title": "2.20 Collaborative Work Practises",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "4fe83cf6-339d-49cd-8043-404626576e52",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is a key advantage of early collaboration between front-end and back-end teams during the development process?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "It allows the back-end to be finished before the front-end begins.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "It eliminates the need for API documentation.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "It ensures faster UI design so that other parts of the project will advance.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "It helps reduce integration issues between front-end and back-end.",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-20",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Talking early means both teams agree on how they connect (like the API). This stops problems when joining the parts.",
+      "options": {
+       "A": "Wrong. That's sequential work, not collaboration.",
+       "B": "Wrong. API documentation is still needed.",
+       "C": "Wrong. Speeding UI design isn't the main benefit.",
+       "D": "Right. Fewer integration problems."
+      },
+      "strategy": "Watch for 'eliminates the need'. Collaboration rarely removes a step.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 40,
+   "title": "2.20 Collaborative Work Practises",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "7bdbe170-3213-4783-9184-c3851e0bf0bc",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "How does shared responsibility between front-end and back-end teams improve overall performance?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Helps reduce unnecessary API calls and optimise server load times.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Ensures that the front-end team is accountable for performance issues.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Increases the number of API calls to the back-end.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Removes the need for performance monitoring tools.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-20",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "When both teams share responsibility, they plan together to cut extra API calls and speed up the server.",
+      "options": {
+       "A": "Right. Fewer calls and faster responses.",
+       "B": "Wrong. Blaming one team is not shared responsibility.",
+       "C": "Wrong. More API calls hurts performance.",
+       "D": "Wrong. You still need monitoring."
+      },
+      "strategy": "Check each option against the key word 'shared'. Options that blame one side don't fit.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 41,
+   "title": "2.21 Progressive Web Apps",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "5b4362b5-4733-496d-b8c6-346e9cfc9bd3",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Your team is designing a PWA for a video tutorial platform. Users complain that videos auto-play with sound, disrupting their experience. Which UI/UX principle should your team prioritise to address this issue?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Readability of fonts",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Accessibility for screen readers",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Interactive feedback for navigation",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Optimised performance for multimedia",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-21",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "The key marks multimedia performance as the answer: handling video well, including not auto-playing sound.",
+      "options": {
+       "A": "Wrong. Fonts are not the problem.",
+       "B": "Marked wrong by the key. But auto-playing sound does clash with screen readers, so this is arguable.",
+       "C": "Wrong. Navigation feedback isn't the issue.",
+       "D": "Right (per key). It's the only option about how media behaves."
+      },
+      "strategy": "Match the scenario's topic. The problem is about video, so pick the option about multimedia.",
+      "key_check": "debatable",
+      "key_note": "The real principle is user control of media (don't autoplay with sound). None of the options says this. D is the closest match to 'videos'. But B is also defensible: WCAG says autoplaying audio interferes with screen readers."
+     }
+    }
+   ]
+  },
+  {
+   "number": 42,
+   "title": "2.21 Progressive Web Apps",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "0e373143-511d-4b3d-b00e-4b6a320e455e",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which feature of a PWA ensures that users can install the app directly from a website without going through an app store?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Responsive design",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Service workers",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Installable functionality",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "App shell model",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-21",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "A PWA can be installed straight from the browser to the home screen. This is called being installable.",
+      "options": {
+       "A": "Wrong. Responsive design fits different screen sizes.",
+       "B": "Wrong. Service workers give offline use and caching.",
+       "C": "Right. Installable = add to home screen without an app store.",
+       "D": "Wrong. App shell is about fast loading of the basic layout."
+      },
+      "strategy": "Spot the keyword: 'install' matches 'installable'.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  }
+ ]
+}

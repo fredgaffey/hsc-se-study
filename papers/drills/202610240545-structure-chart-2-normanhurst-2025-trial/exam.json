@@ -1,0 +1,56 @@
+{
+ "exam": "Structure chart 2 (Normanhurst 2025 trial)",
+ "drill": true,
+ "created": "2026-10-24T05:45:42.712Z",
+ "duration_minutes": 10,
+ "reading_minutes": 0,
+ "total_available": 4,
+ "parts_total": 1,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "SE: Structure (4)",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "16a421eb-a42e-40ad-8c29-726a0841c271",
+     "part": "Part A",
+     "marks_available": 4,
+     "answer_type": "DRAWING_V2",
+     "prompt": "Consider the following algorithm below written for a music program.\n\nBEGIN Main\n    REPEAT\n        GET choice\n        CASEWHERE choice is:\n            \"Search\": song = Search()\n            \"Add to Playlist\": AddToPlaylist(song, playlist)\n            \"Play playlist\": PlaySongs(playlist)\n        ENDCASE\n     UNTIL software is closed\nEND Main\n\nDraw a structure chart that represents the music program.",
+     "question": {},
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Provides a structure chart that correctly addresses:\n\nThe hierarchy of modules\nRepetition\nChoice between modules\nParameters passed"
+      },
+      {
+       "marks": "3",
+       "criterion": "Provides a structure chart that addresses THREE of the requirements"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a structure chart that addresses TWO of the requirements"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides a structure chart that addresses ONE of the requirements"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-11",
+     "sample_answer": "![](assets/pp-normanhurst-trial-a14.png.png)",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

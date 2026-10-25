@@ -1,0 +1,56 @@
+{
+ "exam": "DFD 3 (CSSA Familiarisation)",
+ "drill": true,
+ "created": "2026-10-24T05:13:08.329Z",
+ "duration_minutes": 10,
+ "reading_minutes": 0,
+ "total_available": 4,
+ "parts_total": 1,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "2025 CSSA, Fam_Q5, Programming the Web – HTTP request DFD",
+   "stimulus": "An HTTP request follows these steps:\n\n-   User types URL which sends an HTTP request through a web browser.\n-   The web server receives the HTTP request.\n-   The web server processes the request and retrieves the necessary website data from the web server storage.\n-   The web server sends the website data and HTTP response back to the user's web browser.",
+   "parts": [
+    {
+     "part_id": "93657fb8-59ae-45b6-b3e9-0fd6c19837e8",
+     "part": "Part A",
+     "marks_available": 4,
+     "answer_type": "DRAWING_V2",
+     "prompt": "Draw a Level 1 Data Flow Diagram (DFD) to represent the process of how an HTTP request works.",
+     "question": {},
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Provides a substantially correct data flow diagram that includes suitable external entities, processes and data stores, with suitable data flow indicated"
+      },
+      {
+       "marks": "3",
+       "criterion": "Provides a relevant data flow diagram that addresses several of the requirements"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a diagram with some correctly labelled data flow diagram symbols"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides a diagram that shows some understanding of the scenario"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": "Sample Answer diagram will be professional re-drawn",
+     "syllabus": "PROJ-11",
+     "sample_answer": "![](assets/pp-cssa-familiarisation-a5.png.png)",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

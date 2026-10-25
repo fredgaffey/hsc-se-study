@@ -1,0 +1,173 @@
+{
+ "exam": "Structure charts 3 - NESA reading",
+ "drill": true,
+ "created": "2026-10-24T22:17:35.435Z",
+ "duration_minutes": 10,
+ "reading_minutes": 0,
+ "total_available": 4,
+ "parts_total": 2,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "Familiarisation Question 4",
+   "stimulus": "This structure chart describes a hotel booking system.\n\n![](assets/fam_Q4s-1.png)",
+   "parts": [
+    {
+     "part_id": "2054f93f-b168-49c3-b15a-95a71f878f91",
+     "part": "Part A",
+     "marks_available": 2,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Select the items that are TRUE about this structure chart. (Multiple items may be selected.)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "**Booking made** is a flag.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "**Login** is the first module called.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "**Booking ID** may only be true or false.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "**Display new bookings** may not be executed.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "E",
+        "text": "Members do not need to log in to browse hotels.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "F",
+        "text": "A choice is continually offered between **Browse hotels** and **Book**.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "G",
+        "text": "**Login** calls **Enter member details and validate** when Member ID is set to true.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "D",
+       "F"
+      ]
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Selects all TRUE statements and no FALSE statements"
+      },
+      {
+       "marks": "1",
+       "criterion": "Selects at least two TRUE statements with at most one error"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-11",
+     "sample_answer": "TRUE: Booking made is a flag (filled circle = control parameter); Login is called first (modules execute left to right); Display new bookings may not be executed (diamond = selection); a choice is continually offered between Browse hotels and Book (diamond inside the \"Until done\" loop).\nFALSE: Booking ID is a data parameter (open circle), not a flag; Login is always called before Browse hotels, so members must log in; Login repeats Enter member details and validate until Valid is true — Member ID is data, not a Boolean.",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Practice Exam 2 Q10",
+   "stimulus": "![](assets/mtt_exam2_q10_structurechart.png)",
+   "parts": [
+    {
+     "part_id": "8feaa862-e941-48ad-bb79-cf413d5bcac9",
+     "part": "Part A",
+     "marks_available": 2,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "This structure chart describes an online ordering system for a café. Which of the following statements are TRUE about this structure chart? (More than one may be selected.)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "**Confirm cart** is Boolean",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Order number is a control variable",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "A valid loyalty account is not required for online ordering",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "The order cannot be displayed until the cart is confirmed",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "E",
+        "text": "A choice is repeatedly offered between **Browse menu** and **Add items to order**",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "D",
+       "E"
+      ]
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Correctly identifies all the items that are true about the structure chart"
+      },
+      {
+       "marks": "1",
+       "criterion": "Identifies true or false correctly for THREE out of five checkboxes"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-11",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

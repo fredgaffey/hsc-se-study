@@ -1,0 +1,56 @@
+{
+ "exam": "Explain 4 - NESA Sample Q19",
+ "drill": true,
+ "created": "2026-10-24T12:27:09.353Z",
+ "duration_minutes": 10,
+ "reading_minutes": 0,
+ "total_available": 4,
+ "parts_total": 1,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "HSC SE 2025, Q19, Authentication and Authorisation",
+   "stimulus": "An app is being developed for use in a school. It will allow teachers to upload and assign work, and track student homework. Students can download work and upload their completed responses for marking.",
+   "parts": [
+    {
+     "part_id": "c2be6989-1e33-4c23-af9f-ddc029c65c36",
+     "part": "Part A",
+     "marks_available": 4,
+     "answer_type": "SHORT",
+     "prompt": "Explain how authentication and authorisation could be applied to this app.",
+     "question": {},
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Explains how authentication and authorisation could be applied to the app"
+      },
+      {
+       "marks": "3",
+       "criterion": "Explains how authentication or authorisation could be applied to the app\nOROutlines how authentication and authorisation could be applied to the app"
+      },
+      {
+       "marks": "2",
+       "criterion": "Outlines some features of authentication and/or authorisation"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-4",
+     "sample_answer": "Authentication ensures that only staff and students with valid usernames and passwords, which should be encrypted in storage (eg using hashing), can access the app. Authorisation controls access to specific features of the app based on user roles or groups. Teachers may have permissions to upload, assign and track homework, while students can only download tasks and upload completed work. By organising users into specific roles or groups, the app restricts access to appropriate functionality, ensuring that each user can only perform actions relevant to their role or group.",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

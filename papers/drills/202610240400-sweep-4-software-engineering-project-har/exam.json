@@ -1,0 +1,1789 @@
+{
+ "exam": "Sweep 4 - Software Engineering Project (harder)",
+ "drill": true,
+ "created": "2026-10-24T04:00:32.863Z",
+ "duration_minutes": 26,
+ "reading_minutes": 0,
+ "total_available": 26,
+ "parts_total": 26,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "PROJ-1",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "2f1ba898-9bdf-4a97-90e0-23281f9ef2c3",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A school is planning a timetable app. Which of these is a PERFORMANCE requirement rather than a functional requirement?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "The timetable loads within 2 seconds when 1500 students are logged in at once",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "The app sends each student a reminder 10 minutes before every class",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Students can view their timetable for the current and next week",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Teachers can export class attendance to a CSV file each afternoon",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-1",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Performance requirements say how WELL the system works (speed, load, capacity). This one sets a speed under a load of 1500 users.",
+      "options": {
+       "A": "Performance requirements say how WELL the system works (speed, load, capacity). This one sets a speed under a load of 1500 users.",
+       "B": "Functional requirements say WHAT the system does (view, export, send). Only the 2-second load time measures how well it does it.",
+       "C": "Functional requirements say WHAT the system does (view, export, send). Only the 2-second load time measures how well it does it.",
+       "D": "Functional requirements say WHAT the system does (view, export, send). Only the 2-second load time measures how well it does it."
+      },
+      "strategy": "Look for numbers about speed, users, uptime or capacity: they signal performance, not function.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "PROJ-1",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "0c0eece9-dae8-4f40-b356-77add370eed5",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which question belongs to assessing SCHEDULING feasibility?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Will the ongoing licence costs fit within the annual IT budget?",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Does the development team have the skills to build it in Python?",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Can the system be built, tested and installed before Term 1 begins?",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Will teachers be willing to change how they record attendance?",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-1",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Scheduling feasibility asks whether it can be finished in the time available, before a deadline.",
+      "options": {
+       "A": "Licence costs = financial feasibility; team skills = technical feasibility; staff acceptance = operational feasibility.",
+       "B": "Licence costs = financial feasibility; team skills = technical feasibility; staff acceptance = operational feasibility.",
+       "C": "Scheduling feasibility asks whether it can be finished in the time available, before a deadline.",
+       "D": "Licence costs = financial feasibility; team skills = technical feasibility; staff acceptance = operational feasibility."
+      },
+      "strategy": "Match the keyword: time/deadline \u2192 scheduling; money \u2192 financial; skills/technology \u2192 technical; people \u2192 operational.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "PROJ-2",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "04bad792-ce34-4745-b21f-d17c2f354bc3",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A data dictionary must record an Australian mobile number such as 0412 345 678. Which data type is most appropriate, and why?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Integer, because it uses less storage than a string of the same length",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "String, because the leading zero must be kept and no arithmetic is done on it",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Float, because the number is too large to be stored as an integer",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Integer, because the number contains only digits and is used for lookups",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-2",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Phone numbers are identifiers, not quantities: an integer would drop the leading 0, and you never add or multiply them.",
+      "options": {
+       "A": "'Only digits' or 'uses less storage' sounds right but ignores the leading zero and spaces; float makes no sense for an identifier.",
+       "B": "Phone numbers are identifiers, not quantities: an integer would drop the leading 0, and you never add or multiply them.",
+       "C": "'Only digits' or 'uses less storage' sounds right but ignores the leading zero and spaces; float makes no sense for an identifier.",
+       "D": "'Only digits' or 'uses less storage' sounds right but ignores the leading zero and spaces; float makes no sense for an identifier."
+      },
+      "strategy": "Ask: would I ever do maths on it? If not (phone numbers, postcodes, IDs), it's a string.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "PROJ-3",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "7cd1772d-7281-44d8-8402-64f1430856a0",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A hospital runs its old and new patient-record systems at the same time for a month, comparing their outputs before switching off the old one. Which implementation method is this?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Phased",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Pilot",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Direct",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Parallel",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-3",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Running the old and new systems at the same time and comparing their output is parallel implementation.",
+      "options": {
+       "A": "Pilot = one site or group first; phased = one part at a time; direct = switch over completely on one day.",
+       "B": "Pilot = one site or group first; phased = one part at a time; direct = switch over completely on one day.",
+       "C": "Pilot = one site or group first; phased = one part at a time; direct = switch over completely on one day.",
+       "D": "Running the old and new systems at the same time and comparing their output is parallel implementation."
+      },
+      "strategy": "Key phrase 'at the same time' or 'both systems' \u2192 parallel.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "PROJ-3",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "cbd63a55-5f0b-4eb2-b432-b7f868dfe4b5",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which implementation method carries the greatest risk to the organisation if the new system fails on the first day?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Parallel",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Pilot",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Direct",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Phased",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-3",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Direct cut-over switches everyone to the new system at once with no fallback, so a failure on day one hits the whole organisation.",
+      "options": {
+       "A": "Parallel keeps the old system running as a backup; pilot and phased limit a failure to one site or one part.",
+       "B": "Parallel keeps the old system running as a backup; pilot and phased limit a failure to one site or one part.",
+       "C": "Direct cut-over switches everyone to the new system at once with no fallback, so a failure on day one hits the whole organisation.",
+       "D": "Parallel keeps the old system running as a backup; pilot and phased limit a failure to one site or one part."
+      },
+      "strategy": "'Greatest risk' questions: choose the option with no fallback and no gradual rollout.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "PROJ-4",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "8abd3777-25aa-43cc-ab7d-e3e938c95050",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "For which project is the Waterfall approach MOST appropriate?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "A train signalling system with fixed safety requirements that must be signed off at each stage",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "A game prototype built over a weekend for a hackathon judging panel",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "A marketing site for a client who is still unsure what pages they want",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "A start-up social app whose features change every week based on user feedback",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-4",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Waterfall suits projects with fixed, well-understood requirements and formal sign-off at each stage, like safety-critical systems.",
+      "options": {
+       "A": "Waterfall suits projects with fixed, well-understood requirements and formal sign-off at each stage, like safety-critical systems.",
+       "B": "Changing features, quick prototypes and unclear clients all need flexibility, which suits Agile.",
+       "C": "Changing features, quick prototypes and unclear clients all need flexibility, which suits Agile.",
+       "D": "Changing features, quick prototypes and unclear clients all need flexibility, which suits Agile."
+      },
+      "strategy": "Fixed requirements + sign-off + safety \u2192 Waterfall. Change + feedback + uncertainty \u2192 Agile.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "PROJ-5",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "2b191a29-bf01-4bac-b5fd-9f5e56ef9a56",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In an Agile project, what normally happens at the end of each iteration (sprint)?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "The requirements are frozen so that the remaining sprints can be scheduled",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "The completed modules are installed using the direct implementation method",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "All documentation for the whole project is finalised and signed off",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "A working increment is reviewed with the client and the backlog is re-prioritised",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-5",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Each Agile iteration ends with working software shown to the client, then the backlog is re-prioritised for the next sprint.",
+      "options": {
+       "A": "Finalising all documentation, freezing requirements or direct installation are Waterfall-style ideas, the opposite of Agile.",
+       "B": "Finalising all documentation, freezing requirements or direct installation are Waterfall-style ideas, the opposite of Agile.",
+       "C": "Finalising all documentation, freezing requirements or direct installation are Waterfall-style ideas, the opposite of Agile.",
+       "D": "Each Agile iteration ends with working software shown to the client, then the backlog is re-prioritised for the next sprint."
+      },
+      "strategy": "Agile = iterate, review, adapt. Eliminate any option that 'freezes' or 'finalises everything'.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "PROJ-6",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "a5ca69ff-baf3-4e23-b795-c9277edfa76c",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which statement best describes the WAgile approach?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "An Agile project in which every iteration must be fully documented before coding starts",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "A hybrid that uses Waterfall-style upfront planning and milestones, with Agile iterations during development",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "A Waterfall project that repeats its testing stage until the client approves the system",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "An Agile project run by a separate team for each stage of the Waterfall life cycle",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-6",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "WAgile is a hybrid: Waterfall-style planning and milestones up front, with Agile iterations during development.",
+      "options": {
+       "A": "The other options mix the words 'Agile' and 'Waterfall' but don't describe a hybrid of planning plus iterative development.",
+       "B": "WAgile is a hybrid: Waterfall-style planning and milestones up front, with Agile iterations during development.",
+       "C": "The other options mix the words 'Agile' and 'Waterfall' but don't describe a hybrid of planning plus iterative development.",
+       "D": "The other options mix the words 'Agile' and 'Waterfall' but don't describe a hybrid of planning plus iterative development."
+      },
+      "strategy": "With hybrid models, find the option that names WHAT comes from each parent approach.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "title": "PROJ-7",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "e6a37056-cd55-47ee-8fad-69d1383027d8",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "On a Gantt chart, tasks A (3 days) and B (5 days) both start on day 1. Task C (4 days) cannot start until BOTH A and B are complete. On which day does task C finish at the earliest?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Day 9",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Day 8",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Day 12",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Day 7",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-7",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "C waits for the LONGER of A (3 days) and B (5 days), so it starts on day 6 and its 4 days run days 6, 7, 8 and 9.",
+      "options": {
+       "A": "C waits for the LONGER of A (3 days) and B (5 days), so it starts on day 6 and its 4 days run days 6, 7, 8 and 9.",
+       "B": "Day 7 ignores B; day 8 adds wrongly; day 12 adds A + B + C as if they were in a row.",
+       "C": "Day 7 ignores B; day 8 adds wrongly; day 12 adds A + B + C as if they were in a row.",
+       "D": "Day 7 ignores B; day 8 adds wrongly; day 12 adds A + B + C as if they were in a row."
+      },
+      "strategy": "Dependencies: a task starts after its LAST prerequisite ends. Count days on your fingers or sketch a quick timeline.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "title": "PROJ-8",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "793e0a56-a357-4099-a11f-1a2b67c2422f",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A team member in a group software project copies another student's code into the project and presents it as their own. Which issues does this raise? (Select all that apply.)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Phased implementation risk",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "A breakdown of trust within the team",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Intellectual property (the original author's rights)",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Plagiarism / academic honesty",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "E",
+        "text": "Scheduling feasibility",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "D",
+       "C",
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-8",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Copying someone else's code without credit is plagiarism, breaches the author's intellectual property rights, and damages trust within the team.",
+      "options": {
+       "A": "Not related: this is a project-planning term, not an issue raised by copying code.",
+       "B": "Correct: an issue raised by copying code.",
+       "C": "Correct: an issue raised by copying code.",
+       "D": "Correct: an issue raised by copying code.",
+       "E": "Not related: this is a project-planning term, not an issue raised by copying code."
+      },
+      "strategy": "In 'select all' questions, judge every option on its own. Distractors here are real syllabus terms that just don't fit this scenario.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "title": "PROJ-9",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "4782e515-2214-43bc-8202-1b5e67a81724",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which practice best 'involves and empowers the client' during development?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Sending the client a detailed technical report once the system is complete",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Giving the client regular demos and a real say in which features are prioritised next",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Asking the client to approve the final source code before installation",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Limiting client contact to the requirements stage to avoid scope creep",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-9",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Empowering the client means involving them often and giving them real influence over priorities.",
+      "options": {
+       "A": "A report at the end, approving code, or limiting contact all keep the client out of decisions.",
+       "B": "Empowering the client means involving them often and giving them real influence over priorities.",
+       "C": "A report at the end, approving code, or limiting contact all keep the client out of decisions.",
+       "D": "A report at the end, approving code, or limiting contact all keep the client out of decisions."
+      },
+      "strategy": "'Involve and empower' \u2192 frequent contact AND real decision-making power.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "title": "PROJ-10",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "de86a3c8-0fc2-4748-89d9-838179b86c25",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which practice best reflects quality assurance as a CONTINUAL checking process?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Asking the client to sign off the specifications at the start of the project",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Running a full system test once, after all of the modules are complete",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Fixing bugs as users report them after the system has been installed",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Checking each completed part against agreed quality criteria and requirements before moving on",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-10",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Continual QA checks each part against the agreed criteria throughout development, not just once at the end.",
+      "options": {
+       "A": "A single final test, a sign-off at the start, or fixing bugs after release are one-off or reactive.",
+       "B": "A single final test, a sign-off at the start, or fixing bugs after release are one-off or reactive.",
+       "C": "A single final test, a sign-off at the start, or fixing bugs after release are one-off or reactive.",
+       "D": "Continual QA checks each part against the agreed criteria throughout development, not just once at the end."
+      },
+      "strategy": "'Continual' = repeated throughout; eliminate one-off or after-the-fact options.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "title": "PROJ-11",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "d724e987-ebc0-44a0-bb84-24fb61027892",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which modelling tool best shows how data moves between external entities, processes and data stores?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Decision tree",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Class diagram",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Data flow diagram",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Structure chart",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-11",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "A DFD shows data moving between external entities, processes and data stores.",
+      "options": {
+       "A": "Structure charts show module hierarchy; class diagrams show classes and relationships; decision trees show decisions.",
+       "B": "Structure charts show module hierarchy; class diagrams show classes and relationships; decision trees show decisions.",
+       "C": "A DFD shows data moving between external entities, processes and data stores.",
+       "D": "Structure charts show module hierarchy; class diagrams show classes and relationships; decision trees show decisions."
+      },
+      "strategy": "'Entities, processes, data stores' are DFD vocabulary.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "title": "PROJ-11",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "6a20480a-da86-4fde-adbb-b66a69289d5b",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In a structure chart, what does an arrow with a FILLED (solid) circle on it represent?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "A control parameter (flag) passed between modules",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "A module that is repeated (iteration)",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "A data parameter passed between modules",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "A decision between two modules",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-11",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "In a structure chart, a filled (solid) circle on the arrow is a control parameter or flag; an open circle is data.",
+      "options": {
+       "A": "In a structure chart, a filled (solid) circle on the arrow is a control parameter or flag; an open circle is data.",
+       "B": "Data parameters use open circles; repetition uses a curved arrow; decisions use a diamond.",
+       "C": "Data parameters use open circles; repetition uses a curved arrow; decisions use a diamond.",
+       "D": "Data parameters use open circles; repetition uses a curved arrow; decisions use a diamond."
+      },
+      "strategy": "Filled = flag (control), open = data. Learn these symbols from the course specifications.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "title": "PROJ-12",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "eae448ae-77a5-41ea-a2fc-c1b4a6bb518e",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A web app's back end hits a database error while processing an order. What is the best way to handle it?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Retry the same database query repeatedly until it succeeds",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Ignore the error and return a success message so the user is not alarmed",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Return the full stack trace to the front end so the developer can see it in the browser",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Log the full error on the server and return a general message and error status to the front end",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-12",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Log the details server-side for developers, and give the front end only a general message and status code, so internals aren't exposed.",
+      "options": {
+       "A": "Stack traces leak system details to attackers, faking success misleads users, and endless retries can overload the database.",
+       "B": "Stack traces leak system details to attackers, faking success misleads users, and endless retries can overload the database.",
+       "C": "Stack traces leak system details to attackers, faking success misleads users, and endless retries can overload the database.",
+       "D": "Log the details server-side for developers, and give the front end only a general message and status code, so internals aren't exposed."
+      },
+      "strategy": "Security + usability: log privately, tell the user simply.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "title": "PROJ-15",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "b6653f44-6f9c-41e6-87f7-a580c011667a",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is displayed when this algorithm runs?\n\n```\nBEGIN\n  total = 0\n  FOR i = 1 TO 6 STEP 1\n    IF i MOD 3 = 0 OR i = 4 THEN\n      total = total + i\n    ENDIF\n  NEXT i\n  Display total\nEND\n```",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "10",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "13",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "21",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "9",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-15",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "i = 3 and 6 pass i MOD 3 = 0, and i = 4 passes i = 4, so total = 3 + 4 + 6 = 13.",
+      "options": {
+       "A": "9 misses the i = 4 rule; 10 or 21 come from counting the wrong values.",
+       "B": "i = 3 and 6 pass i MOD 3 = 0, and i = 4 passes i = 4, so total = 3 + 4 + 6 = 13.",
+       "C": "9 misses the i = 4 rule; 10 or 21 come from counting the wrong values.",
+       "D": "9 misses the i = 4 rule; 10 or 21 come from counting the wrong values."
+      },
+      "strategy": "Trace a loop with a small table: i | condition | total. Check every condition joined by OR.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "title": "PROJ-15",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "1b6f065a-37bc-4229-bf9c-cba829a5aa1e",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is displayed when this algorithm runs?\n\n```\nBEGIN\n  count = 1\n  WHILE count < 20\n    count = count * 3\n  ENDWHILE\n  Display count\nEND\n```",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "27",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "9",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "20",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "81",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-15",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "count goes 1 \u2192 3 \u2192 9 \u2192 27. The loop checks count < 20 before each pass, so it stops once count is 27 and displays 27.",
+      "options": {
+       "A": "count goes 1 \u2192 3 \u2192 9 \u2192 27. The loop checks count < 20 before each pass, so it stops once count is 27 and displays 27.",
+       "B": "9 stops one pass early; 20 is the limit, not a value count takes; 81 does one pass too many.",
+       "C": "9 stops one pass early; 20 is the limit, not a value count takes; 81 does one pass too many.",
+       "D": "9 stops one pass early; 20 is the limit, not a value count takes; 81 does one pass too many."
+      },
+      "strategy": "Pre-test loops check the condition BEFORE each pass; trace until the condition fails.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "title": "PROJ-16",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "8421e526-5e4d-4bc6-b431-15e041fe1669",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A project is behind schedule and one developer is the only person who understands the payment module. Which allocation of resources best reduces the risk to the project?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Ask the developer to work overtime until the payment module is finished",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Add two new developers to the payment module so that it is finished faster",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Pair another developer with them on the payment module and move their other tasks to the rest of the team",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Remove the payment module from scope so that the deadline can be met",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-16",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Pairing spreads the knowledge, so the project no longer depends on one person, and moving their other tasks frees their time.",
+      "options": {
+       "A": "Adding new people slows the work while they learn (Brooks' law); cutting scope or overtime doesn't fix the single point of failure.",
+       "B": "Adding new people slows the work while they learn (Brooks' law); cutting scope or overtime doesn't fix the single point of failure.",
+       "C": "Pairing spreads the knowledge, so the project no longer depends on one person, and moving their other tasks frees their time.",
+       "D": "Adding new people slows the work while they learn (Brooks' law); cutting scope or overtime doesn't fix the single point of failure."
+      },
+      "strategy": "'Best reduces RISK': pick the option that removes the cause (one person), not one that just pushes harder.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 19,
+   "title": "PROJ-17",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "160db757-7899-4177-b1a8-cca00c049e5e",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A programmed backup copies only the files that have changed since the last FULL backup. What type of backup is this?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Mirror",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Differential",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Full",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Incremental",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-17",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "A differential backup copies everything changed since the last FULL backup.",
+      "options": {
+       "A": "Incremental copies only what changed since the last backup of ANY type; full copies everything; mirror is an exact live copy.",
+       "B": "A differential backup copies everything changed since the last FULL backup.",
+       "C": "Incremental copies only what changed since the last backup of ANY type; full copies everything; mirror is an exact live copy.",
+       "D": "Incremental copies only what changed since the last backup of ANY type; full copies everything; mirror is an exact live copy."
+      },
+      "strategy": "Differential = since the last full. Incremental = since the last anything.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 20,
+   "title": "PROJ-18",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "7664c506-a643-4c34-91e2-9733cd501ebc",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Two developers change the same line of a file on different branches. Merging the branches causes a conflict. What must happen next?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "The merge is cancelled and both branches must be deleted and re-created",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "The conflicting line is removed from the file so that the merge can finish",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Git automatically keeps the change from the branch that was committed most recently",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "A developer chooses or combines the conflicting changes, then commits the resolved file",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-18",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Git can't decide which edit to keep, so a person resolves the conflict and commits the result.",
+      "options": {
+       "A": "Git doesn't pick the latest automatically, branches don't need deleting, and removing the line loses work.",
+       "B": "Git doesn't pick the latest automatically, branches don't need deleting, and removing the line loses work.",
+       "C": "Git doesn't pick the latest automatically, branches don't need deleting, and removing the line loses work.",
+       "D": "Git can't decide which edit to keep, so a person resolves the conflict and commits the result."
+      },
+      "strategy": "Merge conflict = human decision. Distrust options where the tool 'automatically' fixes a conflict.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 21,
+   "title": "PROJ-19",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "ffb38d27-cd2c-4603-97d2-d9dd2add4666",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A team outsources its mobile app's front end to another company. Which is the most significant RISK of this strategy?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "The team will need to learn the outsourced company's programming language",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Outsourcing always costs more than developing the work in-house",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Less control over quality, security and deadlines of work done outside the team",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "The team can no longer use version control for the project",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-19",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Outsourced work happens outside the team, so the team controls less of its quality, security and timing.",
+      "options": {
+       "A": "Outsourcing isn't always more expensive, doesn't stop version control, and doesn't force the team to learn a new language.",
+       "B": "Outsourcing isn't always more expensive, doesn't stop version control, and doesn't force the team to learn a new language.",
+       "C": "Outsourced work happens outside the team, so the team controls less of its quality, security and timing.",
+       "D": "Outsourcing isn't always more expensive, doesn't stop version control, and doesn't force the team to learn a new language."
+      },
+      "strategy": "Watch absolutes like 'always'; they're usually wrong.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 22,
+   "title": "PROJ-21",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "1ced56fc-f7a6-4e74-8bfd-d8ed24f91ff2",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Unit tests have passed. The team now tests the payment module and the order module together through their API, using stub data in place of the shipping module. Which type of testing is this?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Integration testing",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Acceptance testing",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "System testing",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Unit testing",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-21",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Testing modules TOGETHER through their interfaces (with stubs for missing parts) is integration testing.",
+      "options": {
+       "A": "Testing modules TOGETHER through their interfaces (with stubs for missing parts) is integration testing.",
+       "B": "System = the whole finished app end to end; acceptance = the client signs off; unit = one module alone.",
+       "C": "System = the whole finished app end to end; acceptance = the client signs off; unit = one module alone.",
+       "D": "System = the whole finished app end to end; acceptance = the client signs off; unit = one module alone."
+      },
+      "strategy": "Integration = do the pieces fit together? Stubs or 'two modules together' \u2192 integration.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 23,
+   "title": "PROJ-21",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "11659b5c-059f-4cfc-b276-dbdf83730507",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "The client's staff use the finished system to complete their real daily tasks so the client can decide whether to sign off on it. Which type of testing is this?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "System testing",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Load testing",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Integration testing",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Acceptance testing",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-21",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "The client testing real tasks to decide whether to sign off is acceptance testing.",
+      "options": {
+       "A": "System testing is done by the developers on the whole system; integration tests modules together; load tests performance under users.",
+       "B": "System testing is done by the developers on the whole system; integration tests modules together; load tests performance under users.",
+       "C": "System testing is done by the developers on the whole system; integration tests modules together; load tests performance under users.",
+       "D": "The client testing real tasks to decide whether to sign off is acceptance testing."
+      },
+      "strategy": "WHO is testing matters: client or users \u2192 acceptance; development team \u2192 system.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 24,
+   "title": "PROJ-22",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "d2053237-3049-4630-ac95-ed9e5ea8d06c",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which change is a LANGUAGE-DEPENDENT optimisation in a Python program?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Replacing a linear search with a binary search on sorted data",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Replacing a loop that appends to a list with a list comprehension",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Reducing the number of database queries made per page load",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Caching the results of slow calculations so they are not repeated",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-22",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "A list comprehension is faster because of how Python itself works, which makes it a language-dependent optimisation.",
+      "options": {
+       "A": "Binary search, fewer queries and caching are algorithm or design changes that help in ANY language.",
+       "B": "A list comprehension is faster because of how Python itself works, which makes it a language-dependent optimisation.",
+       "C": "Binary search, fewer queries and caching are algorithm or design changes that help in ANY language.",
+       "D": "Binary search, fewer queries and caching are algorithm or design changes that help in ANY language."
+      },
+      "strategy": "Language-dependent = only makes sense because of THIS language's features.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 25,
+   "title": "PROJ-24",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "5631a639-ef99-45a5-b841-5f3c054406c5",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A form accepts ages from 13 to 17 inclusive. Which set of test data best tests the BOUNDARIES?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "12, 13, 17, 18",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "13, 15, 17",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "0, 15, 100",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "12, 18",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-24",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Boundary testing checks each side of each boundary: just outside (12, 18) and just inside (13, 17).",
+      "options": {
+       "A": "Boundary testing checks each side of each boundary: just outside (12, 18) and just inside (13, 17).",
+       "B": "13, 15, 17 has no invalid values; 0, 15, 100 aren't at the edges; 12, 18 has no valid edges.",
+       "C": "13, 15, 17 has no invalid values; 0, 15, 100 aren't at the edges; 12, 18 has no valid edges.",
+       "D": "13, 15, 17 has no invalid values; 0, 15, 100 aren't at the edges; 12, 18 has no valid edges."
+      },
+      "strategy": "For a range a\u2013b, test a\u22121, a, b, b+1.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 26,
+   "title": "PROJ-24",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "43325e50-7ed5-4238-adb9-f8ad15a582ab",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which pair of activities is used to evaluate whether a solution works correctly?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Comparing the final schedule with the Gantt chart and the budget",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Asking users to rate the interface and counting the lines of code",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Comparing actual output with expected output for planned test data",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Reviewing the version history and counting the number of commits",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-24",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Correctness is evaluated by running planned test data and comparing actual output with expected output.",
+      "options": {
+       "A": "Ratings, lines of code, schedules and commit counts measure other things, not correctness.",
+       "B": "Ratings, lines of code, schedules and commit counts measure other things, not correctness.",
+       "C": "Correctness is evaluated by running planned test data and comparing actual output with expected output.",
+       "D": "Ratings, lines of code, schedules and commit counts measure other things, not correctness."
+      },
+      "strategy": "'Works correctly' questions \u2192 expected vs actual output.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  }
+ ]
+}

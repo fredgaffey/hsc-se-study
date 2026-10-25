@@ -1,0 +1,56 @@
+{
+ "exam": "DFD 1b - Rewrite dentist booking (Gradeo ITE 2024)",
+ "drill": true,
+ "created": "2026-10-24T04:55:26.065669Z",
+ "duration_minutes": 8,
+ "reading_minutes": 0,
+ "total_available": 4,
+ "parts_total": 1,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "Designing and evaluating a web-based appointment booking system for a dentist's practice. (Q25A-B, ITE 2024)",
+   "stimulus": "A developer is tasked with creating a web-based application for a dentist\u2019s practice. The application should manage patient data, including contacts, appointments and billing.\n\nThe appointment booking process involves:\n\n-   Patients login to the dentist\u2019s booking site using an email address and password.\n    \n-   They are presented with a list of available appointment times and they choose a suitable time.\n    \n-   Patients receive an email confirmation of their appointment.\n    \n-   Each morning the dentist receives a printout of their appointments for the day.\n\n**Rewrite:** include the Dentist as an external entity, two data stores (open-ended boxes), and a separate Login process. Use the library shapes.",
+   "parts": [
+    {
+     "part_id": "7e678fdd-ef96-4a42-a15a-f41e524ad690",
+     "part": "Part A",
+     "marks_available": 4,
+     "answer_type": "DRAWING_V2",
+     "prompt": "Create a data flow diagram for the appointment booking process.",
+     "question": {},
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Provides a substantially correct data flow diagram, with appropriate external entities, processes and data stores."
+      },
+      {
+       "marks": "3",
+       "criterion": "Provides a data flow diagram with appropriate external entities and data stores"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a data flow diagram with appropriate external entities OR data stores"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides a modelling tool showing some understanding of the system"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-11",
+     "sample_answer": "![](assets/AD_4nXdLNIOA3yEMITjSwPbtbAPK8OA5Ag1nqGBO2_5Uwtv68tDk9nu2geu8Iw0_yCYEqDZkGZn4P_WYl_F47ZGDv8IhFUHlFEWVIkH_q7WVBsMFjYphbRMu2H5Ki6ablybhuOCkRDtuaSzu8K07me_8PMQ.png)",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

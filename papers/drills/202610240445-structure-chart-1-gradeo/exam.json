@@ -1,0 +1,56 @@
+{
+ "exam": "Structure chart 1 (Gradeo)",
+ "drill": true,
+ "created": "2026-10-24T04:45:22.635Z",
+ "duration_minutes": 10,
+ "reading_minutes": 0,
+ "total_available": 4,
+ "parts_total": 1,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "Structure Charts (Draw, TKS 2025)",
+   "stimulus": "A program is needed to allow users to book movie tickets. The system displays available movies, allows users to select a movie, choose the number of tickets, and proceed with payment. The developer has drafted the following algorithm to outline the program's behavior: \n\nBEGIN Main  \n    MovieTotal = 0  \n    TicketCount = 0  \n    DisplayMovieList  \n    SelectMovie (MovieTotal)  \n  \n    GetTicketCount (TicketCount)  \n    CalculateTotal (MovieTotal, TicketCount, FinalCost)  \n  \n    ShowBookingSummary (MovieTotal, TicketCount, FinalCost)  \nEND Main  \n  \nBEGIN SelectMovie (MovieTotal)  \n    Display “Select a movie”  \n    MovieTotal = 15  \nEND  \n  \nBEGIN GetTicketCount (TicketCount)  \n    Input number of tickets  \n    TicketCount = user input  \nEND  \n  \nBEGIN CalculateTotal (MovieTotal, TicketCount, FinalCost)  \n    FinalCost = MovieTotal \\* TicketCount  \nEND  \n  \nBEGIN ShowBookingSummary (MovieTotal, TicketCount, FinalCost)  \n    Display MovieTotal, TicketCount, FinalCost  \n    GetConfirmation  \n  \n    IF Confirmation = True THEN  \n        ProcessPayment (FinalCost)  \n    ELSE  \n        CancelBooking  \n    ENDIF  \nEND  \n  \nBEGIN ProcessPayment (FinalCost)  \n    Display “Payment received”  \n    Display FinalCost  \nEND  \n  \nBEGIN CancelBooking  \n    Display “Booking cancelled”  \nEND",
+   "parts": [
+    {
+     "part_id": "658174d4-1b37-4a6d-bfaf-f00e7bc690c6",
+     "part": "Part A",
+     "marks_available": 4,
+     "answer_type": "DRAWING_V2",
+     "prompt": "Using the provided pseudocode, create a structure chart.",
+     "question": {},
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Constructs a substantially correct structure chart that includes all essential elements."
+      },
+      {
+       "marks": "3",
+       "criterion": "Constructs a structure chart that is mostly correct with at most 2 major errors."
+      },
+      {
+       "marks": "2",
+       "criterion": "Constructs a structure chart that has 4 or more major errors."
+      },
+      {
+       "marks": "1",
+       "criterion": "Attempts to create a structure chart relevant to the stimulus."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": "Note that there may be variations in the students' solution. The sample answer is only a guide, and the validity of the students' solution is up to the marker's discretion.",
+     "syllabus": "PROJ-11",
+     "sample_answer": "![](assets/f37ece41-2d6b-4df1-8719-0522ab309270.png)",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

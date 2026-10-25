@@ -1,0 +1,56 @@
+{
+ "exam": "DFD 2 (Gradeo)",
+ "drill": true,
+ "created": "2026-10-24T04:45:22.586Z",
+ "duration_minutes": 10,
+ "reading_minutes": 0,
+ "total_available": 4,
+ "parts_total": 1,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "Draw a data flow diagram to represent this system. (Q31, ITE 2016)",
+   "stimulus": "A system is being developed allowing people to renew their driver’s licence over the internet.\n\nTo renew a driver’s licence, the following steps are completed:\n\n-   The user submits their current driver’s licence number, their full name, and their date of birth.\n-   The system validates this information by querying the driver’s licence database.\n-   If the user is not validated (their details are not found, or do not match), an error message is returned and the user is exited from the system.\n-   If the user is validated it displays their current information in the database. The user checks this information, and is able to update their address or phone number if needed.\n-   Once the user confirms, or updates, their information they are prompted to submit their credit card details for payment.\n-   Their credit card details are validated with an external payment processing service.\n-   If their credit card is declined, an error message is returned and the user is exited from the system.\n-   If their credit card is successfully processed, the driver’s licence database is updated to indicate the user has renewed and an online receipt is provided.",
+   "parts": [
+    {
+     "part_id": "41484c54-220f-47a8-9123-33ce2daa56ed",
+     "part": "Part A",
+     "marks_available": 4,
+     "answer_type": "DRAWING_V2",
+     "prompt": "Draw a data flow diagram to represent this system.",
+     "question": {},
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Provides a correct DFD which includes at least the following:\n\nTWO external entities: user and payment service\nONE data store: driver&rsquo;s licence database\nTHREE processes\nAll required data flows between the external entities, data store, and processes"
+      },
+      {
+       "marks": "3",
+       "criterion": "Provides a substantially correct DFD which includes at least the following:\n\nTWO external entities: user and payment service\nONE data store: driver&rsquo;s licence database\nTHREE processes\nMost data flows between the external entities, data store, and processes"
+      },
+      {
+       "marks": "2",
+       "criterion": "An attempt at a DFD which addresses the requirements which includes at least the following:\n\nTWO external entities: user and payment service\nONE data store: driver&rsquo;s licence database\nSome processes\nSome data flows"
+      },
+      {
+       "marks": "1",
+       "criterion": "An attempt at constructing a DFD which addresses the requirements."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-11",
+     "sample_answer": "![](assets/0ea4be16-3ddd-4c92-904f-6eb84a1a8881.jpg)",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

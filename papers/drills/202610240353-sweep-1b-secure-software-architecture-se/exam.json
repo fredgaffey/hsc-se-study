@@ -1,0 +1,1899 @@
+{
+ "exam": "Sweep 1b - Secure Software Architecture (SEN Online)",
+ "drill": true,
+ "created": "2026-10-24T03:53:00.641Z",
+ "duration_minutes": 25,
+ "reading_minutes": 0,
+ "total_available": 28,
+ "parts_total": 28,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "1.1 Secure Code Benefits",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "39f1606e-1469-41ae-8664-bb49b2f6b98d",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following are benefits of secure software development? (Select all that apply.)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Enhances user trust",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Protects sensitive information",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Minimises cyber-attacks",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-1",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Secure software builds trust, protects private data and lowers the chance of attacks. All three are benefits.",
+      "options": {
+       "A": "Right. Users trust software that keeps their data safe.",
+       "B": "Right. Protecting sensitive data is the main goal of secure code.",
+       "C": "Right. Fewer weak spots means fewer successful attacks."
+      },
+      "strategy": "In 'select all' questions, judge each option on its own. Sometimes every option is right.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "1.1 Secure Code Benefits",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "137e03dd-f368-42d7-8452-8954045390fc",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following best explains why encryption is a critical aspect of secure software development?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "It converts sensitive data into a format that can only be accessed with a correct decryption key, preventing unauthorised access.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "It allows data to be stored and transmitted without any risk of being intercepted or altered by malicious actors.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "It scrambles all user data into random codes, regardless of the intended audience or purpose, making it unreadable to anyone.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "It ensures that sensitive information is permanently hidden from all users, preventing any form of data recovery.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-1",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Encryption scrambles data so only someone with the right key can read it. That stops people who should not see it.",
+      "options": {
+       "A": "Right. It names the key idea: only the correct key unlocks the data.",
+       "B": "Wrong. Encrypted data can still be intercepted. It just can't be read. 'Without any risk' is too strong.",
+       "C": "Wrong. Encryption is not for 'anyone'. The intended person can decrypt it.",
+       "D": "Wrong. Data is not 'permanently hidden'. The key holder can get it back."
+      },
+      "strategy": "Watch for absolutes like 'any risk', 'all', 'permanently'. They usually mark a wrong option.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "1.2 Software Development Steps",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "14624dc6-3769-4167-99a5-82c7c9d1e37f",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following activities are essential for ensuring security during the Testing and Debugging phase? Select all that apply.",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Dynamic Application Security Testing (DAST)",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Penetration Testing",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Vulnerability Scanning",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Static Application Security Testing (SAST)",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-2",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Security testing in this phase checks code (SAST), the running app (DAST) and real attack attempts (penetration testing).",
+      "options": {
+       "A": "Right. DAST tests the running app for weak spots.",
+       "B": "Right. Penetration testing acts like a real attacker to find holes.",
+       "C": "Marked wrong by the key. But vulnerability scanning is also a normal security test, so this is arguable.",
+       "D": "Right. SAST checks source code without running it."
+      },
+      "strategy": "'Select all' means judging each option on its own. Ask: is this a real security test?",
+      "key_check": "debatable",
+      "key_note": "Vulnerability scanning (C) is a standard security testing activity. Automated scanners are part of DAST. C could fairly be marked correct too."
+     }
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "1.2 Software Development Steps",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "a3ae8fa7-5d7e-4f50-958a-08c876c1845c",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which step in the software development life cycle primarily focuses on creating a detailed description of the system’s functionality and security features?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Development",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Determining Specifications",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Integration",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Maintenance",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-2",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Determining specifications is when you write down exactly what the system must do, including its security needs.",
+      "options": {
+       "A": "Wrong. Development is writing the code, not describing it.",
+       "B": "Right. Specifications describe functions and security features in detail.",
+       "C": "Wrong. Integration joins parts of the system together.",
+       "D": "Wrong. Maintenance fixes and updates the software after release."
+      },
+      "strategy": "Match the keyword: 'detailed description' = specifications.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "1.3 End Users",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "bf0cb536-60c8-4a1f-8834-50924e630c0d",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following are examples of balancing usability with security? (Select all that apply)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Adjusting security measures based on user behaviour",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Providing non-intrusive security notifications",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Minimising user friction during authentication",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-3",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Balancing means keeping security strong while making it easy to use. Adjusting to behaviour and gentle alerts do both.",
+      "options": {
+       "A": "Right. Extra checks only when behaviour looks risky keeps it secure and easy.",
+       "B": "Right. Alerts that don't block the user keep them safe without annoying them.",
+       "C": "Marked wrong by the key. On its own it only improves usability. But less friction (e.g. biometrics) can also balance both, so it is arguable."
+      },
+      "strategy": "Look for options that mention BOTH sides (security and usability). An option about only one side may not be a 'balance'.",
+      "key_check": "debatable",
+      "key_note": "C is arguable. Methods like single sign-on or fingerprint login reduce friction while staying secure. The key treats C as usability only."
+     }
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "1.3 End Users",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "8bdf949f-b7b6-4700-b7f8-1705dd265272",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A company is designing a file-sharing application. Novice users often forget to enable encryption. What is the best secure design solution?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Enable encryption by default for all users",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Add advanced encryption configuration options",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Provide training on encryption settings",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Remove the encryption feature entirely",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-3",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Novice users forget settings. So the safest design is to turn encryption on by default. This is 'secure by default'.",
+      "options": {
+       "A": "Right. Users are protected without needing to do anything.",
+       "B": "Wrong. More advanced options confuse novices even more.",
+       "C": "Wrong. Training helps but users can still forget.",
+       "D": "Wrong. Removing encryption makes the app less secure."
+      },
+      "strategy": "Match the scenario detail. 'Novice users forget' points to a fix that needs no action from them.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "1.4 Design Security Concepts",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "2b426be1-bef0-4737-a724-b838298db837",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A Flask application denies a user access to a resource, even though the user is authenticated. Which security concept is likely being enforced?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Integrity",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Confidentiality",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Authentication",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Authorisation",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-4",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "The user is logged in (authenticated) but still blocked. That is authorisation: checking what you are allowed to do.",
+      "options": {
+       "A": "Wrong. Integrity is about data not being changed.",
+       "B": "Wrong. Confidentiality is keeping data secret. It is not the best match for 'denied access to a logged-in user'.",
+       "C": "Wrong. The user is already authenticated. That part passed.",
+       "D": "Right. Authorisation decides what a known user may access."
+      },
+      "strategy": "Authentication = who are you. Authorisation = what are you allowed to do. The word 'even though authenticated' rules out C.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "1.4 Design Security Concepts",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "be068bee-e212-4a58-a49c-cdc777f0e46e",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which security concept involves verifying a user's identity before allowing access to resources?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Integrity",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Authentication",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Accountability",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Availability",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-4",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Authentication means checking who the user is, for example with a password.",
+      "options": {
+       "A": "Wrong. Integrity means data stays accurate and unchanged.",
+       "B": "Right. Verifying identity is authentication.",
+       "C": "Wrong. Accountability means tracking who did what.",
+       "D": "Wrong. Availability means the system is up when needed."
+      },
+      "strategy": "Spot the keyword: 'verifying identity' is the definition of authentication.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "title": "1.5 Security Features",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "bbe5a1d8-9685-4cfe-96c7-0316e69eb43c",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following are examples of privacy features in software? (Select all that apply.)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "User consent before processing data",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Password hashing for secure login",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Compliance with GDPR",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Data minimisation practices",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-5",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Privacy features control how personal data is collected and used. Asking consent and collecting less data do this.",
+      "options": {
+       "A": "Right. Asking consent gives users control of their data.",
+       "B": "Wrong. Hashing passwords is a security feature, not a privacy one.",
+       "C": "Wrong (per key). GDPR compliance is a legal requirement, not a feature built into the software.",
+       "D": "Right. Data minimisation means collecting only what is needed."
+      },
+      "strategy": "Separate privacy (control of personal data) from security (protection from attack) and law (compliance).",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "title": "1.5 Security Features",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "25af11de-d2fe-4b13-abb3-15e2a043deb6",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is NOT a feature of regulatory compliance in software development?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Implementing strong encryption for all data.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Establishing data retention policies.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Obtaining user consent before processing data.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Conducting compliance audits.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-5",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Regulatory compliance is about following the law: retention rules, consent and audits. 'Strong encryption for all data' is a security choice, not a legal feature.",
+      "options": {
+       "A": "Right answer (it is NOT a compliance feature). Laws ask for suitable protection, not encryption of all data.",
+       "B": "Wrong choice. Data retention policies are required by privacy laws.",
+       "C": "Wrong choice. User consent is a legal requirement.",
+       "D": "Wrong choice. Audits check that the law is followed."
+      },
+      "strategy": "In a NOT question, find the odd one out. Three options will share a theme (here: law).",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "title": "1.6 Security by Design",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "6737c6f9-d2b5-4fb1-9e24-34b772169d58",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is NOT a contribution of cryptography to the 'security by design' approach?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Usability",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Authentication",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Confidentiality",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Integrity",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-6",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Cryptography gives confidentiality, integrity and authentication. Usability is not something cryptography provides.",
+      "options": {
+       "A": "Right answer (it is NOT a contribution). Crypto often makes things harder to use, not easier.",
+       "B": "Wrong choice. Crypto proves identity, e.g. digital signatures.",
+       "C": "Wrong choice. Encryption keeps data secret.",
+       "D": "Wrong choice. Hashing shows data has not changed."
+      },
+      "strategy": "In a NOT question, three options will be the usual list. The odd word out is the answer.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "title": "1.6 Security by Design",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "11324a9f-2a0d-4f59-b985-32d0a044e930",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which cryptographic technique is used to ensure that data has not been altered during transmission?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Decryption",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Non-repudiation",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Encryption",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Hashing",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-6",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "A hash is a unique fingerprint of data. If the data changes, the hash changes. So hashing checks integrity.",
+      "options": {
+       "A": "Wrong. Decryption turns scrambled data back to readable form.",
+       "B": "Wrong. Non-repudiation means a sender can't deny sending. It is a goal, not a technique.",
+       "C": "Wrong. Encryption hides data but does not show if it changed.",
+       "D": "Right. Comparing hashes shows if data was altered."
+      },
+      "strategy": "Match the goal: 'not altered' = integrity = hashing.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "title": "1.7 Privacy by Design",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "8edfe845-9179-4825-a3b8-36e3eddc6a88",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following practices align with the principle of embedding privacy into the design? Answer, Adding privacy features only after user complaints. (Select all that apply.)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Designing systems with privacy features enabled by default.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Collecting personal data only when necessary.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Using encryption techniques to secure sensitive data.",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-7",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Privacy by design means building privacy in from the start: on by default, collect only what you need, protect it.",
+      "options": {
+       "A": "Right. Privacy on by default is a core principle.",
+       "B": "Right. Collecting only needed data is data minimisation.",
+       "C": "Right. Encrypting sensitive data protects privacy."
+      },
+      "strategy": "'Select all' means judging each option on its own. Ask: is this done from the start? (The prompt text includes a leftover wrong option, 'adding privacy after complaints'. That is reactive, so it is wrong.)",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "title": "1.7 Privacy by Design",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "914a81c4-2e39-44a3-9050-6d1ff1c2a38c",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What does 'minimal data collection' mean in the context of 'privacy by design'?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Collecting user data without their knowledge.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Collecting all available data to analyse later.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Collecting maximum data to improve marketing strategies thereby improving the security through privacy",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Collecting only the data necessary for the software to function, reducing data exposure risks.",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-7",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Minimal data collection means only collecting the data the software really needs. Less data stored means less to leak.",
+      "options": {
+       "A": "Wrong. Collecting without knowledge breaks privacy.",
+       "B": "Wrong. Collecting everything is the opposite of minimal.",
+       "C": "Wrong. Maximum data is the opposite. More data does not improve privacy.",
+       "D": "Right. Only necessary data, which lowers risk."
+      },
+      "strategy": "Use the word itself: 'minimal' means least. Rule out any option that says 'all' or 'maximum'.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "title": "1.8 Test Security and Resilience",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "331b11be-82ce-4d5c-aaff-939f32b738bd",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following are goals of disaster recovery? Answer, Automating vulnerability scans. (Select all that apply.)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Minimising long-term impacts of failures.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Ensuring backup reliability.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Restoring critical systems.",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-8",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Disaster recovery is about getting back to normal after a failure: restore systems, have backups that work, limit damage.",
+      "options": {
+       "A": "Right. Recovery limits the long-term harm.",
+       "B": "Right. Backups must work to recover data.",
+       "C": "Right. Restoring key systems is the main goal."
+      },
+      "strategy": "Think about the word 'recovery': what happens after things break. (The prompt includes a leftover wrong option, 'automating vulnerability scans'. That is prevention, not recovery.)",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "title": "1.8 Test Security and Resilience",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "d558488f-7dcf-407b-b59d-7bf6f59b725e",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following are examples of system hardening practices? (Select all that apply.)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Applying regular security patches.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Enforcing least-privilege access controls.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Disabling unnecessary services.",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-8",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "System hardening means reducing ways to attack a system: patch it, limit access and turn off what isn't needed.",
+      "options": {
+       "A": "Right. Patches fix known weaknesses.",
+       "B": "Right. Least privilege limits damage if an account is hacked.",
+       "C": "Right. Fewer services means fewer ways in."
+      },
+      "strategy": "'Select all' means judging each option. Ask: does this shrink the 'attack surface'?",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "title": "1.9 Security Strategies and Tools",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "0d2a780a-50a5-43e6-a894-5f7ca2671979",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is the main difference between Static Application Security Testing (SAST) and Dynamic Application Security Testing (DAST)?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "SAST is performed on running applications, while DAST analyses code without execution.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "SAST is focused on analysing vulnerabilities during code execution, while DAST reviews source code.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "SAST and DAST are interchangeable methods of assessing code vulnerabilities.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "SAST identifies vulnerabilities in source code, while DAST simulates real-world attacks on live systems.",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-9",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "SAST (Static) checks the source code without running it. DAST (Dynamic) tests the running app like an attacker.",
+      "options": {
+       "A": "Wrong. This swaps them around.",
+       "B": "Wrong. This also swaps them around.",
+       "C": "Wrong. They test different things, so they are not interchangeable.",
+       "D": "Right. Code for SAST, live system for DAST."
+      },
+      "strategy": "Use the word clues: Static = not moving (code only). Dynamic = moving (running app).",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "title": "1.9 Security Strategies and Tools",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "775f9feb-45c9-42d6-a7bf-01e2ead4498f",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which strategy is most likely to involve using a tool like Bandit to check Python code for vulnerabilities?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Penetration Testing",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Dynamic Application Security Testing (DAST)",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Business Continuity Planning",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Static Application Security Testing (SAST)",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-9",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Bandit reads Python source code to find security problems without running it. That is SAST.",
+      "options": {
+       "A": "Wrong. Penetration testing attacks a running system.",
+       "B": "Wrong. DAST tests a running app, not the code.",
+       "C": "Wrong. Business continuity is about keeping the business running in a crisis.",
+       "D": "Right. Checking code without running it is static testing."
+      },
+      "strategy": "Match the detail: 'check Python code' (not a running app) = static.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 19,
+   "title": "1.10 Defensive Data",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "b328f837-9f61-4170-9218-7faf37bcf7e1",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Read the two parts of the student response below. Select the Connector that provides the most logical bridge between the User Experience benefit and the Security reality. Part A (The Benefit): \"Client-side validation is useful because it runs in the browser, providing instant feedback to the user without needing to reload the page.\" [ CONNECTOR ] Part B (The Limitation): \"It provides no actual security since malicious users can easily bypass it by disabling JavaScript or using tools like Postman.\"",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "For example",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Consequently",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Therefore",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "However",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-10",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Part A gives a benefit. Part B gives a limit. A contrast word is needed, so 'However' fits.",
+      "options": {
+       "A": "Wrong. 'For example' adds an example, but Part B is not an example of Part A.",
+       "B": "Wrong. 'Consequently' means B is caused by A. It isn't.",
+       "C": "Wrong. 'Therefore' also means cause and effect.",
+       "D": "Right. 'However' shows a contrast between the plus and the minus."
+      },
+      "strategy": "Work out how the two ideas relate (contrast, cause, example) and pick the word for that link.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 20,
+   "title": "1.10 Defensive Data",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "d34c1b01-ff55-4c5e-a088-451586b02b63",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following are examples of input validation? (Select all that apply)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Type checking",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Length checking",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Range checking",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-10",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Input validation checks data is the right type, length and range before using it.",
+      "options": {
+       "A": "Right. Type check: e.g. age must be a number.",
+       "B": "Right. Length check: e.g. password at least 8 characters.",
+       "C": "Right. Range check: e.g. age between 0 and 120."
+      },
+      "strategy": "'Select all' means judging each option. All three are standard validation checks.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 21,
+   "title": "1.14 File Security",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "b780f6fb-51d3-4ea8-8a28-fa199922966d",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Select all the steps that are considered secure file-handling practices: (Select all that apply.)",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Encrypting sensitive files at rest.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Using file locks to prevent race conditions.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Validating and normalising file paths.",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-14",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Secure file handling protects files: encrypt them, stop two processes clashing, and check file paths.",
+      "options": {
+       "A": "Right. Encrypted files at rest are safe if stolen.",
+       "B": "Right. Locks stop race conditions, where two processes change a file at once.",
+       "C": "Right. Checking paths stops attacks like '../../' path traversal."
+      },
+      "strategy": "'Select all' means judging each option. Ask: does this protect the file or the system?",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 22,
+   "title": "1.14 File Security",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "3b768359-7949-4e3b-95a0-906e8b27f830",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which principle suggests that each user or process should have the minimum level of access necessary to perform its function?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Principle of Least Privilege",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Principle of Default Denial",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Principle of Complete Disclosure",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Principle of Maximum Access",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-14",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "The principle of least privilege gives each user or process only the access it needs, and no more.",
+      "options": {
+       "A": "Right. This is the definition of least privilege.",
+       "B": "Wrong. Default deny means block unless allowed. Close, but not about 'minimum level'.",
+       "C": "Wrong. Not a real security principle.",
+       "D": "Wrong. Maximum access is the opposite."
+      },
+      "strategy": "Spot the keyword: 'minimum level of access' matches 'least privilege'.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 23,
+   "title": "1.15 Collaboration Benefits",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "44dfb52e-c8bf-4eef-83c3-0691541dcdf1",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In a team working on a secure banking app, one developer suggests using multi-factor authentication while another proposes encryption for data transmission. This example demonstrates:",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Reduced need for collaboration",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Considering various points of view",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "(no answer)",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Avoiding peer review",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "E",
+        "text": "Delegating tasks based on expertise",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-15",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Two developers suggest different security ideas. That shows the team is considering various points of view.",
+      "options": {
+       "A": "Wrong. They are collaborating, not reducing it.",
+       "B": "Right. Different ideas from different people = different viewpoints.",
+       "C": "Wrong. This is a blank option.",
+       "D": "Wrong. Nothing in the scenario avoids review.",
+       "E": "Wrong. The scenario is about ideas, not who gets which task."
+      },
+      "strategy": "Match the scenario detail. 'One suggests... another proposes...' = different views.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 24,
+   "title": "1.15 Collaboration Benefits",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "b2347f3a-3038-4ddc-be03-a7ce9b9e9420",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following best describes the main advantage of incorporating multiple viewpoints in software development?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "(no answer)",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Increases the time required for development",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Enhances the understanding of potential security risks and blind spots",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Reduces the number of developers needed for the project",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "E",
+        "text": "Allows developers to work independently without interference",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-15",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "More viewpoints help a team spot risks one person would miss (blind spots).",
+      "options": {
+       "A": "Wrong. This is a blank option.",
+       "B": "Wrong. Extra time is a cost, not an advantage.",
+       "C": "Right. Different people notice different risks.",
+       "D": "Wrong. It doesn't reduce staff numbers.",
+       "E": "Wrong. Working alone is the opposite of sharing views."
+      },
+      "strategy": "Eliminate options that are disadvantages when the question asks for an advantage.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 25,
+   "title": "1.16 Enterprise Benefits",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "137fcd2b-fce9-4f51-915a-7261f14de49d",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is a key benefit of implementing secure development practices on future software projects?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Increased number of security audits post-release.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Delayed project timelines due to extensive testing.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Re-usability of secure components across multiple projects.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Increased complexity in the development process.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-16",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Secure components (like a login module) can be reused in later projects. This saves time and money.",
+      "options": {
+       "A": "Wrong. More audits after release is not the benefit.",
+       "B": "Wrong. Delays are a cost, not a benefit.",
+       "C": "Right. Reuse of tested secure code helps future projects.",
+       "D": "Wrong. More complexity is a downside."
+      },
+      "strategy": "The question asks for a benefit. Cross out anything that sounds negative.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 26,
+   "title": "1.16 Enterprise Benefits",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "af2bbeaa-52bb-4b72-88ad-56bd5a955827",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Why is it important for enterprises to integrate security considerations into their software development lifecycle (SDLC)?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "To eliminate the need for quality assurance testing.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "To reduce the number of developers needed for each project.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "To ensure compliance with legal regulations and reduce the risk of data breaches.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "To speed up the release process by skipping security checks.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-16",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Building security into the SDLC helps a business meet the law and lowers the risk of data breaches.",
+      "options": {
+       "A": "Wrong. You still need testing.",
+       "B": "Wrong. Security doesn't cut staff needs.",
+       "C": "Right. Legal compliance and fewer breaches.",
+       "D": "Wrong. Skipping checks is the opposite of secure development."
+      },
+      "strategy": "Rule out options that remove or skip something. Security adds care, it doesn't remove steps.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 27,
+   "title": "1.17 Social-Ethical-Legal Issues",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "2b6e7777-ec77-4229-9760-0d06202b7f69",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A company automates its security processes using AI tools, replacing manual IT roles. What ethical responsibility does the company have toward its displaced workforce?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Focus solely on hiring new talent",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Retrain and reskill affected employees",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Eliminate those roles without further action",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Outsource all IT-related work",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-17",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "The ethical choice is to help displaced workers by retraining and reskilling them for new roles.",
+      "options": {
+       "A": "Wrong. Ignores the current workers.",
+       "B": "Right. Reskilling looks after affected staff.",
+       "C": "Wrong. Cutting jobs with no support is not ethical.",
+       "D": "Wrong. Outsourcing doesn't help the displaced workers."
+      },
+      "strategy": "For 'ethical responsibility' questions, pick the option that cares for the people affected.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 28,
+   "title": "1.17 Social-Ethical-Legal Issues",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "8699e7c8-4ae7-4767-ba6e-59ae426b6da7",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Why is compliance with intellectual property laws particularly challenging in secure software development?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Secure software rarely involves innovative technology.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Open-source software has eliminated the need for IP protections.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Software evolves rapidly, requiring constant updates to protections.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "IP laws do not apply to software algorithms.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "SSA-17",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Software changes fast, so IP protection (like licences and copyright) must keep being updated.",
+      "options": {
+       "A": "Wrong. Secure software often involves new technology.",
+       "B": "Wrong. Open source still uses licences, which rely on IP law.",
+       "C": "Right. Rapid change makes IP hard to keep up with.",
+       "D": "Wrong. Too absolute. Code is protected by copyright, even if the bare idea of an algorithm is not."
+      },
+      "strategy": "Watch absolutes like 'rarely', 'eliminated', 'do not apply'. They are usually wrong.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  }
+ ]
+}

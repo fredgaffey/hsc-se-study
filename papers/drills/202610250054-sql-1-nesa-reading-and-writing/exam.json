@@ -1,0 +1,132 @@
+{
+ "exam": "SQL 1 - NESA reading and writing",
+ "drill": true,
+ "created": "2026-10-25T00:54:27.526Z",
+ "duration_minutes": 18,
+ "reading_minutes": 0,
+ "total_available": 8,
+ "parts_total": 3,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "Question 12, SQL",
+   "stimulus": "An online business is planning to use a database to keep track of its products, customers and orders. The contents of the Products, Customers and Orders tables during testing are shown.\n\n![image](assets/pp-nesa-hsc-familiarisation-12.png.png)\n\n![](assets/pp-nesa-hsc-familiarisation-12.png.png)",
+   "parts": [
+    {
+     "part_id": "8af49a59-c892-4ce4-a92b-82d9c2270318",
+     "part": "Part A",
+     "marks_available": 2,
+     "answer_type": "SHORT",
+     "prompt": "The following SQL query is run to test the database.\n\nSELECT ProductName, ProductPrice\nFROM Products\nWHERE ProductPrice > 22.00\nORDER BY ProductPrice ASC\n\nType the table with the result of running the SQL query. You may not need to use all the rows or columns.",
+     "question": {},
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Provides the correct output for the SQL query, including the correct ordering of the rows"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-18",
+     "sample_answer": "```\nProductName           ProductPrice\nDiscovery 1 & 2 (DVD)   26.98\nThe Plant (DVD)         28.00\n```",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Question 12, SQL",
+   "stimulus": "An online business is planning to use a database to keep track of its products, customers and orders. The contents of the Products, Customers and Orders tables during testing are shown.\n\n![image](assets/pp-nesa-hsc-familiarisation-12.png.png)\n\n![](assets/pp-nesa-hsc-familiarisation-12.png.png)",
+   "parts": [
+    {
+     "part_id": "cab4269a-6340-443b-b02a-8fe4145ef7b7",
+     "part": "Part A",
+     "marks_available": 3,
+     "answer_type": "SQL",
+     "prompt": "The contents of the Orders table need to be displayed as follows.\n\n| Customer | Product | Quantity |\n|---|---|---|\n| Nicky Singh | The Best Movie (DVD) | 2 |\n| Kim Smith | Celebration (DVD) | 1 |\n| Casey He | Travel 1 and 2 (Blu-Ray) | 1 |\n| Nicky Singh | Discovery 1 and 2 (DVD) | 2 |\n| Pat Alvardo | Discovery 1 and 2 (DVD) | 2 |\n\nWrite a SQL query that can produce this result.",
+     "question": {
+      "dataset_setup_sql": "CREATE TABLE Products (ProductID TEXT PRIMARY KEY, ProductName TEXT, ProductPrice REAL);\nINSERT INTO Products VALUES ('P001','The Plant (DVD)',28.00),('P002','Discovery 1 and 2 (DVD)',26.98),('P003','Travel 1 and 2 (Blu-Ray)',22.00),('P004','The Best Movie (DVD)',19.98),('P005','Celebration (DVD)',12.00);\nCREATE TABLE Customers (CustID TEXT PRIMARY KEY, CustName TEXT, CustEmail TEXT);\nINSERT INTO Customers VALUES ('C001','Nicky Singh','N.Singh@nesa.edu.au'),('C002','Casey He','C.He@bos.edu.au'),('C003','Ash Lee','A.Lee@bosnsw.edu'),('C004','Kim Smith','K.Smith@nesa.edu.au'),('C005','Pat Alvardo','P.Alvardo@bos.edu.au');\nCREATE TABLE Orders (OrderID TEXT PRIMARY KEY, CustID TEXT, ProductID TEXT, OrderQuantity INTEGER);\nINSERT INTO Orders VALUES ('T001','C001','P004',2),('T002','C004','P005',1),('T003','C002','P003',1),('T004','C001','P002',2),('T005','C005','P002',2);"
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides a correct SQL query"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides a substantially correct SQL query with at least TWO of the following features:renaming the columnsselecting the three tablesjoining the tables"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of renaming the columns or joining the tables"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-18",
+     "sample_answer": "```\nSELECT Customers.CustName as 'Customer', Products.ProductName as 'Product',\nOrders.OrderQuantity as 'Quantity'\nFROM Products, Customers, Orders\nWHERE Orders.ProductID = Products.ProductID\nAND Orders.CustID = Customers.CustID\nORDER BY Orders.OrderID ASC\n```",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "SE: SQL Library (3)",
+   "stimulus": "![](assets/pp-normanhurst-trial-25.png.png)",
+   "parts": [
+    {
+     "part_id": "2a134bd2-ec18-478d-b27b-0d64ef5611b1",
+     "part": "Part A",
+     "marks_available": 3,
+     "answer_type": "SQL",
+     "prompt": "A public library stores book details. Management needs a report showing all books published after 2015, listed from the newest title to the oldest.\n\nWrite SQL to output this data, meeting the criteria above.",
+     "question": {
+      "dataset_setup_sql": "CREATE TABLE Books (book_id INTEGER PRIMARY KEY, title TEXT, author TEXT, published_year INTEGER);\nINSERT INTO Books VALUES (1,'Clean Code','Robert Martin',2008),(2,'Educated','Tara Westover',2018),(3,'Project Hail Mary','Andy Weir',2021),(4,'The Pragmatic Prog.','Thomas Hunt',1999);"
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Writes correct SQL code, addressing the criteria"
+      },
+      {
+       "marks": "2",
+       "criterion": "Writes SQL code, addressing most of criteria"
+      },
+      {
+       "marks": "1",
+       "criterion": "Demonstrates some understanding of SQL"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "WEB-18",
+     "sample_answer": "SELECT title, author\nFROM   Books\nWHERE  published\\_year > 2015\nORDER  BY published\\_year DESC;",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

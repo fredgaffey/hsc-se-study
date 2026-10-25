@@ -232,7 +232,7 @@ In the exam app's PDF list (answers in `papers/marking/` where they exist):
 - **Sun:** exam-style questions one at a time, gaps (❌ then 🟡) first.
 - Weakest areas by marks (24 Oct): SQL 27% · legal/social/ethical 38% · secure architecture 58% · web attacks 63%.
 
-## 3. Plan (revised Sat 24 Oct afternoon): diagrams, SQL, pseudocode, gaps, extended responses
+## 3. Plan (revised Sun 25 Oct: CSSA dropped, DoE Sample today; NESA Sample Exam used as drills): diagrams, SQL, pseudocode, gaps, extended responses
 
 | Topic | How | Tools |
 |---|---|---|
@@ -242,20 +242,31 @@ In the exam app's PDF list (answers in `papers/marking/` where they exist):
 | Content gaps | Quick sweeps; lessons only for 🟡/❌ | Sweeps 2 & 3 · MikeTeachesTech notes (`~/hsc-se-resources`) |
 | Extended responses | One per day with the full loop + those inside papers | Exam app (live marking, timing) · question bank · sentence-starter sheet |
 
+### Trial papers: one per day (reserved: no drills use their questions)
+| Day | Paper | Where | Marks / time |
+|---|---|---|---|
+| **Sun 25 Oct** | **NSW DoE Sample Exam** | exam app → Trial papers | 80 marks · 2 h 30 |
+| **Sun/Mon (when it fits)** | **North Sydney Boys 2025 trial** | exam app → Trial papers | 50 marks · ~95 min |
+| **Mon 26 Oct** | **2025 HSC** (the real one) | NESA familiarisation app (real interface) | 80 marks · 10 min reading + 2 h 20 |
+Mark each the same evening; fix list feeds the next morning's drills.
+
 ### Sat 24 Oct (now → ~9pm)
 - [ ] SQL 1 (45 min): trainer tasks 1–7 (SELECT, WHERE, ORDER BY, LIKE, NESA word operators)
 - [ ] Diagrams 1 (60 min): DFD + structure chart symbols → draw DFD worksheet → check answer
 - [ ] Pseudocode (45 min): course-spec syntax → write 3 algorithms → linter
-- [ ] Finish Sweep 1b + one extended response with live marking (45 min)
+- [ ] After a break: **North Sydney Boys 2025 trial**, timed (~95 min) → mark
 
 ### Sun 25 Oct
 - [ ] SQL 2 (45 min): tasks 8–13 (COUNT/SUM/AVG, GROUP BY, joins) + one HSC SQL question from the bank
 - [ ] Diagrams 2 (60 min): class diagrams (types!), storyboards, decision trees, data dictionaries (worksheets)
-- [ ] Afternoon: **2025 HSC paper** in NESA's familiarisation app, timed 2 h 30 → mark with official guidelines
+- [ ] Afternoon: **CSSA 2025 trial**, timed 2 h 30 → mark
 - [ ] Evening (light): Sweeps 2 & 3 → mini-lessons only on ❌
 
 ### Mon 26 Oct
-- [ ] Morning: one paper timed (DoE Sample Trial or NESA sample exam) → mark
+- [ ] **First thing (~20 min): SQL spaced repetition.** Claude builds "SQL 4": redo every SQL question lost marks on
+      today (SQL 2 Q1–Q4 + SQL 1 misses) + 3–4 unused ones (MTT Q15, CSSA Familiarisation, NESA Fam Q2, TH join bug,
+      Girraween errors) + trainer exercises 11 and 13 from memory (all 13 done Sun).
+- [ ] Morning: **2025 HSC** in NESA's familiarisation app, timed → mark with official guidelines
 - [ ] Afternoon: fix list from both papers · one extended response · SQL + pseudocode re-drill · **stop by ~5pm**
 
 ### Tue 27 Oct, exam morning
@@ -287,6 +298,22 @@ accessibility, privacy, security, information, development, efficiency, metadata
 
 *(newest first: date — what was done — score/result — what to fix next)*
 
+- **25 Oct** — SQL 5 (Claude-written). 19 min, **11/14**. Used the `-- requirement` comments: Q1, Q3, Q5 full marks.
+  Q2 2/4: comment list missed 'on a TV', and wrote DESC under a comment saying LOW to HIGH → do a final
+  check of the query against the comments. Q4 1/2: AND before OR (harder than HSC).
+- **25 Oct** — SQL 3 (Claude-written, read-the-question traps). 21 min, **9/12**. Reading Q perfect.
+  Lost: missed 'Hornsby' (1 of 3 conditions in a paragraph) + extra column + date end '2026-01-10'; forgot ORDER BY
+  after a bullet list; ordered by name not by NumberSold. Same pattern as SQL 2 → Mon SQL 4 must re-test these.
+- **25 Oct** — SQL 2 (TH trace, NESA Sample GROUP BY, MTT join, NSW 5-mark aggregate). 18 min of 28, **9/13**.
+  Learned joins/GROUP BY/SUM today from zero. Lost: FROM * (needs the table name); trace didn't say what SELECT
+  outputs; extra column not asked for; missed the 2024 date filter. Fix: re-read the question's list of
+  requirements against the query before moving on; use single quotes for text.
+- **25 Oct** — Structure chart 2 (Normanhurst 2025 trial). 9:47, **3/4**. Parameters, repetition and choice right
+  (song up from Search; song+playlist down). Lost the hierarchy mark: drew CASEWHERE as a module box. Control
+  structures are symbols on Main's lines, never boxes. Also: no arrow for local variables (choice); copy module names exactly.
+- **24 Oct** — Explain 4: NESA Sample Q19 (authentication + authorisation, school app). 160 words, 8:00, **4/4** (just).
+  Both applied (student ID + password; RBAC teacher vs student). Fix: the last 2 lines copied the stimulus without a
+  "so that…"; generic MFA list is wasted words; add hashing. Answer ~110 words: more linking, less listing.
 - **24 Oct** — Lesson: how to write NESA responses (question words, four moves, templates). Next: practice #9.
 - **24 Oct** — Read NESA 2025 full-mark samples: answers are shorter than assumed (~25–30 words/mark) and spelling isn't penalised.
 - **24 Oct** — Fair blind test with 4 fresh agents: with key 48/48 within 1 mark; no key 47/48.

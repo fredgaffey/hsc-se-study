@@ -1,0 +1,1508 @@
+{
+ "exam": "Sweep 3 - Software Automation (SEN Online)",
+ "drill": true,
+ "created": "2026-10-24T03:53:00.908Z",
+ "duration_minutes": 20,
+ "reading_minutes": 0,
+ "total_available": 22,
+ "parts_total": 22,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "3.1 Machine Learning and Automation",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "2983bf2d-21ce-4e38-a1ed-a817ec8f3209",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following scenarios best illustrates how ML supports intelligent resource management in DevOps?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "A manual process where engineers monitor traffic spikes and manually adjust server resources based on past data analysis and fixed provisioning rules.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "A DevOps approach that integrates machine learning to predict hardware needs based on static usage data but still relies on human operators for infrastructure scaling.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "A system that predicts when server traffic is likely to peak based on historical usage patterns and automatically scales infrastructure to prevent downtime without wasting resources.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "A system where ML models are used to predict traffic spikes but require constant human oversight to adjust infrastructure scaling appropriately.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-1",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "ML learns from past usage to predict traffic spikes. Then it scales servers automatically. No human step is needed.",
+      "options": {
+       "A": "Wrong. This is all manual. No ML.",
+       "B": "Wrong. Uses ML but humans still do the scaling, so it's not fully automated.",
+       "C": "Right. Predicts AND scales automatically, without waste.",
+       "D": "Wrong. Needs constant human oversight, so it's not intelligent automation."
+      },
+      "strategy": "When options are long and similar, find the one that has every part: ML prediction AND automatic action.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "3.1 Machine Learning and Automation",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "332e8264-d440-4d93-bb20-4d5ebbf28894",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is NOT a benefit of integrating ML into Business Process Automation (BPA)?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "ML increases the scalability of BPA, allowing it to handle complex workflows across departments and systems while improving accuracy over time.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "ML allows BPA to automatically adapt workflows based on dynamic business conditions, improving efficiency and reducing the need for manual intervention.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Machine learning helps BPA systems make more intelligent decisions by analyzing historical data and automating tasks involving unstructured data.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "ML integration enables BPA systems to perform tasks autonomously, completely eliminating the need for human oversight in business processes.",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-1",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "ML makes business automation smarter, but humans are still needed to oversee it.",
+      "options": {
+       "A": "Wrong choice. Better scale and accuracy is a real benefit.",
+       "B": "Wrong choice. Adapting workflows is a real benefit.",
+       "C": "Wrong choice. Smarter decisions from data is a real benefit.",
+       "D": "Right answer (NOT a benefit). 'Completely eliminating' human oversight is false and unsafe."
+      },
+      "strategy": "Watch absolutes like 'completely eliminating'. In a NOT question, the absolute is often the answer.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "3.2 Artificial Intelligence and Machine Learning",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "d30e15f4-292b-4f9c-8837-c0281883f241",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A developer wants to create a system that recognises handwritten text and improves its accuracy over time. Which type of system is this?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Artificial Intelligence",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Machine Learning",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Narrow AI",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "General AI",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-2",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "A system that learns from data and gets more accurate over time is machine learning.",
+      "options": {
+       "A": "Wrong. AI is the broad field. ML is the more exact answer.",
+       "B": "Right. 'Improves over time' is the mark of ML.",
+       "C": "Wrong. It is narrow AI too, but the question points at learning.",
+       "D": "Wrong. General AI would handle any task like a human. This does one task."
+      },
+      "strategy": "Several options can be true. Pick the one that matches the key detail: 'improves over time' = learning = ML.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "3.2 Artificial Intelligence and Machine Learning",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "d1d54d63-a1f2-4285-b543-4cc6d9b05f41",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is an example of Machine Learning (ML) in action?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "An AI-powered smart home thermostat that adjusts temperature based on the time of day.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "A virtual assistant like Siri using voice commands to set reminders and send texts.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "A fraud detection system that alerts users of suspicious activities based on fixed rules.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "A recommendation system on Netflix that suggests new shows based on your viewing history.",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-2",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Netflix learns from your viewing history to suggest shows. Learning from data is ML.",
+      "options": {
+       "A": "Wrong. Changing temperature by time of day is a fixed rule.",
+       "B": "Wrong. Siri does use ML for voice, but the example only describes following commands.",
+       "C": "Wrong. 'Fixed rules' means no learning.",
+       "D": "Right. Recommendations learn from your history."
+      },
+      "strategy": "Look for 'based on fixed rules' or schedules. Those are not ML. ML learns from data.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "3.3 ML Training Models",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "a6cd9f37-bf8a-4da5-8bbe-f1c9e69771e1",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following best describes how reinforcement learning works?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "The model uses labelled datasets to predict the correct output for new, unseen data based on past examples.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "The model is given a small amount of labelled data to guide its learning, while relying heavily on unlabelled data.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "The model is trained to identify patterns in unlabelled datasets by grouping similar data points.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "The model interacts with an environment, receiving rewards or penalties to improve decision-making.",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-3",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "In reinforcement learning, a model tries actions and gets rewards or penalties. It learns what works best.",
+      "options": {
+       "A": "Wrong. Labelled data describes supervised learning.",
+       "B": "Wrong. Small labelled plus lots of unlabelled is semi-supervised.",
+       "C": "Wrong. Grouping unlabelled data is unsupervised learning.",
+       "D": "Right. Rewards and penalties = reinforcement."
+      },
+      "strategy": "Each option describes one training model. Match the keyword: 'rewards' = reinforcement.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "title": "3.3 ML Training Models",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "8f38b807-1348-4cb6-b782-7d50d2aa74bb",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is an appropriate use case for semi-supervised learning?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Using labelled images of cats and dogs to train a model to classify animal pictures.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Using a small number of labelled medical images and a large number of unlabelled ones to improve diagnostic accuracy.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Training an AI agent to play chess by rewarding it for winning moves.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Grouping website users into clusters based on browsing patterns without knowing their identity.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-3",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Semi-supervised learning uses a few labelled examples and many unlabelled ones.",
+      "options": {
+       "A": "Wrong. All data labelled = supervised.",
+       "B": "Right. A few labelled plus many unlabelled images.",
+       "C": "Wrong. Rewards for winning = reinforcement.",
+       "D": "Wrong. Grouping without labels = unsupervised."
+      },
+      "strategy": "Use the word: 'semi' = half. Look for a mix of labelled and unlabelled data.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "title": "3.4 Applications of Machine Learning Algorithms",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "b527a9a3-0511-4eaf-81af-6abd7e3e16a8",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In the context of Tesla’s Autopilot system, what is the role of Convolutional Neural Networks (CNNs)?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "CNNs analyse camera images to detect objects like pedestrians and road signs.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "CNNs are used to forecast the car's battery life and recommend charging intervals.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "CNNs are used to predict weather conditions and adjust the car's speed accordingly.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "CNNs help Tesla optimise the car’s fuel efficiency by predicting road conditions.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-4",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "CNNs are built to understand images. In Autopilot they find objects like people and signs in camera images.",
+      "options": {
+       "A": "Right. CNNs analyse images.",
+       "B": "Wrong. Battery forecasting isn't an image task.",
+       "C": "Wrong. Weather prediction isn't an image task.",
+       "D": "Wrong. Teslas are electric, so 'fuel efficiency' is a trap. Also not an image task."
+      },
+      "strategy": "Remember: CNN = images. Rule out options with no images.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "title": "3.4 Applications of Machine Learning Algorithms",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "b54e3c70-5887-46fa-9f98-7523b9681089",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "A hospital wants to use machine learning to detect fractures in X-ray images. Which of the following algorithms should they use?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Collaborative Filtering",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Convolutional Neural Networks (CNNs)",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Recurrent Neural Networks (RNNs)",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Decision Trees",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-4",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "CNNs are the best choice for finding patterns in images, like fractures in X-rays.",
+      "options": {
+       "A": "Wrong. Collaborative filtering is for recommendations.",
+       "B": "Right. CNNs are made for images.",
+       "C": "Wrong. RNNs are for sequences like text or time series.",
+       "D": "Wrong. Decision trees suit table data, not images."
+      },
+      "strategy": "Match the data type: X-ray = image = CNN.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "title": "3.5 Models for Designing and Analysing",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "98d6afb1-dca1-46f7-ab1c-8d0cc8a30874",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is a limitation of neural networks compared to decision trees?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Neural networks are more interpretable and offer clearer decision paths than decision trees.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Neural networks struggle with large datasets and require manual feature engineering to function.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Neural networks often require large datasets, whereas decision trees can perform well on smaller datasets.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Neural networks are less computationally intensive than decision trees, making them better suited for small-scale problems.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-5",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Neural networks usually need lots of data to learn well. Decision trees can work with less.",
+      "options": {
+       "A": "Wrong. Neural networks are harder to explain, not easier.",
+       "B": "Wrong. They handle large data well and learn features on their own.",
+       "C": "Right. Needing large datasets is a real limit.",
+       "D": "Wrong. Neural networks need more computing power, not less."
+      },
+      "strategy": "Check whether each option is a limitation of neural networks. Some options are false or describe strengths.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "title": "3.5 Models for Designing and Analysing",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "85bb5bfc-aff6-4687-a974-e01372649e79",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is the primary function of hidden layers in a neural network?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "To directly produce the final output prediction of the model.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "To collect and store data before passing it through to the output layer.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "To apply a series of mathematical transformations and learn patterns within the data.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "To limit the amount of data the model can process at once, preventing overfitting.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-5",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Hidden layers transform the data step by step to learn patterns.",
+      "options": {
+       "A": "Wrong. The output layer gives the final answer.",
+       "B": "Wrong. Hidden layers process data. They don't just store it.",
+       "C": "Right. They learn patterns using maths (weights and activations).",
+       "D": "Wrong. Limiting data isn't their job."
+      },
+      "strategy": "Think about the layer order: input, hidden, output. Hidden is the 'thinking' part in the middle.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "title": "3.6 Types of Machine Learning Algorithms",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "451a0ac7-306c-42f6-9e48-8b7d2f544967",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "In the K-nearest neighbour (KNN) algorithm, what role does the parameter “K” play?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "It determines the number of decision trees used in the model.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "It defines the number of neighbours used to make predictions.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "It calculates the probability of a data point belonging to a specific category.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "It represents the distance threshold that determines if two points belong to the same group.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-6",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "K is how many nearest neighbours the algorithm looks at to make a prediction.",
+      "options": {
+       "A": "Wrong. Decision trees are a different algorithm.",
+       "B": "Right. K = number of neighbours.",
+       "C": "Wrong. K isn't a probability.",
+       "D": "Wrong. K is a count, not a distance."
+      },
+      "strategy": "Use the name: K-nearest neighbour = the K closest neighbours.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 12,
+   "title": "3.6 Types of Machine Learning Algorithms",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "2f4b189c-ca57-405f-8d93-d68c723be8ca",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which situation best illustrates the use of K-nearest neighbour (KNN)?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "A model that calculates probabilities for binary outcomes, such as yes or no.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "A regression model that fits a line to data points to predict future values.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "A classifier that assigns an image to a category by finding the closest matching images in the dataset.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "A system that predicts continuous values like stock prices using historical data.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-6",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "KNN classifies a new item by looking at the closest matching items it already knows.",
+      "options": {
+       "A": "Wrong. Probabilities for yes/no is logistic regression.",
+       "B": "Wrong. Fitting a line is linear regression.",
+       "C": "Right. Closest matching images = nearest neighbours.",
+       "D": "Wrong. Predicting continuous values from history is regression."
+      },
+      "strategy": "Match the keyword: 'closest matching' = nearest neighbour.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 13,
+   "title": "3.7 Regression Models",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "867a4dbc-a187-4e12-a220-83476881d9eb",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which method would you add to a PolynomialRegression class to convert input features into polynomial terms?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "predict()",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "transform()",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "sigmoid()",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "evaluate()",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-7",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "transform() changes the inputs into polynomial terms (like x, x², x³) before fitting.",
+      "options": {
+       "A": "Wrong. predict() makes predictions after training.",
+       "B": "Right. transform() converts the input features.",
+       "C": "Wrong. sigmoid() is for logistic regression or neural networks.",
+       "D": "Wrong. evaluate() measures how good the model is."
+      },
+      "strategy": "Match the verb: 'convert' = transform.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 14,
+   "title": "3.7 Regression Models",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "924f8b4f-4b89-4a66-a515-4013ae97a16e",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which OOP method in a LinearRegression class is responsible for training the model by calculating optimal coefficients?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "fit()",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "transform()",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "predict()",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "evaluate()",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-7",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "fit() trains the model. It finds the best coefficients (slope and intercept) from the data.",
+      "options": {
+       "A": "Right. fit() trains the model.",
+       "B": "Wrong. transform() changes input data.",
+       "C": "Wrong. predict() uses a trained model.",
+       "D": "Wrong. evaluate() tests a trained model."
+      },
+      "strategy": "Know the common method names: fit = train, predict = use, evaluate = test.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 15,
+   "title": "3.8 Predictions with Neural Network Models",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "f7415dc7-df94-4abc-aeda-20076ffc1a48",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which attribute of the neural network class is responsible for controlling how much the weights are adjusted during training?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Bias",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Gradient",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Activation Function",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Learning Rate",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-8",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "The learning rate sets how big each weight change is during training.",
+      "options": {
+       "A": "Wrong. Bias is a value added in each neuron.",
+       "B": "Wrong. The gradient gives the direction of change, not how big a step to take.",
+       "C": "Wrong. The activation function decides a neuron's output.",
+       "D": "Right. Learning rate = step size."
+      },
+      "strategy": "Spot the keyword: 'how much' adjusted = the rate.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 16,
+   "title": "3.8 Predictions with Neural Network Models",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "b5259b35-f7b9-49d8-afd7-f511c77db2ad",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following best describes the feedforward process in a neural network?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "A process where data cycles through the network multiple times to improve accuracy before backpropagation.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "A technique to randomly assign weights and biases during the initial network setup.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "A one-way process where data flows from the input layer through hidden layers to the output layer.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "A method for calculating the gradient of the loss function by propagating errors backward through the network.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-8",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "In feedforward, data moves one way: input layer, then hidden layers, then output.",
+      "options": {
+       "A": "Wrong. Data doesn't cycle around in feedforward.",
+       "B": "Wrong. That's weight initialisation.",
+       "C": "Right. One direction, forward.",
+       "D": "Wrong. That's backpropagation."
+      },
+      "strategy": "Use the word: 'feed forward' = moves forward one way.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 17,
+   "title": "3.9 Impact of Automation",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "2e15757d-c7da-4a03-bae5-bbfc0cc4db8a",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following best describes the impact of automation on people with disabilities in the workplace?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Automation enables increased independence and productivity through assistive technologies.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Automation excludes people with disabilities from technical roles, with little impact on their routine tasks.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Automation primarily limits opportunities for people with disabilities by reducing available positions.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Automation has minimal impact on individuals with disabilities, as they are typically employed in non-automated fields.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-9",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Automation and assistive technology can help people with disabilities work more independently.",
+      "options": {
+       "A": "Right. Assistive tech improves independence and productivity.",
+       "B": "Wrong. Too negative, and not supported.",
+       "C": "Wrong. Ignores the positive role of assistive tech.",
+       "D": "Wrong. Makes a false general claim about where people work."
+      },
+      "strategy": "Rule out options that make broad claims about a whole group of people.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 18,
+   "title": "3.9 Impact of Automation",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "2571ed29-bbd5-4a9e-ae5a-bb07bc5932ce",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is a potential environmental impact of automation, particularly in large data-driven industries?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Increased carbon emissions due to manual monitoring.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Decreased energy demand from automation that replaces human oversight.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Increased energy use from data centres supporting automation.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Decreased need for renewable energy as automated factories produce clean energy.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-9",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Automation depends on data centres that use a lot of electricity.",
+      "options": {
+       "A": "Wrong. Manual monitoring isn't what automation adds.",
+       "B": "Wrong. Automation usually needs more energy, not less.",
+       "C": "Right. Data centres use a lot of power.",
+       "D": "Wrong. Factories don't make clean energy just by being automated."
+      },
+      "strategy": "Think about what automation actually needs to run: computers and power.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 19,
+   "title": "3.10 Human Behaviour Influences",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "23f9a8b9-b211-41ba-a808-d6791335fc7e",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is a key consideration when designing ethical AI in culturally diverse societies?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Designing AI systems to eliminate user interaction in culturally sensitive contexts.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Limiting access to AI systems in certain communities to reduce potential harm.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Ensuring that AI systems are not used in regions with strong belief systems.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Incorporating fairness and inclusivity into AI algorithms to avoid discrimination.",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-10",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Ethical AI should be fair and inclusive so it doesn't discriminate against any group.",
+      "options": {
+       "A": "Wrong. Removing users doesn't make AI fair.",
+       "B": "Wrong. Limiting access is unfair to those communities.",
+       "C": "Wrong. Excluding regions is discrimination.",
+       "D": "Right. Fairness and inclusion avoid discrimination."
+      },
+      "strategy": "Pick the option that includes people. Rule out options that exclude or limit groups.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 20,
+   "title": "3.10 Human Behaviour Influences",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "09fded7d-d6f9-4f2a-85f6-765f08bf6ad1",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "How does the “fight-or-flight” response impact user interaction with AI in high-pressure environments?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Users need more time to review all available data before making decisions.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Users prefer slower AI responses to reduce cognitive load during stressful situations.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Users may rely on quick information, making complex outputs challenging.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "D",
+        "text": "Users are more likely to provide detailed feedback to AI systems under stress.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "C"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-10",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Under stress, people want quick, simple information. Complex AI output is harder to use.",
+      "options": {
+       "A": "Wrong. Stressed people have less time, not more.",
+       "B": "Wrong. They want fast answers, not slow ones.",
+       "C": "Right. Quick info is needed; complex output is hard.",
+       "D": "Wrong. Stressed people give less feedback, not more."
+      },
+      "strategy": "Think about what 'fight-or-flight' means: act fast. Rule out options about slowing down.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 21,
+   "title": "3.11 Investigating Bias",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "cf116c2b-225e-4ce8-8370-93dc5b191c7f",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is NOT a method to mitigate bias in AI systems?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Building diverse teams to bring multiple perspectives into AI development.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "Conducting bias audits to detect and correct biased model behavior.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Curating inclusive datasets that represent all relevant demographic groups.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Using only historical data to ensure the model learns from real-world examples.",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "D"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-11",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Using only historical data can copy past unfairness into the model. So it does NOT reduce bias.",
+      "options": {
+       "A": "Wrong choice. Diverse teams do reduce bias.",
+       "B": "Wrong choice. Bias audits do reduce bias.",
+       "C": "Wrong choice. Inclusive datasets do reduce bias.",
+       "D": "Right answer (NOT a method). Past data often holds past bias."
+      },
+      "strategy": "Watch the word 'only'. Absolutes often signal the wrong idea, which is the answer in a NOT question.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  },
+  {
+   "number": 22,
+   "title": "3.11 Investigating Bias",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "78b8d824-fb0d-40e7-b437-250908ea893e",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which of the following is an example of dataset source bias?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Using historical hiring data with gender imbalances to train a recruitment algorithm.",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Selecting variables for a model based on assumptions about a population.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "Choosing programming methods that prioritise efficiency over transparency.",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Developing algorithms that fail to consider long-term environmental impacts.",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-11",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     },
+     "explanation": {
+      "correct": "Dataset source bias comes from the data itself. Old hiring data with gender imbalance teaches the model that imbalance.",
+      "options": {
+       "A": "Right. The bias comes from the training data.",
+       "B": "Wrong. That's human bias in choosing variables.",
+       "C": "Wrong. That's a design choice, not data bias.",
+       "D": "Wrong. That's about environmental impact, not bias in data."
+      },
+      "strategy": "Spot the keyword: 'dataset source' = where the data came from. Pick the option about the data.",
+      "key_check": "ok"
+     }
+    }
+   ]
+  }
+ ]
+}

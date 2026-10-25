@@ -1,0 +1,192 @@
+{
+ "exam": "Pseudocode 1",
+ "drill": true,
+ "created": "2026-10-25T02:19:08.248Z",
+ "duration_minutes": 32,
+ "reading_minutes": 0,
+ "total_available": 15,
+ "parts_total": 4,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "Question 8, Algorithm Correction",
+   "stimulus": "The following subroutine is intended to search an array for an item and output the position of that item in the array. There are several mistakes in the algorithm.\n\nThe array is called **ItemArray** and it is indexed from 1.",
+   "parts": [
+    {
+     "part_id": "d2bc40ca-9143-4676-a09f-e605a0799ac4",
+     "part": "Part A",
+     "marks_available": 3,
+     "answer_type": "CODING",
+     "prompt": "Copy the algorithm into the space below and modify the algorithm logic so that it achieves its intended purpose.\n\nBEGIN Search (SearchItem) Set LastIndex to the number of elements in ItemArray Index = 1 WHILE Found = FALSE OR Index < LastIndex IF Index = SearchItem THEN Found = TRUE ENDIF ENDWHILE IF Found = TRUE THEN Display 'Position', Index ELSE Display 'Not found' ENDIF END Search",
+     "question": {
+      "language": "PYTHON"
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Correctly modifies the algorithm to achieve its intended purpose"
+      },
+      {
+       "marks": "2",
+       "criterion": "Corrects some mistakes in the algorithm"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the problem"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-15",
+     "sample_answer": "```\nBEGIN Search (SearchItem)\n  Set LastIndex to the number of elements in ItemArray\n  Found = FALSE\n  Index = 1\n  WHILE Found = FALSE AND Index < LastIndex + 1\n    IF ItemArray(Index) = SearchItem THEN\n      Found = TRUE\n    ENDIF\n    Index = Index + 1\n  ENDWHILE\n  IF Found = TRUE THEN\n    Display \u2018Position\u2019, Index \u2013 1\n  ELSE\n    Display \u2018Not found\u2019\n  ENDIF\nEND Search\n```",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "HSC SE 2025, Q14, Pseudocode Algorithm",
+   "stimulus": "PseudoPizza creates and sells custom-designed pizzas.\n\nThe price of a small pizza is $10. The following costs are added, depending on the size of the pizza base and the number of toppings chosen.\n\n-   Medium size: $2\n-   Large size: $4\n-   Each topping: $1.50\n\nAn algorithm is needed to calculate the cost of pizzas ordered for a customer. The algorithm should calculate and display the cost of each pizza and the total cost of the order.",
+   "parts": [
+    {
+     "part_id": "84410080-14a1-471e-ba5c-ac14b2194462",
+     "part": "Part A",
+     "marks_available": 3,
+     "answer_type": "CODING",
+     "prompt": "Write the algorithm using pseudocode. Include at least one subroutine in your answer. You may assume that all inputs are valid.",
+     "question": {
+      "language": "PYTHON"
+     },
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Provides substantially correct pseudocode\nIncludes at least ONE subroutine"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides pseudocode that addresses some of the requirements"
+      },
+      {
+       "marks": "1",
+       "criterion": "Shows some understanding of the problem"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-15",
+     "sample_answer": "```\nBEGIN main\n  Get num_pizzas\n  total_cost = 0\n  FOR i = 1 TO num_pizzas\n    Get pizza_size\n    Get num_toppings\n    cost_per_pizza = calculate_pizza_cost(pizza_size, num_toppings)\n    DISPLAY cost_per_pizza\n    total_cost = total_cost + cost_per_pizza\n  NEXT i\n  DISPLAY total_cost\nEND main\n\nBEGIN calculate_pizza_cost(size, num_toppings)\n  base_price = 10\n  topping_price = 1.5\n  IF size = \"Medium\" THEN\n    base_price = base_price + 2\n  ELSEIF size = \"Large\" THEN\n    base_price = base_price + 4\n  ENDIF\n  pizza_cost = base_price + num_toppings * topping_price\n  RETURN pizza_cost\nEND calculate_pizza_cost\n```",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "2025 CSSA, Fam_Q9,   Algorithm",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "9c51ba02-f009-4a68-850f-082da16228f9",
+     "part": "Part A",
+     "marks_available": 4,
+     "answer_type": "CODING",
+     "prompt": "Below is an array that displays the scores of four players from five games of cricket.\n\n|  | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|\n| 1 | 2 | 144 | 5 | 5 |\n| 2 | 3 | 92 | 23 | 20 |\n| 3 | 61 | 0 | 11 | 0 |\n| 4 | 0 | 211 | 58 | 4 |\n| 5 | 5 | 80 | 1 | 0 |\n\nScores(1, 2) = 144 represents the score in Game 1 by Player 2.\n\nWrite an algorithm that will allow the user to calculate the total of a selected player for the five matches.",
+     "question": {
+      "language": "PYTHON"
+     },
+     "marking_criteria": [
+      {
+       "marks": "4",
+       "criterion": "Provides a substantially correct algorithm with following features:\n\n  Selects a specific player\n\n  Uses a loop to access each score of the player\u2019s\n\n  Calculates the total score\n\n          Incorporates correct algorithm syntax"
+      },
+      {
+       "marks": "3",
+       "criterion": "Provides a substantially correct algorithm addressing most features"
+      },
+      {
+       "marks": "2",
+       "criterion": "Provides an algorithm addressing some features"
+      },
+      {
+       "marks": "1",
+       "criterion": "Attempts an algorithm"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-15",
+     "sample_answer": "BEGIN TotalRuns\n\nSET Total = 0\n\nINPUT PlayerNumber\n\nFOR game = 1 TO 5\n\nTotal += Scores(game, PlayerNumber)\n\nNEXT game\n\nDISPLAY(\"The total runs of player\" & PlayerNumber & \" is\" & Total)\n\nEND TotalRuns",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "Pseudocode Algorithm (Question 20, ITE 2024 Y11)",
+   "stimulus": "A \u2018magic square\u2019 is a grid with a width and height of n, containing the numbers from 1 to n2. Each row, column, and diagonal adds up to the same sum. For example, in the grid below n is 3; the grid contains the numbers 1-9, and every row, column, and diagonal adds up to 15.\n\n![](assets/0b61efb6-d02d-49bb-bd76-ca64a38b107c.png)",
+   "parts": [
+    {
+     "part_id": "22739293-30a2-4443-8683-1f9427f861fa",
+     "part": "Part A",
+     "marks_available": 5,
+     "answer_type": "CODING",
+     "prompt": "Write an algorithm in pseudocode for a function which, when passed a 2D array of integers called \u201csquare\u201d, will return True if the square is \u201cmagic\u201d and False otherwise.",
+     "question": {
+      "language": "PYTHON"
+     },
+     "marking_criteria": [
+      {
+       "marks": "5",
+       "criterion": "Creates a substantially correct algorithm, using NESA&rsquo;s format for pseudocode, which attempts all of the following:\n\nChecks the size of the 2D array\n\nIterates through the 2D array\n\nCalculates the sum for each row and column\n\nCalculates the sum for each diagonal\n\nReturns true if all sums are equal\n\nReturns false otherwise"
+      },
+      {
+       "marks": "4",
+       "criterion": "Creates an algorithm in pseudocode which attempts at least four of the above criteria."
+      },
+      {
+       "marks": "3",
+       "criterion": "Creates an algorithm, or language-specific code, which attempts at least three of the above criteria."
+      },
+      {
+       "marks": "2",
+       "criterion": "Creates an algorithm or code which includes some of the required logic for two or more of the above criteria."
+      },
+      {
+       "marks": "1",
+       "criterion": "Creates an algorithm or code which addresses some part of the question."
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": "![](assets/c9b59de4-d43e-4394-bcba-c8a2200cc2fe.png)\n\n![](assets/1c9e4b65-c996-4666-9c93-c835ebe4ce99.png)",
+     "syllabus": "PROJ-15",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

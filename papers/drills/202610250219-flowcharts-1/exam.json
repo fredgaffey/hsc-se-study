@@ -1,0 +1,282 @@
+{
+ "exam": "Flowcharts 1",
+ "drill": true,
+ "created": "2026-10-25T02:19:21.466Z",
+ "duration_minutes": 18,
+ "reading_minutes": 0,
+ "total_available": 8,
+ "parts_total": 5,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "Which fragment of pseudocode best represents the flowchart? (Question 18, ITE 2022)",
+   "stimulus": "Consider the following flowchart.\n\n![](assets/86a06d55-df5b-4a9c-b496-c77dd1c0a5e7.jpg)",
+   "parts": [
+    {
+     "part_id": "eeded1f4-b50a-47b2-be55-42612719c8eb",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "Which fragment of pseudocode best represents the flowchart?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "![](assets/a6239d00-6e87-4626-92b9-562992af3279.png)",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "B",
+        "text": "![](assets/e0ccdfbc-7882-42b5-ab41-fec7a54c85c2.png)",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "![](assets/466ee0eb-5a15-4622-b984-c696c90e62bb.png)",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "![](assets/f82ac638-51ff-469d-80db-67aff266beb5.png)",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "B"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-15",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "What control structures are present in the following flowchart algorithm? (Question 10, ITE 2024 Y11)",
+   "stimulus": "For questions 10-12 tick each option that answers the question. (Multiple items may be selected).\n\n![](assets/6e36321a-35b7-4a4a-bd5c-f6d69e616683.png)",
+   "parts": [
+    {
+     "part_id": "baa15f60-943b-4e7b-8c85-01fbefde373c",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What control structures are present in the following flowchart algorithm?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "Sequence",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "Binary selection",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "C",
+        "text": "Multiway selection",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "Pre-test repetition",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "E",
+        "text": "Post-test repetition",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "F",
+        "text": "Counted loop",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "G",
+        "text": "Subroutine",
+        "image": null,
+        "correct": true
+       }
+      ],
+      "correct_letters": [
+       "A",
+       "B",
+       "E",
+       "G"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-15",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "Q4 Flowchart Issue",
+   "stimulus": "![](assets/pp-girraween-trial-4.png.png)",
+   "parts": [
+    {
+     "part_id": "424649ca-86f3-43d2-9835-51b69152a7ee",
+     "part": "Part A",
+     "marks_available": 1,
+     "answer_type": "MULTI_CHOICE",
+     "prompt": "What is the most significant issue with this flowchart?",
+     "question": {
+      "options": [
+       {
+        "letter": "A",
+        "text": "There is an endless loop",
+        "image": null,
+        "correct": true
+       },
+       {
+        "letter": "B",
+        "text": "The condition should be a <= 1",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "C",
+        "text": "The variable 'a' is the incorrect data type",
+        "image": null,
+        "correct": false
+       },
+       {
+        "letter": "D",
+        "text": "A non-standard control structure is used",
+        "image": null,
+        "correct": false
+       }
+      ],
+      "correct_letters": [
+       "A"
+      ]
+     },
+     "marking_criteria": null,
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-15",
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "title": "SE: SA - Stubs (5) Q21 DoE 2025",
+   "stimulus": "![](assets/pp-normanhurst-trial-23.png.png)",
+   "parts": [
+    {
+     "part_id": "ef7b5660-fcb4-44c9-ad8f-61304d942114",
+     "part": "Part A",
+     "marks_available": 2,
+     "answer_type": "SHORT",
+     "prompt": "The algorithm flowchart shown describes a stub for a login function.\n\nWrite this stub as pseudocode. *(The original question asks for Python; pseudocode practice version.)*",
+     "question": {
+      "language": "PYTHON"
+     },
+     "marking_criteria": [
+      {
+       "marks": "2",
+       "criterion": "Correct pseudocode: BEGIN/END with both parameters, IF with the AND condition, both RETURNs, ENDIF"
+      },
+      {
+       "marks": "1",
+       "criterion": "Partly correct pseudocode (e.g. missing parameters, ENDIF or one branch)"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "PROJ-15",
+     "sample_answer": "```\nBEGIN login(username, password)\n    IF username = 'user1' AND password = 'pass123' THEN\n        RETURN 'Login Successful'\n    ELSE\n        RETURN 'Login Failed'\n    ENDIF\nEND login\n```",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "title": "Pseudocode to flowchart",
+   "stimulus": null,
+   "parts": [
+    {
+     "part_id": "2128f59e-584d-4ffe-af69-09a9146ff7bc",
+     "part": "Part A",
+     "marks_available": 3,
+     "answer_type": "DRAWING_V2",
+     "prompt": "Consider the following algorithm.\n\nBEGIN gradeCalculator\n    INPUT mark\n    IF mark >= 90 THEN\n        grade = \"A\"\n    ELSE\n        IF mark >= 70 THEN\n            grade = \"B\"\n        ELSE\n            grade = \"C\"\n        ENDIF\n    ENDIF\n    DISPLAY grade\nEND gradeCalculator\n\nDraw a flowchart to represent this algorithm. *(Algorithm adapted from MikeTeachesTech Practice Exam 1 Q10.)*",
+     "question": {},
+     "marking_criteria": [
+      {
+       "marks": "3",
+       "criterion": "Correct flowchart: terminators (BEGIN/END), input/output parallelograms for INPUT mark and DISPLAY grade, process boxes for the assignments, two decision diamonds with labelled Yes/No (True/False) branches that rejoin before DISPLAY"
+      },
+      {
+       "marks": "2",
+       "criterion": "Mostly correct flowchart with minor errors in symbols, labels or flow"
+      },
+      {
+       "marks": "1",
+       "criterion": "Some correct flowchart symbols or flow"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": null,
+     "sample_answer": null,
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

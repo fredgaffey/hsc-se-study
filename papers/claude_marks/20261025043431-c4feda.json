@@ -1,0 +1,41 @@
+{
+ "id": "20261025043431-c4feda",
+ "at": "2026-10-25T04:34:31.243Z",
+ "attempt": "20261025-0425_Drill_2_Legal_social_and_SDLC",
+ "folder": "drill:202610240337-drill-2-legal-social-and-sdlc",
+ "exam": "Drill 2 - Legal social and SDLC",
+ "question": 2,
+ "part_id": "da3849df-4422-4cfe-a7e3-05de98d5c37b",
+ "marks": 3,
+ "type": "SHORT",
+ "prompt": "Describe how diverse teams can contribute to reducing bias in AI models in the context of Software Engineering.",
+ "answer": {
+  "text": "When devlopeing AI modles having a diverce thems will reduse the bias. This bais can come from maney sorces such as lableing bias. This is where the people that genarate the training data the baises present in the people that are labeling the data there bias that come in to the data from people. But besaue there are diffrent people there own bias will average out this will lead to a reduction where there is less biase as it gets 'averageed' out."
+ },
+ "drawing_png": null,
+ "time_ms": null,
+ "key": {
+  "criteria": [
+   {
+    "marks": "3",
+    "criterion": "Clearly describes how diverse teams can contribute to reducing bias in AI models in the context of Software Engineering."
+   },
+   {
+    "marks": "2",
+    "criterion": "Outlines how diverse teams can contribute to reducing bias in AI models in the context of Software Engineering."
+   },
+   {
+    "marks": "1",
+    "criterion": "Provides some releavant information."
+   }
+  ],
+  "rubric": null,
+  "guidance": null,
+  "sample_answer": "Diverse teams bring a variety of perspectives, experiences, and cultural backgrounds, which are essential in identifying and addressing potential biases in AI models. In the context of Software Engineering and software automation, when team members from different genders, ethnicities, and social backgrounds collaborate, they are more likely to recognise and challenge bias-inducing assumptions or practices. This diverse set of viewpoints can lead to more comprehensive testing, better identification of edge cases, and the development of more inclusive AI algorithms that reflect a fairer outcome for all users. Moreover, diversity in team composition encourages innovative thinking and creativity, which further aids in developing unbiased software solutions."
+ },
+ "result": {
+  "mark": 2,
+  "feedback": "**2/3: outlines, doesn't yet clearly describe.**\n\n✅ Correct link: labelling bias comes from the people who label the training data, and a diverse team brings different biases.\n\n❌ **The \"average out\" idea is weak.** Diverse teams don't reduce bias mainly by averaging. They reduce it because people with different backgrounds **notice and challenge** biases that others miss.\n\n❌ **You only covered one stage (labelling).** For 3 marks, describe where a diverse team helps across development:\n- choosing **representative training data**\n- **questioning assumptions** in the design\n- **testing edge cases** for different user groups\n\n**A 3-mark version (~70 words):**\n> Diverse teams bring different perspectives, cultures and experiences. During data collection and labelling they are more likely to notice when a group is under-represented or labelled unfairly. During design and testing they challenge assumptions others share, and they test edge cases for different user groups (e.g. accents, skin tones). This means bias is identified and corrected before release, so the model produces fairer outcomes for all users.\n",
+  "at": "2026-10-25T04:35:02.668Z"
+ }
+}

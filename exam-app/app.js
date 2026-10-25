@@ -100,7 +100,7 @@ const restInfo = (per, readingMs, durationMinutes) => {
   return a == null ? 'Rest breaks – unlimited (practice setting)' : `Rest breaks – ${words(a)} in total (${per} minutes per 30 minutes of exam time), up to ${Math.floor(a / REST_MIN_MS)} break${Math.floor(a / REST_MIN_MS) === 1 ? '' : 's'}; each break uses at least 5 minutes, even if you return early`;
 };
 const hasAllowance = () => attempt.rest && attempt.rest.allowanceMs != null;
-const restChargedMs = () => (attempt.pauses || []).filter(p => p.kind !== 'report').reduce((t, p) => t + (p.end ? Math.max(p.end - p.start, REST_MIN_MS) : Date.now() - p.start), 0);
+const restChargedMs = () => (attempt.pauses || []).filter(p => p.kind !== 'report' && p.kind !== 'marking').reduce((t, p) => t + (p.end ? Math.max(p.end - p.start, REST_MIN_MS) : Date.now() - p.start), 0);
 const restLeftMs = () => hasAllowance() ? attempt.rest.allowanceMs - restChargedMs() : Infinity;
 const canRest = () => !hasAllowance() || restLeftMs() >= REST_MIN_MS;
 const writingLeft = () => attempt.readingMs + attempt.durationMinutes * 60000 - usedMs();
@@ -421,6 +421,7 @@ function startClock() {
   // a report-pause left open by a reload just ends; a real break shows the break screen
   const open = (attempt.pauses || []).find(p => !p.end);
   if (open?.kind === 'report') { open.end = Date.now(); save(true); }
+  else if (open?.kind === 'marking') { openMarkStream(); showMarkingWait(); }
   else if (isPaused()) showBreakScreen();
 }
 
@@ -773,6 +774,16 @@ const liveCache = {};
 // Claude's marks arrive over Server-Sent Events (one stream per attempt); results are kept by part_id.
 const claudeMarks = {};
 let markStream = null;
+// While Claude marks, the clock is paused (no rest allowance used); the mark arriving resumes it.
+function showMarkingWait() {
+  const pz = (attempt.pauses || []).find(z => !z.end && z.kind === 'marking');
+  if (!pz) return;
+  if (claudeMarks[pz.part_id]?.result) { pz.end = Date.now(); save(true); updateTimer(); return; }
+  const m = openModal(`<h2>Claude is marking your answer</h2><p>The timer is paused. Rest time isn't used.</p>
+    <p class="muted">This closes by itself when the mark arrives.</p>
+    <div style="display:flex;justify-content:center;margin-top:14px"><button class="nsw-button nsw-button--white" id="mark-resume">Resume without waiting</button></div>`);
+  $('#mark-resume', m).onclick = () => { pz.end = Date.now(); closeModal(); save(true); updateTimer(); };
+}
 function openMarkStream() {
   if (!attempt || markStream?.attemptId === attempt.id) return;
   markStream?.close();
@@ -783,6 +794,8 @@ function openMarkStream() {
     if (!m.result) return;
     const fresh = !claudeMarks[m.part_id]?.result;
     claudeMarks[m.part_id] = m;
+    const pz = (attempt.pauses || []).find(z => !z.end && z.kind === 'marking' && z.part_id === m.part_id);
+    if (pz) { pz.end = Date.now(); closeModal(); save(true); updateTimer(); }
     if (fresh && groups[attempt.current]?.q.parts.some(p => p.part_id === m.part_id)) renderQuestion();
   };
 }
@@ -817,7 +830,8 @@ function bindLive(p, i, el) {
     const r = await api('/api/claude-mark', { attempt: attempt.id, folder: attempt.folder, part_id: p.part_id,
       question: groups[attempt.current].q.number, answer: a, time_ms: attempt.qTime?.[p.part_id] ?? null });
     (attempt.checked ||= {})[p.part_id] = { atMs: workMs(), correct: null, claude: r.id };
-    save(); openMarkStream(); renderNav(); renderQuestion();
+    if (!isPaused()) attempt.pauses = [...(attempt.pauses || []), { start: Date.now(), kind: 'marking', part_id: p.part_id }];
+    save(true); openMarkStream(); renderNav(); renderQuestion(); showMarkingWait();
   };
   const box = $(`#live-${i}`, el);
   if (box && attempt.checked[p.part_id]?.claude && !claudeMarks[p.part_id]?.result) {

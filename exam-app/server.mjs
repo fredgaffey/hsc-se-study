@@ -20,6 +20,11 @@ fs.mkdirSync(MARKS, { recursive: true });
 const markClients = new Set();   // open SSE streams: { attempt, res }
 const marksFor = attemptId => fs.readdirSync(MARKS).filter(f => f.endsWith('.json'))
   .map(f => JSON.parse(fs.readFileSync(path.join(MARKS, f), 'utf8'))).filter(m => m.attempt === attemptId);
+const pauseSummary = pz => {   // rest breaks vs clock stops for "Report a problem" and "Ask Claude to mark"
+  const mins = l => Math.round(l.reduce((t, p) => t + ((p.end || Date.now()) - p.start), 0) / 60000);
+  const rest = pz.filter(p => !p.kind), other = pz.filter(p => p.kind);
+  return `Rest breaks: ${rest.length} (${mins(rest)} min)` + (other.length ? ` · Clock stopped for reports/marking: ${other.length} (${mins(other)} min)` : '');
+};
 const markSummary = m => ({ id: m.id, part_id: m.part_id, marks: m.marks, result: m.result });
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
@@ -145,7 +150,7 @@ function flowMd(log, label) {
 const fence = s => '```\n' + (s || '').replace(/\n+$/, '') + '\n```';
 function attemptMd(a) {
   const L = [`# Attempt: ${a.title}`, '', `- Started: ${a.startedAt || '–'} · Submitted: ${a.submittedAt || '(not submitted)'}`,
-    `- Time used: ${Math.round((a.timeUsedMs || 0) / 60000)} min of ${a.durationMinutes ?? '–'} · Rest breaks: ${(a.pauses || []).length} (${Math.round((a.pauses || []).reduce((t, p) => t + ((p.end || Date.now()) - p.start), 0) / 60000)} min)`];
+    `- Time used: ${Math.round((a.timeUsedMs || 0) / 60000)} min of ${a.durationMinutes ?? '–'} · ` + pauseSummary(a.pauses || [])];
   if (a.mode === 'pdf') {
     L.push(`- Paper: papers/${a.pdf}`, '', '## Multiple choice', '');
     L.push(Object.entries(a.mc || {}).sort((x, y) => +x[0] - +y[0]).map(([n, l]) => `${n}. ${l}`).join('\n') || '(none)');

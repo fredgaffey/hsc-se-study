@@ -1,0 +1,29 @@
+{
+ "id": "20261025-0834_NSW_DoE_Sample_Exam",
+ "mode": "structured",
+ "folder": "private:nsw-doe-sample-exam",
+ "title": "NSW DoE Sample Exam",
+ "startedAt": "2026-10-25T08:34:42.248Z",
+ "durationMinutes": 140,
+ "readingMs": 600000,
+ "showTargets": true,
+ "rest": {
+  "perHalfHour": 5,
+  "allowanceMs": 1500000
+ },
+ "pauses": [
+  {
+   "start": 1792917293818,
+   "kind": "report",
+   "end": 1792917298392
+  }
+ ],
+ "answers": {},
+ "flags": {},
+ "current": 21,
+ "navByQuestion": true,
+ "liveMark": false,
+ "qBudget": {},
+ "timeUsedMs": 0,
+ "savedAt": "2026-10-25T08:35:10.393Z"
+}

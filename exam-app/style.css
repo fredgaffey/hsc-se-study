@@ -136,7 +136,7 @@ body.hl-yellow .hl, body.hl-blue .hl, body.hl-red .hl, body.hl-none .hl { cursor
 .item-question .md p { margin: 0 0 .5em; }
 .item-question .md :is(td, th, pre, code, li) { font-weight: 400; }
 .item-question .md th { font-weight: 700; }
-.q-sub { display: grid; grid-template-columns: 3.1rem 1fr; }
+.q-sub { display: grid; grid-template-columns: minmax(3.1rem, max-content) 1fr; column-gap: .6rem; }
 .q-label { white-space: nowrap; }
 .item-control { margin-top: .4em; }
 .item-hidden .item-control, .item-hidden .item-question .q-text .md > :not(:first-child) { display: none; }

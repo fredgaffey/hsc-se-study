@@ -703,7 +703,7 @@ function loadExcalidraw() {
   return excalidrawLoaded;
 }
 
-const partLabel = p => { const m = /^part\s*([a-z0-9]+)/i.exec(p.part || ''); return m ? `(${m[1].toLowerCase()})` : (p.part || ''); };
+const partLabel = p => { const m = /^part\s*([a-z0-9]+)/i.exec(p.part || '') || /\(([a-z]{1,3}|[ivx]+)\)\s*$/i.exec(p.part || ''); return m ? `(${m[1].toLowerCase()})` : (p.part || ''); };   // 'Part B' or 'Question 22 (b)' -> '(b)'
 const marksText = m => m == null ? '' : `(${m} mark${m === 1 ? '' : 's'})`;
 function withMarks(prompt, marks) {
   const t = (prompt || '').replace(/\s+$/, '');

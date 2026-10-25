@@ -2,7 +2,7 @@
  "exam": "Normanhurst Trial",
  "private": true,
  "source": "software.paper.is via the SEN Discord (personal study only)",
- "duration_minutes": 150,
+ "duration_minutes": 140,
  "total_available": 80,
  "parts_total": 29,
  "parts_answered": 0,
@@ -1204,7 +1204,7 @@
      "marks_available": 3,
      "syllabus": "Software Engineering",
      "answer_type": "DRAWING_V2",
-     "prompt": "A high school canteen app lets students pre-order lunch, pay digitally, and pick up via QR code. The system integrates with a payment gateway and a menu/inventory database.\n\n  \nDraw a Level 0 data flow diagram for the “Smart Canteen System”.",
+     "prompt": "A high school canteen app lets students pre-order lunch, pay digitally, and pick up via QR code. The system integrates with a payment gateway and a menu/inventory database.\n\n  \nDraw a Level 0 data flow diagram for the \u201cSmart Canteen System\u201d.",
      "prompt_images": [],
      "question": {},
      "your_response": {
@@ -1255,7 +1255,7 @@
      "marks_available": 7,
      "syllabus": "Software Engineering",
      "answer_type": "CODING",
-     "prompt": "Create a class called Vehicle with a constructor that takes in the make, model and year.\n\nThe class should have methods get\\_make(), get\\_model(), and get\\_year() that return the respective values.\n\nCreate two classes, Car and Truck, that inherit from Vehicle.\n\nThe Car class should have an additional method get\\_type() that returns “Car” and the Truck class should have an additional method get\\_type() that returns “Truck”.\n\nCreate instances of both classes and call the methods to display the values.",
+     "prompt": "Create a class called Vehicle with a constructor that takes in the make, model and year.\n\nThe class should have methods get\\_make(), get\\_model(), and get\\_year() that return the respective values.\n\nCreate two classes, Car and Truck, that inherit from Vehicle.\n\nThe Car class should have an additional method get\\_type() that returns \u201cCar\u201d and the Truck class should have an additional method get\\_type() that returns \u201cTruck\u201d.\n\nCreate instances of both classes and call the methods to display the values.",
      "prompt_images": [],
      "question": {
       "language": "PYTHON",
@@ -1393,7 +1393,7 @@
      "marks_available": 4,
      "syllabus": "Software Engineering",
      "answer_type": "SHORT",
-     "prompt": "The school’s submission portal stores assessment files behind API endpoints such as  \n`/api/submissions/{classCode}/{studentId}/{filename}`.  \nWhile uploading, a student notices in the browser’s Network tab that the `studentId` in the URL is sequential. By changing this value, they can download other students’ files (the server does not re-check ownership). The portal also lets students re-upload a file with the same name via `PUT /api/submissions`, which silently overwrites the existing file. Finally, the portal accepts a client-supplied `submittedAt` timestamp that is not validated server-side, allowing students to backdate uploads after the deadline.\n\nDescribe how confidentiality, accountability and integrity has been compromised in this  \nscenario.",
+     "prompt": "The school\u2019s submission portal stores assessment files behind API endpoints such as  \n`/api/submissions/{classCode}/{studentId}/{filename}`.  \nWhile uploading, a student notices in the browser\u2019s Network tab that the `studentId` in the URL is sequential. By changing this value, they can download other students\u2019 files (the server does not re-check ownership). The portal also lets students re-upload a file with the same name via `PUT /api/submissions`, which silently overwrites the existing file. Finally, the portal accepts a client-supplied `submittedAt` timestamp that is not validated server-side, allowing students to backdate uploads after the deadline.\n\nDescribe how confidentiality, accountability and integrity has been compromised in this  \nscenario.",
      "prompt_images": [],
      "question": {},
      "your_response": {
@@ -1426,7 +1426,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "-   **Confidentiality:** Other students’ work is exposed through broken access control, changing `studentId` grants unauthorised read access to private files.\n    \n-   **Integrity:** The overwrite on PUT lets a student alter or replace a prior submission (even a graded one) and the unvalidated `submittedAt` allows backdating, so stored records no longer reliably reflect the true content or time.\n    \n-   **Accountability:** With no versioning or immutable audit trail, the system cannot prove who changed what and when; accepting client timestamps undermines non-repudiation.\n    \n-   **Synthesis/impact:** Together, these flaws break the CIA goals of the system, private work is leaked, records can be tampered with, and actions aren’t traceable, requiring server-side authorisation checks, server-generated timestamps, and write-once versioning to remediate."
+     "sample_answer": "-   **Confidentiality:** Other students\u2019 work is exposed through broken access control, changing `studentId` grants unauthorised read access to private files.\n    \n-   **Integrity:** The overwrite on PUT lets a student alter or replace a prior submission (even a graded one) and the unvalidated `submittedAt` allows backdating, so stored records no longer reliably reflect the true content or time.\n    \n-   **Accountability:** With no versioning or immutable audit trail, the system cannot prove who changed what and when; accepting client timestamps undermines non-repudiation.\n    \n-   **Synthesis/impact:** Together, these flaws break the CIA goals of the system, private work is leaked, records can be tampered with, and actions aren\u2019t traceable, requiring server-side authorisation checks, server-generated timestamps, and write-once versioning to remediate."
     }
    ]
   },
@@ -1553,7 +1553,7 @@
      "marks_available": 4,
      "syllabus": "Software Engineering",
      "answer_type": "SHORT",
-     "prompt": "Click Shoe Warehouse is an online store for Australian-made shoes.\n\nThey want to know which of their shoe sizes and styles sell the best in each season.\n\nThey have prepared a spreadsheet with 10 years of monthly sales history, organised by style and size. \n\nExplain how Machine Learning and Business Process Automation can help ‘Click Shoe Warehouse’ achieve its goal.",
+     "prompt": "Click Shoe Warehouse is an online store for Australian-made shoes.\n\nThey want to know which of their shoe sizes and styles sell the best in each season.\n\nThey have prepared a spreadsheet with 10 years of monthly sales history, organised by style and size. \n\nExplain how Machine Learning and Business Process Automation can help \u2018Click Shoe Warehouse\u2019 achieve its goal.",
      "prompt_images": [],
      "question": {},
      "your_response": {
@@ -1645,7 +1645,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "While AI and ML hold significant promise for enhancing the production efficiency and reduce waste that pollutes the environment, they also pose challenges that need to be addressed to ensure that benefits are maximised while minimising negative impacts on the environment and society.\n\n Potential positive impacts:\n\n-   Increased Production Efficiency – AI and ML can optimise manufacturing processes by analysing data and identifying inefficiencies. This leads to faster production times, reduced downtime, and more streamlined operations, ultimately maximising output.\n-   Waste Reduction – AI can help in minimising waste by predicting demand more accurately, leading to better inventory management. By aligning production closely with actual demand, manufacturers can reduce overproduction and excess inventory, which contributes to waste.\n-   Resource Optimisation – Machine learning algorithms can improve the use of materials by identifying the most efficient ways to utilise resources during production. This can lead to lower material costs and less waste, contributing positively to environmental sustainability.\n-   Predictive Maintenance – AI can monitor equipment performance and predict failures before they occur. This proactive approach to maintenance not only extends the lifespan of machinery but also decreases the likelihood of unexpected breakdowns, reducing waste and improving efficiency.Potential negative impacts: \n\n-   Energy Consumption – The implementation of AI systems can lead to significantly increased energy consumption, particularly if the infrastructure required to support these technologies is not energy efficient. This could counteract some environmental benefits.\n-   E-waste Generation – The rapid advancement of AI technologies may lead to shorter product lifespans for machinery and devices, contributing to increased electronic waste (e-waste) if not managed properly."
+     "sample_answer": "While AI and ML hold significant promise for enhancing the production efficiency and reduce waste that pollutes the environment, they also pose challenges that need to be addressed to ensure that benefits are maximised while minimising negative impacts on the environment and society.\n\n Potential positive impacts:\n\n-   Increased Production Efficiency \u2013 AI and ML can optimise manufacturing processes by analysing data and identifying inefficiencies. This leads to faster production times, reduced downtime, and more streamlined operations, ultimately maximising output.\n-   Waste Reduction \u2013 AI can help in minimising waste by predicting demand more accurately, leading to better inventory management. By aligning production closely with actual demand, manufacturers can reduce overproduction and excess inventory, which contributes to waste.\n-   Resource Optimisation \u2013 Machine learning algorithms can improve the use of materials by identifying the most efficient ways to utilise resources during production. This can lead to lower material costs and less waste, contributing positively to environmental sustainability.\n-   Predictive Maintenance \u2013 AI can monitor equipment performance and predict failures before they occur. This proactive approach to maintenance not only extends the lifespan of machinery but also decreases the likelihood of unexpected breakdowns, reducing waste and improving efficiency.Potential negative impacts: \n\n-   Energy Consumption \u2013 The implementation of AI systems can lead to significantly increased energy consumption, particularly if the infrastructure required to support these technologies is not energy efficient. This could counteract some environmental benefits.\n-   E-waste Generation \u2013 The rapid advancement of AI technologies may lead to shorter product lifespans for machinery and devices, contributing to increased electronic waste (e-waste) if not managed properly."
     }
    ]
   },

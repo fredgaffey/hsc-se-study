@@ -63,7 +63,7 @@ for (const file of fs.readdirSync(SRC).filter(f => f.endsWith('.json')).sort()) 
   const total = all.reduce((t, p) => t + (p.marks_available || 0), 0);
   const exam = {
     exam: title, private: true, source: 'software.paper.is via the SEN Discord (personal study only)',
-    duration_minutes: total >= 70 ? 150 : Math.max(10, Math.round(total * 1.9)),
+    duration_minutes: total >= 70 ? 140 : Math.max(10, Math.round(total * 1.9)),
     total_available: total, parts_total: all.length, parts_answered: 0, parts_marked: 0, total_mark: null, questions,
   };
   fs.writeFileSync(path.join(dir, 'exam.json'), JSON.stringify(exam, null, 1));

@@ -2,7 +2,7 @@
  "exam": "NESA HSC Sample Exam",
  "private": true,
  "source": "software.paper.is via the SEN Discord (personal study only)",
- "duration_minutes": 150,
+ "duration_minutes": 140,
  "total_available": 80,
  "parts_total": 32,
  "parts_answered": 0,
@@ -769,7 +769,7 @@
    "kind": null,
    "source": null,
    "copyright": null,
-   "stimulus": "This structure chart describes an online ordering system for a café.\n\n![image](assets/10.png.png)",
+   "stimulus": "This structure chart describes an online ordering system for a caf\u00e9.\n\n![image](assets/10.png.png)",
    "stimulus_images": [
     "assets/10.png.png"
    ],
@@ -878,15 +878,15 @@
      "marking_criteria": [
       {
        "marks": "3",
-       "criterion": "• Provides a set of test data that will thoroughly test the algorithm\n• Includes expected outputs and reasons for inclusion"
+       "criterion": "\u2022 Provides a set of test data that will thoroughly test the algorithm\n\u2022 Includes expected outputs and reasons for inclusion"
       },
       {
        "marks": "2",
-       "criterion": "• Provides a set of test data that tests most of the boundaries and paths\n• Includes the relevant expected outputs and reasons for inclusion"
+       "criterion": "\u2022 Provides a set of test data that tests most of the boundaries and paths\n\u2022 Includes the relevant expected outputs and reasons for inclusion"
       },
       {
        "marks": "1",
-       "criterion": "• Provides some relevant information"
+       "criterion": "\u2022 Provides some relevant information"
       }
      ],
      "marking_rubric": null,
@@ -1244,7 +1244,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "It can provide the same look and feel across the company’s websites for consistency and ease of use. Separate html and CSS code can allow developers to work independently on files."
+     "sample_answer": "It can provide the same look and feel across the company\u2019s websites for consistency and ease of use. Separate html and CSS code can allow developers to work independently on files."
     }
    ]
   },
@@ -1874,7 +1874,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "Linear regression and K-nearest neighbours (KNN) are both supervised learning algorithms that make predictions from labelled data. The key difference is how they handle data: linear regression assumes a linear relationship between input features and the target variable, while KNN makes predictions based on the closest ‘K’ training examples, allowing it to handle more complex, non-linear patterns. However, KNN can be more computationally expensive than linear regression and is usually slower."
+     "sample_answer": "Linear regression and K-nearest neighbours (KNN) are both supervised learning algorithms that make predictions from labelled data. The key difference is how they handle data: linear regression assumes a linear relationship between input features and the target variable, while KNN makes predictions based on the closest \u2018K\u2019 training examples, allowing it to handle more complex, non-linear patterns. However, KNN can be more computationally expensive than linear regression and is usually slower."
     }
    ]
   },
@@ -1974,18 +1974,18 @@
      "marking_criteria": [
       {
        "marks": "8",
-       "criterion": "Discusses the proposal for security enhancements to the company’s systems, with reference to machine learning (ML) in DevOps, robotic process automation (RPA) and business process automation (BPA) from the slideshow"
+       "criterion": "Discusses the proposal for security enhancements to the company\u2019s systems, with reference to machine learning (ML) in DevOps, robotic process automation (RPA) and business process automation (BPA) from the slideshow"
       },
       {
-       "marks": "6–7",
+       "marks": "6\u20137",
        "criterion": "Outlines advantages and disadvantages of the proposal, with reference to at least TWO of these areas: machine learning (ML) in DevOps, robotic process automation (RPA), business process automation (BPA)"
       },
       {
-       "marks": "4–5",
+       "marks": "4\u20135",
        "criterion": "Outlines some advantages and/or disadvantages of the proposal, with reference to machine learning (ML) in DevOps and/or robotic process automation (RPA) and/or business process automation (BPA)"
       },
       {
-       "marks": "2–3",
+       "marks": "2\u20133",
        "criterion": "Shows some understanding of the features of the proposal"
       },
       {

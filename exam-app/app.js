@@ -100,7 +100,7 @@ const restInfo = (per, readingMs, durationMinutes) => {
   return a == null ? 'Rest breaks – unlimited (practice setting)' : `Rest breaks – ${words(a)} in total (${per} minutes per 30 minutes of exam time), up to ${Math.floor(a / REST_MIN_MS)} break${Math.floor(a / REST_MIN_MS) === 1 ? '' : 's'}; each break uses at least 5 minutes, even if you return early`;
 };
 const hasAllowance = () => attempt.rest && attempt.rest.allowanceMs != null;
-const restChargedMs = () => (attempt.pauses || []).filter(p => p.kind !== 'report' && p.kind !== 'marking').reduce((t, p) => t + (p.end ? Math.max(p.end - p.start, REST_MIN_MS) : Date.now() - p.start), 0);
+const restChargedMs = () => (attempt.pauses || []).filter(p => !p.kind).reduce((t, p) => t + (p.end ? Math.max(p.end - p.start, REST_MIN_MS) : Date.now() - p.start), 0);
 const restLeftMs = () => hasAllowance() ? attempt.rest.allowanceMs - restChargedMs() : Infinity;
 const canRest = () => !hasAllowance() || restLeftMs() >= REST_MIN_MS;
 const writingLeft = () => attempt.readingMs + attempt.durationMinutes * 60000 - usedMs();
@@ -409,6 +409,7 @@ function chromeHtml(title, { nav = true, flag = true, highlight = true } = {}) {
       <span id="save-state" class="save-state"></span>
       <div class="header-test-break" id="break-box"><button class="nsw-button nsw-button--dark" id="pause" name="break">Take a break <i aria-hidden="true" class="fa fa-angle-right"></i></button><span id="rest-left"></span></div>
       ${exam?.drill ? '<button class="nsw-button nsw-button--dark" id="finish-drill" style="margin-right:12px">Finish drill <i class="fas fa-check"></i></button>' : ''}
+      <button class="nsw-button nsw-button--white" id="hold-btn" style="margin-right:8px" title="Practice only: stop the clock and come back later (doesn't use rest time)">Pause ⏸</button>
       <button class="nsw-button nsw-button--white" id="report-btn" style="margin-right:12px" title="Pauses the timer (doesn't use rest time)">Report a problem ⏸</button>
       <div class="header-test-subtitle" id="timer"></div>
     </div></div></header>
@@ -435,7 +436,25 @@ function startClock() {
   const open = (attempt.pauses || []).find(p => !p.end);
   if (open?.kind === 'report') { open.end = Date.now(); save(true); }
   else if (open?.kind === 'marking') { openMarkStream(); showMarkingWait(); }
+  else if (open?.kind === 'hold') showHold();
   else if (isPaused()) showBreakScreen();
+}
+
+// ---- Pause (practice only): stop the clock as long as needed; not a rest break, so no allowance is used ----
+document.addEventListener('click', e => { if (e.target.closest('#hold-btn')) hold(); });
+function hold() {
+  if (!attempt || attempt.submittedAt || isPaused()) return;
+  attempt.pauses = [...(attempt.pauses || []), { start: Date.now(), kind: 'hold' }];
+  save(true); showHold();
+}
+function showHold() {
+  const pz = (attempt.pauses || []).find(z => !z.end && z.kind === 'hold');
+  if (!pz) return;
+  const m = openModal(`<h2>Paused</h2><p>The clock is stopped. This is a practice pause, so no rest time is used, and the questions are hidden.</p>
+    <p class="muted">Paused at ${new Date(pz.start).toLocaleTimeString()}. You can close the browser; it stays paused until you resume.</p>
+    <div style="display:flex;justify-content:center;margin-top:14px"><button class="nsw-button nsw-button--dark" id="hold-resume">Resume <i class="fa fa-angle-right"></i></button></div>`);
+  document.body.classList.add('held');
+  $('#hold-resume', m).onclick = () => { pz.end = Date.now(); document.body.classList.remove('held'); closeModal(); save(true); updateTimer(); };
 }
 
 // ---- "Report a problem": pause the clock (no rest allowance used) and send Claude a note ----

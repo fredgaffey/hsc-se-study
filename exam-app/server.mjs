@@ -23,7 +23,7 @@ const marksFor = attemptId => fs.readdirSync(MARKS).filter(f => f.endsWith('.jso
 const pauseSummary = pz => {   // rest breaks vs clock stops for "Report a problem" and "Ask Claude to mark"
   const mins = l => Math.round(l.reduce((t, p) => t + ((p.end || Date.now()) - p.start), 0) / 60000);
   const rest = pz.filter(p => !p.kind), other = pz.filter(p => p.kind);
-  return `Rest breaks: ${rest.length} (${mins(rest)} min)` + (other.length ? ` · Clock stopped for reports/marking: ${other.length} (${mins(other)} min)` : '');
+  return `Rest breaks: ${rest.length} (${mins(rest)} min)` + (other.length ? ` · Clock stopped (pause/report/marking): ${other.length} (${mins(other)} min)` : '');
 };
 const markSummary = m => ({ id: m.id, part_id: m.part_id, marks: m.marks, result: m.result, chat: !!m.chat, thread: m.thread || [] });
 const pushMark = m => { const msg = `data: ${JSON.stringify(markSummary(m))}\n\n`; for (const c of markClients) if (c.attempt === m.attempt) c.res.write(msg); };

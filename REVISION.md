@@ -58,7 +58,10 @@ conversation, and update the Progress log and Open questions at the end of it.**
 - **Time: about 2 minutes per mark** (150 min / 78 marks). 3 marks ≈ 6 min · 4 marks ≈ 8 min · 10 marks ≈ 20 min.
 - In that trial my 3-mark answers were about the right length (avg 67 words, 12/21 marks). I lost most on
   **near-blank answers**: Q26 4 words (0/4), Q11 7 words (0/3), Q29 39 words (0/10) = 17 marks lost for under 50 words.
-- **Biggest gain = finishing every question.** Never leave a blank.
+- ⚠ **Correction (25 Oct): the Trial Exam / Revision Test papers were practice, not done seriously.** Blank or
+  unattempted questions there are NOT evidence of weakness or running out of time; ignore them in analysis.
+  Only answers that were actually attempted count.
+- Never leave a blank in the real exam: a partial answer earns marks.
 - [x] **Typing speed (Monkeytype, 5 min, punctuation, 24 Oct): 33 wpm, 84% accuracy, 55% consistency.**
   Fast enough: 1,650 words ≈ 50 min of pure typing. The stop-start pattern means pauses on spelling.
   In the exam: **don't stop to fix typos**; only fix badly wrong key terms.
@@ -144,7 +147,7 @@ covered · sentences not dot points · no blanks · no wrong central claim.
 | Short answer 4–5 marks | 58% |
 | **Extended response 6+ marks** | **30%** |
 
-- **18 marks left blank** across marked exams, incl. a whole 8-mark extended response (Intellectual Property, TopicTestRevisionTest3).
+- ~~18 marks left blank across marked exams~~ (not counted: practice papers, not attempted seriously), incl. a whole 8-mark extended response (Intellectual Property, TopicTestRevisionTest3).
 - Recurring feedback words: *explain* (18), *specific / example* (26), *clearer / structure* (15), *link to the scenario*, *spelling / grammar* (3 markers).
 
 ### Content gaps (from 62 multiple-choice/objective answers, 76% right)
@@ -301,6 +304,7 @@ accessibility, privacy, security, information, development, efficiency, metadata
 
 - **25 Oct** — Python: greatest product in 20×20 grid (Normanhurst, 4). **2/4**. Right plan + correct range(20-3),
   but crashes: return a not p, i[i:i+4], comparison backwards, max reset, column = row, reused i. Didn't press Run.
+  Redo → 3/4 (columns still grid[i][j]) → fixed to grid[j][i] → **4/4**. Lesson: run it / trace one window.
 - **25 Oct** — Magic square (ITE Y11, 5). **4/5** (was blank). Row/col subroutines correct. Bugs: WHILE i > n never
   runs, passed n not i, diagonal indices, RETURN two values, no width = height check; Python-isms (+=, !=, append).
 - **25 Oct** — Drill 2 (legal/social + SDLC). 11 min of 22, **8/11**. MC 4/4 (integration vs system, SAST, method tailoring:

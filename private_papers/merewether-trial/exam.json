@@ -2,7 +2,7 @@
  "exam": "Merewether Trial",
  "private": true,
  "source": "software.paper.is via the SEN Discord (personal study only)",
- "duration_minutes": 150,
+ "duration_minutes": 140,
  "total_available": 80,
  "parts_total": 32,
  "parts_answered": 0,
@@ -825,7 +825,7 @@
    "kind": null,
    "source": null,
    "copyright": null,
-   "stimulus": "BEGIN AgeDetermination(age)\n\n      CASEWHERE age <=\n\n            1: AgeDetermination = “Infant”\n\n            4: AgeDetermination = “Toddler”\n\n            12: AgeDetermination = “Child”\n\n            18: AgeDetermination = “Teenager”\n\n            OTHERWISE: AgeDetermination = “Adult”\n\n      ENDCASE\n\n      RETURN AgeDetermination\n\nEND AgeDetermination",
+   "stimulus": "BEGIN AgeDetermination(age)\n\n      CASEWHERE age <=\n\n            1: AgeDetermination = \u201cInfant\u201d\n\n            4: AgeDetermination = \u201cToddler\u201d\n\n            12: AgeDetermination = \u201cChild\u201d\n\n            18: AgeDetermination = \u201cTeenager\u201d\n\n            OTHERWISE: AgeDetermination = \u201cAdult\u201d\n\n      ENDCASE\n\n      RETURN AgeDetermination\n\nEND AgeDetermination",
    "stimulus_images": [],
    "parts": [
     {
@@ -907,7 +907,7 @@
      "marks_available": 1,
      "syllabus": null,
      "answer_type": "MULTI_CHOICE",
-     "prompt": "Wordle is an online daily word challenge where users have six chances to guess a 5 letter word. Susan has the second and third letters of today’s word but not the other three. Being particularly resourceful, she has access to a database that contains every 5 letter word in the English language. Susan’s known two letters are “RO”. Which SQL wildcard statement will help Susan narrow her guesses?",
+     "prompt": "Wordle is an online daily word challenge where users have six chances to guess a 5 letter word. Susan has the second and third letters of today\u2019s word but not the other three. Being particularly resourceful, she has access to a database that contains every 5 letter word in the English language. Susan\u2019s known two letters are \u201cRO\u201d. Which SQL wildcard statement will help Susan narrow her guesses?",
      "prompt_images": [],
      "question": {
       "options": [
@@ -1484,7 +1484,7 @@
    "kind": null,
    "source": null,
    "copyright": null,
-   "stimulus": "BEGIN AverageListOfNumbers\n\n      average = -1\n\n      arrayOfNumbers = GetNumbers\n\n      IF number of items in arrayOfNumbers <> 0 THEN\n\n            average = CalculateAverage(arrayOfNumbers)\n\n            PrintAverageToScreen(average)\n\n      ELSE\n\n            PRINT “No numbers entered”\n\n      ENDIF\n\nEND AverageListOfNumbers",
+   "stimulus": "BEGIN AverageListOfNumbers\n\n      average = -1\n\n      arrayOfNumbers = GetNumbers\n\n      IF number of items in arrayOfNumbers <> 0 THEN\n\n            average = CalculateAverage(arrayOfNumbers)\n\n            PrintAverageToScreen(average)\n\n      ELSE\n\n            PRINT \u201cNo numbers entered\u201d\n\n      ENDIF\n\nEND AverageListOfNumbers",
    "stimulus_images": [],
    "parts": [
     {
@@ -1581,7 +1581,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "The three main types of machine learning are supervised learning, unsupervised learning, and deep learning.\n\n  \n\nSupervised learning occurs when an algorithm is trained on labelled data, where both the input and the correct output are provided. The system learns patterns by comparing its predictions with the known answers and adjusting to improve accuracy. This approach is commonly used in applications such as spam email detection, handwriting recognition, and medical diagnosis, where large sets of labelled examples are available.\n\n  \n\nUnsupervised learning works with unlabelled data, meaning the algorithm must identify hidden patterns or relationships without predefined answers. It is typically used for clustering, grouping, or anomaly detection. For example, businesses use unsupervised learning to segment customers into different market groups or streaming platforms use it to suggest similar movies based on viewing history. Unlike supervised learning, there is no “correct” output provided.\n\n  \n\nDeep learning is a specialised form of machine learning that uses artificial neural networks with many layers (“deep” networks) to process data. These networks can automatically learn features from raw inputs, making them highly effective for tasks involving complex, unstructured data such as images, speech, or video. For example, deep learning powers facial recognition systems, natural language processing (such as virtual assistants), and autonomous vehicles. Deep learning requires large datasets and significant computing power but achieves high accuracy in solving complex problems."
+     "sample_answer": "The three main types of machine learning are supervised learning, unsupervised learning, and deep learning.\n\n  \n\nSupervised learning occurs when an algorithm is trained on labelled data, where both the input and the correct output are provided. The system learns patterns by comparing its predictions with the known answers and adjusting to improve accuracy. This approach is commonly used in applications such as spam email detection, handwriting recognition, and medical diagnosis, where large sets of labelled examples are available.\n\n  \n\nUnsupervised learning works with unlabelled data, meaning the algorithm must identify hidden patterns or relationships without predefined answers. It is typically used for clustering, grouping, or anomaly detection. For example, businesses use unsupervised learning to segment customers into different market groups or streaming platforms use it to suggest similar movies based on viewing history. Unlike supervised learning, there is no \u201ccorrect\u201d output provided.\n\n  \n\nDeep learning is a specialised form of machine learning that uses artificial neural networks with many layers (\u201cdeep\u201d networks) to process data. These networks can automatically learn features from raw inputs, making them highly effective for tasks involving complex, unstructured data such as images, speech, or video. For example, deep learning powers facial recognition systems, natural language processing (such as virtual assistants), and autonomous vehicles. Deep learning requires large datasets and significant computing power but achieves high accuracy in solving complex problems."
     }
    ]
   },
@@ -1757,7 +1757,7 @@
    "kind": null,
    "source": null,
    "copyright": null,
-   "stimulus": "A hospital requires software to manage their operating theatre bookings. The new software should have the following features:\n\n-   Details of each patient’s operation are entered from a digital booking card supplied by a surgeon’s team. Details include the patient details (first name, surname, age, weight(kgs)), name of the surgeon (surname), type of operation (internal or external), date of the operation, and the times the operating theatre will be required ('morning' or 'afternoon')\n-   The software will check if the theatre is available at those times ('morning' or 'afternoon') and display an appropriate message\n-   At the start of each day a printout is generated for each surgeon’s team showing the list of operations they have scheduled for that day",
+   "stimulus": "A hospital requires software to manage their operating theatre bookings. The new software should have the following features:\n\n-   Details of each patient\u2019s operation are entered from a digital booking card supplied by a surgeon\u2019s team. Details include the patient details (first name, surname, age, weight(kgs)), name of the surgeon (surname), type of operation (internal or external), date of the operation, and the times the operating theatre will be required ('morning' or 'afternoon')\n-   The software will check if the theatre is available at those times ('morning' or 'afternoon') and display an appropriate message\n-   At the start of each day a printout is generated for each surgeon\u2019s team showing the list of operations they have scheduled for that day",
    "stimulus_images": [],
    "parts": [
     {
@@ -1870,7 +1870,7 @@
    "kind": null,
    "source": null,
    "copyright": null,
-   "stimulus": "A new parking payment software system is being developed that will allow carpark users to purchase a ticket with their credit card. Carpark users will enter their vehicle numberplate details via the parking payment software system along with their credit card details. Once a successful transaction is completed, the parking details are stored in a database and a ticket receipt is printed. The receipt is placed on the car’s dashboard so it is visible to carpark officials.\n\nThe current version of the proposed payment system database utilises a flat-file structure in a ‘Transaction’ table:\n\n![](assets/28.png.png)",
+   "stimulus": "A new parking payment software system is being developed that will allow carpark users to purchase a ticket with their credit card. Carpark users will enter their vehicle numberplate details via the parking payment software system along with their credit card details. Once a successful transaction is completed, the parking details are stored in a database and a ticket receipt is printed. The receipt is placed on the car\u2019s dashboard so it is visible to carpark officials.\n\nThe current version of the proposed payment system database utilises a flat-file structure in a \u2018Transaction\u2019 table:\n\n![](assets/28.png.png)",
    "stimulus_images": [
     "assets/28.png.png"
    ],
@@ -1910,7 +1910,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "```\nSELECT Transaction.VehicleRegistrationNumber, Transaction.DateOfPark\nFROM Transaction\nWHERE Transaction.ParkingSpace = “1A” AND\n    Transaction.DateOfPark <= 10/04/25 AND\n    Transaction.CardPaymentType = “Visa”\nORDERBY Transaction.DateOfPark DESCENDING\n```"
+     "sample_answer": "```\nSELECT Transaction.VehicleRegistrationNumber, Transaction.DateOfPark\nFROM Transaction\nWHERE Transaction.ParkingSpace = \u201c1A\u201d AND\n    Transaction.DateOfPark <= 10/04/25 AND\n    Transaction.CardPaymentType = \u201cVisa\u201d\nORDERBY Transaction.DateOfPark DESCENDING\n```"
     }
    ]
   },

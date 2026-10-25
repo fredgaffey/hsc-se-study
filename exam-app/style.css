@@ -381,3 +381,4 @@ tr.opt-correct td.acell::after { content: " ✓ correct answer"; color: #008a07;
 .item-fullscreen .item-control { flex: 1 0 65vh; }
 .item-fullscreen .live-check, .item-fullscreen .notes, .item-fullscreen .chat { flex: none; }
 .item-fullscreen .live-check { padding: 0 16px 16px; }
+body.held #content { visibility: hidden; }

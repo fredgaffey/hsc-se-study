@@ -2,7 +2,7 @@
  "exam": "CSSA 2025 Trial",
  "private": true,
  "source": "software.paper.is via the SEN Discord (personal study only)",
- "duration_minutes": 150,
+ "duration_minutes": 140,
  "total_available": 80,
  "parts_total": 33,
  "parts_answered": 0,
@@ -215,7 +215,7 @@
      "marks_available": 1,
      "syllabus": "Software Engineering",
      "answer_type": "MULTI_CHOICE",
-     "prompt": "An employee at an accounting firm accidentally sent a customer’s personal details to the wrong client. Although the data was not altered, it was exposed to someone who should not have access to it.  \n\nWhich security principle was primarily compromised in this situation?",
+     "prompt": "An employee at an accounting firm accidentally sent a customer\u2019s personal details to the wrong client. Although the data was not altered, it was exposed to someone who should not have access to it.\u202f \n\nWhich security principle was primarily compromised in this situation?",
      "prompt_images": [],
      "question": {
       "options": [
@@ -288,7 +288,7 @@
      "marks_available": 1,
      "syllabus": "Software Engineering",
      "answer_type": "MULTI_CHOICE",
-     "prompt": "An attacker creates the following URL and sends it to a victim: \n\n| ![Picture 10, Picture](assets/5.png.png) http://example.com/search?q=<script>alert('You have been hacked!');</script> |\n|---|\n\nWhen the victim clicks on the link, the server reflects the malicious script back into the search results page, and it executes in the victim’s browser, displaying a popup with the message \"You have been hacked!\" \n\nWhat type of vulnerability does this represent?",
+     "prompt": "An attacker creates the following URL and sends it to a victim: \n\n| ![Picture 10, Picture](assets/5.png.png) http://example.com/search?q=<script>alert('You have been hacked!');</script> |\n|---|\n\nWhen the victim clicks on the link, the server reflects the malicious script back into the search results page, and it executes in the victim\u2019s browser, displaying a popup with the message \"You have been hacked!\" \n\nWhat type of vulnerability does this represent?",
      "prompt_images": [
       "assets/5.png.png"
      ],
@@ -438,7 +438,7 @@
      "marks_available": 1,
      "syllabus": "Software Engineering",
      "answer_type": "SORTING_TABLE",
-     "prompt": "The diagram in the Stimulus (left) represents an artificial neural network.   \n  \nPlace the Layers in the correct order that matches the diagram.\n\n**(Note: The top description will represent Layer #1.)**",
+     "prompt": "The diagram in the Stimulus (left) represents an artificial neural network.\u202f  \n  \nPlace the Layers in the correct order that matches the diagram.\n\n**(Note: The top description will represent Layer #1.)**",
      "prompt_images": [],
      "question": {
       "raw_parameters": {
@@ -966,7 +966,7 @@
      "marks_available": 3,
      "syllabus": "Software Engineering",
      "answer_type": "SHORT",
-     "prompt": "Explain the difference between the ‘**security by design**’ approach and the ‘**privacy by design**’ approach.",
+     "prompt": "Explain the difference between the \u2018**security by design**\u2019 approach and the \u2018**privacy by design**\u2019 approach.",
      "prompt_images": [],
      "question": {
       "word_limit": 90
@@ -1010,7 +1010,7 @@
    "kind": null,
    "source": null,
    "copyright": null,
-   "stimulus": "A small café with five employees uses custom-built software to manage its point of sale (POS) system. The system has the following functions:  \n\n-   Record transactions and issue receipts to customers.  \n    \n\n-   Delete transactions.  \n    \n\n-   View daily sales data.  \n    \n\nCurrently, all employees have full access to all system functions. Recently, the manager has noticed that some transactions are being deleted throughout the day, with no way to track how or by whom these deletions occurred.",
+   "stimulus": "A small caf\u00e9 with five employees uses custom-built software to manage its point of sale (POS) system. The system has the following functions:\u202f \n\n-   Record transactions and issue receipts to customers.\u202f \n    \n\n-   Delete transactions.\u202f \n    \n\n-   View daily sales data.\u202f \n    \n\nCurrently, all employees have full access to all system functions. Recently, the manager has noticed that some transactions are being deleted throughout the day, with no way to track how or by whom these deletions occurred.",
    "stimulus_images": [],
    "parts": [
     {
@@ -1085,7 +1085,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "A vulnerability assessment would help the café identify security weaknesses in the POS system by analysing its software, network, and user access settings. The assessment would evaluate potential risks, such as the lack of access controls or insufficient logging mechanisms. Based on the findings, the café could then implement changes, such as restricting access to sensitive functions and improving system monitoring, to prevent unauthorised actions and protect against future security threats."
+     "sample_answer": "A vulnerability assessment would help the caf\u00e9 identify security weaknesses in the POS system by analysing its software, network, and user access settings. The assessment would evaluate potential risks, such as the lack of access controls or insufficient logging mechanisms. Based on the findings, the caf\u00e9 could then implement changes, such as restricting access to sensitive functions and improving system monitoring, to prevent unauthorised actions and protect against future security threats."
     }
    ]
   },
@@ -1151,7 +1151,7 @@
    "kind": null,
    "source": null,
    "copyright": null,
-   "stimulus": "A Web Developer has been approached to develop a website for a clothing company that requires an online ordering system.  \n\nThe system would allow users to: \n\n-   create an account,  \n    \n\n-   browse for clothing items,  \n    \n\n-   add items to a cart for checkout   \n    \n\n-   make payment for their purchases.  \n    \n\nThe order created would be sent to the warehouse for processing and update the clothing company’s inventory and stock.  \n\nDuring the ordering process, the user is notified of updates to their order, including payment received, order processed, order dispatched and delivery.",
+   "stimulus": "A Web Developer has been approached to develop a website for a clothing company that requires an online ordering system.  \n\nThe system would allow users to: \n\n-   create an account,  \n    \n\n-   browse for clothing items,  \n    \n\n-   add items to a cart for checkout   \n    \n\n-   make payment for their purchases.  \n    \n\nThe order created would be sent to the warehouse for processing and update the clothing company\u2019s inventory and stock.  \n\nDuring the ordering process, the user is notified of updates to their order, including payment received, order processed, order dispatched and delivery.",
    "stimulus_images": [],
    "parts": [
     {
@@ -1236,7 +1236,7 @@
       }
      ],
      "marking_rubric": null,
-     "marking_guidance": "Note: depending on interpretation, http may/may not be used to send/access email if the emails are access through a web browser",
+     "marking_guidance": "Note: depending on interpretation, http may/may not be used to send/access email\u202fif the emails are access through a web browser",
      "sample_answer": null
     },
     {
@@ -1298,11 +1298,11 @@
      "marking_criteria": [
       {
        "marks": "3",
-       "criterion": "Demonstrates a clear understanding of CSS and clearly explains effect of using CSS in this application"
+       "criterion": "Demonstrates a clear understanding of CSS\u202fand clearly explains effect of using CSS in this application"
       },
       {
        "marks": "2",
-       "criterion": "Demonstrates a clear understanding of CSS  OR describes effect of using CSS in this application"
+       "criterion": "Demonstrates a clear understanding of CSS\u202f OR describes effect of using CSS in this application"
       },
       {
        "marks": "1",
@@ -1324,7 +1324,7 @@
    "kind": null,
    "source": null,
    "copyright": null,
-   "stimulus": "Bruce’s Burgers offers half priced burgers if the customer has a loyalty card or is a university student. This discount doesn’t apply on public holidays. \n\nThe following test data has been developed to be used:\n\nThe customer has a loyalty card, and is a university student, and the day is Boxing Day (Public Holiday)",
+   "stimulus": "Bruce\u2019s Burgers offers half priced burgers if the customer has a loyalty card or is a university student. This discount doesn\u2019t apply on public holidays. \n\nThe following test data has been developed to be used:\n\nThe customer has a loyalty card, and is a university student, and the day is Boxing Day (Public Holiday)",
    "stimulus_images": [],
    "parts": [
     {
@@ -1390,7 +1390,7 @@
      "marking_criteria": [
       {
        "marks": "4",
-       "criterion": "Provides a substantially correct algorithm including the following features:  \n\nAppropriate inputs  \n\nUse of control structures to complete checks  \n\nUse of meaningful outputs"
+       "criterion": "Provides a substantially correct algorithm including the following features:\u202f \n\nAppropriate inputs\u202f \n\nUse of control structures to complete checks\u202f \n\nUse of meaningful outputs"
       },
       {
        "marks": "3",
@@ -1407,7 +1407,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "BEGIN  \n\nGET loyalty\\_card  \n\nGET student  \n\nGET day  \n\nSET Discount = NO  \n\nIF loyalty\\_card = True OR student = True THEN  \n\nIF day = Public Holiday THEN  \n\nDiscount = No \n\nELSE  \n\nDiscount = Yes  \n\nENDIF  \n\n IF Discount = Yes THEN  \n\nDISPLAY \"Customer can have a half priced burger\"  \n\nELSE  \n\nDISPLAY \"Customer must pay full price\"  \n\nENDIF \n\nENDIF  \n\nEND"
+     "sample_answer": "BEGIN\u202f \n\nGET loyalty\\_card\u202f \n\nGET student\u202f \n\nGET day\u202f \n\nSET Discount = NO\u202f \n\nIF loyalty\\_card = True OR student = True THEN\u202f \n\nIF day = Public Holiday THEN\u202f \n\nDiscount = No \n\nELSE\u202f \n\nDiscount = Yes\u202f \n\nENDIF\u202f \n\n\u202fIF Discount = Yes THEN\u202f \n\nDISPLAY \"Customer can have a half priced burger\"\u202f \n\nELSE\u202f \n\nDISPLAY \"Customer must pay full price\"\u202f \n\nENDIF \n\nENDIF\u202f \n\nEND"
     }
    ]
   },
@@ -1461,7 +1461,7 @@
      "marks_available": 4,
      "syllabus": "Software Engineering",
      "answer_type": "SHORT",
-     "prompt": "A developer has chosen to construct a web application utilising python as the programming language. \n\nDiscuss the options of using Object-Relational Mapping (ORM) and SQL to store the Customers’ data.",
+     "prompt": "A developer has chosen to construct a web application utilising python as the programming language. \n\nDiscuss the options of using Object-Relational Mapping (ORM) and SQL to store the Customers\u2019 data.",
      "prompt_images": [],
      "question": {
       "word_limit": 120
@@ -1496,7 +1496,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "SQL allows a database to be constructed as a table with fields, and related SQL query syntax to interact with the data. This provides a very structured way to organise the data, which is easily queried with simple statements, although a developer may have to learn the syntax of these queries and learn a library that connects to an SQL database within in python. This could create a learning curve that impacts time of production as the SQL syntax is not native to the python programming language.  \n\nORM allows the developer to use an object-oriented model to interact with a database stored on a server. This is more in line with the python language as it can utilise the python syntax for object-oriented coding, with ORM commands being available in the python standard library, as well as many python web server libraries that have their own libraries. Unfortunately, there may be performance issues when implementing ORM, as requests need to be made over a server which can impact load times, and ORM typically being slower when dealing with complex queries."
+     "sample_answer": "SQL allows a database to be constructed as a table with fields, and related SQL query syntax to interact with the data. This provides a very structured way to organise the data, which is easily queried with simple statements, although a developer may have to learn the syntax of these queries and learn a library that connects to an SQL database within in python. This could create a learning curve that impacts time of production as the SQL syntax is not native to the python programming language.\u202f \n\nORM allows the developer to use an object-oriented model to interact with a database stored on a server. This is more in line with the python language as it can utilise the python syntax for object-oriented coding, with ORM commands being available in the python standard library, as well as many python web server libraries that have their own libraries. Unfortunately, there may be performance issues when implementing ORM, as requests need to be made over a server which can impact load times, and ORM typically being slower when dealing with complex queries."
     }
    ]
   },
@@ -1573,7 +1573,7 @@
      "marking_criteria": [
       {
        "marks": "4",
-       "criterion": "Provides a substantially correct algorithm including the following features: \n\nAppropriate input data  \nUse of functions to calculate cost, that pass in parameters \nMeaningful outputs"
+       "criterion": "Provides a substantially correct algorithm including the following features: \n\nAppropriate input data\u202f \nUse of functions to calculate cost, that pass in parameters \nMeaningful outputs"
       },
       {
        "marks": "3",
@@ -1590,7 +1590,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "BEGIN Main  \n\nGET NumberofTickets  \n\nGET TicketType  \n\nTotal = TotalCost (NumberofTickets, TicketType,)  \n\nDISPLAY \"The total cost of the tickets: $\" & Total  \n\nEND Main  \n\nBEGIN TotalCost (NumberofTickets, TicketType,)  \n\nIF TicketType = \"GA\" THEN  \n\nTotal = NumberofTickets \\* 100  \n\nELSE  \n\nTotal = NumberofTickets \\* 150  \n\nENDIF  \n\n  RETURN Total  \n\nEND TotalCost"
+     "sample_answer": "BEGIN Main\u202f \n\nGET NumberofTickets\u202f \n\nGET TicketType\u202f \n\nTotal = TotalCost (NumberofTickets, TicketType,)\u202f \n\nDISPLAY \"The total cost of the tickets: $\" & Total\u202f \n\nEND Main\u202f \n\nBEGIN TotalCost (NumberofTickets, TicketType,)\u202f \n\nIF TicketType = \"GA\" THEN\u202f \n\nTotal = NumberofTickets \\* 100\u202f \n\nELSE\u202f \n\nTotal = NumberofTickets \\* 150\u202f \n\nENDIF\u202f \n\n\u202f\u202fRETURN Total\u202f \n\nEND TotalCost"
     }
    ]
   },
@@ -1603,7 +1603,7 @@
    "kind": null,
    "source": null,
    "copyright": null,
-   "stimulus": "A retail clothes company, NickSales Ltd, wants to predict monthly sales for its products based on historical sales data, marketing spends, and seasonal trends. They decide to automate this process using Machine Learning (ML).  \n\n The data science team creates a software application in Python, using OOP principles to structure the ML models. They apply two different regression techniques:  \n\n1.  \\-Linear regression \n2.  \\-Polynomial regression",
+   "stimulus": "A retail clothes company, NickSales Ltd, wants to predict monthly sales for its products based on historical sales data, marketing spends, and seasonal trends. They decide to automate this process using Machine Learning (ML).\u202f \n\n The data science team creates a software application in Python, using OOP principles to structure the ML models. They apply two different regression techniques:\u202f \n\n1.  \\-Linear regression\u202f\n2.  \\-Polynomial regression",
    "stimulus_images": [],
    "parts": [
     {
@@ -1634,7 +1634,7 @@
       },
       {
        "marks": "2",
-       "criterion": "Identifies differences OR Outlines one difference between linear and polynomial regression OR provides an example"
+       "criterion": "Identifies differences\u202fOR\u202fOutlines one difference between linear and polynomial regression\u202fOR\u202fprovides an example"
       },
       {
        "marks": "1",
@@ -1643,7 +1643,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "Linear regression models the relationship between variables as a straight line, assuming a linear relationship.   \n\nPolynomial regression, however, fits a curved line by adding polynomial terms, which can capture more complex, nonlinear relationships between variables.   \n\n For instance, polynomial regression would be more suitable for predicting sales that show seasonal or cyclical patterns, where a linear model would fail to capture the natural peaks and troughs over time."
+     "sample_answer": "Linear regression models the relationship between variables as a straight line, assuming a linear relationship.\u202f\u202f \n\nPolynomial regression, however, fits a curved line by adding polynomial terms, which can capture more complex, nonlinear relationships between variables.\u202f\u202f \n\n For instance, polynomial regression would be more suitable for predicting sales that show seasonal or cyclical patterns, where a linear model would fail to capture the natural peaks and troughs over time."
     },
     {
      "part_id": "8f5da65f-c5da-4881-85e6-0d04773f9d62",
@@ -1682,7 +1682,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "Client side or front-end development would be required to collect the order from the user. This would involve creating a web page with inputs. These inputs could be dropdown menus, text entry for each product that is sold so that user can select what they want to order, typically written in html and JavaScript to interact and collect the user’s choices.  \n\nOnce collected, server side or back-end development would be required to process this order. This would be implemented on the server of Nicksales, and the code implemented would process the inputs of the sale, assign it to the customer account, calculate the costs of the sale, and requires the transaction to an external financial service. This is typically implemented with server-side code libraries like Flask.  \n\n The developer would also need to interact their system with a database. The sales for and order or the data about each customer account could be constructed in separate SQL tables, which would allow easy interaction for each system (front and back end) to retrieve the required data to process or collect a sale."
+     "sample_answer": "Client side or front-end development would be required to collect the order from the user. This would involve creating a web page with inputs. These inputs could be dropdown menus, text entry for each product that is sold so that user can select what they want to order, typically written in html and JavaScript to interact and collect the user\u2019s choices.\u202f \n\nOnce collected, server side or back-end development would be required to process this order. This would be implemented on the server of Nicksales, and the code implemented would process the inputs of the sale, assign it to the customer account, calculate the costs of the sale, and requires the transaction to an external financial service. This is typically implemented with server-side code libraries like Flask.\u202f \n\n The developer would also need to interact their system with a database. The sales for and order or the data about each customer account could be constructed in separate SQL tables, which would allow easy interaction for each system (front and back end) to retrieve the required data to process or collect a sale."
     }
    ]
   },
@@ -1787,7 +1787,7 @@
      "marking_criteria": [
       {
        "marks": "4",
-       "criterion": "Provides a substantially correct solution including all the following features: \n\nAppropriate inputs passed to the function  \nUse of function to perform appropriate calculations  \nAppropriate outputs  \nCorrect python syntax"
+       "criterion": "Provides a substantially correct solution including all the following features: \n\nAppropriate inputs passed to the function\u202f \nUse of function to perform appropriate calculations\u202f \nAppropriate outputs\u202f \nCorrect python syntax"
       },
       {
        "marks": "3",
@@ -1804,20 +1804,20 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "def HoursAndMinutes(TotalMinutes):  \n\n    hour \\= TotalMinutes//60  \n\n    minute \\= TotalMinutes//60  \n\n    if hour < 1 and minute < 2:  \n\n        print(\"It has been converted to: \", minute, \" minute.\")  \n\n    elif hour < 2 and minute < 1:  \n\n        print(\"It has been converted to: \", hour, \" hour.\")  \n\n    elif hour < 2 and minute \\> 1:  \n\n        print(\"It has been converted to: \", hour, \" hour & \", minute, \" minutes.\")  \n\n    elif hour \\> 1 and minute < 2:  \n\n        print(\"It has been converted to: \", hour, \" hours & \", minute, \" minute.\")  \n\n    elif hour < 2 and minute < 2:  \n\n        print(\"It has been converted to: \", hour, \" hour & \", minute, \" minute.\")  \n\n    else:  \n\n        print(\"It has been converted to: \", hour, \" hours & \", minute, \" minutes.\")  \n\nTotalMinutes \\= int(input(\"Please enter minutes that you wish to convert to hours and minutes: \"))  \n\nHoursAndMinutes(TotalMinutes)"
+     "sample_answer": "def HoursAndMinutes(TotalMinutes):\u202f \n\n\u202f\u202f\u202f hour \\= TotalMinutes//60\u202f \n\n\u202f\u202f\u202f minute \\= TotalMinutes//60\u202f \n\n\u202f\u202f\u202f if hour < 1 and minute < 2:\u202f \n\n\u202f\u202f\u202f\u202f\u202f\u202f\u202f print(\"It has been converted to: \", minute, \" minute.\")\u202f \n\n\u202f\u202f\u202f elif hour < 2 and minute < 1:\u202f \n\n\u202f\u202f\u202f\u202f\u202f\u202f\u202f print(\"It has been converted to: \", hour, \" hour.\")\u202f \n\n\u202f\u202f\u202f elif hour < 2 and minute \\> 1:\u202f \n\n\u202f\u202f\u202f\u202f\u202f\u202f\u202f print(\"It has been converted to: \", hour, \" hour & \", minute, \" minutes.\")\u202f \n\n\u202f\u202f\u202f elif hour \\> 1 and minute < 2:\u202f \n\n\u202f\u202f\u202f\u202f\u202f\u202f\u202f print(\"It has been converted to: \", hour, \" hours & \", minute, \" minute.\")\u202f \n\n\u202f\u202f\u202f elif hour < 2 and minute < 2:\u202f \n\n\u202f\u202f\u202f\u202f\u202f\u202f\u202f print(\"It has been converted to: \", hour, \" hour & \", minute, \" minute.\")\u202f \n\n\u202f\u202f\u202f else:\u202f \n\n\u202f\u202f\u202f\u202f\u202f\u202f\u202f print(\"It has been converted to: \", hour, \" hours & \", minute, \" minutes.\")\u202f \n\nTotalMinutes \\= int(input(\"Please enter minutes that you wish to convert to hours and minutes: \"))\u202f \n\nHoursAndMinutes(TotalMinutes)"
     }
    ]
   },
   {
    "number": 23,
    "question_id": "d72eed36-9136-41b7-9de4-18bbae7b9a4d",
-   "title": "2025 CSSA, Q23, Stages of MLOps ",
-   "topic": "2025 CSSA, Q23, Stages of MLOps ",
+   "title": "2025 CSSA, Q23, Stages of MLOps\u00a0",
+   "topic": "2025 CSSA, Q23, Stages of MLOps\u00a0",
    "label": null,
    "kind": null,
    "source": null,
    "copyright": null,
-   "stimulus": "BJcomputing Solutions Inc. is a tech company specializing in predictive analytics for e-commerce. The company wants to improve customer experience by deploying a Machine Learning (ML) recommendation system that suggests products based on user behaviour. Their Data Science team has created a model with high accuracy, but they face challenges moving it efficiently into production and maintaining it as user data and behaviour patterns change.\n\n![image](assets/23.png.png)",
+   "stimulus": "BJcomputing\u202fSolutions Inc. is a tech company specializing in predictive analytics for e-commerce. The company wants to improve customer experience by deploying a Machine Learning (ML) recommendation system that suggests products based on user behaviour. Their Data Science team has created a model with high accuracy, but they face challenges moving it efficiently into production and maintaining it as user data and behaviour patterns change.\n\n![image](assets/23.png.png)",
    "stimulus_images": [
     "assets/23.png.png"
    ],
@@ -1863,7 +1863,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "**Design:**   \n\n\\- defining the business problem to be solved   \n\n\\- refactoring the business problem into a machine learning problem   \n\n\\- defining success metrics   \n\n\\- researching available data.   \n\n **Model development:**   \n\n\\- data wrangling   \n\n\\- feature engineering   \n\n\\- model training   \n\n\\- model testing and validation.   \n\n **Operations:**   \n\n\\- model deployment   \n\n\\- supporting operations/use  \n\n - monitoring model performance."
+     "sample_answer": "**Design:**\u202f\u202f \n\n\\- defining the business problem to be solved\u202f\u202f \n\n\\- refactoring the business problem into a machine learning problem\u202f\u202f \n\n\\- defining success metrics\u202f\u202f \n\n\\- researching available data.\u202f\u202f \n\n **Model development:**\u202f\u202f \n\n\\- data wrangling\u202f\u202f \n\n\\- feature engineering\u202f\u202f \n\n\\- model training\u202f\u202f \n\n\\- model testing and validation.\u202f\u202f \n\n **Operations:**\u202f\u202f \n\n\\- model deployment\u202f\u202f \n\n\\- supporting operations/use\u202f \n\n\u202f- monitoring model performance."
     }
    ]
   },
@@ -1876,7 +1876,7 @@
    "kind": null,
    "source": null,
    "copyright": null,
-   "stimulus": "You have been asked by an emerging airline to develop a program to allocate Business and Economy Class seats for flights on board their new Airbus 380\\-800 planes. The current seat-booking system consists of a number of modules, including:  \n\n-   booking and seat allocation  \n    \n\n-   online payment  \n    \n\n-   ticket production  \n    \n\n-   printing of boarding passes. \n    \n\nThe new booking and seat allocation module needs to fulfil the flowing requirements: \n\n-   Ask the user for the class of tickets required.  \n    \n\n-   Ask the user for the number of tickets required. A maximum of 4 tickets can be purchased at one time. \n    \n\n-   If only one ticket is required, allocate the next unallocated seat.  \n    \n\n-   If more than one ticket is required, allocate seats next to each other in the same row. However, if the required seats cannot be found together, an appropriate message should be displayed and the booking process restarted.  \n    \n\n-   Output the allocated seat number(s).  \n    \n\nThe Business Class passengers are to be seated in 5 rows of 8 seats. The diagram below shows the seating plan represented as a 2-dimensional array. Column 0 contains the letters A to E. Row 0 contains the numbers 1 to 8. \n\nThe Economy Class passengers are to be seated in 15 rows of 10 seats. The diagram shows the seating plan represented as a 2-dimensional array. Column 0 contains the letters F to T. Row 0 contains the numbers 1 to 10.  \n\nAn ‘X’ indicates that the seat has already been allocated. For example, if four tickets are ordered in Economy Class, the seats G6, G7, G8 and G9 would be allocated.  \n\nBusiness Class \n\n|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |\n|---|---|---|---|---|---|---|---|---|\n| A | X | X | X | X |  |  |  |  |\n| B | X | X | X | X | X |  |  |  |\n| C | X | X | X | X | X | X | X |  |\n| D |  |  |  |  |  |  |  |  |\n| E |  |  |  |  |  |  |  |  |\n\nEconomy Class \n\n|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |\n|---|---|---|---|---|---|---|---|---|---|---|\n| F | X | X | X | X |  |  |  | X | X |  |\n| G | X | X | X | X | X |  |  |  |  |  |\n| H | X | X | X | X | X | X | X |  |  |  |\n| … |  |  |  |  |  |  |  |  |  |  |\n| T |  |  |  |  |  |  |  |  |  |  |",
+   "stimulus": "You have been asked by an emerging airline to develop a program to allocate Business and Economy Class seats for flights on board their new Airbus 380\\-800 planes. The current seat-booking system consists of a number of modules, including:  \n\n-   booking and seat allocation  \n    \n\n-   online payment  \n    \n\n-   ticket production  \n    \n\n-   printing of boarding passes. \n    \n\nThe new booking and seat allocation module needs to fulfil the flowing requirements: \n\n-   Ask the user for the class of tickets required.  \n    \n\n-   Ask the user for the number of tickets required. A maximum of 4 tickets can be purchased at one time. \n    \n\n-   If only one ticket is required, allocate the next unallocated seat.  \n    \n\n-   If more than one ticket is required, allocate seats next to each other in the same row. However, if the required seats cannot be found together, an appropriate message should be displayed and the booking process restarted.  \n    \n\n-   Output the allocated seat number(s).  \n    \n\nThe Business Class passengers are to be seated in 5 rows of 8 seats. The diagram below shows the seating plan represented as a 2-dimensional array. Column 0 contains the letters A to E. Row 0 contains the numbers 1 to 8. \n\nThe Economy Class passengers are to be seated in 15 rows of 10 seats. The diagram shows the seating plan represented as a 2-dimensional array. Column 0 contains the letters F to T. Row 0 contains the numbers 1 to 10.  \n\nAn \u2018X\u2019 indicates that the seat has already been allocated. For example, if four tickets are ordered in Economy Class, the seats G6, G7, G8 and G9 would be allocated.  \n\nBusiness Class \n\n|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |\n|---|---|---|---|---|---|---|---|---|\n| A | X | X | X | X |  |  |  |  |\n| B | X | X | X | X | X |  |  |  |\n| C | X | X | X | X | X | X | X |  |\n| D |  |  |  |  |  |  |  |  |\n| E |  |  |  |  |  |  |  |  |\n\nEconomy Class \n\n|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |\n|---|---|---|---|---|---|---|---|---|---|---|\n| F | X | X | X | X |  |  |  | X | X |  |\n| G | X | X | X | X | X |  |  |  |  |  |\n| H | X | X | X | X | X | X | X |  |  |  |\n| \u2026 |  |  |  |  |  |  |  |  |  |  |\n| T |  |  |  |  |  |  |  |  |  |  |",
    "stimulus_images": [],
    "parts": [
     {
@@ -1929,7 +1929,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "def initialize\\_seating():  \n    \"\"\"  \n    Initialize the seating arrangements for both classes with the  \n    given “starting point” occupancy.  \n    \"\"\"  \n    # Business Class: rows A–E, seats 1–8  \n    business\\_class = \\[  \n        # A    1    2    3    4    5    6    7    8  \n        \\[ True, True, True, True, False, False, False, False \\],  # A  \n        \\[ True, True, True, True, True,  False, False, False \\],  # B  \n        \\[ True, True, True, True, True,  True,  True,  False \\],  # C  \n        \\[ False, False, False, False, False, False, False, False \\],  # D  \n        \\[ False, False, False, False, False, False, False, False \\],  # E  \n    \\]\n\n    # Economy Class: rows F–T, seats 1–10  \n    economy\\_class = \\[  \n        # F    1    2    3    4    5     6     7     8     9    10  \n        \\[ True, True, True, True, False, False, True,  True,  False, False \\],  # F  \n        \\[ True, True, True, True, True,  False, False, False, False, False \\],  # G  \n        \\[ True, True, True, True, True,  True,  True,  False, False, False \\],  # H  \n    \\] + \\[\\[False\\]\\*10 for \\_ in range(12)\\]  # rows I–T, all seats available\n\n    return business\\_class, economy\\_class\n\n  \ndef display\\_seating(seating, class\\_type):  \n    \"\"\"  \n    Print the seating chart for the given class.  \n    X = occupied, O = available  \n    \"\"\"  \n    print(f\"\\\\n{class\\_type} Class Seating Chart (X = occupied, O = available):\")  \n    for row in seating:  \n        print(\" \".join(\"X\" if seat else \"O\" for seat in row))  \n    print()\n\n  \ndef allocate\\_seats(seating, tickets):  \n    \"\"\"  \n    Try to allocate \\`tickets\\` seats in \\`seating\\`.  \n    Returns a list of (row\\_index, col\\_index) or None if allocation fails.  \n    \"\"\"  \n    rows, cols = len(seating), len(seating\\[0\\])\n\n    if tickets == 1:  \n        # single ticket → first available seat  \n        for i in range(rows):  \n            for j in range(cols):  \n                if not seating\\[i\\]\\[j\\]:  \n                    seating\\[i\\]\\[j\\] = True  \n                    return \\[(i, j)\\]  \n    else:  \n        # multiple tickets → look for adjacent seats  \n        for i in range(rows):  \n            for j in range(cols - tickets + 1):  \n                if all(not seating\\[i\\]\\[j+k\\] for k in range(tickets)):  \n                    for k in range(tickets):  \n                        seating\\[i\\]\\[j+k\\] = True  \n                    return \\[(i, j+k) for k in range(tickets)\\]  \n    return None\n\n  \ndef main():  \n    business\\_class, economy\\_class = initialize\\_seating()\n\n    # select class  \n    cls = input(\"Enter class (Business/Economy): \").strip().lower()  \n    if cls not in ('business', 'economy'):  \n        print(\"Invalid class. Exiting.\")  \n        return\n\n    seating = business\\_class if cls == 'business' else economy\\_class  \n    class\\_name = \"Business\" if cls == 'business' else \"Economy\"\n\n    # select ticket count  \n    try:  \n        t = int(input(\"Enter number of tickets (1–4): \"))  \n    except ValueError:  \n        print(\"Not a number. Exiting.\")  \n        return  \n    if not (1 <= t <= 4):  \n        print(\"Ticket count must be between 1 and 4. Exiting.\")  \n        return\n\n    # allocate and display updated chart  \n    result = allocate\\_seats(seating, t)  \n    if result is None:  \n        print(\"Cannot find seats together. Booking restarted.\")  \n    else:  \n        # map row indices back to letters for output  \n        row\\_letters = (  \n            \\['A','B','C','D','E'\\] if cls=='business'  \n            else \\[chr(ord('F')+i) for i in range(15)\\]  \n        )  \n        seats\\_str = \", \".join(  \n            f\"{row\\_letters\\[i\\]}{j+1}\" for i,j in result  \n        )  \n        print(f\"\\\\nAllocated seats: {seats\\_str}\")\n\n    display\\_seating(seating, class\\_name)\n\n  \nif \\_\\_name\\_\\_ == \"\\_\\_main\\_\\_\":  \n    main()"
+     "sample_answer": "def initialize\\_seating():  \n    \"\"\"  \n    Initialize the seating arrangements for both classes with the  \n    given \u201cstarting point\u201d occupancy.  \n    \"\"\"  \n    # Business Class: rows A\u2013E, seats 1\u20138  \n    business\\_class = \\[  \n        # A    1    2    3    4    5    6    7    8  \n        \\[ True, True, True, True, False, False, False, False \\],  # A  \n        \\[ True, True, True, True, True,  False, False, False \\],  # B  \n        \\[ True, True, True, True, True,  True,  True,  False \\],  # C  \n        \\[ False, False, False, False, False, False, False, False \\],  # D  \n        \\[ False, False, False, False, False, False, False, False \\],  # E  \n    \\]\n\n    # Economy Class: rows F\u2013T, seats 1\u201310  \n    economy\\_class = \\[  \n        # F    1    2    3    4    5     6     7     8     9    10  \n        \\[ True, True, True, True, False, False, True,  True,  False, False \\],  # F  \n        \\[ True, True, True, True, True,  False, False, False, False, False \\],  # G  \n        \\[ True, True, True, True, True,  True,  True,  False, False, False \\],  # H  \n    \\] + \\[\\[False\\]\\*10 for \\_ in range(12)\\]  # rows I\u2013T, all seats available\n\n    return business\\_class, economy\\_class\n\n  \ndef display\\_seating(seating, class\\_type):  \n    \"\"\"  \n    Print the seating chart for the given class.  \n    X = occupied, O = available  \n    \"\"\"  \n    print(f\"\\\\n{class\\_type} Class Seating Chart (X = occupied, O = available):\")  \n    for row in seating:  \n        print(\" \".join(\"X\" if seat else \"O\" for seat in row))  \n    print()\n\n  \ndef allocate\\_seats(seating, tickets):  \n    \"\"\"  \n    Try to allocate \\`tickets\\` seats in \\`seating\\`.  \n    Returns a list of (row\\_index, col\\_index) or None if allocation fails.  \n    \"\"\"  \n    rows, cols = len(seating), len(seating\\[0\\])\n\n    if tickets == 1:  \n        # single ticket \u2192 first available seat  \n        for i in range(rows):  \n            for j in range(cols):  \n                if not seating\\[i\\]\\[j\\]:  \n                    seating\\[i\\]\\[j\\] = True  \n                    return \\[(i, j)\\]  \n    else:  \n        # multiple tickets \u2192 look for adjacent seats  \n        for i in range(rows):  \n            for j in range(cols - tickets + 1):  \n                if all(not seating\\[i\\]\\[j+k\\] for k in range(tickets)):  \n                    for k in range(tickets):  \n                        seating\\[i\\]\\[j+k\\] = True  \n                    return \\[(i, j+k) for k in range(tickets)\\]  \n    return None\n\n  \ndef main():  \n    business\\_class, economy\\_class = initialize\\_seating()\n\n    # select class  \n    cls = input(\"Enter class (Business/Economy): \").strip().lower()  \n    if cls not in ('business', 'economy'):  \n        print(\"Invalid class. Exiting.\")  \n        return\n\n    seating = business\\_class if cls == 'business' else economy\\_class  \n    class\\_name = \"Business\" if cls == 'business' else \"Economy\"\n\n    # select ticket count  \n    try:  \n        t = int(input(\"Enter number of tickets (1\u20134): \"))  \n    except ValueError:  \n        print(\"Not a number. Exiting.\")  \n        return  \n    if not (1 <= t <= 4):  \n        print(\"Ticket count must be between 1 and 4. Exiting.\")  \n        return\n\n    # allocate and display updated chart  \n    result = allocate\\_seats(seating, t)  \n    if result is None:  \n        print(\"Cannot find seats together. Booking restarted.\")  \n    else:  \n        # map row indices back to letters for output  \n        row\\_letters = (  \n            \\['A','B','C','D','E'\\] if cls=='business'  \n            else \\[chr(ord('F')+i) for i in range(15)\\]  \n        )  \n        seats\\_str = \", \".join(  \n            f\"{row\\_letters\\[i\\]}{j+1}\" for i,j in result  \n        )  \n        print(f\"\\\\nAllocated seats: {seats\\_str}\")\n\n    display\\_seating(seating, class\\_name)\n\n  \nif \\_\\_name\\_\\_ == \"\\_\\_main\\_\\_\":  \n    main()"
     }
    ]
   },
@@ -1994,7 +1994,7 @@
      ],
      "marking_rubric": null,
      "marking_guidance": null,
-     "sample_answer": "The data breach in MetroWave’s internal CRM software raises significant social, ethical, and legal issues for both the company and its clients. Socially, the breach has damaged MetroWave’s reputation, as clients may no longer trust the company to securely manage sensitive data. This loss of trust can lead to digital disruption, where clients shift to competitors who claim better security practices, resulting in potential long-term financial losses and reduced client loyalty. Furthermore, the breach has affected employees, causing job insecurity, especially for those in the security and client support teams, and damaging overall morale due to the perceived mishandling of the situation.  \n\n Ethically, MetroWave has failed to uphold its responsibility to protect client privacy. The exposure of confidential business reports, financial data, and proprietary intellectual property (as highlighted in the slideshow) presents serious privacy violations. Clients rely on MetroWave to safeguard this information, and its failure to do so can lead to unethical consequences such as stolen intellectual property, which can be used by competitors to gain an unfair advantage, or the misuse of financial data that could lead to identity theft.  \n\n Legally, MetroWave faces severe ramifications. With potential lawsuits for negligence in data protection, the company could incur significant financial penalties. Furthermore, failure to comply with regulations such as the Privacy Act (1988) regarding data security could result in fines.  \n\n MetroWave must immediately rectify the security flaw in the API to regain some confidence with its existing customer base and prevent any further data leaks. MetroWave must also ensure its systems and policies are updated to prevent future incidents, thereby protecting both its clients’ rights and its standing in the marketplace."
+     "sample_answer": "The data breach in MetroWave\u2019s internal CRM software raises significant social, ethical, and legal issues for both the company and its clients. Socially, the breach has damaged MetroWave\u2019s reputation, as clients may no longer trust the company to securely manage sensitive data. This loss of trust can lead to digital disruption, where clients shift to competitors who claim better security practices, resulting in potential long-term financial losses and reduced client loyalty. Furthermore, the breach has affected employees, causing job insecurity, especially for those in the security and client support teams, and damaging overall morale due to the perceived mishandling of the situation.\u202f \n\n Ethically, MetroWave has failed to uphold its responsibility to protect client privacy. The exposure of confidential business reports, financial data, and proprietary intellectual property (as highlighted in the slideshow) presents serious privacy violations. Clients rely on MetroWave to safeguard this information, and its failure to do so can lead to unethical consequences such as stolen intellectual property, which can be used by competitors to gain an unfair advantage, or the misuse of financial data that could lead to identity theft.\u202f \n\n Legally, MetroWave faces severe ramifications. With potential lawsuits for negligence in data protection, the company could incur significant financial penalties. Furthermore, failure to comply with regulations such as the Privacy Act (1988) regarding data security could result in fines.\u202f \n\n MetroWave must immediately rectify the security flaw in the API to regain some confidence with its existing customer base and prevent any further data leaks. MetroWave must also ensure its systems and policies are updated to prevent future incidents, thereby protecting both its clients\u2019 rights and its standing in the marketplace."
     }
    ]
   }

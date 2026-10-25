@@ -2,7 +2,7 @@
  "exam": "Independent Trial",
  "private": true,
  "source": "software.paper.is via the SEN Discord (personal study only)",
- "duration_minutes": 150,
+ "duration_minutes": 140,
  "total_available": 80,
  "parts_total": 32,
  "parts_answered": 0,
@@ -27,7 +27,7 @@
      "marks_available": 1,
      "syllabus": null,
      "answer_type": "MULTI_CHOICE",
-     "prompt": "The “Privacy by Design” approach is defined as:",
+     "prompt": "The \u201cPrivacy by Design\u201d approach is defined as:",
      "prompt_images": [],
      "question": {
       "options": [
@@ -100,7 +100,7 @@
      "marks_available": 1,
      "syllabus": null,
      "answer_type": "MULTI_CHOICE",
-     "prompt": "A user logs into their bank’s website, which allows money transfers via a button. A hacker sends the user a malicious email containing a link. When the user clicks the link, a money transfer request is executed without their knowledge.\n\nWhat type of attack is this?",
+     "prompt": "A user logs into their bank\u2019s website, which allows money transfers via a button. A hacker sends the user a malicious email containing a link. When the user clicks the link, a money transfer request is executed without their knowledge.\n\nWhat type of attack is this?",
      "prompt_images": [],
      "question": {
       "options": [
@@ -1631,7 +1631,7 @@
    "kind": null,
    "source": null,
    "copyright": null,
-   "stimulus": "A school’s online portal allows students to upload assessment files. Recently, a student discovered that by modifying the URL, they could access and download other students’ submitted files. It was also found that students could re-upload their work multiple times, overwriting previous submissions without detection even after the due date.",
+   "stimulus": "A school\u2019s online portal allows students to upload assessment files. Recently, a student discovered that by modifying the URL, they could access and download other students\u2019 submitted files. It was also found that students could re-upload their work multiple times, overwriting previous submissions without detection even after the due date.",
    "stimulus_images": [],
    "parts": [
     {

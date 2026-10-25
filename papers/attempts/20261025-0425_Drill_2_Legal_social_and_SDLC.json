@@ -14,7 +14,13 @@
  "pauses": [
   {
    "start": 1792902875422,
-   "kind": "report"
+   "kind": "report",
+   "end": 1792902952004
+  },
+  {
+   "start": 1792902959329,
+   "kind": "report",
+   "end": 1792902965122
   }
  ],
  "answers": {
@@ -23,10 +29,30 @@
   },
   "da3849df-4422-4cfe-a7e3-05de98d5c37b": {
    "text": "When devlopeing AI modles having a diverce thems will reduse the bias. This bais can come from maney sorces such as lableing bias. This is where the people that genarate the training data the baises present in the people that are labeling the data there bias that come in to the data from people. But besaue there are diffrent people there own bias will average out this will lead to a reduction where there is less biase as it gets 'averageed' out."
+  },
+  "4abf3fa8-72d6-44dc-a367-906398b6e81d": {
+   "letters": [
+    "B"
+   ]
+  },
+  "001a0ad0-16e9-43ce-80b0-99f3427bec42": {
+   "letters": [
+    "C"
+   ]
+  },
+  "479772b8-fdc3-4f5d-a9d7-1796ac878ae3": {
+   "letters": [
+    "C"
+   ]
+  },
+  "a6bd252f-3bb7-4d84-bf56-7db7a04cc67c": {
+   "letters": [
+    "B"
+   ]
   }
  },
  "flags": {},
- "current": 1,
+ "current": 5,
  "navByQuestion": true,
  "liveMark": true,
  "timing": {
@@ -37,9 +63,29 @@
     "firstSeenMs": 9
    },
    "2": {
-    "ms": 271486,
+    "ms": 306486,
     "visits": 2,
     "firstSeenMs": 251499
+   },
+   "3": {
+    "ms": 50497,
+    "visits": 1,
+    "firstSeenMs": 565377
+   },
+   "4": {
+    "ms": 10999,
+    "visits": 1,
+    "firstSeenMs": 615876
+   },
+   "5": {
+    "ms": 8500,
+    "visits": 1,
+    "firstSeenMs": 626874
+   },
+   "6": {
+    "ms": 29852,
+    "visits": 1,
+    "firstSeenMs": 635374
    }
   },
   "p": {
@@ -52,12 +98,32 @@
     "firstMs": 267928,
     "edits": 709,
     "lastMs": 523897
+   },
+   "4abf3fa8-72d6-44dc-a367-906398b6e81d": {
+    "firstMs": 578026,
+    "edits": 1,
+    "lastMs": 578026
+   },
+   "001a0ad0-16e9-43ce-80b0-99f3427bec42": {
+    "firstMs": 625136,
+    "edits": 1,
+    "lastMs": 625136
+   },
+   "479772b8-fdc3-4f5d-a9d7-1796ac878ae3": {
+    "firstMs": 633068,
+    "edits": 1,
+    "lastMs": 633068
+   },
+   "a6bd252f-3bb7-4d84-bf56-7db7a04cc67c": {
+    "firstMs": 659559,
+    "edits": 1,
+    "lastMs": 659559
    }
   },
   "awayMs": 0,
-  "lastKey": "2"
+  "lastKey": "6"
  },
- "timeUsedMs": 529411,
+ "timeUsedMs": 664726,
  "keylog": {
   "c5a9cf5f-1c87-43c7-affc-d184acabbb1d": [
    [
@@ -7639,7 +7705,33 @@
    "atMs": 525493,
    "correct": null,
    "claude": "20261025043431-c4feda"
+  },
+  "4abf3fa8-72d6-44dc-a367-906398b6e81d": {
+   "atMs": 578956,
+   "correct": true
+  },
+  "001a0ad0-16e9-43ce-80b0-99f3427bec42": {
+   "atMs": 625791,
+   "correct": true
+  },
+  "479772b8-fdc3-4f5d-a9d7-1796ac878ae3": {
+   "atMs": 634538,
+   "correct": true
+  },
+  "a6bd252f-3bb7-4d84-bf56-7db7a04cc67c": {
+   "atMs": 661039,
+   "correct": true
   }
  },
- "savedAt": "2026-10-25T04:34:35.429Z"
+ "savedAt": "2026-10-25T04:38:12.856Z",
+ "notes": {
+  "a6bd252f-3bb7-4d84-bf56-7db7a04cc67c": {
+   "tags": [
+    "Guessed",
+    "Not sure"
+   ],
+   "text": ""
+  }
+ },
+ "submittedAt": "2026-10-25T04:38:12.852Z"
 }

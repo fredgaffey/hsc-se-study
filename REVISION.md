@@ -299,6 +299,10 @@ accessibility, privacy, security, information, development, efficiency, metadata
 
 *(newest first: date — what was done — score/result — what to fix next)*
 
+- **25 Oct** — Drill 2 (legal/social + SDLC). 11 min of 22, **8/11**. MC 4/4 (integration vs system, SAST, method tailoring:
+  guessed). Automation 'analyse' 2/4: one point each side, 50 words; needs both + and − per side (energy use, e-waste;
+  productivity vs inequality) and a judgement. Diverse teams 2/3 (Claude live mark): one stage only, 'averaging' idea.
+  First use of Ask Claude to mark.
 - **25 Oct** — Pseudocode 1 (NESA Fam Q8, NESA Sample Q14, CSSA Fam Q9, ITE Y11 magic square). 27 min, **7/15**.
   Q1 2/3: fixed the comparison and <=, missed Found = FALSE, OR→AND, Index never incremented (infinite loop).
   Q2 2/3: good subroutine + loop, but 'each topping' = a NUMBER of toppings (did yes/no); 14 min.

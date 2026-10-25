@@ -772,13 +772,13 @@ function renderQuestion() {
 // ---- live marking: Check answer → key, explanation, strategy → Accept ----
 const liveCache = {};
 // Claude's marks arrive over Server-Sent Events (one stream per attempt); results are kept by part_id.
-const claudeMarks = {};
+const claudeMarks = {};   // request id -> { id, part_id, marks, result }
 let markStream = null;
 // While Claude marks, the clock is paused (no rest allowance used); the mark arriving resumes it.
 function showMarkingWait() {
   const pz = (attempt.pauses || []).find(z => !z.end && z.kind === 'marking');
   if (!pz) return;
-  if (claudeMarks[pz.part_id]?.result) { pz.end = Date.now(); save(true); updateTimer(); return; }
+  if (claudeMarks[pz.req]?.result) { pz.end = Date.now(); save(true); updateTimer(); return; }
   const m = openModal(`<h2>Claude is marking your answer</h2><p>The timer is paused. Rest time isn't used.</p>
     <p class="muted">This closes by itself when the mark arrives.</p>
     <div style="display:flex;justify-content:center;margin-top:14px"><button class="nsw-button nsw-button--white" id="mark-resume">Resume without waiting</button></div>`);
@@ -792,9 +792,9 @@ function openMarkStream() {
   markStream.onmessage = ev => {
     const m = JSON.parse(ev.data);
     if (!m.result) return;
-    const fresh = !claudeMarks[m.part_id]?.result;
-    claudeMarks[m.part_id] = m;
-    const pz = (attempt.pauses || []).find(z => !z.end && z.kind === 'marking' && z.part_id === m.part_id);
+    const fresh = !claudeMarks[m.id]?.result;
+    claudeMarks[m.id] = m;
+    const pz = (attempt.pauses || []).find(z => !z.end && z.kind === 'marking' && (z.req ? z.req === m.id : z.part_id === m.part_id));
     if (pz) { pz.end = Date.now(); closeModal(); save(true); updateTimer(); }
     if (fresh && groups[attempt.current]?.q.parts.some(p => p.part_id === m.part_id)) renderQuestion();
   };
@@ -802,7 +802,10 @@ function openMarkStream() {
 function liveHtml(p, i) {
   const ck = attempt.checked?.[p.part_id];
   const askBtn = p.type === 'MULTI_CHOICE' || p.type === 'OBJECTIVE_RESPONSE' ? '' : ` <button type="button" class="nsw-button nsw-button--dark-outline live-btn" data-live="claude">Ask Claude to mark <i class="fas fa-user-check"></i></button>`;
-  if (!ck) return `<div class="live-check"><button type="button" class="nsw-button nsw-button--dark live-btn" data-live="check">Check answer <i class="fas fa-check"></i></button>${askBtn}</div>`;
+  const hist = attempt.history?.[p.part_id] || [];
+  const prev = hist.length ? `<details class="live-prev"><summary>Previous feedback (${hist.length})</summary>${hist.map((h, k) =>
+    `<div class="live-prev-item"><p><b>Attempt ${k + 1}</b>${h.mark ? ` · Claude: ${esc(h.mark.mark)}/${esc(p.marks)}` : h.correct === true ? ' · correct' : h.correct === false ? ' · incorrect' : ''}</p>${h.mark?.feedback ? md(h.mark.feedback) : ''}</div>`).join('')}</details>` : '';
+  if (!ck) return `<div class="live-check"><button type="button" class="nsw-button nsw-button--dark live-btn" data-live="check">Check answer <i class="fas fa-check"></i></button>${askBtn}${prev}</div>`;
   return `<div class="live-check live-done ${ck.correct === true ? 'is-right' : ck.correct === false ? 'is-wrong' : ''}" id="live-${i}"><p class="live-loading">Loading…</p></div>`;
 }
 async function fetchKey(p) {
@@ -830,11 +833,11 @@ function bindLive(p, i, el) {
     const r = await api('/api/claude-mark', { attempt: attempt.id, folder: attempt.folder, part_id: p.part_id,
       question: groups[attempt.current].q.number, answer: a, time_ms: attempt.qTime?.[p.part_id] ?? null });
     (attempt.checked ||= {})[p.part_id] = { atMs: workMs(), correct: null, claude: r.id };
-    if (!isPaused()) attempt.pauses = [...(attempt.pauses || []), { start: Date.now(), kind: 'marking', part_id: p.part_id }];
+    if (!isPaused()) attempt.pauses = [...(attempt.pauses || []), { start: Date.now(), kind: 'marking', part_id: p.part_id, req: r.id }];
     save(true); openMarkStream(); renderNav(); renderQuestion(); showMarkingWait();
   };
   const box = $(`#live-${i}`, el);
-  if (box && attempt.checked[p.part_id]?.claude && !claudeMarks[p.part_id]?.result) {
+  if (box && attempt.checked[p.part_id]?.claude && !claudeMarks[attempt.checked[p.part_id].claude]?.result) {
     openMarkStream();
     box.innerHTML = '<p class="live-verdict">⏳ Sent to Claude, waiting for a mark…</p><p class="muted">The mark appears here by itself. You can keep working on other questions.</p>';
   } else if (box) fetchKey(p).then(key => fillLive(p, i, el, box, key)).catch(() => { box.innerHTML = '<p>Could not load the answer. Is the server running?</p>'; });
@@ -853,7 +856,7 @@ function fillLive(p, i, el, box, key) {
     inp.closest('td').classList.toggle('opt-wrong', inp.checked && !ok);
   });
   const H = [];
-  const cm = claudeMarks[p.part_id]?.result;
+  const cm = claudeMarks[ck.claude]?.result;
   if (cm) H.push(`<div class="claude-mark"><p class="live-verdict">Claude: ${esc(cm.mark)}/${esc(p.marks)}</p>${md(cm.feedback || '')}</div>`);
   if (cm) {} else if (ck.correct === true) H.push(`<p class="live-verdict">✅ Correct</p>`);
   else if (ck.correct === false) H.push(`<p class="live-verdict">❌ Not quite. The answer is <b>${esc((key.correct_letters || []).join(', ') || 'shown in green')}</b>.</p>`);
@@ -871,8 +874,26 @@ function fillLive(p, i, el, box, key) {
   if (key.guidance) H.push(`<div><b>Marking guidance</b>${md(key.guidance)}</div>`);
   if (key.sample_answer && p.type !== 'MULTI_CHOICE') H.push(`<div class="live-sample"><b>Sample answer</b>${md(key.sample_answer)}</div>`);
   const last = attempt.current === groups.length - 1 && i === groups[attempt.current].q.parts.length - 1;
-  H.push(`<button type="button" class="nsw-button nsw-button--dark" data-live="accept">${last ? 'Accept and finish' : 'Accept'} <i class="fa fa-angle-right"></i></button>`);
-  box.innerHTML = H.join('');
+  const verdict = H[0];
+  H.push(`<div class="live-actions"><button type="button" class="nsw-button nsw-button--dark" data-live="accept">${last ? 'Accept and finish' : 'Accept'} <i class="fa fa-angle-right"></i></button>
+    <button type="button" class="nsw-button nsw-button--dark-outline" data-live="hide">Hide feedback</button>
+    <button type="button" class="nsw-button nsw-button--dark-outline" data-live="edit">Edit answer <i class="fas fa-pen"></i></button></div>`);
+  const hidden = ui.hideFb?.[p.part_id];
+  box.innerHTML = hidden
+    ? `${verdict}<div class="live-actions"><button type="button" class="nsw-button nsw-button--dark-outline" data-live="show">Show feedback</button>
+        <button type="button" class="nsw-button nsw-button--dark-outline" data-live="edit">Edit answer <i class="fas fa-pen"></i></button></div>`
+    : H.join('');
+  const toggle = v => { (ui.hideFb ||= {})[p.part_id] = v; fillLive(p, i, el, box, key); };
+  $('[data-live="hide"]', box)?.addEventListener('click', () => toggle(true));
+  $('[data-live="show"]', box)?.addEventListener('click', () => toggle(false));
+  $('[data-live="edit"]', box).onclick = () => {
+    // unlock: keep the first answer + its feedback in history, then answer again (and check/ask Claude again)
+    (attempt.history ||= {})[p.part_id] = [...(attempt.history[p.part_id] || []),
+      { ...attempt.checked[p.part_id], answer: JSON.parse(JSON.stringify(attempt.answers[p.part_id] || {})), mark: cm || null, editedAt: new Date().toISOString() }];
+    delete attempt.checked[p.part_id];
+    save(true); renderNav(); renderQuestion();
+  };
+  if (hidden) return;
   $('[data-live="accept"]', box).onclick = () => {
     const q = groups[attempt.current].q;
     if (i < q.parts.length - 1) return $(`.item[data-i="${i + 1}"]`)?.scrollIntoView({ behavior: 'smooth' });

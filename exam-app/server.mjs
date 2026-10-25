@@ -189,6 +189,9 @@ function attemptMd(a) {
       }
       const ck = a.checked?.[p.part_id];
       if (ck) L.push('', `🔎 Checked live (answer locked): ${ck.correct === true ? 'correct' : ck.correct === false ? 'incorrect' : 'self-marked'}`);
+      for (const [k, h] of (a.history?.[p.part_id] || []).entries())
+        L.push('', `✏️ Edited after feedback. Attempt ${k + 1}${h.mark ? ` (Claude ${h.mark.mark}/${p.marks_available})` : h.correct === true ? ' (correct)' : h.correct === false ? ' (incorrect)' : ''}:`, '',
+          h.answer?.letters ? `> ${h.answer.letters.join(', ')}` : (h.answer?.text || '_(blank)_').split('\n').map(x => '> ' + x).join('\n'));
       const n = a.notes?.[p.part_id];
       if (n && (n.tags?.length || n.text?.trim())) L.push('', `📝 **Your notes:** ${[...(n.tags || []), n.text?.trim() ? `“${n.text.trim()}”` : ''].filter(Boolean).join(' · ')}`);
     }

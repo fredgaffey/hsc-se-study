@@ -44,7 +44,7 @@ function mdHtml(text, inline = false) {
   if (!text) return '';
   if (/\n/.test(text)) text = fencePseudo(text);
   const base = exam ? `/exams/${encodeURIComponent(exam.folder)}/` : '';
-  let html = inline && !/\n/.test(text) ? marked.parseInline(text) : marked.parse(text);
+  let html = inline && !/\n/.test(text) ? marked.parseInline(text, { breaks: true }) : marked.parse(text, { breaks: true });   // keep the question's own line breaks (grids, addresses, lists without bullets)
   html = html.replace(/(src|href)="(assets\/[^"]+)"/g, (_, a, p) => `${a}="${base}${p}"`);
   html = html.replace(/<a href="([^"]+\.(?:mp4|mov|webm))"[^>]*>[^<]*<\/a>/gi, (_, u) => `<span class="media-window"><video controls preload="metadata" src="${u}"></video></span>`);
   html = html.replace(/<img\b[^>]*>/gi, m => `<span class="zoom-window">${m}<i class="fas fa-search-plus zoom-icon"></i></span>`);
@@ -802,6 +802,12 @@ function renderQuestion() {
   if ($('#next')) $('#next').onclick = () => go(idx + 1);
   if ($('#exit-exam')) $('#exit-exam').onclick = finishModal;
   q.parts.forEach((p, i) => bindItem(p, i, $(`.item[data-i="${i}"]`, content), reading));
+  q.parts.forEach((p, i) => {
+    if (!ui.full?.[p.part_id]) return;
+    const el = $(`.item[data-i="${i}"]`, content);
+    el?.classList.add('item-fullscreen');
+    const b = el && $('[data-act="full"]', el); if (b) b.textContent = 'Exit full screen';
+  });
 }
 
 // ---- live marking: Check answer → key, explanation, strategy → Accept ----
@@ -1105,6 +1111,7 @@ async function itemAction(act, p, i, el) {
   if (act === 'hide') { ui.hidden[p.part_id] = !ui.hidden[p.part_id]; el.classList.toggle('item-hidden', ui.hidden[p.part_id]); $('[data-act="hide"]', el).innerHTML = ui.hidden[p.part_id] ? 'show <i class="fas fa-angle-down"></i>' : 'hide <i class="fas fa-angle-up"></i>'; return; }
   if (act === 'full') {
     const on = el.classList.toggle('item-fullscreen');
+    (ui.full ||= {})[p.part_id] = on;   // survive re-renders (a mark or chat reply arriving)
     $('[data-act="full"]', el).textContent = on ? 'Exit full screen' : 'Full screen';
     setTimeout(() => window.dispatchEvent(new Event('resize')), 50);
     return;

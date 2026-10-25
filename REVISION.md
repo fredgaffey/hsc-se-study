@@ -299,6 +299,8 @@ accessibility, privacy, security, information, development, efficiency, metadata
 
 *(newest first: date — what was done — score/result — what to fix next)*
 
+- **25 Oct** — Python: greatest product in 20×20 grid (Normanhurst, 4). **2/4**. Right plan + correct range(20-3),
+  but crashes: return a not p, i[i:i+4], comparison backwards, max reset, column = row, reused i. Didn't press Run.
 - **25 Oct** — Magic square (ITE Y11, 5). **4/5** (was blank). Row/col subroutines correct. Bugs: WHILE i > n never
   runs, passed n not i, diagonal indices, RETURN two values, no width = height check; Python-isms (+=, !=, append).
 - **25 Oct** — Drill 2 (legal/social + SDLC). 11 min of 22, **8/11**. MC 4/4 (integration vs system, SAST, method tailoring:

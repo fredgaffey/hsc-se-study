@@ -377,3 +377,7 @@ tr.opt-correct td.acell::after { content: " ✓ correct answer"; color: #008a07;
 .chat-claude { background: #f2f6ff; border-left: 4px solid #146cfd; }
 .chat-student { background: #f5f5f5; border-left: 4px solid #888; }
 .chat-input { width: 100%; font: inherit; padding: 8px; margin: 6px 0; }
+/* full screen with feedback/chat below: keep the editor/drawing a usable size and scroll the rest */
+.item-fullscreen .item-control { flex: 1 0 65vh; }
+.item-fullscreen .live-check, .item-fullscreen .notes, .item-fullscreen .chat { flex: none; }
+.item-fullscreen .live-check { padding: 0 16px 16px; }

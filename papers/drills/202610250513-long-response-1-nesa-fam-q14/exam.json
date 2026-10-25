@@ -1,0 +1,60 @@
+{
+ "exam": "Long response 1 - NESA Fam Q14",
+ "drill": true,
+ "created": "2026-10-25T05:13:24.557Z",
+ "duration_minutes": 18,
+ "reading_minutes": 0,
+ "total_available": 8,
+ "parts_total": 1,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "Question 14, AI in Society",
+   "stimulus": "The following slideshow was prepared by a student as part of a research project.\n\nThe slides are shown one after another below.\n\n![](assets/pp-nesa-hsc-familiarisation-14a.png.png)\n\n![](assets/pp-nesa-hsc-familiarisation-14b.png.png)\n\n![](assets/pp-nesa-hsc-familiarisation-14c.png.png)\n\n![](assets/pp-nesa-hsc-familiarisation-14d.png.png)\n\n![](assets/pp-nesa-hsc-familiarisation-14e.png.png)\n\n![](assets/pp-nesa-hsc-familiarisation-14f.png.png)\n\n![](assets/pp-nesa-hsc-familiarisation-14g.png.png)\n\n![](assets/pp-nesa-hsc-familiarisation-14h.png.png)\n\n![](assets/pp-nesa-hsc-familiarisation-14i.png.png)\n\n![](assets/pp-nesa-hsc-familiarisation-14j.png.png)\n\n![](assets/pp-nesa-hsc-familiarisation-14k.png.png)\n\n![](assets/pp-nesa-hsc-familiarisation-14l.png.png)",
+   "parts": [
+    {
+     "part_id": "ac7440c4-3e74-414f-b4f1-c137d259dc63",
+     "part": "Part A",
+     "marks_available": 8,
+     "answer_type": "SHORT",
+     "prompt": "Assess the use of artificial intelligence in our society. Support your answer with information from the slideshow.",
+     "question": {},
+     "marking_criteria": [
+      {
+       "marks": "8",
+       "criterion": "Makes an informed judgement about the use of artificial intelligence in our society, demonstrating comprehensive understanding of its use and effectsSupports answer with information from the slideshow"
+      },
+      {
+       "marks": "6\u20137",
+       "criterion": "Shows a broad understanding of the use of artificial intelligence and its advantages and disadvantagesIncludes some information from the slideshow"
+      },
+      {
+       "marks": "4\u20135",
+       "criterion": "Shows a sound understanding of the use of artificial intelligenceOutlines some of its advantages and/or disadvantages"
+      },
+      {
+       "marks": "2\u20133",
+       "criterion": "Shows some understanding of artificial intelligence"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-9",
+     "sample_answer": "Answers could include reference to the following:\n\n-   explore models of training Machine Learning (ML), including:\n    -   supervised learning\n    -   unsupervised learning\n    -   semi-supervised learning\n    -   reinforcement learning.\n-   investigate common applications of key Machine Learning (ML) algorithms, including:\n    -   data analysis and forecasting\n    -   virtual personal assistants\n    -   image recognition.\n-   assess the impact of automation on the individual, society and the environment, including:\n    -   safety of workers\n    -   people with disability\n    -   the nature and skills required for employment\n    -   production efficiency, waste and the environment\n    -   the economy and distribution of wealth.\n-   explore by implementation how patterns in human behaviour influence ML and AI software development, including:\n    -   psychological responses\n    -   patterns related to acute stress response\n    -   cultural protocols\n    -   belief systems.\n-   investigate the effect of human and data set source bias in the development of ML and AI solutions\n-   apply security features incorporated into software including data protection, security, privacy and regulatory compliance\n-   use and explain the \u2018privacy by design\u2019 approach in the development of software solutions, including:\n    -   proactive not reactive\n    -   embed privacy into design\n    -   respect for user privacy.\n-   evaluate the social, ethical, and legal issues and ramifications that affect people and enterprises resulting from the development and implementation of software, including:\n    -   employment\n    -   privacy\n    -   digital disruption.\n-   data mining\n-   streaming service management.",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

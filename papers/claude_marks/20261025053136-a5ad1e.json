@@ -1,0 +1,58 @@
+{
+ "id": "20261025053136-a5ad1e",
+ "at": "2026-10-25T05:31:36.631Z",
+ "attempt": "20261025-0518_Python_1_greatest_product_Normanhurst",
+ "folder": "drill:202610250517-python-1-greatest-product-normanhurst",
+ "exam": "Python 1 - greatest product (Normanhurst)",
+ "question": 1,
+ "part_id": "e37b5079-9b1e-45ed-b366-41e39be5dcd1",
+ "marks": 4,
+ "type": "CODING",
+ "prompt": "In the 20 x 20 grid below, four numbers along a row have been marked in red.\n\n08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08\n49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00\n81 49 31 73 55 79 14 **29 93 71 40** 67 53 88 30 03 49 13 36 65\n52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91\n22 31 16 71 51 67 63 89 41 92 36 54 22 40 40 28 66 33 13 80\n24 47 32 60 99 03 45 02 44 75 33 53 78 36 84 20 35 17 12 50\n32 98 81 28 64 23 67 10 26 38 40 67 59 54 70 66 18 38 64 70\n67 26 20 68 02 62 12 20 95 63 94 39 63 08 40 91 66 49 94 21\n24 55 58 05 66 73 99 26 97 17 78 78 96 83 14 88 34 89 63 72\n21 36 23 09 75 00 76 44 20 45 35 14 00 61 33 97 34 31 33 95\n78 17 53 28 22 75 31 67 15 94 03 80 04 62 16 14 09 53 56 92\n16 39 05 42 96 35 31 47 55 58 88 24 00 17 54 24 36 29 85 57\n86 56 00 48 35 71 89 07 05 44 44 37 44 60 21 58 51 54 17 58\n19 80 81 68 05 94 47 69 28 73 92 13 86 52 17 77 04 89 55 40\n04 52 08 83 97 35 99 16 07 97 57 32 16 26 26 79 33 27 98 66\n88 36 68 87 57 62 20 72 03 46 33 67 46 55 12 32 63 93 53 69\n04 42 16 73 38 25 39 11 24 94 72 18 08 46 29 32 40 62 76 36\n20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16\n20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54\n01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48\n\nThe product of these numbers is 7,759,480.\n\nWrite a function in Python called 'GreatestProduct' which takes in a 2D array (20 x 20) and returns the greatest product of four adjacent numbers in the same direction (up, down, left, or right).",
+ "answer": {
+  "text": "# The grid from the question, so you can test your function.\ngrid = [\n    [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],\n    [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0],\n    [81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 3, 49, 13, 36, 65],\n    [52, 70, 95, 23, 4, 60, 11, 42, 69, 24, 68, 56, 1, 32, 56, 71, 37, 2, 36, 91],\n    [22, 31, 16, 71, 51, 67, 63, 89, 41, 92, 36, 54, 22, 40, 40, 28, 66, 33, 13, 80],\n    [24, 47, 32, 60, 99, 3, 45, 2, 44, 75, 33, 53, 78, 36, 84, 20, 35, 17, 12, 50],\n    [32, 98, 81, 28, 64, 23, 67, 10, 26, 38, 40, 67, 59, 54, 70, 66, 18, 38, 64, 70],\n    [67, 26, 20, 68, 2, 62, 12, 20, 95, 63, 94, 39, 63, 8, 40, 91, 66, 49, 94, 21],\n    [24, 55, 58, 5, 66, 73, 99, 26, 97, 17, 78, 78, 96, 83, 14, 88, 34, 89, 63, 72],\n    [21, 36, 23, 9, 75, 0, 76, 44, 20, 45, 35, 14, 0, 61, 33, 97, 34, 31, 33, 95],\n    [78, 17, 53, 28, 22, 75, 31, 67, 15, 94, 3, 80, 4, 62, 16, 14, 9, 53, 56, 92],\n    [16, 39, 5, 42, 96, 35, 31, 47, 55, 58, 88, 24, 0, 17, 54, 24, 36, 29, 85, 57],\n    [86, 56, 0, 48, 35, 71, 89, 7, 5, 44, 44, 37, 44, 60, 21, 58, 51, 54, 17, 58],\n    [19, 80, 81, 68, 5, 94, 47, 69, 28, 73, 92, 13, 86, 52, 17, 77, 4, 89, 55, 40],\n    [4, 52, 8, 83, 97, 35, 99, 16, 7, 97, 57, 32, 16, 26, 26, 79, 33, 27, 98, 66],\n    [88, 36, 68, 87, 57, 62, 20, 72, 3, 46, 33, 67, 46, 55, 12, 32, 63, 93, 53, 69],\n    [4, 42, 16, 73, 38, 25, 39, 11, 24, 94, 72, 18, 8, 46, 29, 32, 40, 62, 76, 36],\n    [20, 69, 36, 41, 72, 30, 23, 88, 34, 62, 99, 69, 82, 67, 59, 85, 74, 4, 36, 16],\n    [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],\n    [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48],\n]\n\ndef calc_prod(arr):\n    i = 1\n    for a in arr:\n        i *= a\n    return a\n    \ndef GreatestProduct(grid):\n    # this will do the row\n    max_v = 0\n    for g in grid:\n        max_r = 0\n        for i in range(0,20-3):\n             if max_v > (val := calc_prod(i[i:i+4])):\n                max_v = val\n\n    max_v = 0\n    for i in range(20):\n        g = []\n        for j in range(20):\n            g.append(grid[i][j])\n        max_c = prod\n        for i in range(0,20-3):\n            if max_v > (val := calc_prod(i[i,i+4])):\n                max_v = val\n    return max_v\n              \n        \nprint(GreatestProduct(grid))\n"
+ },
+ "drawing_png": null,
+ "time_ms": null,
+ "key": {
+  "criteria": [
+   {
+    "marks": "4",
+    "criterion": "Writes a correct algorithm to satisfy the problem requirements"
+   },
+   {
+    "marks": "3",
+    "criterion": "Writes a mostly correct algorithm to satisfy the problem requirements with minor errors"
+   },
+   {
+    "marks": "2",
+    "criterion": "Writes an algorithm to satisfy some problem requirements"
+   },
+   {
+    "marks": "1",
+    "criterion": "Demonatrates some understanding of an algorithm to solve a problem"
+   }
+  ],
+  "rubric": null,
+  "guidance": null,
+  "sample_answer": "def GreatestProduct(grid):\n    GRID\\_SIZE   = 20      # rows and columns\n    RUN\\_LENGTH  = 4       # how many consecutive numbers to multiply\n    max\\_product = 0\n\n    for row in range(GRID\\_SIZE):\n        for col in range(GRID\\_SIZE):\n\n            # ---- horizontal product (to the right) ----\n            if col <= GRID\\_SIZE - RUN\\_LENGTH:\n                product = 1\n                for offset in range(RUN\\_LENGTH):\n                    product \\*= grid\\[row\\]\\[col + offset\\]\n                max\\_product = max(max\\_product, product)\n\n            # ---- vertical product (downwards) ----\n            if row <= GRID\\_SIZE - RUN\\_LENGTH:\n                product = 1\n                for offset in range(RUN\\_LENGTH):\n                    product \\*= grid\\[row + offset\\]\\[col\\]\n                max\\_product = max(max\\_product, product)\n\n    return max\\_product\n\nCorrect output for this grid (up/down/left/right only): 51267216"
+ },
+ "result": {
+  "mark": 2,
+  "feedback": "**2/4.** The plan is right: a helper function, a sliding window of 4, rows then columns, and `range(0, 20-3)` is the **correct boundary** 👍. But the code would crash, and several small bugs break it.\n\n**Bugs, in order:**\n1. `calc_prod` does `return a`, which is the last number. It should be `return i`.\n2. `i[i:i+4]` slices the **number** `i`, not the row. It should be `g[i:i+4]`.\n3. `if max_v > val` is **backwards**. You want `if val > max_v`.\n4. `max_v = 0` again before the columns **throws away** the best row result.\n5. The column builder appends `grid[i][j]`, which is the **row** again. It should be `grid[j][i]`.\n6. `max_c = prod` uses a name that doesn't exist, so it crashes. `i[i,i+4]` uses a comma instead of a colon.\n7. The inner `for i` **reuses `i`** from the outer loop. Use `j` or `start`.\n\n**Your structure, fixed:**\n```python\ndef calc_prod(arr):\n    p = 1\n    for a in arr:\n        p *= a\n    return p\n\ndef GreatestProduct(grid):\n    max_v = 0\n    for r in range(20):\n        row = grid[r]\n        col = [grid[k][r] for k in range(20)]\n        for start in range(20 - 3):\n            max_v = max(max_v, calc_prod(row[start:start + 4]), calc_prod(col[start:start + 4]))\n    return max_v\n```\nIt prints **51267216**.\n\n**Exam tip:** you had **Run**, and the code would have crashed straight away. In practice, run it, and fix the first error it reports. In the HSC you can't run code, so trace one window in your head: \"row 0, start 0 → `[8, 2, 22, 97]` → 34144\".\n",
+  "at": "2026-10-25T05:32:09.395Z"
+ },
+ "chat": false,
+ "thread": [
+  {
+   "from": "student",
+   "text": "You can still get full marks with code that doent work",
+   "at": "2026-10-25T05:32:50.483Z"
+  },
+  {
+   "from": "claude",
+   "text": "Partly true. Markers mark the **algorithm**, not whether the code runs. Small **syntax** slips usually cost little or nothing: `i[i,i+4]` with a comma, a typo'd name, or `i` where you meant `g`.\n\nBut 4/4 needs \"a **correct** algorithm\", and 3/4 allows \"**minor** errors\". Four of your bugs are **logic** errors. Even if Python ignored every typo, the algorithm would give the wrong answer:\n1. `if max_v > val` is backwards, so `max_v` **never changes from 0**, and the function always returns 0.\n2. `return a` returns the last number, not the product.\n3. The \"column\" list is built with `grid[i][j]`, which is the **row**, so columns are never checked.\n4. Resetting `max_v = 0` throws away the row results.\n\nA marker reading it would see that it can't produce the greatest product. That's why it's in the \"satisfies **some** requirements\" band (2), not \"mostly correct with minor errors\" (3).\n\nFix just those four, and leave the syntax slips, and I'd give it **3–4**.\n",
+   "at": "2026-10-25T05:33:10.990Z"
+  }
+ ]
+}

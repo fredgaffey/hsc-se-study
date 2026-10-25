@@ -369,3 +369,4 @@ tr.opt-correct td.acell::after { content: " ✓ correct answer"; color: #008a07;
 .live-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
 .live-prev { margin-top: 10px; }
 .live-prev-item { border-left: 3px solid #ccc; padding-left: 8px; margin: 6px 0; }
+.q-over { color: #d7153a; font-weight: 700; }

@@ -61,7 +61,7 @@ Your implementation must include the following security features:
 **Example:**
 ```python
 # create a new user with email and password
-user = User(email="rianni@kings.edu.au", first_name="Rocco", last_name="Ianni", password="Ilovesoftware1")
+user = User(email="student1@example.com", first_name="Alex", last_name="Smith", password="Ilovesoftware1")
 
 # verify the password
 password_attempt = "Ilovesoftware1"
@@ -110,7 +110,7 @@ Similar to Stage 1.2, your task is to sanitise any potentially harmful user inpu
 ```python
 new_user = {
     ...
-    'email': 'mienna@kings.edu.au',
+    'email': 'student2@example.com',
     'first_name': '&lt;script&gt;alert(\'XSS Attack!\');&lt;/script&gt;',
     ...
 }

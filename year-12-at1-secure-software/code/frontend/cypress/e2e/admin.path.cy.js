@@ -1,6 +1,6 @@
 // test suite for admin path
 describe('Tests Admin Path', () => {
-    let email = `GJD@kings.edu.au`;
+    let email = `admin@example.com`;
     const password = 'mickeymousestuff';
 
     before(() => {

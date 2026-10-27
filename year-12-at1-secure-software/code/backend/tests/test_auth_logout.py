@@ -17,9 +17,9 @@ def test_successful_logout(client):
     response = client.post(
         "/admin/auth/register",
         json={
-            "email": "mmadrid@kings.edu.au",
+            "email": "teacher@example.com",
             "password": "StrongPass1!",
-            "name": "Martin Madrid",
+            "name": "Test Teacher",
         },
     )
 

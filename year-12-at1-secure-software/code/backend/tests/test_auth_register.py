@@ -19,9 +19,9 @@ def test_successful_registration(client):
     response = client.post(
         "/admin/auth/register",
         json={
-            "email": "mmadrid@kings.edu.au",
+            "email": "teacher@example.com",
             "password": "StrongPass1!",
-            "name": "Martin Madrid",
+            "name": "Test Teacher",
         },
     )
 
@@ -39,9 +39,9 @@ def test_register_duplicate_email(client):
     client.post(
         "/admin/auth/register",
         json={
-            "email": "mmadrid@kings.edu.au",
+            "email": "teacher@example.com",
             "password": "StrongPass1!",
-            "name": "Martin Madrid",
+            "name": "Test Teacher",
         },
     )
 
@@ -49,9 +49,9 @@ def test_register_duplicate_email(client):
     response = client.post(
         "/admin/auth/register",
         json={
-            "email": "mmadrid@kings.edu.au",
+            "email": "teacher@example.com",
             "password": "AnotherPass1!",
-            "name": "Martin Madrid",
+            "name": "Test Teacher",
         },
     )
     assert response.status_code == 400

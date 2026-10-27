@@ -14,9 +14,9 @@ def valid_client(client):
     res = client.post(
         "/admin/auth/register",
         json={
-            "email": "mmadrid@kings.edu.au",
+            "email": "teacher@example.com",
             "password": "ILoveComputing1!",
-            "name": "Martin Madrid",
+            "name": "Test Teacher",
         },
     )
 
@@ -35,7 +35,7 @@ def clear():
 def test_successful_login(valid_client):
     response = valid_client.post(
         "/admin/auth/login",
-        json={"email": "mmadrid@kings.edu.au", "password": "ILoveComputing1!"},
+        json={"email": "teacher@example.com", "password": "ILoveComputing1!"},
     )
 
     assert response.status_code == 200

@@ -1,0 +1,9 @@
+Component 1: Simulating a die so I need to out put a random integer between 1 and 6 to write this I would start inalising a varabil then use a random range of 1-6 in the python random module.
+Component 2: To track where the player is and when that have hit a snake I would start by inalis a array that was 100 items long then i would use a for loop and some random number to assing positve(for the ladders) negive (for the snakes) then would sum the current indix + the random number form the die and the value of the square to get the vaue of the new inxex>  
+
+
+Component 1: Simulating a die so I need to out put a random integer between 1 and 6 to write this I would start define a varabil then use a random range of 1-6 in the python random module.
+Component 2: To describe the board
+- I would init a 100 element array 
+- I would use a for loop to iterate and if a random value is = 0.15> than i will assign a random negative int so it is a ladder if the value is = 0.75< then I will assign it to a random positive int.
+- 

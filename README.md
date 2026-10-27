@@ -101,6 +101,9 @@ To build it locally, follow the README inside `textbook/` (a standard MkDocs pro
 
 - [`major-project/`](major-project): Software Engineering major project (**full marks**): final documentation, complete logbook, diagrams, Gantt chart and a 15-minute walkthrough video.
 - [`dt-major-work/`](dt-major-work): Design & Technology major work folio for the same project (**SHAPE nomination**).
+- [`year-12-at1-secure-software/`](year-12-at1-secure-software): Year 12 AT1, securing a deliberately insecure Flask app (hashing, sessions, CSRF), with documentation and the OWASP ZAP session.
+- [`year-11/`](year-11): Year 11 work: the calculator assessment, the OOP dungeon game (AT2) with its video, exam practice code and class work.
+- [`canvas-server/`](canvas-server): the back end for the Canvas course site (Cloudflare Worker + D1: accounts, login, progress sync), for hosting your own copy.
 
 ## Example major project: L Flip
 

@@ -1,0 +1,10 @@
+name: DungeonGame
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+    - pygame==2.5.2
+    - numpy==1.26.0

@@ -1,0 +1,37 @@
+{
+    "asdfasdf@aflksdjf.asdf": {
+        "email": "asdfasdf@aflksdjf.asdf",
+        "name": "bob",
+        "password_hash": "scrypt:32768:8:1$kQhSeSoty1qQJrr4$baa3d9a3fd1999161548619f9c0217d2ced6fed6a3d196e51afca034d617da98e6df015e11b00f7f353b1e09668b0c0b5bc55f4aa81f8f6f85dc99328d08f2ab",
+        "session_token": "QzSRd1epI9xeMI4A5TTtuM_YedN0Dz1bRxrifC9l6202jJnVY1BOlZbKo75Ez9ODsxENfm-W1TQEmdrWZWXXQQ",
+        "csrf_token": "VazaRaesJKL1kMZuA6lMHCYNKmNQYbNXtY87E1v56gX-UpKBHCV29go_Tt-I96oy4GpUrsGdQaRHYqDe7yAmXw"
+    },
+    "hi@hi.hi": {
+        "email": "hi@hi.hi",
+        "name": "bob",
+        "password_hash": "scrypt:32768:8:1$WNEdz2x36l8Y7BIC$dbc79f692a1548b4a71f2ffd739f2906986d2f6f414529d81ade0d4d39a892823104db38dce16b83fc449f182e46db4be92bb1ecb036f2b957e03ad61c88ce66",
+        "session_token": null,
+        "csrf_token": null
+    },
+    "asdfasdfasd@asdffff.dfg": {
+        "email": "asdfasdfasd@asdffff.dfg",
+        "name": "sdgfsadf",
+        "password_hash": "scrypt:32768:8:1$k4p8hdDRQ8zQjUGc$e36c203a3895f11a81648e3f292b4abc4d03c684fbf651e7bfc8615cf57f14d8d8ed199fd3bbb7382003388b7dc46c8a64c11caba6244d4cd9b18a4fcc0f5d85",
+        "session_token": "qEqY1exHt8ysXXPVcizqG2XfM2a2NPB7E7ESjDm-2sE5jWwYumEmV2tWd9s0JL-0__Mm45YmDiy1x-zUvynM1g",
+        "csrf_token": "d0nhGinw6OO9CpXF4gdkwgLEaU47MGLyM7kUFk8wDvF2ZXyjQOIWw-q7g33fLSU8B82QBYqb3hw1njmUt83HuA"
+    },
+    "bob@bob.com": {
+        "email": "bob@bob.com",
+        "name": "bob",
+        "password_hash": "scrypt:32768:8:1$ekHyglmzoWrrR21k$421b82a718eba1ac9a4dd65b229bc432574a0420a476e81220cd158471c1087979179980b602f051178d0150b61896270143756b5396e59c6b0bd7dbd12d04a6",
+        "session_token": "8k_Cusc68zFM9ZDzEBhApCp-P6Bui5A-l33lL31tajWG_wCQPzmgRy4xB2lidoDlMhIz-H9mtTQEN2hkkyWsfA",
+        "csrf_token": "BwdHyDGItDLtkOe2CEgG0hEeyaaLJMNZbGH0cXTGM4KqRv4nnU81g1vDTgo7wjVL6Z_92u6xc_DxpmO3p0GJ_A"
+    },
+    "hi@hi.hisfdg": {
+        "email": "hi@hi.hisfdg",
+        "name": "afdga",
+        "password_hash": "scrypt:32768:8:1$Qx5qIrAFyQjzgMiT$031c419100bac871b8951b291509b05d67544241b78af4dd9aa756b06e25a607bcf9ae6b60878009b620ab51a71ef827415ba1a41713eacd2fdcadc24df11e7e",
+        "session_token": "4IISYg1ywLY8gSHNApk5odmcZ8fNr1jNSIYrfL7uplvQurDwie5dqnqjYfNn6GbbXlpvaDfbe-SmJWHQ80p56Q",
+        "csrf_token": "D2JZCe13p6eXV8tAYbHAouYm8VcCMVR7pfiER2WZvnPytfqj-qJOAwFLQmD8SDQ8bLVksiKOq7EElcL24Ltm9A"
+    }
+}

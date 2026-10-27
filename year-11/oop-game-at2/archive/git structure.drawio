@@ -1,0 +1,64 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="Page-1" id="12AwY9F8-XE4D2oAtRDY">
+    <mxGraphModel dx="757" dy="1127" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="j5rQ2_YyiruukztCxluS-2" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="470" as="sourcePoint" />
+            <mxPoint x="230" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5rQ2_YyiruukztCxluS-3" value="main" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="190" y="390" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j5rQ2_YyiruukztCxluS-5" value="" style="endArrow=none;html=1;rounded=0;exitX=0.992;exitY=0.553;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="231.00000000000003" y="438.49999999999994" as="sourcePoint" />
+            <mxPoint x="301.4" y="438.91" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5rQ2_YyiruukztCxluS-6" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="440" as="sourcePoint" />
+            <mxPoint x="300" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5rQ2_YyiruukztCxluS-7" value="npc shop" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="300" y="390" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j5rQ2_YyiruukztCxluS-8" value="" style="endArrow=none;html=1;rounded=0;exitX=0.992;exitY=0.553;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="368.5" as="sourcePoint" />
+            <mxPoint x="370.4" y="368.9100000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5rQ2_YyiruukztCxluS-9" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="369" y="370" as="sourcePoint" />
+            <mxPoint x="369" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5rQ2_YyiruukztCxluS-10" value="new enemy" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="364" y="320" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j5rQ2_YyiruukztCxluS-11" value="" style="endArrow=none;html=1;rounded=0;exitX=0.992;exitY=0.553;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="278.5" as="sourcePoint" />
+            <mxPoint x="440.4" y="278.9100000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5rQ2_YyiruukztCxluS-12" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="439" y="280" as="sourcePoint" />
+            <mxPoint x="439" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5rQ2_YyiruukztCxluS-13" value="npc upgrade" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="429" y="230" width="90" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

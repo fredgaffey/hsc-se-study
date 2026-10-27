@@ -1,0 +1,75 @@
+BEGIN get_input(menu_choice) 
+  DISPLAY "number 1" 
+  GET number_1 
+  DISPLAY "number 2" 
+  GET number_2  
+  
+  IF menu_choice = d and num(2)=0 
+  	DISPLAY you have a zero divisor 
+  RETURN get_input() 
+  ENDIF 
+  
+  RETURN number_1, number_2	 
+
+END get_input() 
+
+BEGIN add(num) 
+  SET ans = num(1) + num(2) 
+  RETURN num(1)+ " + " +num(2) = ans 
+END add(num) 
+
+
+BEGIN subtract(num) 
+  SET ans = num(1) - num(2) 
+  RETURN num(1)+ " - " +num(2) = ans 
+END subtract(num) 
+ 
+
+BEGIN multiply(num) 
+  SET multiply_ans = num(1) * num(2) 
+  RETURN num(1)+ " x " +num(2) = ans 
+END multiply(num) 
+  
+
+BEGIN division(num) 
+  SET ans = num(1) /  num(2)  
+  RETURN num(1)+”  ÷  “+num(2) = ans 
+END division 
+  
+
+BEGIN menu 
+  DISPLAY "Please insert a letter 
+      Menu: 
+      a for addition 
+      s for subtraction 
+      m for multiplication 
+      d for division 
+      q for quit" 
+  
+    	GET menu_choice 
+
+  CASEWHERE: 
+    a: RETURN add(get_num(menu_choice)) 
+    s: RETURN subtract(get_num(menu_choice)) 
+    d: RETURN division(get_num(menu_choice)) 
+    m: RETURN multiply(get_num(menu_choice))	 
+    q: quit 
+    _:  
+  
+  DISPLAY Invalid menu choice 
+  RETURN menu 
+END menu 
+
+BEGIN quit   
+	DISPLAY I hope you had fun doing maths 
+  exit 
+END quit 
+
+ 
+
+
+BEGIN main 
+  	WHILE True 
+      DISPLAY menu 
+  ENDWHILE 
+END main 

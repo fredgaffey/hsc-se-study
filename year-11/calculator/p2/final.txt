@@ -1,0 +1,141 @@
+BEGIN get_input(menu_choice) 
+  DISPLAY "number 1" 
+  GET number_1 
+  DISPLAY "number 2" 
+  GET number_2  
+  
+  IF menu_choice = d and num(2)=0 
+  	DISPLAY you have a zero divisor 
+  RETURN get_input() 
+  ENDIF 
+  
+  RETURN number_1, number_2	 
+
+END get_input() 
+
+BEGIN add(num) 
+  SET ans = num(1) + num(2) 
+  RETURN num(1)+ " + " +num(2) = ans 
+END add(num) 
+
+
+BEGIN subtract(num) 
+  SET ans = num(1) - num(2) 
+  RETURN num(1)+ " - " +num(2) = ans 
+END subtract(num) 
+ 
+
+BEGIN multiply(num) 
+  SET multiply_ans = num(1) * num(2) 
+  RETURN num(1)+ " x " +num(2) = ans 
+END multiply(num) 
+  
+
+BEGIN division(num) 
+  SET ans = num(1) /  num(2)  
+  RETURN num(1)+”  ÷  “+num(2) = ans 
+END division 
+  
+
+BEGIN menu 
+  DISPLAY "Please insert a letter 
+      Menu: 
+      a for addition 
+      s for subtraction 
+      m for multiplication 
+      d for division 
+      q for quit" 
+  
+    	GET menu_choice 
+
+  CASEWHERE: 
+    a: RETURN add(get_num(menu_choice)) 
+    s: RETURN subtract(get_num(menu_choice)) 
+    d: RETURN division(get_num(menu_choice)) 
+    m: RETURN multiply(get_num(menu_choice))	 
+    q: quit 
+    _:  
+  
+  DISPLAY Invalid menu choice 
+  RETURN menu 
+END menu 
+
+BEGIN quit   
+	DISPLAY I hope you had fun doing maths 
+  change_first_line
+	close(file)
+  exit 
+END quit 
+
+
+BEGIN make_file 
+  OPEN calcs.txt 
+END make_file 
+
+
+BEGIN get_date 
+  RETURN today_date().year, today_date().month, today_date().day 
+END get_date 
+
+
+BEGIN convert_to_roman_numerals(date) 
+  GET final_date 
+  FOR date = date(1) to date(-1) STEP 1 
+      temp_date = date 
+      roman_date = "" 
+   
+      SET i = ((1000,"M"),(500,"M"),(100,"C"),(50,"L"),(10,"X"),(5,"V"),(1,"I")): 
+   
+      FOR var = 1 to 7 STEP 1: 
+         WHILE temp_date - i(var(0)) >= 0: 
+              roman_date += i(var(1)) 
+              temp_date -= i(var(0)) 
+         ENDWHILE 
+   
+      # do the optimization like 4 = iv 
+      roman_date = replace(roman_date,"DCCCC", "CM") 
+      roman_date = replace(roman_date,"CCCC", "CD") 
+      roman_date = replace(roman_date,"LXXXX", "XC") 
+      roman_date = replace(roman_date,"XXXX", "XL") 
+      roman_date = replace(roman_date,"VIIII", "IX") 
+      roman_date = replace(roman_date,"IIII", "IV") 
+  REPEAT 
+  
+  append(final_date,roman_date) 
+  final_date = final_date(0) + "." + final_date (1) + "." + final_date(2) 
+  RETURN final_date 
+END convert_to_roman_numerals(date) 
+ 
+
+BEGIN deci_to_morce(num_base_10) 
+  
+  morce_dict = { 0 : "----- ", 1 : ".---- ", 2 : "..--- ", 3 : "...-- ", 4 : "....- ", 5 : "..... ", 6 : "-.... ", 7 : "--... ", 8 : "---.. ", 9 : "----. ",} 
+  
+  GET num_base_10_array 
+  GET num_base_morce  
+  
+  SET num_base_10_array = SPLIT num_base_10 INTO single elements   
+   
+  
+  SET num_base_morce = MAP morce_dict OVER num_base_10_array  
+   
+  RETURN num_base_morce       
+  
+END deci_to_morce(num_base_10) 
+
+BEGIN change_first_line
+  OPEN calcs.txt
+  SET calcs = OPEN calcs.txt
+      old_file_contents = READ calcs.txt  
+  old_file_contence "Total calculations: " + convert_decimal_to_morce(length( old_file_contents)) +'\n'  
+  WRITE old_file_contence
+END change_first_line
+
+
+BEGIN main 
+  make_file 
+  	WHILE True 
+      DISPLAY menu 
+  ENDWHILE 
+  change_first_line
+END main 

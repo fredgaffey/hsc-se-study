@@ -77,6 +77,12 @@ questions (pick modules, number of questions and question types; it marks itself
 
 ![Quiz generator](docs/screenshots/quiz-generator.png)
 
+## HSC Podcast (audio revision)
+
+[`podcast/software/`](podcast/software/README.md) has the transcripts from the HSC Podcast app: 166 Software Engineering episodes (137 syllabus episodes + 29 case studies, ~505k words), with notes, quizzes and a glossary.
+
+To get the audio app, build it yourself from **https://github.com/freddygaffey/hsc-podcast** (instructions in its README).
+
 ## What's where
 
 | Folder | What it is |

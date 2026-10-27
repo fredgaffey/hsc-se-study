@@ -1,0 +1,326 @@
+
+
+BEGIN 
+    # this psudocode is the core logic that will populate the log file with the neede data 
+    # the odb will save the acellromoter and also infomaton on the current odo
+    SET gps_log_rate = 1/2
+    SET acell_log_rate = 1/10
+    connect_to_OBD()
+    send_OBD_to_log_acell(acell_log_rate)
+    GET car
+    GET SD
+    SET logging = true
+    OPEN log_file FOR writing
+    WRITE car TO log_file
+    WRITE SD TO log_file
+    SET last_gps_time = 0
+    SET last_acell_time = 0
+    WHILE logging = true
+        GET time
+        IF (time - last_gps_time) > gps_log_rate THEN
+            GET current_gps
+            WRITE current_gps TO log_file
+            SET last_gps_time = time
+        ELSE
+            Sleep for 1 ms
+        ENDIF
+        IF (time - last_acell_time) > acell_log_rate THEN
+            GET current_acell
+            WRITE current_acell TO log_file
+            SET last_acell_time = time
+        ELSE
+            Sleep for 1 ms
+        ENDIF
+        # trip ended button pressed
+        IF trip has ended THEN
+            SET logging = false
+        ENDIF
+    ENDWHILE
+    CLOSE log_file
+    # there will be a sepreat demon that will check if there is a 
+    # new trip and if there is it will uplod it to the server
+END
+###############################################################################################################
+# this psudocode decribs the login how the autnticaon works 
+BEGIN login
+    GET username # entered
+    GET password # entered
+    SET password_hash = get_password_hash(username)
+    IF hash(password) = password_hash THEN
+        SET user_jwt = generate_jwt(username)
+    ELSE 
+        SET user_jwt = None
+    ENDIF
+    RETURN user_jwt
+END login
+
+BEGIN get_protected_page (jwt)
+    SET return_value = "you need to authenticate"
+    IF check_if_jwt_is_valid(jwt) THEN
+        GET protected_page 
+        SET return_value = protected_page
+    ENDIF
+    RETURN return_value
+END get_protected_page (jwt)
+
+BEGIN main
+    GET jwt 
+    IF jwt = "None" THEN 
+        SET jwt = login()
+    ENDIF
+    get_protected_page(jwt)
+END main
+
+
+
+
+=====================
+pre ai to fix it
+=====================
+
+BEGIN 
+    # this psudocode is the core logic that will populate the log file with the neede data 
+    # the odb will save the acellromoter and also infomaton on the current odo
+    SET gps_log_rate = 1/2
+    SET acell_log_rate = 1/10
+
+    connect_to_OBD()
+    send_OBD_to_log_acell(acell_log_rate)
+
+    GET car
+    GET SD
+
+    SET logging = True
+
+    OPEN log_file for write:
+    write car to log_file
+    write SD to log_file
+
+    SET last_gps_time = 0
+    SET last_acell_time = 0
+    WHILE logging = True    
+        GET time
+        IF (time - last_gps_time) > gps_log_rate THEN
+            GET current_gps
+            write current_gps to log_file
+            SET last_gps_time = time
+        ELSE
+            sleep for 1 ms
+        ENDIF
+        IF (time - last_acell_time) > acell_log_rate THEN
+            GET current_acell
+            write current_acell to log_file
+            SET last_acell_time = time
+        ELSE
+            sleep for 1 ms
+        ENDIF
+        # trip ended button pressed
+        IF trip has ended THEN
+            SET logging = False
+        ENDIF
+    ENDWHILE
+    CLOSE log_file
+    # there will be a sepreat demon that will check if there is a 
+    # new trip and if there is it will uplod it to the server
+END
+
+###############################################################################################################
+
+# this psudocode decribs the login how the autnticaon works 
+BEGIN login
+    GET username # entered
+    GET passoword # entered
+    SET passoword_hash = get_passowrd_hash(username)
+
+    IF hash(passoword) = passoword_hash THEN
+        SET user_jwt = genarate_jwt(user)
+    ELSE 
+        SET user_jwt = None
+    ENDIF
+    RETURN user_jwt
+END login
+
+BEGIN get_protected_page (jwt)
+SET return_value = "you need to autnticate"
+IF check_if_jwt_is_valid(jwt) THEN
+    GET protected_page 
+    SET return_value = protected_page
+ENDIF
+END get_protected_page (jwt)
+
+BEGIN main
+    GET jwt 
+    IF jwt = "None" THEN 
+        SET jwt = login()
+    ENDIF
+    get_protected_page(jwt)
+END main
+
+###############################################################################################################
+# this is the psudocode on how the ai chat bot works
+BEGIN main 
+    GET user_state
+    GET system_prompt
+
+    SET llm = start_chat(user_state)
+    SET last_message = system_prompt
+    SET continue_chat = True
+    WHILE continue_chat = True
+        GET continue_chat
+        GET latest_message
+        IF latest_message is not equal to last_message THEN 
+            send_to_llm(latest_message)
+            SET last_message = latest_message
+            IF ai_finnished = True THEN
+                GET response_from_llm_api
+                DISPLAY response_from_llm_api
+            ENDIF
+        ENDIF
+    ENDWHILE
+    main()
+END main
+
+BEGIN start_chat(user_state)
+    GET system_prompt
+    SET rag_document = get_rag_docment(user_state)
+    SET llm = send_to_llm(rag_document,system_prompt)
+    GET welcome_message 
+    DISPLAY welcome_message
+    RETURN llm
+END start_chat(user_state)
+
+
+
+====================================
+IGNORE 
+====================================
+
+THIS IS THE OLD psudocode
+
+SET time_last_log_gps = 0
+SET time_last_log_acell = 0
+SET log = True
+
+WHILE log:
+	If time + 1 >= time_last_log_gps:
+		time_last_log_gps = get_current_time() 
+		db.connection.write_gps(current_gps)
+	If get_current_time + 0.2 >= time_last_log_acell:
+		time_last_log_acell = get_current_time() 
+		db.connection.write_acell(
+			ave_acell_over_last_log_time)
+db.connection.write_parant(parant_form_post_req)
+
+WHILE True:
+    IF send_over_4G = True:
+        let_4g_connection = True
+        for drive in all_drives:
+            last_back_off_time = 1
+            WHILE True:
+                IF send_to_cloud_4g(jsonifi.drive):
+                    remove(drive)
+                    BREAK
+                ELSE:
+                    back_off_time *= 5
+                sleep(back_off_time)
+                IF back_off_time > 100:
+                    4g_connection = False
+                    break
+            IF NOT 4g_connection:
+                break
+
+    ELSE:
+        let wifi_connection = True
+        for drive in all_drives:
+            last_back_off_time = 1
+            WHILE True:
+                IF send_to_cloud_wifi(jsonifi.drive):
+                    remove(drive)
+                    BREAK
+                ELSE:
+                    back_off_time *= 5
+                sleep(back_off_time)
+                IF back_off_time > 100:
+                    wifi_connection = False
+                    break
+            IF NOT wifi_connection:
+                break
+    sleep(60)
+END WHILE
+
+BEGIN send_to_cloud_4g(drive) -> bool:
+	IF not connect_to_4g():
+		RETURN False
+	IF send_json_to_cloud(drive):
+		RETURN True
+	ELSE: RETURN False
+END
+
+BEGIN send_to_cloud_wifi(drive) -> bool:
+	IF not connect_to_wifi():
+		RETURN False
+	IF send_json_to_cloud(drive):
+		RETURN True
+	ELSE: RETURN False
+END
+
+BEGIN connect_to_wifi:
+	start_time = get_current_time
+	WHILE start_time + 10 < get_current_time():
+		all_ssid = scan_for_wifi()
+		IF knowen_ssid in all_ssid:
+			IF connect_to_ssid(ssid): Return True
+    END WHILE
+    RETURN False
+#######################################################
+BEGIN
+    # the user will start in the pwa I will not show the js sirvis worker logic
+     IFpwa.click_start_tip
+        pwa.rederect_to_esp(the_car_from_drop_down)
+        esp.show_start_trip_dasbord()
+        IF esp.click_start_loging THEN
+            esp.move_L_plate_open_with_servo()
+            esp.fsm.start_logging()
+        ENDIF
+     ENDIF
+
+     IFesp.click_stop_loging THEN
+        esp.move_L_plate_shut_with_servo()
+        esp.fsm.stop_logging()
+    ENDIF
+
+     IFesp.conected_to_wan THEN
+        FOR log_file = esp.SD.get_first_log_file TO esp.SD.get_last_log_file STEP esp.SD.get_next_log_file
+            WHILE var:
+                IF NOT esp.conected_to_wan THEN
+                    BREAK
+                ENDIF
+                esp.WIFI.send_file_to_cloud(log_file)
+                IF esp.send_file_to_cloud.receved() THEN
+                    var = esp.SD.deleat_file(log_file)
+                ENDIF
+            ENDWHILE
+     ENDIF
+
+     IFesp.click_go_to_dasbord() THEN
+        SET latest_trip = get_latest_trip_summiry()
+        esp.rederect_to_pwa(latest_trip)
+     ENDIF
+    
+    pwa.get_add_trip_summiry(latest_trip)
+    pwa.render_latest_trip()
+    pwa.update_db_with_trip_summiry()
+    pwa.refreash_dashbord()
+    pwa.add_prompt_to_remind_user_to_refreash()
+
+     IFpwa.get_wan THEN
+        pwa.uplod_trip_sumeriys()
+     ENDIF
+
+
+#######################################################
+
+
+        
+        
+

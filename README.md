@@ -97,6 +97,11 @@ To build the app with audio, follow the README inside `hsc-podcast/`.
 
 To build it locally, follow the README inside `textbook/` (a standard MkDocs project: install the requirements, then `mkdocs serve`).
 
+## My major works (worked examples)
+
+- [`major-project/`](major-project): Software Engineering major project (**full marks**): final documentation, complete logbook, diagrams, Gantt chart and a 15-minute walkthrough video.
+- [`dt-major-work/`](dt-major-work): Design & Technology major work folio for the same project (**SHAPE nomination**).
+
 ## Example major project: L Flip
 
 [`lflip/`](https://github.com/fredgaffey/Lflip) is a **git submodule**: my Year 12 Software Engineering / D&T major project. A learner-driver logbook app with smart L-plate hardware: a PWA plus native (Capacitor) app, a Flask + SQLite + SQLAlchemy back end with JWT auth, and ESP32 boards that log GPS trips and flip the plates over Bluetooth. Use it as a worked example of a full-stack project: requirements, data storage, auth, APIs and hardware integration.

@@ -1,0 +1,76 @@
+LET time_last_log_gps = 0
+LET time_last_log_acell = 0
+LET log = True
+
+While log:
+	If time.time() + 1 >= time_last_log_gps:
+		time_last_log_gps = time.time() 
+		db.connection.write_gps(current_gps)
+	If time.time + 0.2 >= time_last_log_acell:
+		time_last_log_acell = time.time() 
+		db.connection.write_acell(
+			ave_acell_over_last_log_time)
+db.connection.write_parant(parant_form_post_req)
+
+WHILE true:
+    IF send_over_4G = True:
+        let_4g_connection = True
+        for drive in all_drives:
+            last_back_off_time = 1
+            WHILE True:
+                IF send_to_cloud_4g(jsonifi.drive):
+                    remove(drive)
+                    BREAK
+                ELSE:
+                    back_off_time *= 5
+                sleep(back_off_time)
+                IF back_off_time > 100:
+                    4g_connection = False
+                    break
+            IF NOT 4g_connection:
+                break
+
+    ELSE:
+        let wifi_connection = True
+        for drive in all_drives:
+            last_back_off_time = 1
+            WHILE True:
+                IF send_to_cloud_wifi(jsonifi.drive):
+                    remove(drive)
+                    BREAK
+                ELSE:
+                    back_off_time *= 5
+                sleep(back_off_time)
+                IF back_off_time > 100:
+                    wifi_connection = False
+                    break
+            IF NOT wifi_connection:
+                break
+    sleep(60)
+END WHILE
+
+BEGIN send_to_cloud_4g(drive) -> bool:
+	IF not connect_to_4g():
+		RETURN False
+	IF send_json_to_cloud(drive):
+		RETURN True
+	ELSE: RETURN False
+END
+
+BEGIN send_to_cloud_wifi(drive) -> bool:
+	IF not connect_to_wifi():
+		RETURN False
+	IF send_json_to_cloud(drive):
+		RETURN True
+	ELSE: RETURN False
+END
+
+BEGIN connect_to_wifi:
+	start_time = time.time
+	WHILE start_time + 10 < time.time():
+		all_ssid = scan_for_wifi()
+		IF knowen_ssid in all_ssid:
+			IF connect_to_ssid(ssid): Return True
+    END WHILE
+    RETURN False
+	

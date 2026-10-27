@@ -91,9 +91,11 @@ To build the app with audio, follow the README inside `hsc-podcast/`.
 
 ## Software Engineering textbook
 
-[`textbook/`](https://github.com/fredgaffey/Software-Engineering-HSC-Textbook) is a **git submodule**: a Software Engineering HSC textbook written as a MkDocs site, covering the whole syllabus. Read it online at https://eatham532.github.io/Software-Engineering-HSC-Textbook/.
+[`textbook/`](https://github.com/fredgaffey/Software-Engineering-HSC-Textbook) is a **git submodule**: a Software Engineering HSC textbook covering the whole syllabus, built with MkDocs.
 
-To build it locally, follow the README inside `textbook/` (it's a standard MkDocs project: `pip install` the requirements, then `mkdocs serve`).
+**Credit:** this textbook was written by **[Eatham532](https://github.com/Eatham532)**. The original is **[Eatham532/Software-Engineering-HSC-Textbook](https://github.com/Eatham532/Software-Engineering-HSC-Textbook)** (MIT License, © 2025 Eatham532), and the submodule is my fork of it. Read the original online at **https://eatham532.github.io/Software-Engineering-HSC-Textbook/**. If it helps you, star their repo.
+
+To build it locally, follow the README inside `textbook/` (a standard MkDocs project: install the requirements, then `mkdocs serve`).
 
 ## What's where
 

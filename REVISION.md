@@ -302,6 +302,11 @@ accessibility, privacy, security, information, development, efficiency, metadata
 
 *(newest first: date — what was done — score/result — what to fix next)*
 
+- **26 Oct** — DoE Sample Exam (in progress, paused; Q15/18/23 not done). **52/63 attempted (83%)**; 48/59 without the
+  giveaway matching Q4/Q9. Lost: SQL no ORDER BY (again); Python checked password only (missed 'either'); hedged
+  ML alternative; 'slow' as a hash feature; accessibility needs 3 named features (labels/ARIA, keyboard, contrast);
+  WAgile vs Waterfall needs a conclusion for the context; unclear sentences (CMS, KNN). Strong: class diagram, UI,
+  dictionary attacks, login tests, error messages, version control.
 - **25 Oct** — Python: greatest product in 20×20 grid (Normanhurst, 4). **2/4**. Right plan + correct range(20-3),
   but crashes: return a not p, i[i:i+4], comparison backwards, max reset, column = row, reused i. Didn't press Run.
   Redo → 3/4 (columns still grid[i][j]) → fixed to grid[j][i] → **4/4**. Lesson: run it / trace one window.
@@ -357,6 +362,9 @@ accessibility, privacy, security, information, development, efficiency, metadata
 ---
 
 ## 7. Open questions / to check
+
+- **TODO after DoE Sample submit:** shuffle rows in DoE Q4 + Q9 (paper.is transcription put matching answers in a diagonal;
+  original PDF is shuffled). Report DoE score with and without Q4/Q9 (4 marks).
 
 - Confirm exam start time, length and section structure.
 - Is spell-check available in the online exam? (assume NO; ask teacher)

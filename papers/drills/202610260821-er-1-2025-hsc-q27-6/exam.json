@@ -1,0 +1,60 @@
+{
+ "exam": "ER 1 - 2025 HSC Q27 (6)",
+ "drill": true,
+ "created": "2026-10-26T08:21:10.158Z",
+ "duration_minutes": 14,
+ "reading_minutes": 0,
+ "total_available": 6,
+ "parts_total": 1,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "2025 HSC Question 27",
+   "stimulus": "Watch the video, and then answer the question.\n\n*(The video isn't available. From NESA's marking guidelines, it showed two examples: (1) an AI trained on a photo library searching for pictures of physicists, and (2) an AI trained to recognise drawings of shoes from drawings that many people made. Refer to these as \"the video\".)*",
+   "parts": [
+    {
+     "part_id": "bd6ac6aa-2b10-48a0-8cc1-3b54defd37cf",
+     "part": "Part A",
+     "marks_available": 6,
+     "answer_type": "SHORT",
+     "prompt": "Explain how human bias could affect the usefulness of artificial intelligence (AI) solutions. Support your answer with reference to the video.",
+     "question": {},
+     "marking_criteria": [
+      {
+       "marks": "6",
+       "criterion": "Explains how human bias could affect the usefulness of AI solutions; supports answer with reference to the video"
+      },
+      {
+       "marks": "5",
+       "criterion": "Describes how human bias could affect the usefulness of AI solutions; refers to a scenario(s) in the video"
+      },
+      {
+       "marks": "4",
+       "criterion": "Outlines how human bias could affect AI solutions; refers to the video"
+      },
+      {
+       "marks": "2\u20133",
+       "criterion": "Identifies some sources/examples of human bias AND/OR identifies effects of human bias on AI solutions AND/OR outlines how AI learns"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-11",
+     "sample_answer": "AI develops its ability by analysing vast amounts of data. The quality of these data can be influenced by human bias, and in turn, affect the usefulness of AI solutions.\n\nHuman bias may be explicit or implicit. Explicit biases are intentional. For example, a researcher may favour male physicists and only collect pictures of male physicists for training an AI solution, as shown in the video. Implicit biases operate unconsciously and may be shaped by social and cultural factors. Whether the bias was explicit or implicit, the choice of male physicists would suggest to the AI solution that physicists are male.\n\nHuman bias can occur in various stages of the development of AI solutions. As shown in the photo library example, training data needs to be diverse and representative, otherwise AI solutions may produce inaccurate or unhelpful responses. The process of labelling training data may also introduce biases as people may have different interpretations of the same data. The video shows that if most people draw shoes in particular ways, certain types of shoes will not be recognised as a shoe.\n\n**Official full-mark student response(s):** ![](assets/hsc25_fullmark_020.png) ![](assets/hsc25_fullmark_021.png)",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

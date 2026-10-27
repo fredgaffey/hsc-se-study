@@ -1,0 +1,60 @@
+{
+ "exam": "ER 3 - NESA Sample Q25 (8)",
+ "drill": true,
+ "created": "2026-10-26T08:21:10.827Z",
+ "duration_minutes": 18,
+ "reading_minutes": 0,
+ "total_available": 8,
+ "parts_total": 1,
+ "parts_answered": 0,
+ "questions": [
+  {
+   "number": 1,
+   "title": "HSC SE 2025, Q25, Security Enhancements",
+   "stimulus": "A telecommunications company had a recent security breach which prompted a review to improve the security of its systems. It has contracted QuidantCon to propose security enhancements to its systems. Please review QuidantCon's Proposal in the slider below.\n\n![](assets/pp-nesa-hsc-sample-exam-25a.png.png)\n\n![](assets/pp-nesa-hsc-sample-exam-25b.png.png)\n\n![](assets/pp-nesa-hsc-sample-exam-25c.png.png)",
+   "parts": [
+    {
+     "part_id": "50206f4e-9b6d-41da-bb84-d5dcfab872f9",
+     "part": "Part A",
+     "marks_available": 8,
+     "answer_type": "SHORT",
+     "prompt": "Discuss QuidantCon's proposal for security enhancements to the company's systems.",
+     "question": {},
+     "marking_criteria": [
+      {
+       "marks": "8",
+       "criterion": "Discusses the proposal for security enhancements to the company\u2019s systems, with reference to machine learning (ML) in DevOps, robotic process automation (RPA) and business process automation (BPA) from the slideshow"
+      },
+      {
+       "marks": "6\u20137",
+       "criterion": "Outlines advantages and disadvantages of the proposal, with reference to at least TWO of these areas: machine learning (ML) in DevOps, robotic process automation (RPA), business process automation (BPA)"
+      },
+      {
+       "marks": "4\u20135",
+       "criterion": "Outlines some advantages and/or disadvantages of the proposal, with reference to machine learning (ML) in DevOps and/or robotic process automation (RPA) and/or business process automation (BPA)"
+      },
+      {
+       "marks": "2\u20133",
+       "criterion": "Shows some understanding of the features of the proposal"
+      },
+      {
+       "marks": "1",
+       "criterion": "Provides some relevant information"
+      }
+     ],
+     "marking_rubric": null,
+     "marking_guidance": null,
+     "syllabus": "AUTO-1",
+     "sample_answer": "QuidantCon's proposal for the company suggests leveraging machine learning (ML) and automation to bolster security measures. One key benefit is the automation of security testing and vulnerability scanning, facilitated by integrating ML-powered tools into the DevOps pipeline. This approach ensures continuous security testing and provides rapid feedback to developers, allowing for early detection of security issues and reducing the risk of vulnerabilities being exploited. The frequent and automated testing improves the overall security position and enhances compliance with industry standards. Additionally, ML algorithms can analyse vast amounts of data to detect patterns and anomalies, which is crucial for proactive threat identification. This capability enables the company to identify security risks proactively, learn from past incidents, and predict future attacks, thereby enhancing their overall security measures.\n\nQuidantCon's proposal for the company also raises some concerns. One key issue is the need for high-quality data for ML algorithms to work effectively. If the data is inconsistent or incomplete, the ML models may not perform well, leading to false positives or missed threats. Another concern is the complexity of implementing ML solutions, which can be challenging and may require specialised skills and training. This complexity could result in integration challenges, higher costs, and delays. Additionally, ML systems can be biased, potentially affecting security decisions. Security and privacy are also critical, as handling sensitive data requires protection against unauthorised access and breaches. These concerns emphasise the need for a careful and balanced approach when considering ML and automation in security practices.\n\n**Answers could include:**\n\n-   Automation of security testing and vulnerability scanning:\n    -   Automation of security testing including the use software tools to automatically test the security of an application or system\n    -   Conducting scans for vulnerabilities, misconfigurations, and potential threats\n    -   Automation helps in detecting security issues early in the development lifecycle, reducing the risk of vulnerabilities being exploited\n    -   Automation also enables more frequent testing, improving overall security posture and compliance with security standards\n    -   Integration of automation into the DevOps pipeline, allowing for continuous security testing and rapid feedback to developers.\n-   Use of machine learning powered tools to enhance security practices:\n    -   Machine learning helps in identifying security risks by analysing vast amounts of data to detect patterns and anomalies that may indicate a potential threat\n    -   Machine learning algorithms can learn from past security incidents and use this knowledge to predict and prevent future attacks\n    -   Machine learning can automate the analysis of security logs and events, providing real time insights\n    -   Machine learning can assist in automating incident response in RPA, enabling faster and more effective mitigation of security risks.\n-   Safe and efficient operation of Robotic Process Automation (RPA) bots:\n    -   Machine learning algorithms for real-time detection and response to security threats\n    -   Machine learning algorithms can continuously monitor RPA bot behaviour to detect any anomalies or deviations from normal operation\n    -   By analysing data on bot performance and interactions, machine learning can identify potential security threats or operational issues\n    -   Machine learning can optimise the performance of RPA bots by identifying areas for improvement and suggesting enhancements.\n-   Protection of Business Process Automation workflows from cyber threats\n    -   Machine learning algorithms can analyse BPA workflows to identify potential vulnerabilities\n    -   By continuously monitoring BPA processes, machine learning can detect and respond to cyber threats in real-time\n    -   Machine learning can automate the implementation of security controls and policies\n    -   Machine learning can enhance BPA workflows by predicting and preventing potential security breaches.\n-   Additional benefits of machine learning in security:\n    -   Improved efficiency and accuracy in detecting security threats\n    -   Enhanced ability to respond to security incidents in real-time\n    -   Ensuring security and compliance while automating business processes.\n-   Disadvantages of ML in Security:\n    -   Complexity and learning curve\n    -   Dependency on data quality\n    -   Potential for bias\n    -   Security and privacy concerns\n    -   Integration challenges\n    -   Cost considerations.",
+     "result": {
+      "mark": null,
+      "feedback": []
+     },
+     "your_response": {
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -79,9 +79,15 @@ questions (pick modules, number of questions and question types; it marks itself
 
 ## HSC Podcast (audio revision)
 
-[`podcast/software/`](podcast/software/README.md) has the transcripts from the HSC Podcast app: 166 Software Engineering episodes (137 syllabus episodes + 29 case studies, ~505k words), with notes, quizzes and a glossary.
+[`hsc-podcast/`](https://github.com/freddygaffey/hsc-podcast) is a **git submodule**: the HSC Podcast app, which turns study notes into podcast-style audio. Its Software Engineering transcripts (166 episodes: syllabus points + case studies, ~505k words), notes, quizzes and glossary are in `hsc-podcast/content/software/`.
 
-To get the audio app, build it yourself from **https://github.com/freddygaffey/hsc-podcast** (instructions in its README).
+```bash
+git clone --recurse-submodules https://github.com/fredgaffey/hsc-se-study.git
+# already cloned?
+git submodule update --init
+```
+
+To build the app with audio, follow the README inside `hsc-podcast/`.
 
 ## What's where
 

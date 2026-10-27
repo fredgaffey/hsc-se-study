@@ -79,15 +79,21 @@ questions (pick modules, number of questions and question types; it marks itself
 
 ## HSC Podcast (audio revision)
 
-[`hsc-podcast/`](https://github.com/freddygaffey/hsc-podcast) is a **git submodule**: the HSC Podcast app, which turns study notes into podcast-style audio. Its Software Engineering transcripts (166 episodes: syllabus points + case studies, ~505k words), notes, quizzes and glossary are in `hsc-podcast/content/software/`.
+[`hsc-podcast/`](https://github.com/fredgaffey/hsc-podcast) is a **git submodule**: the HSC Podcast app, which turns study notes into podcast-style audio. Its Software Engineering transcripts (166 episodes: syllabus points + case studies, ~505k words), notes, quizzes and glossary are in `hsc-podcast/content/software/`.
 
 ```bash
-git clone --recurse-submodules https://github.com/fredgaffey/hsc-se-study.git
+git clone --recurse-submodules https://github.com/fredgaffey/hsc-se-study.git   # includes the podcast and textbook
 # already cloned?
 git submodule update --init
 ```
 
 To build the app with audio, follow the README inside `hsc-podcast/`.
+
+## Software Engineering textbook
+
+[`textbook/`](https://github.com/fredgaffey/Software-Engineering-HSC-Textbook) is a **git submodule**: a Software Engineering HSC textbook written as a MkDocs site, covering the whole syllabus. Read it online at https://eatham532.github.io/Software-Engineering-HSC-Textbook/.
+
+To build it locally, follow the README inside `textbook/` (it's a standard MkDocs project: `pip install` the requirements, then `mkdocs serve`).
 
 ## What's where
 
